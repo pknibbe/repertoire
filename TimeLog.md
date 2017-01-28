@@ -12,4 +12,4 @@
 | 1/22 | Individual Project | Start on database |
 | 1/23 | Homework | .5 | Finish preparing for second class meeting |
 | 1/23 | AWS setup | 3 | |
-| 1/27 | Homework | 2.5 | Activities and exercises from second class meeting |
+| 1/27 | Homework | 5 | Activities and exercises from second class meeting |
