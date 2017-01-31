@@ -1,0 +1,5 @@
+Create database repertoire;
+use repertoire
+create table users (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, username NOT NULL CHAR(25), password NOT NULL CHAR(25), playlists INT, priviledges INT);
+ INSERT INTO Users (id, username, password, playlists, priviledges) VALUES (NULL, 'pknibbe', '615Fairhill', NULL, 0);
+ALTER TABLE users add (email CHAR(55), text CHAR(25));

@@ -1,0 +1,4 @@
+2017-01-31 16:16:26,742 0    [http-nio-8080-exec-4] ERROR MyProperties  - PWK:InputStream from resources/repertoire.properties is null. Exiting.
+2017-01-31 16:16:26,781 39   [http-nio-8080-exec-4] ERROR RepertoireStartup  - RepertoireStartup.LoadProperties has failed. Exiting.
+2017-01-31 16:28:00,688 693946 [http-nio-8080-exec-3] INFO  UserAddActionServlet  - database is null.
+2017-01-31 16:28:00,693 693951 [http-nio-8080-exec-3] INFO  UserAddActionServlet  - request is org.apache.catalina.connector.RequestFacade@72ca68c0.
