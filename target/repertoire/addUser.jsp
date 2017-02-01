@@ -7,7 +7,7 @@
         <form action="/UserAddAction" method="POST">
             user name:  <input type="text" name="userName"  /><br />
             privileges: <input type="text" name="privileges" /><br />
-            <input type="submit" name="Enter" />
+            <input type="submit" value="Submit" name="Enter" />
         </form>
         <br /><br />
         <c:import url="/mainpanel.jsp" />

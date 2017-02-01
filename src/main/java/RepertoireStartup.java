@@ -1,9 +1,11 @@
-import java.io.*;
 import java.util.*;
 import java.lang.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
+
+import Utilities.Database;
+import Utilities.MyProperties;
 import org.apache.log4j.*;
 
 
@@ -28,7 +30,7 @@ public class RepertoireStartup extends HttpServlet{
      *  Initialize Employee Web Application with objects and properties files
      */
     public void init() {
-        String propertiesPath = "resources/repertoire.properties";
+        String propertiesPath = "/repertoire.properties";
         MyProperties myProperties = new MyProperties(propertiesPath);
         if (myProperties != null) properties = myProperties.getProperties();
         if (properties == null) {

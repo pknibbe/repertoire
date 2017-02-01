@@ -1,3 +1,5 @@
+package Utilities;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -22,10 +24,13 @@ public class MyProperties {
      */
     public MyProperties(String propertiesFilePath) {
         properties = new Properties();
+        logger.info("Calling MyProperties with path " + propertiesFilePath);
 
         try {
             InputStream propertiesStream =this.getClass().getResourceAsStream(
                     propertiesFilePath);
+
+            properties.load (this.getClass().getResourceAsStream("/database.properties"));
             if (propertiesStream == null) {
                 logger.error("PWK:InputStream from " + propertiesFilePath + " is null. Exiting.");
                 properties = null;
