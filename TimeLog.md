@@ -16,3 +16,4 @@
 | 1/28 | Individual Project | 2 | Checkpoint 1 and database diagram |
 | 1/31 | Individual Project | 1 | Application Flow document |
 | 1/31 | Individual Project | 3.5 | Get one screen up on Tomee |
+| 2/01 | Individual Project | 9.5 | work on hibernate integration |
