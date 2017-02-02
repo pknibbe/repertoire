@@ -1,11 +1,11 @@
 2017-01-31 16:16:26,742 0    [http-nio-8080-exec-4] ERROR Utilities.MyProperties  - PWK:InputStream from resources/repertoire.properties is null. Exiting.
-2017-01-31 16:16:26,781 39   [http-nio-8080-exec-4] ERROR RepertoireStartup  - RepertoireStartup.LoadProperties has failed. Exiting.
-2017-01-31 16:28:00,688 693946 [http-nio-8080-exec-3] INFO  UserAddActionServlet  - database is null.
-2017-01-31 16:28:00,693 693951 [http-nio-8080-exec-3] INFO  UserAddActionServlet  - request is org.apache.catalina.connector.RequestFacade@72ca68c0.
+2017-01-31 16:16:26,781 39   [http-nio-8080-exec-4] ERROR Servlets.RepertoireStartup  - Servlets.RepertoireStartup.LoadProperties has failed. Exiting.
+2017-01-31 16:28:00,688 693946 [http-nio-8080-exec-3] INFO  Servlets.UserAddActionServlet  - database is null.
+2017-01-31 16:28:00,693 693951 [http-nio-8080-exec-3] INFO  Servlets.UserAddActionServlet  - request is org.apache.catalina.connector.RequestFacade@72ca68c0.
 2017-01-31 18:37:31,704 1    [http-nio-8080-exec-4] ERROR Utilities.MyProperties  - PWK:InputStream from repertoire.properties is null. Exiting.
-2017-01-31 18:37:31,712 9    [http-nio-8080-exec-4] ERROR RepertoireStartup  - RepertoireStartup.LoadProperties has failed. Exiting.
-2017-01-31 18:38:30,238 58535 [http-nio-8080-exec-6] INFO  UserAddActionServlet  - database is null.
-2017-01-31 18:38:30,242 58539 [http-nio-8080-exec-6] INFO  UserAddActionServlet  - request is org.apache.catalina.connector.RequestFacade@57b5282d.
+2017-01-31 18:37:31,712 9    [http-nio-8080-exec-4] ERROR Servlets.RepertoireStartup  - Servlets.RepertoireStartup.LoadProperties has failed. Exiting.
+2017-01-31 18:38:30,238 58535 [http-nio-8080-exec-6] INFO  Servlets.UserAddActionServlet  - database is null.
+2017-01-31 18:38:30,242 58539 [http-nio-8080-exec-6] INFO  Servlets.UserAddActionServlet  - request is org.apache.catalina.connector.RequestFacade@57b5282d.
 2017-01-31 18:54:31,518 0    [http-nio-8080-exec-4] INFO  Utilities.MyProperties  - Calling MyProperties with path repertoire.properties
 2017-01-31 18:54:31,526 8    [http-nio-8080-exec-4] ERROR Utilities.MyProperties  - PWK:Unable to load the properties file at repertoire.properties
 java.io.FileNotFoundException: repertoire.properties (The system cannot find the file specified)
@@ -14,7 +14,7 @@ java.io.FileNotFoundException: repertoire.properties (The system cannot find the
 	at java.io.FileInputStream.<init>(FileInputStream.java:138)
 	at java.io.FileInputStream.<init>(FileInputStream.java:93)
 	at Utilities.MyProperties.<init>(MyProperties.java:29)
-	at RepertoireStartup.init(RepertoireStartup.java:34)
+	at Servlets.RepertoireStartup.init(Servlets.RepertoireStartup.java:34)
 	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
 	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1183)
 	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1099)
@@ -88,7 +88,7 @@ java.lang.NullPointerException
 	at Utilities.MyProperties.<init>(MyProperties.java:29)
 	at Utilities.Database.connect(Database.java:62)
 	at Utilities.Database.<init>(Database.java:43)
-	at RepertoireStartup.init(RepertoireStartup.java:45)
+	at Servlets.RepertoireStartup.init(Servlets.RepertoireStartup.java:45)
 	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
 	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1183)
 	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1099)
@@ -155,12 +155,95 @@ java.lang.NullPointerException
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
 2017-01-31 18:54:31,589 71   [http-nio-8080-exec-4] INFO  Utilities.MyProperties  - PWK:Properties file path is null
-2017-01-31 18:55:04,990 33472 [http-nio-8080-exec-7] INFO  UserAddActionServlet  - database is null.
-2017-01-31 18:55:04,993 33475 [http-nio-8080-exec-7] INFO  UserAddActionServlet  - request is org.apache.catalina.connector.RequestFacade@53c66b19.
+2017-01-31 18:55:04,990 33472 [http-nio-8080-exec-7] INFO  Servlets.UserAddActionServlet  - database is null.
+2017-01-31 18:55:04,993 33475 [http-nio-8080-exec-7] INFO  Servlets.UserAddActionServlet  - request is org.apache.catalina.connector.RequestFacade@53c66b19.
 2017-01-31 20:30:54,730 0    [http-nio-8080-exec-4] INFO  Utilities.MyProperties  - Calling MyProperties with path repertoire.properties
 2017-01-31 20:30:54,737 7    [http-nio-8080-exec-4] ERROR Utilities.MyProperties  - PWK:InputStream from repertoire.properties is null. Exiting.
-2017-01-31 20:30:54,738 8    [http-nio-8080-exec-4] ERROR RepertoireStartup  - RepertoireStartup.LoadProperties has failed. Exiting.
+2017-01-31 20:30:54,738 8    [http-nio-8080-exec-4] ERROR Servlets.RepertoireStartup  - Servlets.RepertoireStartup.LoadProperties has failed. Exiting.
 2017-01-31 20:42:42,980 1    [http-nio-8080-exec-4] INFO  Utilities.MyProperties  - Calling MyProperties with path /repertoire.properties
 2017-01-31 20:42:42,990 11   [http-nio-8080-exec-4] INFO  Utilities.MyProperties  - Calling MyProperties with path /database.properties
-2017-01-31 20:43:12,289 29310 [http-nio-8080-exec-2] INFO  UserAddActionServlet  - database is Utilities.Database@7b9e8cb0.
-2017-01-31 20:43:12,292 29313 [http-nio-8080-exec-2] INFO  UserAddActionServlet  - request is org.apache.catalina.connector.RequestFacade@7fc673ee.
+2017-01-31 20:43:12,289 29310 [http-nio-8080-exec-2] INFO  Servlets.UserAddActionServlet  - database is Utilities.Database@7b9e8cb0.
+2017-01-31 20:43:12,292 29313 [http-nio-8080-exec-2] INFO  Servlets.UserAddActionServlet  - request is org.apache.catalina.connector.RequestFacade@7fc673ee.
+2017-02-01 11:06:21,404 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-01 11:06:21,526 122  [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-01 11:06:21,536 132  [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-01 11:06:21,543 139  [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-01 11:06:21,924 520  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-01 11:06:21,925 521  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-01 11:06:22,957 1553 [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-01 11:06:23,956 2552 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-01 11:06:23,998 2594 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/sample]
+2017-02-01 11:06:24,000 2596 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-01 11:06:24,002 2598 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-01 11:06:24,007 2603 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-01 11:06:27,747 6343 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-01 11:06:29,327 7923 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-01 11:06:29,431 8027 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-01 11:06:30,545 9141 [main] INFO  org.hibernate.tuple.PojoInstantiator  - HHH000182: No default (no-argument) constructor for class: Beans.Messages (class must be instantiated by Interceptor)
+2017-02-01 13:12:09,664 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-01 13:12:09,753 89   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-01 13:12:09,770 106  [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-01 13:12:09,780 116  [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-01 13:12:10,036 372  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-01 13:12:10,037 373  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-01 13:12:10,731 1067 [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-01 13:12:10,732 1068 [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-01 13:12:10,768 1104 [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-01 13:12:10,768 1104 [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-01 16:17:19,433 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-01 16:17:19,526 93   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-01 16:17:19,550 117  [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-01 16:17:19,577 144  [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-01 16:17:19,811 378  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-01 16:17:19,812 379  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-01 16:17:20,861 1428 [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-01 16:17:21,561 2128 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-01 16:17:21,597 2164 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/sample]
+2017-02-01 16:17:21,599 2166 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-01 16:17:21,599 2166 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-01 16:17:21,606 2173 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-01 16:17:23,715 4282 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-01 16:17:25,422 5989 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-01 16:17:25,712 6279 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-01 16:17:31,340 11907 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1054, SQLState: 42S22
+2017-02-01 16:17:31,341 11908 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Unknown column 'this_.email' in 'field list'
+2017-02-01 16:17:31,404 11971 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1054, SQLState: 42S22
+2017-02-01 16:17:31,404 11971 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Unknown column 'this_.email' in 'field list'
+2017-02-01 16:17:31,492 12059 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1054, SQLState: 42S22
+2017-02-01 16:17:31,492 12059 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Unknown column 'this_.email' in 'field list'
+2017-02-01 16:17:31,694 12261 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1054, SQLState: 42S22
+2017-02-01 16:17:31,695 12262 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Unknown column 'this_.email' in 'field list'
+2017-02-01 16:21:01,063 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-01 16:21:01,150 87   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-01 16:21:01,197 134  [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-01 16:21:01,218 155  [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-01 16:21:01,539 476  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-01 16:21:01,556 493  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-01 16:21:02,302 1239 [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-01 16:21:03,281 2218 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-01 16:21:03,344 2281 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/sample]
+2017-02-01 16:21:03,351 2288 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-01 16:21:03,361 2298 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-01 16:21:03,375 2312 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-01 16:21:05,828 4765 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-01 16:21:07,942 6879 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-01 16:21:07,972 6909 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-01 16:21:15,553 14490 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1054, SQLState: 42S22
+2017-02-01 16:21:15,554 14491 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Unknown column 'this_.email' in 'field list'
+2017-02-01 16:26:01,447 1    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-01 16:26:01,536 90   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-01 16:26:01,562 116  [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-01 16:26:01,576 130  [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-01 16:26:01,841 395  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-01 16:26:01,843 397  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-01 16:26:02,752 1306 [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-01 16:26:03,863 2417 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-01 16:26:03,911 2465 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/sample]
+2017-02-01 16:26:03,912 2466 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-01 16:26:03,913 2467 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-01 16:26:03,926 2480 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-01 16:26:06,668 5222 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-01 16:26:08,896 7450 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-01 16:26:09,002 7556 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-01 16:26:15,903 14457 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1054, SQLState: 42S22
+2017-02-01 16:26:15,904 14458 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Unknown column 'this_.email' in 'field list'

@@ -1,3 +1,5 @@
+package Servlets;
+
 import java.util.*;
 import java.lang.*;
 import javax.servlet.*;
@@ -16,7 +18,7 @@ import org.apache.log4j.*;
  * @since 12/1/16.
  */
 @WebServlet(
-        name = "RepertoireStartup",
+        name = "Servlets.RepertoireStartup",
         urlPatterns = { "/JavaSrc/ApplicationStartup" },
         loadOnStartup = 1
 )
@@ -34,7 +36,7 @@ public class RepertoireStartup extends HttpServlet{
         MyProperties myProperties = new MyProperties(propertiesPath);
         if (myProperties != null) properties = myProperties.getProperties();
         if (properties == null) {
-            logger.error("RepertoireStartup.LoadProperties has failed. Exiting.");
+            logger.error("Servlets.RepertoireStartup.LoadProperties has failed. Exiting.");
             return;
         }
         ServletContext servletContext = getServletContext();

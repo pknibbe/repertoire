@@ -1,24 +1,50 @@
+package Beans;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+import javax.persistence.*;
+
+/**
+ * Created by peter on 2/1/2017.
+ */
+@Entity
+@Table(name = "songs")
 public class Song {
-  private Long id;
-  private Long userid;
+
+  @Id
+  @GeneratedValue(generator="increment")
+  @GenericGenerator(name="increment", strategy="increment")
+  private int id;
+  private int userid;
   private String location;
   private String name;
   private String performer;
   private String duration;
 
-  public Long getId() {
+  public Song() {
+  }
+
+  public Song(int userid, String location, String name, String performer, String duration) {
+    this.userid = userid;
+    this.location = location;
+    this.name = name;
+    this.performer = performer;
+    this.duration = duration;
+  }
+
+  public int getId() {
     return id;
   }
 
-  public void setId(Long id) {
+  public void setId(int id) {
     this.id = id;
   }
 
-  public Long getUserid() {
+  public int getUserid() {
     return userid;
   }
 
-  public void setUserid(Long userid) {
+  public void setUserid(int userid) {
     this.userid = userid;
   }
 
