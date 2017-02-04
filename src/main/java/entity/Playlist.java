@@ -8,20 +8,20 @@ import javax.persistence.*;
  * Created by peter on 2/1/2017.
  */
 @Entity
-@Table(name = "playlist")
+@Table(name = "playlists")
 public class Playlist {
 
   @Id
   @GeneratedValue(generator="increment")
   @GenericGenerator(name="increment", strategy="increment")
   private int id;
-  private int song;
+  private String name;
 
   public Playlist() {
   }
 
-  public Playlist(int song) {
-    this.song = song;
+  public Playlist(String song) {
+    this.name = name;
   }
 
   public int getId() {
@@ -32,11 +32,11 @@ public class Playlist {
     this.id = id;
   }
 
-  public int getSong() {
-    return song;
+  public String getName() {
+    return name;
   }
 
-  public void setSong(int song) {
-    this.song = song;
+  public void setName(String song) {
+    this.name = song;
   }
 }

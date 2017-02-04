@@ -29,7 +29,7 @@ public class RepertoireStartup extends HttpServlet{
     private Properties properties = null;
 
     /**
-     *  Initialize Employee Web Application with objects and properties files
+     *  Initialize Web Application with objects and properties files
      */
     public void init() {
         String propertiesPath = "/repertoire.properties";
@@ -42,8 +42,7 @@ public class RepertoireStartup extends HttpServlet{
         ServletContext servletContext = getServletContext();
         servletContext.setAttribute("Properties", properties);
         servletContext.setAttribute("sessionMessage", "");
-
-
+        
         Database database = new Database(properties);
         servletContext.setAttribute("database", database);
      }

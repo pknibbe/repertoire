@@ -67,7 +67,7 @@ public class DAOUserTest {
     }
 
     private void justAdd() {
-        user = new entity.User("RoseMarie", "Rose", 12, 12, 12, 12);
+        user = new entity.User("RoseMarie", "Rose", 12);
         dao.add(user);
     }
 

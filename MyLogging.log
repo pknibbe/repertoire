@@ -515,3 +515,26 @@ java.lang.NullPointerException
 2017-02-04 12:16:19,220 6006 [main] INFO  persistence.DAOUserTest  - About to remove 16
 2017-02-04 12:16:19,221 6007 [main] INFO  persistence.DAOUser  - In dao.remove with id = 16
 2017-02-04 12:16:19,246 6032 [main] INFO  persistence.DAOUser  - In dao. remove with user User{id=16, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
+2017-02-04 13:07:18,483 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-04 13:07:18,516 33   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-04 13:07:18,524 41   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-04 13:07:18,529 46   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-04 13:07:18,621 138  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-04 13:07:18,622 139  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-04 13:07:18,911 428  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-04 13:07:19,328 845  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-04 13:07:19,366 883  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-04 13:07:19,368 885  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-04 13:07:19,369 886  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-04 13:07:19,375 892  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-04 13:07:20,487 2004 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-04 13:07:21,356 2873 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-04 13:07:21,401 2918 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-04 13:07:25,166 6683 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 15entries
+2017-02-04 13:07:25,300 6817 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 16entries
+2017-02-04 13:07:25,301 6818 [main] INFO  persistence.DAOUserTest  - In testRemove, userList has 16entries
+2017-02-04 13:07:25,301 6818 [main] INFO  persistence.DAOUserTest  - In testRemove, last index calculated as 15
+2017-02-04 13:07:25,302 6819 [main] INFO  persistence.DAOUserTest  - About to remove User{id=16, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
+2017-02-04 13:07:25,302 6819 [main] INFO  persistence.DAOUserTest  - About to remove 16
+2017-02-04 13:07:25,302 6819 [main] INFO  persistence.DAOUser  - In dao.remove with id = 16
+2017-02-04 13:07:25,364 6881 [main] INFO  persistence.DAOUser  - In dao. remove with user User{id=16, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}

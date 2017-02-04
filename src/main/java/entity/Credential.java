@@ -15,7 +15,6 @@ public class Credential {
   @GeneratedValue(generator="increment")
   @GenericGenerator(name="increment", strategy="increment")
   private int id;
-  private int userid;
   private String site;
   private String username;
   private String password;
@@ -23,8 +22,7 @@ public class Credential {
   public Credential() {
   }
 
-  public Credential(int userid, String site, String username, String password) {
-    this.userid = userid;
+  public Credential(String site, String username, String password) {
     this.site = site;
     this.username = username;
     this.password = password;
@@ -36,14 +34,6 @@ public class Credential {
 
   public void setId(int id) {
     this.id = id;
-  }
-
-  public int getUserid() {
-    return userid;
-  }
-
-  public void setUserid(int userid) {
-    this.userid = userid;
   }
 
   public String getSite() {

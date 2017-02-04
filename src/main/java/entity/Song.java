@@ -15,7 +15,6 @@ public class Song {
   @GeneratedValue(generator="increment")
   @GenericGenerator(name="increment", strategy="increment")
   private int id;
-  private int userid;
   private String location;
   private String name;
   private String performer;
@@ -24,8 +23,7 @@ public class Song {
   public Song() {
   }
 
-  public Song(int userid, String location, String name, String performer, String duration) {
-    this.userid = userid;
+  public Song(String location, String name, String performer, String duration) {
     this.location = location;
     this.name = name;
     this.performer = performer;
@@ -38,14 +36,6 @@ public class Song {
 
   public void setId(int id) {
     this.id = id;
-  }
-
-  public int getUserid() {
-    return userid;
-  }
-
-  public void setUserid(int userid) {
-    this.userid = userid;
   }
 
   public String getLocation() {
@@ -78,5 +68,16 @@ public class Song {
 
   public void setDuration(String duration) {
     this.duration = duration;
+  }
+
+  @Override
+  public String toString() {
+    return "Song{" +
+            "id=" + id +
+            ", location='" + location + '\'' +
+            ", name='" + name + '\'' +
+            ", performer='" + performer + '\'' +
+            ", duration='" + duration + '\'' +
+            '}';
   }
 }

@@ -16,22 +16,16 @@ public class User {
   @GeneratedValue(generator="increment")
   @GenericGenerator(name="increment", strategy="increment")
   private int id;
+  private int privileges;
   private String username;
   private String name;
-  private int messageSet;
-  private int credentialSet;
-  private int playlistSet;
-  private int privileges;
 
   public User() {
   }
 
-  public User(String username, String name, int messageSet, int credentialSet, int playlistSet, int privileges) {
+  public User(String username, String name, int privileges) {
     this.username = username;
     this.name = name;
-    this.messageSet = messageSet;
-    this.credentialSet = credentialSet;
-    this.playlistSet = playlistSet;
     this.privileges = privileges;
   }
 
@@ -59,30 +53,6 @@ public class User {
         this.name = name;
     }
 
-    public int getMessageSet() {
-        return messageSet;
-    }
-
-    public void setMessageSet(int messageSet) {
-        this.messageSet = messageSet;
-    }
-
-    public int getCredentialSet() {
-        return credentialSet;
-    }
-
-    public void setCredentialSet(int credentialSet) {
-        this.credentialSet = credentialSet;
-    }
-
-    public int getPlaylistSet() {
-        return playlistSet;
-    }
-
-    public void setPlaylistSet(int playlistSet) {
-        this.playlistSet = playlistSet;
-    }
-
     public int getPrivileges() {
         return privileges;
     }
@@ -97,9 +67,6 @@ public class User {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", name='" + name + '\'' +
-                ", messageSet=" + messageSet +
-                ", credentialSet=" + credentialSet +
-                ", playlistSet=" + playlistSet +
                 ", privileges=" + privileges +
                 '}';
     }
