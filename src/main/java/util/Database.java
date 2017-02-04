@@ -1,13 +1,10 @@
-package Utilities;
+package util;
 
-import java.util.*;
 import java.util.Properties;
 import java.sql.*;
-import java.io.*;
 import java.lang.*;
-import javax.servlet.*;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+
 import org.apache.log4j.*;
 
 /**
@@ -34,7 +31,7 @@ public class Database {
     /**
      * properties-based constructor
      *
-     * @param properties for the Utilities.Database class
+     * @param properties for the util.Database class
      */
     public Database(Properties properties) {
         this();
@@ -66,7 +63,7 @@ public class Database {
                 try {
                     Class.forName(dbProperties.getProperty("driver"));
                 } catch (ClassNotFoundException classNotFound) {
-                    logger.error("PWK:Utilities.Database Cannot find database driver ", classNotFound);
+                    logger.error("PWK:util.Database Cannot find database driver ", classNotFound);
                 }
 
                 try {
@@ -74,9 +71,9 @@ public class Database {
                             dbProperties.getProperty("username"),
                             dbProperties.getProperty("password"));
                 } catch (SQLException sqlException) {
-                    logger.error("PWK:Utilities.Database Error in connecting to database ", sqlException);
+                    logger.error("PWK:util.Database Error in connecting to database ", sqlException);
                 } catch (Exception exception) {
-                    logger.error("PWK:Utilities.Database General Error", exception);
+                    logger.error("PWK:util.Database General Error", exception);
                 }
             }
         }
@@ -90,9 +87,9 @@ public class Database {
         try {
         connection.close();
         } catch (SQLException sqlException) {
-            logger.error("PWK:Utilities.Database Error in disconnecting from database ", sqlException);
+            logger.error("PWK:util.Database Error in disconnecting from database ", sqlException);
         } catch (Exception exception) {
-            logger.error("PWK:Utilities.Database General Error");
+            logger.error("PWK:util.Database General Error");
         } finally {
             connection = null;
         }
@@ -109,17 +106,17 @@ public class Database {
         try {
             if (connection != null) {
                 Statement statement = connection.createStatement();
-                System.out.println("PWK:Utilities.Database executing " + queryString);
+                System.out.println("PWK:util.Database executing " + queryString);
                 return statement.executeQuery(queryString);
             }
             else {
-                logger.error("PWK:Utilities.Database connection is null");
+                logger.error("PWK:util.Database connection is null");
                 return null;
             }
         } catch (SQLException sqlException) {
-            logger.error("PWK:Utilities.Database Error in connecting to database ", sqlException);
+            logger.error("PWK:util.Database Error in connecting to database ", sqlException);
         } catch (Exception exception) {
-            logger.error("PWK:Utilities.Database General Error", exception);
+            logger.error("PWK:util.Database General Error", exception);
         }
         return null;
     }
@@ -138,14 +135,14 @@ public class Database {
                 return statement.executeUpdate(updateString);
             }
             else {
-                logger.error("PWK:Utilities.Database connection is null");
+                logger.error("PWK:util.Database connection is null");
                 return 0;
             }
         } catch (SQLException sqlException) {
-            System.err.println(java.text.MessageFormat.format("PWK:Utilities.Database Error in connecting to database {0}", sqlException));
+            System.err.println(java.text.MessageFormat.format("PWK:util.Database Error in connecting to database {0}", sqlException));
             sqlException.printStackTrace();
         } catch (Exception exception) {
-            System.err.println("PWK:Utilities.Database General Error");
+            System.err.println("PWK:util.Database General Error");
             exception.printStackTrace();
         }
         return 0;

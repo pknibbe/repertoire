@@ -13,7 +13,7 @@ and share my music with family members to whom I will give accounts.
   * Admin role: create/read/update/delete (crud) of all data
   * User role: create/play/edit own information and playlists
   * All: May create a list of publicly available music for unknown visitors
-* Utilities.Database (MySQL and Hibernate)
+* util.Database (MySQL and Hibernate)
   * Store users and roles
   * Store playlist information
   * May store login credentials for other services
@@ -36,7 +36,7 @@ and share my music with family members to whom I will give accounts.
 
 * [Screen Design](DesignDocuments/Screens.md)
 * [Application Flow](DesignDocuments/applicationFlow.md)
-* [Utilities.Database Design](DesignDocuments/databaseDiagram.png)
+* [util.Database Design](DesignDocuments/databaseDiagram.png)
 
 ### [Project Plan](ProjectPlan.md)
 

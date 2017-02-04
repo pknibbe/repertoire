@@ -10,7 +10,7 @@
 
         <!-- Database connection settings -->
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/sample</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/repertoire</property>
         <property name="connection.username">root</property>
         <property name="connection.password">615Fairhill</property>
 
@@ -21,12 +21,12 @@
         <property name="show_sql">true</property>
 
         <!-- List the annotated entity class/es -->
-        <mapping class="Beans.Credential"/>
-        <mapping class="Beans.Playlist"/>
-        <mapping class="Beans.PlaylistSet"/>
-        <mapping class="Beans.Song"/>
-        <mapping class="Beans.User"/>
-        <mapping class="Beans.Message"/>
+        <mapping class="entity.Credential"/>
+        <mapping class="entity.Playlist"/>
+        <mapping class="entity.PlaylistSet"/>
+        <mapping class="entity.Song"/>
+        <mapping class="entity.User"/>
+        <mapping class="entity.Message"/>
 
 
     </session-factory>

@@ -6,8 +6,8 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-import Utilities.Database;
-import Utilities.MyProperties;
+import util.Database;
+import util.MyProperties;
 import org.apache.log4j.*;
 
 

@@ -17,3 +17,5 @@
 | 1/31 | Individual Project | 1 | Application Flow document |
 | 1/31 | Individual Project | 3.5 | Get one screen up on Tomee |
 | 2/01 | Individual Project | 9.5 | work on hibernate integration |
+| 2/03 | homework | 1| Slack catch-up and work planning |
+| 2/03 | exercise3 | 1 | figure out how to get all of hibernate configured with the database |

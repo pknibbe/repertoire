@@ -32,8 +32,8 @@
 
 ### Week 4
 - [ ] Add Hibernate config
-- [ ] Create DAO for user crud
-- [ ] Add unit tests for DAO
+- [ ] Create persistence for user crud
+- [ ] Add unit tests for persistence
 - [ ] Add user login  
 - [ ] Add user registration
 - [ ] Time log entries
@@ -43,8 +43,8 @@
 ### Week 5
 
 - [ ] Time log entries
-- [ ] Create DAO for trails
-- [ ] Create DAO for trail report
+- [ ] Create persistence for trails
+- [ ] Create persistence for trail report
 - [ ] Create display trail report functionality
 - [ ] Create display trail functionality
 - [ ] Add tests for new functionality

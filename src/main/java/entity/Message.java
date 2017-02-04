@@ -1,4 +1,4 @@
-package Beans;
+package entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
