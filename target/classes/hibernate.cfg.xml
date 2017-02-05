@@ -23,10 +23,11 @@
         <!-- List the annotated entity class/es -->
         <mapping class="entity.Credential"/>
         <mapping class="entity.Playlist"/>
-        <mapping class="entity.PlaylistSet"/>
+        <mapping class="entity.Association"/>
         <mapping class="entity.Song"/>
         <mapping class="entity.User"/>
         <mapping class="entity.Message"/>
+        <mapping class="entity.Association"/>
 
 
     </session-factory>

@@ -61,7 +61,7 @@ public class DAOUser {
         logger.info("In dao.remove with id = " + id);
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        entity.User user = get(id);
+        User user = (User) session.get(User.class, id);
         logger.info("In dao. remove with user " + user.toString());
         session.delete(user);
         transaction.commit();

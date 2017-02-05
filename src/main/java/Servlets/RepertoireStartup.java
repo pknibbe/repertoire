@@ -39,13 +39,14 @@ public class RepertoireStartup extends HttpServlet{
             logger.error("Servlets.RepertoireStartup.LoadProperties has failed. Exiting.");
             return;
         }
+        logger.info("properties obtained in startup");
         ServletContext servletContext = getServletContext();
         servletContext.setAttribute("Properties", properties);
         servletContext.setAttribute("sessionMessage", "");
-        
+        logger.info("servlet attributes set in startup");
         Database database = new Database(properties);
         servletContext.setAttribute("database", database);
-     }
-
+        logger.info("database attribute set in startup");
+    }
 
 }
