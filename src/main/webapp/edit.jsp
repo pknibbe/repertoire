@@ -14,7 +14,7 @@
     <h4>My Playlist</h4>
     <form action="/Edit" method="POST">
         <input type="text" name="list1" value="list a" />
-        <input type="submit" name="change" value="Edit" />
+        <input type="submit" name="changeName" value="ChangeName" />
     </form>
 </div>
 

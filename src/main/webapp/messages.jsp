@@ -13,8 +13,11 @@
 <div>
     <h4>My Messages</h4>
     <form action="/Read" method="GET">
+        Message1:
         <input type="radio" name="read" value="list1" /><br />
+        Message2:
         <input type="radio" name="read" value="listb" /><br />
+        Message3:
         <input type="radio" name="read" value="list3" /><br />
         <input type="submit" name="Read" value="Read" />
     </form>

@@ -9,33 +9,16 @@
 
 <body>
 <h3>${SessionMessage}</h3><br/><br/>
-S
+
 <div>
-    <h4>My Playlists</h4>
     <form action="/Play" method="POST">
-        <input type="radio" name="list1" value="list1" /><br />
-        <input type="radio" name="list2" value="listb" /><br />
-        <input type="radio" name="listc" value="list3" />
-        <input type="submit" name="Play" value="Edit" />
+        Song1:<br />
+        Song2:<br />
+        <input type="submit" name="Play" value="Play" />
+        <input type="submit" name="Pause" value="Pause" />
+        <input type="submit" name="Stop" value="Stop" />
+        <input type="submit" name="Skip" value="Skip" />
+        <input type="submit" name="Shuffle" value="Shuffle" />
     </form>
 </div>
 
-<div>
-    <h4>MessageCenter</h4>
-
-    <form action="/MessageCenter" method="POST">
-        <input type="submit" value="Submit" name="Enter" />
-    </form>
-</div>
-
-<br /><br />
-
-<div>
-
-    <h4>Account Center</h4>
-
-    <form action="/AccountCenter" method="POST">
-        <input type="submit" value="Submit" name="Enter" />
-    </form></div>
-
-</body>

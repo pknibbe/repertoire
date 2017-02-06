@@ -12,72 +12,64 @@
 ### Week 2
 - [X] Create project repository on GitHub
 - [X] Begin Migrating documents from Office format to md
-- [ ] Document application flow - wireframes have clickable links in the online version.
+- [X] Document application flow
 - [X] Complete screen design (on paper)
 - [ ] Deploy application to AWS
 - [X] Complete preliminary database design
-- [ ] Begin creating JSPs
+- [X] Begin creating JSPs
 - [X] Time log entries
 - [ ] Complete project plan. Based on the design should be able to lay out more detail.
 
-### Week 3 - from here down still a copy from sample. Need to get ahead of this (1/27)
+### Week 3 
 - [ ] Complete remaining JSPs
-- [ ] Add in bootstrap
-- [ ] Create database and all tables/columns locally
-- [ ] Time log entries
-- [X] Determine independent research topic
+- [X] Create database and all tables/columns locally
+- [X] Time log entries
 - [ ] Create class diagram
-- [ ] Set up logging
-- [ ] Set up unit testing
+- [X] Set up logging
+- [X] Set up unit testing
+- [X] Add Hibernate config
+- [X] Create persistence for user crud
 
 ### Week 4
-- [ ] Add Hibernate config
-- [ ] Create persistence for user crud
-- [ ] Add unit tests for persistence
-- [ ] Add user login  
-- [ ] Add user registration
+- [ ] Connect account management (application flow B, F, G, and H) front-to-back
 - [ ] Time log entries
 - [X] Add Maven for building
-- [ ] Add entities for remaining tables
+- [ ] Add 2 more DAO and DAOTest classes (this will complete 3 out of 6 needed)
 
 ### Week 5
 
 - [ ] Time log entries
-- [ ] Create persistence for trails
+- [ ] Create persistence for remaining classes
 - [ ] Create persistence for trail report
-- [ ] Create display trail report functionality
-- [ ] Create display trail functionality
-- [ ] Add tests for new functionality
+- [ ] Test all persistence classes
 
 ### Week 6
 - [ ] Time log entries
-- [ ] Integration with google maps api
-- [ ] Create add trail report functionality
-- [ ] Create add trail functionality
-- [ ] Set up Continuous Integration on openshift
+- [ ] Build user security and authentication into site
+- [ ] Test all account management front-to-back
 
 ### Week 7
 - [ ] Time log entries
-- [ ] Add search functionality
-- [ ] Determine how to add paging of search results
-- [ ] Integration with weather service and/or snow depth data
+- [ ] Add playlist management
+- [ ] Determine how to upload songs
+- [ ] Determine how to access remote sites without losing session
 
 ### Week 8
 - [ ] Time log entries
-- [ ] Implement paging of search results
+- [ ] Work on player
 - [ ] Code review
 
 ### Week 9
 - [ ] Time log entries
-- [ ] Create databse on openshift
-- [ ] Set up authentication and db access in app on openshift
-- [ ] Add password reset/reminder function
+- [ ] Work on messaging
 
 ### Week 10
 - [ ] Time log entries
+- [ ] Incorporate JQuery
 
 ### Week 11
 - [ ] Time log entries
+- [ ] Incorporate JavaScript
 
 ### Week 12
 - [ ] Time log entries
@@ -87,6 +79,7 @@
 
 ### Week 14
 - [ ] Time log entries
+- [ ] Incorporate JMS
 - [ ] Create final presentation
 
 ### Week 15

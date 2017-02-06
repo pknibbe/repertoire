@@ -11,6 +11,7 @@
         <h4>Add a User</h4>
         <form action="/UserAddAction" method="POST">
             user name:  <input type="text" name="userName"  /><br />
+            initial password:  <input type="text" name="initialPassword"  /><br />
             privileges: <input type="text" name="privileges" /><br />
             <input type="submit" value="Submit" name="Enter" />
         </form>
