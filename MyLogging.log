@@ -679,3 +679,18 @@ java.lang.NullPointerException
 2017-02-04 18:19:07,209 13269 [main] INFO  persistence.DAOUserTest  - About to remove 46
 2017-02-04 18:19:07,209 13269 [main] INFO  persistence.DAOUser  - In dao.remove with id = 46
 2017-02-04 18:19:07,216 13276 [main] INFO  persistence.DAOUser  - In dao. remove with user User{id=46, username='RoseMarie', name='Rose', privileges=12}
+2017-02-06 16:18:02,518 0    [http-nio-8080-exec-4] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
+2017-02-06 16:18:02,525 7    [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-06 16:18:02,526 8    [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-06 16:18:02,530 12   [http-nio-8080-exec-4] INFO  util.MyProperties  - Calling MyProperties with path /database.properties
+2017-02-06 16:18:03,462 944  [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-06 16:32:56,739 0    [http-nio-8080-exec-3] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
+2017-02-06 16:32:56,746 7    [http-nio-8080-exec-3] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-06 16:32:56,747 8    [http-nio-8080-exec-3] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-06 16:32:56,751 12   [http-nio-8080-exec-3] INFO  util.MyProperties  - Calling MyProperties with path /database.properties
+2017-02-06 16:32:57,926 1187 [http-nio-8080-exec-3] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-06 16:36:49,955 0    [http-nio-8080-exec-20] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
+2017-02-06 16:36:49,960 5    [http-nio-8080-exec-20] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-06 16:36:49,962 7    [http-nio-8080-exec-20] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-06 16:36:49,965 10   [http-nio-8080-exec-20] INFO  util.MyProperties  - Calling MyProperties with path /database.properties
+2017-02-06 16:36:50,948 993  [http-nio-8080-exec-20] INFO  Servlets.RepertoireStartup  - database attribute set in startup

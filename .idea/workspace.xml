@@ -6,20 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ebdd907-63ab-415d-9852-ac37dadc801c" name="Default" comment="Completed preparation for first code review">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/Project3Properties.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/addEmployee.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/searchEmployees.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/repertoire/Project3Properties.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/repertoire/addEmployee.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/repertoire/searchEmployees.jsp" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/Messages.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/messages.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/Wittenburg.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/wittenburg.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjectPlan.md" afterPath="$PROJECT_DIR$/ProjectPlan.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TimeLog.md" afterPath="$PROJECT_DIR$/TimeLog.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/addUser.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/addUser.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/edit.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/play.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/play.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1214,7 +1201,7 @@
       <workItem from="1485959114833" duration="23936000" />
       <workItem from="1486004704943" duration="175000" />
       <workItem from="1486139691951" duration="32756000" />
-      <workItem from="1486417794319" duration="2983000" />
+      <workItem from="1486417794319" duration="3050000" />
     </task>
     <task id="LOCAL-00001" summary="Update to time log">
       <created>1486004881089</created>
@@ -1251,7 +1238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486254684608</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Completed preparation for first code review">
+      <created>1486420806897</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1486420806897</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1287,7 +1281,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91460000" />
+    <option name="totallyTimeSpent" value="91527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
