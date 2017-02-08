@@ -18,6 +18,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
 import entity.User;
+import org.apache.log4j.Logger;
 import persistence.UserDAO;
 
 /**
@@ -28,6 +29,8 @@ import persistence.UserDAO;
         name = "ShowUsers",
         urlPatterns = { "/ShowUsers" }
 )public class ShowUsersServlet  extends HttpServlet {
+    final Logger logger = Logger.getLogger(this.getClass());
+
     /**
      *  Handles HTTP GET requests.
      *
@@ -45,7 +48,13 @@ import persistence.UserDAO;
         ServletContext servletContext = getServletContext();
 
         request.setAttribute("users", userdao.getAll());
-        request.setAttribute("SessionMessage", sessionMessage);
+        String currentMessage = (String) request.getAttribute("SessionMessage");
+        logger.info("Session message is " + currentMessage);
+        if (currentMessage == null) {
+            request.setAttribute("SessionMessage", sessionMessage);
+        } else
+            request.setAttribute("SessionMessage", currentMessage + "  " + sessionMessage);
+
 
         String url = "/Accounts.jsp";
 

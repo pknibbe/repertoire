@@ -8,13 +8,13 @@
 
 <div>
     <h4>Manage Accounts</h4>
-    <form action="/Update" method="POST">
+    <form action="/UpdateAccounts" method="POST">
         <table>
             <thead><tr><th>Select</th><th>ID</th><th>Name</th><th>UserName</th><th>Password</th><th>Privileges</th></tr></thead>
             <tbody>
                 <c:forEach var="user" items="${users}">
                     <tr>
-                        <td><input type="radio" name="users" value=${user.id} /></td>
+                        <td><input type="radio" name="userID" value=${user.id} /></td>
                         <td>${user.id}</td>
                         <td><input type="text" name="Name" value="${user.name}" /></td>
                         <td><input type="text" name="UserName" value="${user.username}" /></td>

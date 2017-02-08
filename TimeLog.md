@@ -21,3 +21,4 @@
 | 2/03 | exercise3 | 1 | figure out how to get all of hibernate configured with the database |
 | 2/04 | Individual Project | 6 | DAO and hibernate, database design, several jsps |
 | 2/06 | Individual Project | 1 | more jsps and plan |
+| 2/08 | Individual Project | 3 | Display and delete users from JSP via servlets and DAO |

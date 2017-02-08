@@ -816,3 +816,658 @@ java.lang.NullPointerException
 2017-02-08 11:22:45,858 18170 [http-nio-8080-exec-5] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-08 11:22:46,568 18880 [http-nio-8080-exec-5] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-08 11:22:46,596 18908 [http-nio-8080-exec-5] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-08 11:36:23,167 0    [http-nio-8080-exec-14] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
+2017-02-08 11:36:23,174 7    [http-nio-8080-exec-14] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-08 11:36:23,176 9    [http-nio-8080-exec-14] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-08 11:36:23,180 13   [http-nio-8080-exec-14] INFO  util.MyProperties  - Calling MyProperties with path /database.properties
+2017-02-08 11:36:24,989 1822 [http-nio-8080-exec-14] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-08 11:36:48,906 25739 [http-nio-8080-exec-11] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-08 11:36:48,948 25781 [http-nio-8080-exec-11] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-08 11:36:48,955 25788 [http-nio-8080-exec-11] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-08 11:36:48,962 25795 [http-nio-8080-exec-11] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-08 11:36:49,114 25947 [http-nio-8080-exec-11] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-08 11:36:49,114 25947 [http-nio-8080-exec-11] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-08 11:36:49,440 26273 [http-nio-8080-exec-11] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-08 11:36:49,900 26733 [http-nio-8080-exec-11] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-08 11:36:49,906 26739 [http-nio-8080-exec-11] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-08 11:36:49,907 26740 [http-nio-8080-exec-11] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-08 11:36:49,907 26740 [http-nio-8080-exec-11] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-08 11:36:49,917 26750 [http-nio-8080-exec-11] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-08 11:36:50,060 26893 [http-nio-8080-exec-11] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-08 11:36:51,219 28052 [http-nio-8080-exec-11] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-08 11:36:51,259 28092 [http-nio-8080-exec-11] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-08 12:06:45,847 0    [http-nio-8080-exec-30] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
+2017-02-08 12:06:45,863 16   [http-nio-8080-exec-30] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-08 12:06:45,872 25   [http-nio-8080-exec-30] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-08 12:06:45,882 35   [http-nio-8080-exec-30] INFO  util.MyProperties  - Calling MyProperties with path /database.properties
+2017-02-08 12:06:46,835 988  [http-nio-8080-exec-30] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-08 12:06:53,183 7336 [http-nio-8080-exec-23] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-08 12:06:53,212 7365 [http-nio-8080-exec-23] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-08 12:06:53,220 7373 [http-nio-8080-exec-23] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-08 12:06:53,225 7378 [http-nio-8080-exec-23] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-08 12:06:53,326 7479 [http-nio-8080-exec-23] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-08 12:06:53,327 7480 [http-nio-8080-exec-23] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-08 12:06:53,518 7671 [http-nio-8080-exec-23] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-08 12:06:53,910 8063 [http-nio-8080-exec-23] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-08 12:06:53,915 8068 [http-nio-8080-exec-23] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-08 12:06:53,916 8069 [http-nio-8080-exec-23] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-08 12:06:53,916 8069 [http-nio-8080-exec-23] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-08 12:06:53,922 8075 [http-nio-8080-exec-23] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-08 12:06:54,053 8206 [http-nio-8080-exec-23] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-08 12:06:54,617 8770 [http-nio-8080-exec-23] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-08 12:06:54,642 8795 [http-nio-8080-exec-23] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-08 12:07:13,732 27885 [http-nio-8080-exec-27] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@2b5f9e74
+2017-02-08 12:07:13,732 27885 [http-nio-8080-exec-27] INFO  Servlets.UpdateAccounts  - Parameter value is Peter Knibbe
+2017-02-08 12:07:13,732 27885 [http-nio-8080-exec-27] INFO  Servlets.UpdateAccounts  - Parameter value is pknibbe
+2017-02-08 12:07:13,732 27885 [http-nio-8080-exec-27] INFO  Servlets.UpdateAccounts  - Parameter value is 1
+2017-02-08 12:07:13,733 27886 [http-nio-8080-exec-27] INFO  Servlets.UpdateAccounts  - Parameter value is 57
+2017-02-08 12:07:13,733 27886 [http-nio-8080-exec-27] INFO  Servlets.UpdateAccounts  - Parameter value is Delete
+2017-02-08 12:10:04,908 0    [http-nio-8080-exec-35] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
+2017-02-08 12:10:04,920 12   [http-nio-8080-exec-35] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-08 12:10:04,924 16   [http-nio-8080-exec-35] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-08 12:10:04,928 20   [http-nio-8080-exec-35] INFO  util.MyProperties  - Calling MyProperties with path /database.properties
+2017-02-08 12:10:06,133 1225 [http-nio-8080-exec-35] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-08 12:10:11,184 6276 [http-nio-8080-exec-39] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-08 12:10:11,214 6306 [http-nio-8080-exec-39] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-08 12:10:11,223 6315 [http-nio-8080-exec-39] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-08 12:10:11,228 6320 [http-nio-8080-exec-39] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-08 12:10:11,343 6435 [http-nio-8080-exec-39] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-08 12:10:11,343 6435 [http-nio-8080-exec-39] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-08 12:10:11,533 6625 [http-nio-8080-exec-39] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-08 12:10:11,930 7022 [http-nio-8080-exec-39] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-08 12:10:11,935 7027 [http-nio-8080-exec-39] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-08 12:10:11,936 7028 [http-nio-8080-exec-39] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-08 12:10:11,936 7028 [http-nio-8080-exec-39] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-08 12:10:11,943 7035 [http-nio-8080-exec-39] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-08 12:10:12,076 7168 [http-nio-8080-exec-39] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-08 12:10:12,686 7778 [http-nio-8080-exec-39] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-08 12:10:12,710 7802 [http-nio-8080-exec-39] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-08 12:10:19,368 14460 [http-nio-8080-exec-34] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@66ce3734
+2017-02-08 12:10:19,370 14462 [http-nio-8080-exec-34] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:10:19,370 14462 [http-nio-8080-exec-34] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:10:19,370 14462 [http-nio-8080-exec-34] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:10:19,370 14462 [http-nio-8080-exec-34] INFO  Servlets.UpdateAccounts  - Parameter userID value is 57
+2017-02-08 12:10:19,370 14462 [http-nio-8080-exec-34] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:11:48,124 103216 [http-nio-8080-exec-42] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@77fb215
+2017-02-08 12:11:48,127 103219 [http-nio-8080-exec-42] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:11:48,127 103219 [http-nio-8080-exec-42] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:11:48,127 103219 [http-nio-8080-exec-42] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:11:48,127 103219 [http-nio-8080-exec-42] INFO  Servlets.UpdateAccounts  - Parameter userID value is 57
+2017-02-08 12:11:48,128 103220 [http-nio-8080-exec-42] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:26:48,516 0    [http-nio-8080-exec-48] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
+2017-02-08 12:26:48,524 8    [http-nio-8080-exec-48] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-08 12:26:48,525 9    [http-nio-8080-exec-48] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-08 12:26:48,546 30   [http-nio-8080-exec-48] INFO  util.MyProperties  - Calling MyProperties with path /database.properties
+2017-02-08 12:26:50,726 2210 [http-nio-8080-exec-48] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-08 12:27:31,379 42863 [http-nio-8080-exec-44] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-08 12:27:31,419 42903 [http-nio-8080-exec-44] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-08 12:27:31,430 42914 [http-nio-8080-exec-44] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-08 12:27:31,436 42920 [http-nio-8080-exec-44] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-08 12:27:31,585 43069 [http-nio-8080-exec-44] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-08 12:27:31,586 43070 [http-nio-8080-exec-44] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-08 12:27:31,923 43407 [http-nio-8080-exec-44] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-08 12:27:32,547 44031 [http-nio-8080-exec-44] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-08 12:27:32,551 44035 [http-nio-8080-exec-44] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-08 12:27:32,552 44036 [http-nio-8080-exec-44] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-08 12:27:32,552 44036 [http-nio-8080-exec-44] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-08 12:27:32,558 44042 [http-nio-8080-exec-44] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-08 12:27:32,668 44152 [http-nio-8080-exec-44] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-08 12:27:33,210 44694 [http-nio-8080-exec-44] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-08 12:27:33,235 44719 [http-nio-8080-exec-44] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-08 12:31:57,368 1    [http-nio-8080-exec-4] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
+2017-02-08 12:31:57,395 28   [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-08 12:31:57,400 33   [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-08 12:31:57,418 51   [http-nio-8080-exec-4] INFO  util.MyProperties  - Calling MyProperties with path /database.properties
+2017-02-08 12:31:58,681 1314 [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-08 12:32:07,874 10507 [http-nio-8080-exec-6] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-08 12:32:07,924 10557 [http-nio-8080-exec-6] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-08 12:32:07,940 10573 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-08 12:32:07,951 10584 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-08 12:32:08,113 10746 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-08 12:32:08,114 10747 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-08 12:32:08,405 11038 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-08 12:32:08,967 11600 [http-nio-8080-exec-6] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-08 12:32:08,973 11606 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-08 12:32:08,974 11607 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-08 12:32:08,975 11608 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-08 12:32:08,984 11617 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-08 12:32:09,185 11818 [http-nio-8080-exec-6] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-08 12:32:10,350 12983 [http-nio-8080-exec-6] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-08 12:32:10,379 13012 [http-nio-8080-exec-6] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-08 12:35:57,670 0    [http-nio-8080-exec-4] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
+2017-02-08 12:35:57,686 16   [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-08 12:35:57,687 17   [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-08 12:35:57,690 20   [http-nio-8080-exec-4] INFO  util.MyProperties  - Calling MyProperties with path /database.properties
+2017-02-08 12:35:58,592 922  [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-08 12:36:06,613 8943 [http-nio-8080-exec-6] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-08 12:36:06,678 9008 [http-nio-8080-exec-6] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-08 12:36:06,697 9027 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-08 12:36:06,708 9038 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-08 12:36:06,890 9220 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-08 12:36:06,890 9220 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-08 12:36:07,193 9523 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-08 12:36:07,738 10068 [http-nio-8080-exec-6] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-08 12:36:07,744 10074 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-08 12:36:07,745 10075 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-08 12:36:07,745 10075 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-08 12:36:07,753 10083 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-08 12:36:07,907 10237 [http-nio-8080-exec-6] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-08 12:36:09,147 11477 [http-nio-8080-exec-6] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-08 12:36:09,190 11520 [http-nio-8080-exec-6] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-08 12:36:11,698 14028 [http-nio-8080-exec-6] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:39:35,687 0    [http-nio-8080-exec-1] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
+2017-02-08 12:39:35,693 6    [http-nio-8080-exec-1] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-08 12:39:35,695 8    [http-nio-8080-exec-1] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-08 12:39:35,699 12   [http-nio-8080-exec-1] INFO  util.MyProperties  - Calling MyProperties with path /database.properties
+2017-02-08 12:39:36,660 973  [http-nio-8080-exec-1] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-08 12:39:57,310 21623 [http-nio-8080-exec-3] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-08 12:39:57,344 21657 [http-nio-8080-exec-3] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-08 12:39:57,352 21665 [http-nio-8080-exec-3] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-08 12:39:57,358 21671 [http-nio-8080-exec-3] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-08 12:39:57,478 21791 [http-nio-8080-exec-3] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-08 12:39:57,479 21792 [http-nio-8080-exec-3] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-08 12:39:57,693 22006 [http-nio-8080-exec-3] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-08 12:39:58,114 22427 [http-nio-8080-exec-3] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-08 12:39:58,121 22434 [http-nio-8080-exec-3] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-08 12:39:58,122 22435 [http-nio-8080-exec-3] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-08 12:39:58,123 22436 [http-nio-8080-exec-3] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-08 12:39:58,132 22445 [http-nio-8080-exec-3] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-08 12:39:58,296 22609 [http-nio-8080-exec-3] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-08 12:39:58,952 23265 [http-nio-8080-exec-3] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-08 12:39:58,983 23296 [http-nio-8080-exec-3] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-08 12:40:01,057 25370 [http-nio-8080-exec-3] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:40:11,696 36009 [http-nio-8080-exec-7] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@3ed7e955
+2017-02-08 12:40:11,697 36010 [http-nio-8080-exec-7] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:40:11,697 36010 [http-nio-8080-exec-7] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:40:11,697 36010 [http-nio-8080-exec-7] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:40:11,697 36010 [http-nio-8080-exec-7] INFO  Servlets.UpdateAccounts  - Parameter userID value is 57
+2017-02-08 12:40:11,698 36011 [http-nio-8080-exec-7] INFO  persistence.UserDAO  - In dao.remove with id = 57
+2017-02-08 12:40:11,758 36071 [http-nio-8080-exec-7] INFO  persistence.UserDAO  - In dao. remove with user User(id=57, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:40:11,897 36210 [http-nio-8080-exec-7] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:40:11,970 36283 [http-nio-8080-exec-4] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:43:31,746 236059 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@364e07de
+2017-02-08 12:43:31,746 236059 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:43:31,746 236059 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:43:31,747 236060 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:43:31,747 236060 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter userID value is 56
+2017-02-08 12:43:31,747 236060 [http-nio-8080-exec-13] INFO  persistence.UserDAO  - In dao.remove with id = 56
+2017-02-08 12:43:31,756 236069 [http-nio-8080-exec-13] INFO  persistence.UserDAO  - In dao. remove with user User(id=56, privileges=12, username=Rose, name=Rose)
+2017-02-08 12:43:31,767 236080 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:43:31,824 236137 [http-nio-8080-exec-14] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:43:42,573 246886 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@1421cf9c
+2017-02-08 12:43:42,574 246887 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:43:42,574 246887 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:43:42,574 246887 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:43:42,579 246892 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter userID value is 55
+2017-02-08 12:43:42,579 246892 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - In dao.remove with id = 55
+2017-02-08 12:43:42,584 246897 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - In dao. remove with user User(id=55, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:43:42,595 246908 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:43:42,640 246953 [http-nio-8080-exec-12] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:43:48,847 253160 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@4e2dd002
+2017-02-08 12:43:48,848 253161 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:43:48,848 253161 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:43:48,849 253162 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:43:48,850 253163 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter userID value is 54
+2017-02-08 12:43:48,850 253163 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - In dao.remove with id = 54
+2017-02-08 12:43:48,855 253168 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - In dao. remove with user User(id=54, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:43:48,870 253183 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:43:48,915 253228 [http-nio-8080-exec-18] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:43:54,168 258481 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@6919796
+2017-02-08 12:43:54,168 258481 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:43:54,168 258481 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:43:54,168 258481 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:43:54,169 258482 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter userID value is 53
+2017-02-08 12:43:54,169 258482 [http-nio-8080-exec-20] INFO  persistence.UserDAO  - In dao.remove with id = 53
+2017-02-08 12:43:54,173 258486 [http-nio-8080-exec-20] INFO  persistence.UserDAO  - In dao. remove with user User(id=53, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:43:54,186 258499 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:43:54,224 258537 [http-nio-8080-exec-13] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:43:58,330 262643 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@74414e91
+2017-02-08 12:43:58,333 262646 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:43:58,333 262646 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:43:58,333 262646 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:43:58,333 262646 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter userID value is 52
+2017-02-08 12:43:58,333 262646 [http-nio-8080-exec-11] INFO  persistence.UserDAO  - In dao.remove with id = 52
+2017-02-08 12:43:58,343 262656 [http-nio-8080-exec-11] INFO  persistence.UserDAO  - In dao. remove with user User(id=52, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:43:58,354 262667 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:43:58,394 262707 [http-nio-8080-exec-15] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:02,330 266643 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@76e2c85e
+2017-02-08 12:44:02,331 266644 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:02,331 266644 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:02,331 266644 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:02,331 266644 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter userID value is 51
+2017-02-08 12:44:02,331 266644 [http-nio-8080-exec-16] INFO  persistence.UserDAO  - In dao.remove with id = 51
+2017-02-08 12:44:02,337 266650 [http-nio-8080-exec-16] INFO  persistence.UserDAO  - In dao. remove with user User(id=51, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:44:02,349 266662 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:02,390 266703 [http-nio-8080-exec-17] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:06,422 270735 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@7b68edb3
+2017-02-08 12:44:06,424 270737 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:06,424 270737 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:06,424 270737 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:06,424 270737 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter userID value is 50
+2017-02-08 12:44:06,425 270738 [http-nio-8080-exec-19] INFO  persistence.UserDAO  - In dao.remove with id = 50
+2017-02-08 12:44:06,431 270744 [http-nio-8080-exec-19] INFO  persistence.UserDAO  - In dao. remove with user User(id=50, privileges=12, username=Rose, name=Rose)
+2017-02-08 12:44:06,440 270753 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:06,503 270816 [http-nio-8080-exec-20] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:10,609 274922 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@384a2bcb
+2017-02-08 12:44:10,609 274922 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:10,609 274922 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:10,609 274922 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:10,609 274922 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter userID value is 49
+2017-02-08 12:44:10,609 274922 [http-nio-8080-exec-14] INFO  persistence.UserDAO  - In dao.remove with id = 49
+2017-02-08 12:44:10,618 274931 [http-nio-8080-exec-14] INFO  persistence.UserDAO  - In dao. remove with user User(id=49, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:44:10,628 274941 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:10,661 274974 [http-nio-8080-exec-11] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:14,751 279064 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@4689412e
+2017-02-08 12:44:14,751 279064 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:14,751 279064 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:14,751 279064 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:14,751 279064 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter userID value is 48
+2017-02-08 12:44:14,751 279064 [http-nio-8080-exec-12] INFO  persistence.UserDAO  - In dao.remove with id = 48
+2017-02-08 12:44:14,755 279068 [http-nio-8080-exec-12] INFO  persistence.UserDAO  - In dao. remove with user User(id=48, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:44:14,765 279078 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:14,797 279110 [http-nio-8080-exec-16] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:18,889 283202 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@518c5bb5
+2017-02-08 12:44:18,890 283203 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:18,890 283203 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:18,890 283203 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:18,890 283203 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter userID value is 47
+2017-02-08 12:44:18,890 283203 [http-nio-8080-exec-18] INFO  persistence.UserDAO  - In dao.remove with id = 47
+2017-02-08 12:44:18,895 283208 [http-nio-8080-exec-18] INFO  persistence.UserDAO  - In dao. remove with user User(id=47, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:44:18,907 283220 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:18,940 283253 [http-nio-8080-exec-19] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:22,679 286992 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@ddd85d6
+2017-02-08 12:44:22,679 286992 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:22,679 286992 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:22,680 286993 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:22,680 286993 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter userID value is 46
+2017-02-08 12:44:22,680 286993 [http-nio-8080-exec-13] INFO  persistence.UserDAO  - In dao.remove with id = 46
+2017-02-08 12:44:22,683 286996 [http-nio-8080-exec-13] INFO  persistence.UserDAO  - In dao. remove with user User(id=46, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:44:22,694 287007 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:22,728 287041 [http-nio-8080-exec-14] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:26,324 290637 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@47084aab
+2017-02-08 12:44:26,324 290637 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:26,324 290637 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:26,324 290637 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:26,324 290637 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter userID value is 45
+2017-02-08 12:44:26,324 290637 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - In dao.remove with id = 45
+2017-02-08 12:44:26,331 290644 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - In dao. remove with user User(id=45, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:44:26,346 290659 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:26,379 290692 [http-nio-8080-exec-12] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:30,136 294449 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@282a683a
+2017-02-08 12:44:30,136 294449 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:30,136 294449 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:30,136 294449 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:30,136 294449 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter userID value is 44
+2017-02-08 12:44:30,137 294450 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - In dao.remove with id = 44
+2017-02-08 12:44:30,140 294453 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - In dao. remove with user User(id=44, privileges=12, username=Rose, name=Rose)
+2017-02-08 12:44:30,155 294468 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:30,189 294502 [http-nio-8080-exec-18] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:34,308 298621 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@402ecf80
+2017-02-08 12:44:34,308 298621 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:34,308 298621 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:34,308 298621 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:34,308 298621 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter userID value is 43
+2017-02-08 12:44:34,308 298621 [http-nio-8080-exec-20] INFO  persistence.UserDAO  - In dao.remove with id = 43
+2017-02-08 12:44:34,315 298628 [http-nio-8080-exec-20] INFO  persistence.UserDAO  - In dao. remove with user User(id=43, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:44:34,325 298638 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:34,355 298668 [http-nio-8080-exec-13] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:38,466 302779 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@56353ba8
+2017-02-08 12:44:38,466 302779 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:38,466 302779 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:38,466 302779 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:38,466 302779 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter userID value is 42
+2017-02-08 12:44:38,466 302779 [http-nio-8080-exec-11] INFO  persistence.UserDAO  - In dao.remove with id = 42
+2017-02-08 12:44:38,470 302783 [http-nio-8080-exec-11] INFO  persistence.UserDAO  - In dao. remove with user User(id=42, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:44:38,482 302795 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:38,512 302825 [http-nio-8080-exec-15] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:41,902 306215 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@3f115892
+2017-02-08 12:44:41,903 306216 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:41,903 306216 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:41,903 306216 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:41,903 306216 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter userID value is 41
+2017-02-08 12:44:41,903 306216 [http-nio-8080-exec-16] INFO  persistence.UserDAO  - In dao.remove with id = 41
+2017-02-08 12:44:41,911 306224 [http-nio-8080-exec-16] INFO  persistence.UserDAO  - In dao. remove with user User(id=41, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:44:41,925 306238 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:41,959 306272 [http-nio-8080-exec-17] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:45,556 309869 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@46f4f1fc
+2017-02-08 12:44:45,556 309869 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:45,556 309869 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:45,556 309869 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:45,556 309869 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter userID value is 40
+2017-02-08 12:44:45,556 309869 [http-nio-8080-exec-19] INFO  persistence.UserDAO  - In dao.remove with id = 40
+2017-02-08 12:44:45,562 309875 [http-nio-8080-exec-19] INFO  persistence.UserDAO  - In dao. remove with user User(id=40, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:44:45,575 309888 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:45,613 309926 [http-nio-8080-exec-20] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:49,401 313714 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@4092ce44
+2017-02-08 12:44:49,402 313715 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:49,402 313715 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:49,402 313715 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:49,402 313715 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter userID value is 39
+2017-02-08 12:44:49,402 313715 [http-nio-8080-exec-14] INFO  persistence.UserDAO  - In dao.remove with id = 39
+2017-02-08 12:44:49,406 313719 [http-nio-8080-exec-14] INFO  persistence.UserDAO  - In dao. remove with user User(id=39, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:44:49,426 313739 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:49,457 313770 [http-nio-8080-exec-11] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:52,399 316712 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@694f6f77
+2017-02-08 12:44:52,400 316713 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:52,400 316713 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:52,400 316713 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:52,400 316713 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter userID value is 38
+2017-02-08 12:44:52,400 316713 [http-nio-8080-exec-12] INFO  persistence.UserDAO  - In dao.remove with id = 38
+2017-02-08 12:44:52,406 316719 [http-nio-8080-exec-12] INFO  persistence.UserDAO  - In dao. remove with user User(id=38, privileges=12, username=Rose, name=Rose)
+2017-02-08 12:44:52,418 316731 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:52,446 316759 [http-nio-8080-exec-16] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:55,423 319736 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@42123728
+2017-02-08 12:44:55,424 319737 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:55,424 319737 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:55,424 319737 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:55,424 319737 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter userID value is 37
+2017-02-08 12:44:55,424 319737 [http-nio-8080-exec-18] INFO  persistence.UserDAO  - In dao.remove with id = 37
+2017-02-08 12:44:55,428 319741 [http-nio-8080-exec-18] INFO  persistence.UserDAO  - In dao. remove with user User(id=37, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:44:55,437 319750 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:55,463 319776 [http-nio-8080-exec-19] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:44:58,010 322323 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@431bec70
+2017-02-08 12:44:58,011 322324 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:44:58,011 322324 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:44:58,011 322324 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:44:58,011 322324 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter userID value is 36
+2017-02-08 12:44:58,011 322324 [http-nio-8080-exec-13] INFO  persistence.UserDAO  - In dao.remove with id = 36
+2017-02-08 12:44:58,015 322328 [http-nio-8080-exec-13] INFO  persistence.UserDAO  - In dao. remove with user User(id=36, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:44:58,025 322338 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:44:58,063 322376 [http-nio-8080-exec-14] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:01,124 325437 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@49fbc1a7
+2017-02-08 12:45:01,124 325437 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:01,124 325437 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:01,125 325438 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:01,125 325438 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter userID value is 35
+2017-02-08 12:45:01,125 325438 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - In dao.remove with id = 35
+2017-02-08 12:45:01,131 325444 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - In dao. remove with user User(id=35, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:01,141 325454 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:01,168 325481 [http-nio-8080-exec-12] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:04,056 328369 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@62990497
+2017-02-08 12:45:04,056 328369 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:04,056 328369 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:04,057 328370 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:04,057 328370 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter userID value is 34
+2017-02-08 12:45:04,057 328370 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - In dao.remove with id = 34
+2017-02-08 12:45:04,060 328373 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - In dao. remove with user User(id=34, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:04,078 328391 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:04,104 328417 [http-nio-8080-exec-18] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:07,343 331656 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@1b2c7cc6
+2017-02-08 12:45:07,344 331657 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:07,344 331657 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:07,344 331657 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:07,344 331657 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter userID value is 33
+2017-02-08 12:45:07,344 331657 [http-nio-8080-exec-20] INFO  persistence.UserDAO  - In dao.remove with id = 33
+2017-02-08 12:45:07,348 331661 [http-nio-8080-exec-20] INFO  persistence.UserDAO  - In dao. remove with user User(id=33, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:07,363 331676 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:07,395 331708 [http-nio-8080-exec-13] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:10,078 334391 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@ac0fdc
+2017-02-08 12:45:10,079 334392 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:10,079 334392 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:10,079 334392 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:10,079 334392 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter userID value is 32
+2017-02-08 12:45:10,079 334392 [http-nio-8080-exec-11] INFO  persistence.UserDAO  - In dao.remove with id = 32
+2017-02-08 12:45:10,083 334396 [http-nio-8080-exec-11] INFO  persistence.UserDAO  - In dao. remove with user User(id=32, privileges=12, username=Rose, name=Rose)
+2017-02-08 12:45:10,094 334407 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:10,130 334443 [http-nio-8080-exec-15] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:12,745 337058 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@3f5efe3b
+2017-02-08 12:45:12,745 337058 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:12,746 337059 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:12,746 337059 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:12,746 337059 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter userID value is 31
+2017-02-08 12:45:12,746 337059 [http-nio-8080-exec-16] INFO  persistence.UserDAO  - In dao.remove with id = 31
+2017-02-08 12:45:12,749 337062 [http-nio-8080-exec-16] INFO  persistence.UserDAO  - In dao. remove with user User(id=31, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:12,762 337075 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:12,789 337102 [http-nio-8080-exec-17] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:15,444 339757 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@493c854d
+2017-02-08 12:45:15,444 339757 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:15,444 339757 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:15,444 339757 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:15,444 339757 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter userID value is 30
+2017-02-08 12:45:15,444 339757 [http-nio-8080-exec-19] INFO  persistence.UserDAO  - In dao.remove with id = 30
+2017-02-08 12:45:15,449 339762 [http-nio-8080-exec-19] INFO  persistence.UserDAO  - In dao. remove with user User(id=30, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:15,465 339778 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:15,504 339817 [http-nio-8080-exec-20] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:18,162 342475 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@321e7004
+2017-02-08 12:45:18,163 342476 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:18,163 342476 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:18,163 342476 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:18,163 342476 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter userID value is 29
+2017-02-08 12:45:18,163 342476 [http-nio-8080-exec-14] INFO  persistence.UserDAO  - In dao.remove with id = 29
+2017-02-08 12:45:18,166 342479 [http-nio-8080-exec-14] INFO  persistence.UserDAO  - In dao. remove with user User(id=29, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:18,178 342491 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:18,208 342521 [http-nio-8080-exec-11] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:20,819 345132 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@3f8611dd
+2017-02-08 12:45:20,819 345132 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:20,819 345132 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:20,820 345133 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:20,820 345133 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter userID value is 28
+2017-02-08 12:45:20,820 345133 [http-nio-8080-exec-12] INFO  persistence.UserDAO  - In dao.remove with id = 28
+2017-02-08 12:45:20,823 345136 [http-nio-8080-exec-12] INFO  persistence.UserDAO  - In dao. remove with user User(id=28, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:20,836 345149 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:20,866 345179 [http-nio-8080-exec-16] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:24,232 348545 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@2a25c4e
+2017-02-08 12:45:24,232 348545 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:24,232 348545 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:24,232 348545 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:24,232 348545 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter userID value is 27
+2017-02-08 12:45:24,232 348545 [http-nio-8080-exec-18] INFO  persistence.UserDAO  - In dao.remove with id = 27
+2017-02-08 12:45:24,236 348549 [http-nio-8080-exec-18] INFO  persistence.UserDAO  - In dao. remove with user User(id=27, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:24,248 348561 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:24,277 348590 [http-nio-8080-exec-19] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:26,971 351284 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@5840a73c
+2017-02-08 12:45:26,972 351285 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:26,972 351285 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:26,972 351285 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:26,972 351285 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter userID value is 26
+2017-02-08 12:45:26,972 351285 [http-nio-8080-exec-13] INFO  persistence.UserDAO  - In dao.remove with id = 26
+2017-02-08 12:45:26,978 351291 [http-nio-8080-exec-13] INFO  persistence.UserDAO  - In dao. remove with user User(id=26, privileges=12, username=Rose, name=Rose)
+2017-02-08 12:45:26,993 351306 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:27,017 351330 [http-nio-8080-exec-14] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:29,660 353973 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@2d4170e
+2017-02-08 12:45:29,661 353974 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:29,661 353974 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:29,661 353974 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:29,661 353974 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter userID value is 25
+2017-02-08 12:45:29,661 353974 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - In dao.remove with id = 25
+2017-02-08 12:45:29,665 353978 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - In dao. remove with user User(id=25, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:29,679 353992 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:29,708 354021 [http-nio-8080-exec-12] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:32,889 357202 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@27267f8a
+2017-02-08 12:45:32,889 357202 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:32,889 357202 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:32,889 357202 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:32,889 357202 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter userID value is 24
+2017-02-08 12:45:32,889 357202 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - In dao.remove with id = 24
+2017-02-08 12:45:32,894 357207 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - In dao. remove with user User(id=24, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:32,910 357223 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:32,935 357248 [http-nio-8080-exec-18] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:36,739 361052 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@6d1f8378
+2017-02-08 12:45:36,739 361052 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:36,739 361052 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:36,740 361053 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:36,740 361053 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter userID value is 23
+2017-02-08 12:45:36,740 361053 [http-nio-8080-exec-20] INFO  persistence.UserDAO  - In dao.remove with id = 23
+2017-02-08 12:45:36,743 361056 [http-nio-8080-exec-20] INFO  persistence.UserDAO  - In dao. remove with user User(id=23, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:36,754 361067 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:36,780 361093 [http-nio-8080-exec-13] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:39,762 364075 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@182821fb
+2017-02-08 12:45:39,762 364075 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:39,762 364075 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:39,762 364075 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:39,762 364075 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter userID value is 22
+2017-02-08 12:45:39,762 364075 [http-nio-8080-exec-11] INFO  persistence.UserDAO  - In dao.remove with id = 22
+2017-02-08 12:45:39,768 364081 [http-nio-8080-exec-11] INFO  persistence.UserDAO  - In dao. remove with user User(id=22, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:39,788 364101 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:39,814 364127 [http-nio-8080-exec-15] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:42,586 366899 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@3f0cb6d7
+2017-02-08 12:45:42,586 366899 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:42,586 366899 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:42,587 366900 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:42,587 366900 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter userID value is 21
+2017-02-08 12:45:42,587 366900 [http-nio-8080-exec-16] INFO  persistence.UserDAO  - In dao.remove with id = 21
+2017-02-08 12:45:42,592 366905 [http-nio-8080-exec-16] INFO  persistence.UserDAO  - In dao. remove with user User(id=21, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:42,604 366917 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:42,629 366942 [http-nio-8080-exec-17] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:45,091 369404 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@7c24745b
+2017-02-08 12:45:45,092 369405 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:45,092 369405 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:45,092 369405 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:45,092 369405 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter userID value is 20
+2017-02-08 12:45:45,092 369405 [http-nio-8080-exec-19] INFO  persistence.UserDAO  - In dao.remove with id = 20
+2017-02-08 12:45:45,096 369409 [http-nio-8080-exec-19] INFO  persistence.UserDAO  - In dao. remove with user User(id=20, privileges=12, username=Rose, name=Rose)
+2017-02-08 12:45:45,107 369420 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:45,135 369448 [http-nio-8080-exec-20] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:47,977 372290 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@36fb12ae
+2017-02-08 12:45:47,977 372290 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:47,977 372290 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:47,978 372291 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:47,978 372291 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter userID value is 19
+2017-02-08 12:45:47,978 372291 [http-nio-8080-exec-14] INFO  persistence.UserDAO  - In dao.remove with id = 19
+2017-02-08 12:45:47,981 372294 [http-nio-8080-exec-14] INFO  persistence.UserDAO  - In dao. remove with user User(id=19, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:47,995 372308 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:48,021 372334 [http-nio-8080-exec-11] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:50,781 375094 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@313211a6
+2017-02-08 12:45:50,781 375094 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:50,781 375094 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:50,781 375094 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:50,781 375094 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter userID value is 18
+2017-02-08 12:45:50,781 375094 [http-nio-8080-exec-12] INFO  persistence.UserDAO  - In dao.remove with id = 18
+2017-02-08 12:45:50,785 375098 [http-nio-8080-exec-12] INFO  persistence.UserDAO  - In dao. remove with user User(id=18, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:50,797 375110 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:50,818 375131 [http-nio-8080-exec-16] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:53,719 378032 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@1a3f9107
+2017-02-08 12:45:53,720 378033 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:53,720 378033 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:53,722 378035 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:53,722 378035 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter userID value is 17
+2017-02-08 12:45:53,722 378035 [http-nio-8080-exec-18] INFO  persistence.UserDAO  - In dao.remove with id = 17
+2017-02-08 12:45:53,730 378043 [http-nio-8080-exec-18] INFO  persistence.UserDAO  - In dao. remove with user User(id=17, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:53,756 378069 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:53,780 378093 [http-nio-8080-exec-19] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:55,911 380224 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@3110be6c
+2017-02-08 12:45:55,911 380224 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:55,911 380224 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:55,911 380224 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:55,911 380224 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter userID value is 16
+2017-02-08 12:45:55,911 380224 [http-nio-8080-exec-13] INFO  persistence.UserDAO  - In dao.remove with id = 16
+2017-02-08 12:45:55,915 380228 [http-nio-8080-exec-13] INFO  persistence.UserDAO  - In dao. remove with user User(id=16, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:55,928 380241 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:55,949 380262 [http-nio-8080-exec-14] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:45:58,599 382912 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@71030dbe
+2017-02-08 12:45:58,600 382913 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:45:58,600 382913 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:45:58,602 382915 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:45:58,602 382915 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter userID value is 15
+2017-02-08 12:45:58,603 382916 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - In dao.remove with id = 15
+2017-02-08 12:45:58,608 382921 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - In dao. remove with user User(id=15, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:45:58,618 382931 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:45:58,647 382960 [http-nio-8080-exec-12] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:46:01,777 386090 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@17863186
+2017-02-08 12:46:01,778 386091 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:46:01,778 386091 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:46:01,778 386091 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:46:01,778 386091 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter userID value is 14
+2017-02-08 12:46:01,778 386091 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - In dao.remove with id = 14
+2017-02-08 12:46:01,782 386095 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - In dao. remove with user User(id=14, privileges=12, username=Rose, name=Rose)
+2017-02-08 12:46:01,792 386105 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:46:01,820 386133 [http-nio-8080-exec-18] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:46:03,951 388264 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@7e00810f
+2017-02-08 12:46:03,952 388265 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:46:03,952 388265 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:46:03,952 388265 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:46:03,952 388265 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter userID value is 13
+2017-02-08 12:46:03,952 388265 [http-nio-8080-exec-20] INFO  persistence.UserDAO  - In dao.remove with id = 13
+2017-02-08 12:46:03,957 388270 [http-nio-8080-exec-20] INFO  persistence.UserDAO  - In dao. remove with user User(id=13, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:46:03,971 388284 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:46:03,995 388308 [http-nio-8080-exec-13] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:46:07,577 391890 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@5fa32a34
+2017-02-08 12:46:07,578 391891 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:46:07,578 391891 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:46:07,578 391891 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:46:07,578 391891 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter userID value is 12
+2017-02-08 12:46:07,578 391891 [http-nio-8080-exec-11] INFO  persistence.UserDAO  - In dao.remove with id = 12
+2017-02-08 12:46:07,581 391894 [http-nio-8080-exec-11] INFO  persistence.UserDAO  - In dao. remove with user User(id=12, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:46:07,593 391906 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:46:07,617 391930 [http-nio-8080-exec-15] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:46:10,372 394685 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@16668d85
+2017-02-08 12:46:10,372 394685 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:46:10,372 394685 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:46:10,372 394685 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:46:10,373 394686 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter userID value is 11
+2017-02-08 12:46:10,373 394686 [http-nio-8080-exec-16] INFO  persistence.UserDAO  - In dao.remove with id = 11
+2017-02-08 12:46:10,378 394691 [http-nio-8080-exec-16] INFO  persistence.UserDAO  - In dao. remove with user User(id=11, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:46:10,390 394703 [http-nio-8080-exec-16] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:46:10,414 394727 [http-nio-8080-exec-17] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:46:13,728 398041 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@5f904774
+2017-02-08 12:46:13,728 398041 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:46:13,728 398041 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:46:13,728 398041 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:46:13,728 398041 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter userID value is 10
+2017-02-08 12:46:13,728 398041 [http-nio-8080-exec-19] INFO  persistence.UserDAO  - In dao.remove with id = 10
+2017-02-08 12:46:13,732 398045 [http-nio-8080-exec-19] INFO  persistence.UserDAO  - In dao. remove with user User(id=10, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:46:13,746 398059 [http-nio-8080-exec-19] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:46:13,767 398080 [http-nio-8080-exec-20] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:46:16,753 401066 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@523980f0
+2017-02-08 12:46:16,754 401067 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:46:16,754 401067 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:46:16,754 401067 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:46:16,754 401067 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter userID value is 9
+2017-02-08 12:46:16,754 401067 [http-nio-8080-exec-14] INFO  persistence.UserDAO  - In dao.remove with id = 9
+2017-02-08 12:46:16,759 401072 [http-nio-8080-exec-14] INFO  persistence.UserDAO  - In dao. remove with user User(id=9, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:46:16,777 401090 [http-nio-8080-exec-14] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:46:16,799 401112 [http-nio-8080-exec-11] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:46:19,063 403376 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@5f704c22
+2017-02-08 12:46:19,063 403376 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:46:19,063 403376 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:46:19,063 403376 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:46:19,063 403376 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter userID value is 8
+2017-02-08 12:46:19,064 403377 [http-nio-8080-exec-12] INFO  persistence.UserDAO  - In dao.remove with id = 8
+2017-02-08 12:46:19,068 403381 [http-nio-8080-exec-12] INFO  persistence.UserDAO  - In dao. remove with user User(id=8, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:46:19,076 403389 [http-nio-8080-exec-12] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:46:19,099 403412 [http-nio-8080-exec-16] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:46:21,306 405619 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@5049ce25
+2017-02-08 12:46:21,306 405619 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:46:21,306 405619 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:46:21,306 405619 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:46:21,306 405619 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter userID value is 7
+2017-02-08 12:46:21,306 405619 [http-nio-8080-exec-18] INFO  persistence.UserDAO  - In dao.remove with id = 7
+2017-02-08 12:46:21,309 405622 [http-nio-8080-exec-18] INFO  persistence.UserDAO  - In dao. remove with user User(id=7, privileges=12, username=Rose, name=Rose)
+2017-02-08 12:46:21,320 405633 [http-nio-8080-exec-18] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:46:21,344 405657 [http-nio-8080-exec-19] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:46:23,926 408239 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@582bc65b
+2017-02-08 12:46:23,927 408240 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:46:23,927 408240 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:46:23,927 408240 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:46:23,927 408240 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter userID value is 6
+2017-02-08 12:46:23,927 408240 [http-nio-8080-exec-13] INFO  persistence.UserDAO  - In dao.remove with id = 6
+2017-02-08 12:46:23,931 408244 [http-nio-8080-exec-13] INFO  persistence.UserDAO  - In dao. remove with user User(id=6, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:46:23,943 408256 [http-nio-8080-exec-13] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:46:23,963 408276 [http-nio-8080-exec-14] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:46:25,667 409980 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@633c83c8
+2017-02-08 12:46:25,668 409981 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:46:25,668 409981 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:46:25,668 409981 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:46:25,668 409981 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter userID value is 5
+2017-02-08 12:46:25,668 409981 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - In dao.remove with id = 5
+2017-02-08 12:46:25,672 409985 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - In dao. remove with user User(id=5, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:46:25,683 409996 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:46:25,709 410022 [http-nio-8080-exec-12] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:46:27,398 411711 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@5a04fe83
+2017-02-08 12:46:27,398 411711 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:46:27,398 411711 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:46:27,398 411711 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:46:27,398 411711 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter userID value is 4
+2017-02-08 12:46:27,398 411711 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-08 12:46:27,405 411718 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:46:27,417 411730 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:46:27,436 411749 [http-nio-8080-exec-18] INFO  Servlets.ShowUsersServlet  - Session message is null
+2017-02-08 12:46:30,392 414705 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Request to UpdateAccounts has parameters java.util.Collections$3@2a4b1fc3
+2017-02-08 12:46:30,392 414705 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter Name value is Peter Knibbe
+2017-02-08 12:46:30,392 414705 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter UserName value is pknibbe
+2017-02-08 12:46:30,392 414705 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter privileges value is 1
+2017-02-08 12:46:30,392 414705 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter userID value is 3
+2017-02-08 12:46:30,392 414705 [http-nio-8080-exec-20] INFO  persistence.UserDAO  - In dao.remove with id = 3
+2017-02-08 12:46:30,395 414708 [http-nio-8080-exec-20] INFO  persistence.UserDAO  - In dao. remove with user User(id=3, privileges=12, username=RoseMarie, name=Rose)
+2017-02-08 12:46:30,414 414727 [http-nio-8080-exec-20] INFO  Servlets.UpdateAccounts  - Parameter Delete value is Delete
+2017-02-08 12:46:30,437 414750 [http-nio-8080-exec-13] INFO  Servlets.ShowUsersServlet  - Session message is null
