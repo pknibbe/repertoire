@@ -1,11 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Repertoire</title>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
-</head>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:import url="/head.jsp"/>
 
 <body>
 <h3>${SessionMessage}</h3><br/><br/>
@@ -13,12 +9,20 @@
 <div>
     <h4>Manage Accounts</h4>
     <form action="/Update" method="POST">
-        username:
-        <select value="username" id="username">
-            <option value="Peter">Peter</option>
-            <option value="Marie">Marie</option>
-            <option value="Beth">Beth</option>
-        </select>
+        <table>
+            <thead><tr><th>Select</th><th>Name</th><th>UserName</th><th>Password</th><th>Privileges</th></tr></thead>
+            <tbody>
+                <c:forEach var="user" items="${users}">
+                    <tr>
+                        <td><input type="radio" name="users" value=${user.id} /></td>
+                        <td>${user.name}</td>
+                        <td>${user.username}</td>
+                        <td>"Password"</td>
+                        <td>${user.privileges}</td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table><br/><br/>
         <input type="submit" name="Update" value="Edit" />
     </form>
 </div>
@@ -42,3 +46,5 @@
     </form></div>
 
 </body>
+
+</html>

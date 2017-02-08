@@ -2,6 +2,7 @@ package persistence;
 
 import entity.User;
 import org.apache.log4j.Logger;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -13,14 +14,14 @@ import java.util.List;
 /**
  * Created by peter on 2/1/2017.
  */
-public class DAOUser {
+public class UserDAO {
     private final Logger logger = Logger.getLogger(this.getClass());
 
     /** Return a list of all users
      *
      * @return All users
      */
-    public List<User> getAll() {
+    public List<User> getAll() throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         List<User> users = session.createCriteria(User.class).list();
         session.close();
@@ -32,7 +33,7 @@ public class DAOUser {
      * @param id user's id
      * @return User
      */
-    public User get(int id) {
+    public User get(int id) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         User user = (User) session.get(User.class, id);
         session.close();
@@ -43,7 +44,7 @@ public class DAOUser {
      * @param user
      * @return id the id of the inserted record
      */
-    public int add(User user) {
+    public int add(User user) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         int id = (Integer) session.save(user);
@@ -57,7 +58,7 @@ public class DAOUser {
      *
      * @param id ID of user to be removed
      */
-    public void remove(int id) {
+    public void remove(int id) throws HibernateException {
         logger.info("In dao.remove with id = " + id);
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();

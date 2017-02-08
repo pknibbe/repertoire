@@ -14,17 +14,15 @@
 - [X] Begin Migrating documents from Office format to md
 - [X] Document application flow
 - [X] Complete screen design (on paper)
-- [ ] Deploy application to AWS
 - [X] Complete preliminary database design
 - [X] Begin creating JSPs
 - [X] Time log entries
-- [ ] Complete project plan. Based on the design should be able to lay out more detail.
+- [X] Complete project plan. Based on the design should be able to lay out more detail.
 
 ### Week 3 
-- [ ] Complete remaining JSPs
+- [X] Complete remaining JSPs
 - [X] Create database and all tables/columns locally
 - [X] Time log entries
-- [ ] Create class diagram
 - [X] Set up logging
 - [X] Set up unit testing
 - [X] Add Hibernate config
@@ -42,6 +40,7 @@
 - [ ] Create persistence for remaining classes
 - [ ] Create persistence for trail report
 - [ ] Test all persistence classes
+- [ ] Deploy application to AWS
 
 ### Week 6
 - [ ] Time log entries

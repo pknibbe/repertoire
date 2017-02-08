@@ -3,7 +3,6 @@ package persistence;
 import java.util.*;
 import org.junit.Before;
 import org.junit.Test;
-import org.apache.log4j.*;
 import org.apache.log4j.Logger;
 
 import static org.junit.Assert.*;
@@ -11,9 +10,9 @@ import static org.junit.Assert.*;
 /**
  * Created by peter on 2/3/2017.
  */
-public class DAOUserTest {
+public class UserDAOTest {
 
-    DAOUser dao;
+    UserDAO dao;
     entity.User user;
     int numberOfUsers;
     List<entity.User> userList;
@@ -21,7 +20,7 @@ public class DAOUserTest {
 
     @Before
     public void setup() throws Exception {
-        dao = new DAOUser();
+        dao = new UserDAO();
         userList = dao.getAll();
         logger.info("In @Before, userList has " + userList.size() + "entries");
         justAdd(); // make sure table is not empty for purpose of test

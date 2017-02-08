@@ -347,10 +347,10 @@ java.lang.NullPointerException
 2017-02-04 11:59:08,406 1646 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 11:59:09,296 2536 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 11:59:09,362 2602 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 11:59:12,730 5970 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 2entries
-2017-02-04 11:59:12,833 6073 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 3entries
-2017-02-04 11:59:12,834 6074 [main] INFO  persistence.DAOUserTest  - In testRemove, userList has 3entries
-2017-02-04 11:59:12,834 6074 [main] INFO  persistence.DAOUserTest  - In testRemove, last index calculated as -1
+2017-02-04 11:59:12,730 5970 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 2entries
+2017-02-04 11:59:12,833 6073 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 3entries
+2017-02-04 11:59:12,834 6074 [main] INFO  persistence.UserDAOTest  - In testRemove, userList has 3entries
+2017-02-04 11:59:12,834 6074 [main] INFO  persistence.UserDAOTest  - In testRemove, last index calculated as -1
 2017-02-04 12:02:39,733 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
 2017-02-04 12:02:39,753 20   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
 2017-02-04 12:02:39,758 25   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
@@ -366,10 +366,10 @@ java.lang.NullPointerException
 2017-02-04 12:02:41,403 1670 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 12:02:42,273 2540 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 12:02:42,296 2563 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 12:02:45,699 5966 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 3entries
-2017-02-04 12:02:45,805 6072 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 4entries
-2017-02-04 12:02:45,805 6072 [main] INFO  persistence.DAOUserTest  - In testRemove, userList has 4entries
-2017-02-04 12:02:45,805 6072 [main] INFO  persistence.DAOUserTest  - In testRemove, last index calculated as 3
+2017-02-04 12:02:45,699 5966 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 3entries
+2017-02-04 12:02:45,805 6072 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 4entries
+2017-02-04 12:02:45,805 6072 [main] INFO  persistence.UserDAOTest  - In testRemove, userList has 4entries
+2017-02-04 12:02:45,805 6072 [main] INFO  persistence.UserDAOTest  - In testRemove, last index calculated as 3
 2017-02-04 12:10:07,107 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
 2017-02-04 12:10:07,135 28   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
 2017-02-04 12:10:07,141 34   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
@@ -385,14 +385,14 @@ java.lang.NullPointerException
 2017-02-04 12:10:09,586 2479 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 12:10:10,493 3386 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 12:10:10,521 3414 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 12:10:12,959 5852 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 3entries
-2017-02-04 12:10:13,069 5962 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 4entries
-2017-02-04 12:10:13,069 5962 [main] INFO  persistence.DAOUserTest  - In testRemove, userList has 4entries
-2017-02-04 12:10:13,069 5962 [main] INFO  persistence.DAOUserTest  - In testRemove, last index calculated as 3
-2017-02-04 12:10:13,070 5963 [main] INFO  persistence.DAOUserTest  - About to remove User{id=4, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
-2017-02-04 12:10:13,070 5963 [main] INFO  persistence.DAOUserTest  - About to remove 4
-2017-02-04 12:10:13,070 5963 [main] INFO  persistence.DAOUser  - In dao.remove with id = 4
-2017-02-04 12:10:13,123 6016 [main] INFO  persistence.DAOUser  - In dao. remove with user User{id=4, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
+2017-02-04 12:10:12,959 5852 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 3entries
+2017-02-04 12:10:13,069 5962 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 4entries
+2017-02-04 12:10:13,069 5962 [main] INFO  persistence.UserDAOTest  - In testRemove, userList has 4entries
+2017-02-04 12:10:13,069 5962 [main] INFO  persistence.UserDAOTest  - In testRemove, last index calculated as 3
+2017-02-04 12:10:13,070 5963 [main] INFO  persistence.UserDAOTest  - About to remove User{id=4, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
+2017-02-04 12:10:13,070 5963 [main] INFO  persistence.UserDAOTest  - About to remove 4
+2017-02-04 12:10:13,070 5963 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-04 12:10:13,123 6016 [main] INFO  persistence.UserDAO  - In dao. remove with user User{id=4, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
 2017-02-04 12:11:43,014 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
 2017-02-04 12:11:43,046 32   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
 2017-02-04 12:11:43,053 39   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
@@ -408,14 +408,14 @@ java.lang.NullPointerException
 2017-02-04 12:11:44,924 1910 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 12:11:45,840 2826 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 12:11:45,870 2856 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 12:11:48,905 5891 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 3entries
-2017-02-04 12:11:49,041 6027 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 4entries
-2017-02-04 12:11:49,041 6027 [main] INFO  persistence.DAOUserTest  - In testRemove, userList has 4entries
-2017-02-04 12:11:49,042 6028 [main] INFO  persistence.DAOUserTest  - In testRemove, last index calculated as 3
-2017-02-04 12:11:49,042 6028 [main] INFO  persistence.DAOUserTest  - About to remove User{id=4, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
-2017-02-04 12:11:49,042 6028 [main] INFO  persistence.DAOUserTest  - About to remove 4
-2017-02-04 12:11:49,042 6028 [main] INFO  persistence.DAOUser  - In dao.remove with id = 4
-2017-02-04 12:11:49,102 6088 [main] INFO  persistence.DAOUser  - In dao. remove with user User{id=4, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
+2017-02-04 12:11:48,905 5891 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 3entries
+2017-02-04 12:11:49,041 6027 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 4entries
+2017-02-04 12:11:49,041 6027 [main] INFO  persistence.UserDAOTest  - In testRemove, userList has 4entries
+2017-02-04 12:11:49,042 6028 [main] INFO  persistence.UserDAOTest  - In testRemove, last index calculated as 3
+2017-02-04 12:11:49,042 6028 [main] INFO  persistence.UserDAOTest  - About to remove User{id=4, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
+2017-02-04 12:11:49,042 6028 [main] INFO  persistence.UserDAOTest  - About to remove 4
+2017-02-04 12:11:49,042 6028 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-04 12:11:49,102 6088 [main] INFO  persistence.UserDAO  - In dao. remove with user User{id=4, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
 2017-02-04 12:14:46,373 1    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
 2017-02-04 12:14:46,405 33   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
 2017-02-04 12:14:46,414 42   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
@@ -431,8 +431,8 @@ java.lang.NullPointerException
 2017-02-04 12:14:48,279 1907 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 12:14:49,139 2767 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 12:14:49,160 2788 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 12:14:51,608 5236 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 3entries
-2017-02-04 12:14:51,740 5368 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 4entries
+2017-02-04 12:14:51,608 5236 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 3entries
+2017-02-04 12:14:51,740 5368 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 4entries
 2017-02-04 12:15:04,830 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
 2017-02-04 12:15:04,871 41   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
 2017-02-04 12:15:04,881 51   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
@@ -448,8 +448,8 @@ java.lang.NullPointerException
 2017-02-04 12:15:07,049 2219 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 12:15:07,950 3120 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 12:15:07,980 3150 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 12:15:10,365 5535 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 5entries
-2017-02-04 12:15:10,470 5640 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 6entries
+2017-02-04 12:15:10,365 5535 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 5entries
+2017-02-04 12:15:10,470 5640 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 6entries
 2017-02-04 12:15:30,472 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
 2017-02-04 12:15:30,510 38   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
 2017-02-04 12:15:30,521 49   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
@@ -465,8 +465,8 @@ java.lang.NullPointerException
 2017-02-04 12:15:32,894 2422 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 12:15:33,768 3296 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 12:15:33,791 3319 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 12:15:36,344 5872 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 7entries
-2017-02-04 12:15:36,500 6028 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 8entries
+2017-02-04 12:15:36,344 5872 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 7entries
+2017-02-04 12:15:36,500 6028 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 8entries
 2017-02-04 12:15:46,609 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
 2017-02-04 12:15:46,628 19   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
 2017-02-04 12:15:46,633 24   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
@@ -482,8 +482,8 @@ java.lang.NullPointerException
 2017-02-04 12:15:48,315 1706 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 12:15:49,402 2793 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 12:15:49,438 2829 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 12:15:52,700 6091 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 8entries
-2017-02-04 12:15:52,841 6232 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 9entries
+2017-02-04 12:15:52,700 6091 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 8entries
+2017-02-04 12:15:52,841 6232 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 9entries
 2017-02-04 12:16:13,214 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
 2017-02-04 12:16:13,240 26   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
 2017-02-04 12:16:13,246 32   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
@@ -499,22 +499,22 @@ java.lang.NullPointerException
 2017-02-04 12:16:15,465 2251 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 12:16:16,411 3197 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 12:16:16,436 3222 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 12:16:18,925 5711 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 9entries
-2017-02-04 12:16:19,024 5810 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 10entries
-2017-02-04 12:16:19,055 5841 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 11entries
-2017-02-04 12:16:19,081 5867 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 12entries
-2017-02-04 12:16:19,112 5898 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 12entries
-2017-02-04 12:16:19,132 5918 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 13entries
-2017-02-04 12:16:19,161 5947 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 14entries
-2017-02-04 12:16:19,183 5969 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 15entries
-2017-02-04 12:16:19,194 5980 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 15entries
-2017-02-04 12:16:19,219 6005 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 16entries
-2017-02-04 12:16:19,220 6006 [main] INFO  persistence.DAOUserTest  - In testRemove, userList has 16entries
-2017-02-04 12:16:19,220 6006 [main] INFO  persistence.DAOUserTest  - In testRemove, last index calculated as 15
-2017-02-04 12:16:19,220 6006 [main] INFO  persistence.DAOUserTest  - About to remove User{id=16, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
-2017-02-04 12:16:19,220 6006 [main] INFO  persistence.DAOUserTest  - About to remove 16
-2017-02-04 12:16:19,221 6007 [main] INFO  persistence.DAOUser  - In dao.remove with id = 16
-2017-02-04 12:16:19,246 6032 [main] INFO  persistence.DAOUser  - In dao. remove with user User{id=16, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
+2017-02-04 12:16:18,925 5711 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 9entries
+2017-02-04 12:16:19,024 5810 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 10entries
+2017-02-04 12:16:19,055 5841 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 11entries
+2017-02-04 12:16:19,081 5867 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 12entries
+2017-02-04 12:16:19,112 5898 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 12entries
+2017-02-04 12:16:19,132 5918 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 13entries
+2017-02-04 12:16:19,161 5947 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 14entries
+2017-02-04 12:16:19,183 5969 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 15entries
+2017-02-04 12:16:19,194 5980 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 15entries
+2017-02-04 12:16:19,219 6005 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 16entries
+2017-02-04 12:16:19,220 6006 [main] INFO  persistence.UserDAOTest  - In testRemove, userList has 16entries
+2017-02-04 12:16:19,220 6006 [main] INFO  persistence.UserDAOTest  - In testRemove, last index calculated as 15
+2017-02-04 12:16:19,220 6006 [main] INFO  persistence.UserDAOTest  - About to remove User{id=16, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
+2017-02-04 12:16:19,220 6006 [main] INFO  persistence.UserDAOTest  - About to remove 16
+2017-02-04 12:16:19,221 6007 [main] INFO  persistence.UserDAO  - In dao.remove with id = 16
+2017-02-04 12:16:19,246 6032 [main] INFO  persistence.UserDAO  - In dao. remove with user User{id=16, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
 2017-02-04 13:07:18,483 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
 2017-02-04 13:07:18,516 33   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
 2017-02-04 13:07:18,524 41   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
@@ -530,14 +530,14 @@ java.lang.NullPointerException
 2017-02-04 13:07:20,487 2004 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 13:07:21,356 2873 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 13:07:21,401 2918 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 13:07:25,166 6683 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 15entries
-2017-02-04 13:07:25,300 6817 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 16entries
-2017-02-04 13:07:25,301 6818 [main] INFO  persistence.DAOUserTest  - In testRemove, userList has 16entries
-2017-02-04 13:07:25,301 6818 [main] INFO  persistence.DAOUserTest  - In testRemove, last index calculated as 15
-2017-02-04 13:07:25,302 6819 [main] INFO  persistence.DAOUserTest  - About to remove User{id=16, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
-2017-02-04 13:07:25,302 6819 [main] INFO  persistence.DAOUserTest  - About to remove 16
-2017-02-04 13:07:25,302 6819 [main] INFO  persistence.DAOUser  - In dao.remove with id = 16
-2017-02-04 13:07:25,364 6881 [main] INFO  persistence.DAOUser  - In dao. remove with user User{id=16, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
+2017-02-04 13:07:25,166 6683 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 15entries
+2017-02-04 13:07:25,300 6817 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 16entries
+2017-02-04 13:07:25,301 6818 [main] INFO  persistence.UserDAOTest  - In testRemove, userList has 16entries
+2017-02-04 13:07:25,301 6818 [main] INFO  persistence.UserDAOTest  - In testRemove, last index calculated as 15
+2017-02-04 13:07:25,302 6819 [main] INFO  persistence.UserDAOTest  - About to remove User{id=16, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
+2017-02-04 13:07:25,302 6819 [main] INFO  persistence.UserDAOTest  - About to remove 16
+2017-02-04 13:07:25,302 6819 [main] INFO  persistence.UserDAO  - In dao.remove with id = 16
+2017-02-04 13:07:25,364 6881 [main] INFO  persistence.UserDAO  - In dao. remove with user User{id=16, username='RoseMarie', name='Rose', messageSet=12, credentialSet=12, playlistSet=12, privileges=12}
 2017-02-04 15:40:03,728 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
 2017-02-04 15:40:03,800 72   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
 2017-02-04 15:40:03,807 79   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
@@ -553,22 +553,22 @@ java.lang.NullPointerException
 2017-02-04 15:40:06,507 2779 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 15:40:07,209 3481 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 15:40:07,259 3531 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 15:40:09,843 6115 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 15entries
-2017-02-04 15:40:10,035 6307 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 16entries
-2017-02-04 15:40:10,073 6345 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 17entries
-2017-02-04 15:40:10,100 6372 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 18entries
-2017-02-04 15:40:10,147 6419 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 18entries
-2017-02-04 15:40:10,201 6473 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 19entries
-2017-02-04 15:40:10,230 6502 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 20entries
-2017-02-04 15:40:10,252 6524 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 21entries
-2017-02-04 15:40:10,265 6537 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 21entries
-2017-02-04 15:40:10,288 6560 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 22entries
-2017-02-04 15:40:10,288 6560 [main] INFO  persistence.DAOUserTest  - In testRemove, userList has 22entries
-2017-02-04 15:40:10,290 6562 [main] INFO  persistence.DAOUserTest  - In testRemove, last index calculated as 21
-2017-02-04 15:40:10,290 6562 [main] INFO  persistence.DAOUserTest  - About to remove User{id=22, username='RoseMarie', name='Rose', privileges=12}
-2017-02-04 15:40:10,291 6563 [main] INFO  persistence.DAOUserTest  - About to remove 22
-2017-02-04 15:40:10,292 6564 [main] INFO  persistence.DAOUser  - In dao.remove with id = 22
-2017-02-04 15:40:10,323 6595 [main] INFO  persistence.DAOUser  - In dao. remove with user User{id=22, username='RoseMarie', name='Rose', privileges=12}
+2017-02-04 15:40:09,843 6115 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 15entries
+2017-02-04 15:40:10,035 6307 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 16entries
+2017-02-04 15:40:10,073 6345 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 17entries
+2017-02-04 15:40:10,100 6372 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 18entries
+2017-02-04 15:40:10,147 6419 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 18entries
+2017-02-04 15:40:10,201 6473 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 19entries
+2017-02-04 15:40:10,230 6502 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 20entries
+2017-02-04 15:40:10,252 6524 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 21entries
+2017-02-04 15:40:10,265 6537 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 21entries
+2017-02-04 15:40:10,288 6560 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 22entries
+2017-02-04 15:40:10,288 6560 [main] INFO  persistence.UserDAOTest  - In testRemove, userList has 22entries
+2017-02-04 15:40:10,290 6562 [main] INFO  persistence.UserDAOTest  - In testRemove, last index calculated as 21
+2017-02-04 15:40:10,290 6562 [main] INFO  persistence.UserDAOTest  - About to remove User{id=22, username='RoseMarie', name='Rose', privileges=12}
+2017-02-04 15:40:10,291 6563 [main] INFO  persistence.UserDAOTest  - About to remove 22
+2017-02-04 15:40:10,292 6564 [main] INFO  persistence.UserDAO  - In dao.remove with id = 22
+2017-02-04 15:40:10,323 6595 [main] INFO  persistence.UserDAO  - In dao. remove with user User{id=22, username='RoseMarie', name='Rose', privileges=12}
 2017-02-04 15:42:28,904 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
 2017-02-04 15:42:28,935 31   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
 2017-02-04 15:42:28,945 41   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
@@ -584,14 +584,14 @@ java.lang.NullPointerException
 2017-02-04 15:42:30,492 1588 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 15:42:30,874 1970 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 15:42:30,893 1989 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 15:42:32,290 3386 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 21entries
-2017-02-04 15:42:32,416 3512 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 22entries
-2017-02-04 15:42:32,469 3565 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 23entries
-2017-02-04 15:42:32,513 3609 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 24entries
-2017-02-04 15:42:32,561 3657 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 24entries
-2017-02-04 15:42:32,601 3697 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 25entries
-2017-02-04 15:42:32,637 3733 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 26entries
-2017-02-04 15:42:32,660 3756 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 27entries
+2017-02-04 15:42:32,290 3386 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 21entries
+2017-02-04 15:42:32,416 3512 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 22entries
+2017-02-04 15:42:32,469 3565 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 23entries
+2017-02-04 15:42:32,513 3609 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 24entries
+2017-02-04 15:42:32,561 3657 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 24entries
+2017-02-04 15:42:32,601 3697 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 25entries
+2017-02-04 15:42:32,637 3733 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 26entries
+2017-02-04 15:42:32,660 3756 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 27entries
 2017-02-04 15:45:16,610 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
 2017-02-04 15:45:16,626 16   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
 2017-02-04 15:45:16,631 21   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
@@ -607,14 +607,14 @@ java.lang.NullPointerException
 2017-02-04 15:45:17,910 1300 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 15:45:18,300 1690 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 15:45:18,319 1709 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 15:45:19,654 3044 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 27entries
-2017-02-04 15:45:19,768 3158 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 28entries
-2017-02-04 15:45:19,817 3207 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 29entries
-2017-02-04 15:45:19,843 3233 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 30entries
-2017-02-04 15:45:19,887 3277 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 30entries
-2017-02-04 15:45:19,917 3307 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 31entries
-2017-02-04 15:45:20,013 3403 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 32entries
-2017-02-04 15:45:20,068 3458 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 33entries
+2017-02-04 15:45:19,654 3044 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 27entries
+2017-02-04 15:45:19,768 3158 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 28entries
+2017-02-04 15:45:19,817 3207 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 29entries
+2017-02-04 15:45:19,843 3233 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 30entries
+2017-02-04 15:45:19,887 3277 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 30entries
+2017-02-04 15:45:19,917 3307 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 31entries
+2017-02-04 15:45:20,013 3403 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 32entries
+2017-02-04 15:45:20,068 3458 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 33entries
 2017-02-04 15:49:27,220 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
 2017-02-04 15:49:27,271 51   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
 2017-02-04 15:49:27,279 59   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
@@ -630,14 +630,14 @@ java.lang.NullPointerException
 2017-02-04 15:49:30,183 2963 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 15:49:30,944 3724 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 15:49:30,986 3766 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 15:49:33,605 6385 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 33entries
-2017-02-04 15:49:33,757 6537 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 34entries
-2017-02-04 15:49:33,810 6590 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 35entries
-2017-02-04 15:49:33,841 6621 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 36entries
-2017-02-04 15:49:33,889 6669 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 36entries
-2017-02-04 15:49:33,942 6722 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 37entries
-2017-02-04 15:49:33,974 6754 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 38entries
-2017-02-04 15:49:34,001 6781 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 39entries
+2017-02-04 15:49:33,605 6385 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 33entries
+2017-02-04 15:49:33,757 6537 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 34entries
+2017-02-04 15:49:33,810 6590 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 35entries
+2017-02-04 15:49:33,841 6621 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 36entries
+2017-02-04 15:49:33,889 6669 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 36entries
+2017-02-04 15:49:33,942 6722 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 37entries
+2017-02-04 15:49:33,974 6754 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 38entries
+2017-02-04 15:49:34,001 6781 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 39entries
 2017-02-04 15:52:30,878 0    [http-nio-8080-exec-4] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
 2017-02-04 15:52:30,914 36   [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - properties obtained in startup
 2017-02-04 15:52:30,915 37   [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
@@ -663,22 +663,22 @@ java.lang.NullPointerException
 2017-02-04 18:18:58,375 4435 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2017-02-04 18:19:00,509 6569 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-02-04 18:19:00,758 6818 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
-2017-02-04 18:19:06,712 12772 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 39entries
-2017-02-04 18:19:06,875 12935 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 40entries
-2017-02-04 18:19:06,934 12994 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 41entries
-2017-02-04 18:19:06,968 13028 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 42entries
-2017-02-04 18:19:07,026 13086 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 42entries
-2017-02-04 18:19:07,073 13133 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 43entries
-2017-02-04 18:19:07,124 13184 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 44entries
-2017-02-04 18:19:07,154 13214 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 45entries
-2017-02-04 18:19:07,174 13234 [main] INFO  persistence.DAOUserTest  - In @Before, userList has 45entries
-2017-02-04 18:19:07,208 13268 [main] INFO  persistence.DAOUserTest  - After justAdd, userList has 46entries
-2017-02-04 18:19:07,208 13268 [main] INFO  persistence.DAOUserTest  - In testRemove, userList has 46entries
-2017-02-04 18:19:07,209 13269 [main] INFO  persistence.DAOUserTest  - In testRemove, last index calculated as 45
-2017-02-04 18:19:07,209 13269 [main] INFO  persistence.DAOUserTest  - About to remove User{id=46, username='RoseMarie', name='Rose', privileges=12}
-2017-02-04 18:19:07,209 13269 [main] INFO  persistence.DAOUserTest  - About to remove 46
-2017-02-04 18:19:07,209 13269 [main] INFO  persistence.DAOUser  - In dao.remove with id = 46
-2017-02-04 18:19:07,216 13276 [main] INFO  persistence.DAOUser  - In dao. remove with user User{id=46, username='RoseMarie', name='Rose', privileges=12}
+2017-02-04 18:19:06,712 12772 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 39entries
+2017-02-04 18:19:06,875 12935 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 40entries
+2017-02-04 18:19:06,934 12994 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 41entries
+2017-02-04 18:19:06,968 13028 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 42entries
+2017-02-04 18:19:07,026 13086 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 42entries
+2017-02-04 18:19:07,073 13133 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 43entries
+2017-02-04 18:19:07,124 13184 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 44entries
+2017-02-04 18:19:07,154 13214 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 45entries
+2017-02-04 18:19:07,174 13234 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 45entries
+2017-02-04 18:19:07,208 13268 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 46entries
+2017-02-04 18:19:07,208 13268 [main] INFO  persistence.UserDAOTest  - In testRemove, userList has 46entries
+2017-02-04 18:19:07,209 13269 [main] INFO  persistence.UserDAOTest  - In testRemove, last index calculated as 45
+2017-02-04 18:19:07,209 13269 [main] INFO  persistence.UserDAOTest  - About to remove User{id=46, username='RoseMarie', name='Rose', privileges=12}
+2017-02-04 18:19:07,209 13269 [main] INFO  persistence.UserDAOTest  - About to remove 46
+2017-02-04 18:19:07,209 13269 [main] INFO  persistence.UserDAO  - In dao.remove with id = 46
+2017-02-04 18:19:07,216 13276 [main] INFO  persistence.UserDAO  - In dao. remove with user User{id=46, username='RoseMarie', name='Rose', privileges=12}
 2017-02-06 16:18:02,518 0    [http-nio-8080-exec-4] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
 2017-02-06 16:18:02,525 7    [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - properties obtained in startup
 2017-02-06 16:18:02,526 8    [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
@@ -694,3 +694,125 @@ java.lang.NullPointerException
 2017-02-06 16:36:49,962 7    [http-nio-8080-exec-20] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
 2017-02-06 16:36:49,965 10   [http-nio-8080-exec-20] INFO  util.MyProperties  - Calling MyProperties with path /database.properties
 2017-02-06 16:36:50,948 993  [http-nio-8080-exec-20] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-07 20:29:55,918 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-07 20:29:55,941 23   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-07 20:29:55,948 30   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-07 20:29:55,953 35   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-07 20:29:56,036 118  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-07 20:29:56,037 119  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-07 20:29:56,442 524  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-07 20:29:56,819 901  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-07 20:29:56,843 925  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-07 20:29:56,844 926  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-07 20:29:56,844 926  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-07 20:29:56,849 931  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-07 20:29:58,806 2888 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-07 20:29:59,614 3696 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-07 20:29:59,636 3718 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-07 20:30:02,007 6089 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 45entries
+2017-02-07 20:30:02,118 6200 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 46entries
+2017-02-07 20:30:02,166 6248 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 47entries
+2017-02-07 20:30:02,195 6277 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 48entries
+2017-02-07 20:30:02,266 6348 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 48entries
+2017-02-07 20:30:02,327 6409 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 49entries
+2017-02-07 20:30:02,364 6446 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 50entries
+2017-02-07 20:30:02,388 6470 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 51entries
+2017-02-07 20:30:02,406 6488 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 51entries
+2017-02-07 20:30:02,432 6514 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 52entries
+2017-02-07 20:30:02,433 6515 [main] INFO  persistence.UserDAOTest  - In testRemove, userList has 52entries
+2017-02-07 20:30:02,433 6515 [main] INFO  persistence.UserDAOTest  - In testRemove, last index calculated as 51
+2017-02-07 20:30:02,433 6515 [main] INFO  persistence.UserDAOTest  - About to remove User{id=52, username='RoseMarie', name='Rose', privileges=12}
+2017-02-07 20:30:02,433 6515 [main] INFO  persistence.UserDAOTest  - About to remove 52
+2017-02-07 20:30:02,433 6515 [main] INFO  persistence.UserDAO  - In dao.remove with id = 52
+2017-02-07 20:30:02,437 6519 [main] INFO  persistence.UserDAO  - In dao. remove with user User{id=52, username='RoseMarie', name='Rose', privileges=12}
+2017-02-07 20:37:26,301 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-07 20:37:26,325 24   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-07 20:37:26,331 30   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-07 20:37:26,336 35   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-07 20:37:26,398 97   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-07 20:37:26,399 98   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-07 20:37:26,667 366  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-07 20:37:26,957 656  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-07 20:37:26,986 685  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-07 20:37:26,988 687  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-07 20:37:26,990 689  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-07 20:37:26,997 696  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-07 20:37:27,952 1651 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-07 20:37:28,354 2053 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-07 20:37:28,374 2073 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-07 20:37:29,738 3437 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 51entries
+2017-02-07 20:37:29,882 3581 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 52entries
+2017-02-07 20:37:29,936 3635 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 53entries
+2017-02-07 20:37:29,971 3670 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 54entries
+2017-02-07 20:37:30,015 3714 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 54entries
+2017-02-07 20:37:30,046 3745 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 55entries
+2017-02-07 20:37:30,098 3797 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 56entries
+2017-02-07 20:37:30,127 3826 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 57entries
+2017-02-07 20:37:30,152 3851 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 57entries
+2017-02-07 20:37:30,180 3879 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 58entries
+2017-02-07 20:37:30,180 3879 [main] INFO  persistence.UserDAOTest  - In testRemove, userList has 58entries
+2017-02-07 20:37:30,181 3880 [main] INFO  persistence.UserDAOTest  - In testRemove, last index calculated as 57
+2017-02-07 20:37:30,182 3881 [main] INFO  persistence.UserDAOTest  - About to remove User{id=58, username='RoseMarie', name='Rose', privileges=12}
+2017-02-07 20:37:30,183 3882 [main] INFO  persistence.UserDAOTest  - About to remove 58
+2017-02-07 20:37:30,184 3883 [main] INFO  persistence.UserDAO  - In dao.remove with id = 58
+2017-02-07 20:37:30,189 3888 [main] INFO  persistence.UserDAO  - In dao. remove with user User{id=58, username='RoseMarie', name='Rose', privileges=12}
+2017-02-08 11:16:06,192 0    [http-nio-8080-exec-4] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
+2017-02-08 11:16:06,199 7    [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-08 11:16:06,200 8    [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-08 11:16:06,205 13   [http-nio-8080-exec-4] INFO  util.MyProperties  - Calling MyProperties with path /database.properties
+2017-02-08 11:16:07,148 956  [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-08 11:16:23,839 17647 [http-nio-8080-exec-9] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-08 11:16:23,881 17689 [http-nio-8080-exec-9] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-08 11:16:23,898 17706 [http-nio-8080-exec-9] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-08 11:16:23,907 17715 [http-nio-8080-exec-9] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-08 11:16:24,084 17892 [http-nio-8080-exec-9] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-08 11:16:24,085 17893 [http-nio-8080-exec-9] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-08 11:16:24,455 18263 [http-nio-8080-exec-9] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-08 11:16:24,981 18789 [http-nio-8080-exec-9] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-08 11:16:24,986 18794 [http-nio-8080-exec-9] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-08 11:16:24,987 18795 [http-nio-8080-exec-9] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-08 11:16:24,987 18795 [http-nio-8080-exec-9] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-08 11:16:24,995 18803 [http-nio-8080-exec-9] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-08 11:16:25,155 18963 [http-nio-8080-exec-9] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-08 11:16:26,039 19847 [http-nio-8080-exec-9] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-08 11:16:26,066 19874 [http-nio-8080-exec-9] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-08 11:20:10,860 0    [http-nio-8080-exec-4] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
+2017-02-08 11:20:10,871 11   [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-08 11:20:10,872 12   [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-08 11:20:10,874 14   [http-nio-8080-exec-4] INFO  util.MyProperties  - Calling MyProperties with path /database.properties
+2017-02-08 11:20:11,627 767  [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-08 11:20:56,394 45534 [http-nio-8080-exec-2] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-08 11:20:56,438 45578 [http-nio-8080-exec-2] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-08 11:20:56,458 45598 [http-nio-8080-exec-2] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-08 11:20:56,468 45608 [http-nio-8080-exec-2] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-08 11:20:56,694 45834 [http-nio-8080-exec-2] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-08 11:20:56,695 45835 [http-nio-8080-exec-2] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-08 11:20:57,071 46211 [http-nio-8080-exec-2] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-08 11:20:57,686 46826 [http-nio-8080-exec-2] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-08 11:20:57,692 46832 [http-nio-8080-exec-2] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-08 11:20:57,693 46833 [http-nio-8080-exec-2] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-08 11:20:57,693 46833 [http-nio-8080-exec-2] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-08 11:20:57,702 46842 [http-nio-8080-exec-2] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-08 11:20:57,848 46988 [http-nio-8080-exec-2] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-08 11:20:58,737 47877 [http-nio-8080-exec-2] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-08 11:20:58,765 47905 [http-nio-8080-exec-2] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-08 11:22:27,688 0    [http-nio-8080-exec-1] INFO  util.MyProperties  - Calling MyProperties with path /repertoire.properties
+2017-02-08 11:22:27,697 9    [http-nio-8080-exec-1] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-08 11:22:27,699 11   [http-nio-8080-exec-1] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-08 11:22:27,703 15   [http-nio-8080-exec-1] INFO  util.MyProperties  - Calling MyProperties with path /database.properties
+2017-02-08 11:22:28,997 1309 [http-nio-8080-exec-1] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-08 11:22:44,662 16974 [http-nio-8080-exec-5] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-08 11:22:44,694 17006 [http-nio-8080-exec-5] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-08 11:22:44,702 17014 [http-nio-8080-exec-5] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-08 11:22:44,709 17021 [http-nio-8080-exec-5] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-08 11:22:44,827 17139 [http-nio-8080-exec-5] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-08 11:22:44,827 17139 [http-nio-8080-exec-5] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-08 11:22:45,166 17478 [http-nio-8080-exec-5] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-08 11:22:45,702 18014 [http-nio-8080-exec-5] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-08 11:22:45,707 18019 [http-nio-8080-exec-5] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-08 11:22:45,709 18021 [http-nio-8080-exec-5] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-08 11:22:45,709 18021 [http-nio-8080-exec-5] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-08 11:22:45,715 18027 [http-nio-8080-exec-5] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-08 11:22:45,858 18170 [http-nio-8080-exec-5] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-08 11:22:46,568 18880 [http-nio-8080-exec-5] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-08 11:22:46,596 18908 [http-nio-8080-exec-5] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory

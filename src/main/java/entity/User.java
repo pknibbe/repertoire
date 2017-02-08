@@ -1,9 +1,18 @@
 package entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
-import javax.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import lombok.ToString;
+import lombok.Setter;
+import lombok.Getter;
+
+@Setter
+@Getter
+@ToString
 
 /**
  * Created by peter on 2/1/2017.
@@ -29,45 +38,5 @@ public class User {
     this.privileges = privileges;
   }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getPrivileges() {
-        return privileges;
-    }
-
-    public void setPrivileges(int privileges) {
-        this.privileges = privileges;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", name='" + name + '\'' +
-                ", privileges=" + privileges +
-                '}';
-    }
 }
