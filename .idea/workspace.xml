@@ -6,24 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ebdd907-63ab-415d-9852-ac37dadc801c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resources/database.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resources/log4j.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resources/repertoire.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/database.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/hibernate.cfg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/log4j.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/repertoire.properties" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/repertoire.iml" afterPath="$PROJECT_DIR$/.idea/repertoire.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLogging.log" afterPath="$PROJECT_DIR$/MyLogging.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TimeLog.md" afterPath="$PROJECT_DIR$/TimeLog.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlets/ShowUsersServlet.java" afterPath="$PROJECT_DIR$/src/main/java/Servlets/ShowUsersServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlets/UpdateAccounts.java" afterPath="$PROJECT_DIR$/src/main/java/Servlets/UpdateAccounts.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/persistence/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/persistence/UserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/util/MyProperties.java" afterPath="$PROJECT_DIR$/src/main/java/util/MyProperties.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Accounts.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/Accounts.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/persistence/UserDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/persistence/UserDAOTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/repertoire/Accounts.jsp" afterPath="$PROJECT_DIR$/target/repertoire/Accounts.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -157,27 +141,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeLog.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TimeLog.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TimeLog.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="270">
-                <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+                <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
                 <folding />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateAccounts.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/UpdateAccounts.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="55" column="61" lean-forward="false" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -260,7 +232,6 @@
         <option value="$PROJECT_DIR$/src/test/resources/database.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/entity/User.java" />
-        <option value="$PROJECT_DIR$/TimeLog.md" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0407362f-50b5-4394-a373-b3d86be35a69/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/util/MyProperties.java" />
         <option value="$PROJECT_DIR$/src/main/java/Servlets/ShowUsersServlet.java" />
@@ -271,6 +242,7 @@
         <option value="$PROJECT_DIR$/src/test/java/persistence/UserDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/Accounts.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/Servlets/UpdateAccounts.java" />
+        <option value="$PROJECT_DIR$/TimeLog.md" />
       </list>
     </option>
   </component>
@@ -1475,7 +1447,7 @@
       <workItem from="1486417794319" duration="3050000" />
       <workItem from="1486480330347" duration="3580000" />
       <workItem from="1486568545483" duration="1524000" />
-      <workItem from="1486570137807" duration="22290000" />
+      <workItem from="1486570137807" duration="22359000" />
     </task>
     <task id="LOCAL-00001" summary="Update to time log">
       <created>1486004881089</created>
@@ -1533,7 +1505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486579637504</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Got modify user working from front to back">
+      <created>1486601978377</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1486601978377</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1569,11 +1548,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118921000" />
+    <option name="totallyTimeSpent" value="118990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1633,7 +1612,8 @@
     <MESSAGE value="Completed preparation for first code review" />
     <MESSAGE value="Able to show table of users on Accounts.jsp via ShowUsersServlet." />
     <MESSAGE value="Able to show table of users and delete a user on Accounts.jsp via ShowUsersServlet." />
-    <option name="LAST_COMMIT_MESSAGE" value="Able to show table of users and delete a user on Accounts.jsp via ShowUsersServlet." />
+    <MESSAGE value="Got modify user working from front to back" />
+    <option name="LAST_COMMIT_MESSAGE" value="Got modify user working from front to back" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1919,17 +1899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TimeLog.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="270">
-            <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bfc7ba53-f36e-47ae-ac45-f62ce2496c54/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-30">
@@ -2028,11 +1997,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/UpdateAccounts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
+        <state relative-caret-position="-107">
           <caret line="55" column="61" lean-forward="false" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TimeLog.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="270">
+            <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
