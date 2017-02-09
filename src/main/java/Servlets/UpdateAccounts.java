@@ -2,6 +2,7 @@ package Servlets;
 
 import org.apache.log4j.Logger;
 import persistence.UserDAO;
+import entity.User;
 import util.Database;
 
 import javax.servlet.ServletContext;
@@ -43,16 +44,36 @@ public class UpdateAccounts extends HttpServlet {
 
         ServletContext servletContext = getServletContext();
         String userID = request.getParameter("userID");
+        int identifier = Integer.valueOf(userID);
         Enumeration<String> parameterNames = request.getParameterNames();
-        logger.info("Request to UpdateAccounts has parameters " + parameterNames);
+        User user;
+
         while (parameterNames.hasMoreElements()) {
             String parameterName = parameterNames.nextElement();
             if (parameterName.equalsIgnoreCase("Delete")) {
-                userDAO.remove(Integer.valueOf(userID));
+                userDAO.remove(identifier);
+                logger.info("removed user " + identifier);
+            } else if (parameterName.equalsIgnoreCase("Update")) {
+                String name = request.getParameter("Name");
+                String password = request.getParameter("Password");
+                if (identifier > 0) {
+                    logger.info("Updating existing user ID " + identifier);
+                    user = userDAO.get(identifier);
+                    if (name.length() > 0) {
+                        user.setUsername(name);
+                        user.setName(name);
+                        logger.info(user.toString());
+                        logger.info("Updated user ID = " + userDAO.modify(user));
+                    }
+                } else {
+                    logger.info("Creating a new user");
+                    user = new User(name, name, 12);
+                    logger.info(user.toString());
+                    logger.info("Added user ID = " + userDAO.add(user));
+                }
             }
-            logger.info("Parameter " + parameterName + " value is " + request.getParameter(parameterName));
         }
-        
+
         String url = "/ShowUsers";
 
         response.sendRedirect(url);

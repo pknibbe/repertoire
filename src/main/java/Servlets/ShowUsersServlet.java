@@ -43,18 +43,15 @@ import persistence.UserDAO;
             throws ServletException, IOException {
         UserDAO userdao = new UserDAO();
         List<User> users = userdao.getAll();
-        String sessionMessage = "Found " + users.size() + " users.";
 
         ServletContext servletContext = getServletContext();
 
         request.setAttribute("users", userdao.getAll());
         String currentMessage = (String) request.getAttribute("SessionMessage");
-        logger.info("Session message is " + currentMessage);
         if (currentMessage == null) {
-            request.setAttribute("SessionMessage", sessionMessage);
+            request.setAttribute("SessionMessage", "");
         } else
-            request.setAttribute("SessionMessage", currentMessage + "  " + sessionMessage);
-
+            request.setAttribute("SessionMessage", currentMessage);
 
         String url = "/Accounts.jsp";
 

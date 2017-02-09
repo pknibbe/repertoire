@@ -10,21 +10,27 @@
     <h4>Manage Accounts</h4>
     <form action="/UpdateAccounts" method="POST">
         <table>
-            <thead><tr><th>Select</th><th>ID</th><th>Name</th><th>UserName</th><th>Password</th><th>Privileges</th></tr></thead>
+            <thead><tr><th>Select</th><th>ID</th><th>Name</th></tr></thead>
             <tbody>
                 <c:forEach var="user" items="${users}">
                     <tr>
                         <td><input type="radio" name="userID" value=${user.id} /></td>
                         <td>${user.id}</td>
-                        <td><input type="text" name="Name" value="${user.name}" /></td>
-                        <td><input type="text" name="UserName" value="${user.username}" /></td>
-                        <td>"Password"</td>
-                        <td><input type="text" name="privileges" value="${user.privileges}" /></td>
+                        <td>${user.name}</td>
                     </tr>
                 </c:forEach>
+                <tr>
+                    <td><input type="radio" name="userID" value="0" /></td>
+                    <td></td>
+                    <td>New</td>
+                </tr>
             </tbody>
         </table><br/><br/>
-        <input type="submit" name="Edit" value="Edit" />
+        Value for User Name:
+        <input type="text" name="Name" value="" /><br />
+        Value for Password:
+        <input type="text" name="Password" value="" /><br />
+        <input type="submit" name="Update" value="Update" />
         <input type="submit" name="Delete" value="Delete" />
     </form>
 </div>

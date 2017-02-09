@@ -59,10 +59,14 @@ public class UserDAOTest {
     public void testModifyUserName() throws Exception {
         user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId();
-        user.setUsername("Rose");
-        dao.add(user);
+        user.setUsername("Johanna");
+        logger.info(user.toString());
+        logger.info("Updated user ID = " + dao.modify(user));
+        //dao.modify(user);
         user = dao.get(id);
-        assertEquals("Username not modified", "RoseMarie", user.getUsername());
+        assertEquals("Username not modified", "Johanna", user.getUsername());
+        userList = dao.getAll();
+        assertEquals("Modify added an entry!", numberOfUsers, userList.size());
     }
 
     private void justAdd() {
@@ -72,12 +76,8 @@ public class UserDAOTest {
 
     @Test
     public void testRemove() throws Exception {
-        logger.info("In testRemove, userList has " + userList.size() + "entries");
-        logger.info("In testRemove, last index calculated as " + (userList.size() - 1));
         user = userList.get(userList.size() - 1); // retrieve most recent addition to table
-        logger.info("About to remove " + user.toString());
         int id = user.getId();
-        logger.info("About to remove " + user.getId());
         dao.remove(id);
         userList = dao.getAll();
         assertEquals("remove did not work: ", numberOfUsers - 1, userList.size());

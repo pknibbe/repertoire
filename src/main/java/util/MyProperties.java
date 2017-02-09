@@ -24,7 +24,7 @@ public class MyProperties {
      */
     public MyProperties(String propertiesFilePath) {
         properties = new Properties();
-        logger.info("Calling MyProperties with path " + propertiesFilePath);
+        //logger.info("Calling MyProperties with path " + propertiesFilePath);
 
         try {
             InputStream propertiesStream =this.getClass().getResourceAsStream(

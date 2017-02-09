@@ -47,10 +47,34 @@ public class UserDAO {
     public int add(User user) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
+        logger.info("Saving user " + user.getUsername());
+        logger.info(user.toString());
         int id = (Integer) session.save(user);
         transaction.commit();
         session.close();
         return id;
+    }
+
+    /** modify a user record
+     * @param updatedUser the version of the user with the new information
+     * @return id the id of the updated record
+     */
+    public int modify(User updatedUser) throws HibernateException {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        logger.info("Updating user " + updatedUser.getUsername());
+        logger.info(updatedUser.toString());
+        User sessionUser = (User) session.get(User.class, updatedUser.getId());
+        sessionUser.setUsername(updatedUser.getUsername());
+        sessionUser.setName(updatedUser.getName());
+        sessionUser.setPrivileges(updatedUser.getPrivileges());
+        logger.info("Updating user " + sessionUser.getUsername());
+        logger.info(sessionUser.toString());
+        User resultantUser = (User) session.merge(sessionUser);
+        logger.info("Updated user " + resultantUser.toString());
+        transaction.commit();
+        session.close();
+        return resultantUser.getId();
     }
 
     /**
