@@ -1,14 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:import url="/head.jsp"/>
-
+<%@include file="taglib.jsp"%>
+<c:set var="title" value="Account Management" />
+<%@include file="head.jsp"%>
+<html>
 <body>
 <h3>${SessionMessage}</h3><br/><br/>
 
 <div>
     <h4>Manage Accounts</h4>
-    <form action="/UpdateAccounts" method="POST">
+    <form action="UpdateAccounts" method="POST">
         <table>
             <thead><tr><th>Select</th><th>ID</th><th>Name</th></tr></thead>
             <tbody>

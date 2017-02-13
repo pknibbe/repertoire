@@ -1,3 +1,4 @@
 Create database repertoire;
 use repertoire
-create table users (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, username NOT NULL CHAR(25), name NOT NULL CHAR(25), privileges INT);
+
+create table users (id INT PRIMARY KEY AUTO_INCREMENT NOT NULL, username CHAR(25) NOT NULL, name CHAR(25) NOT NULL, privileges INT);

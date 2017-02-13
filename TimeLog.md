@@ -17,8 +17,18 @@
 | 1/31 | Individual Project | 1 | Application Flow document |
 | 1/31 | Individual Project | 3.5 | Get one screen up on Tomee |
 | 2/01 | Individual Project | 9.5 | work on hibernate integration |
+| 2/02 | Extracurricular | 2.5 | Web site lecture |
 | 2/03 | homework | 1| Slack catch-up and work planning |
 | 2/03 | exercise3 | 1 | figure out how to get all of hibernate configured with the database |
 | 2/04 | Individual Project | 6 | DAO and hibernate, database design, several jsps |
 | 2/06 | Individual Project | 1 | more jsps and plan |
 | 2/08 | Individual Project | 9 | Manage users from JSP via servlets and DAO |
+| 2/09 | Class Activity | 1 | Try to debug AWS connection in PuTTY |
+| 2/09 | Extracurricular | 3 | Kid's Code |
+| 2/10 | Extracurricular | 0.5 | Kid's Code presentation |
+| 2/10 | Individual Project | 0.5 | Connect to new AWS EC2 instance using Ubuntu username |
+| 2/10 | Individual Project | 2.75 | Connect to new AWS EC2 instance using MySQL workbench |
+| 2/11 | Individual Project | 0.5 | Abortive attempt to implement abstract DAO |
+| 2/11 | Individual Project | 2 | Deployment to AWS |
+| 2/13 | Code Review 1 | .5 | Updated code review issues documents for better formatting |
+| 2/13 | Individual Project | ? | Reconfigure for AWS and deploy |

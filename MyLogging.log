@@ -403,3 +403,173 @@
 2017-02-08 18:58:03,268 96814 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - User(id=7, privileges=12, username=Pieter, name=Pieter)
 2017-02-08 18:58:03,315 96861 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - Updated user User(id=7, privileges=12, username=Pieter, name=Pieter)
 2017-02-08 18:58:03,643 97189 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Updated user ID = 7
+2017-02-11 15:49:38,098 39   [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-11 15:49:38,107 48   [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-11 15:49:39,638 1579 [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-13 14:25:20,971 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 14:25:20,997 26   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 14:25:21,001 30   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 14:25:21,007 36   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 14:25:21,089 118  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 14:25:21,089 118  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 14:25:21,452 481  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 14:25:21,827 856  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 14:25:21,846 875  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 14:25:21,849 878  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 14:25:21,849 878  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 14:25:21,853 882  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 14:25:23,193 2222 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 14:25:24,053 3082 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 14:25:24,107 3136 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 14:25:28,193 7222 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 5entries
+2017-02-13 14:25:28,196 7225 [main] INFO  persistence.UserDAO  - Saving user RoseMarie
+2017-02-13 14:25:28,196 7225 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:25:28,373 7402 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 6entries
+2017-02-13 14:25:44,133 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 14:25:44,164 31   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 14:25:44,172 39   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 14:25:44,178 45   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 14:25:44,256 123  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 14:25:44,257 124  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 14:25:44,578 445  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 14:25:44,927 794  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 14:25:44,945 812  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 14:25:44,946 813  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 14:25:44,946 813  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 14:25:44,950 817  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 14:25:45,982 1849 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 14:25:47,060 2927 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 14:25:47,227 3094 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 14:25:50,482 6349 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-13 14:25:50,483 6350 [main] INFO  persistence.UserDAO  - Saving user RoseMarie
+2017-02-13 14:25:50,484 6351 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:25:50,631 6498 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-13 14:25:50,632 6499 [main] INFO  persistence.UserDAO  - Saving user RoseMarie
+2017-02-13 14:25:50,632 6499 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:25:50,693 6560 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 8entries
+2017-02-13 14:25:50,694 6561 [main] INFO  persistence.UserDAO  - Saving user RoseMarie
+2017-02-13 14:25:50,694 6561 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:25:50,736 6603 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 9entries
+2017-02-13 14:25:50,812 6679 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 9entries
+2017-02-13 14:25:50,815 6682 [main] INFO  persistence.UserDAO  - Saving user RoseMarie
+2017-02-13 14:25:50,818 6685 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:25:50,854 6721 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 10entries
+2017-02-13 14:25:50,855 6722 [main] INFO  persistence.UserDAOTest  - User(id=12, privileges=12, username=Johanna, name=Rose)
+2017-02-13 14:25:50,855 6722 [main] INFO  persistence.UserDAO  - Updating user Johanna
+2017-02-13 14:25:50,855 6722 [main] INFO  persistence.UserDAO  - User(id=12, privileges=12, username=Johanna, name=Rose)
+2017-02-13 14:25:50,859 6726 [main] INFO  persistence.UserDAO  - Updating user Johanna
+2017-02-13 14:25:50,859 6726 [main] INFO  persistence.UserDAO  - User(id=12, privileges=12, username=Johanna, name=Rose)
+2017-02-13 14:25:50,865 6732 [main] INFO  persistence.UserDAO  - Updated user User(id=12, privileges=12, username=Johanna, name=Rose)
+2017-02-13 14:25:50,880 6747 [main] INFO  persistence.UserDAOTest  - Updated user ID = 12
+2017-02-13 14:25:50,898 6765 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 10entries
+2017-02-13 14:25:50,898 6765 [main] INFO  persistence.UserDAO  - Saving user RoseMarie
+2017-02-13 14:25:50,898 6765 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:25:50,918 6785 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 11entries
+2017-02-13 14:25:50,934 6801 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 11entries
+2017-02-13 14:25:50,935 6802 [main] INFO  persistence.UserDAO  - Saving user RoseMarie
+2017-02-13 14:25:50,935 6802 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:25:50,956 6823 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 12entries
+2017-02-13 14:25:50,957 6824 [main] INFO  persistence.UserDAO  - In dao.remove with id = 14
+2017-02-13 14:25:50,962 6829 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=14, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:26:06,155 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 14:26:06,182 27   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 14:26:06,189 34   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 14:26:06,194 39   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 14:26:06,275 120  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 14:26:06,275 120  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 14:26:06,601 446  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 14:26:07,234 1079 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 14:26:07,265 1110 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 14:26:07,270 1115 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 14:26:07,271 1116 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 14:26:07,276 1121 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 14:26:08,807 2652 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 14:26:09,830 3675 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 14:26:09,879 3724 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 14:26:11,879 5724 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 11entries
+2017-02-13 14:26:11,880 5725 [main] INFO  persistence.UserDAO  - Saving user RoseMarie
+2017-02-13 14:26:11,880 5725 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:26:11,982 5827 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 12entries
+2017-02-13 14:26:11,982 5827 [main] INFO  persistence.UserDAO  - Saving user RoseMarie
+2017-02-13 14:26:11,983 5828 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:26:12,016 5861 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 13entries
+2017-02-13 14:26:12,016 5861 [main] INFO  persistence.UserDAO  - Saving user RoseMarie
+2017-02-13 14:26:12,017 5862 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:26:12,044 5889 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 14entries
+2017-02-13 14:26:12,073 5918 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 14entries
+2017-02-13 14:26:12,074 5919 [main] INFO  persistence.UserDAO  - Saving user RoseMarie
+2017-02-13 14:26:12,074 5919 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:26:12,093 5938 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 15entries
+2017-02-13 14:26:12,093 5938 [main] INFO  persistence.UserDAOTest  - User(id=17, privileges=12, username=Johanna, name=Rose)
+2017-02-13 14:26:12,094 5939 [main] INFO  persistence.UserDAO  - Updating user Johanna
+2017-02-13 14:26:12,094 5939 [main] INFO  persistence.UserDAO  - User(id=17, privileges=12, username=Johanna, name=Rose)
+2017-02-13 14:26:12,098 5943 [main] INFO  persistence.UserDAO  - Updating user Johanna
+2017-02-13 14:26:12,098 5943 [main] INFO  persistence.UserDAO  - User(id=17, privileges=12, username=Johanna, name=Rose)
+2017-02-13 14:26:12,104 5949 [main] INFO  persistence.UserDAO  - Updated user User(id=17, privileges=12, username=Johanna, name=Rose)
+2017-02-13 14:26:12,115 5960 [main] INFO  persistence.UserDAOTest  - Updated user ID = 17
+2017-02-13 14:26:12,137 5982 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 15entries
+2017-02-13 14:26:12,138 5983 [main] INFO  persistence.UserDAO  - Saving user RoseMarie
+2017-02-13 14:26:12,138 5983 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:26:12,159 6004 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 16entries
+2017-02-13 14:26:12,168 6013 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 16entries
+2017-02-13 14:26:12,169 6014 [main] INFO  persistence.UserDAO  - Saving user RoseMarie
+2017-02-13 14:26:12,169 6014 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:26:12,206 6051 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 17entries
+2017-02-13 14:26:12,206 6051 [main] INFO  persistence.UserDAO  - In dao.remove with id = 19
+2017-02-13 14:26:12,211 6056 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=19, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:26:53,636 1    [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-13 14:26:53,641 6    [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-13 14:26:54,411 776  [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-13 14:27:16,095 22460 [http-nio-8080-exec-7] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 14:27:16,158 22523 [http-nio-8080-exec-7] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 14:27:16,197 22562 [http-nio-8080-exec-7] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 14:27:16,210 22575 [http-nio-8080-exec-7] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 14:27:16,524 22889 [http-nio-8080-exec-7] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 14:27:16,525 22890 [http-nio-8080-exec-7] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 14:27:16,989 23354 [http-nio-8080-exec-7] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 14:27:17,811 24176 [http-nio-8080-exec-7] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 14:27:17,816 24181 [http-nio-8080-exec-7] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 14:27:17,818 24183 [http-nio-8080-exec-7] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 14:27:17,818 24183 [http-nio-8080-exec-7] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 14:27:17,826 24191 [http-nio-8080-exec-7] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 14:27:17,973 24338 [http-nio-8080-exec-7] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 14:27:18,854 25219 [http-nio-8080-exec-7] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 14:27:18,880 25245 [http-nio-8080-exec-7] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 14:27:39,945 46310 [http-nio-8080-exec-3] INFO  persistence.UserDAO  - In dao.remove with id = 18
+2017-02-13 14:27:40,006 46371 [http-nio-8080-exec-3] INFO  persistence.UserDAO  - In dao. remove with user User(id=18, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:27:40,112 46477 [http-nio-8080-exec-3] INFO  Servlets.UpdateAccounts  - removed user 18
+2017-02-13 14:27:46,119 52484 [http-nio-8080-exec-5] INFO  persistence.UserDAO  - In dao.remove with id = 10
+2017-02-13 14:27:46,128 52493 [http-nio-8080-exec-5] INFO  persistence.UserDAO  - In dao. remove with user User(id=10, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:27:46,140 52505 [http-nio-8080-exec-5] INFO  Servlets.UpdateAccounts  - removed user 10
+2017-02-13 14:27:51,498 57863 [http-nio-8080-exec-9] INFO  persistence.UserDAO  - In dao.remove with id = 8
+2017-02-13 14:27:51,505 57870 [http-nio-8080-exec-9] INFO  persistence.UserDAO  - In dao. remove with user User(id=8, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:27:51,521 57886 [http-nio-8080-exec-9] INFO  Servlets.UpdateAccounts  - removed user 8
+2017-02-13 14:27:56,910 63275 [http-nio-8080-exec-1] INFO  persistence.UserDAO  - In dao.remove with id = 11
+2017-02-13 14:27:56,919 63284 [http-nio-8080-exec-1] INFO  persistence.UserDAO  - In dao. remove with user User(id=11, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:27:56,930 63295 [http-nio-8080-exec-1] INFO  Servlets.UpdateAccounts  - removed user 11
+2017-02-13 14:28:02,070 68435 [http-nio-8080-exec-2] INFO  persistence.UserDAO  - In dao.remove with id = 13
+2017-02-13 14:28:02,077 68442 [http-nio-8080-exec-2] INFO  persistence.UserDAO  - In dao. remove with user User(id=13, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:28:02,089 68454 [http-nio-8080-exec-2] INFO  Servlets.UpdateAccounts  - removed user 13
+2017-02-13 14:28:06,659 73024 [http-nio-8080-exec-8] INFO  persistence.UserDAO  - In dao.remove with id = 14
+2017-02-13 14:28:06,665 73030 [http-nio-8080-exec-8] INFO  persistence.UserDAO  - In dao. remove with user User(id=14, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:28:06,680 73045 [http-nio-8080-exec-8] INFO  Servlets.UpdateAccounts  - removed user 14
+2017-02-13 14:28:12,450 78815 [http-nio-8080-exec-10] INFO  persistence.UserDAO  - In dao.remove with id = 9
+2017-02-13 14:28:12,459 78824 [http-nio-8080-exec-10] INFO  persistence.UserDAO  - In dao. remove with user User(id=9, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:28:12,481 78846 [http-nio-8080-exec-10] INFO  Servlets.UpdateAccounts  - removed user 9
+2017-02-13 14:28:21,465 87830 [http-nio-8080-exec-4] INFO  persistence.UserDAO  - In dao.remove with id = 12
+2017-02-13 14:28:21,472 87837 [http-nio-8080-exec-4] INFO  persistence.UserDAO  - In dao. remove with user User(id=12, privileges=12, username=Johanna, name=Rose)
+2017-02-13 14:28:21,488 87853 [http-nio-8080-exec-4] INFO  Servlets.UpdateAccounts  - removed user 12
+2017-02-13 14:28:26,882 93247 [http-nio-8080-exec-6] INFO  persistence.UserDAO  - In dao.remove with id = 17
+2017-02-13 14:28:26,889 93254 [http-nio-8080-exec-6] INFO  persistence.UserDAO  - In dao. remove with user User(id=17, privileges=12, username=Johanna, name=Rose)
+2017-02-13 14:28:26,902 93267 [http-nio-8080-exec-6] INFO  Servlets.UpdateAccounts  - removed user 17
+2017-02-13 14:28:32,041 98406 [http-nio-8080-exec-7] INFO  persistence.UserDAO  - In dao.remove with id = 15
+2017-02-13 14:28:32,047 98412 [http-nio-8080-exec-7] INFO  persistence.UserDAO  - In dao. remove with user User(id=15, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:28:32,063 98428 [http-nio-8080-exec-7] INFO  Servlets.UpdateAccounts  - removed user 15
+2017-02-13 14:28:36,673 103038 [http-nio-8080-exec-3] INFO  persistence.UserDAO  - In dao.remove with id = 16
+2017-02-13 14:28:36,680 103045 [http-nio-8080-exec-3] INFO  persistence.UserDAO  - In dao. remove with user User(id=16, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 14:28:36,690 103055 [http-nio-8080-exec-3] INFO  Servlets.UpdateAccounts  - removed user 16
+2017-02-13 14:28:48,887 115252 [http-nio-8080-exec-5] INFO  Servlets.UpdateAccounts  - Creating a new user
+2017-02-13 14:28:48,887 115252 [http-nio-8080-exec-5] INFO  Servlets.UpdateAccounts  - User(id=0, privileges=12, username=Beth, name=Beth)
+2017-02-13 14:28:48,888 115253 [http-nio-8080-exec-5] INFO  persistence.UserDAO  - Saving user Beth
+2017-02-13 14:28:48,888 115253 [http-nio-8080-exec-5] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Beth, name=Beth)
+2017-02-13 14:28:48,969 115334 [http-nio-8080-exec-5] INFO  Servlets.UpdateAccounts  - Added user ID = 8
