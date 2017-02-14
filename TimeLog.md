@@ -34,3 +34,4 @@
 | 2/13 | Individual Project | 1 |  Fail - reconfigure for AWS and deploy |
 | 2/13 | Individual Project | 2 | Implement 2 more DAO and DAO Tests |
 | 2/14 | Individual Project | 4 | Implement message and association DAO and DAO Tests |
+| 2/14 | Class Activity | 1 | Try (unsuccessfully) to deploy Exercise 1. It would not start |
