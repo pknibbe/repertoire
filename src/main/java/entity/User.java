@@ -9,10 +9,10 @@ import javax.persistence.Table;
 import lombok.ToString;
 import lombok.Setter;
 import lombok.Getter;
-
 @Setter
 @Getter
 @ToString
+
 
 /**
  * Created by peter on 2/1/2017.

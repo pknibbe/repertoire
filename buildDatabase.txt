@@ -2,3 +2,5 @@ Create database repertoire;
 use repertoire
 
 create table users (id INT PRIMARY KEY AUTO_INCREMENT NOT NULL, username CHAR(25) NOT NULL, name CHAR(25) NOT NULL, privileges INT);
+alter table messages
+    add subject char(63) after id;

@@ -3,7 +3,9 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
-
+import lombok.ToString;
+import lombok.Setter;
+import lombok.Getter;
 /**
  * Created by peter on 2/1/2017.
  */
@@ -20,7 +22,7 @@ public class Playlist {
   public Playlist() {
   }
 
-  public Playlist(String song) {
+  public Playlist(String name) {
     this.name = name;
   }
 

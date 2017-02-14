@@ -11,6 +11,17 @@
     <name>Enterprise Project Knibbe</name>
     <url>http://maven.apache.org</url>
 
+    <profiles>
+        <profile>
+            <id>development</id>
+        </profile>
+        <profile>
+            <id>AWSTest</id></profile>
+        <profile>
+            <id>Production</id>
+        </profile>
+    </profiles>
+
     <dependencies>
 
         <dependency>
@@ -51,6 +62,12 @@
                 <version>1.16.12</version>
                 <scope>provided</scope>
             </dependency>
+        <!-- https://mvnrepository.com/artifact/org.webjars/bootstrap -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>3.2.0</version>
+        </dependency>
     </dependencies>
 
     <build>

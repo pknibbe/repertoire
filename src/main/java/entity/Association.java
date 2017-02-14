@@ -4,7 +4,15 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
-
+import lombok.ToString;
+import lombok.Setter;
+import lombok.Getter;
+import lombok.ToString;
+import lombok.Setter;
+import lombok.Getter;
+@Setter
+@Getter
+@ToString
 /**
  * Created by peter on 2/1/2017.
  */
@@ -29,56 +37,5 @@ public class Association {
         this.leftTableKey = leftKey;
         this.rightTableKey = rightKey;
         this.rightTableName = rightTableName;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getLeftTableName() {
-        return leftTableName;
-    }
-
-    public void setLeftTableName(String leftTableName) {
-        this.leftTableName = leftTableName;
-    }
-
-    public int getLeftTableKey() {
-        return leftTableKey;
-    }
-
-    public void setLeftTableKey(int leftTableKey) {
-        this.leftTableKey = leftTableKey;
-    }
-
-    public int getRightTableKey() {
-        return rightTableKey;
-    }
-
-    public void setRightTableKey(int rightTableKey) {
-        this.rightTableKey = rightTableKey;
-    }
-
-    public String getRightTableName() {
-        return rightTableName;
-    }
-
-    public void setRightTableName(String rightTableName) {
-        this.rightTableName = rightTableName;
-    }
-
-    @Override
-    public String toString() {
-        return "Association{" +
-                "id=" + id +
-                ", leftTableName='" + leftTableName + '\'' +
-                ", leftTableKey=" + leftTableKey +
-                ", rightTableKey=" + rightTableKey +
-                ", rightTableName='" + rightTableName + '\'' +
-                '}';
     }
 }

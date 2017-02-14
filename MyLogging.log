@@ -573,3 +573,916 @@
 2017-02-13 14:28:48,888 115253 [http-nio-8080-exec-5] INFO  persistence.UserDAO  - Saving user Beth
 2017-02-13 14:28:48,888 115253 [http-nio-8080-exec-5] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Beth, name=Beth)
 2017-02-13 14:28:48,969 115334 [http-nio-8080-exec-5] INFO  Servlets.UpdateAccounts  - Added user ID = 8
+2017-02-13 15:23:09,386 1    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 15:23:09,408 23   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 15:23:09,414 29   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 15:23:09,418 33   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 15:23:09,494 109  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 15:23:09,495 110  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 15:23:09,772 387  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 15:23:10,106 721  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 15:23:10,124 739  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 15:23:10,126 741  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 15:23:10,128 743  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 15:23:10,132 747  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 15:23:11,156 1771 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 15:23:11,940 2555 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 15:23:11,974 2589 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 15:23:15,554 6169 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-13 15:23:15,555 6170 [main] INFO  persistence.UserDAO  - Saving user RoseMarie
+2017-02-13 15:23:15,555 6170 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 15:23:15,659 6274 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-13 15:56:20,079 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 15:56:20,106 27   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 15:56:20,112 33   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 15:56:20,117 38   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 15:56:20,193 114  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 15:56:20,194 115  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 15:56:20,473 394  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 15:56:20,908 829  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 15:56:20,935 856  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 15:56:20,937 858  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 15:56:20,938 859  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 15:56:20,942 863  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 15:56:22,120 2041 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 15:56:22,987 2908 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 15:56:23,004 2925 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 15:56:25,476 5397 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-13 15:56:25,477 5398 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@2421cc4
+2017-02-13 15:56:25,855 5776 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-13 15:56:25,856 5777 [main] INFO  persistence.SongDAO  - In dao.remove with id = 1
+2017-02-13 15:56:25,924 5845 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@38831718
+2017-02-13 15:56:50,111 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 15:56:50,134 23   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 15:56:50,140 29   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 15:56:50,145 34   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 15:56:50,212 101  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 15:56:50,212 101  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 15:56:50,490 379  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 15:56:50,822 711  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 15:56:50,841 730  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 15:56:50,842 731  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 15:56:50,843 732  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 15:56:50,847 736  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 15:56:52,029 1918 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 15:56:53,107 2996 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 15:56:53,133 3022 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 15:56:55,933 5822 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-13 15:56:55,934 5823 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@2421cc4
+2017-02-13 15:56:56,190 6079 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-13 15:58:19,145 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 15:58:19,173 28   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 15:58:19,180 35   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 15:58:19,185 40   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 15:58:19,269 124  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 15:58:19,270 125  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 15:58:19,583 438  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 15:58:19,945 800  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 15:58:19,965 820  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 15:58:19,966 821  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 15:58:19,967 822  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 15:58:19,970 825  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 15:58:21,033 1888 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 15:58:21,889 2744 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 15:58:21,989 2844 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 15:58:25,808 6663 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 1entries
+2017-02-13 15:58:25,809 6664 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@68b32e3e
+2017-02-13 15:58:25,931 6786 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 2entries
+2017-02-13 15:58:43,406 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 15:58:43,430 24   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 15:58:43,435 29   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 15:58:43,440 34   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 15:58:43,501 95   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 15:58:43,501 95   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 15:58:43,720 314  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 15:58:44,114 708  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 15:58:44,133 727  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 15:58:44,134 728  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 15:58:44,135 729  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 15:58:44,139 733  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 15:58:45,165 1759 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 15:58:45,954 2548 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 15:58:45,999 2593 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 15:58:48,833 5427 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 2entries
+2017-02-13 15:58:48,838 5432 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@bcef303
+2017-02-13 15:58:49,092 5686 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 3entries
+2017-02-13 15:59:16,095 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 15:59:16,119 24   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 15:59:16,124 29   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 15:59:16,129 34   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 15:59:16,195 100  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 15:59:16,195 100  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 15:59:16,463 368  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 15:59:16,861 766  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 15:59:16,882 787  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 15:59:16,884 789  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 15:59:16,884 789  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 15:59:16,888 793  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 15:59:18,001 1906 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 15:59:18,921 2826 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 15:59:18,941 2846 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 15:59:21,926 5831 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 3entries
+2017-02-13 15:59:21,927 5832 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@6ed3f258
+2017-02-13 15:59:22,050 5955 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 4entries
+2017-02-13 15:59:22,051 5956 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@34a875b3
+2017-02-13 15:59:22,102 6007 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 5entries
+2017-02-13 15:59:22,103 6008 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@2c1156a7
+2017-02-13 15:59:22,125 6030 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 6entries
+2017-02-13 15:59:22,179 6084 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 6entries
+2017-02-13 15:59:22,180 6085 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@2df6226d
+2017-02-13 15:59:22,225 6130 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 7entries
+2017-02-13 15:59:22,225 6130 [main] INFO  persistence.SongDAOTest  - entity.Song@35229f85
+2017-02-13 15:59:22,226 6131 [main] INFO  persistence.SongDAO  - Updating Song entity.Song@35229f85
+2017-02-13 15:59:22,226 6131 [main] INFO  persistence.SongDAO  - entity.Song@35229f85
+2017-02-13 15:59:22,237 6142 [main] INFO  persistence.SongDAO  - Updating Song Rosie
+2017-02-13 15:59:22,237 6142 [main] INFO  persistence.SongDAO  - entity.Song@4879dfad
+2017-02-13 15:59:22,247 6152 [main] INFO  persistence.SongDAO  - Updated Song entity.Song@4879dfad
+2017-02-13 15:59:22,282 6187 [main] INFO  persistence.SongDAOTest  - Updated song ID = 7
+2017-02-13 15:59:22,320 6225 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 7entries
+2017-02-13 15:59:22,320 6225 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@2a76840c
+2017-02-13 15:59:22,347 6252 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 8entries
+2017-02-13 15:59:22,390 6295 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 8entries
+2017-02-13 15:59:22,391 6296 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@37c7595
+2017-02-13 15:59:22,429 6334 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 9entries
+2017-02-13 15:59:22,431 6336 [main] INFO  persistence.SongDAO  - In dao.remove with id = 9
+2017-02-13 15:59:22,438 6343 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@604c5de8
+2017-02-13 16:02:34,445 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 16:02:34,475 30   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 16:02:34,484 39   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 16:02:34,490 45   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 16:02:34,572 127  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 16:02:34,572 127  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 16:02:34,884 439  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 16:02:35,211 766  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 16:02:35,233 788  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 16:02:35,234 789  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 16:02:35,235 790  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 16:02:35,240 795  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 16:02:36,200 1755 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 16:02:37,014 2569 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 16:02:37,032 2587 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 16:02:40,377 5932 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 8entries
+2017-02-13 16:02:40,377 5932 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@42039326
+2017-02-13 16:02:40,518 6073 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 9entries
+2017-02-13 16:02:40,518 6073 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@66ac5762
+2017-02-13 16:02:40,552 6107 [main] INFO  persistence.SongDAO  - In dao.remove with id = 1
+2017-02-13 16:02:40,581 6136 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@32f232a5
+2017-02-13 16:02:40,614 6169 [main] INFO  persistence.SongDAO  - In dao.remove with id = 2
+2017-02-13 16:02:40,625 6180 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@5f0e9815
+2017-02-13 16:02:40,647 6202 [main] INFO  persistence.SongDAO  - In dao.remove with id = 3
+2017-02-13 16:02:40,655 6210 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@b1712f3
+2017-02-13 16:02:40,674 6229 [main] INFO  persistence.SongDAO  - In dao.remove with id = 4
+2017-02-13 16:02:40,686 6241 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@5629510
+2017-02-13 16:02:40,700 6255 [main] INFO  persistence.SongDAO  - In dao.remove with id = 5
+2017-02-13 16:02:40,708 6263 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@2654635
+2017-02-13 16:02:40,722 6277 [main] INFO  persistence.SongDAO  - In dao.remove with id = 6
+2017-02-13 16:02:40,731 6286 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@4ce7fffa
+2017-02-13 16:02:40,747 6302 [main] INFO  persistence.SongDAO  - In dao.remove with id = 8
+2017-02-13 16:02:40,756 6311 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@76012793
+2017-02-13 16:02:40,768 6323 [main] INFO  persistence.SongDAO  - In dao.remove with id = 9
+2017-02-13 16:02:40,775 6330 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@55dfcc6
+2017-02-13 16:02:40,787 6342 [main] INFO  persistence.SongDAO  - In dao.remove with id = 10
+2017-02-13 16:02:40,797 6352 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@46268f08
+2017-02-13 16:02:40,839 6394 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 1entries
+2017-02-13 16:02:40,840 6395 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@79351f41
+2017-02-13 16:02:40,862 6417 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 2entries
+2017-02-13 16:02:40,874 6429 [main] INFO  persistence.SongDAO  - In dao.remove with id = 11
+2017-02-13 16:02:40,879 6434 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@cd1d761
+2017-02-13 16:02:40,898 6453 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 1entries
+2017-02-13 16:02:40,898 6453 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@5fe1ce85
+2017-02-13 16:02:40,916 6471 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 2entries
+2017-02-13 16:02:40,917 6472 [main] INFO  persistence.SongDAOTest  - entity.Song@584f54e6
+2017-02-13 16:02:40,917 6472 [main] INFO  persistence.SongDAO  - Updating Song entity.Song@584f54e6
+2017-02-13 16:02:40,917 6472 [main] INFO  persistence.SongDAO  - entity.Song@584f54e6
+2017-02-13 16:02:40,922 6477 [main] INFO  persistence.SongDAO  - Updating Song Rosie
+2017-02-13 16:02:40,922 6477 [main] INFO  persistence.SongDAO  - entity.Song@f80945f
+2017-02-13 16:02:40,930 6485 [main] INFO  persistence.SongDAO  - Updated Song entity.Song@f80945f
+2017-02-13 16:02:40,943 6498 [main] INFO  persistence.SongDAOTest  - Updated song ID = 12
+2017-02-13 16:02:40,966 6521 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 2entries
+2017-02-13 16:02:40,967 6522 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@4b41e4dd
+2017-02-13 16:02:40,982 6537 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 3entries
+2017-02-13 16:02:40,988 6543 [main] INFO  persistence.SongDAO  - In dao.remove with id = 13
+2017-02-13 16:02:40,995 6550 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@4a194c39
+2017-02-13 16:02:41,012 6567 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 2entries
+2017-02-13 16:02:41,013 6568 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@112f364d
+2017-02-13 16:02:41,030 6585 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 3entries
+2017-02-13 16:02:41,031 6586 [main] INFO  persistence.SongDAO  - In dao.remove with id = 14
+2017-02-13 16:02:41,036 6591 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@3016fd5e
+2017-02-13 16:05:32,436 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 16:05:32,481 45   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 16:05:32,489 53   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 16:05:32,497 61   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 16:05:32,589 153  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 16:05:32,590 154  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 16:05:32,953 517  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 16:05:33,321 885  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 16:05:33,346 910  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 16:05:33,348 912  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 16:05:33,349 913  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 16:05:33,354 918  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 16:05:34,428 1992 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 16:05:35,324 2888 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 16:05:35,347 2911 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 16:05:38,236 5800 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 7entries
+2017-02-13 16:05:38,238 5802 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:05:38,241 5805 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:05:38,388 5952 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 8entries
+2017-02-13 16:05:38,389 5953 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:05:38,389 5953 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:05:38,423 5987 [main] INFO  persistence.UserDAO  - In dao.remove with id = 10
+2017-02-13 16:05:38,455 6019 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=10, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:05:38,477 6041 [main] INFO  persistence.UserDAO  - In dao.remove with id = 11
+2017-02-13 16:05:38,484 6048 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=11, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:05:38,511 6075 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 7entries
+2017-02-13 16:05:38,511 6075 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:05:38,512 6076 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:05:38,547 6111 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 8entries
+2017-02-13 16:05:38,565 6129 [main] INFO  persistence.UserDAO  - In dao.remove with id = 12
+2017-02-13 16:05:38,572 6136 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=12, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:05:38,615 6179 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 7entries
+2017-02-13 16:05:38,616 6180 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:05:38,617 6181 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:05:38,643 6207 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 8entries
+2017-02-13 16:05:38,643 6207 [main] INFO  persistence.UserDAOTest  - User(id=13, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:05:38,644 6208 [main] INFO  persistence.UserDAO  - Updating user Johanna
+2017-02-13 16:05:38,645 6209 [main] INFO  persistence.UserDAO  - User(id=13, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:05:38,651 6215 [main] INFO  persistence.UserDAO  - Updating user Johanna
+2017-02-13 16:05:38,651 6215 [main] INFO  persistence.UserDAO  - User(id=13, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:05:38,662 6226 [main] INFO  persistence.UserDAO  - Updated user User(id=13, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:05:38,679 6243 [main] INFO  persistence.UserDAOTest  - Updated user ID = 13
+2017-02-13 16:05:38,743 6307 [main] INFO  persistence.UserDAO  - In dao.remove with id = 13
+2017-02-13 16:05:38,749 6313 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=13, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:05:38,781 6345 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 7entries
+2017-02-13 16:05:38,782 6346 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:05:38,782 6346 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:05:38,811 6375 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 8entries
+2017-02-13 16:05:38,820 6384 [main] INFO  persistence.UserDAO  - In dao.remove with id = 14
+2017-02-13 16:05:38,829 6393 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=14, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:05:38,853 6417 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 7entries
+2017-02-13 16:05:38,853 6417 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:05:38,853 6417 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:05:38,890 6454 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 8entries
+2017-02-13 16:05:38,891 6455 [main] INFO  persistence.UserDAO  - In dao.remove with id = 15
+2017-02-13 16:05:38,896 6460 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=15, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:06:27,520 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 16:06:27,561 41   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 16:06:27,571 51   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 16:06:27,580 60   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 16:06:27,689 169  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 16:06:27,689 169  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 16:06:28,100 580  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 16:06:28,449 929  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 16:06:28,470 950  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 16:06:28,471 951  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 16:06:28,472 952  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 16:06:28,477 957  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 16:06:29,642 2122 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 16:06:30,514 2994 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 16:06:30,541 3021 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 16:06:32,925 5405 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 7entries
+2017-02-13 16:06:32,926 5406 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:06:32,926 5406 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:06:33,036 5516 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 8entries
+2017-02-13 16:06:33,037 5517 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:06:33,037 5517 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:06:33,068 5548 [main] INFO  persistence.UserDAO  - In dao.remove with id = 10
+2017-02-13 16:06:33,098 5578 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=10, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:06:33,115 5595 [main] INFO  persistence.UserDAO  - In dao.remove with id = 11
+2017-02-13 16:06:33,121 5601 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=11, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:06:33,146 5626 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 7entries
+2017-02-13 16:06:33,147 5627 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:06:33,147 5627 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:06:33,168 5648 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 8entries
+2017-02-13 16:06:33,183 5663 [main] INFO  persistence.UserDAO  - In dao.remove with id = 12
+2017-02-13 16:06:33,188 5668 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=12, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:06:33,205 5685 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 7entries
+2017-02-13 16:06:33,205 5685 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:06:33,205 5685 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:06:33,225 5705 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 8entries
+2017-02-13 16:06:33,225 5705 [main] INFO  persistence.UserDAOTest  - User(id=13, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:06:33,226 5706 [main] INFO  persistence.UserDAO  - Updating user Johanna
+2017-02-13 16:06:33,226 5706 [main] INFO  persistence.UserDAO  - User(id=13, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:06:33,231 5711 [main] INFO  persistence.UserDAO  - Updating user Johanna
+2017-02-13 16:06:33,231 5711 [main] INFO  persistence.UserDAO  - User(id=13, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:06:33,241 5721 [main] INFO  persistence.UserDAO  - Updated user User(id=13, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:06:33,255 5735 [main] INFO  persistence.UserDAOTest  - Updated user ID = 13
+2017-02-13 16:06:33,277 5757 [main] INFO  persistence.UserDAO  - In dao.remove with id = 13
+2017-02-13 16:06:33,282 5762 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=13, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:06:33,307 5787 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 7entries
+2017-02-13 16:06:33,308 5788 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:06:33,308 5788 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:06:33,328 5808 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 8entries
+2017-02-13 16:06:33,336 5816 [main] INFO  persistence.UserDAO  - In dao.remove with id = 14
+2017-02-13 16:06:33,340 5820 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=14, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:06:33,357 5837 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 7entries
+2017-02-13 16:06:33,358 5838 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:06:33,358 5838 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:06:33,376 5856 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 8entries
+2017-02-13 16:06:33,377 5857 [main] INFO  persistence.UserDAO  - In dao.remove with id = 15
+2017-02-13 16:06:33,381 5861 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=15, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:07:26,499 0    [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-13 16:07:26,504 5    [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-13 16:07:27,256 757  [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-13 16:07:41,166 14667 [http-nio-8080-exec-1] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 16:07:41,208 14709 [http-nio-8080-exec-1] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 16:07:41,225 14726 [http-nio-8080-exec-1] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 16:07:41,234 14735 [http-nio-8080-exec-1] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 16:07:41,430 14931 [http-nio-8080-exec-1] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 16:07:41,431 14932 [http-nio-8080-exec-1] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 16:07:41,708 15209 [http-nio-8080-exec-1] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 16:07:42,233 15734 [http-nio-8080-exec-1] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 16:07:42,238 15739 [http-nio-8080-exec-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 16:07:42,239 15740 [http-nio-8080-exec-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 16:07:42,240 15741 [http-nio-8080-exec-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 16:07:42,247 15748 [http-nio-8080-exec-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 16:07:42,397 15898 [http-nio-8080-exec-1] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 16:07:43,392 16893 [http-nio-8080-exec-1] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 16:07:43,425 16926 [http-nio-8080-exec-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 16:07:59,563 33064 [http-nio-8080-exec-6] INFO  persistence.UserDAO  - In dao.remove with id = 9
+2017-02-13 16:07:59,620 33121 [http-nio-8080-exec-6] INFO  persistence.UserDAO  - In dao. remove with user User(id=9, privileges=12, username=RoseMarie, name=Rose)
+2017-02-13 16:07:59,727 33228 [http-nio-8080-exec-6] INFO  Servlets.UpdateAccounts  - removed user 9
+2017-02-13 16:56:04,385 1    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 16:56:04,406 22   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 16:56:04,411 27   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 16:56:04,416 32   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 16:56:04,483 99   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 16:56:04,483 99   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 16:56:04,770 386  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 16:56:05,143 759  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 16:56:05,164 780  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 16:56:05,166 782  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 16:56:05,166 782  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 16:56:05,171 787  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 16:56:06,389 2005 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 16:56:07,464 3080 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 16:56:07,491 3107 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 16:56:10,559 6175 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-13 16:56:10,560 6176 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:56:10,561 6177 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:56:10,685 6301 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-13 16:56:10,685 6301 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:56:10,686 6302 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:56:10,722 6338 [main] INFO  persistence.UserDAO  - In dao.remove with id = 9
+2017-02-13 16:56:10,755 6371 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=9, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:56:10,783 6399 [main] INFO  persistence.UserDAO  - In dao.remove with id = 10
+2017-02-13 16:56:10,791 6407 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=10, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:56:10,827 6443 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-13 16:56:10,827 6443 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:56:10,828 6444 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:56:10,876 6492 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-13 16:56:10,901 6517 [main] INFO  persistence.UserDAO  - In dao.remove with id = 11
+2017-02-13 16:56:10,908 6524 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=11, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:56:10,939 6555 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-13 16:56:10,940 6556 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:56:10,940 6556 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:56:10,968 6584 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-13 16:56:10,968 6584 [main] INFO  persistence.UserDAOTest  - User(id=12, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:56:10,969 6585 [main] INFO  persistence.UserDAO  - Updating user Johanna
+2017-02-13 16:56:10,969 6585 [main] INFO  persistence.UserDAO  - User(id=12, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:56:10,974 6590 [main] INFO  persistence.UserDAO  - Updating user Johanna
+2017-02-13 16:56:10,974 6590 [main] INFO  persistence.UserDAO  - User(id=12, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:56:10,984 6600 [main] INFO  persistence.UserDAO  - Updated user User(id=12, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:56:11,017 6633 [main] INFO  persistence.UserDAOTest  - Updated user ID = 12
+2017-02-13 16:56:11,040 6656 [main] INFO  persistence.UserDAO  - In dao.remove with id = 12
+2017-02-13 16:56:11,061 6677 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=12, privileges=12, username=Johanna, name=Trump)
+2017-02-13 16:56:11,095 6711 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-13 16:56:11,096 6712 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:56:11,096 6712 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:56:11,125 6741 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-13 16:56:11,136 6752 [main] INFO  persistence.UserDAO  - In dao.remove with id = 13
+2017-02-13 16:56:11,150 6766 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=13, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:56:11,170 6786 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-13 16:56:11,170 6786 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-13 16:56:11,171 6787 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:56:11,201 6817 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-13 16:56:11,201 6817 [main] INFO  persistence.UserDAO  - In dao.remove with id = 14
+2017-02-13 16:56:11,207 6823 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=14, privileges=12, username=Rose, name=Trump)
+2017-02-13 16:56:49,938 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 16:56:49,962 24   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 16:56:49,968 30   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 16:56:49,973 35   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 16:56:50,039 101  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 16:56:50,040 102  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 16:56:50,328 390  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 16:56:50,696 758  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 16:56:50,715 777  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 16:56:50,716 778  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 16:56:50,716 778  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 16:56:50,720 782  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 16:56:51,726 1788 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 16:56:52,568 2630 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 16:56:52,616 2678 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 16:56:55,525 5587 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 2entries
+2017-02-13 16:56:55,526 5588 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@8ad6665
+2017-02-13 16:56:55,647 5709 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 3entries
+2017-02-13 16:56:55,647 5709 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@34a875b3
+2017-02-13 16:56:55,674 5736 [main] INFO  persistence.SongDAO  - In dao.remove with id = 7
+2017-02-13 16:56:55,704 5766 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@253d9f73
+2017-02-13 16:56:55,723 5785 [main] INFO  persistence.SongDAO  - In dao.remove with id = 12
+2017-02-13 16:56:55,730 5792 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@63798ca7
+2017-02-13 16:56:55,741 5803 [main] INFO  persistence.SongDAO  - In dao.remove with id = 13
+2017-02-13 16:56:55,750 5812 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@43f82e78
+2017-02-13 16:56:55,765 5827 [main] INFO  persistence.SongDAO  - In dao.remove with id = 14
+2017-02-13 16:56:55,771 5833 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@2df6226d
+2017-02-13 16:56:55,800 5862 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-13 16:56:55,801 5863 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@b1712f3
+2017-02-13 16:56:55,822 5884 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-13 16:56:55,838 5900 [main] INFO  persistence.SongDAO  - In dao.remove with id = 15
+2017-02-13 16:56:55,848 5910 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@1e636ea3
+2017-02-13 16:56:55,866 5928 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-13 16:56:55,867 5929 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@495fac5f
+2017-02-13 16:56:55,887 5949 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-13 16:56:55,888 5950 [main] INFO  persistence.SongDAOTest  - entity.Song@495b0487
+2017-02-13 16:56:55,888 5950 [main] INFO  persistence.SongDAO  - Updating Song entity.Song@495b0487
+2017-02-13 16:56:55,888 5950 [main] INFO  persistence.SongDAO  - entity.Song@495b0487
+2017-02-13 16:56:55,895 5957 [main] INFO  persistence.SongDAO  - Updating Song Rosie
+2017-02-13 16:56:55,895 5957 [main] INFO  persistence.SongDAO  - entity.Song@1852a3ff
+2017-02-13 16:56:55,905 5967 [main] INFO  persistence.SongDAO  - Updated Song entity.Song@1852a3ff
+2017-02-13 16:56:55,922 5984 [main] INFO  persistence.SongDAOTest  - Updated song ID = 16
+2017-02-13 16:56:55,946 6008 [main] INFO  persistence.SongDAO  - In dao.remove with id = 16
+2017-02-13 16:56:55,952 6014 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@37c7595
+2017-02-13 16:56:55,972 6034 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-13 16:56:55,973 6035 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@cd1d761
+2017-02-13 16:56:55,991 6053 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-13 16:56:55,998 6060 [main] INFO  persistence.SongDAO  - In dao.remove with id = 17
+2017-02-13 16:56:56,003 6065 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@2a640157
+2017-02-13 16:56:56,020 6082 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-13 16:56:56,021 6083 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@5ef6ae06
+2017-02-13 16:56:56,040 6102 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-13 16:56:56,040 6102 [main] INFO  persistence.SongDAO  - In dao.remove with id = 18
+2017-02-13 16:56:56,046 6108 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@7b84fcf8
+2017-02-13 16:58:04,924 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-13 16:58:04,946 22   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-13 16:58:04,952 28   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-13 16:58:04,958 34   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-13 16:58:05,022 98   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-13 16:58:05,022 98   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-13 16:58:05,307 383  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-13 16:58:05,652 728  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-13 16:58:05,672 748  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-13 16:58:05,674 750  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-13 16:58:05,674 750  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-13 16:58:05,678 754  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-13 16:58:06,674 1750 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-13 16:58:07,740 2816 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-13 16:58:07,772 2848 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 16:58:11,126 6202 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-13 16:58:11,127 6203 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@5be46f9d
+2017-02-13 16:58:11,472 6548 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-13 16:58:11,472 6548 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@78383390
+2017-02-13 16:58:11,507 6583 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 1
+2017-02-13 16:58:11,555 6631 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@3f270e0a
+2017-02-13 16:58:11,583 6659 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 2
+2017-02-13 16:58:11,592 6668 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@2e2ff723
+2017-02-13 16:58:11,624 6700 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-13 16:58:11,624 6700 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@32f232a5
+2017-02-13 16:58:11,652 6728 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-13 16:58:11,669 6745 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 3
+2017-02-13 16:58:11,674 6750 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@16c63f5
+2017-02-13 16:58:11,693 6769 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-13 16:58:11,694 6770 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@2eee3069
+2017-02-13 16:58:11,715 6791 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-13 16:58:11,716 6792 [main] INFO  persistence.PlaylistDAOTest  - entity.Playlist@4d9ac0b4
+2017-02-13 16:58:11,716 6792 [main] INFO  persistence.PlaylistDAO  - Updating Playlist entity.Playlist@4d9ac0b4
+2017-02-13 16:58:11,716 6792 [main] INFO  persistence.PlaylistDAO  - entity.Playlist@4d9ac0b4
+2017-02-13 16:58:11,721 6797 [main] INFO  persistence.PlaylistDAO  - Updating Playlist Bubbles
+2017-02-13 16:58:11,721 6797 [main] INFO  persistence.PlaylistDAO  - entity.Playlist@687ef2e0
+2017-02-13 16:58:11,730 6806 [main] INFO  persistence.PlaylistDAO  - Updated Playlist entity.Playlist@687ef2e0
+2017-02-13 16:58:11,743 6819 [main] INFO  persistence.PlaylistDAOTest  - Updated Playlist ID = 4
+2017-02-13 16:58:11,759 6835 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 4
+2017-02-13 16:58:11,767 6843 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@66565121
+2017-02-13 16:58:11,780 6856 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-13 16:58:11,781 6857 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@79351f41
+2017-02-13 16:58:11,802 6878 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-13 16:58:11,807 6883 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 5
+2017-02-13 16:58:11,813 6889 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@614df0a4
+2017-02-13 16:58:11,831 6907 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-13 16:58:11,832 6908 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@6b8d96d9
+2017-02-13 16:58:11,847 6923 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-13 16:58:11,847 6923 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 6
+2017-02-13 16:58:11,854 6930 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@57abad67
+2017-02-14 12:37:36,586 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-14 12:37:36,621 35   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-14 12:37:36,629 43   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-14 12:37:36,635 49   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-14 12:37:36,737 151  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-14 12:37:36,737 151  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-14 12:37:37,089 503  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-14 12:37:37,474 888  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-14 12:37:37,496 910  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-14 12:37:37,497 911  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-14 12:37:37,498 912  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-14 12:37:37,502 916  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-14 12:37:38,731 2145 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-14 12:37:39,815 3229 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-14 12:37:39,836 3250 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-14 12:37:42,412 5826 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-14 12:37:42,414 5828 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-14 12:37:42,414 5828 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:37:42,536 5950 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-14 12:37:42,536 5950 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-14 12:37:42,537 5951 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:37:42,586 6000 [main] INFO  persistence.UserDAO  - In dao.remove with id = 9
+2017-02-14 12:37:42,627 6041 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=9, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:37:42,702 6116 [main] INFO  persistence.UserDAO  - In dao.remove with id = 10
+2017-02-14 12:37:42,709 6123 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=10, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:37:58,227 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-14 12:37:58,251 24   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-14 12:37:58,259 32   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-14 12:37:58,264 37   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-14 12:37:58,337 110  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-14 12:37:58,337 110  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-14 12:37:58,609 382  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-14 12:37:59,035 808  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-14 12:37:59,056 829  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-14 12:37:59,058 831  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-14 12:37:59,059 832  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-14 12:37:59,063 836  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-14 12:38:00,274 2047 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-14 12:38:01,207 2980 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-14 12:38:01,248 3021 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-14 12:38:04,756 6529 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-14 12:38:04,757 6530 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-14 12:38:04,757 6530 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:38:04,867 6640 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-14 12:38:04,868 6641 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-14 12:38:04,868 6641 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:38:04,899 6672 [main] INFO  persistence.UserDAO  - In dao.remove with id = 9
+2017-02-14 12:38:04,926 6699 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=9, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:38:04,946 6719 [main] INFO  persistence.UserDAO  - In dao.remove with id = 10
+2017-02-14 12:38:04,950 6723 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=10, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:38:04,969 6742 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-14 12:38:04,970 6743 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-14 12:38:04,970 6743 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:38:04,991 6764 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-14 12:38:05,005 6778 [main] INFO  persistence.UserDAO  - In dao.remove with id = 11
+2017-02-14 12:38:05,010 6783 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=11, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:38:05,028 6801 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-14 12:38:05,028 6801 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-14 12:38:05,028 6801 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:38:05,048 6821 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-14 12:38:05,049 6822 [main] INFO  persistence.UserDAOTest  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-14 12:38:05,049 6822 [main] INFO  persistence.UserDAO  - Updating user Rose
+2017-02-14 12:38:05,049 6822 [main] INFO  persistence.UserDAO  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-14 12:38:05,054 6827 [main] INFO  persistence.UserDAO  - Updating user Rose
+2017-02-14 12:38:05,054 6827 [main] INFO  persistence.UserDAO  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-14 12:38:05,063 6836 [main] INFO  persistence.UserDAO  - Updated user User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-14 12:38:05,077 6850 [main] INFO  persistence.UserDAOTest  - Updated user ID = 12
+2017-02-14 12:38:05,091 6864 [main] INFO  persistence.UserDAO  - In dao.remove with id = 12
+2017-02-14 12:38:05,095 6868 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-14 12:38:05,111 6884 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-14 12:38:05,112 6885 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-14 12:38:05,112 6885 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:38:05,132 6905 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-14 12:38:05,140 6913 [main] INFO  persistence.UserDAO  - In dao.remove with id = 13
+2017-02-14 12:38:05,145 6918 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=13, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:38:05,162 6935 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-14 12:38:05,163 6936 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-14 12:38:05,164 6937 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:38:05,183 6956 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-14 12:38:05,183 6956 [main] INFO  persistence.UserDAO  - In dao.remove with id = 14
+2017-02-14 12:38:05,188 6961 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=14, privileges=12, username=Rose, name=Trump)
+2017-02-14 12:38:29,646 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-14 12:38:29,666 20   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-14 12:38:29,671 25   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-14 12:38:29,675 29   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-14 12:38:29,750 104  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-14 12:38:29,750 104  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-14 12:38:30,040 394  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-14 12:38:30,402 756  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-14 12:38:30,420 774  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-14 12:38:30,421 775  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-14 12:38:30,422 776  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-14 12:38:30,425 779  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-14 12:38:31,510 1864 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-14 12:38:32,587 2941 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-14 12:38:32,617 2971 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-14 12:38:36,348 6702 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-14 12:38:36,350 6704 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 12:38:36,351 6705 [main] INFO  persistence.MessageDAO  - Message(id=0, label=Election, sender=1, receiver=12, read=1, content=How about that?)
+2017-02-14 12:38:36,633 6987 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1064, SQLState: 42000
+2017-02-14 12:38:36,635 6989 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read, receiver, sender, id) values ('How about that?', 'Election', 1, 12, 1, 1)' at line 1
+2017-02-14 12:38:36,642 6996 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-14 12:38:36,644 6998 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1064, SQLState: 42000
+2017-02-14 12:38:36,644 6998 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read, receiver, sender, id) values ('How about that?', 'Election', 1, 12, 1, 1)' at line 1
+2017-02-14 12:42:49,704 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-14 12:42:49,727 23   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-14 12:42:49,733 29   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-14 12:42:49,738 34   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-14 12:42:49,808 104  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-14 12:42:49,809 105  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-14 12:42:50,081 377  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-14 12:42:50,448 744  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-14 12:42:50,470 766  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-14 12:42:50,472 768  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-14 12:42:50,472 768  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-14 12:42:50,477 773  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-14 12:42:51,668 1964 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-14 12:42:52,486 2782 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-14 12:42:52,536 2832 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-14 12:42:55,965 6261 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-14 12:42:55,966 6262 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, label=Election, sender=1, receiver=12, read=1, content=How about that?)
+2017-02-14 12:42:55,966 6262 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 12:42:55,967 6263 [main] INFO  persistence.MessageDAO  - Message(id=0, label=Election, sender=1, receiver=12, read=1, content=How about that?)
+2017-02-14 12:42:56,206 6502 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1064, SQLState: 42000
+2017-02-14 12:42:56,206 6502 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read, receiver, sender, id) values ('How about that?', 'Election', 1, 12, 1, 1)' at line 1
+2017-02-14 12:42:56,210 6506 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-14 12:42:56,212 6508 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1064, SQLState: 42000
+2017-02-14 12:42:56,213 6509 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read, receiver, sender, id) values ('How about that?', 'Election', 1, 12, 1, 1)' at line 1
+2017-02-14 13:48:12,775 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-14 13:48:12,800 25   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-14 13:48:12,807 32   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-14 13:48:12,812 37   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-14 13:48:12,891 116  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-14 13:48:12,892 117  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-14 13:48:13,154 379  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-14 13:48:13,494 719  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-14 13:48:13,513 738  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-14 13:48:13,514 739  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-14 13:48:13,514 739  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-14 13:48:13,519 744  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-14 13:48:14,484 1709 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-14 13:48:15,276 2501 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-14 13:48:15,295 2520 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-14 13:48:17,851 5076 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-14 13:48:17,852 5077 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, read=1, content=How about that?)
+2017-02-14 13:48:17,853 5078 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 13:48:17,853 5078 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, read=1, content=How about that?)
+2017-02-14 13:48:18,285 5510 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1064, SQLState: 42000
+2017-02-14 13:48:18,285 5510 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read, receiver, sender, subject, id) values ('How about that?', 1, 12, 1, 'Elect' at line 1
+2017-02-14 13:48:18,296 5521 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-14 13:48:18,300 5525 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1064, SQLState: 42000
+2017-02-14 13:48:18,300 5525 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read, receiver, sender, subject, id) values ('How about that?', 1, 12, 1, 'Elect' at line 1
+2017-02-14 13:53:04,875 1    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-14 13:53:04,905 31   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-14 13:53:04,912 38   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-14 13:53:04,926 52   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-14 13:53:05,008 134  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-14 13:53:05,008 134  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-14 13:53:05,401 527  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-14 13:53:05,901 1027 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-14 13:53:06,170 1296 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-14 13:53:06,174 1300 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-14 13:53:06,175 1301 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-14 13:53:06,188 1314 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-14 13:53:08,332 3458 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-14 13:53:09,121 4247 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-14 13:53:09,151 4277 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-14 13:53:11,082 6208 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-14 13:53:11,082 6208 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, read=1, content=How about that?)
+2017-02-14 13:53:11,083 6209 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 13:53:11,083 6209 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, read=1, content=How about that?)
+2017-02-14 13:53:11,313 6439 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1064, SQLState: 42000
+2017-02-14 13:53:11,313 6439 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read, receiver, sender, subject, id) values ('How about that?', 1, 12, 1, 'Elect' at line 1
+2017-02-14 13:53:11,320 6446 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-14 13:53:11,323 6449 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1064, SQLState: 42000
+2017-02-14 13:53:11,323 6449 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read, receiver, sender, subject, id) values ('How about that?', 1, 12, 1, 'Elect' at line 1
+2017-02-14 13:54:22,020 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-14 13:54:22,041 21   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-14 13:54:22,045 25   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-14 13:54:22,050 30   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-14 13:54:22,106 86   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-14 13:54:22,106 86   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-14 13:54:22,400 380  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-14 13:54:22,717 697  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-14 13:54:22,736 716  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-14 13:54:22,738 718  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-14 13:54:22,739 719  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-14 13:54:22,743 723  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-14 13:54:24,035 2015 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-14 13:54:24,952 2932 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-14 13:54:25,018 2998 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-14 13:54:27,953 5933 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-14 13:54:27,954 5934 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@21ba0741
+2017-02-14 13:54:28,301 6281 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-14 13:54:28,302 6282 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@1a6c1270
+2017-02-14 13:54:28,326 6306 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 1
+2017-02-14 13:54:28,357 6337 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@253d9f73
+2017-02-14 13:54:28,378 6358 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 2
+2017-02-14 13:54:28,384 6364 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@22bac7bc
+2017-02-14 13:58:26,219 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-14 13:58:26,242 23   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-14 13:58:26,248 29   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-14 13:58:26,252 33   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-14 13:58:26,323 104  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-14 13:58:26,324 105  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-14 13:58:26,586 367  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-14 13:58:26,923 704  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-14 13:58:26,943 724  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-14 13:58:26,945 726  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-14 13:58:26,945 726  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-14 13:58:26,949 730  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-14 13:58:27,975 1756 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-14 13:58:28,749 2530 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-14 13:58:28,776 2557 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-14 13:58:31,919 5700 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-14 13:58:31,919 5700 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, read=1, content=How about that?)
+2017-02-14 13:58:31,921 5702 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 13:58:31,921 5702 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, read=1, content=How about that?)
+2017-02-14 13:58:32,362 6143 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1064, SQLState: 42000
+2017-02-14 13:58:32,363 6144 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read, receiver, sender, subject, id) values ('How about that?', 1, 12, 1, 'Elect' at line 1
+2017-02-14 13:58:32,366 6147 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-14 13:58:32,370 6151 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1064, SQLState: 42000
+2017-02-14 13:58:32,370 6151 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read, receiver, sender, subject, id) values ('How about that?', 1, 12, 1, 'Elect' at line 1
+2017-02-14 14:11:15,884 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-14 14:11:15,907 23   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-14 14:11:15,913 29   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-14 14:11:15,918 34   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-14 14:11:15,975 91   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-14 14:11:15,975 91   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-14 14:11:16,227 343  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-14 14:11:16,594 710  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-14 14:11:16,614 730  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-14 14:11:16,615 731  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-14 14:11:16,616 732  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-14 14:11:16,623 739  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-14 14:11:17,656 1772 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-14 14:11:18,387 2503 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-14 14:11:18,442 2558 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-14 14:11:21,543 5659 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-14 14:11:21,543 5659 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, read=1, content=How about that?)
+2017-02-14 14:11:21,544 5660 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 14:11:21,544 5660 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, read=1, content=How about that?)
+2017-02-14 14:11:21,875 5991 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1064, SQLState: 42000
+2017-02-14 14:11:21,876 5992 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read, receiver, sender, subject, id) values ('How about that?', 1, 12, 1, 'Elect' at line 1
+2017-02-14 14:11:21,879 5995 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-14 14:11:21,882 5998 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1064, SQLState: 42000
+2017-02-14 14:11:21,882 5998 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read, receiver, sender, subject, id) values ('How about that?', 1, 12, 1, 'Elect' at line 1
+2017-02-14 14:17:05,590 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-14 14:17:05,617 27   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-14 14:17:05,628 38   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-14 14:17:05,633 43   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-14 14:17:05,709 119  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-14 14:17:05,709 119  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-14 14:17:06,051 461  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-14 14:17:06,570 980  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-14 14:17:06,590 1000 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-14 14:17:06,592 1002 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-14 14:17:06,593 1003 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-14 14:17:06,599 1009 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-14 14:17:08,952 3362 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-14 14:17:10,114 4524 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-14 14:17:10,199 4609 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-14 14:17:12,644 7054 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-14 14:17:12,645 7055 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, read=1, content=How about that?)
+2017-02-14 14:17:12,646 7056 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 14:17:12,646 7056 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, read=1, content=How about that?)
+2017-02-14 14:17:13,006 7416 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1064, SQLState: 42000
+2017-02-14 14:17:13,007 7417 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read, receiver, sender, subject, id) values ('How about that?', 1, 12, 1, 'Elect' at line 1
+2017-02-14 14:17:13,010 7420 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-14 14:17:13,013 7423 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1064, SQLState: 42000
+2017-02-14 14:17:13,013 7423 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read, receiver, sender, subject, id) values ('How about that?', 1, 12, 1, 'Elect' at line 1
+2017-02-14 14:39:01,707 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-14 14:39:01,727 20   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-14 14:39:01,733 26   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-14 14:39:01,739 32   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-14 14:39:01,797 90   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-14 14:39:01,797 90   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-14 14:39:02,058 351  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-14 14:39:02,416 709  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-14 14:39:02,435 728  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-14 14:39:02,436 729  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-14 14:39:02,437 730  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-14 14:39:02,442 735  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-14 14:39:03,541 1834 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-14 14:39:04,636 2929 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-14 14:39:04,659 2952 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-14 14:39:07,100 5393 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-14 14:39:07,100 5393 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:07,101 5394 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 14:39:07,101 5394 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:07,372 5665 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-14 14:39:07,372 5665 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:07,373 5666 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 14:39:07,373 5666 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:07,393 5686 [main] INFO  persistence.MessageDAOTest  - message list has 2 entries
+2017-02-14 14:39:07,400 5693 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 1
+2017-02-14 14:39:07,428 5721 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=1, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:07,446 5739 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 2
+2017-02-14 14:39:07,451 5744 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=2, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:21,155 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-14 14:39:21,176 21   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-14 14:39:21,180 25   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-14 14:39:21,185 30   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-14 14:39:21,257 102  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-14 14:39:21,257 102  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-14 14:39:21,529 374  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-14 14:39:21,869 714  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-14 14:39:21,888 733  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-14 14:39:21,890 735  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-14 14:39:21,891 736  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-14 14:39:21,897 742  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-14 14:39:22,896 1741 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-14 14:39:23,841 2686 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-14 14:39:23,866 2711 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-14 14:39:26,963 5808 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-14 14:39:26,964 5809 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:26,964 5809 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 14:39:26,965 5810 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,281 6126 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-14 14:39:27,282 6127 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,282 6127 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 14:39:27,283 6128 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,312 6157 [main] INFO  persistence.MessageDAOTest  - message list has 2 entries
+2017-02-14 14:39:27,321 6166 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 1
+2017-02-14 14:39:27,372 6217 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=1, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,399 6244 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 2
+2017-02-14 14:39:27,409 6254 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=2, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,434 6279 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-14 14:39:27,434 6279 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,435 6280 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 14:39:27,435 6280 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,461 6306 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-14 14:39:27,476 6321 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 3
+2017-02-14 14:39:27,483 6328 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=3, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,503 6348 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-14 14:39:27,504 6349 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,504 6349 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 14:39:27,504 6349 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,542 6387 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-14 14:39:27,542 6387 [main] INFO  persistence.MessageDAOTest  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,543 6388 [main] INFO  persistence.MessageDAO  - Updating message Johanna
+2017-02-14 14:39:27,543 6388 [main] INFO  persistence.MessageDAO  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,548 6393 [main] INFO  persistence.MessageDAO  - Updating message Johanna
+2017-02-14 14:39:27,548 6393 [main] INFO  persistence.MessageDAO  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,557 6402 [main] INFO  persistence.MessageDAO  - Updated message Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,570 6415 [main] INFO  persistence.MessageDAOTest  - Updated message ID = 4
+2017-02-14 14:39:27,589 6434 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 4
+2017-02-14 14:39:27,603 6448 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,644 6489 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-14 14:39:27,644 6489 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,644 6489 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 14:39:27,645 6490 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,668 6513 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-14 14:39:27,676 6521 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 5
+2017-02-14 14:39:27,684 6529 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=5, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,706 6551 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-14 14:39:27,707 6552 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,707 6552 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-14 14:39:27,707 6552 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 14:39:27,735 6580 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-14 14:39:27,736 6581 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 6
+2017-02-14 14:39:27,743 6588 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=6, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-14 15:36:15,166 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-14 15:36:15,186 20   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-14 15:36:15,191 25   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-14 15:36:15,195 29   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-14 15:36:15,261 95   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-14 15:36:15,261 95   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-14 15:36:15,531 365  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-14 15:36:15,877 711  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-14 15:36:15,900 734  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-14 15:36:15,901 735  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-14 15:36:15,901 735  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-14 15:36:15,913 747  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-14 15:36:17,537 2371 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-14 15:36:18,511 3345 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-14 15:36:18,575 3409 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-14 15:36:21,007 5841 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-14 15:36:21,008 5842 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,009 5843 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-14 15:36:21,009 5843 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,376 6210 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-14 15:36:21,377 6211 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,378 6212 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-14 15:36:21,378 6212 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,500 6334 [main] INFO  persistence.AssociationDAOTest  - association list has 2 entries
+2017-02-14 15:36:21,509 6343 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 1
+2017-02-14 15:36:21,554 6388 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=1, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,577 6411 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 2
+2017-02-14 15:36:21,586 6420 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=2, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,609 6443 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-14 15:36:21,609 6443 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,610 6444 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-14 15:36:21,610 6444 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,634 6468 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-14 15:36:21,659 6493 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 3
+2017-02-14 15:36:21,666 6500 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=3, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,687 6521 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-14 15:36:21,687 6521 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,688 6522 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-14 15:36:21,688 6522 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,716 6550 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-14 15:36:21,716 6550 [main] INFO  persistence.AssociationDAOTest  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-14 15:36:21,717 6551 [main] INFO  persistence.AssociationDAO  - Updating association 4
+2017-02-14 15:36:21,717 6551 [main] INFO  persistence.AssociationDAO  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-14 15:36:21,725 6559 [main] INFO  persistence.AssociationDAO  - Updating association 4
+2017-02-14 15:36:21,725 6559 [main] INFO  persistence.AssociationDAO  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-14 15:36:21,734 6568 [main] INFO  persistence.AssociationDAO  - Updated association Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-14 15:36:21,751 6585 [main] INFO  persistence.AssociationDAOTest  - Updated association ID = 4
+2017-02-14 15:36:21,773 6607 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 4
+2017-02-14 15:36:21,778 6612 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-14 15:36:21,802 6636 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-14 15:36:21,803 6637 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,812 6646 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-14 15:36:21,813 6647 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,830 6664 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-14 15:36:21,836 6670 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 5
+2017-02-14 15:36:21,844 6678 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=5, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,890 6724 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-14 15:36:21,890 6724 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,890 6724 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-14 15:36:21,890 6724 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-14 15:36:21,922 6756 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-14 15:36:21,922 6756 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 6
+2017-02-14 15:36:21,956 6790 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=6, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)

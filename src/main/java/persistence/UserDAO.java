@@ -5,8 +5,6 @@ import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
-import java.sql.Connection;
 import java.util.List;
 
 

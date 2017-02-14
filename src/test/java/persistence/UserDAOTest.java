@@ -1,6 +1,8 @@
 package persistence;
 
 import java.util.*;
+
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.apache.log4j.Logger;
@@ -45,7 +47,7 @@ public class UserDAOTest {
         user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId(); // get the id of the most recent addition
         user = dao.get(id); // get the user by id
-        assertEquals("Names don't match", "Rose", user.getName());
+        assertEquals("Names don't match", "Trump", user.getName());
     }
 
     @Test
@@ -59,18 +61,18 @@ public class UserDAOTest {
     public void testModifyUserName() throws Exception {
         user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId();
-        user.setUsername("Johanna");
+        user.setName("Johanna");
         logger.info(user.toString());
         logger.info("Updated user ID = " + dao.modify(user));
         //dao.modify(user);
         user = dao.get(id);
-        assertEquals("Username not modified", "Johanna", user.getUsername());
+        assertEquals("Name not modified", "Johanna", user.getName());
         userList = dao.getAll();
         assertEquals("Modify added an entry!", numberOfUsers, userList.size());
     }
 
     private void justAdd() {
-        user = new entity.User("RoseMarie", "Rose", 12);
+        user = new entity.User("Rose", "Trump", 12);
         dao.add(user);
     }
 
@@ -83,4 +85,18 @@ public class UserDAOTest {
         assertEquals("remove did not work: ", numberOfUsers - 1, userList.size());
     }
 
+
+    @After
+    public void cleanup() throws Exception {
+        userList = dao.getAll();
+
+        for (entity.User user : userList) {
+            String thisName = user.getName();
+            if (thisName.equalsIgnoreCase("Trump")) {
+                dao.remove(user.getId());
+            } else if (thisName.equalsIgnoreCase("Johanna")) {
+                dao.remove(user.getId());
+            }
+        }
+    }
 }

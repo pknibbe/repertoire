@@ -31,4 +31,6 @@
 | 2/11 | Individual Project | 0.5 | Abortive attempt to implement abstract DAO |
 | 2/11 | Individual Project | 2 | Deployment to AWS |
 | 2/13 | Code Review 1 | .5 | Updated code review issues documents for better formatting |
-| 2/13 | Individual Project | ? | Reconfigure for AWS and deploy |
+| 2/13 | Individual Project | 1 |  Fail - reconfigure for AWS and deploy |
+| 2/13 | Individual Project | 2 | Implement 2 more DAO and DAO Tests |
+| 2/14 | Individual Project | 4 | Implement message and association DAO and DAO Tests |
