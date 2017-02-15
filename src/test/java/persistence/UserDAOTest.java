@@ -72,7 +72,7 @@ public class UserDAOTest {
     }
 
     private void justAdd() {
-        user = new entity.User("Rose", "Trump", 12);
+        user = new entity.User("Rose", "Trump");
         dao.add(user);
     }
 

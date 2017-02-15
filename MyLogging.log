@@ -1486,3 +1486,1060 @@
 2017-02-14 15:36:21,922 6756 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
 2017-02-14 15:36:21,922 6756 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 6
 2017-02-14 15:36:21,956 6790 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=6, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:01:27,555 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-15 12:01:27,589 34   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-15 12:01:27,595 40   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-15 12:01:27,601 46   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-15 12:01:27,680 125  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:01:27,681 126  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,017 462  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,017 462  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,065 510  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,065 510  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,118 563  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,119 564  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,151 596  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,151 596  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,182 627  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,183 628  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,210 655  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,212 657  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,586 1031 [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,587 1032 [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,614 1059 [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,615 1060 [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,643 1088 [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:01:28,643 1088 [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:02:13,936 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-15 12:02:13,958 22   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-15 12:02:13,963 27   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-15 12:02:13,967 31   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-15 12:02:14,029 93   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:02:14,029 93   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:02:14,303 367  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:02:14,303 367  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:07:49,136 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-15 12:07:49,153 17   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-15 12:07:49,157 21   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-15 12:07:49,161 25   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-15 12:07:49,207 71   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:07:49,207 71   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:07:49,440 304  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-15 12:07:49,713 577  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-15 12:07:49,742 606  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-15 12:07:49,744 608  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-15 12:07:49,746 610  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-15 12:07:49,758 622  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-15 12:07:51,549 2413 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-15 12:07:52,056 2920 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-15 12:07:52,075 2939 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-15 12:07:53,405 4269 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:07:53,406 4270 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:53,407 4271 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:07:53,407 4271 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:53,641 4505 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:07:53,642 4506 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:53,658 4522 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:07:53,659 4523 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:53,699 4563 [main] INFO  persistence.AssociationDAOTest  - association list has 2 entries
+2017-02-15 12:07:53,707 4571 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 1
+2017-02-15 12:07:53,734 4598 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=1, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:53,753 4617 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 2
+2017-02-15 12:07:53,775 4639 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=2, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:53,830 4694 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:07:53,831 4695 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:53,831 4695 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:07:53,834 4698 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:53,873 4737 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:07:53,885 4749 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 3
+2017-02-15 12:07:53,892 4756 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=3, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:53,907 4771 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:07:53,907 4771 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:53,908 4772 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:07:53,908 4772 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:53,924 4788 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:07:53,924 4788 [main] INFO  persistence.AssociationDAOTest  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:07:53,925 4789 [main] INFO  persistence.AssociationDAO  - Updating association 4
+2017-02-15 12:07:53,925 4789 [main] INFO  persistence.AssociationDAO  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:07:53,930 4794 [main] INFO  persistence.AssociationDAO  - Updating association 4
+2017-02-15 12:07:53,930 4794 [main] INFO  persistence.AssociationDAO  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:07:53,938 4802 [main] INFO  persistence.AssociationDAO  - Updated association Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:07:53,949 4813 [main] INFO  persistence.AssociationDAOTest  - Updated association ID = 4
+2017-02-15 12:07:53,963 4827 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 4
+2017-02-15 12:07:53,968 4832 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:07:53,983 4847 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:07:53,983 4847 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:53,984 4848 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:07:53,984 4848 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:54,003 4867 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:07:54,008 4872 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 5
+2017-02-15 12:07:54,028 4892 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=5, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:54,047 4911 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:07:54,047 4911 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:54,048 4912 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:07:54,049 4913 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:54,080 4944 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:07:54,081 4945 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 6
+2017-02-15 12:07:54,097 4961 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=6, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:07:54,174 5038 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:07:54,174 5038 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,175 5039 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:07:54,175 5039 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,213 5077 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:07:54,213 5077 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,214 5078 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:07:54,214 5078 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,232 5096 [main] INFO  persistence.MessageDAOTest  - message list has 2 entries
+2017-02-15 12:07:54,239 5103 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 1
+2017-02-15 12:07:54,247 5111 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=1, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,263 5127 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 2
+2017-02-15 12:07:54,273 5137 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=2, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,292 5156 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:07:54,292 5156 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,293 5157 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:07:54,293 5157 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,312 5176 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:07:54,327 5191 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 3
+2017-02-15 12:07:54,332 5196 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=3, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,351 5215 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:07:54,351 5215 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,352 5216 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:07:54,352 5216 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,366 5230 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:07:54,367 5231 [main] INFO  persistence.MessageDAOTest  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,367 5231 [main] INFO  persistence.MessageDAO  - Updating message Johanna
+2017-02-15 12:07:54,368 5232 [main] INFO  persistence.MessageDAO  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,372 5236 [main] INFO  persistence.MessageDAO  - Updating message Johanna
+2017-02-15 12:07:54,373 5237 [main] INFO  persistence.MessageDAO  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,373 5237 [main] INFO  persistence.MessageDAO  - Updated message Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,383 5247 [main] INFO  persistence.MessageDAOTest  - Updated message ID = 4
+2017-02-15 12:07:54,398 5262 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 4
+2017-02-15 12:07:54,403 5267 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,417 5281 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:07:54,417 5281 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,417 5281 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:07:54,418 5282 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,432 5296 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:07:54,438 5302 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 5
+2017-02-15 12:07:54,448 5312 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=5, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,463 5327 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:07:54,464 5328 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,464 5328 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:07:54,464 5328 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,478 5342 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:07:54,478 5342 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 6
+2017-02-15 12:07:54,482 5346 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=6, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:07:54,579 5443 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:07:54,579 5443 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@23d1e5d0
+2017-02-15 12:07:54,624 5488 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:07:54,625 5489 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@235a0c16
+2017-02-15 12:07:54,652 5516 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 1
+2017-02-15 12:07:54,657 5521 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@64a8c844
+2017-02-15 12:07:54,688 5552 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 2
+2017-02-15 12:07:54,692 5556 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@781f10f2
+2017-02-15 12:07:54,712 5576 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:07:54,713 5577 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@7b5a12ae
+2017-02-15 12:07:54,728 5592 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:07:54,747 5611 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 3
+2017-02-15 12:07:54,752 5616 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@48a12036
+2017-02-15 12:07:54,773 5637 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:07:54,773 5637 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@696f0212
+2017-02-15 12:07:54,794 5658 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:07:54,797 5661 [main] INFO  persistence.PlaylistDAOTest  - entity.Playlist@7bb6ab3a
+2017-02-15 12:07:54,797 5661 [main] INFO  persistence.PlaylistDAO  - Updating Playlist entity.Playlist@7bb6ab3a
+2017-02-15 12:07:54,798 5662 [main] INFO  persistence.PlaylistDAO  - entity.Playlist@7bb6ab3a
+2017-02-15 12:07:54,807 5671 [main] INFO  persistence.PlaylistDAO  - Updating Playlist Bubbles
+2017-02-15 12:07:54,808 5672 [main] INFO  persistence.PlaylistDAO  - entity.Playlist@32c8e539
+2017-02-15 12:07:54,808 5672 [main] INFO  persistence.PlaylistDAO  - Updated Playlist entity.Playlist@32c8e539
+2017-02-15 12:07:54,818 5682 [main] INFO  persistence.PlaylistDAOTest  - Updated Playlist ID = 4
+2017-02-15 12:07:54,836 5700 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 4
+2017-02-15 12:07:54,842 5706 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@793138bd
+2017-02-15 12:07:54,861 5725 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:07:54,861 5725 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@2f6e28bc
+2017-02-15 12:07:54,874 5738 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:07:54,880 5744 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 5
+2017-02-15 12:07:54,884 5748 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@bff34c6
+2017-02-15 12:07:54,898 5762 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:07:54,900 5764 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@11981797
+2017-02-15 12:07:54,922 5786 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:07:54,922 5786 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 6
+2017-02-15 12:07:54,928 5792 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@45905bff
+2017-02-15 12:07:55,010 5874 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:07:55,010 5874 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@655f7ea
+2017-02-15 12:07:55,031 5895 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:07:55,032 5896 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@13cf7d52
+2017-02-15 12:07:55,059 5923 [main] INFO  persistence.SongDAO  - In dao.remove with id = 1
+2017-02-15 12:07:55,063 5927 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@4189d70b
+2017-02-15 12:07:55,071 5935 [main] INFO  persistence.SongDAO  - In dao.remove with id = 2
+2017-02-15 12:07:55,076 5940 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@abf688e
+2017-02-15 12:07:55,088 5952 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:07:55,089 5953 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@aa549e5
+2017-02-15 12:07:55,101 5965 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:07:55,113 5977 [main] INFO  persistence.SongDAO  - In dao.remove with id = 3
+2017-02-15 12:07:55,117 5981 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@607fbe09
+2017-02-15 12:07:55,132 5996 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:07:55,132 5996 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@4a891c97
+2017-02-15 12:07:55,169 6033 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:07:55,173 6037 [main] INFO  persistence.SongDAOTest  - entity.Song@16746061
+2017-02-15 12:07:55,174 6038 [main] INFO  persistence.SongDAO  - Updating Song entity.Song@16746061
+2017-02-15 12:07:55,174 6038 [main] INFO  persistence.SongDAO  - entity.Song@16746061
+2017-02-15 12:07:55,181 6045 [main] INFO  persistence.SongDAO  - Updating Song Rosie
+2017-02-15 12:07:55,181 6045 [main] INFO  persistence.SongDAO  - entity.Song@674658f7
+2017-02-15 12:07:55,182 6046 [main] INFO  persistence.SongDAO  - Updated Song entity.Song@674658f7
+2017-02-15 12:07:55,196 6060 [main] INFO  persistence.SongDAOTest  - Updated song ID = 4
+2017-02-15 12:07:55,228 6092 [main] INFO  persistence.SongDAO  - In dao.remove with id = 4
+2017-02-15 12:07:55,240 6104 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@7e928e2f
+2017-02-15 12:07:55,261 6125 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:07:55,262 6126 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@63b1d4fa
+2017-02-15 12:07:55,278 6142 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:07:55,282 6146 [main] INFO  persistence.SongDAO  - In dao.remove with id = 5
+2017-02-15 12:07:55,287 6151 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@792bbc74
+2017-02-15 12:07:55,301 6165 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:07:55,302 6166 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@5af3a0f
+2017-02-15 12:07:55,318 6182 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:07:55,318 6182 [main] INFO  persistence.SongDAO  - In dao.remove with id = 6
+2017-02-15 12:07:55,324 6188 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@14b030a0
+2017-02-15 12:07:55,511 6375 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:07:55,512 6376 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:07:55,513 6377 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:07:55,557 6421 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:07:55,558 6422 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:07:55,558 6422 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:07:55,624 6488 [main] INFO  persistence.UserDAO  - In dao.remove with id = 9
+2017-02-15 12:07:55,640 6504 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=9, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:07:55,661 6525 [main] INFO  persistence.UserDAO  - In dao.remove with id = 10
+2017-02-15 12:07:55,667 6531 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=10, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:07:55,696 6560 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:07:55,697 6561 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:07:55,698 6562 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:07:55,723 6587 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:07:55,737 6601 [main] INFO  persistence.UserDAO  - In dao.remove with id = 11
+2017-02-15 12:07:55,742 6606 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=11, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:07:55,761 6625 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:07:55,761 6625 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:07:55,761 6625 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:07:55,781 6645 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:07:55,781 6645 [main] INFO  persistence.UserDAOTest  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:07:55,781 6645 [main] INFO  persistence.UserDAO  - Updating user Rose
+2017-02-15 12:07:55,782 6646 [main] INFO  persistence.UserDAO  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:07:55,817 6681 [main] INFO  persistence.UserDAO  - Updating user Rose
+2017-02-15 12:07:55,817 6681 [main] INFO  persistence.UserDAO  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:07:55,818 6682 [main] INFO  persistence.UserDAO  - Updated user User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:07:55,843 6707 [main] INFO  persistence.UserDAOTest  - Updated user ID = 12
+2017-02-15 12:07:55,908 6772 [main] INFO  persistence.UserDAO  - In dao.remove with id = 12
+2017-02-15 12:07:55,913 6777 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:07:55,943 6807 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:07:55,943 6807 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:07:55,943 6807 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:07:55,965 6829 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:07:55,971 6835 [main] INFO  persistence.UserDAO  - In dao.remove with id = 13
+2017-02-15 12:07:55,976 6840 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=13, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:07:55,994 6858 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:07:55,994 6858 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:07:55,994 6858 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:07:56,009 6873 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:07:56,010 6874 [main] INFO  persistence.UserDAO  - In dao.remove with id = 14
+2017-02-15 12:07:56,014 6878 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=14, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:10:23,897 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-15 12:10:23,921 24   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-15 12:10:23,927 30   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-15 12:10:23,931 34   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-15 12:10:24,002 105  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:10:24,002 105  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:10:24,234 337  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-15 12:10:24,521 624  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-15 12:10:24,556 659  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-15 12:10:24,558 661  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-15 12:10:24,559 662  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-15 12:10:24,564 667  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-15 12:10:25,422 1525 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-15 12:10:25,964 2067 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-15 12:10:25,991 2094 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-15 12:10:27,371 3474 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:10:27,371 3474 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:27,372 3475 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:10:27,373 3476 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:27,723 3826 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:10:27,723 3826 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:27,724 3827 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:10:27,725 3828 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:27,752 3855 [main] INFO  persistence.AssociationDAOTest  - association list has 2 entries
+2017-02-15 12:10:27,760 3863 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 1
+2017-02-15 12:10:27,793 3896 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=1, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:27,812 3915 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 2
+2017-02-15 12:10:27,820 3923 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=2, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:27,850 3953 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:10:27,850 3953 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:27,851 3954 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:10:27,851 3954 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:27,876 3979 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:10:27,893 3996 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 3
+2017-02-15 12:10:27,904 4007 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=3, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:27,929 4032 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:10:27,929 4032 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:27,930 4033 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:10:27,930 4033 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:27,952 4055 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:10:27,953 4056 [main] INFO  persistence.AssociationDAOTest  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:10:27,954 4057 [main] INFO  persistence.AssociationDAO  - Updating association 4
+2017-02-15 12:10:27,955 4058 [main] INFO  persistence.AssociationDAO  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:10:27,964 4067 [main] INFO  persistence.AssociationDAO  - Updating association 4
+2017-02-15 12:10:27,964 4067 [main] INFO  persistence.AssociationDAO  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:10:27,977 4080 [main] INFO  persistence.AssociationDAO  - Updated association Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:10:27,994 4097 [main] INFO  persistence.AssociationDAOTest  - Updated association ID = 4
+2017-02-15 12:10:28,014 4117 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 4
+2017-02-15 12:10:28,025 4128 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:10:28,075 4178 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:10:28,075 4178 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:28,076 4179 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:10:28,076 4179 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:28,093 4196 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:10:28,099 4202 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 5
+2017-02-15 12:10:28,105 4208 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=5, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:28,122 4225 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:10:28,122 4225 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:28,123 4226 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:10:28,123 4226 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:28,142 4245 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:10:28,143 4246 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 6
+2017-02-15 12:10:28,149 4252 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=6, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:10:28,187 4290 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:10:28,187 4290 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,188 4291 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:10:28,189 4292 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,209 4312 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:10:28,209 4312 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,210 4313 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:10:28,210 4313 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,228 4331 [main] INFO  persistence.MessageDAOTest  - message list has 2 entries
+2017-02-15 12:10:28,235 4338 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 1
+2017-02-15 12:10:28,241 4344 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=1, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,251 4354 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 2
+2017-02-15 12:10:28,258 4361 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=2, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,274 4377 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:10:28,274 4377 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,275 4378 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:10:28,275 4378 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,303 4406 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:10:28,318 4421 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 3
+2017-02-15 12:10:28,323 4426 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=3, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,357 4460 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:10:28,367 4470 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,368 4471 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:10:28,368 4471 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,393 4496 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:10:28,394 4497 [main] INFO  persistence.MessageDAOTest  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,394 4497 [main] INFO  persistence.MessageDAO  - Updating message Johanna
+2017-02-15 12:10:28,397 4500 [main] INFO  persistence.MessageDAO  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,402 4505 [main] INFO  persistence.MessageDAO  - Updating message Johanna
+2017-02-15 12:10:28,403 4506 [main] INFO  persistence.MessageDAO  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,403 4506 [main] INFO  persistence.MessageDAO  - Updated message Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,413 4516 [main] INFO  persistence.MessageDAOTest  - Updated message ID = 4
+2017-02-15 12:10:28,430 4533 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 4
+2017-02-15 12:10:28,434 4537 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,451 4554 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:10:28,451 4554 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,451 4554 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:10:28,452 4555 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,489 4592 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:10:28,495 4598 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 5
+2017-02-15 12:10:28,502 4605 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=5, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,527 4630 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:10:28,528 4631 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,528 4631 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:10:28,529 4632 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,560 4663 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:10:28,560 4663 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 6
+2017-02-15 12:10:28,570 4673 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=6, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:10:28,599 4702 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:10:28,600 4703 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@23d1e5d0
+2017-02-15 12:10:28,618 4721 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:10:28,619 4722 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@235a0c16
+2017-02-15 12:10:28,642 4745 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 1
+2017-02-15 12:10:28,647 4750 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@64a8c844
+2017-02-15 12:10:28,656 4759 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 2
+2017-02-15 12:10:28,660 4763 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@781f10f2
+2017-02-15 12:10:28,674 4777 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:10:28,675 4778 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@7b5a12ae
+2017-02-15 12:10:28,688 4791 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:10:28,721 4824 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 3
+2017-02-15 12:10:28,728 4831 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@48a12036
+2017-02-15 12:10:28,757 4860 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:10:28,758 4861 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@696f0212
+2017-02-15 12:10:28,781 4884 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:10:28,782 4885 [main] INFO  persistence.PlaylistDAOTest  - entity.Playlist@7bb6ab3a
+2017-02-15 12:10:28,783 4886 [main] INFO  persistence.PlaylistDAO  - Updating Playlist entity.Playlist@7bb6ab3a
+2017-02-15 12:10:28,783 4886 [main] INFO  persistence.PlaylistDAO  - entity.Playlist@7bb6ab3a
+2017-02-15 12:10:28,789 4892 [main] INFO  persistence.PlaylistDAO  - Updating Playlist Bubbles
+2017-02-15 12:10:28,790 4893 [main] INFO  persistence.PlaylistDAO  - entity.Playlist@32c8e539
+2017-02-15 12:10:28,790 4893 [main] INFO  persistence.PlaylistDAO  - Updated Playlist entity.Playlist@32c8e539
+2017-02-15 12:10:28,804 4907 [main] INFO  persistence.PlaylistDAOTest  - Updated Playlist ID = 4
+2017-02-15 12:10:28,828 4931 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 4
+2017-02-15 12:10:28,834 4937 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@793138bd
+2017-02-15 12:10:28,849 4952 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:10:28,850 4953 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@2f6e28bc
+2017-02-15 12:10:28,865 4968 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:10:28,871 4974 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 5
+2017-02-15 12:10:28,878 4981 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@bff34c6
+2017-02-15 12:10:28,893 4996 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:10:28,893 4996 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@11981797
+2017-02-15 12:10:28,907 5010 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:10:28,908 5011 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 6
+2017-02-15 12:10:28,912 5015 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@45905bff
+2017-02-15 12:10:28,940 5043 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:10:28,941 5044 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@655f7ea
+2017-02-15 12:10:28,997 5100 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:10:28,998 5101 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@13cf7d52
+2017-02-15 12:10:29,035 5138 [main] INFO  persistence.SongDAO  - In dao.remove with id = 1
+2017-02-15 12:10:29,039 5142 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@4189d70b
+2017-02-15 12:10:29,051 5154 [main] INFO  persistence.SongDAO  - In dao.remove with id = 2
+2017-02-15 12:10:29,058 5161 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@abf688e
+2017-02-15 12:10:29,074 5177 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:10:29,074 5177 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@aa549e5
+2017-02-15 12:10:29,092 5195 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:10:29,104 5207 [main] INFO  persistence.SongDAO  - In dao.remove with id = 3
+2017-02-15 12:10:29,110 5213 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@607fbe09
+2017-02-15 12:10:29,125 5228 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:10:29,126 5229 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@4a891c97
+2017-02-15 12:10:29,143 5246 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:10:29,143 5246 [main] INFO  persistence.SongDAOTest  - entity.Song@16746061
+2017-02-15 12:10:29,144 5247 [main] INFO  persistence.SongDAO  - Updating Song entity.Song@16746061
+2017-02-15 12:10:29,144 5247 [main] INFO  persistence.SongDAO  - entity.Song@16746061
+2017-02-15 12:10:29,149 5252 [main] INFO  persistence.SongDAO  - Updating Song Rosie
+2017-02-15 12:10:29,149 5252 [main] INFO  persistence.SongDAO  - entity.Song@674658f7
+2017-02-15 12:10:29,150 5253 [main] INFO  persistence.SongDAO  - Updated Song entity.Song@674658f7
+2017-02-15 12:10:29,159 5262 [main] INFO  persistence.SongDAOTest  - Updated song ID = 4
+2017-02-15 12:10:29,176 5279 [main] INFO  persistence.SongDAO  - In dao.remove with id = 4
+2017-02-15 12:10:29,181 5284 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@7e928e2f
+2017-02-15 12:10:29,195 5298 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:10:29,196 5299 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@63b1d4fa
+2017-02-15 12:10:29,212 5315 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:10:29,219 5322 [main] INFO  persistence.SongDAO  - In dao.remove with id = 5
+2017-02-15 12:10:29,225 5328 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@792bbc74
+2017-02-15 12:10:29,240 5343 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:10:29,240 5343 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@5af3a0f
+2017-02-15 12:10:29,255 5358 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:10:29,256 5359 [main] INFO  persistence.SongDAO  - In dao.remove with id = 6
+2017-02-15 12:10:29,261 5364 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@14b030a0
+2017-02-15 12:10:29,318 5421 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:10:29,319 5422 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:10:29,319 5422 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:10:29,343 5446 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:10:29,347 5450 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:10:29,348 5451 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:10:29,378 5481 [main] INFO  persistence.UserDAO  - In dao.remove with id = 9
+2017-02-15 12:10:29,383 5486 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=9, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:10:29,392 5495 [main] INFO  persistence.UserDAO  - In dao.remove with id = 10
+2017-02-15 12:10:29,398 5501 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=10, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:10:29,412 5515 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:10:29,413 5516 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:10:29,413 5516 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:10:29,431 5534 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:10:29,442 5545 [main] INFO  persistence.UserDAO  - In dao.remove with id = 11
+2017-02-15 12:10:29,447 5550 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=11, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:10:29,462 5565 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:10:29,463 5566 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:10:29,463 5566 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:10:29,503 5606 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:10:29,503 5606 [main] INFO  persistence.UserDAOTest  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:10:29,503 5606 [main] INFO  persistence.UserDAO  - Updating user Rose
+2017-02-15 12:10:29,504 5607 [main] INFO  persistence.UserDAO  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:10:29,507 5610 [main] INFO  persistence.UserDAO  - Updating user Rose
+2017-02-15 12:10:29,508 5611 [main] INFO  persistence.UserDAO  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:10:29,508 5611 [main] INFO  persistence.UserDAO  - Updated user User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:10:29,521 5624 [main] INFO  persistence.UserDAOTest  - Updated user ID = 12
+2017-02-15 12:10:29,548 5651 [main] INFO  persistence.UserDAO  - In dao.remove with id = 12
+2017-02-15 12:10:29,566 5669 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:10:29,605 5708 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:10:29,605 5708 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:10:29,605 5708 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:10:29,625 5728 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:10:29,632 5735 [main] INFO  persistence.UserDAO  - In dao.remove with id = 13
+2017-02-15 12:10:29,637 5740 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=13, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:10:29,655 5758 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:10:29,656 5759 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:10:29,656 5759 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:10:29,672 5775 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:10:29,673 5776 [main] INFO  persistence.UserDAO  - In dao.remove with id = 14
+2017-02-15 12:10:29,680 5783 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=14, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:20:13,769 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-15 12:20:13,800 31   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-15 12:20:13,806 37   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-15 12:20:13,812 43   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-15 12:20:13,884 115  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:20:13,885 116  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:20:14,136 367  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-15 12:20:14,414 645  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-15 12:20:14,449 680  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-15 12:20:14,452 683  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-15 12:20:14,453 684  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-15 12:20:14,458 689  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-15 12:20:15,359 1590 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-15 12:20:15,819 2050 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-15 12:20:15,841 2072 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-15 12:20:18,243 4474 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:20:18,244 4475 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:18,246 4477 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:20:18,247 4478 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:18,687 4918 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:20:18,688 4919 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:18,690 4921 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:20:18,690 4921 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:18,738 4969 [main] INFO  persistence.AssociationDAOTest  - association list has 2 entries
+2017-02-15 12:20:18,749 4980 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 1
+2017-02-15 12:20:18,790 5021 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=1, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:18,816 5047 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 2
+2017-02-15 12:20:18,832 5063 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=2, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:18,864 5095 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:20:18,864 5095 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:18,866 5097 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:20:18,866 5097 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:18,889 5120 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:20:18,948 5179 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 3
+2017-02-15 12:20:18,955 5186 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=3, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:18,981 5212 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:20:18,981 5212 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:18,982 5213 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:20:18,982 5213 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:19,002 5233 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:20:19,002 5233 [main] INFO  persistence.AssociationDAOTest  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:20:19,004 5235 [main] INFO  persistence.AssociationDAO  - Updating association 4
+2017-02-15 12:20:19,004 5235 [main] INFO  persistence.AssociationDAO  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:20:19,010 5241 [main] INFO  persistence.AssociationDAO  - Updating association 4
+2017-02-15 12:20:19,011 5242 [main] INFO  persistence.AssociationDAO  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:20:19,023 5254 [main] INFO  persistence.AssociationDAO  - Updated association Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:20:19,041 5272 [main] INFO  persistence.AssociationDAOTest  - Updated association ID = 4
+2017-02-15 12:20:19,066 5297 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 4
+2017-02-15 12:20:19,073 5304 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:20:19,106 5337 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:20:19,106 5337 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:19,107 5338 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:20:19,107 5338 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:19,131 5362 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:20:19,139 5370 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 5
+2017-02-15 12:20:19,153 5384 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=5, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:19,171 5402 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:20:19,171 5402 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:19,172 5403 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:20:19,172 5403 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:19,188 5419 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:20:19,189 5420 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 6
+2017-02-15 12:20:19,202 5433 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=6, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:20:19,246 5477 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:20:19,248 5479 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,251 5482 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:20:19,251 5482 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,271 5502 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:20:19,272 5503 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,272 5503 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:20:19,273 5504 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,293 5524 [main] INFO  persistence.MessageDAOTest  - message list has 2 entries
+2017-02-15 12:20:19,302 5533 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 1
+2017-02-15 12:20:19,308 5539 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=1, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,331 5562 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 2
+2017-02-15 12:20:19,344 5575 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=2, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,365 5596 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:20:19,366 5597 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,366 5597 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:20:19,367 5598 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,388 5619 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:20:19,413 5644 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 3
+2017-02-15 12:20:19,421 5652 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=3, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,443 5674 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:20:19,449 5680 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,450 5681 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:20:19,451 5682 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,469 5700 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:20:19,470 5701 [main] INFO  persistence.MessageDAOTest  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,470 5701 [main] INFO  persistence.MessageDAO  - Updating message Johanna
+2017-02-15 12:20:19,471 5702 [main] INFO  persistence.MessageDAO  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,482 5713 [main] INFO  persistence.MessageDAO  - Updating message Johanna
+2017-02-15 12:20:19,482 5713 [main] INFO  persistence.MessageDAO  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,483 5714 [main] INFO  persistence.MessageDAO  - Updated message Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,497 5728 [main] INFO  persistence.MessageDAOTest  - Updated message ID = 4
+2017-02-15 12:20:19,519 5750 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 4
+2017-02-15 12:20:19,524 5755 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,541 5772 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:20:19,541 5772 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,542 5773 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:20:19,542 5773 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,564 5795 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:20:19,572 5803 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 5
+2017-02-15 12:20:19,594 5825 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=5, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,614 5845 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:20:19,615 5846 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,616 5847 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:20:19,617 5848 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,633 5864 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:20:19,633 5864 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 6
+2017-02-15 12:20:19,639 5870 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=6, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:20:19,670 5901 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:20:19,670 5901 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@23d1e5d0
+2017-02-15 12:20:19,688 5919 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:20:19,688 5919 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@235a0c16
+2017-02-15 12:20:19,719 5950 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 1
+2017-02-15 12:20:19,724 5955 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@64a8c844
+2017-02-15 12:20:19,740 5971 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 2
+2017-02-15 12:20:19,746 5977 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@781f10f2
+2017-02-15 12:20:19,761 5992 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:20:19,762 5993 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@7b5a12ae
+2017-02-15 12:20:19,781 6012 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:20:19,810 6041 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 3
+2017-02-15 12:20:19,817 6048 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@48a12036
+2017-02-15 12:20:19,836 6067 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:20:19,837 6068 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@696f0212
+2017-02-15 12:20:19,852 6083 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:20:19,853 6084 [main] INFO  persistence.PlaylistDAOTest  - entity.Playlist@7bb6ab3a
+2017-02-15 12:20:19,853 6084 [main] INFO  persistence.PlaylistDAO  - Updating Playlist entity.Playlist@7bb6ab3a
+2017-02-15 12:20:19,854 6085 [main] INFO  persistence.PlaylistDAO  - entity.Playlist@7bb6ab3a
+2017-02-15 12:20:19,860 6091 [main] INFO  persistence.PlaylistDAO  - Updating Playlist Bubbles
+2017-02-15 12:20:19,860 6091 [main] INFO  persistence.PlaylistDAO  - entity.Playlist@32c8e539
+2017-02-15 12:20:19,861 6092 [main] INFO  persistence.PlaylistDAO  - Updated Playlist entity.Playlist@32c8e539
+2017-02-15 12:20:19,872 6103 [main] INFO  persistence.PlaylistDAOTest  - Updated Playlist ID = 4
+2017-02-15 12:20:19,891 6122 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 4
+2017-02-15 12:20:19,898 6129 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@793138bd
+2017-02-15 12:20:19,916 6147 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:20:19,918 6149 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@2f6e28bc
+2017-02-15 12:20:19,934 6165 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:20:19,953 6184 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 5
+2017-02-15 12:20:19,993 6224 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@bff34c6
+2017-02-15 12:20:20,016 6247 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:20:20,017 6248 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@11981797
+2017-02-15 12:20:20,036 6267 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:20:20,037 6268 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 6
+2017-02-15 12:20:20,043 6274 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@45905bff
+2017-02-15 12:20:20,097 6328 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:20:20,099 6330 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@655f7ea
+2017-02-15 12:20:20,122 6353 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:20:20,123 6354 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@13cf7d52
+2017-02-15 12:20:20,146 6377 [main] INFO  persistence.SongDAO  - In dao.remove with id = 1
+2017-02-15 12:20:20,154 6385 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@4189d70b
+2017-02-15 12:20:20,163 6394 [main] INFO  persistence.SongDAO  - In dao.remove with id = 2
+2017-02-15 12:20:20,169 6400 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@abf688e
+2017-02-15 12:20:20,184 6415 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:20:20,185 6416 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@aa549e5
+2017-02-15 12:20:20,200 6431 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:20:20,210 6441 [main] INFO  persistence.SongDAO  - In dao.remove with id = 3
+2017-02-15 12:20:20,216 6447 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@607fbe09
+2017-02-15 12:20:20,231 6462 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:20:20,231 6462 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@4a891c97
+2017-02-15 12:20:20,247 6478 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:20:20,247 6478 [main] INFO  persistence.SongDAOTest  - entity.Song@16746061
+2017-02-15 12:20:20,248 6479 [main] INFO  persistence.SongDAO  - Updating Song entity.Song@16746061
+2017-02-15 12:20:20,248 6479 [main] INFO  persistence.SongDAO  - entity.Song@16746061
+2017-02-15 12:20:20,252 6483 [main] INFO  persistence.SongDAO  - Updating Song Rosie
+2017-02-15 12:20:20,253 6484 [main] INFO  persistence.SongDAO  - entity.Song@674658f7
+2017-02-15 12:20:20,253 6484 [main] INFO  persistence.SongDAO  - Updated Song entity.Song@674658f7
+2017-02-15 12:20:20,264 6495 [main] INFO  persistence.SongDAOTest  - Updated song ID = 4
+2017-02-15 12:20:20,282 6513 [main] INFO  persistence.SongDAO  - In dao.remove with id = 4
+2017-02-15 12:20:20,287 6518 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@7e928e2f
+2017-02-15 12:20:20,307 6538 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:20:20,307 6538 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@63b1d4fa
+2017-02-15 12:20:20,328 6559 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:20:20,338 6569 [main] INFO  persistence.SongDAO  - In dao.remove with id = 5
+2017-02-15 12:20:20,348 6579 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@792bbc74
+2017-02-15 12:20:20,362 6593 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:20:20,364 6595 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@5af3a0f
+2017-02-15 12:20:20,381 6612 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:20:20,382 6613 [main] INFO  persistence.SongDAO  - In dao.remove with id = 6
+2017-02-15 12:20:20,387 6618 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@14b030a0
+2017-02-15 12:20:20,420 6651 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:20:20,421 6652 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:20:20,422 6653 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:20:20,450 6681 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:20:20,451 6682 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:20:20,451 6682 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:20:20,498 6729 [main] INFO  persistence.UserDAO  - In dao.remove with id = 9
+2017-02-15 12:20:20,503 6734 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=9, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:20:20,513 6744 [main] INFO  persistence.UserDAO  - In dao.remove with id = 10
+2017-02-15 12:20:20,517 6748 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=10, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:20:20,537 6768 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:20:20,541 6772 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:20:20,541 6772 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:20:20,561 6792 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:20:20,574 6805 [main] INFO  persistence.UserDAO  - In dao.remove with id = 11
+2017-02-15 12:20:20,580 6811 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=11, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:20:20,598 6829 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:20:20,599 6830 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:20:20,599 6830 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:20:20,624 6855 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:20:20,624 6855 [main] INFO  persistence.UserDAOTest  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:20:20,625 6856 [main] INFO  persistence.UserDAO  - Updating user Rose
+2017-02-15 12:20:20,625 6856 [main] INFO  persistence.UserDAO  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:20:20,631 6862 [main] INFO  persistence.UserDAO  - Updating user Rose
+2017-02-15 12:20:20,632 6863 [main] INFO  persistence.UserDAO  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:20:20,633 6864 [main] INFO  persistence.UserDAO  - Updated user User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:20:20,649 6880 [main] INFO  persistence.UserDAOTest  - Updated user ID = 12
+2017-02-15 12:20:20,707 6938 [main] INFO  persistence.UserDAO  - In dao.remove with id = 12
+2017-02-15 12:20:20,713 6944 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:20:20,757 6988 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:20:20,758 6989 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:20:20,759 6990 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:20:20,783 7014 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:20:20,788 7019 [main] INFO  persistence.UserDAO  - In dao.remove with id = 13
+2017-02-15 12:20:20,794 7025 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=13, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:20:20,815 7046 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:20:20,816 7047 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:20:20,816 7047 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:20:20,830 7061 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:20:20,831 7062 [main] INFO  persistence.UserDAO  - In dao.remove with id = 14
+2017-02-15 12:20:20,835 7066 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=14, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:21:19,433 1    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-15 12:21:19,449 17   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-15 12:21:19,453 21   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-15 12:21:19,457 25   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-15 12:21:19,498 66   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:21:19,498 66   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:21:19,694 262  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-15 12:21:19,936 504  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-15 12:21:19,966 534  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-15 12:21:19,967 535  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-15 12:21:19,968 536  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-15 12:21:19,972 540  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-15 12:21:20,748 1316 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-15 12:21:21,270 1838 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-15 12:21:21,291 1859 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-15 12:21:22,957 3525 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:21:22,958 3526 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:22,959 3527 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:21:22,959 3527 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,130 3698 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:21:23,131 3699 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,132 3700 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:21:23,132 3700 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,162 3730 [main] INFO  persistence.AssociationDAOTest  - association list has 2 entries
+2017-02-15 12:21:23,169 3737 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 1
+2017-02-15 12:21:23,202 3770 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=1, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,221 3789 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 2
+2017-02-15 12:21:23,230 3798 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=2, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,251 3819 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:21:23,252 3820 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,252 3820 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:21:23,252 3820 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,277 3845 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:21:23,290 3858 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 3
+2017-02-15 12:21:23,296 3864 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=3, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,317 3885 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:21:23,318 3886 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,318 3886 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:21:23,318 3886 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,337 3905 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:21:23,338 3906 [main] INFO  persistence.AssociationDAOTest  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:21:23,339 3907 [main] INFO  persistence.AssociationDAO  - Updating association 4
+2017-02-15 12:21:23,339 3907 [main] INFO  persistence.AssociationDAO  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:21:23,346 3914 [main] INFO  persistence.AssociationDAO  - Updating association 4
+2017-02-15 12:21:23,347 3915 [main] INFO  persistence.AssociationDAO  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:21:23,357 3925 [main] INFO  persistence.AssociationDAO  - Updated association Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:21:23,370 3938 [main] INFO  persistence.AssociationDAOTest  - Updated association ID = 4
+2017-02-15 12:21:23,388 3956 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 4
+2017-02-15 12:21:23,393 3961 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:21:23,408 3976 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:21:23,409 3977 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,409 3977 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:21:23,410 3978 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,426 3994 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:21:23,431 3999 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 5
+2017-02-15 12:21:23,436 4004 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=5, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,451 4019 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:21:23,451 4019 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,452 4020 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:21:23,452 4020 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,466 4034 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:21:23,467 4035 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 6
+2017-02-15 12:21:23,472 4040 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=6, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:21:23,518 4086 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:21:23,519 4087 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,520 4088 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:21:23,520 4088 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,542 4110 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:21:23,543 4111 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,544 4112 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:21:23,544 4112 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,561 4129 [main] INFO  persistence.MessageDAOTest  - message list has 2 entries
+2017-02-15 12:21:23,567 4135 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 1
+2017-02-15 12:21:23,573 4141 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=1, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,584 4152 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 2
+2017-02-15 12:21:23,589 4157 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=2, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,603 4171 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:21:23,604 4172 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,604 4172 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:21:23,605 4173 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,622 4190 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:21:23,633 4201 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 3
+2017-02-15 12:21:23,638 4206 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=3, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,653 4221 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:21:23,653 4221 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,654 4222 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:21:23,654 4222 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,670 4238 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:21:23,670 4238 [main] INFO  persistence.MessageDAOTest  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,671 4239 [main] INFO  persistence.MessageDAO  - Updating message Johanna
+2017-02-15 12:21:23,671 4239 [main] INFO  persistence.MessageDAO  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,680 4248 [main] INFO  persistence.MessageDAO  - Updating message Johanna
+2017-02-15 12:21:23,680 4248 [main] INFO  persistence.MessageDAO  - Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,681 4249 [main] INFO  persistence.MessageDAO  - Updated message Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,690 4258 [main] INFO  persistence.MessageDAOTest  - Updated message ID = 4
+2017-02-15 12:21:23,710 4278 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 4
+2017-02-15 12:21:23,716 4284 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=4, subject=Johanna, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,735 4303 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:21:23,735 4303 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,735 4303 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:21:23,736 4304 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,750 4318 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:21:23,755 4323 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 5
+2017-02-15 12:21:23,761 4329 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=5, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,776 4344 [main] INFO  persistence.MessageDAOTest  - In @Before, messageList has 0entries
+2017-02-15 12:21:23,776 4344 [main] INFO  persistence.MessageDAOTest  - New message is Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,777 4345 [main] INFO  persistence.MessageDAO  - Saving message Election
+2017-02-15 12:21:23,777 4345 [main] INFO  persistence.MessageDAO  - Message(id=0, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,791 4359 [main] INFO  persistence.MessageDAOTest  - After justAdd, messageList has 1entries
+2017-02-15 12:21:23,791 4359 [main] INFO  persistence.MessageDAO  - In dao.remove with id = 6
+2017-02-15 12:21:23,796 4364 [main] INFO  persistence.MessageDAO  - In dao. remove with message Message(id=6, subject=Election, sender=1, receiver=12, readFlag=1, content=How about that?)
+2017-02-15 12:21:23,831 4399 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:21:23,831 4399 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@23d1e5d0
+2017-02-15 12:21:23,850 4418 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:21:23,851 4419 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@235a0c16
+2017-02-15 12:21:23,869 4437 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 1
+2017-02-15 12:21:23,873 4441 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@64a8c844
+2017-02-15 12:21:23,884 4452 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 2
+2017-02-15 12:21:23,888 4456 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@781f10f2
+2017-02-15 12:21:23,898 4466 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:21:23,899 4467 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@7b5a12ae
+2017-02-15 12:21:23,921 4489 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:21:23,932 4500 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 3
+2017-02-15 12:21:23,936 4504 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@48a12036
+2017-02-15 12:21:23,949 4517 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:21:23,949 4517 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@696f0212
+2017-02-15 12:21:23,962 4530 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:21:23,963 4531 [main] INFO  persistence.PlaylistDAOTest  - entity.Playlist@7bb6ab3a
+2017-02-15 12:21:23,963 4531 [main] INFO  persistence.PlaylistDAO  - Updating Playlist entity.Playlist@7bb6ab3a
+2017-02-15 12:21:23,963 4531 [main] INFO  persistence.PlaylistDAO  - entity.Playlist@7bb6ab3a
+2017-02-15 12:21:23,967 4535 [main] INFO  persistence.PlaylistDAO  - Updating Playlist Bubbles
+2017-02-15 12:21:23,967 4535 [main] INFO  persistence.PlaylistDAO  - entity.Playlist@32c8e539
+2017-02-15 12:21:23,968 4536 [main] INFO  persistence.PlaylistDAO  - Updated Playlist entity.Playlist@32c8e539
+2017-02-15 12:21:23,975 4543 [main] INFO  persistence.PlaylistDAOTest  - Updated Playlist ID = 4
+2017-02-15 12:21:23,988 4556 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 4
+2017-02-15 12:21:23,992 4560 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@793138bd
+2017-02-15 12:21:24,006 4574 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:21:24,007 4575 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@2f6e28bc
+2017-02-15 12:21:24,020 4588 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:21:24,027 4595 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 5
+2017-02-15 12:21:24,033 4601 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@bff34c6
+2017-02-15 12:21:24,045 4613 [main] INFO  persistence.PlaylistDAOTest  - In @Before, PlaylistList has 0entries
+2017-02-15 12:21:24,046 4614 [main] INFO  persistence.PlaylistDAO  - Saving Playlist entity.Playlist@11981797
+2017-02-15 12:21:24,058 4626 [main] INFO  persistence.PlaylistDAOTest  - After justAdd, PlaylistList has 1entries
+2017-02-15 12:21:24,059 4627 [main] INFO  persistence.PlaylistDAO  - In dao.remove with id = 6
+2017-02-15 12:21:24,063 4631 [main] INFO  persistence.PlaylistDAO  - In dao. remove with Playlist entity.Playlist@45905bff
+2017-02-15 12:21:24,103 4671 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:21:24,104 4672 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@655f7ea
+2017-02-15 12:21:24,124 4692 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:21:24,124 4692 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@13cf7d52
+2017-02-15 12:21:24,145 4713 [main] INFO  persistence.SongDAO  - In dao.remove with id = 1
+2017-02-15 12:21:24,150 4718 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@4189d70b
+2017-02-15 12:21:24,157 4725 [main] INFO  persistence.SongDAO  - In dao.remove with id = 2
+2017-02-15 12:21:24,162 4730 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@abf688e
+2017-02-15 12:21:24,176 4744 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:21:24,176 4744 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@aa549e5
+2017-02-15 12:21:24,189 4757 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:21:24,198 4766 [main] INFO  persistence.SongDAO  - In dao.remove with id = 3
+2017-02-15 12:21:24,202 4770 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@607fbe09
+2017-02-15 12:21:24,217 4785 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:21:24,218 4786 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@4a891c97
+2017-02-15 12:21:24,230 4798 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:21:24,230 4798 [main] INFO  persistence.SongDAOTest  - entity.Song@16746061
+2017-02-15 12:21:24,231 4799 [main] INFO  persistence.SongDAO  - Updating Song entity.Song@16746061
+2017-02-15 12:21:24,231 4799 [main] INFO  persistence.SongDAO  - entity.Song@16746061
+2017-02-15 12:21:24,235 4803 [main] INFO  persistence.SongDAO  - Updating Song Rosie
+2017-02-15 12:21:24,236 4804 [main] INFO  persistence.SongDAO  - entity.Song@674658f7
+2017-02-15 12:21:24,236 4804 [main] INFO  persistence.SongDAO  - Updated Song entity.Song@674658f7
+2017-02-15 12:21:24,245 4813 [main] INFO  persistence.SongDAOTest  - Updated song ID = 4
+2017-02-15 12:21:24,261 4829 [main] INFO  persistence.SongDAO  - In dao.remove with id = 4
+2017-02-15 12:21:24,266 4834 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@7e928e2f
+2017-02-15 12:21:24,280 4848 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:21:24,281 4849 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@63b1d4fa
+2017-02-15 12:21:24,296 4864 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:21:24,301 4869 [main] INFO  persistence.SongDAO  - In dao.remove with id = 5
+2017-02-15 12:21:24,306 4874 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@792bbc74
+2017-02-15 12:21:24,320 4888 [main] INFO  persistence.SongDAOTest  - In @Before, songList has 0entries
+2017-02-15 12:21:24,321 4889 [main] INFO  persistence.SongDAO  - Saving Song entity.Song@5af3a0f
+2017-02-15 12:21:24,335 4903 [main] INFO  persistence.SongDAOTest  - After justAdd, songList has 1entries
+2017-02-15 12:21:24,336 4904 [main] INFO  persistence.SongDAO  - In dao.remove with id = 6
+2017-02-15 12:21:24,339 4907 [main] INFO  persistence.SongDAO  - In dao. remove with Song entity.Song@14b030a0
+2017-02-15 12:21:24,383 4951 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:21:24,384 4952 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:21:24,384 4952 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:21:24,404 4972 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:21:24,405 4973 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:21:24,405 4973 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:21:24,429 4997 [main] INFO  persistence.UserDAO  - In dao.remove with id = 9
+2017-02-15 12:21:24,434 5002 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=9, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:21:24,442 5010 [main] INFO  persistence.UserDAO  - In dao.remove with id = 10
+2017-02-15 12:21:24,446 5014 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=10, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:21:24,460 5028 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:21:24,463 5031 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:21:24,464 5032 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:21:24,482 5050 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:21:24,493 5061 [main] INFO  persistence.UserDAO  - In dao.remove with id = 11
+2017-02-15 12:21:24,498 5066 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=11, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:21:24,513 5081 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:21:24,514 5082 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:21:24,514 5082 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:21:24,529 5097 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:21:24,529 5097 [main] INFO  persistence.UserDAOTest  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:21:24,529 5097 [main] INFO  persistence.UserDAO  - Updating user Rose
+2017-02-15 12:21:24,530 5098 [main] INFO  persistence.UserDAO  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:21:24,533 5101 [main] INFO  persistence.UserDAO  - Updating user Rose
+2017-02-15 12:21:24,534 5102 [main] INFO  persistence.UserDAO  - User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:21:24,534 5102 [main] INFO  persistence.UserDAO  - Updated user User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:21:24,543 5111 [main] INFO  persistence.UserDAOTest  - Updated user ID = 12
+2017-02-15 12:21:24,561 5129 [main] INFO  persistence.UserDAO  - In dao.remove with id = 12
+2017-02-15 12:21:24,568 5136 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=12, privileges=12, username=Rose, name=Johanna)
+2017-02-15 12:21:24,597 5165 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:21:24,598 5166 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:21:24,598 5166 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:21:24,611 5179 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:21:24,616 5184 [main] INFO  persistence.UserDAO  - In dao.remove with id = 13
+2017-02-15 12:21:24,621 5189 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=13, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:21:24,638 5206 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 12:21:24,639 5207 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 12:21:24,639 5207 [main] INFO  persistence.UserDAO  - User(id=0, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:21:24,659 5227 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 12:21:24,659 5227 [main] INFO  persistence.UserDAO  - In dao.remove with id = 14
+2017-02-15 12:21:24,664 5232 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=14, privileges=12, username=Rose, name=Trump)
+2017-02-15 12:25:56,991 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-15 12:25:57,015 24   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-15 12:25:57,022 31   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-15 12:25:57,027 36   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-15 12:25:57,142 151  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:25:57,143 152  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:25:57,483 492  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-15 12:25:57,901 910  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-15 12:25:57,922 931  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-15 12:25:57,923 932  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-15 12:25:57,924 933  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-15 12:25:57,928 937  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-15 12:26:00,372 3381 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-15 12:26:01,739 4748 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-15 12:26:01,763 4772 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-15 12:26:04,335 7344 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:26:04,336 7345 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,336 7345 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:26:04,336 7345 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,632 7641 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:26:04,633 7642 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,634 7643 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:26:04,634 7643 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,668 7677 [main] INFO  persistence.AssociationDAOTest  - association list has 2 entries
+2017-02-15 12:26:04,679 7688 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 1
+2017-02-15 12:26:04,713 7722 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=1, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,734 7743 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 2
+2017-02-15 12:26:04,741 7750 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=2, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,769 7778 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:26:04,770 7779 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,770 7779 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:26:04,770 7779 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,798 7807 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:26:04,811 7820 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 3
+2017-02-15 12:26:04,818 7827 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=3, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,834 7843 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:26:04,834 7843 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,835 7844 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:26:04,835 7844 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,858 7867 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:26:04,859 7868 [main] INFO  persistence.AssociationDAOTest  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:26:04,860 7869 [main] INFO  persistence.AssociationDAO  - Updating association 4
+2017-02-15 12:26:04,860 7869 [main] INFO  persistence.AssociationDAO  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:26:04,865 7874 [main] INFO  persistence.AssociationDAO  - Updating association 4
+2017-02-15 12:26:04,865 7874 [main] INFO  persistence.AssociationDAO  - Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:26:04,874 7883 [main] INFO  persistence.AssociationDAO  - Updated association Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:26:04,890 7899 [main] INFO  persistence.AssociationDAOTest  - Updated association ID = 4
+2017-02-15 12:26:04,908 7917 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 4
+2017-02-15 12:26:04,915 7924 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=4, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=credentials)
+2017-02-15 12:26:04,930 7939 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:26:04,930 7939 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,930 7939 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:26:04,931 7940 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,945 7954 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:26:04,950 7959 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 5
+2017-02-15 12:26:04,954 7963 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=5, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,966 7975 [main] INFO  persistence.AssociationDAOTest  - In @Before, associationList has 0entries
+2017-02-15 12:26:04,967 7976 [main] INFO  persistence.AssociationDAOTest  - New association is Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,967 7976 [main] INFO  persistence.AssociationDAO  - Saving association 0
+2017-02-15 12:26:04,967 7976 [main] INFO  persistence.AssociationDAO  - Association(id=0, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:26:04,981 7990 [main] INFO  persistence.AssociationDAOTest  - After justAdd, associationList has 1entries
+2017-02-15 12:26:04,982 7991 [main] INFO  persistence.AssociationDAO  - In dao.remove with id = 6
+2017-02-15 12:26:04,989 7998 [main] INFO  persistence.AssociationDAO  - In dao. remove with association Association(id=6, leftTableName=users, leftTableKey=1, rightTableKey=12, rightTableName=messages)
+2017-02-15 12:57:37,384 0    [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-15 12:57:37,393 9    [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-15 12:57:38,180 796  [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-15 12:57:56,830 19446 [http-nio-8080-exec-8] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-15 12:57:56,864 19480 [http-nio-8080-exec-8] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-15 12:57:56,874 19490 [http-nio-8080-exec-8] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-15 12:57:56,881 19497 [http-nio-8080-exec-8] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-15 12:57:57,010 19626 [http-nio-8080-exec-8] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 12:57:57,011 19627 [http-nio-8080-exec-8] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 12:57:57,259 19875 [http-nio-8080-exec-8] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-15 12:57:57,724 20340 [http-nio-8080-exec-8] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-15 12:57:57,729 20345 [http-nio-8080-exec-8] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-15 12:57:57,730 20346 [http-nio-8080-exec-8] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-15 12:57:57,730 20346 [http-nio-8080-exec-8] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-15 12:57:57,739 20355 [http-nio-8080-exec-8] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-15 12:57:57,889 20505 [http-nio-8080-exec-8] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-15 12:57:59,108 21724 [http-nio-8080-exec-8] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-15 12:57:59,178 21794 [http-nio-8080-exec-8] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-15 13:33:31,860 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-15 13:33:31,899 39   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-15 13:33:31,906 46   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-15 13:33:31,911 51   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-15 13:33:31,989 129  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-15 13:33:31,989 129  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-15 13:33:32,231 371  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-15 13:33:32,561 701  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-15 13:33:32,581 721  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-15 13:33:32,582 722  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-15 13:33:32,583 723  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-15 13:33:32,587 727  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-15 13:33:33,694 1834 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-15 13:33:34,454 2594 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-15 13:33:34,491 2631 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-15 13:33:37,467 5607 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 13:33:37,468 5608 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 13:33:37,468 5608 [main] INFO  persistence.UserDAO  - User(id=0, username=Rose, name=Trump)
+2017-02-15 13:33:37,664 5804 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 13:33:37,665 5805 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 13:33:37,665 5805 [main] INFO  persistence.UserDAO  - User(id=0, username=Rose, name=Trump)
+2017-02-15 13:33:37,775 5915 [main] INFO  persistence.UserDAO  - In dao.remove with id = 9
+2017-02-15 13:33:37,804 5944 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=9, username=Rose, name=Trump)
+2017-02-15 13:33:37,830 5970 [main] INFO  persistence.UserDAO  - In dao.remove with id = 10
+2017-02-15 13:33:37,835 5975 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=10, username=Rose, name=Trump)
+2017-02-15 13:33:37,874 6014 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 13:33:37,884 6024 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 13:33:37,885 6025 [main] INFO  persistence.UserDAO  - User(id=0, username=Rose, name=Trump)
+2017-02-15 13:33:37,916 6056 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 13:33:37,952 6092 [main] INFO  persistence.UserDAO  - In dao.remove with id = 11
+2017-02-15 13:33:37,960 6100 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=11, username=Rose, name=Trump)
+2017-02-15 13:33:37,988 6128 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 13:33:37,988 6128 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 13:33:37,989 6129 [main] INFO  persistence.UserDAO  - User(id=0, username=Rose, name=Trump)
+2017-02-15 13:33:38,030 6170 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 13:33:38,032 6172 [main] INFO  persistence.UserDAOTest  - User(id=12, username=Rose, name=Johanna)
+2017-02-15 13:33:38,032 6172 [main] INFO  persistence.UserDAO  - Updating user Rose
+2017-02-15 13:33:38,033 6173 [main] INFO  persistence.UserDAO  - User(id=12, username=Rose, name=Johanna)
+2017-02-15 13:33:38,040 6180 [main] INFO  persistence.UserDAO  - Updating user Rose
+2017-02-15 13:33:38,040 6180 [main] INFO  persistence.UserDAO  - User(id=12, username=Rose, name=Johanna)
+2017-02-15 13:33:38,050 6190 [main] INFO  persistence.UserDAO  - Updated user User(id=12, username=Rose, name=Johanna)
+2017-02-15 13:33:38,065 6205 [main] INFO  persistence.UserDAOTest  - Updated user ID = 12
+2017-02-15 13:33:38,082 6222 [main] INFO  persistence.UserDAO  - In dao.remove with id = 12
+2017-02-15 13:33:38,087 6227 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=12, username=Rose, name=Johanna)
+2017-02-15 13:33:38,106 6246 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 13:33:38,106 6246 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 13:33:38,107 6247 [main] INFO  persistence.UserDAO  - User(id=0, username=Rose, name=Trump)
+2017-02-15 13:33:38,124 6264 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 13:33:38,131 6271 [main] INFO  persistence.UserDAO  - In dao.remove with id = 13
+2017-02-15 13:33:38,139 6279 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=13, username=Rose, name=Trump)
+2017-02-15 13:33:38,158 6298 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 6entries
+2017-02-15 13:33:38,159 6299 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-15 13:33:38,159 6299 [main] INFO  persistence.UserDAO  - User(id=0, username=Rose, name=Trump)
+2017-02-15 13:33:38,176 6316 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 7entries
+2017-02-15 13:33:38,176 6316 [main] INFO  persistence.UserDAO  - In dao.remove with id = 14
+2017-02-15 13:33:38,184 6324 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=14, username=Rose, name=Trump)

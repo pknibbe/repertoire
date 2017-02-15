@@ -6,10 +6,15 @@ C:\Users\peter\EnterpriseJava\repertoire\src\main\java\Servlets\UpdateAccounts.j
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\entity\Message.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\entity\Credential.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\Engines\ManageUsers.java
+C:\Users\peter\EnterpriseJava\repertoire\src\main\java\entity\TableObject.java
+C:\Users\peter\EnterpriseJava\repertoire\src\main\java\persistence\DAO.java
+C:\Users\peter\EnterpriseJava\repertoire\src\main\java\persistence\SongDAO.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\persistence\UserDAO.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\util\MyProperties.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\entity\Song.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\entity\Association.java
+C:\Users\peter\EnterpriseJava\repertoire\src\main\java\persistence\AssociationDAO.java
+C:\Users\peter\EnterpriseJava\repertoire\src\main\java\persistence\PlaylistDAO.java
+C:\Users\peter\EnterpriseJava\repertoire\src\main\java\persistence\MessageDAO.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\entity\User.java
-C:\Users\peter\EnterpriseJava\repertoire\src\main\java\persistence\FinderExecutor.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\Servlets\RepertoireStartup.java

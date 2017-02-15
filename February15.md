@@ -1,7 +1,7 @@
 
 ### Individual Project
  - [ ] Build Configuration Checklist for projects
- - [ ] Entity Relationship Diagram
+ - [X] Entity Relationship Diagram
  - [X] DDL download
  - [ ] Deploy and get running on AWS
  - [ ] Add Bootstrap

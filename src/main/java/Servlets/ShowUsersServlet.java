@@ -27,7 +27,7 @@ import persistence.UserDAO;
  */
 @WebServlet(
         name = "ShowUsers",
-        urlPatterns = { "ShowUsers" }
+        urlPatterns = { "/ShowUsers" }
 )public class ShowUsersServlet  extends HttpServlet {
     final Logger logger = Logger.getLogger(this.getClass());
 
