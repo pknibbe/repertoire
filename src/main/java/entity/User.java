@@ -27,13 +27,15 @@ public class User {
   private int id;
   private String username;
   private String name;
+  private String pw;
 
   public User() {
   }
 
-  public User(String username, String name) {
+  public User(String username, String name, String pw) {
     this.username = username;
     this.name = name;
+    this.pw = pw;
   }
 
 }

@@ -2,7 +2,10 @@
 
 | Date | Task | Hours | Notes|
 |------|------|-------|------|
-| 2/15 / Individual Project | 1 | Working to get it running again |
+| 2/15 | Class Activity | .5 | Upload comments on presentations |
+| 2/15 | Individual Project | 1 | Build sql files and AWS version of database deploy !|
+| 2/15 | Individual Project | 1.5 | Modified users table and added roles table, entity, DAO, and test |
+| 2/15 | Individual Project | 1 | Working to get it running again - error in servlet signature corrected |
 | 2/15 | Class Activity | .5 | Slack and getting organized for new week of work || 1/19| Semester Planning| 1 | Just getting familiar with the sylabus, calendar, etc. |
 | 2/14 | Individual Project | 4 | Implement message and association DAO and DAO Tests |
 | 2/14 | Class Activity | 1 | Try (unsuccessfully) to deploy Exercise 1. It would not start |

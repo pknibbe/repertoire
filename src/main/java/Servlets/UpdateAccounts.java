@@ -67,7 +67,7 @@ public class UpdateAccounts extends HttpServlet {
                     }
                 } else {
                     logger.info("Creating a new user");
-                    user = new User(name, name);
+                    user = new User(name, name, password);
                     logger.info(user.toString());
                     logger.info("Added user ID = " + userDAO.add(user));
                 }

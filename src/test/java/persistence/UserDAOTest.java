@@ -61,6 +61,20 @@ public class UserDAOTest {
     public void testModifyUserName() throws Exception {
         user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId();
+        user.setUsername("Johanna");
+        logger.info(user.toString());
+        logger.info("Updated user ID = " + dao.modify(user));
+        //dao.modify(user);
+        user = dao.get(id);
+        assertEquals("Username not modified", "Johanna", user.getUsername());
+        userList = dao.getAll();
+        assertEquals("Modify added an entry!", numberOfUsers, userList.size());
+    }
+
+    @Test
+    public void testModifyName() throws Exception {
+        user = userList.get(userList.size() - 1); // retrieve most recent addition to table
+        int id = user.getId();
         user.setName("Johanna");
         logger.info(user.toString());
         logger.info("Updated user ID = " + dao.modify(user));
@@ -71,8 +85,22 @@ public class UserDAOTest {
         assertEquals("Modify added an entry!", numberOfUsers, userList.size());
     }
 
+    @Test
+    public void testModifyPw() throws Exception {
+        user = userList.get(userList.size() - 1); // retrieve most recent addition to table
+        int id = user.getId();
+        user.setPw("Johanna");
+        logger.info(user.toString());
+        logger.info("Updated user ID = " + dao.modify(user));
+        //dao.modify(user);
+        user = dao.get(id);
+        assertEquals("Password not modified", "Johanna", user.getPw());
+        userList = dao.getAll();
+        assertEquals("Modify added an entry!", numberOfUsers, userList.size());
+    }
+
     private void justAdd() {
-        user = new entity.User("Rose", "Trump");
+        user = new entity.User("Rose", "Trump", "Pass_Word");
         dao.add(user);
     }
 

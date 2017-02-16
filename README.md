@@ -38,6 +38,6 @@ and share my music with family members to whom I will give accounts.
 * [Application Flow](DesignDocuments/applicationFlow.md)
 * [util.Database Design](DesignDocuments/databaseDiagram.png)
 
-### [Project Plan](ProjectPlan.md)
+### [Project Plan](Planning/ProjectPlan.md)
 
 ### [Time Log](TimeLog.md)
