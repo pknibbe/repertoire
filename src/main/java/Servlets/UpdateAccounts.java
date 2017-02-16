@@ -62,6 +62,7 @@ public class UpdateAccounts extends HttpServlet {
                     if (name.length() > 0) {
                         user.setUsername(name);
                         user.setName(name);
+                        user.setPw(password);
                         logger.info(user.toString());
                         logger.info("Updated user ID = " + userDAO.modify(user));
                     }
@@ -74,7 +75,7 @@ public class UpdateAccounts extends HttpServlet {
             }
         }
 
-        String url = "/ShowUsers";
+        String url = "ShowUsers";
 
         response.sendRedirect(url);
     }
