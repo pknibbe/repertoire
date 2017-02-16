@@ -99,8 +99,22 @@ public class UserDAOTest {
         assertEquals("Modify added an entry!", numberOfUsers, userList.size());
     }
 
+    @Test
+    public void testModifyRole() throws Exception {
+        user = userList.get(userList.size() - 1); // retrieve most recent addition to table
+        int id = user.getId();
+        user.setRole("Nonsense");
+        logger.info(user.toString());
+        logger.info("Updated user ID = " + dao.modify(user));
+        //dao.modify(user);
+        user = dao.get(id);
+        assertEquals("Role not modified", "Nonsense", user.getRole());
+        userList = dao.getAll();
+        assertEquals("Modify added an entry!", numberOfUsers, userList.size());
+    }
+
     private void justAdd() {
-        user = new entity.User("Rose", "Trump", "Pass_Word");
+        user = new entity.User("Rose", "Trump", "Pass_Word", "readOnly");
         dao.add(user);
     }
 

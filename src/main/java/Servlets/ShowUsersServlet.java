@@ -8,17 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.io.*;
-import java.util.*;
 import java.lang.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
-
-import entity.User;
-import org.apache.log4j.Logger;
 import persistence.UserDAO;
 
 /**
@@ -29,7 +19,6 @@ import persistence.UserDAO;
         name = "ShowUsers",
         urlPatterns = { "/ShowUsers" }
 )public class ShowUsersServlet  extends HttpServlet {
-    final Logger logger = Logger.getLogger(this.getClass());
 
     /**
      *  Handles HTTP GET requests.
@@ -42,7 +31,6 @@ import persistence.UserDAO;
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         UserDAO userdao = new UserDAO();
-        List<User> users = userdao.getAll();
 
         ServletContext servletContext = getServletContext();
 

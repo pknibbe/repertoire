@@ -1,11 +1,7 @@
 package Servlets;
 
+import Engines.RoleAndUserManager;
 import org.apache.log4j.Logger;
-import persistence.UserDAO;
-import entity.User;
-import util.Database;
-
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,8 +22,8 @@ import java.util.Enumeration;
         urlPatterns = { "/UpdateAccounts" }
 )
 public class UpdateAccounts extends HttpServlet {
-    final Logger logger = Logger.getLogger(this.getClass());
-
+    private final Logger logger = Logger.getLogger(this.getClass());
+    private final RoleAndUserManager roleAndUserManager = new RoleAndUserManager();
     /**
      *  Handles HTTP GET requests.
      *
@@ -39,41 +35,36 @@ public class UpdateAccounts extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String message;
-        UserDAO userDAO = new UserDAO();
-
-        ServletContext servletContext = getServletContext();
         String userID = request.getParameter("userID");
-        int identifier = Integer.valueOf(userID);
-        Enumeration<String> parameterNames = request.getParameterNames();
-        User user;
+        int identifier;
+        if (userID != null) { // protect against empty input
+            identifier = Integer.valueOf(userID);
+        } else {
+            identifier = 0;
+        }
+            Enumeration<String> parameterNames = request.getParameterNames();
 
-        while (parameterNames.hasMoreElements()) {
-            String parameterName = parameterNames.nextElement();
-            if (parameterName.equalsIgnoreCase("Delete")) {
-                userDAO.remove(identifier);
-                logger.info("removed user " + identifier);
-            } else if (parameterName.equalsIgnoreCase("Update")) {
-                String name = request.getParameter("Name");
-                String password = request.getParameter("Password");
-                if (identifier > 0) {
-                    logger.info("Updating existing user ID " + identifier);
-                    user = userDAO.get(identifier);
-                    if (name.length() > 0) {
-                        user.setUsername(name);
-                        user.setName(name);
-                        user.setPw(password);
-                        logger.info(user.toString());
-                        logger.info("Updated user ID = " + userDAO.modify(user));
+            while (parameterNames.hasMoreElements()) {
+                String parameterName = parameterNames.nextElement();
+                if (parameterName.equalsIgnoreCase("Delete")) {
+                    roleAndUserManager.removeUserWithRole(identifier);
+                    logger.info("removed user " + identifier);
+                } else if (parameterName.equalsIgnoreCase("Update")) {
+                    String name = request.getParameter("Name");
+                    String password = request.getParameter("Password");
+                    String userName = request.getParameter("Username");
+                    String role = request.getParameter("Role");
+                    if (identifier > 0) {
+                        logger.info("Updating existing user ID " + identifier);
+                        int updated = roleAndUserManager.updateUserWithRole(identifier, userName, name, password, role);
+                        logger.info("Updated user ID = " + updated);
+                    } else {
+                        int added = roleAndUserManager.addUserWithRole(userName, name, password, role);
+                        logger.info("Creating a new user returned " + added);
                     }
-                } else {
-                    logger.info("Creating a new user");
-                    user = new User(name, name, password);
-                    logger.info(user.toString());
-                    logger.info("Added user ID = " + userDAO.add(user));
                 }
             }
-        }
+
 
         String url = "ShowUsers";
 

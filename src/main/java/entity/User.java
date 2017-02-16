@@ -28,14 +28,16 @@ public class User {
   private String username;
   private String name;
   private String pw;
+  private String role;
 
   public User() {
   }
 
-  public User(String username, String name, String pw) {
+  public User(String username, String name, String pw, String role) {
     this.username = username;
     this.name = name;
     this.pw = pw;
+    this.role = role;
   }
 
 }

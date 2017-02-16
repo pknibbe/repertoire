@@ -1,6 +1,7 @@
 ### Individual Project
  - [ ] Build Configuration Checklist for projects
- - [ ] Versioning and debugging
+ - [X] Rework Account Management Backend
+ - [ ] Test Account Management Front-to-Back
  - [ ] Add Bootstrap
 
  ### Other classwork

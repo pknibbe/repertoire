@@ -2,6 +2,7 @@
 
 | Date | Task | Hours | Notes|
 |------|------|-------|------|
+| 2/16 | Individual Project | 6.5 | Rework user account management to incorporate role table |
 | 2/15 | Class Activity | .5 | Upload comments on presentations |
 | 2/15 | Individual Project | 1 | Build sql files and AWS version of database deploy !|
 | 2/15 | Individual Project | 1.5 | Modified users table and added roles table, entity, DAO, and test |

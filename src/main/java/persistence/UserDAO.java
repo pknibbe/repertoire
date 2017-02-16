@@ -66,6 +66,7 @@ public class UserDAO {
         sessionUser.setUsername(updatedUser.getUsername());
         sessionUser.setName(updatedUser.getName());
         sessionUser.setPw(updatedUser.getPw());
+        sessionUser.setRole(updatedUser.getRole());
         logger.info("Updating user " + sessionUser.getUsername());
         logger.info(sessionUser.toString());
         User resultantUser = (User) session.merge(sessionUser);
