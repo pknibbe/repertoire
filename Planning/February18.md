@@ -1,11 +1,8 @@
 ### Individual Project
- - [ ] Build Configuration Checklist for projects
- - [ ] Add Bootstrap
+ - [ ] Rework Account Management - fix front end
  - [ ] Add security functionality
 
  ### Other classwork
- - [ ] Readings for week 5
- - [ ] Week 5 activities
- - [ ] Week 5 Exercises
- - [ ] Readings for week 6
- - [ ] Prepare presentation
+ - [X] Readings for week 5
+ - [X] Week 5 activities
+ - [X] Week 5 Exercises

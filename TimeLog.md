@@ -2,7 +2,12 @@
 
 | Date | Task | Hours | Notes|
 |------|------|-------|------|
-| 2/16 | Individual Project | 6.5 | Rework user account management to incorporate role table |
+| 2/18 | Week 5 Exercise | 1.5 | Completed except failed login goes to generic 403 page |
+| 2/18 | Individual Project | 1.5 | Rework account management front end using more screens and servlets |
+| 2/17 | Extracurricular | 2 | Start on Kid's Code Madison Presentation |
+| 2/17 | Individual Project | 7 | Reworking front end. Form wasn't working like I expected |
+| 2/16 | Extracurricular | 2 | Kids Code Madison |
+| 2/16 | Individual Project | 7 | Rework user account management to incorporate role table |
 | 2/15 | Class Activity | .5 | Upload comments on presentations |
 | 2/15 | Individual Project | 1 | Build sql files and AWS version of database deploy !|
 | 2/15 | Individual Project | 1.5 | Modified users table and added roles table, entity, DAO, and test |

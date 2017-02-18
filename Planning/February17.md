@@ -8,4 +8,4 @@
  - [ ] Week 5 activities
  - [ ] Week 5 Exercises
  - [ ] Readings for week 6
- - [ ] Prepare presentation
+ - [X] Prepare presentation
