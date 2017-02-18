@@ -11,14 +11,14 @@
         <table>
             <thead><tr><th>Select</th><th>ID</th><th>Name</th><th>Username</th><th>Password</th><th>Role</th></tr></thead>
             <tbody>
-                <c:forEach var="person" items="${users}">
+                <c:forEach var="user" items="${users}">
                     <tr>
-                        <td><input type="radio" name="userID" value=${person.id} /></td>
-                        <td>${person.id}</td>
-                        <td>${person.name}</td>
-                        <td>${person.username}</td>
-                        <td><input type="text" name="Password" value=${person.pw} /></td>
-                        <td>${person.role}</td>
+                        <td><input type="radio" name="userID" value=${user.id} /></td>
+                        <td>${user.id}</td>
+                        <td>${user.name}</td>
+                        <td>${user.username}</td>
+                        <td><input type="text" name="Password" value=${user.pw} /></td>
+                        <td>${user.role}</td>
                     </tr>
                 </c:forEach>
                 <tr>
@@ -43,7 +43,7 @@
 <div>
     <h4>MessageCenter</h4>
 
-    <form action="MessageCenter" method="POST">
+    <form action="/MessageCenter" method="POST">
         <input type="submit" value="Submit" name="Enter" />
     </form>
 </div>
@@ -54,7 +54,7 @@
 
     <h4>Account Center</h4>
 
-    <form action="AccountCenter" method="POST">
+    <form action="/AccountCenter" method="POST">
         <input type="submit" value="Submit" name="Enter" />
     </form></div>
 

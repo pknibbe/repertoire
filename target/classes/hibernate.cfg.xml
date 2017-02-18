@@ -22,6 +22,7 @@
 
         <!-- List the annotated entity class/es -->
         <mapping class="entity.Credential"/>
+        <mapping class="entity.Role"/>
         <mapping class="entity.Playlist"/>
         <mapping class="entity.Association"/>
         <mapping class="entity.Song"/>

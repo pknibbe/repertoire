@@ -1,4 +1,4 @@
-package servlets;
+package Servlets;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;

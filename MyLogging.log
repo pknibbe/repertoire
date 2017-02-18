@@ -1,0 +1,304 @@
+2017-02-16 15:14:23,291 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-16 15:14:23,312 21   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-16 15:14:23,318 27   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-16 15:14:23,322 31   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-16 15:14:23,382 91   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-16 15:14:23,385 94   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-16 15:14:23,688 397  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-16 15:14:24,096 805  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-16 15:14:24,117 826  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-16 15:14:24,121 830  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-16 15:14:24,122 831  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-16 15:14:24,126 835  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-16 15:14:25,158 1867 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-16 15:14:26,139 2848 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-16 15:14:26,167 2876 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-16 15:14:28,735 5444 [main] INFO  Engines.RoleAndUserManagerTest  - In @Before, userList has 0entries
+2017-02-16 15:14:28,735 5444 [main] INFO  Engines.RoleAndUserManagerTest  - In @Before, roleList has 0entries
+2017-02-16 15:14:28,735 5444 [main] INFO  Engines.RoleAndUserManager  - Creating a new user
+2017-02-16 15:14:28,738 5447 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-16 15:14:28,739 5448 [main] INFO  persistence.RoleDAO  - Role(id=0, username=Dylan, rolename=edit)
+2017-02-16 15:14:29,003 5712 [main] INFO  Engines.RoleAndUserManager  - Role(id=1, username=Dylan, rolename=edit)
+2017-02-16 15:14:29,004 5713 [main] INFO  Engines.RoleAndUserManager  - User(id=0, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:14:29,004 5713 [main] INFO  persistence.UserDAO  - Saving user Dylan
+2017-02-16 15:14:29,005 5714 [main] INFO  persistence.UserDAO  - User(id=0, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:14:29,023 5732 [main] INFO  Engines.RoleAndUserManager  - Added user ID = 1
+2017-02-16 15:14:29,046 5755 [main] INFO  Engines.RoleAndUserManagerTest  - After justAdd, userList has 1entries
+2017-02-16 15:14:29,046 5755 [main] INFO  Engines.RoleAndUserManagerTest  - After justAdd, roleList has 1entries
+2017-02-16 15:14:29,047 5756 [main] INFO  Engines.RoleAndUserManagerTest  - *** Start of testUpdate ***
+2017-02-16 15:14:29,077 5786 [main] INFO  Engines.RoleAndUserManager  - In updateUserWithRole and user is User(id=1, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:14:29,085 5794 [main] INFO  Engines.RoleAndUserManager  - In getRole with username = Dylan
+2017-02-16 15:14:29,086 5795 [main] INFO  Engines.RoleAndUserManager  - In loop with username = Dylan
+2017-02-16 15:14:29,086 5795 [main] INFO  Engines.RoleAndUserManager  - found match
+2017-02-16 15:14:29,086 5795 [main] INFO  Engines.RoleAndUserManager  - got role Role(id=1, username=Dylan, rolename=edit)
+2017-02-16 15:14:29,086 5795 [main] INFO  Engines.RoleAndUserManager  - In updateUserWithRole and role is Role(id=1, username=Dylan, rolename=edit)
+2017-02-16 15:14:29,087 5796 [main] INFO  Engines.RoleAndUserManager  - User(id=1, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:14:29,087 5796 [main] INFO  persistence.UserDAO  - Updating user Simon
+2017-02-16 15:14:29,087 5796 [main] INFO  persistence.UserDAO  - User(id=1, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:14:29,095 5804 [main] INFO  persistence.UserDAO  - Updating user Simon
+2017-02-16 15:14:29,095 5804 [main] INFO  persistence.UserDAO  - User(id=1, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:14:29,113 5822 [main] INFO  persistence.UserDAO  - Updated user User(id=1, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:14:29,132 5841 [main] INFO  persistence.RoleDAO  - Updating role 1
+2017-02-16 15:14:29,133 5842 [main] INFO  persistence.RoleDAO  - Role(id=1, username=Simon, rolename=readOnly)
+2017-02-16 15:14:29,141 5850 [main] INFO  persistence.RoleDAO  - Updating role 1
+2017-02-16 15:14:29,141 5850 [main] INFO  persistence.RoleDAO  - Role(id=1, username=Simon, rolename=readOnly)
+2017-02-16 15:14:29,142 5851 [main] INFO  persistence.RoleDAO  - Updated role Role(id=1, username=Simon, rolename=readOnly)
+2017-02-16 15:14:29,155 5864 [main] INFO  Engines.RoleAndUserManagerTest  - Updated role ID = 1
+2017-02-16 15:14:29,201 5910 [main] INFO  Engines.RoleAndUserManagerTest  - After test, userList includes Simon
+2017-02-16 15:14:29,208 5917 [main] INFO  Engines.RoleAndUserManager  - About to identify role to remove as Simon
+2017-02-16 15:14:29,214 5923 [main] INFO  Engines.RoleAndUserManager  - In getRole with username = Simon
+2017-02-16 15:14:29,214 5923 [main] INFO  Engines.RoleAndUserManager  - In loop with username = Simon
+2017-02-16 15:14:29,214 5923 [main] INFO  Engines.RoleAndUserManager  - found match
+2017-02-16 15:14:29,214 5923 [main] INFO  Engines.RoleAndUserManager  - got role Role(id=1, username=Simon, rolename=readOnly)
+2017-02-16 15:14:29,214 5923 [main] INFO  Engines.RoleAndUserManager  - About to remove user 1
+2017-02-16 15:14:29,215 5924 [main] INFO  persistence.UserDAO  - In dao.remove with id = 1
+2017-02-16 15:14:29,221 5930 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=1, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:14:29,241 5950 [main] INFO  Engines.RoleAndUserManager  - about to remove role 1
+2017-02-16 15:14:29,241 5950 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 1
+2017-02-16 15:14:29,245 5954 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=1, username=Simon, rolename=readOnly)
+2017-02-16 15:15:49,582 1    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-16 15:15:49,605 24   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-16 15:15:49,614 33   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-16 15:15:49,617 36   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-16 15:15:49,679 98   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-16 15:15:49,680 99   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-16 15:15:49,957 376  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-16 15:15:50,286 705  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-16 15:15:50,305 724  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-16 15:15:50,307 726  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-16 15:15:50,307 726  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-16 15:15:50,311 730  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-16 15:15:51,384 1803 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-16 15:15:52,205 2624 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-16 15:15:52,287 2706 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-16 15:15:55,099 5518 [main] INFO  Engines.RoleAndUserManagerTest  - In @Before, userList has 0entries
+2017-02-16 15:15:55,099 5518 [main] INFO  Engines.RoleAndUserManagerTest  - In @Before, roleList has 0entries
+2017-02-16 15:15:55,099 5518 [main] INFO  Engines.RoleAndUserManager  - Creating a new user
+2017-02-16 15:15:55,102 5521 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-16 15:15:55,103 5522 [main] INFO  persistence.RoleDAO  - Role(id=0, username=Dylan, rolename=edit)
+2017-02-16 15:15:55,378 5797 [main] INFO  Engines.RoleAndUserManager  - Role(id=1, username=Dylan, rolename=edit)
+2017-02-16 15:15:55,382 5801 [main] INFO  Engines.RoleAndUserManager  - User(id=0, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:15:55,383 5802 [main] INFO  persistence.UserDAO  - Saving user Dylan
+2017-02-16 15:15:55,384 5803 [main] INFO  persistence.UserDAO  - User(id=0, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:15:55,418 5837 [main] INFO  Engines.RoleAndUserManager  - Added user ID = 1
+2017-02-16 15:15:55,478 5897 [main] INFO  Engines.RoleAndUserManagerTest  - After justAdd, userList has 1entries
+2017-02-16 15:15:55,489 5908 [main] INFO  Engines.RoleAndUserManagerTest  - After justAdd, roleList has 1entries
+2017-02-16 15:15:55,489 5908 [main] INFO  Engines.RoleAndUserManagerTest  - *** Start of testUpdate ***
+2017-02-16 15:15:55,555 5974 [main] INFO  Engines.RoleAndUserManager  - In updateUserWithRole and user is User(id=1, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:15:55,565 5984 [main] INFO  Engines.RoleAndUserManager  - In getRole with username = Dylan
+2017-02-16 15:15:55,565 5984 [main] INFO  Engines.RoleAndUserManager  - In loop with username = Dylan
+2017-02-16 15:15:55,565 5984 [main] INFO  Engines.RoleAndUserManager  - found match
+2017-02-16 15:15:55,565 5984 [main] INFO  Engines.RoleAndUserManager  - got role Role(id=1, username=Dylan, rolename=edit)
+2017-02-16 15:15:55,565 5984 [main] INFO  Engines.RoleAndUserManager  - In updateUserWithRole and role is Role(id=1, username=Dylan, rolename=edit)
+2017-02-16 15:15:55,566 5985 [main] INFO  Engines.RoleAndUserManager  - User(id=1, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:15:55,566 5985 [main] INFO  persistence.UserDAO  - Updating user Simon
+2017-02-16 15:15:55,566 5985 [main] INFO  persistence.UserDAO  - User(id=1, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:15:55,572 5991 [main] INFO  persistence.UserDAO  - Updating user Simon
+2017-02-16 15:15:55,572 5991 [main] INFO  persistence.UserDAO  - User(id=1, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:15:55,581 6000 [main] INFO  persistence.UserDAO  - Updated user User(id=1, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:15:55,595 6014 [main] INFO  persistence.RoleDAO  - Updating role 1
+2017-02-16 15:15:55,596 6015 [main] INFO  persistence.RoleDAO  - Role(id=1, username=Simon, rolename=readOnly)
+2017-02-16 15:15:55,602 6021 [main] INFO  persistence.RoleDAO  - Updating role 1
+2017-02-16 15:15:55,603 6022 [main] INFO  persistence.RoleDAO  - Role(id=1, username=Simon, rolename=readOnly)
+2017-02-16 15:15:55,603 6022 [main] INFO  persistence.RoleDAO  - Updated role Role(id=1, username=Simon, rolename=readOnly)
+2017-02-16 15:15:55,614 6033 [main] INFO  Engines.RoleAndUserManagerTest  - Updated role ID = 1
+2017-02-16 15:15:55,642 6061 [main] INFO  Engines.RoleAndUserManagerTest  - *** End of testUpdate ***
+2017-02-16 15:15:55,658 6077 [main] INFO  Engines.RoleAndUserManagerTest  - After test, userList includes Simon
+2017-02-16 15:15:55,665 6084 [main] INFO  Engines.RoleAndUserManager  - About to identify role to remove as Simon
+2017-02-16 15:15:55,687 6106 [main] INFO  Engines.RoleAndUserManager  - In getRole with username = Simon
+2017-02-16 15:15:55,687 6106 [main] INFO  Engines.RoleAndUserManager  - In loop with username = Simon
+2017-02-16 15:15:55,687 6106 [main] INFO  Engines.RoleAndUserManager  - found match
+2017-02-16 15:15:55,687 6106 [main] INFO  Engines.RoleAndUserManager  - got role Role(id=1, username=Simon, rolename=readOnly)
+2017-02-16 15:15:55,687 6106 [main] INFO  Engines.RoleAndUserManager  - About to remove user 1
+2017-02-16 15:15:55,687 6106 [main] INFO  persistence.UserDAO  - In dao.remove with id = 1
+2017-02-16 15:15:55,692 6111 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=1, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:15:55,714 6133 [main] INFO  Engines.RoleAndUserManager  - about to remove role 1
+2017-02-16 15:15:55,715 6134 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 1
+2017-02-16 15:15:55,719 6138 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=1, username=Simon, rolename=readOnly)
+2017-02-16 15:16:11,088 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-16 15:16:11,108 20   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-16 15:16:11,113 25   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-16 15:16:11,117 29   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-16 15:16:11,187 99   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-16 15:16:11,188 100  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-16 15:16:11,498 410  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-16 15:16:12,077 989  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-16 15:16:12,105 1017 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-16 15:16:12,106 1018 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-16 15:16:12,107 1019 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-16 15:16:12,111 1023 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-16 15:16:13,490 2402 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-16 15:16:14,341 3253 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-16 15:16:14,406 3318 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-16 15:16:16,606 5518 [main] INFO  Engines.RoleAndUserManagerTest  - In @Before, userList has 0entries
+2017-02-16 15:16:16,606 5518 [main] INFO  Engines.RoleAndUserManagerTest  - In @Before, roleList has 0entries
+2017-02-16 15:16:16,606 5518 [main] INFO  Engines.RoleAndUserManager  - Creating a new user
+2017-02-16 15:16:16,609 5521 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-16 15:16:16,609 5521 [main] INFO  persistence.RoleDAO  - Role(id=0, username=Dylan, rolename=edit)
+2017-02-16 15:16:16,889 5801 [main] INFO  Engines.RoleAndUserManager  - Role(id=1, username=Dylan, rolename=edit)
+2017-02-16 15:16:16,889 5801 [main] INFO  Engines.RoleAndUserManager  - User(id=0, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:16:16,890 5802 [main] INFO  persistence.UserDAO  - Saving user Dylan
+2017-02-16 15:16:16,890 5802 [main] INFO  persistence.UserDAO  - User(id=0, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:16:16,911 5823 [main] INFO  Engines.RoleAndUserManager  - Added user ID = 1
+2017-02-16 15:16:16,939 5851 [main] INFO  Engines.RoleAndUserManagerTest  - After justAdd, userList has 1entries
+2017-02-16 15:16:16,939 5851 [main] INFO  Engines.RoleAndUserManagerTest  - After justAdd, roleList has 1entries
+2017-02-16 15:16:16,939 5851 [main] INFO  Engines.RoleAndUserManagerTest  - *** Start of testAdd ***
+2017-02-16 15:16:16,939 5851 [main] INFO  Engines.RoleAndUserManager  - Creating a new user
+2017-02-16 15:16:16,940 5852 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-16 15:16:16,940 5852 [main] INFO  persistence.RoleDAO  - Role(id=0, username=Thomas, rolename=admin)
+2017-02-16 15:16:16,955 5867 [main] INFO  Engines.RoleAndUserManager  - Role(id=2, username=Thomas, rolename=admin)
+2017-02-16 15:16:16,956 5868 [main] INFO  Engines.RoleAndUserManager  - User(id=0, username=Thomas, name=Dylan, pw=DoNotGoGently, role=admin)
+2017-02-16 15:16:16,956 5868 [main] INFO  persistence.UserDAO  - Saving user Thomas
+2017-02-16 15:16:16,956 5868 [main] INFO  persistence.UserDAO  - User(id=0, username=Thomas, name=Dylan, pw=DoNotGoGently, role=admin)
+2017-02-16 15:16:16,974 5886 [main] INFO  Engines.RoleAndUserManager  - Added user ID = 2
+2017-02-16 15:16:16,981 5893 [main] INFO  Engines.RoleAndUserManagerTest  - role list has 2 entries after addition
+2017-02-16 15:16:17,005 5917 [main] INFO  Engines.RoleAndUserManagerTest  - User list has 2 entries after addition
+2017-02-16 15:16:17,006 5918 [main] INFO  Engines.RoleAndUserManagerTest  - *** End of testAdd ***
+2017-02-16 15:16:17,027 5939 [main] INFO  Engines.RoleAndUserManagerTest  - After test, userList includes Dylan
+2017-02-16 15:16:17,063 5975 [main] INFO  Engines.RoleAndUserManager  - About to identify role to remove as Dylan
+2017-02-16 15:16:17,071 5983 [main] INFO  Engines.RoleAndUserManager  - In getRole with username = Dylan
+2017-02-16 15:16:17,072 5984 [main] INFO  Engines.RoleAndUserManager  - In loop with username = Dylan
+2017-02-16 15:16:17,072 5984 [main] INFO  Engines.RoleAndUserManager  - found match
+2017-02-16 15:16:17,072 5984 [main] INFO  Engines.RoleAndUserManager  - In loop with username = Thomas
+2017-02-16 15:16:17,072 5984 [main] INFO  Engines.RoleAndUserManager  - got role Role(id=1, username=Dylan, rolename=edit)
+2017-02-16 15:16:17,072 5984 [main] INFO  Engines.RoleAndUserManager  - About to remove user 1
+2017-02-16 15:16:17,072 5984 [main] INFO  persistence.UserDAO  - In dao.remove with id = 1
+2017-02-16 15:16:17,078 5990 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=1, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:16:17,106 6018 [main] INFO  Engines.RoleAndUserManager  - about to remove role 1
+2017-02-16 15:16:17,106 6018 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 1
+2017-02-16 15:16:17,111 6023 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=1, username=Dylan, rolename=edit)
+2017-02-16 15:16:17,122 6034 [main] INFO  Engines.RoleAndUserManagerTest  - After test, userList includes Thomas
+2017-02-16 15:16:17,128 6040 [main] INFO  Engines.RoleAndUserManager  - About to identify role to remove as Thomas
+2017-02-16 15:16:17,133 6045 [main] INFO  Engines.RoleAndUserManager  - In getRole with username = Thomas
+2017-02-16 15:16:17,134 6046 [main] INFO  Engines.RoleAndUserManager  - In loop with username = Thomas
+2017-02-16 15:16:17,134 6046 [main] INFO  Engines.RoleAndUserManager  - found match
+2017-02-16 15:16:17,134 6046 [main] INFO  Engines.RoleAndUserManager  - got role Role(id=2, username=Thomas, rolename=admin)
+2017-02-16 15:16:17,134 6046 [main] INFO  Engines.RoleAndUserManager  - About to remove user 2
+2017-02-16 15:16:17,134 6046 [main] INFO  persistence.UserDAO  - In dao.remove with id = 2
+2017-02-16 15:16:17,139 6051 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=2, username=Thomas, name=Dylan, pw=DoNotGoGently, role=admin)
+2017-02-16 15:16:17,151 6063 [main] INFO  Engines.RoleAndUserManager  - about to remove role 2
+2017-02-16 15:16:17,151 6063 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 2
+2017-02-16 15:16:17,159 6071 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=2, username=Thomas, rolename=admin)
+2017-02-16 15:16:17,201 6113 [main] INFO  Engines.RoleAndUserManagerTest  - In @Before, userList has 0entries
+2017-02-16 15:16:17,208 6120 [main] INFO  Engines.RoleAndUserManagerTest  - In @Before, roleList has 0entries
+2017-02-16 15:16:17,208 6120 [main] INFO  Engines.RoleAndUserManager  - Creating a new user
+2017-02-16 15:16:17,208 6120 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-16 15:16:17,215 6127 [main] INFO  persistence.RoleDAO  - Role(id=0, username=Dylan, rolename=edit)
+2017-02-16 15:16:17,226 6138 [main] INFO  Engines.RoleAndUserManager  - Role(id=3, username=Dylan, rolename=edit)
+2017-02-16 15:16:17,226 6138 [main] INFO  Engines.RoleAndUserManager  - User(id=0, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:16:17,226 6138 [main] INFO  persistence.UserDAO  - Saving user Dylan
+2017-02-16 15:16:17,227 6139 [main] INFO  persistence.UserDAO  - User(id=0, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:16:17,237 6149 [main] INFO  Engines.RoleAndUserManager  - Added user ID = 3
+2017-02-16 15:16:17,249 6161 [main] INFO  Engines.RoleAndUserManagerTest  - After justAdd, userList has 1entries
+2017-02-16 15:16:17,249 6161 [main] INFO  Engines.RoleAndUserManagerTest  - After justAdd, roleList has 1entries
+2017-02-16 15:16:17,250 6162 [main] INFO  Engines.RoleAndUserManagerTest  - *** Start of testRemove ***
+2017-02-16 15:16:17,256 6168 [main] INFO  Engines.RoleAndUserManager  - About to identify role to remove as Dylan
+2017-02-16 15:16:17,262 6174 [main] INFO  Engines.RoleAndUserManager  - In getRole with username = Dylan
+2017-02-16 15:16:17,262 6174 [main] INFO  Engines.RoleAndUserManager  - In loop with username = Dylan
+2017-02-16 15:16:17,262 6174 [main] INFO  Engines.RoleAndUserManager  - found match
+2017-02-16 15:16:17,262 6174 [main] INFO  Engines.RoleAndUserManager  - got role Role(id=3, username=Dylan, rolename=edit)
+2017-02-16 15:16:17,262 6174 [main] INFO  Engines.RoleAndUserManager  - About to remove user 3
+2017-02-16 15:16:17,263 6175 [main] INFO  persistence.UserDAO  - In dao.remove with id = 3
+2017-02-16 15:16:17,274 6186 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=3, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:16:17,289 6201 [main] INFO  Engines.RoleAndUserManager  - about to remove role 3
+2017-02-16 15:16:17,293 6205 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 3
+2017-02-16 15:16:17,302 6214 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=3, username=Dylan, rolename=edit)
+2017-02-16 15:16:17,332 6244 [main] INFO  Engines.RoleAndUserManagerTest  - *** End of testRemove ***
+2017-02-16 15:16:17,366 6278 [main] INFO  Engines.RoleAndUserManagerTest  - In @Before, userList has 0entries
+2017-02-16 15:16:17,366 6278 [main] INFO  Engines.RoleAndUserManagerTest  - In @Before, roleList has 0entries
+2017-02-16 15:16:17,366 6278 [main] INFO  Engines.RoleAndUserManager  - Creating a new user
+2017-02-16 15:16:17,367 6279 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-16 15:16:17,367 6279 [main] INFO  persistence.RoleDAO  - Role(id=0, username=Dylan, rolename=edit)
+2017-02-16 15:16:17,395 6307 [main] INFO  Engines.RoleAndUserManager  - Role(id=4, username=Dylan, rolename=edit)
+2017-02-16 15:16:17,395 6307 [main] INFO  Engines.RoleAndUserManager  - User(id=0, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:16:17,395 6307 [main] INFO  persistence.UserDAO  - Saving user Dylan
+2017-02-16 15:16:17,396 6308 [main] INFO  persistence.UserDAO  - User(id=0, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:16:17,414 6326 [main] INFO  Engines.RoleAndUserManager  - Added user ID = 4
+2017-02-16 15:16:17,423 6335 [main] INFO  Engines.RoleAndUserManagerTest  - After justAdd, userList has 1entries
+2017-02-16 15:16:17,423 6335 [main] INFO  Engines.RoleAndUserManagerTest  - After justAdd, roleList has 1entries
+2017-02-16 15:16:17,423 6335 [main] INFO  Engines.RoleAndUserManagerTest  - *** Start of testUpdate ***
+2017-02-16 15:16:17,429 6341 [main] INFO  Engines.RoleAndUserManager  - In updateUserWithRole and user is User(id=4, username=Dylan, name=Bob, pw=Stoned2602, role=edit)
+2017-02-16 15:16:17,441 6353 [main] INFO  Engines.RoleAndUserManager  - In getRole with username = Dylan
+2017-02-16 15:16:17,441 6353 [main] INFO  Engines.RoleAndUserManager  - In loop with username = Dylan
+2017-02-16 15:16:17,441 6353 [main] INFO  Engines.RoleAndUserManager  - found match
+2017-02-16 15:16:17,441 6353 [main] INFO  Engines.RoleAndUserManager  - got role Role(id=4, username=Dylan, rolename=edit)
+2017-02-16 15:16:17,442 6354 [main] INFO  Engines.RoleAndUserManager  - In updateUserWithRole and role is Role(id=4, username=Dylan, rolename=edit)
+2017-02-16 15:16:17,442 6354 [main] INFO  Engines.RoleAndUserManager  - User(id=4, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:16:17,442 6354 [main] INFO  persistence.UserDAO  - Updating user Simon
+2017-02-16 15:16:17,442 6354 [main] INFO  persistence.UserDAO  - User(id=4, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:16:17,449 6361 [main] INFO  persistence.UserDAO  - Updating user Simon
+2017-02-16 15:16:17,449 6361 [main] INFO  persistence.UserDAO  - User(id=4, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:16:17,457 6369 [main] INFO  persistence.UserDAO  - Updated user User(id=4, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:16:17,472 6384 [main] INFO  persistence.RoleDAO  - Updating role 4
+2017-02-16 15:16:17,472 6384 [main] INFO  persistence.RoleDAO  - Role(id=4, username=Simon, rolename=readOnly)
+2017-02-16 15:16:17,478 6390 [main] INFO  persistence.RoleDAO  - Updating role 4
+2017-02-16 15:16:17,478 6390 [main] INFO  persistence.RoleDAO  - Role(id=4, username=Simon, rolename=readOnly)
+2017-02-16 15:16:17,479 6391 [main] INFO  persistence.RoleDAO  - Updated role Role(id=4, username=Simon, rolename=readOnly)
+2017-02-16 15:16:17,490 6402 [main] INFO  Engines.RoleAndUserManagerTest  - Updated role ID = 4
+2017-02-16 15:16:17,512 6424 [main] INFO  Engines.RoleAndUserManagerTest  - *** End of testUpdate ***
+2017-02-16 15:16:17,523 6435 [main] INFO  Engines.RoleAndUserManagerTest  - After test, userList includes Simon
+2017-02-16 15:16:17,532 6444 [main] INFO  Engines.RoleAndUserManager  - About to identify role to remove as Simon
+2017-02-16 15:16:17,539 6451 [main] INFO  Engines.RoleAndUserManager  - In getRole with username = Simon
+2017-02-16 15:16:17,540 6452 [main] INFO  Engines.RoleAndUserManager  - In loop with username = Simon
+2017-02-16 15:16:17,541 6453 [main] INFO  Engines.RoleAndUserManager  - found match
+2017-02-16 15:16:17,541 6453 [main] INFO  Engines.RoleAndUserManager  - got role Role(id=4, username=Simon, rolename=readOnly)
+2017-02-16 15:16:17,542 6454 [main] INFO  Engines.RoleAndUserManager  - About to remove user 4
+2017-02-16 15:16:17,544 6456 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-16 15:16:17,551 6463 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, username=Simon, name=Paul, pw=Rock5844, role=readOnly)
+2017-02-16 15:16:17,566 6478 [main] INFO  Engines.RoleAndUserManager  - about to remove role 4
+2017-02-16 15:16:17,567 6479 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 4
+2017-02-16 15:16:17,571 6483 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=4, username=Simon, rolename=readOnly)
+2017-02-16 15:20:18,288 0    [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-16 15:20:18,293 5    [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-16 15:20:19,137 849  [http-nio-8080-exec-4] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-16 15:20:36,441 18153 [http-nio-8080-exec-7] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-16 15:20:36,475 18187 [http-nio-8080-exec-7] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-16 15:20:36,485 18197 [http-nio-8080-exec-7] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-16 15:20:36,491 18203 [http-nio-8080-exec-7] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-16 15:20:36,626 18338 [http-nio-8080-exec-7] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-16 15:20:36,626 18338 [http-nio-8080-exec-7] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-16 15:20:36,860 18572 [http-nio-8080-exec-7] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-16 15:20:37,423 19135 [http-nio-8080-exec-7] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-16 15:20:37,428 19140 [http-nio-8080-exec-7] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-16 15:20:37,429 19141 [http-nio-8080-exec-7] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-16 15:20:37,429 19141 [http-nio-8080-exec-7] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-16 15:20:37,437 19149 [http-nio-8080-exec-7] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-16 15:20:37,587 19299 [http-nio-8080-exec-7] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-16 15:20:38,450 20162 [http-nio-8080-exec-7] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-16 15:20:38,477 20189 [http-nio-8080-exec-7] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-16 15:25:33,155 0    [http-nio-8080-exec-1] INFO  Servlets.RepertoireStartup  - properties obtained in startup
+2017-02-16 15:25:33,168 13   [http-nio-8080-exec-1] INFO  Servlets.RepertoireStartup  - servlet attributes set in startup
+2017-02-16 15:25:34,125 970  [http-nio-8080-exec-1] INFO  Servlets.RepertoireStartup  - database attribute set in startup
+2017-02-16 15:25:43,748 10593 [http-nio-8080-exec-5] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-16 15:25:43,783 10628 [http-nio-8080-exec-5] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-16 15:25:43,793 10638 [http-nio-8080-exec-5] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-16 15:25:43,801 10646 [http-nio-8080-exec-5] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-16 15:25:43,914 10759 [http-nio-8080-exec-5] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-16 15:25:43,915 10760 [http-nio-8080-exec-5] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-16 15:25:44,131 10976 [http-nio-8080-exec-5] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-16 15:25:44,608 11453 [http-nio-8080-exec-5] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-16 15:25:44,614 11459 [http-nio-8080-exec-5] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-16 15:25:44,617 11462 [http-nio-8080-exec-5] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-16 15:25:44,618 11463 [http-nio-8080-exec-5] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-16 15:25:44,630 11475 [http-nio-8080-exec-5] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-16 15:25:44,826 11671 [http-nio-8080-exec-5] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-16 15:25:45,934 12779 [http-nio-8080-exec-5] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-16 15:25:45,958 12803 [http-nio-8080-exec-5] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-16 15:42:55,569 1042414 [http-nio-8080-exec-11] INFO  Engines.RoleAndUserManager  - Creating a new user
+2017-02-16 15:42:55,571 1042416 [http-nio-8080-exec-11] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-16 15:42:55,572 1042417 [http-nio-8080-exec-11] INFO  persistence.RoleDAO  - Role(id=0, username=Karuvula, rolename=readOnly)
+2017-02-16 15:42:55,850 1042695 [http-nio-8080-exec-11] INFO  Engines.RoleAndUserManager  - Role(id=1, username=Karuvula, rolename=readOnly)
+2017-02-16 15:42:55,851 1042696 [http-nio-8080-exec-11] INFO  Engines.RoleAndUserManager  - User(id=0, username=Karuvula, name=George, pw=IndiaIsGreat!, role=readOnly)
+2017-02-16 15:42:55,851 1042696 [http-nio-8080-exec-11] INFO  persistence.UserDAO  - Saving user Karuvula
+2017-02-16 15:42:55,852 1042697 [http-nio-8080-exec-11] INFO  persistence.UserDAO  - User(id=0, username=Karuvula, name=George, pw=IndiaIsGreat!, role=readOnly)
+2017-02-16 15:42:55,868 1042713 [http-nio-8080-exec-11] INFO  Engines.RoleAndUserManager  - Added user ID = 1
+2017-02-16 15:42:55,868 1042713 [http-nio-8080-exec-11] INFO  Servlets.UpdateAccounts  - Creating a new user returned 1
+2017-02-16 15:43:22,696 1069541 [http-nio-8080-exec-15] INFO  Engines.RoleAndUserManager  - Creating a new user
+2017-02-16 15:43:22,697 1069542 [http-nio-8080-exec-15] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-16 15:43:22,698 1069543 [http-nio-8080-exec-15] INFO  persistence.RoleDAO  - Role(id=0, username=pknibbe, rolename=admin)
+2017-02-16 15:43:22,712 1069557 [http-nio-8080-exec-15] INFO  Engines.RoleAndUserManager  - Role(id=2, username=pknibbe, rolename=admin)
+2017-02-16 15:43:22,712 1069557 [http-nio-8080-exec-15] INFO  Engines.RoleAndUserManager  - User(id=0, username=pknibbe, name=Peter, pw=IndiaIsGreat!, role=admin)
+2017-02-16 15:43:22,713 1069558 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - Saving user pknibbe
+2017-02-16 15:43:22,714 1069559 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - User(id=0, username=pknibbe, name=Peter, pw=IndiaIsGreat!, role=admin)
+2017-02-16 15:43:22,727 1069572 [http-nio-8080-exec-15] INFO  Engines.RoleAndUserManager  - Added user ID = 2
+2017-02-16 15:43:22,727 1069572 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Creating a new user returned 2

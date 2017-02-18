@@ -11,6 +11,17 @@
     <name>Enterprise Project Knibbe</name>
     <url>http://maven.apache.org</url>
 
+    <profiles>
+        <profile>
+            <id>development</id>
+        </profile>
+        <profile>
+            <id>AWSTest</id></profile>
+        <profile>
+            <id>Production</id>
+        </profile>
+    </profiles>
+
     <dependencies>
 
         <dependency>

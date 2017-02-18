@@ -1,7 +1,5 @@
-persistence\PlaylistDAOTest.class
-persistence\AssociationDAOTest.class
 persistence\MessageDAOTest.class
 persistence\UserDAOTest.class
-engines\RoleAndUserManagerTest.class
-persistence\RoleDAOTest.class
+persistence\PlaylistDAOTest.class
+persistence\AssociationDAOTest.class
 persistence\SongDAOTest.class
