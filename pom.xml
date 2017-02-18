@@ -68,21 +68,11 @@
             <artifactId>bootstrap</artifactId>
             <version>3.2.0</version>
         </dependency>
-        <dependency>
-            <groupId>jstl</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
-        </dependency>    </dependencies>
+    </dependencies>
 
     <build>
         <defaultGoal>install</defaultGoal>
         <finalName>repertoire</finalName>
-        <resources>
-            <resource>
-                <directory>src/main/webapp</directory>
-                <targetPath>META-INF/resources</targetPath>
-            </resource>
-        </resources>
     </build>
     
 </project>
