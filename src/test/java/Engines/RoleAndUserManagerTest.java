@@ -1,4 +1,4 @@
-package Engines;
+package engines;
 
 import java.util.*;
 
@@ -79,15 +79,15 @@ public class RoleAndUserManagerTest {
         logger.info("Updated role ID = " + user.getId());
         Role role = roleDAO.get(id);
         roleList = roleDAO.getAll();
-        assertEquals("role table username not correct", "Simon", role.getUsername());
-        assertEquals("role table rolename not correct", "readOnly", role.getRolename());
+        assertEquals("role table username not correct", "Simon", role.getUser_name());
+        assertEquals("role table rolename not correct", "readOnly", role.getRole_name());
         assertEquals("role table size changed", numberOfRoles, roleList.size());
         user = userDAO.get(id);
         userList = userDAO.getAll();
-        assertEquals("user table username not correct", "Simon", user.getUsername());
+        assertEquals("user table username not correct", "Simon", user.getUser_name());
         assertEquals("user table name not correct", "Paul", user.getName());
         assertEquals("user table password not correct", "Rock5844", user.getPw());
-        assertEquals("user table rolename not correct", "readOnly", user.getRole());
+        assertEquals("user table rolename not correct", "readOnly", user.getRole_name());
         assertEquals("user table size changed", numberOfRoles, roleList.size());
         logger.info("*** End of testUpdate ***");
     }
@@ -103,8 +103,8 @@ public class RoleAndUserManagerTest {
         roleList = roleDAO.getAll();
 
         for (entity.User user : userList) {
-            String thisName = user.getUsername();
-            logger.info("After test, userList includes " + user.getUsername());
+            String thisName = user.getUser_name();
+            logger.info("After test, userList includes " + user.getUser_name());
             if (thisName.equalsIgnoreCase("Dylan")) {
                 target.removeUserWithRole(user.getId());
             } else if (thisName.equalsIgnoreCase("Simon")) {

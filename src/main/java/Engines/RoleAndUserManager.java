@@ -1,4 +1,4 @@
-package Engines;
+package engines;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +44,8 @@ public class RoleAndUserManager {
     public void removeUserWithRole(int identifier) {
         if (identifier < 1) return; // can't remove a non-existent entry
         User user = userDAO.get(identifier);
-        logger.info("About to identify role to remove as " + user.getUsername());
-        Role role = getRole(user.getUsername());
+        logger.info("About to identify role to remove as " + user.getUser_name());
+        Role role = getRole(user.getUser_name());
         logger.info("About to remove user " + identifier);
         userDAO.remove(identifier);
         if (role == null) {
@@ -65,7 +65,7 @@ public class RoleAndUserManager {
             logger.info("In updateUserWithRole and user is null");
             return 0;
         }
-        Role role = getRole(user.getUsername()); // Have to use old userName to find role entry
+        Role role = getRole(user.getUser_name()); // Have to use old userName to find role entry
         if (role != null) {
             logger.info("In updateUserWithRole and role is " + role.toString());
         } else {
@@ -73,15 +73,15 @@ public class RoleAndUserManager {
             return 0;
         }
         if (checkUsername(userName)) { // userName is alright to use
-            user.setUsername(userName);
+            user.setUser_name(userName);
             user.setName(name);
             if (checkPassword(password)) {
                 user.setPw(password);
                 if (checkRoleName(rolename)) {
-                    user.setRole(rolename);
+                    user.setRole_name(rolename);
                     logger.info(user.toString());
-                    role.setRolename(rolename);
-                    role.setUsername(userName);
+                    role.setRole_name(rolename);
+                    role.setUser_name(userName);
                     userDAO.modify(user);
                     return roleDAO.modify(role);
                 } else logger.info("Can't update user because Role name is not acceptable " + rolename);
@@ -97,8 +97,8 @@ public class RoleAndUserManager {
         logger.info("In getRole with username = " + username);
         Role target = null;
         for (entity.Role role : roleList) {
-            logger.info("In loop with username = " + role.getUsername());
-            if (username.equalsIgnoreCase(role.getUsername())) {
+            logger.info("In loop with username = " + role.getUser_name());
+            if (username.equalsIgnoreCase(role.getUser_name())) {
                 target = role;
                 logger.info("found match");
             }

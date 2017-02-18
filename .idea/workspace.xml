@@ -5,19 +5,8 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ebdd907-63ab-415d-9852-ac37dadc801c" name="Default" comment="Reworked account management to include role table">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MySQL/MySQL.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/3fcc9c1a-9d44-4ab9-a726-becbfad45215.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/3fcc9c1a-9d44-4ab9-a726-becbfad45215.xml" />
+    <list default="true" id="0ebdd907-63ab-415d-9852-ac37dadc801c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyLogging.log" afterPath="$PROJECT_DIR$/MyLogging.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TimeLog.md" afterPath="$PROJECT_DIR$/TimeLog.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/Role.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Role.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/persistence/RoleDAO.java" afterPath="$PROJECT_DIR$/src/main/java/persistence/RoleDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/persistence/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/persistence/UserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Accounts.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/Accounts.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/persistence/RoleDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/persistence/RoleDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/persistence/UserDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/persistence/UserDAOTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1629,7 +1618,7 @@
       <workItem from="1487178244125" duration="2844000" />
       <workItem from="1487181972433" duration="1376000" />
       <workItem from="1487183929494" duration="37003000" />
-      <workItem from="1487453485414" duration="3179000" />
+      <workItem from="1487453485414" duration="3258000" />
     </task>
     <task id="LOCAL-00001" summary="Update to time log">
       <created>1486004881089</created>
@@ -1736,7 +1725,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487221861775</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Reworked users and user_roles tables, entities, and DAOs to conform to tomee expectations">
+      <created>1487456748707</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1487456748707</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1772,7 +1768,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207315000" />
+    <option name="totallyTimeSpent" value="207394000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1808,7 +1804,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.4968896" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24504505" sideWeight="0.47978228" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24504505" sideWeight="0.47978228" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792792" sideWeight="0.49222395" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24205749" sideWeight="0.5057283" order="8" side_tool="true" content_ui="tabs" />
@@ -1894,7 +1890,8 @@
     <MESSAGE value="Fixed problem with ShowUsers, added daily planning documents" />
     <MESSAGE value="Fixed problem with UpdateAccounts. Can add and modify users now." />
     <MESSAGE value="Reworked account management to include role table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reworked account management to include role table" />
+    <MESSAGE value="Reworked users and user_roles tables, entities, and DAOs to conform to tomee expectations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reworked users and user_roles tables, entities, and DAOs to conform to tomee expectations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2050,6 +2047,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="71" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2208,6 +2206,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1596">
           <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2307,8 +2306,8 @@
         <state relative-caret-position="1700">
           <caret line="100" column="55" lean-forward="false" selection-start-line="100" selection-start-column="55" selection-end-line="100" selection-end-column="55" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5199#5207#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#5199#5207#0" expanded="false" />
           </folding>
         </state>
       </provider>

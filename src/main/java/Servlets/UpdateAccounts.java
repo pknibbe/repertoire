@@ -1,6 +1,6 @@
-package Servlets;
+package servlets;
 
-import Engines.RoleAndUserManager;
+import engines.RoleAndUserManager;
 import org.apache.log4j.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -42,11 +42,13 @@ public class UpdateAccounts extends HttpServlet {
         } else {
             identifier = 0;
         }
-            Enumeration<String> parameterNames = request.getParameterNames();
 
-            while (parameterNames.hasMoreElements()) {
-                String parameterName = parameterNames.nextElement();
-                if (parameterName.equalsIgnoreCase("Delete")) {
+        Enumeration<String> parameterNames = request.getParameterNames();
+
+        while (parameterNames.hasMoreElements()) {
+            String parameterName = parameterNames.nextElement();
+            logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
+            /*    if (parameterName.equalsIgnoreCase("Delete")) {
                     roleAndUserManager.removeUserWithRole(identifier);
                     logger.info("removed user " + identifier);
                 } else if (parameterName.equalsIgnoreCase("Update")) {
@@ -62,8 +64,8 @@ public class UpdateAccounts extends HttpServlet {
                         int added = roleAndUserManager.addUserWithRole(userName, name, password, role);
                         logger.info("Creating a new user returned " + added);
                     }
-                }
-            }
+                } */
+        }
 
 
         String url = "ShowUsers";
