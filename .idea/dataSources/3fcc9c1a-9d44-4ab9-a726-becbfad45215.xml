@@ -150,50 +150,66 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="46" parent="16" name="username">
+    <column id="46" parent="16" name="user_name">
       <Position>2</Position>
       <DataType>char(25)|0</DataType>
     </column>
-    <column id="47" parent="16" name="rolename">
+    <column id="47" parent="16" name="role_name">
       <Position>3</Position>
       <DataType>char(25)|0</DataType>
     </column>
-    <key id="48" parent="16" name="PRIMARY">
+    <index id="48" parent="16" name="user_name">
+      <ColNames>user_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="49" parent="16" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="49" parent="17" name="id">
+    <key id="50" parent="16" name="user_name">
+      <ColNames>user_name</ColNames>
+      <UnderlyingIndexName>user_name</UnderlyingIndexName>
+    </key>
+    <column id="51" parent="17" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="50" parent="17" name="username">
-      <Position>2</Position>
-      <DataType>char(25)|0</DataType>
-    </column>
-    <column id="51" parent="17" name="name">
+    <column id="52" parent="17" name="name">
       <Position>3</Position>
       <DataType>char(25)|0</DataType>
     </column>
-    <column id="52" parent="17" name="pw">
+    <column id="53" parent="17" name="pw">
       <Position>4</Position>
       <DataType>char(25)|0</DataType>
     </column>
-    <column id="53" parent="17" name="role">
+    <column id="54" parent="17" name="user_name">
+      <Position>2</Position>
+      <DataType>char(25)|0</DataType>
+    </column>
+    <column id="55" parent="17" name="role_name">
       <Position>5</Position>
       <DataType>char(25)|0</DataType>
     </column>
-    <index id="54" parent="17" name="username">
-      <ColNames>username</ColNames>
+    <index id="56" parent="17" name="username">
+      <ColNames>user_name</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="55" parent="17" name="PRIMARY">
+    <index id="57" parent="17" name="user_name">
+      <ColNames>user_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="58" parent="17" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="56" parent="17" name="username">
-      <ColNames>username</ColNames>
+    <key id="59" parent="17" name="user_name">
+      <ColNames>user_name</ColNames>
+      <UnderlyingIndexName>user_name</UnderlyingIndexName>
+    </key>
+    <key id="60" parent="17" name="username">
+      <ColNames>user_name</ColNames>
       <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>
   </database-model>

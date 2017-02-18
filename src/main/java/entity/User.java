@@ -25,19 +25,19 @@ public class User {
   @GeneratedValue(generator="increment")
   @GenericGenerator(name="increment", strategy="increment")
   private int id;
-  private String username;
+  private String user_name;
   private String name;
   private String pw;
-  private String role;
+  private String role_name;
 
   public User() {
   }
 
   public User(String username, String name, String pw, String role) {
-    this.username = username;
+    this.user_name = username;
     this.name = name;
     this.pw = pw;
-    this.role = role;
+    this.role_name = role;
   }
 
 }

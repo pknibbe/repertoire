@@ -67,8 +67,8 @@ public class RoleDAO {
             logger.info("Updating role " + updatedRole.getId());
             logger.info(updatedRole.toString());
             Role sessionRole = (Role) session.get(Role.class, updatedRole.getId());
-            sessionRole.setUsername(updatedRole.getUsername());
-            sessionRole.setRolename(updatedRole.getRolename());
+            sessionRole.setUser_name(updatedRole.getUser_name());
+            sessionRole.setRole_name(updatedRole.getRole_name());
             logger.info("Updating role " + sessionRole.getId());
             logger.info(sessionRole.toString());
             Role resultantRole = (Role) session.merge(sessionRole);

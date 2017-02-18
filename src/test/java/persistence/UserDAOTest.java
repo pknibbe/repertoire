@@ -37,7 +37,7 @@ public class UserDAOTest {
 
         for (entity.User user : userList) {
             String thisName = user.getName();
-            if (thisName.equalsIgnoreCase("Rose")) found = true;
+            if (thisName.equalsIgnoreCase("Obama")) found = true;
         }
         assertTrue("The expected name was not found: ", found);
     }
@@ -47,12 +47,13 @@ public class UserDAOTest {
         user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId(); // get the id of the most recent addition
         user = dao.get(id); // get the user by id
-        assertEquals("Names don't match", "Trump", user.getName());
+        assertEquals("Names don't match", "Obama", user.getName());
     }
 
     @Test
     public void testAdd() throws Exception {
-        justAdd();
+        user = new entity.User("Beth", "Trump", "Pass_Word", "readOnly");
+        dao.add(user);
         userList = dao.getAll();
         assertEquals("Add did not work: ", numberOfUsers + 1, userList.size());
     }
@@ -61,12 +62,12 @@ public class UserDAOTest {
     public void testModifyUserName() throws Exception {
         user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId();
-        user.setUsername("Johanna");
+        user.setUser_name("Johanna");
         logger.info(user.toString());
         logger.info("Updated user ID = " + dao.modify(user));
         //dao.modify(user);
         user = dao.get(id);
-        assertEquals("Username not modified", "Johanna", user.getUsername());
+        assertEquals("Username not modified", "Johanna", user.getUser_name());
         userList = dao.getAll();
         assertEquals("Modify added an entry!", numberOfUsers, userList.size());
     }
@@ -103,18 +104,18 @@ public class UserDAOTest {
     public void testModifyRole() throws Exception {
         user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId();
-        user.setRole("Nonsense");
+        user.setRole_name("Nonsense");
         logger.info(user.toString());
         logger.info("Updated user ID = " + dao.modify(user));
         //dao.modify(user);
         user = dao.get(id);
-        assertEquals("Role not modified", "Nonsense", user.getRole());
+        assertEquals("Role not modified", "Nonsense", user.getRole_name());
         userList = dao.getAll();
         assertEquals("Modify added an entry!", numberOfUsers, userList.size());
     }
 
     private void justAdd() {
-        user = new entity.User("Rose", "Trump", "Pass_Word", "readOnly");
+        user = new entity.User("Bach", "Obama", "Pass_Word", "readOnly");
         dao.add(user);
     }
 
@@ -135,6 +136,8 @@ public class UserDAOTest {
         for (entity.User user : userList) {
             String thisName = user.getName();
             if (thisName.equalsIgnoreCase("Trump")) {
+                dao.remove(user.getId());
+            } else if (thisName.equalsIgnoreCase("Obama")) {
                 dao.remove(user.getId());
             } else if (thisName.equalsIgnoreCase("Johanna")) {
                 dao.remove(user.getId());

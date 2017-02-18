@@ -45,7 +45,7 @@ public class UserDAO {
     public int add(User user) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        logger.info("Saving user " + user.getUsername());
+        logger.info("Saving user " + user.getUser_name());
         logger.info(user.toString());
         int id = (Integer) session.save(user);
         transaction.commit();
@@ -60,14 +60,14 @@ public class UserDAO {
     public int modify(User updatedUser) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        logger.info("Updating user " + updatedUser.getUsername());
+        logger.info("Updating user " + updatedUser.getUser_name());
         logger.info(updatedUser.toString());
         User sessionUser = (User) session.get(User.class, updatedUser.getId());
-        sessionUser.setUsername(updatedUser.getUsername());
+        sessionUser.setUser_name(updatedUser.getUser_name());
         sessionUser.setName(updatedUser.getName());
         sessionUser.setPw(updatedUser.getPw());
-        sessionUser.setRole(updatedUser.getRole());
-        logger.info("Updating user " + sessionUser.getUsername());
+        sessionUser.setRole_name(updatedUser.getRole_name());
+        logger.info("Updating user " + sessionUser.getUser_name());
         logger.info(sessionUser.toString());
         User resultantUser = (User) session.merge(sessionUser);
         logger.info("Updated user " + resultantUser.toString());

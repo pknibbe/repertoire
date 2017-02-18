@@ -2,6 +2,10 @@
 
 | Date | Task | Hours | Notes|
 |------|------|-------|------|
+| 2/18 | Individual Project | 5 | Trying to correct broken project structure - had to revert a lot |
+| 2/18 | Classwork | 1 | Readings and exercises from week 5 |
+| 2/17 | Individual Project | 7 | Investigating problem with big-table form frontend for user account management |
+| 2/16 | Extracurricular | 4 | Kids Code Madison event and presentation preparation |
 | 2/16 | Individual Project | 6.5 | Rework user account management to incorporate role table |
 | 2/15 | Class Activity | .5 | Upload comments on presentations |
 | 2/15 | Individual Project | 1 | Build sql files and AWS version of database deploy !|

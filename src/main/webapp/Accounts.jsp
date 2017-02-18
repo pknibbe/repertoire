@@ -17,7 +17,7 @@
                         <td>${person.id}</td>
                         <td>${person.name}</td>
                         <td>${person.username}</td>
-                        <td><input type="text" name="Password" value=${person.pw} /></td>
+                        <td>***************</td>
                         <td>${person.role}</td>
                     </tr>
                 </c:forEach>
@@ -39,24 +39,6 @@
         <input type="submit" name="Delete" value="Delete" />
     </form>
 </div>
-
-<div>
-    <h4>MessageCenter</h4>
-
-    <form action="MessageCenter" method="POST">
-        <input type="submit" value="Submit" name="Enter" />
-    </form>
-</div>
-
-<br /><br />
-
-<div>
-
-    <h4>Account Center</h4>
-
-    <form action="AccountCenter" method="POST">
-        <input type="submit" value="Submit" name="Enter" />
-    </form></div>
 
 </body>
 

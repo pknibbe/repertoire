@@ -302,3 +302,610 @@
 2017-02-16 15:43:22,714 1069559 [http-nio-8080-exec-15] INFO  persistence.UserDAO  - User(id=0, username=pknibbe, name=Peter, pw=IndiaIsGreat!, role=admin)
 2017-02-16 15:43:22,727 1069572 [http-nio-8080-exec-15] INFO  Engines.RoleAndUserManager  - Added user ID = 2
 2017-02-16 15:43:22,727 1069572 [http-nio-8080-exec-15] INFO  Servlets.UpdateAccounts  - Creating a new user returned 2
+2017-02-18 15:58:08,540 1    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 15:58:08,627 88   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 15:58:08,638 99   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 15:58:08,645 106  [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 15:58:08,758 219  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 15:58:08,759 220  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 15:58:09,248 709  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 15:58:09,778 1239 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 15:58:09,803 1264 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 15:58:09,805 1266 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 15:58:09,806 1267 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 15:58:09,814 1275 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 15:58:11,502 2963 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 15:58:13,151 4612 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 15:58:13,176 4637 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 15:58:15,512 6973 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 3entries
+2017-02-18 15:58:15,513 6974 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-18 15:58:15,513 6974 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Rose, name=Trump, pw=Pass_Word, role_name=readOnly)
+2017-02-18 15:58:15,687 7148 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 4entries
+2017-02-18 15:58:15,688 7149 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-18 15:58:15,690 7151 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Rose, name=Trump, pw=Pass_Word, role_name=readOnly)
+2017-02-18 15:58:15,711 7172 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2017-02-18 15:58:15,711 7172 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'Rose' for key 'username'
+2017-02-18 15:58:15,714 7175 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-18 15:58:15,720 7181 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1062, SQLState: 23000
+2017-02-18 15:58:15,720 7181 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'Rose' for key 'username'
+2017-02-18 15:58:15,820 7281 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-18 15:58:15,850 7311 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, user_name=Rose, name=Trump, pw=Pass_Word, role_name=readOnly)
+2017-02-18 15:59:06,887 58348 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1205, SQLState: 40001
+2017-02-18 15:59:06,887 58348 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Lock wait timeout exceeded; try restarting transaction
+2017-02-18 15:59:06,887 58348 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-18 15:59:06,891 58352 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1205, SQLState: 40001
+2017-02-18 15:59:06,891 58352 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Lock wait timeout exceeded; try restarting transaction
+2017-02-18 15:59:06,986 58447 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 4entries
+2017-02-18 15:59:06,986 58447 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-18 15:59:06,986 58447 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Rose, name=Trump, pw=Pass_Word, role_name=readOnly)
+2017-02-18 15:59:06,993 58454 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2017-02-18 15:59:06,994 58455 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'Rose' for key 'username'
+2017-02-18 15:59:06,994 58455 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-18 15:59:06,996 58457 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1062, SQLState: 23000
+2017-02-18 15:59:06,996 58457 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'Rose' for key 'username'
+2017-02-18 15:59:07,019 58480 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-18 15:59:07,024 58485 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, user_name=Rose, name=Trump, pw=Pass_Word, role_name=readOnly)
+2017-02-18 15:59:58,197 109658 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1205, SQLState: 40001
+2017-02-18 15:59:58,198 109659 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Lock wait timeout exceeded; try restarting transaction
+2017-02-18 15:59:58,198 109659 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-18 15:59:58,199 109660 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1205, SQLState: 40001
+2017-02-18 15:59:58,199 109660 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Lock wait timeout exceeded; try restarting transaction
+2017-02-18 15:59:58,242 109703 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 4entries
+2017-02-18 15:59:58,242 109703 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-18 15:59:58,242 109703 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Rose, name=Trump, pw=Pass_Word, role_name=readOnly)
+2017-02-18 15:59:58,248 109709 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2017-02-18 15:59:58,248 109709 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'Rose' for key 'username'
+2017-02-18 15:59:58,248 109709 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-18 15:59:58,250 109711 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1062, SQLState: 23000
+2017-02-18 15:59:58,250 109711 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'Rose' for key 'username'
+2017-02-18 15:59:58,274 109735 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-18 15:59:58,278 109739 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, user_name=Rose, name=Trump, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:00:49,304 160765 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1205, SQLState: 40001
+2017-02-18 16:00:49,305 160766 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Lock wait timeout exceeded; try restarting transaction
+2017-02-18 16:00:49,305 160766 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-18 16:00:49,307 160768 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1205, SQLState: 40001
+2017-02-18 16:00:49,307 160768 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Lock wait timeout exceeded; try restarting transaction
+2017-02-18 16:00:49,357 160818 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 4entries
+2017-02-18 16:00:49,360 160821 [main] INFO  persistence.UserDAO  - Saving user Rose
+2017-02-18 16:00:49,360 160821 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Rose, name=Trump, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:00:49,368 160829 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2017-02-18 16:00:49,368 160829 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'Rose' for key 'username'
+2017-02-18 16:00:49,368 160829 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-18 16:00:49,370 160831 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1062, SQLState: 23000
+2017-02-18 16:00:49,370 160831 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'Rose' for key 'username'
+2017-02-18 16:00:49,394 160855 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-18 16:00:49,399 160860 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, user_name=Rose, name=Trump, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:12:15,859 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:12:15,883 24   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:12:15,889 30   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:12:15,893 34   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:12:15,964 105  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:12:15,965 106  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:12:16,261 402  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:12:16,598 739  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:12:16,619 760  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:12:16,620 761  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:12:16,621 762  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:12:16,626 767  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:12:17,616 1757 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:12:18,658 2799 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:12:18,744 2885 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:12:21,642 5783 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 4entries
+2017-02-18 16:12:21,643 5784 [main] INFO  persistence.UserDAO  - Saving user Bach
+2017-02-18 16:12:21,643 5784 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Bach, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:12:21,728 5869 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 5entries
+2017-02-18 16:12:21,734 5875 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-18 16:12:21,757 5898 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, user_name=Rose, name=Trump, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:12:21,780 5921 [main] INFO  persistence.UserDAO  - In dao.remove with id = 5
+2017-02-18 16:12:21,786 5927 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=5, user_name=Bach, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:12:37,460 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:12:37,483 23   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:12:37,490 30   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:12:37,494 34   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:12:37,573 113  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:12:37,573 113  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:12:37,926 466  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:12:38,276 816  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:12:38,294 834  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:12:38,295 835  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:12:38,296 836  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:12:38,300 840  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:12:39,304 1844 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:12:40,445 2985 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:12:40,556 3096 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:12:43,625 6165 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 3entries
+2017-02-18 16:12:43,627 6167 [main] INFO  persistence.UserDAO  - Saving user Bach
+2017-02-18 16:12:43,627 6167 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Bach, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:12:43,767 6307 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 4entries
+2017-02-18 16:12:43,837 6377 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-18 16:12:43,850 6390 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, user_name=Bach, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:14:37,330 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:14:37,359 29   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:14:37,366 36   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:14:37,371 41   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:14:37,446 116  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:14:37,447 117  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:14:37,837 507  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:14:38,395 1065 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:14:38,468 1138 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:14:38,474 1144 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:14:38,474 1144 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:14:38,480 1150 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:14:40,642 3312 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:14:42,037 4707 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:14:42,081 4751 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:14:45,074 7744 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 3entries
+2017-02-18 16:14:45,075 7745 [main] INFO  persistence.UserDAO  - Saving user Bach
+2017-02-18 16:14:45,076 7746 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Bach, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:14:45,224 7894 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 4entries
+2017-02-18 16:14:45,225 7895 [main] INFO  persistence.UserDAO  - Saving user Beth
+2017-02-18 16:14:45,225 7895 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Beth, name=Trump, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:14:45,273 7943 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-18 16:14:45,314 7984 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, user_name=Bach, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:14:45,356 8026 [main] INFO  persistence.UserDAO  - In dao.remove with id = 5
+2017-02-18 16:14:45,364 8034 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=5, user_name=Beth, name=Trump, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:14:59,623 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:14:59,658 35   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:14:59,666 43   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:14:59,672 49   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:14:59,789 166  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:14:59,789 166  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:15:00,394 771  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:15:01,017 1394 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:15:01,067 1444 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:15:01,069 1446 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:15:01,070 1447 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:15:01,078 1455 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:15:02,689 3066 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:15:03,864 4241 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:15:03,972 4349 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:15:07,387 7764 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 3entries
+2017-02-18 16:15:07,388 7765 [main] INFO  persistence.UserDAO  - Saving user Bach
+2017-02-18 16:15:07,389 7766 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Bach, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:15:07,588 7965 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 4entries
+2017-02-18 16:15:07,588 7965 [main] INFO  persistence.UserDAOTest  - User(id=4, user_name=Johanna, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:15:07,589 7966 [main] INFO  persistence.UserDAO  - Updating user Johanna
+2017-02-18 16:15:07,589 7966 [main] INFO  persistence.UserDAO  - User(id=4, user_name=Johanna, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:15:07,622 7999 [main] INFO  persistence.UserDAO  - Updating user Johanna
+2017-02-18 16:15:07,623 8000 [main] INFO  persistence.UserDAO  - User(id=4, user_name=Johanna, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:15:07,633 8010 [main] INFO  persistence.UserDAO  - Updated user User(id=4, user_name=Johanna, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:15:07,653 8030 [main] INFO  persistence.UserDAOTest  - Updated user ID = 4
+2017-02-18 16:15:07,683 8060 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-18 16:15:07,689 8066 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, user_name=Johanna, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:15:25,413 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:15:25,442 29   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:15:25,449 36   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:15:25,454 41   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:15:25,534 121  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:15:25,535 122  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:15:25,968 555  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:15:26,561 1148 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:15:26,601 1188 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:15:26,603 1190 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:15:26,605 1192 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:15:26,621 1208 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:15:28,549 3136 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:15:29,863 4450 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:15:29,996 4583 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:15:34,286 8873 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 3entries
+2017-02-18 16:15:34,287 8874 [main] INFO  persistence.UserDAO  - Saving user Bach
+2017-02-18 16:15:34,288 8875 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Bach, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:15:34,448 9035 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 4entries
+2017-02-18 16:15:34,448 9035 [main] INFO  persistence.UserDAOTest  - User(id=4, user_name=Bach, name=Johanna, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:15:34,449 9036 [main] INFO  persistence.UserDAO  - Updating user Bach
+2017-02-18 16:15:34,449 9036 [main] INFO  persistence.UserDAO  - User(id=4, user_name=Bach, name=Johanna, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:15:34,484 9071 [main] INFO  persistence.UserDAO  - Updating user Bach
+2017-02-18 16:15:34,485 9072 [main] INFO  persistence.UserDAO  - User(id=4, user_name=Bach, name=Johanna, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:15:34,494 9081 [main] INFO  persistence.UserDAO  - Updated user User(id=4, user_name=Bach, name=Johanna, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:15:34,513 9100 [main] INFO  persistence.UserDAOTest  - Updated user ID = 4
+2017-02-18 16:15:34,543 9130 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-18 16:15:34,551 9138 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, user_name=Bach, name=Johanna, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:15:46,368 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:15:46,405 37   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:15:46,417 49   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:15:46,423 55   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:15:46,527 159  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:15:46,527 159  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:15:47,005 637  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:15:47,631 1263 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:15:47,668 1300 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:15:47,671 1303 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:15:47,671 1303 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:15:47,680 1312 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:15:49,142 2774 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:15:50,429 4061 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:15:50,468 4100 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:15:53,573 7205 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 3entries
+2017-02-18 16:15:53,574 7206 [main] INFO  persistence.UserDAO  - Saving user Bach
+2017-02-18 16:15:53,575 7207 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Bach, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:15:53,945 7577 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 4entries
+2017-02-18 16:15:53,946 7578 [main] INFO  persistence.UserDAOTest  - User(id=4, user_name=Bach, name=Obama, pw=Johanna, role_name=readOnly)
+2017-02-18 16:15:53,946 7578 [main] INFO  persistence.UserDAO  - Updating user Bach
+2017-02-18 16:15:53,946 7578 [main] INFO  persistence.UserDAO  - User(id=4, user_name=Bach, name=Obama, pw=Johanna, role_name=readOnly)
+2017-02-18 16:15:53,973 7605 [main] INFO  persistence.UserDAO  - Updating user Bach
+2017-02-18 16:15:53,973 7605 [main] INFO  persistence.UserDAO  - User(id=4, user_name=Bach, name=Obama, pw=Johanna, role_name=readOnly)
+2017-02-18 16:15:53,982 7614 [main] INFO  persistence.UserDAO  - Updated user User(id=4, user_name=Bach, name=Obama, pw=Johanna, role_name=readOnly)
+2017-02-18 16:15:54,000 7632 [main] INFO  persistence.UserDAOTest  - Updated user ID = 4
+2017-02-18 16:15:54,033 7665 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-18 16:15:54,040 7672 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, user_name=Bach, name=Obama, pw=Johanna, role_name=readOnly)
+2017-02-18 16:16:28,279 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:16:28,322 43   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:16:28,330 51   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:16:28,341 62   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:16:28,437 158  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:16:28,438 159  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:16:28,801 522  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:16:29,239 960  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:16:29,259 980  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:16:29,260 981  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:16:29,262 983  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:16:29,280 1001 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:16:30,878 2599 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:16:32,373 4094 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:16:32,410 4131 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:16:36,067 7788 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 3entries
+2017-02-18 16:16:36,068 7789 [main] INFO  persistence.UserDAO  - Saving user Bach
+2017-02-18 16:16:36,068 7789 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Bach, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:16:36,175 7896 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 4entries
+2017-02-18 16:16:36,176 7897 [main] INFO  persistence.UserDAOTest  - User(id=4, user_name=Bach, name=Obama, pw=Pass_Word, role_name=Nonsense)
+2017-02-18 16:16:36,176 7897 [main] INFO  persistence.UserDAO  - Updating user Bach
+2017-02-18 16:16:36,177 7898 [main] INFO  persistence.UserDAO  - User(id=4, user_name=Bach, name=Obama, pw=Pass_Word, role_name=Nonsense)
+2017-02-18 16:16:36,210 7931 [main] INFO  persistence.UserDAO  - Updating user Bach
+2017-02-18 16:16:36,211 7932 [main] INFO  persistence.UserDAO  - User(id=4, user_name=Bach, name=Obama, pw=Pass_Word, role_name=Nonsense)
+2017-02-18 16:16:36,220 7941 [main] INFO  persistence.UserDAO  - Updated user User(id=4, user_name=Bach, name=Obama, pw=Pass_Word, role_name=Nonsense)
+2017-02-18 16:16:36,236 7957 [main] INFO  persistence.UserDAOTest  - Updated user ID = 4
+2017-02-18 16:16:36,265 7986 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-18 16:16:36,272 7993 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, user_name=Bach, name=Obama, pw=Pass_Word, role_name=Nonsense)
+2017-02-18 16:16:53,687 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:16:53,721 34   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:16:53,729 42   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:16:53,737 50   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:16:53,820 133  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:16:53,820 133  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:16:54,160 473  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:16:54,580 893  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:16:54,610 923  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:16:54,611 924  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:16:54,612 925  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:16:54,616 929  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:16:55,882 2195 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:16:57,227 3540 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:16:57,251 3564 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:17:01,584 7897 [main] INFO  persistence.UserDAOTest  - In @Before, userList has 3entries
+2017-02-18 16:17:01,585 7898 [main] INFO  persistence.UserDAO  - Saving user Bach
+2017-02-18 16:17:01,586 7899 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Bach, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:17:01,708 8021 [main] INFO  persistence.UserDAOTest  - After justAdd, userList has 4entries
+2017-02-18 16:17:01,709 8022 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-18 16:17:01,747 8060 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, user_name=Bach, name=Obama, pw=Pass_Word, role_name=readOnly)
+2017-02-18 16:17:39,180 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:17:39,216 36   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:17:39,223 43   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:17:39,227 47   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:17:39,319 139  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:17:39,320 140  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:17:39,723 543  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:17:40,153 973  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:17:40,178 998  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:17:40,180 1000 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:17:40,180 1000 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:17:40,184 1004 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:17:41,429 2249 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:17:42,734 3554 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:17:42,834 3654 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:17:46,830 7650 [main] INFO  persistence.RoleDAOTest  - In @Before, roleList has 3entries
+2017-02-18 16:17:46,832 7652 [main] INFO  persistence.RoleDAOTest  - New role is Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:17:46,833 7653 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-18 16:17:46,833 7653 [main] INFO  persistence.RoleDAO  - Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:17:47,022 7842 [main] INFO  persistence.RoleDAOTest  - After justAdd, roleList has 4entries
+2017-02-18 16:17:47,022 7842 [main] INFO  persistence.RoleDAOTest  - New role is Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:17:47,023 7843 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-18 16:17:47,023 7843 [main] INFO  persistence.RoleDAO  - Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:17:47,030 7850 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2017-02-18 16:17:47,030 7850 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'Donald' for key 'user_name'
+2017-02-18 16:17:47,033 7853 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2017-02-18 16:17:47,036 7856 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1062, SQLState: 23000
+2017-02-18 16:17:47,039 7859 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry 'Donald' for key 'user_name'
+2017-02-18 16:17:47,077 7897 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 4
+2017-02-18 16:17:47,114 7934 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=4, user_name=Donald, role_name=Commander)
+2017-02-18 16:20:34,326 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:20:34,352 26   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:20:34,359 33   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:20:34,367 41   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:20:34,453 127  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:20:34,453 127  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:20:34,788 462  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:20:35,239 913  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:20:35,278 952  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:20:35,282 956  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:20:35,283 957  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:20:35,291 965  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:20:37,164 2838 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:20:38,692 4366 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:20:38,746 4420 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:20:42,351 8025 [main] INFO  persistence.RoleDAOTest  - In @Before, roleList has 3entries
+2017-02-18 16:20:42,351 8025 [main] INFO  persistence.RoleDAOTest  - New role is Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:20:42,352 8026 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-18 16:20:42,352 8026 [main] INFO  persistence.RoleDAO  - Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:20:42,486 8160 [main] INFO  persistence.RoleDAOTest  - After justAdd, roleList has 4entries
+2017-02-18 16:20:42,498 8172 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 4
+2017-02-18 16:20:42,542 8216 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=4, user_name=Donald, role_name=Commander)
+2017-02-18 16:20:56,652 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:20:56,698 46   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:20:56,710 58   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:20:56,717 65   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:20:56,899 247  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:20:56,900 248  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:20:57,503 851  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:20:57,995 1343 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:20:58,019 1367 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:20:58,021 1369 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:20:58,021 1369 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:20:58,027 1375 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:20:59,329 2677 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:21:00,555 3903 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:21:00,641 3989 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:21:04,204 7552 [main] INFO  persistence.RoleDAOTest  - In @Before, roleList has 3entries
+2017-02-18 16:21:04,205 7553 [main] INFO  persistence.RoleDAOTest  - New role is Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:21:04,206 7554 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-18 16:21:04,206 7554 [main] INFO  persistence.RoleDAO  - Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:21:04,398 7746 [main] INFO  persistence.RoleDAOTest  - After justAdd, roleList has 4entries
+2017-02-18 16:21:04,449 7797 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 4
+2017-02-18 16:21:04,493 7841 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=4, user_name=Donald, role_name=Commander)
+2017-02-18 16:21:18,521 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:21:18,552 31   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:21:18,562 41   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:21:18,567 46   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:21:18,660 139  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:21:18,660 139  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:21:18,983 462  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:21:19,389 868  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:21:19,414 893  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:21:19,416 895  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:21:19,416 895  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:21:19,421 900  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:21:20,681 2160 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:21:22,018 3497 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:21:22,193 3672 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:21:26,788 8267 [main] INFO  persistence.RoleDAOTest  - In @Before, roleList has 3entries
+2017-02-18 16:21:26,788 8267 [main] INFO  persistence.RoleDAOTest  - New role is Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:21:26,789 8268 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-18 16:21:26,789 8268 [main] INFO  persistence.RoleDAO  - Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:21:26,945 8424 [main] INFO  persistence.RoleDAOTest  - After justAdd, roleList has 4entries
+2017-02-18 16:21:26,946 8425 [main] INFO  persistence.RoleDAOTest  - New role is Role(id=0, user_name=Barak, role_name=Sage)
+2017-02-18 16:21:26,946 8425 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-18 16:21:26,947 8426 [main] INFO  persistence.RoleDAO  - Role(id=0, user_name=Barak, role_name=Sage)
+2017-02-18 16:21:26,967 8446 [main] INFO  persistence.RoleDAOTest  - role list has 5 entries
+2017-02-18 16:21:26,984 8463 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 4
+2017-02-18 16:21:27,029 8508 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=4, user_name=Donald, role_name=Commander)
+2017-02-18 16:21:27,069 8548 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 5
+2017-02-18 16:21:27,094 8573 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=5, user_name=Barak, role_name=Sage)
+2017-02-18 16:21:41,384 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:21:41,414 30   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:21:41,420 36   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:21:41,426 42   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:21:41,507 123  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:21:41,508 124  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:21:41,844 460  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:21:42,349 965  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:21:42,381 997  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:21:42,384 1000 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:21:42,384 1000 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:21:42,396 1012 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:21:44,202 2818 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:21:45,841 4457 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:21:45,863 4479 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:21:49,600 8216 [main] INFO  persistence.RoleDAOTest  - In @Before, roleList has 3entries
+2017-02-18 16:21:49,606 8222 [main] INFO  persistence.RoleDAOTest  - New role is Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:21:49,611 8227 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-18 16:21:49,611 8227 [main] INFO  persistence.RoleDAO  - Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:21:49,804 8420 [main] INFO  persistence.RoleDAOTest  - After justAdd, roleList has 4entries
+2017-02-18 16:21:49,805 8421 [main] INFO  persistence.RoleDAOTest  - Role(id=4, user_name=Trump, role_name=Commander)
+2017-02-18 16:21:49,808 8424 [main] INFO  persistence.RoleDAO  - Updating role 4
+2017-02-18 16:21:49,809 8425 [main] INFO  persistence.RoleDAO  - Role(id=4, user_name=Trump, role_name=Commander)
+2017-02-18 16:21:49,869 8485 [main] INFO  persistence.RoleDAO  - Updating role 4
+2017-02-18 16:21:49,869 8485 [main] INFO  persistence.RoleDAO  - Role(id=4, user_name=Trump, role_name=Commander)
+2017-02-18 16:21:49,884 8500 [main] INFO  persistence.RoleDAO  - Updated role Role(id=4, user_name=Trump, role_name=Commander)
+2017-02-18 16:21:49,936 8552 [main] INFO  persistence.RoleDAOTest  - Updated role ID = 4
+2017-02-18 16:21:49,974 8590 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 4
+2017-02-18 16:21:49,980 8596 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=4, user_name=Trump, role_name=Commander)
+2017-02-18 16:22:03,982 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:22:04,015 33   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:22:04,023 41   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:22:04,029 47   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:22:04,106 124  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:22:04,106 124  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:22:04,610 628  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:22:05,186 1204 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:22:05,225 1243 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:22:05,227 1245 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:22:05,227 1245 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:22:05,233 1251 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:22:07,046 3064 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:22:08,289 4307 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:22:08,331 4349 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:22:11,699 7717 [main] INFO  persistence.RoleDAOTest  - In @Before, roleList has 3entries
+2017-02-18 16:22:11,701 7719 [main] INFO  persistence.RoleDAOTest  - New role is Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:22:11,702 7720 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-18 16:22:11,703 7721 [main] INFO  persistence.RoleDAO  - Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:22:11,843 7861 [main] INFO  persistence.RoleDAOTest  - After justAdd, roleList has 4entries
+2017-02-18 16:22:11,844 7862 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 4
+2017-02-18 16:22:11,875 7893 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=4, user_name=Donald, role_name=Commander)
+2017-02-18 16:23:28,231 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:23:28,256 25   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:23:28,263 32   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:23:28,269 38   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:23:28,354 123  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:23:28,354 123  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:23:28,694 463  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:23:29,139 908  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:23:29,162 931  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:23:29,164 933  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:23:29,164 933  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:23:29,169 938  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:23:30,333 2102 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:23:31,484 3253 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:23:31,528 3297 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:23:35,989 7758 [main] INFO  persistence.RoleDAOTest  - In @Before, roleList has 3entries
+2017-02-18 16:23:35,990 7759 [main] INFO  persistence.RoleDAOTest  - New role is Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:23:35,990 7759 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-18 16:23:35,990 7759 [main] INFO  persistence.RoleDAO  - Role(id=0, user_name=Donald, role_name=Commander)
+2017-02-18 16:23:36,098 7867 [main] INFO  persistence.RoleDAOTest  - After justAdd, roleList has 4entries
+2017-02-18 16:23:36,099 7868 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 4
+2017-02-18 16:23:36,129 7898 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=4, user_name=Donald, role_name=Commander)
+2017-02-18 16:24:14,558 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-02-18 16:24:14,588 30   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-02-18 16:24:14,598 40   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-02-18 16:24:14,607 49   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-02-18 16:24:14,689 131  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-02-18 16:24:14,690 132  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-02-18 16:24:15,050 492  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-02-18 16:24:15,496 938  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-02-18 16:24:15,524 966  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-02-18 16:24:15,529 971  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-02-18 16:24:15,530 972  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-02-18 16:24:15,537 979  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-02-18 16:24:17,313 2755 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-02-18 16:24:18,804 4246 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-02-18 16:24:18,850 4292 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-18 16:24:21,777 7219 [main] INFO  engines.RoleAndUserManagerTest  - In @Before, userList has 3entries
+2017-02-18 16:24:21,777 7219 [main] INFO  engines.RoleAndUserManagerTest  - In @Before, roleList has 3entries
+2017-02-18 16:24:21,778 7220 [main] INFO  engines.RoleAndUserManager  - Creating a new user
+2017-02-18 16:24:21,778 7220 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-18 16:24:21,779 7221 [main] INFO  persistence.RoleDAO  - Role(id=0, user_name=Dylan, role_name=edit)
+2017-02-18 16:24:21,893 7335 [main] INFO  engines.RoleAndUserManager  - Role(id=4, user_name=Dylan, role_name=edit)
+2017-02-18 16:24:21,894 7336 [main] INFO  engines.RoleAndUserManager  - User(id=0, user_name=Dylan, name=Bob, pw=Stoned2602, role_name=edit)
+2017-02-18 16:24:21,895 7337 [main] INFO  persistence.UserDAO  - Saving user Dylan
+2017-02-18 16:24:21,895 7337 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Dylan, name=Bob, pw=Stoned2602, role_name=edit)
+2017-02-18 16:24:21,928 7370 [main] INFO  engines.RoleAndUserManager  - Added user ID = 4
+2017-02-18 16:24:21,954 7396 [main] INFO  engines.RoleAndUserManagerTest  - After justAdd, userList has 4entries
+2017-02-18 16:24:21,954 7396 [main] INFO  engines.RoleAndUserManagerTest  - After justAdd, roleList has 4entries
+2017-02-18 16:24:21,954 7396 [main] INFO  engines.RoleAndUserManagerTest  - *** Start of testAdd ***
+2017-02-18 16:24:21,955 7397 [main] INFO  engines.RoleAndUserManager  - Creating a new user
+2017-02-18 16:24:21,955 7397 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-18 16:24:21,955 7397 [main] INFO  persistence.RoleDAO  - Role(id=0, user_name=Thomas, role_name=admin)
+2017-02-18 16:24:21,967 7409 [main] INFO  engines.RoleAndUserManager  - Role(id=5, user_name=Thomas, role_name=admin)
+2017-02-18 16:24:21,968 7410 [main] INFO  engines.RoleAndUserManager  - User(id=0, user_name=Thomas, name=Dylan, pw=DoNotGoGently, role_name=admin)
+2017-02-18 16:24:21,969 7411 [main] INFO  persistence.UserDAO  - Saving user Thomas
+2017-02-18 16:24:21,969 7411 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Thomas, name=Dylan, pw=DoNotGoGently, role_name=admin)
+2017-02-18 16:24:21,980 7422 [main] INFO  engines.RoleAndUserManager  - Added user ID = 5
+2017-02-18 16:24:22,003 7445 [main] INFO  engines.RoleAndUserManagerTest  - role list has 5 entries after addition
+2017-02-18 16:24:22,012 7454 [main] INFO  engines.RoleAndUserManagerTest  - User list has 5 entries after addition
+2017-02-18 16:24:22,012 7454 [main] INFO  engines.RoleAndUserManagerTest  - *** End of testAdd ***
+2017-02-18 16:24:22,050 7492 [main] INFO  engines.RoleAndUserManagerTest  - After test, userList includes Karuvula
+2017-02-18 16:24:22,050 7492 [main] INFO  engines.RoleAndUserManagerTest  - After test, userList includes pknibbe
+2017-02-18 16:24:22,050 7492 [main] INFO  engines.RoleAndUserManagerTest  - After test, userList includes Valdez
+2017-02-18 16:24:22,050 7492 [main] INFO  engines.RoleAndUserManagerTest  - After test, userList includes Dylan
+2017-02-18 16:24:22,080 7522 [main] INFO  engines.RoleAndUserManager  - About to identify role to remove as Dylan
+2017-02-18 16:24:22,090 7532 [main] INFO  engines.RoleAndUserManager  - In getRole with username = Dylan
+2017-02-18 16:24:22,091 7533 [main] INFO  engines.RoleAndUserManager  - In loop with username = Karuvula
+2017-02-18 16:24:22,091 7533 [main] INFO  engines.RoleAndUserManager  - In loop with username = pknibbe
+2017-02-18 16:24:22,091 7533 [main] INFO  engines.RoleAndUserManager  - In loop with username = Valdez
+2017-02-18 16:24:22,091 7533 [main] INFO  engines.RoleAndUserManager  - In loop with username = Dylan
+2017-02-18 16:24:22,091 7533 [main] INFO  engines.RoleAndUserManager  - found match
+2017-02-18 16:24:22,091 7533 [main] INFO  engines.RoleAndUserManager  - In loop with username = Thomas
+2017-02-18 16:24:22,091 7533 [main] INFO  engines.RoleAndUserManager  - got role Role(id=4, user_name=Dylan, role_name=edit)
+2017-02-18 16:24:22,092 7534 [main] INFO  engines.RoleAndUserManager  - About to remove user 4
+2017-02-18 16:24:22,092 7534 [main] INFO  persistence.UserDAO  - In dao.remove with id = 4
+2017-02-18 16:24:22,100 7542 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=4, user_name=Dylan, name=Bob, pw=Stoned2602, role_name=edit)
+2017-02-18 16:24:22,122 7564 [main] INFO  engines.RoleAndUserManager  - about to remove role 4
+2017-02-18 16:24:22,122 7564 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 4
+2017-02-18 16:24:22,128 7570 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=4, user_name=Dylan, role_name=edit)
+2017-02-18 16:24:22,140 7582 [main] INFO  engines.RoleAndUserManagerTest  - After test, userList includes Thomas
+2017-02-18 16:24:22,147 7589 [main] INFO  engines.RoleAndUserManager  - About to identify role to remove as Thomas
+2017-02-18 16:24:22,155 7597 [main] INFO  engines.RoleAndUserManager  - In getRole with username = Thomas
+2017-02-18 16:24:22,156 7598 [main] INFO  engines.RoleAndUserManager  - In loop with username = Karuvula
+2017-02-18 16:24:22,156 7598 [main] INFO  engines.RoleAndUserManager  - In loop with username = pknibbe
+2017-02-18 16:24:22,156 7598 [main] INFO  engines.RoleAndUserManager  - In loop with username = Valdez
+2017-02-18 16:24:22,156 7598 [main] INFO  engines.RoleAndUserManager  - In loop with username = Thomas
+2017-02-18 16:24:22,156 7598 [main] INFO  engines.RoleAndUserManager  - found match
+2017-02-18 16:24:22,156 7598 [main] INFO  engines.RoleAndUserManager  - got role Role(id=5, user_name=Thomas, role_name=admin)
+2017-02-18 16:24:22,156 7598 [main] INFO  engines.RoleAndUserManager  - About to remove user 5
+2017-02-18 16:24:22,157 7599 [main] INFO  persistence.UserDAO  - In dao.remove with id = 5
+2017-02-18 16:24:22,162 7604 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=5, user_name=Thomas, name=Dylan, pw=DoNotGoGently, role_name=admin)
+2017-02-18 16:24:22,173 7615 [main] INFO  engines.RoleAndUserManager  - about to remove role 5
+2017-02-18 16:24:22,174 7616 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 5
+2017-02-18 16:24:22,179 7621 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=5, user_name=Thomas, role_name=admin)
+2017-02-18 16:24:22,214 7656 [main] INFO  engines.RoleAndUserManagerTest  - In @Before, userList has 3entries
+2017-02-18 16:24:22,215 7657 [main] INFO  engines.RoleAndUserManagerTest  - In @Before, roleList has 3entries
+2017-02-18 16:24:22,215 7657 [main] INFO  engines.RoleAndUserManager  - Creating a new user
+2017-02-18 16:24:22,215 7657 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-18 16:24:22,215 7657 [main] INFO  persistence.RoleDAO  - Role(id=0, user_name=Dylan, role_name=edit)
+2017-02-18 16:24:22,226 7668 [main] INFO  engines.RoleAndUserManager  - Role(id=6, user_name=Dylan, role_name=edit)
+2017-02-18 16:24:22,226 7668 [main] INFO  engines.RoleAndUserManager  - User(id=0, user_name=Dylan, name=Bob, pw=Stoned2602, role_name=edit)
+2017-02-18 16:24:22,226 7668 [main] INFO  persistence.UserDAO  - Saving user Dylan
+2017-02-18 16:24:22,226 7668 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Dylan, name=Bob, pw=Stoned2602, role_name=edit)
+2017-02-18 16:24:22,237 7679 [main] INFO  engines.RoleAndUserManager  - Added user ID = 6
+2017-02-18 16:24:22,252 7694 [main] INFO  engines.RoleAndUserManagerTest  - After justAdd, userList has 4entries
+2017-02-18 16:24:22,252 7694 [main] INFO  engines.RoleAndUserManagerTest  - After justAdd, roleList has 4entries
+2017-02-18 16:24:22,253 7695 [main] INFO  engines.RoleAndUserManagerTest  - *** Start of testRemove ***
+2017-02-18 16:24:22,258 7700 [main] INFO  engines.RoleAndUserManager  - About to identify role to remove as Dylan
+2017-02-18 16:24:22,265 7707 [main] INFO  engines.RoleAndUserManager  - In getRole with username = Dylan
+2017-02-18 16:24:22,265 7707 [main] INFO  engines.RoleAndUserManager  - In loop with username = Karuvula
+2017-02-18 16:24:22,265 7707 [main] INFO  engines.RoleAndUserManager  - In loop with username = pknibbe
+2017-02-18 16:24:22,268 7710 [main] INFO  engines.RoleAndUserManager  - In loop with username = Valdez
+2017-02-18 16:24:22,268 7710 [main] INFO  engines.RoleAndUserManager  - In loop with username = Dylan
+2017-02-18 16:24:22,268 7710 [main] INFO  engines.RoleAndUserManager  - found match
+2017-02-18 16:24:22,268 7710 [main] INFO  engines.RoleAndUserManager  - got role Role(id=6, user_name=Dylan, role_name=edit)
+2017-02-18 16:24:22,268 7710 [main] INFO  engines.RoleAndUserManager  - About to remove user 6
+2017-02-18 16:24:22,269 7711 [main] INFO  persistence.UserDAO  - In dao.remove with id = 6
+2017-02-18 16:24:22,273 7715 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=6, user_name=Dylan, name=Bob, pw=Stoned2602, role_name=edit)
+2017-02-18 16:24:22,284 7726 [main] INFO  engines.RoleAndUserManager  - about to remove role 6
+2017-02-18 16:24:22,285 7727 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 6
+2017-02-18 16:24:22,292 7734 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=6, user_name=Dylan, role_name=edit)
+2017-02-18 16:24:22,322 7764 [main] INFO  engines.RoleAndUserManagerTest  - *** End of testRemove ***
+2017-02-18 16:24:22,340 7782 [main] INFO  engines.RoleAndUserManagerTest  - After test, userList includes Karuvula
+2017-02-18 16:24:22,340 7782 [main] INFO  engines.RoleAndUserManagerTest  - After test, userList includes pknibbe
+2017-02-18 16:24:22,340 7782 [main] INFO  engines.RoleAndUserManagerTest  - After test, userList includes Valdez
+2017-02-18 16:24:22,355 7797 [main] INFO  engines.RoleAndUserManagerTest  - In @Before, userList has 3entries
+2017-02-18 16:24:22,355 7797 [main] INFO  engines.RoleAndUserManagerTest  - In @Before, roleList has 3entries
+2017-02-18 16:24:22,355 7797 [main] INFO  engines.RoleAndUserManager  - Creating a new user
+2017-02-18 16:24:22,355 7797 [main] INFO  persistence.RoleDAO  - Saving role 0
+2017-02-18 16:24:22,356 7798 [main] INFO  persistence.RoleDAO  - Role(id=0, user_name=Dylan, role_name=edit)
+2017-02-18 16:24:22,367 7809 [main] INFO  engines.RoleAndUserManager  - Role(id=7, user_name=Dylan, role_name=edit)
+2017-02-18 16:24:22,367 7809 [main] INFO  engines.RoleAndUserManager  - User(id=0, user_name=Dylan, name=Bob, pw=Stoned2602, role_name=edit)
+2017-02-18 16:24:22,368 7810 [main] INFO  persistence.UserDAO  - Saving user Dylan
+2017-02-18 16:24:22,368 7810 [main] INFO  persistence.UserDAO  - User(id=0, user_name=Dylan, name=Bob, pw=Stoned2602, role_name=edit)
+2017-02-18 16:24:22,379 7821 [main] INFO  engines.RoleAndUserManager  - Added user ID = 7
+2017-02-18 16:24:22,391 7833 [main] INFO  engines.RoleAndUserManagerTest  - After justAdd, userList has 4entries
+2017-02-18 16:24:22,391 7833 [main] INFO  engines.RoleAndUserManagerTest  - After justAdd, roleList has 4entries
+2017-02-18 16:24:22,391 7833 [main] INFO  engines.RoleAndUserManagerTest  - *** Start of testUpdate ***
+2017-02-18 16:24:22,396 7838 [main] INFO  engines.RoleAndUserManager  - In updateUserWithRole and user is User(id=7, user_name=Dylan, name=Bob, pw=Stoned2602, role_name=edit)
+2017-02-18 16:24:22,400 7842 [main] INFO  engines.RoleAndUserManager  - In getRole with username = Dylan
+2017-02-18 16:24:22,400 7842 [main] INFO  engines.RoleAndUserManager  - In loop with username = Karuvula
+2017-02-18 16:24:22,400 7842 [main] INFO  engines.RoleAndUserManager  - In loop with username = pknibbe
+2017-02-18 16:24:22,400 7842 [main] INFO  engines.RoleAndUserManager  - In loop with username = Valdez
+2017-02-18 16:24:22,401 7843 [main] INFO  engines.RoleAndUserManager  - In loop with username = Dylan
+2017-02-18 16:24:22,401 7843 [main] INFO  engines.RoleAndUserManager  - found match
+2017-02-18 16:24:22,401 7843 [main] INFO  engines.RoleAndUserManager  - got role Role(id=7, user_name=Dylan, role_name=edit)
+2017-02-18 16:24:22,401 7843 [main] INFO  engines.RoleAndUserManager  - In updateUserWithRole and role is Role(id=7, user_name=Dylan, role_name=edit)
+2017-02-18 16:24:22,401 7843 [main] INFO  engines.RoleAndUserManager  - User(id=7, user_name=Simon, name=Paul, pw=Rock5844, role_name=readOnly)
+2017-02-18 16:24:22,401 7843 [main] INFO  persistence.UserDAO  - Updating user Simon
+2017-02-18 16:24:22,402 7844 [main] INFO  persistence.UserDAO  - User(id=7, user_name=Simon, name=Paul, pw=Rock5844, role_name=readOnly)
+2017-02-18 16:24:22,406 7848 [main] INFO  persistence.UserDAO  - Updating user Simon
+2017-02-18 16:24:22,406 7848 [main] INFO  persistence.UserDAO  - User(id=7, user_name=Simon, name=Paul, pw=Rock5844, role_name=readOnly)
+2017-02-18 16:24:22,414 7856 [main] INFO  persistence.UserDAO  - Updated user User(id=7, user_name=Simon, name=Paul, pw=Rock5844, role_name=readOnly)
+2017-02-18 16:24:22,431 7873 [main] INFO  persistence.RoleDAO  - Updating role 7
+2017-02-18 16:24:22,431 7873 [main] INFO  persistence.RoleDAO  - Role(id=7, user_name=Simon, role_name=readOnly)
+2017-02-18 16:24:22,436 7878 [main] INFO  persistence.RoleDAO  - Updating role 7
+2017-02-18 16:24:22,437 7879 [main] INFO  persistence.RoleDAO  - Role(id=7, user_name=Simon, role_name=readOnly)
+2017-02-18 16:24:22,437 7879 [main] INFO  persistence.RoleDAO  - Updated role Role(id=7, user_name=Simon, role_name=readOnly)
+2017-02-18 16:24:22,447 7889 [main] INFO  engines.RoleAndUserManagerTest  - Updated role ID = 7
+2017-02-18 16:24:22,470 7912 [main] INFO  engines.RoleAndUserManagerTest  - *** End of testUpdate ***
+2017-02-18 16:24:22,486 7928 [main] INFO  engines.RoleAndUserManagerTest  - After test, userList includes Karuvula
+2017-02-18 16:24:22,486 7928 [main] INFO  engines.RoleAndUserManagerTest  - After test, userList includes pknibbe
+2017-02-18 16:24:22,486 7928 [main] INFO  engines.RoleAndUserManagerTest  - After test, userList includes Valdez
+2017-02-18 16:24:22,486 7928 [main] INFO  engines.RoleAndUserManagerTest  - After test, userList includes Simon
+2017-02-18 16:24:22,491 7933 [main] INFO  engines.RoleAndUserManager  - About to identify role to remove as Simon
+2017-02-18 16:24:22,499 7941 [main] INFO  engines.RoleAndUserManager  - In getRole with username = Simon
+2017-02-18 16:24:22,499 7941 [main] INFO  engines.RoleAndUserManager  - In loop with username = Karuvula
+2017-02-18 16:24:22,499 7941 [main] INFO  engines.RoleAndUserManager  - In loop with username = pknibbe
+2017-02-18 16:24:22,499 7941 [main] INFO  engines.RoleAndUserManager  - In loop with username = Valdez
+2017-02-18 16:24:22,499 7941 [main] INFO  engines.RoleAndUserManager  - In loop with username = Simon
+2017-02-18 16:24:22,500 7942 [main] INFO  engines.RoleAndUserManager  - found match
+2017-02-18 16:24:22,500 7942 [main] INFO  engines.RoleAndUserManager  - got role Role(id=7, user_name=Simon, role_name=readOnly)
+2017-02-18 16:24:22,500 7942 [main] INFO  engines.RoleAndUserManager  - About to remove user 7
+2017-02-18 16:24:22,500 7942 [main] INFO  persistence.UserDAO  - In dao.remove with id = 7
+2017-02-18 16:24:22,506 7948 [main] INFO  persistence.UserDAO  - In dao. remove with user User(id=7, user_name=Simon, name=Paul, pw=Rock5844, role_name=readOnly)
+2017-02-18 16:24:22,519 7961 [main] INFO  engines.RoleAndUserManager  - about to remove role 7
+2017-02-18 16:24:22,519 7961 [main] INFO  persistence.RoleDAO  - In dao.remove with id = 7
+2017-02-18 16:24:22,524 7966 [main] INFO  persistence.RoleDAO  - In dao. remove with role Role(id=7, user_name=Simon, role_name=readOnly)

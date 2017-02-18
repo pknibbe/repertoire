@@ -24,14 +24,14 @@ public class Role {
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
     private int id;
-    private String username;
-    private String rolename;
+    private String user_name;
+    private String role_name;
 
     public Role() {
     }
 
     public Role(String username, String rolename) {
-        this.username = username;
-        this.rolename = rolename;
+        this.user_name = username;
+        this.role_name = rolename;
     }
 }

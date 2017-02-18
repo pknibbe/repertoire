@@ -39,7 +39,7 @@ public class RoleDAOTest {
             boolean found = false;
 
             for (entity.Role role : roleList) {
-                String thisName = role.getUsername();
+                String thisName = role.getUser_name();
                 if (thisName.equalsIgnoreCase("Donald")) found = true;
             }
             assertTrue("The expected table name was not found: ", found);
@@ -50,13 +50,14 @@ public class RoleDAOTest {
             role = roleList.get(roleList.size() - 1); // retrieve most recent addition to table
             int id = role.getId(); // get the id of the most recent addition
             role = dao.get(id); // get the role by id
-            assertEquals("Table names don't match", "Donald", role.getUsername());
+            assertEquals("Table names don't match", "Donald", role.getUser_name());
         }
 
         @Test
         public void testAdd() throws Exception {
-            justAdd();
-            roleList = dao.getAll();
+            role = new entity.Role("Barak", "Sage");
+            logger.info("New role is " + role.toString());
+            dao.add(role);            roleList = dao.getAll();
             logger.info("role list has " + roleList.size() + " entries");
             assertEquals("Add did not work: ", numberOfRoles + 1, roleList.size());
         }
@@ -65,12 +66,12 @@ public class RoleDAOTest {
         public void testModifyRoleName() throws Exception {
             role = roleList.get(roleList.size() - 1); // retrieve most recent addition to table
             int id = role.getId();
-            role.setUsername("Trump");
+            role.setUser_name("Trump");
             logger.info(role.toString());
             logger.info("Updated role ID = " + dao.modify(role));
             //dao.modify(role);
             role = dao.get(id);
-            assertEquals("role table name not modified", "Trump", role.getUsername());
+            assertEquals("role table name not modified", "Trump", role.getUser_name());
             roleList = dao.getAll();
             assertEquals("Modify added an entry!", numberOfRoles, roleList.size());
         }
@@ -96,8 +97,10 @@ public class RoleDAOTest {
             roleList = dao.getAll();
 
             for (entity.Role role : roleList) {
-                String thisName = role.getUsername();
+                String thisName = role.getUser_name();
                 if (thisName.equalsIgnoreCase("Donald")) {
+                    dao.remove(role.getId());
+                } else if (thisName.equalsIgnoreCase("Barak")) {
                     dao.remove(role.getId());
                 } else if (thisName.equalsIgnoreCase("Trump")) {
                     dao.remove(role.getId());
