@@ -1,7 +1,11 @@
-<%@include file="taglib.jsp"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="title" value="Account Management" />
-<%@include file="head.jsp"%>
-<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>$title</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head><html>
 <body>
 <h2>${SessionMessage}</h2><br/><br/>
 
@@ -16,9 +20,9 @@
                         <td><input type="radio" name="userID" value=${person.id} /></td>
                         <td>${person.id}</td>
                         <td>${person.name}</td>
-                        <td>${person.username}</td>
+                        <td>${person.user_name}</td>
                         <td>***************</td>
-                        <td>${person.role}</td>
+                        <td>${person.role_name}</td>
                     </tr>
                 </c:forEach>
                 <tr>

@@ -1,7 +1,11 @@
-<%@include file="taglib.jsp"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="title" value="Account Management" />
-<%@include file="head.jsp"%>
-<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>$title</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head><html>
 <body>
 <h2>${SessionMessage}</h2><br/><br/>
 
@@ -11,14 +15,14 @@
         <table>
             <thead><tr><th>Select</th><th>ID</th><th>Name</th><th>Username</th><th>Password</th><th>Role</th></tr></thead>
             <tbody>
-                <c:forEach var="user" items="${users}">
+                <c:forEach var="person" items="${users}">
                     <tr>
-                        <td><input type="radio" name="userID" value=${user.id} /></td>
-                        <td>${user.id}</td>
-                        <td>${user.name}</td>
-                        <td>${user.username}</td>
-                        <td><input type="text" name="Password" value=${user.pw} /></td>
-                        <td>${user.role}</td>
+                        <td><input type="radio" name="userID" value=${person.id} /></td>
+                        <td>${person.id}</td>
+                        <td>${person.name}</td>
+                        <td>${person.user_name}</td>
+                        <td>***************</td>
+                        <td>${person.role_name}</td>
                     </tr>
                 </c:forEach>
                 <tr>
@@ -39,24 +43,6 @@
         <input type="submit" name="Delete" value="Delete" />
     </form>
 </div>
-
-<div>
-    <h4>MessageCenter</h4>
-
-    <form action="/MessageCenter" method="POST">
-        <input type="submit" value="Submit" name="Enter" />
-    </form>
-</div>
-
-<br /><br />
-
-<div>
-
-    <h4>Account Center</h4>
-
-    <form action="/AccountCenter" method="POST">
-        <input type="submit" value="Submit" name="Enter" />
-    </form></div>
 
 </body>
 

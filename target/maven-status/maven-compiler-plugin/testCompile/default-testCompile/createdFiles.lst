@@ -1,5 +1,0 @@
-persistence\MessageDAOTest.class
-persistence\UserDAOTest.class
-persistence\PlaylistDAOTest.class
-persistence\AssociationDAOTest.class
-persistence\SongDAOTest.class

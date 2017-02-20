@@ -1,0 +1,195 @@
+commit 570c34f646293b93f4bff00840c3d2b32557389b
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Sat Feb 18 16:27:01 2017 -0600
+
+    clean up previous commit that IntelliJ did not get quite right
+
+commit 6c19b400f5df8450e3604975f7d30b4b8d5ddc5b
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Sat Feb 18 16:25:48 2017 -0600
+
+    Reworked users and user_roles tables, entities, and DAOs to conform to tomee expectations
+
+commit 1aad20559d9117df8ac549183b6d7156dc384b87
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Sat Feb 18 15:28:23 2017 -0600
+
+    Revert "commit changes so I can do a clean revert"
+    
+    This reverts commit 8ac30aa2cdbfcf0dd3372cb3ed3f26923803faaa.
+
+commit f85d77194ada7e3a7cd0993f73125aaf8ac1e9d4
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Sat Feb 18 15:27:13 2017 -0600
+
+    Revert "trying a second time to commit so I can revert"
+    
+    This reverts commit 4841366e962bbcd5ff7fa74661488fd4afd520da.
+
+commit 4841366e962bbcd5ff7fa74661488fd4afd520da
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Sat Feb 18 15:13:20 2017 -0600
+
+    trying a second time to commit so I can revert
+
+commit 8ac30aa2cdbfcf0dd3372cb3ed3f26923803faaa
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Sat Feb 18 15:12:20 2017 -0600
+
+    commit changes so I can do a clean revert
+
+commit 178f520cb76e108023404f48094109a513aa94b5
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Thu Feb 16 15:56:46 2017 -0600
+
+    Reworked account management to include role table
+
+commit d8e97ad393342f48edd0b442a494e2f6ac95da3a
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Wed Feb 15 23:11:01 2017 -0600
+
+    Fixed problem with UpdateAccounts. Can add and modify users now.
+
+commit 0a2677177ef8060f9f1825ced5bde4a47a5ec84f
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Wed Feb 15 18:12:45 2017 -0600
+
+    Fixed problem with ShowUsers, added daily planning documents
+
+commit d1570f696d5e1c5d96cb4ae0de6c2ed3933e0986
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Wed Feb 15 13:35:16 2017 -0600
+
+    Removed privileges from users table. Capability will be placed in role table instead
+
+commit f9d9fca2c70f4f3f658f522a428942cfc8151e84
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Wed Feb 15 11:59:34 2017 -0600
+
+    minor updates to planning and time logging plus addition of database uml and sql files
+
+commit a39a12b58a9b2e17d70c8f607f21cc620c677fe1
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Tue Feb 14 16:24:41 2017 -0600
+
+    Updated time log before class
+
+commit e0c1638d89a4316dc56d2b12be06575fdf108ac4
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Tue Feb 14 15:38:57 2017 -0600
+
+    Built some more DAOs
+
+commit 162c7c954efb107f1af4c1c8790f3d7360581e41
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Mon Feb 13 14:30:27 2017 -0600
+
+    Back to local version for now. AWS build complications too frustrating
+
+commit f9e6872631dc210a4bc7f06a8713328efa0c9e11
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Wed Feb 8 19:01:05 2017 -0600
+
+    updated time log
+
+commit 71782a95ba53f2783b8dca30e8fa5976b03331e7
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Wed Feb 8 18:59:37 2017 -0600
+
+    Got modify user working from front to back
+
+commit ac2e5c3598f6518fd536068133e898a292cd1520
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Wed Feb 8 12:47:17 2017 -0600
+
+    Able to show table of users and delete a user on Accounts.jsp via ShowUsersServlet.
+
+commit 63f99df045faa2fd3a8181aad91d36186be57bc5
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Wed Feb 8 11:35:37 2017 -0600
+
+    Catch up after getting user list to display
+
+commit b6dbc3d5c30831008f000c4fe83449c8de3c831e
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Wed Feb 8 11:27:00 2017 -0600
+
+    Able to show table of users on Accounts.jsp via ShowUsersServlet.
+
+commit b3dc12885a2b8ca004450aa850654b9b99fef9a6
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Mon Feb 6 16:42:09 2017 -0600
+
+    before first code review
+
+commit 177757a037f02baa58940fb3547511cea90337f5
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Mon Feb 6 16:40:06 2017 -0600
+
+    Completed preparation for first code review
+
+commit 02351e33ab385471d7668f162b4f5774cc1e1208
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Sat Feb 4 18:31:24 2017 -0600
+
+    Remove works now and several JSPs are written and displaying OK
+
+commit a4a6f5e6f2e042573d4c89c06338b952d6e1ea39
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Sat Feb 4 18:21:11 2017 -0600
+
+    Remove works now and several JSPs are written and displaying OK
+
+commit b02b5b92f3a1e295e8e73c2d46dde2d863d80d3d
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Sat Feb 4 14:10:33 2017 -0600
+
+    Added Association Table to database
+
+commit f249a61375825c13113bf36951febf30cb652ab0
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Sat Feb 4 12:22:45 2017 -0600
+
+    Got most of user dao working (all but remove)
+
+commit a7313d3f5530ecee3987ec2569b6eae1dd285133
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Wed Feb 1 21:08:00 2017 -0600
+
+    Update to time log
+
+commit eafb0d28cb3803ffa4367353fd07d5e087de14b5
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Wed Feb 1 21:02:56 2017 -0600
+
+    first attempt to integrate hibernate into project
+
+commit d62aff11a9d775aa6d824ea0034554aab5f0a87a
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Tue Jan 31 20:45:44 2017 -0600
+
+    Corrected path to properties files to include leading slash
+
+commit 511f52a67b1a2be7ca6e9046ee106c76be41ce60
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Tue Jan 31 16:31:21 2017 -0600
+
+    Project repertoire is now deployable
+
+commit f3b878eea23200e08ece5a9fb29273948e95351b
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Fri Jan 27 19:42:08 2017 -0600
+
+    updated time log for today's work
+
+commit 7d66d50fc98ab4ba0c02ed358ebcbcac00469661
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Fri Jan 27 14:09:40 2017 -0600
+
+    initial version - still a melange of my stuff and sample stuff
+
+commit 8979363ccca7d5f32727a5871272e2b49dc06d28
+Author: pknibbe <hknibbe@madisoncollege.edu>
+Date:   Fri Jan 27 13:20:23 2017 -0600
+
+    Initial commit
