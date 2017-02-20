@@ -1,3 +1,9 @@
+commit 4260514189e34e95f42a10b4df9bea187293a83d
+Author: Peter Knibbe <hknibbe@madisoncollege.edu>
+Date:   Mon Feb 20 09:21:48 2017 -0600
+
+    feb20 commit with intent to revert to much older version after making directory copy in local file structure
+
 commit 570c34f646293b93f4bff00840c3d2b32557389b
 Author: Peter Knibbe <hknibbe@madisoncollege.edu>
 Date:   Sat Feb 18 16:27:01 2017 -0600

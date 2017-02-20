@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="title" value="Account Management" />
@@ -6,12 +7,24 @@
     <title>$title</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
 </head><html>
+=======
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:import url="/head.jsp"/>
+
+>>>>>>> parent of 162c7c9... Back to local version for now. AWS build complications too frustrating
 <body>
 <h2>${SessionMessage}</h2><br/><br/>
 
 <div>
+<<<<<<< HEAD
     <h2>Manage Accounts</h2>
     <form action="UpdateAccounts" method="POST">
+=======
+    <h4>Manage Accounts</h4>
+    <form action="/UpdateAccounts" method="POST">
+>>>>>>> parent of 162c7c9... Back to local version for now. AWS build complications too frustrating
         <table>
             <thead><tr><th>Select</th><th>ID</th><th>Name</th><th>Username</th><th>Password</th><th>Role</th></tr></thead>
             <tbody>

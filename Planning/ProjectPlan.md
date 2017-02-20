@@ -29,14 +29,13 @@
 - [X] Create persistence for user crud
 
 ### Week 4
-- [X] Connect user CRUD (application flow F) front-to-back
-- [X] Time log entries
+- [ ] Connect account management (application flow B, F, G, and H) front-to-back
+- [ ] Time log entries
 - [X] Add Maven for building
 - [X] Add 3 more DAO and DAOTest classes (this will complete 4 out of 6 needed)
 
 ### Week 5
 
-- [ ] Connect account management (application flow B, G, and H) front-to-back
 - [ ] Time log entries
 - [ ] Create persistence for remaining classes
 - [ ] Test all persistence classes
