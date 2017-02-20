@@ -65,5 +65,9 @@
 | 2/03 | exercise3 | 1 | figure out how to get all of hibernate configured with the database |
 | 2/04 | Individual Project | 6 | DAO and hibernate, database design, several jsps |
 | 2/06 | Individual Project | 1 | more jsps and plan |
+<<<<<<< HEAD
+| 2/08 | Individual Project | 9 | Manage users from JSP via servlets and DAO |
+>>>>>>> parent of 162c7c9... Back to local version for now. AWS build complications too frustrating
+=======
 | 2/08 | Individual Project | 9 | Manage users from JSP via servlets and DAO |
 >>>>>>> parent of 162c7c9... Back to local version for now. AWS build complications too frustrating

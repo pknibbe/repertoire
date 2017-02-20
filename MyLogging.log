@@ -471,4 +471,7 @@
 2017-02-08 18:58:03,268 96814 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - User(id=7, privileges=12, username=Pieter, name=Pieter)
 2017-02-08 18:58:03,315 96861 [http-nio-8080-exec-17] INFO  persistence.UserDAO  - Updated user User(id=7, privileges=12, username=Pieter, name=Pieter)
 2017-02-08 18:58:03,643 97189 [http-nio-8080-exec-17] INFO  Servlets.UpdateAccounts  - Updated user ID = 7
+<<<<<<< HEAD
+>>>>>>> parent of 162c7c9... Back to local version for now. AWS build complications too frustrating
+=======
 >>>>>>> parent of 162c7c9... Back to local version for now. AWS build complications too frustrating
