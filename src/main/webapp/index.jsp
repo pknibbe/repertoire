@@ -38,7 +38,7 @@ You can also purchase a PSD-file for this template.
 <div id="main">
 
 <div id="sidebar">
-<h3>Unit 2 servlets</h3>
+<h3>Unit 2 butlers</h3>
 <ul>
 <li><a href="/java112/first">First Java112 servlet</a></li>
 <li><a href="/java112/properties">properties servlet</a></li>

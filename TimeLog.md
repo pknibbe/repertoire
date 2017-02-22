@@ -25,7 +25,7 @@
 | 2/10 | Individual Project | 2.75 | Connect to new AWS EC2 instance using MySQL workbench |
 | 2/09 | Class Activity | 1 | Try to debug AWS connection in PuTTY |
 | 2/09 | Extracurricular | 3 | Kid's Code |
-| 2/08 | Individual Project | 9 | Manage users from JSP via servlets and DAO |
+| 2/08 | Individual Project | 9 | Manage users from JSP via butlers and DAO |
 | 2/06 | Individual Project | 1 | more jsps and plan |
 | 2/04 | Individual Project | 6 | DAO and hibernate, database design, several jsps |
 | 2/03 | homework | 1| Slack catch-up and work planning |
@@ -66,8 +66,8 @@
 | 2/04 | Individual Project | 6 | DAO and hibernate, database design, several jsps |
 | 2/06 | Individual Project | 1 | more jsps and plan |
 <<<<<<< HEAD
-| 2/08 | Individual Project | 9 | Manage users from JSP via servlets and DAO |
+| 2/08 | Individual Project | 9 | Manage users from JSP via butlers and DAO |
 >>>>>>> parent of 162c7c9... Back to local version for now. AWS build complications too frustrating
 =======
-| 2/08 | Individual Project | 9 | Manage users from JSP via servlets and DAO |
+| 2/08 | Individual Project | 9 | Manage users from JSP via butlers and DAO |
 >>>>>>> parent of 162c7c9... Back to local version for now. AWS build complications too frustrating

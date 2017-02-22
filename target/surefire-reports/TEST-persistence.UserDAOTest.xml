@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="persistence.UserDAOTest" time="4.342" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="persistence.UserDAOTest" time="0.528" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2016.3.4"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -12,7 +12,6 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7533"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -40,14 +39,13 @@
     <property name="user.timezone" value="America/Chicago"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
-    <property name="idea.launcher.bin.path" value="C:\Users\peter\JetBrains\IntelliJ IDEA 2016.3.2\bin"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="user.name" value="peter"/>
-    <property name="java.class.path" value="C:\Users\peter\JetBrains\IntelliJ IDEA 2016.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.5.2.jar;C:\Users\peter\JetBrains\IntelliJ IDEA 2016.3.2\lib\idea_rt.jar"/>
+    <property name="java.class.path" value="C:\Users\peter\JetBrains\IntelliJ IDEA 2016.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_112\jre"/>
-    <property name="sun.java.command" value="com.intellij.rt.execution.application.AppMain org.codehaus.classworlds.Launcher -Didea.version=2016.3.4 package"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2016.3.4 install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -64,9 +62,12 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="persistence.UserDAOTest" name="testAdd" time="4.05"/>
+  <testcase classname="persistence.UserDAOTest" name="testAdd" time="0.079"/>
   <testcase classname="persistence.UserDAOTest" name="testGet" time="0.072"/>
-  <testcase classname="persistence.UserDAOTest" name="testModifyUserName" time="0.073"/>
-  <testcase classname="persistence.UserDAOTest" name="testGetAll" time="0.063"/>
-  <testcase classname="persistence.UserDAOTest" name="testRemove" time="0.084"/>
+  <testcase classname="persistence.UserDAOTest" name="testModifyUserName" time="0.095"/>
+  <testcase classname="persistence.UserDAOTest" name="testModifyPw" time="0.074"/>
+  <testcase classname="persistence.UserDAOTest" name="testModifyName" time="0.071"/>
+  <testcase classname="persistence.UserDAOTest" name="testModifyRole" time="0.064"/>
+  <testcase classname="persistence.UserDAOTest" name="testGetAll" time="0.038"/>
+  <testcase classname="persistence.UserDAOTest" name="testRemove" time="0.035"/>
 </testsuite>

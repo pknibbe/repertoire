@@ -10,6 +10,7 @@ import java.util.List;
 
 
 /**
+ * Connect entity and database table
  * Created by peter on 2/1/2017.
  */
 public class UserDAO {
@@ -39,7 +40,7 @@ public class UserDAO {
     }
 
     /** save a new user
-     * @param user
+     * @param user the record to add to the users table
      * @return id the id of the inserted record
      */
     public int add(User user) throws HibernateException {
