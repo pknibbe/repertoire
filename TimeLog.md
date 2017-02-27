@@ -2,7 +2,12 @@
 
 | Date | Task | Hours | Notes|
 |------|------|-------|------|
-| 2/22 | Class Preparation | 1 | Watched second SOAP video and 15 minutes of #3 until I hit a roadblock |
+| 2/27 | Individual Project | .5 | Redeployed to AWS for Checkpoint |
+| 2/27 | Class Preparation | 1 | Remaining videos on REST and GIT |
+| 2/25 | Class Preparation | 1 | First video and first 2 activities for week 7 |
+| 2/24 | Slack and Presentation | 2 | Catch up on slack messages and put more work in on presentation |
+| 2/23 | Extracurricular | 4.5 | Volunteered at KidsCodeMadison and started Presentation 2 |
+| 2/23 | Class Preparation | 1 | Watched second SOAP video and 15 minutes of #3 until I hit a roadblock |
 | 2/22 | Presentations | 1.5 | Commented on presentations and recreated my KidsCodeMadison presentation that I lost |
 | 2/22 | Class Activities | .5 | SOAP Activity 1 |
 | 2/21 | Class Preparation | .5 | Watched first video on SOAP |
