@@ -2,6 +2,8 @@
 
 | Date | Task | Hours | Notes|
 |------|------|-------|------|
+| 2/28 | Individual Project | 1 | New servlets and jsps for updating user information |
+| 2/27 | Individual Project | 2.5 | Adding second screen for updating a user's parameters |
 | 2/27 | Individual Project | .5 | Redeployed to AWS for Checkpoint |
 | 2/27 | Class Preparation | 1 | Remaining videos on REST and GIT |
 | 2/25 | Class Preparation | 1 | First video and first 2 activities for week 7 |

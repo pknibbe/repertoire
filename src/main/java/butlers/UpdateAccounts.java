@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.*;
 import java.util.Enumeration;
@@ -48,23 +49,26 @@ public class UpdateAccounts extends HttpServlet {
         while (parameterNames.hasMoreElements()) {
             String parameterName = parameterNames.nextElement();
             logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
-            /*    if (parameterName.equalsIgnoreCase("Delete")) {
-                    roleAndUserManager.removeUserWithRole(identifier);
-                    logger.info("removed user " + identifier);
-                } else if (parameterName.equalsIgnoreCase("Update")) {
+            if (parameterName.equalsIgnoreCase("Delete")) {
+                roleAndUserManager.removeUserWithRole(identifier);
+                logger.info("removed user " + identifier);
+            } else if (parameterName.equalsIgnoreCase("Update")) {
                     String name = request.getParameter("Name");
                     String password = request.getParameter("Password");
                     String userName = request.getParameter("Username");
                     String role = request.getParameter("Role");
                     if (identifier > 0) {
                         logger.info("Updating existing user ID " + identifier);
-                        int updated = roleAndUserManager.updateUserWithRole(identifier, userName, name, password, role);
-                        logger.info("Updated user ID = " + updated);
+                        HttpSession session = request.getSession();
+                        session.setAttribute("UserInfo", roleAndUserManager.getUser(identifier));
+                        String url = "UpdateUser.jsp";
+                        response.sendRedirect(url);
+                        return;
                     } else {
                         int added = roleAndUserManager.addUserWithRole(userName, name, password, role);
                         logger.info("Creating a new user returned " + added);
                     }
-                } */
+                }
         }
 
 

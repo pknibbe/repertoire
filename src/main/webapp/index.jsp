@@ -21,13 +21,11 @@ You can also purchase a PSD-file for this template.
 
 <div id="slogan">Unit 3</div>
 
-<div id="logo"><a href="#">Peter Knibbe Java112 Home Page</a></div>
-
 </div>
 
 <div id="menu">
 <ul>
-<li><a href="http://www.paulawaite.com/education/java112">Course</a></li>
+<li><a href="ShowUsers">Display User Information</a></li>
 <li><a href="https://www.blogger.com/blogger.g?blogID=6672349537718568956&pli=1#allposts/postNum=0">Blog</a></li>
 <li><a href="http://www.peterwkknibbe.wixsite.com/johannaklaassen">Mom</a></li>
 <li><a href="https://www.linkedin.com/in/peterknibbe">LinkedIn</a></li>

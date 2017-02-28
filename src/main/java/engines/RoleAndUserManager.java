@@ -41,6 +41,10 @@ public class RoleAndUserManager {
         return 0;
     }
 
+    public entity.User getUser(int identifier) {
+        return userDAO.get(identifier);
+    }
+
     public void removeUserWithRole(int identifier) {
         if (identifier < 1) return; // can't remove a non-existent entry
         User user = userDAO.get(identifier);
