@@ -80,7 +80,7 @@ public class RoleAndUserManager {
             user.setUser_name(userName);
             user.setName(name);
             if (checkPassword(password)) {
-                user.setPw(password);
+                user.setUser_pass(password);
                 if (checkRoleName(rolename)) {
                     user.setRole_name(rolename);
                     logger.info(user.toString());

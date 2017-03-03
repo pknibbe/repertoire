@@ -8,9 +8,10 @@ Don't want our links in template? You can pay a link removal fee: www.realitysof
 You can also purchase a PSD-file for this template.
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<head>
+<title>Repertoire</title>
+    <h1>noun: The music a person can play</h1>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 

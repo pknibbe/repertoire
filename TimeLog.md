@@ -2,6 +2,7 @@
 
 | Date | Task | Hours | Notes|
 |------|------|-------|------|
+| 3/2  | Individual Project | 2 | Security |
 | 3/2  | Class Exercises | 6 | REST and SOAP |
 | 3/1  | Class Exercise | 1.5 | Creating a RESTFul service for our team project |
 | 2/28 | Individual Project | 1 | New servlets and jsps for updating user information |

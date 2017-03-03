@@ -6,4 +6,46 @@
         id="Your_WebApp_ID"
         version="2.5">
   <display-name>Archetype Created Web Application</display-name>
+
+  <!-- Tell the server to use form-based authentication. -->
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/login.jsp</form-login-page>
+      <form-error-page>/badCredentials.jsp</form-error-page>
+    </form-login-config>
+  </login-config>
+
+  <!-- Protect everything within the "restricted" directory. -->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Accounts</web-resource-name>
+      <url-pattern>/restricted/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>administrator</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+
+  <!-- Protect everything within the "registered" directory. -->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Music</web-resource-name>
+      <url-pattern>/registered/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>administrator</role-name>
+      <role-name>registered-user</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <security-role>
+    <role-name>registered-user</role-name>
+  </security-role>
+
+  <security-role>
+    <role-name>administrator</role-name>
+  </security-role>
+
 </web-app>

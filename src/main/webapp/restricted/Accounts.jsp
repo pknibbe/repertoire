@@ -1,4 +1,4 @@
-<%@include file="head.jsp"%>
+<%@include file="../head.jsp"%>
 <html>
 <c:set var="title" value="Account Management" />
 <body>
@@ -27,8 +27,8 @@
                 <td><input type="text" name="Username" value="" /></td>
                 <td><input type="text" name="Password" value="" /></td>
                 <td><select name="Role">
-                    <option value="admin">Admin</option>
-                    <option value="edit">Editor</option>
+                    <option value="administrator">administrator</option>
+                    <option value="registered-user">registered-user</option>
                     <option value="readOnly">Listener</option>
                 </select></td>
             </tr>

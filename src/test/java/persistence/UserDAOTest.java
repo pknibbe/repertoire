@@ -90,12 +90,12 @@ public class UserDAOTest {
     public void testModifyPw() throws Exception {
         user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId();
-        user.setPw("Johanna");
+        user.setUser_pass("Johanna");
         logger.info(user.toString());
         logger.info("Updated user ID = " + dao.modify(user));
         //dao.modify(user);
         user = dao.get(id);
-        assertEquals("Password not modified", "Johanna", user.getPw());
+        assertEquals("Password not modified", "Johanna", user.getUser_pass());
         userList = dao.getAll();
         assertEquals("Modify added an entry!", numberOfUsers, userList.size());
     }

@@ -86,7 +86,7 @@ public class RoleAndUserManagerTest {
         userList = userDAO.getAll();
         assertEquals("user table username not correct", "Simon", user.getUser_name());
         assertEquals("user table name not correct", "Paul", user.getName());
-        assertEquals("user table password not correct", "Rock5844", user.getPw());
+        assertEquals("user table password not correct", "Rock5844", user.getUser_pass());
         assertEquals("user table rolename not correct", "readOnly", user.getRole_name());
         assertEquals("user table size changed", numberOfRoles, roleList.size());
         logger.info("*** End of testUpdate ***");

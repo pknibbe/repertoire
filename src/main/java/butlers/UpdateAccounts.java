@@ -61,7 +61,7 @@ public class UpdateAccounts extends HttpServlet {
                         logger.info("Updating existing user ID " + identifier);
                         HttpSession session = request.getSession();
                         session.setAttribute("UserInfo", roleAndUserManager.getUser(identifier));
-                        String url = "UpdateUser.jsp";
+                        String url = "restricted/UpdateUser.jsp";
                         response.sendRedirect(url);
                         return;
                     } else {
