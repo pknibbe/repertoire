@@ -27,16 +27,16 @@ public class User {
   private int id;
   private String user_name;
   private String name;
-  private String pw;
+  private String user_pass;
   private String role_name;
 
   public User() {
   }
 
-  public User(String username, String name, String pw, String role) {
+  public User(String username, String name, String user_pass, String role) {
     this.user_name = username;
     this.name = name;
-    this.pw = pw;
+    this.user_pass = user_pass;
     this.role_name = role;
   }
 

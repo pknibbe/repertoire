@@ -10,7 +10,9 @@ You can also purchase a PSD-file for this template.
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<title>Repertoire</title>
+    <h1>Repertoire</h1>
+    <h3>noun: All the Music you can Play</h3>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 
