@@ -2,7 +2,6 @@
 <html>
 <c:set var="title" value="Account Management" />
 <body>
-<h2>${SessionMessage}</h2><br/><br/>
 
 <div>
     <h2>Manage Accounts</h2>
@@ -27,9 +26,8 @@
                 <td><input type="text" name="Username" value="" /></td>
                 <td><input type="text" name="Password" value="" /></td>
                 <td><select name="Role">
-                    <option value="admin">Admin</option>
-                    <option value="edit">Editor</option>
-                    <option value="readOnly">Listener</option>
+                    <option value="administrator">administrator</option>
+                    <option value="registered-user">registered-user</option>
                 </select></td>
             </tr>
             </tbody>

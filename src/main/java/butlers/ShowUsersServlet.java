@@ -41,7 +41,7 @@ import persistence.UserDAO;
         } else
             request.setAttribute("SessionMessage", currentMessage);
 
-        String url = "/Accounts.jsp";
+        String url = "/accounts.jsp";
 
         RequestDispatcher dispatcher = servletContext.getRequestDispatcher(url);
         dispatcher.forward(request, response);

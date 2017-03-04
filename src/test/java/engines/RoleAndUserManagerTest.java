@@ -47,7 +47,7 @@ public class RoleAndUserManagerTest {
     @Test
     public void testAdd() throws Exception {
         logger.info("*** Start of testAdd ***");
-        target.addUserWithRole("Thomas","Dylan", "DoNotGoGently", "admin");
+        target.addUserWithRole("Thomas","Dylan", "DoNotGoGently", "registered-user");
         roleList = roleDAO.getAll();
         logger.info("role list has " + roleList.size() + " entries after addition");
         assertEquals("Add did not work on role table: ", numberOfRoles + 1, roleList.size());
@@ -75,25 +75,25 @@ public class RoleAndUserManagerTest {
         logger.info("*** Start of testUpdate ***");
         User user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId();
-        target.updateUserWithRole(user.getId(), "Simon", "Paul", "Rock5844", "readOnly");
+        target.updateUserWithRole(user.getId(), "Simon", "Paul", "Rock5844", "registered-user");
         logger.info("Updated role ID = " + user.getId());
         Role role = roleDAO.get(id);
         roleList = roleDAO.getAll();
         assertEquals("role table username not correct", "Simon", role.getUser_name());
-        assertEquals("role table rolename not correct", "readOnly", role.getRole_name());
+        assertEquals("role table rolename not correct", "registered-user", role.getRole_name());
         assertEquals("role table size changed", numberOfRoles, roleList.size());
         user = userDAO.get(id);
         userList = userDAO.getAll();
         assertEquals("user table username not correct", "Simon", user.getUser_name());
         assertEquals("user table name not correct", "Paul", user.getName());
-        assertEquals("user table password not correct", "Rock5844", user.getPw());
-        assertEquals("user table rolename not correct", "readOnly", user.getRole_name());
+        assertEquals("user table password not correct", "Rock5844", user.getUser_pass());
+        assertEquals("user table rolename not correct", "registered-user", user.getRole_name());
         assertEquals("user table size changed", numberOfRoles, roleList.size());
         logger.info("*** End of testUpdate ***");
     }
 
     private void justAdd() {
-        target.addUserWithRole("Dylan","Bob", "Stoned2602", "edit");
+        target.addUserWithRole("Dylan","Bob", "Stoned2602", "registered-user");
     }
 
 

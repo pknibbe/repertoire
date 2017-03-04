@@ -66,7 +66,7 @@ public class UserDAO {
         User sessionUser = (User) session.get(User.class, updatedUser.getId());
         sessionUser.setUser_name(updatedUser.getUser_name());
         sessionUser.setName(updatedUser.getName());
-        sessionUser.setPw(updatedUser.getPw());
+        sessionUser.setUser_pass(updatedUser.getUser_pass());
         sessionUser.setRole_name(updatedUser.getRole_name());
         logger.info("Updating user " + sessionUser.getUser_name());
         logger.info(sessionUser.toString());

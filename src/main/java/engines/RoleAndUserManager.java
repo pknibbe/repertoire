@@ -80,7 +80,7 @@ public class RoleAndUserManager {
             user.setUser_name(userName);
             user.setName(name);
             if (checkPassword(password)) {
-                user.setPw(password);
+                user.setUser_pass(password);
                 if (checkRoleName(rolename)) {
                     user.setRole_name(rolename);
                     logger.info(user.toString());
@@ -133,9 +133,8 @@ public class RoleAndUserManager {
 
     private boolean checkRoleName(String rolename) {
         ArrayList<String> definedRoles = new ArrayList<String>();
-        definedRoles.add("admin");
-        definedRoles.add("edit");
-        definedRoles.add("readOnly");
+        definedRoles.add("administrator");
+        definedRoles.add("registered-user");
 
         return (definedRoles.contains(rolename));
     }
