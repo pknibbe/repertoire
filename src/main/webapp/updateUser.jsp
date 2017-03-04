@@ -8,7 +8,7 @@
 
 <body>
         <h3>${sessionMessage}</h3><br/>
-        <h4>Add a User</h4>
+        <h4>Update a User</h4>
         <form action="/UpdateUserInformation" method="POST">
             <table>
                 <thead><tr><th>Field</th><th>Value</th></tr></thead>

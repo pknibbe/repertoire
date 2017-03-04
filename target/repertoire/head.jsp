@@ -4,6 +4,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Repertoire</title>
+    <h1>Repertoire</h1>
+    <h3>noun: All the Music you can Play</h3>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 

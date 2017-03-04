@@ -26,8 +26,8 @@
                 <td><input type="text" name="Username" value="" /></td>
                 <td><input type="text" name="Password" value="" /></td>
                 <td><select name="Role">
-                    <option value="admin">administrator</option>
-                    <option value="edit">registered-user</option>
+                    <option value="administrator">administrator</option>
+                    <option value="registered-user">registered-user</option>
                 </select></td>
             </tr>
             </tbody>
