@@ -180,16 +180,16 @@
       <Position>3</Position>
       <DataType>char(25)|0</DataType>
     </column>
-    <column id="53" parent="17" name="pw">
-      <Position>4</Position>
-      <DataType>char(25)|0</DataType>
-    </column>
-    <column id="54" parent="17" name="user_name">
+    <column id="53" parent="17" name="user_name">
       <Position>2</Position>
       <DataType>char(25)|0</DataType>
     </column>
-    <column id="55" parent="17" name="role_name">
+    <column id="54" parent="17" name="role_name">
       <Position>5</Position>
+      <DataType>char(25)|0</DataType>
+    </column>
+    <column id="55" parent="17" name="user_pass">
+      <Position>4</Position>
       <DataType>char(25)|0</DataType>
     </column>
     <index id="56" parent="17" name="username">
