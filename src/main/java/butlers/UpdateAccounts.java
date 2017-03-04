@@ -48,25 +48,21 @@ public class UpdateAccounts extends HttpServlet {
 
         while (parameterNames.hasMoreElements()) {
             String parameterName = parameterNames.nextElement();
-            logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
             if (parameterName.equalsIgnoreCase("Delete")) {
                 roleAndUserManager.removeUserWithRole(identifier);
-                logger.info("removed user " + identifier);
             } else if (parameterName.equalsIgnoreCase("Update")) {
                     String name = request.getParameter("Name");
                     String password = request.getParameter("Password");
                     String userName = request.getParameter("Username");
                     String role = request.getParameter("Role");
                     if (identifier > 0) {
-                        logger.info("Updating existing user ID " + identifier);
                         HttpSession session = request.getSession();
                         session.setAttribute("UserInfo", roleAndUserManager.getUser(identifier));
                         String url = "restricted/UpdateUser.jsp";
                         response.sendRedirect(url);
                         return;
                     } else {
-                        int added = roleAndUserManager.addUserWithRole(userName, name, password, role);
-                        logger.info("Creating a new user returned " + added);
+                        roleAndUserManager.addUserWithRole(userName, name, password, role);
                     }
                 }
         }

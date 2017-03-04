@@ -133,9 +133,8 @@ public class RoleAndUserManager {
 
     private boolean checkRoleName(String rolename) {
         ArrayList<String> definedRoles = new ArrayList<String>();
-        definedRoles.add("admin");
-        definedRoles.add("edit");
-        definedRoles.add("readOnly");
+        definedRoles.add("administrator");
+        definedRoles.add("registered-user");
 
         return (definedRoles.contains(rolename));
     }
