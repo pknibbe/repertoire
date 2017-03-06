@@ -1,7 +1,10 @@
 # Time Log
 
-| Date | Task | Hours | Notes|
-|------|------|-------|------|
+| Date | Task | Hours  | Notes|
+|------|------|--------|------|
+| 3/6  | Individual Project |   | testing new pages and page decomposition |
+| 3/4  | Team Project | 2 | Worked with Glenn on high-level document creation |
+| 3/4  | Individual Project | 2 | Tried again on security, moving on to website stuff |
 | 3/3  | Individual and Team Projects | 10.5 | Working on security, design, and AWS deployment |
 | 3/2  | Class Exercises | 6 | REST and SOAP |
 | 3/1  | Class Exercise | 1.5 | Creating a RESTFul service for our team project |

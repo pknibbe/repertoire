@@ -9,16 +9,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.*;
-import persistence.UserDAO;
-
+import persistence.PlaylistDAO;
 /**
- * Get the full list of users to populate the user management page
- * Created by peter on 2/8/2017.
+ * Provides access to Music Play Lists
+ * Created by peter on 3/4/2017.
  */
 @WebServlet(
-        name = "ShowUsers",
-        urlPatterns = { "/ShowUsers" }
-)public class ShowUsersServlet  extends HttpServlet {
+        name = "ShowPlayLists",
+        urlPatterns = { "/ShowPlayLists" })
+public class ShowPlayLists extends HttpServlet {
 
     /**
      *  Handles HTTP GET requests.
@@ -30,18 +29,13 @@ import persistence.UserDAO;
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        UserDAO userdao = new UserDAO();
+        PlaylistDAO dao = new PlaylistDAO();
 
         ServletContext servletContext = getServletContext();
 
-        request.setAttribute("users", userdao.getAll());
-        String currentMessage = (String) request.getAttribute("SessionMessage");
-        if (currentMessage == null) {
-            request.setAttribute("SessionMessage", "");
-        } else
-            request.setAttribute("SessionMessage", currentMessage);
+        request.setAttribute("playlists", dao.getAll());
 
-        String url = "/accounts.jsp";
+        String url = "/playlists.jsp";
 
         RequestDispatcher dispatcher = servletContext.getRequestDispatcher(url);
         dispatcher.forward(request, response);
