@@ -26,7 +26,7 @@ public class UpdateAccounts extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     private final RoleAndUserManager roleAndUserManager = new RoleAndUserManager();
     /**
-     *  Handles HTTP GET requests.
+     *  Handles HTTP POST requests.
      *
      *@param  request                   the HttpServletRequest object
      *@param  response                   the HttpServletResponse object

@@ -2,7 +2,8 @@
 
 | Date | Task | Hours  | Notes|
 |------|------|--------|------|
-| 3/6  | Individual Project |   | testing new pages and page decomposition |
+| 3/6  | Individual Project | 3 | Adding screens and processing for uploading songs |
+| 3/6  | Individual Project | 1 | testing new pages and page decomposition |
 | 3/4  | Team Project | 2 | Worked with Glenn on high-level document creation |
 | 3/4  | Individual Project | 2 | Tried again on security, moving on to website stuff |
 | 3/3  | Individual and Team Projects | 10.5 | Working on security, design, and AWS deployment |

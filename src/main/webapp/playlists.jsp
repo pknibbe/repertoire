@@ -11,12 +11,16 @@
         <h3>Select a Playlist</h3>
         <form action="ViewPlaylist" method="Get">
             <table>
-               <c:forEach var="agenda" items="${playlists}">
+               <c:forEach var="playbill" items="${playlists}">
                    <tr>
-                        <td><input type="radio" name="listID" value=${agenda.id} /></td>
-                        <td>${agenda.name}</td>
+                        <td><input type="radio" name="listID" value=${playbill.id} /></td>
+                        <td>${playbill.name}</td>
                    </tr>
                 </c:forEach>
+                <tr>
+                    <td><input type="radio" name="listID" value=0 /></td>
+                    <td>NewPlaylist</td>
+                </tr>
             </table>
             <p>   </p>
             <input type="submit" name="Enter" value="Enter" />
