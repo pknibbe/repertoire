@@ -31,14 +31,20 @@ import persistence.UserDAO;
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         UserDAO userdao = new UserDAO();
-
+        RequestDispatcher dispatcher;
         ServletContext servletContext = getServletContext();
+        String role = "administrator";
+        if (role.equalsIgnoreCase((String) servletContext.getAttribute("user_role"))) {
 
-        request.setAttribute("users", userdao.getAll());
+            request.setAttribute("users", userdao.getAll());
+            servletContext.setAttribute("message", "");
 
-        String url = "/accounts.jsp";
+            dispatcher = servletContext.getRequestDispatcher("/accounts.jsp");
+        } else {
+            servletContext.setAttribute("message", "Not authorized to view user information.");
+            dispatcher = servletContext.getRequestDispatcher("/internalHome.jsp");
 
-        RequestDispatcher dispatcher = servletContext.getRequestDispatcher(url);
+        }
         dispatcher.forward(request, response);
     }
 }

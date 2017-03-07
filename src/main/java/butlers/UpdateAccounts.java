@@ -2,6 +2,7 @@ package butlers;
 
 import engines.RoleAndUserManager;
 import org.apache.log4j.Logger;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,43 +36,45 @@ public class UpdateAccounts extends HttpServlet {
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        ServletContext servletContext = getServletContext();
+        String role = "administrator";
+        if (role.equalsIgnoreCase((String) servletContext.getAttribute("user_role"))) {
+            String userID = request.getParameter("userID");
+            int identifier;
+            if (userID != null) { // protect against empty input
+                identifier = Integer.valueOf(userID);
+            } else {
+                identifier = 0;
+            }
 
-        String userID = request.getParameter("userID");
-        int identifier;
-        if (userID != null) { // protect against empty input
-            identifier = Integer.valueOf(userID);
-        } else {
-            identifier = 0;
-        }
+            Enumeration<String> parameterNames = request.getParameterNames();
 
-        Enumeration<String> parameterNames = request.getParameterNames();
-
-        while (parameterNames.hasMoreElements()) {
-            String parameterName = parameterNames.nextElement();
-            logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
-            if (parameterName.equalsIgnoreCase("Delete")) {
-                roleAndUserManager.removeUserWithRole(identifier);
-                logger.info("removed user " + identifier);
-            } else if (parameterName.equalsIgnoreCase("Update")) {
-                    String name = request.getParameter("Name");
-                    String password = request.getParameter("Password");
-                    String userName = request.getParameter("Username");
-                    String role = request.getParameter("Role");
-                    if (identifier > 0) {
-                        logger.info("Updating existing user ID " + identifier);
-                        HttpSession session = request.getSession();
-                        session.setAttribute("UserInfo", roleAndUserManager.getUser(identifier));
-                        String url = "updateUser.jsp";
-                        response.sendRedirect(url);
-                        return;
-                    } else {
-                        int added = roleAndUserManager.addUserWithRole(userName, name, password, role);
-                        logger.info("Creating a new user returned " + added);
+            while (parameterNames.hasMoreElements()) {
+                String parameterName = parameterNames.nextElement();
+                logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
+                if (parameterName.equalsIgnoreCase("Delete")) {
+                    roleAndUserManager.removeUserWithRole(identifier);
+                    logger.info("removed user " + identifier);
+                } else if (parameterName.equalsIgnoreCase("Update")) {
+                        String name = request.getParameter("Name");
+                        String password = request.getParameter("Password");
+                        String userName = request.getParameter("Username");
+                        role = request.getParameter("Role");
+                        if (identifier > 0) {
+                            logger.info("Updating existing user ID " + identifier);
+                            HttpSession session = request.getSession();
+                            session.setAttribute("UserInfo", roleAndUserManager.getUser(identifier));
+                            String url = "updateUser.jsp";
+                            response.sendRedirect(url);
+                            return;
+                        } else {
+                            int added = roleAndUserManager.addUserWithRole(userName, name, password, role);
+                            logger.info("Creating a new user returned " + added);
+                        }
                     }
-                }
+            }
+
         }
-
-
         String url = "ShowUsers";
 
         response.sendRedirect(url);

@@ -2,6 +2,7 @@
 
 | Date | Task | Hours  | Notes|
 |------|------|--------|------|
+| 3/7  | Individual Project | 2 | Building in security without tomcat stuff |
 | 3/6  | Individual Project | 3 | Adding screens and processing for uploading songs |
 | 3/6  | Individual Project | 1 | testing new pages and page decomposition |
 | 3/4  | Team Project | 2 | Worked with Glenn on high-level document creation |
