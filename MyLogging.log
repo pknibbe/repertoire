@@ -4291,3 +4291,22 @@
 2017-03-07 15:34:26,089 292229 [http-nio-8080-exec-4] INFO  persistence.RoleDAO  - Updating role 4
 2017-03-07 15:34:26,090 292230 [http-nio-8080-exec-4] INFO  persistence.RoleDAO  - Role(id=4, user_name=rknibbe, role_name=registered-user)
 2017-03-07 15:34:26,090 292230 [http-nio-8080-exec-4] INFO  persistence.RoleDAO  - Updated role Role(id=4, user_name=rknibbe, role_name=registered-user)
+2017-03-08 10:48:22,167 0    [http-nio-8080-exec-6] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2017-03-08 10:48:22,246 79   [http-nio-8080-exec-6] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2017-03-08 10:48:22,265 98   [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2017-03-08 10:48:22,272 105  [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2017-03-08 10:48:22,628 461  [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-03-08 10:48:22,629 462  [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-03-08 10:48:23,014 847  [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2017-03-08 10:48:23,652 1485 [http-nio-8080-exec-6] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-03-08 10:48:23,671 1504 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/repertoire]
+2017-03-08 10:48:23,674 1507 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2017-03-08 10:48:23,675 1508 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2017-03-08 10:48:23,683 1516 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-03-08 10:48:24,855 2688 [http-nio-8080-exec-6] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-03-08 10:48:26,290 4123 [http-nio-8080-exec-6] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-03-08 10:48:26,324 4157 [http-nio-8080-exec-6] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2017-03-08 10:49:48,270 86103 [http-nio-8080-exec-2] INFO  butlers.UploadSong  - Part Header = form-data; name="file"; filename="02 Peace of Mind.mp3"
+2017-03-08 10:49:48,273 86106 [http-nio-8080-exec-2] INFO  butlers.UploadSong  - You either did not specify a file to upload or are trying to upload a file to a protected or nonexistent location.
+2017-03-08 10:49:48,273 86106 [http-nio-8080-exec-2] INFO  butlers.UploadSong  - <br/> ERROR: Data\PeaceOfMind.mp3\02 Peace of Mind.mp3 (The system cannot find the path specified)
+2017-03-08 10:49:48,273 86106 [http-nio-8080-exec-2] INFO  butlers.UploadSong  - Problems during file upload. Error: Data\PeaceOfMind.mp3\02 Peace of Mind.mp3 (The system cannot find the path specified)

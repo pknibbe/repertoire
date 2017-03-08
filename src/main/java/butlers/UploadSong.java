@@ -16,8 +16,8 @@ import java.io.*;
  * Created by peter on 3/6/2017.
  */
 @WebServlet(
-        name = "uploadSong",
-        urlPatterns = { "/uploadSong" }
+        name = "UploadSong",
+        urlPatterns = { "/UploadSong" }
 )
 @MultipartConfig
 public class UploadSong extends HttpServlet {
@@ -37,8 +37,8 @@ public class UploadSong extends HttpServlet {
         final PrintWriter writer = response.getWriter();
 
         try {
-            out = new FileOutputStream(new File(path + File.separator
-                    + fileName));
+            logger.info("New File will be " + path);
+            out = new FileOutputStream(new File(path));
             filecontent = filePart.getInputStream();
 
             int read;
@@ -50,12 +50,12 @@ public class UploadSong extends HttpServlet {
             logger.info("New file " + fileName + " created at " + path);
             logger.info("File " + fileName + " being uploaded to " + path);
         } catch (FileNotFoundException fne) {
-            logger.info("You either did not specify a file to upload or are "
+            logger.error("You either did not specify a file to upload or are "
                     + "trying to upload a file to a protected or nonexistent "
                     + "location.");
-            logger.info("<br/> ERROR: " + fne.getMessage());
+            logger.error("<br/> ERROR: " + fne.getMessage());
 
-            logger.info( "Problems during file upload. Error: " + fne.getMessage());
+            logger.error( "Problems during file upload. Error: " + fne.getMessage());
         } finally {
             if (out != null) {
                 out.close();
@@ -67,7 +67,9 @@ public class UploadSong extends HttpServlet {
                 writer.close();
             }
         }
-    }
+        String url = "index.jsp";
+
+        response.sendRedirect(url);    }
 
     private String getFileName(final Part part) {
         final String partHeader = part.getHeader("content-disposition");

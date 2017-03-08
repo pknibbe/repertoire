@@ -1,6 +1,5 @@
 Manifest-Version: 1.0
-Archiver-Version: Plexus Archiver
 Built-By: peter
-Created-By: Apache Maven 3.3.9
+Created-By: IntelliJ IDEA
 Build-Jdk: 1.8.0_112
 

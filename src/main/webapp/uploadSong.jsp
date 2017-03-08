@@ -9,7 +9,7 @@
 
     <div>
         <h3>Upload Song</h3>
-        <form method="POST" action="uploadSong" enctype="multipart/form-data">
+        <form method="POST" action="UploadSong" enctype="multipart/form-data">
             File:
             <input type="file" name="file" id="file" /> <br/>
             Destination:
