@@ -5,10 +5,26 @@
 <body>
     <div id="container">
         <c:import url="/titlebar.jsp" /> <!-- opens body and container -->
+        <h2>${message}</h2>
+        <h3>Login</h3>
+        <form action="ExternalAction" method="GET">
+            user name:  <input type="text" name="user_name"  /><br />
+            password: <input type="text" name="user_pass" /><br />
+            <input type="submit" value="Submit" name="Enter" />
+        </form>
 
-        <div id="main">
-            <c:import url="/mainpanel.jsp" /> <!-- links to other places -->
-        </div>   <!-- end main -->
+        <br /><br />
+
+        <div id="request">
+
+        <h3>Request sign-in help</h3>
+        <form action="ExternalAction" method="POST">
+            Request an account:  <input type="radio" name="options" value="account" /><br />
+            request reminder of user name: <input type="radio" name="options" value="username" /><br />
+            request password reset: <input type="radio" name="options" value="password" /><br />
+            <input type="submit" name="Request" value="Enter" />
+        </form>
+        </div>
 
         <c:import url="/footer.jsp" /> <!-- just a copywrite statement -->
 
