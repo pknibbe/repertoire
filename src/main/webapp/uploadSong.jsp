@@ -14,6 +14,10 @@
             <input type="file" name="file" id="file" /> <br/>
             Destination:
             <input type="text" value="Data/" name="destination"/> <br/>
+            Performer:
+            <input type="text" name="performer"/> <br/>
+            Duration:
+            <input type="text" name="duration"/> <br/>
             <input type="submit" value="Upload" name="upload" id="upload" />
         </form>
     </div>

@@ -1,7 +1,7 @@
 package butlers;
 
+import java.nio.file.*;
 import org.apache.log4j.Logger;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.*;
+import entity.Song;
+import persistence.SongDAO;
 
 /**
  * Handle File Upload Requests
@@ -28,48 +30,21 @@ public class UploadSong extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
         // Create path components to save the file
-        final String path = request.getParameter("destination");
+        final String path = "../" + request.getParameter("destination");
         final Part filePart = request.getPart("file");
         final String fileName = getFileName(filePart);
-
-        OutputStream out = null;
-        InputStream filecontent = null;
         final PrintWriter writer = response.getWriter();
-
-        try {
-            logger.info("New File will be " + path);
-            out = new FileOutputStream(new File(path));
-            filecontent = filePart.getInputStream();
-
-            int read;
-            final byte[] bytes = new byte[1024];
-
-            while ((read = filecontent.read(bytes)) != -1) {
-                out.write(bytes, 0, read);
-            }
-            logger.info("New file " + fileName + " created at " + path);
-            logger.info("File " + fileName + " being uploaded to " + path);
-        } catch (FileNotFoundException fne) {
-            logger.error("You either did not specify a file to upload or are "
-                    + "trying to upload a file to a protected or nonexistent "
-                    + "location.");
-            logger.error("<br/> ERROR: " + fne.getMessage());
-
-            logger.error( "Problems during file upload. Error: " + fne.getMessage());
-        } finally {
-            if (out != null) {
-                out.close();
-            }
-            if (filecontent != null) {
-                filecontent.close();
-            }
-            if (writer != null) {
-                writer.close();
-            }
+        Boolean success = writeFile(path, filePart, fileName, writer);
+        logger.info("writeFile returned " + success);
+        if (success) {
+            Song song = new Song(path, fileName, request.getParameter("performer"), request.getParameter("duration"));
+            SongDAO songDAO = new SongDAO();
+            songDAO.add(song);
         }
+        logger.info("redirecting back to index.jsp");
         String url = "index.jsp";
-
-        response.sendRedirect(url);    }
+        response.sendRedirect(url);
+    }
 
     private String getFileName(final Part part) {
         final String partHeader = part.getHeader("content-disposition");
@@ -81,5 +56,49 @@ public class UploadSong extends HttpServlet {
             }
         }
         return null;
+    }
+
+    private Boolean writeFile(String path, Part filePart, String fileName, PrintWriter writer) throws IOException {
+        OutputStream out = null;
+        InputStream filecontent = null;
+        Boolean success = java.lang.Boolean.TRUE;
+        logger.info("in writeFile");
+
+        try {
+            logger.info("in try block. about to open " + path);
+            Path relPath = Paths.get(path);
+            logger.info("File " + fileName + " being uploaded to " + relPath.toAbsolutePath());
+            out = new FileOutputStream(new File(path));
+            logger.info("FileOutputStream successfully opened");
+            filecontent = filePart.getInputStream();
+            logger.info("InputStream successfully opened");
+
+            int read;
+            final byte[] bytes = new byte[1024];
+
+
+            while ((read = filecontent.read(bytes)) != -1) {
+                out.write(bytes, 0, read);
+            }
+            logger.info("File content copied");
+        } catch (FileNotFoundException fne) {
+            logger.error( "Problems during file upload. Error: " + fne.getMessage());
+            success = java.lang.Boolean.FALSE;
+        } finally {
+            if (out != null) {
+                out.close();
+            }
+            logger.info("closed out");
+            if (filecontent != null) {
+                filecontent.close();
+            }
+            logger.info("closed filecontent");
+
+            if (writer != null) {
+                writer.close();
+            }
+            logger.info("closed writer");
+        }
+        return success;
     }
 }

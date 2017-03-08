@@ -1,6 +1,7 @@
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\butlers\ShowPlayLists.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\engines\RoleAndUserManager.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\butlers\ViewPlaylist.java
+C:\Users\peter\EnterpriseJava\repertoire\src\main\java\butlers\UploadSong.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\butlers\ShowUsers.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\engines\SongManager.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\entity\Credential.java
@@ -8,7 +9,6 @@ C:\Users\peter\EnterpriseJava\repertoire\src\main\java\butlers\ExternalAction.ja
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\engines\AssociationManager.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\engines\PlaylistAndSongManager.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\entity\Song.java
-C:\Users\peter\EnterpriseJava\repertoire\src\main\java\butlers\UploadFile.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\entity\Association.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\persistence\PlaylistDAO.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\butlers\UpdateUserInformation.java

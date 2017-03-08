@@ -6,6 +6,9 @@ import javax.persistence.*;
 import lombok.ToString;
 import lombok.Setter;
 import lombok.Getter;
+@Setter
+@Getter
+@ToString
 
 /**
  * Created by peter on 2/1/2017.
@@ -33,43 +36,4 @@ public class Song {
     this.duration = duration;
   }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPerformer() {
-        return performer;
-    }
-
-    public void setPerformer(String performer) {
-        this.performer = performer;
-    }
-
-    public String getDuration() {
-        return duration;
-    }
-
-    public void setDuration(String duration) {
-        this.duration = duration;
-    }
 }
