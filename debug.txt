@@ -1,0 +1,38 @@
+2017-03-09 13:48:35,235 25090 [http-nio-8080-exec-8] INFO  butlers.ShowUsers  - Dispatching request forward to /accounts.jsp
+2017-03-09 13:48:35,239 25094 [http-nio-8080-exec-8] INFO  butlers.ShowUsers  - Using dispatcher org.apache.catalina.core.ApplicationDispatcher@7590f57d
+2017-03-09 13:49:06,802 56657 [http-nio-8080-exec-8] INFO  butlers.UpdateAccounts  - Parameter userID is 0
+2017-03-09 13:49:06,803 56658 [http-nio-8080-exec-8] INFO  butlers.UpdateAccounts  - Parameter Name is Pieter Knibbe
+2017-03-09 13:49:06,804 56659 [http-nio-8080-exec-8] INFO  butlers.UpdateAccounts  - Parameter Username is oknibbe
+2017-03-09 13:49:06,804 56659 [http-nio-8080-exec-8] INFO  butlers.UpdateAccounts  - Parameter Password is 2830ChewStreet
+2017-03-09 13:49:06,804 56659 [http-nio-8080-exec-8] INFO  butlers.UpdateAccounts  - Parameter Role is registered-user
+2017-03-09 13:49:06,805 56660 [http-nio-8080-exec-8] INFO  butlers.UpdateAccounts  - Parameter Update is Update
+2017-03-09 13:49:06,805 56660 [http-nio-8080-exec-8] INFO  engines.RoleAndUserManager  - Creating a new user
+2017-03-09 13:49:06,806 56661 [http-nio-8080-exec-8] INFO  persistence.RoleDAO  - Saving role 0
+2017-03-09 13:49:06,806 56661 [http-nio-8080-exec-8] INFO  persistence.RoleDAO  - Role(id=0, user_name=oknibbe, role_name=registered-user)
+2017-03-09 13:49:07,303 57158 [http-nio-8080-exec-8] INFO  engines.RoleAndUserManager  - Role(id=6, user_name=oknibbe, role_name=registered-user)
+2017-03-09 13:49:07,304 57159 [http-nio-8080-exec-8] INFO  engines.RoleAndUserManager  - User(id=0, user_name=oknibbe, name=Pieter Knibbe, user_pass=2830ChewStreet, role_name=registered-user)
+2017-03-09 13:49:07,304 57159 [http-nio-8080-exec-8] INFO  persistence.UserDAO  - Saving user oknibbe
+2017-03-09 13:49:07,304 57159 [http-nio-8080-exec-8] INFO  persistence.UserDAO  - User(id=0, user_name=oknibbe, name=Pieter Knibbe, user_pass=2830ChewStreet, role_name=registered-user)
+2017-03-09 13:49:07,321 57176 [http-nio-8080-exec-8] INFO  engines.RoleAndUserManager  - Added user ID = 6
+2017-03-09 13:49:07,321 57176 [http-nio-8080-exec-8] INFO  butlers.UpdateAccounts  - Creating a new user returned 6
+2017-03-09 13:49:07,321 57176 [http-nio-8080-exec-8] INFO  butlers.UpdateAccounts  - sending redirect to ShowUsers
+2017-03-09 13:49:07,348 57203 [http-nio-8080-exec-9] INFO  butlers.ShowUsers  - Dispatching request forward to /accounts.jsp
+2017-03-09 13:49:07,349 57204 [http-nio-8080-exec-9] INFO  butlers.ShowUsers  - Using dispatcher org.apache.catalina.core.ApplicationDispatcher@445b1c0d
+2017-03-09 13:49:15,108 64963 [http-nio-8080-exec-5] INFO  butlers.ShowSongs  - In ShowSongs.doGet
+2017-03-09 13:49:15,128 64983 [http-nio-8080-exec-5] INFO  butlers.ShowSongs  - getting list of songs
+2017-03-09 13:49:15,144 64999 [http-nio-8080-exec-5] INFO  butlers.ShowSongs  - Dispatching request forward to /uploadSong.jsp
+2017-03-09 13:49:15,148 65003 [http-nio-8080-exec-5] INFO  butlers.ShowSongs  - Using dispatcher org.apache.catalina.core.ApplicationDispatcher@191a1e83
+2017-03-09 13:50:11,158 121013 [http-nio-8080-exec-10] INFO  butlers.UploadSong  - Part Header = form-data; name="file"; filename="07 Something About You.mp3"
+2017-03-09 13:50:11,159 121014 [http-nio-8080-exec-10] INFO  butlers.UploadSong  - in writeFile
+2017-03-09 13:50:11,160 121015 [http-nio-8080-exec-10] INFO  butlers.UploadSong  - in try block. about to open ../Data/SomethingAboutYou.mp3
+2017-03-09 13:50:11,161 121016 [http-nio-8080-exec-10] INFO  butlers.UploadSong  - File 07 Something About You.mp3 being uploaded to C:\Users\peter\tomee\bin\..\Data\SomethingAboutYou.mp3
+2017-03-09 13:50:11,165 121020 [http-nio-8080-exec-10] INFO  butlers.UploadSong  - FileOutputStream successfully opened
+2017-03-09 13:50:11,166 121021 [http-nio-8080-exec-10] INFO  butlers.UploadSong  - InputStream successfully opened
+2017-03-09 13:50:12,549 122404 [http-nio-8080-exec-10] INFO  butlers.UploadSong  - File content copied
+2017-03-09 13:50:12,555 122410 [http-nio-8080-exec-10] INFO  butlers.UploadSong  - closed out
+2017-03-09 13:50:12,555 122410 [http-nio-8080-exec-10] INFO  butlers.UploadSong  - closed filecontent
+2017-03-09 13:50:12,565 122420 [http-nio-8080-exec-10] INFO  butlers.UploadSong  - closed writer
+2017-03-09 13:50:12,567 122422 [http-nio-8080-exec-10] INFO  butlers.UploadSong  - writeFile returned true
+2017-03-09 13:50:12,572 122427 [http-nio-8080-exec-10] INFO  persistence.SongDAO  - Saving Song Song(id=0, location=../Data/SomethingAboutYou.mp3, name=07 Something About You.mp3, performer=Boston, duration=3:47)
+2017-03-09 13:50:12,660 122515 [http-nio-8080-exec-10] INFO  butlers.UploadSong  - redirecting to ShowSongs
+2017-03-09 13:50:12,660 122515 [http-nio-8080-exec-10] INFO  butlers.UploadSong  - sending redirect to ShowSongs

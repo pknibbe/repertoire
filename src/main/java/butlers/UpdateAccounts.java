@@ -77,6 +77,7 @@ public class UpdateAccounts extends HttpServlet {
         }
         String url = "ShowUsers";
 
+        logger.info("sending redirect to " + url);
         response.sendRedirect(url);
     }
 }

@@ -51,14 +51,16 @@ public class UploadSong extends HttpServlet {
                 SongDAO songDAO = new SongDAO();
                 songDAO.add(song);
             }
-            logger.info("redirecting to ShowPlaylists");
-            url = "ShowPlaylists";
-        } else {
-            servletContext.setAttribute("message", "user not authenticated");
-            url = "index.jsp";
-        }
-        response.sendRedirect(url);
+            logger.info("redirecting to internalHome.jsp");
+            url = "/internalHome.jsp";
+            } else {
+                servletContext.setAttribute("message", "user not authenticated");
+                url = "index.jsp";
+            }
+            logger.info("sending redirect to " + url);
+            response.sendRedirect(url);
     }
+
     private String getFileName(final Part part) {
         final String partHeader = part.getHeader("content-disposition");
         logger.info( "Part Header = " + partHeader);

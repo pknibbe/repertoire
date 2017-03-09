@@ -1,5 +1,7 @@
 package butlers;
 
+import engines.Authentication;
+import persistence.SongDAO;
 import org.apache.log4j.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -9,17 +11,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.lang.*;
-import persistence.UserDAO;
 
 /**
- * Get the full list of users to populate the user management page
- * Created by peter on 2/8/2017.
+ * Provides access to Music Play Lists
+ * Created by peter on 3/4/2017.
  */
 @WebServlet(
-        name = "ShowUsers",
-        urlPatterns = { "/ShowUsers" }
-)public class ShowUsers extends HttpServlet {
+        name = "ShowSongs",
+        urlPatterns = { "/ShowSongs" })
+public class ShowSongs extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
 
     /**
@@ -32,24 +32,24 @@ import persistence.UserDAO;
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        UserDAO userdao = new UserDAO();
-        RequestDispatcher dispatcher;
+        logger.info("In ShowSongs.doGet");
+        SongDAO dao = new SongDAO();
+
         ServletContext servletContext = getServletContext();
-        String role = "administrator";
-        if (role.equalsIgnoreCase((String) servletContext.getAttribute("user_role"))) {
+        Authentication authentication = new Authentication();
+        String url;
 
-            request.setAttribute("users", userdao.getAll());
+        if (authentication.authenticated(servletContext)) {
+            logger.info("getting list of songs");
+            request.setAttribute("songs", dao.getAll());
             servletContext.setAttribute("message", "");
-
-            dispatcher = servletContext.getRequestDispatcher("/accounts.jsp");
-            logger.info("Dispatching request forward to /accounts.jsp");
-
+            url = "/uploadSong.jsp";
         } else {
-            servletContext.setAttribute("message", "Not authorized to view user information.");
-            dispatcher = servletContext.getRequestDispatcher("/internalHome.jsp");
-            logger.info("Dispatching request forward to /internalHome.jsp");
-
+            servletContext.setAttribute("message", "user not authenticated");
+            url = "/index.jsp";
         }
+        logger.info("Dispatching request forward to " + url);
+        RequestDispatcher dispatcher = servletContext.getRequestDispatcher(url);
         logger.info("Using dispatcher " + dispatcher.toString());
         dispatcher.forward(request, response);
     }

@@ -7,6 +7,21 @@
     <c:import url="/titlebar.jsp" /> <!-- opens body and container -->
     <p>   </p>
 
+    <div id="songs">
+        <h3>Available Songs</h3>
+        <table>
+            <thead><tr><th>name</th><th>performer</th><th>duration</th></tr></thead>
+            <tbody>
+                <c:forEach var="song" items="${songs}">
+                    <tr>
+                        <td>${song.name}</td>
+                        <td>${song.performer}</td>
+                        <td>${song.duration}</td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+    </div>
     <div>
         <h3>Upload Song</h3>
         <form method="POST" action="UploadSong" enctype="multipart/form-data">
