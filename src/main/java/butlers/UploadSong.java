@@ -52,7 +52,7 @@ public class UploadSong extends HttpServlet {
                 songDAO.add(song);
             }
             logger.info("redirecting to internalHome.jsp");
-            url = "/internalHome.jsp";
+            url = "/uploadSong.jsp";
             } else {
                 servletContext.setAttribute("message", "user not authenticated");
                 url = "index.jsp";
