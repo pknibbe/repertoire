@@ -9,7 +9,7 @@
 
     <div>
         <h3>Select a Playlist</h3>
-        <form action="ViewPlaylist" method="Get">
+        <form action="ViewPlaylist" method="Post">
             <table>
                <c:forEach var="playbill" items="${playlists}">
                    <tr>
@@ -19,7 +19,7 @@
                 </c:forEach>
                 <tr>
                     <td><input type="radio" name="listID" value=0 /></td>
-                    <td>NewPlaylist</td>
+                    <td>NewPlaylist: <input type="text" name="name"></td>
                 </tr>
             </table>
             <p>   </p>

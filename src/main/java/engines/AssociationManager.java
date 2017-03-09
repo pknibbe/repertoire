@@ -25,11 +25,11 @@ public class AssociationManager {
 
     /**
      * Gets single association for a pair of table keys
-     * @param leftTableName
-     * @param leftTableKey
-     * @param rightTableKey
-     * @param rightTableName
-     * @return
+     * @param leftTableName The name of the first table
+     * @param leftTableKey The unique key to the first table
+     * @param rightTableKey The unique key to the other table
+     * @param rightTableName The name of the other table
+     * @return The entire Association entry
      */
     public Association getAssociation(String leftTableName, int leftTableKey, int rightTableKey, String rightTableName)
     {
@@ -45,6 +45,13 @@ public class AssociationManager {
         return null;
     }
 
+    /**
+     * Gets all associations for a single table key and other table name
+     * @param identifier The unique key for the left table
+     * @param leftTableName The name of the first table
+     * @param rightTableName The name of the other table
+     * @return All of the keys to the second table associated with the first table and key
+     */
     public ArrayList<Integer> getIDs(int identifier, String leftTableName, String rightTableName) {
         ArrayList<Integer> ids = new ArrayList<Integer>();
 

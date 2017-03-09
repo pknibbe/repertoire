@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.*;
+
+import engines.Authentication;
 import persistence.PlaylistDAO;
 /**
  * Provides access to Music Play Lists
@@ -32,11 +34,19 @@ public class ShowPlayLists extends HttpServlet {
         PlaylistDAO dao = new PlaylistDAO();
 
         ServletContext servletContext = getServletContext();
+        Authentication authentication = new Authentication();
+        String url;
 
+        if (authentication.authenticated(servletContext)) {
+        servletContext.setAttribute("message", "");
         request.setAttribute("playlists", dao.getAll());
+        url = "/playlists.jsp";
 
-        String url = "/playlists.jsp";
 
+        } else {
+            servletContext.setAttribute("message", "user not authenticated");
+            url = "index.jsp";
+        }
         RequestDispatcher dispatcher = servletContext.getRequestDispatcher(url);
         dispatcher.forward(request, response);
     }

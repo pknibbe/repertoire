@@ -1,7 +1,11 @@
 package butlers;
 
 import java.nio.file.*;
+
+import engines.Authentication;
 import org.apache.log4j.Logger;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -28,24 +32,33 @@ public class UploadSong extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        ServletContext servletContext = getServletContext();
+        Authentication authentication = new Authentication();
+        String url;
 
-        // Create path components to save the file
-        final String path = "../" + request.getParameter("destination");
-        final Part filePart = request.getPart("file");
-        final String fileName = getFileName(filePart);
-        final PrintWriter writer = response.getWriter();
-        Boolean success = writeFile(path, filePart, fileName, writer);
-        logger.info("writeFile returned " + success);
-        if (success) {
-            Song song = new Song(path, fileName, request.getParameter("performer"), request.getParameter("duration"));
-            SongDAO songDAO = new SongDAO();
-            songDAO.add(song);
+        if (authentication.authenticated(servletContext)) {
+            servletContext.setAttribute("message", "");
+
+            // Create path components to save the file
+            final String path = "../" + request.getParameter("destination");
+            final Part filePart = request.getPart("file");
+            final String fileName = getFileName(filePart);
+            final PrintWriter writer = response.getWriter();
+            boolean success = writeFile(path, filePart, fileName, writer);
+            logger.info("writeFile returned " + success);
+            if (success) {
+                Song song = new Song(path, fileName, request.getParameter("performer"), request.getParameter("duration"));
+                SongDAO songDAO = new SongDAO();
+                songDAO.add(song);
+            }
+            logger.info("redirecting to ShowPlaylists");
+            url = "ShowPlaylists";
+        } else {
+            servletContext.setAttribute("message", "user not authenticated");
+            url = "index.jsp";
         }
-        logger.info("redirecting back to index.jsp");
-        String url = "index.jsp";
         response.sendRedirect(url);
     }
-
     private String getFileName(final Part part) {
         final String partHeader = part.getHeader("content-disposition");
         logger.info( "Part Header = " + partHeader);
@@ -58,10 +71,10 @@ public class UploadSong extends HttpServlet {
         return null;
     }
 
-    private Boolean writeFile(String path, Part filePart, String fileName, PrintWriter writer) throws IOException {
+    private boolean writeFile(String path, Part filePart, String fileName, PrintWriter writer) throws IOException {
         OutputStream out = null;
         InputStream filecontent = null;
-        Boolean success = java.lang.Boolean.TRUE;
+        boolean success = java.lang.Boolean.TRUE;
         logger.info("in writeFile");
 
         try {

@@ -1,8 +1,10 @@
 package butlers;
 
 import engines.RoleAndUserManager;
+import engines.Authentication;
 //import org.apache.log4j.Logger;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,17 +34,24 @@ public class UpdateUserInformation extends HttpServlet {
          */
         public void doPost(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
+            ServletContext servletContext = getServletContext();
+            Authentication authentication = new Authentication();
+            String url;
 
+            if (authentication.authenticated(servletContext)) {
+                roleAndUserManager.updateUserWithRole(
+                        Integer.valueOf(request.getParameter("id")),
+                        request.getParameter("UserName"),
+                        request.getParameter("Name"),
+                        request.getParameter("NewPassword"),
+                        request.getParameter("Role"));
 
-            roleAndUserManager.updateUserWithRole(
-                    Integer.valueOf(request.getParameter("id")),
-                    request.getParameter("UserName"),
-                    request.getParameter("Name"),
-                    request.getParameter("NewPassword"),
-                    request.getParameter("Role"));
+                url = "ShowUsers";
 
-            String url = "ShowUsers";
-
+            } else {
+                servletContext.setAttribute("message", "user not authenticated");
+                url = "index.jsp";
+            }
             response.sendRedirect(url);
         }
     }

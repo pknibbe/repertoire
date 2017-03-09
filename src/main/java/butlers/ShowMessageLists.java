@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.*;
+
+import engines.Authentication;
 import persistence.MessageDAO;
 /**
  * Provides access to messages
@@ -33,18 +35,26 @@ public class ShowMessageLists extends HttpServlet {
         MessageDAO dao = new MessageDAO();
 
         ServletContext servletContext = getServletContext();
+        Authentication authentication = new Authentication();
+        String url;
 
-        request.setAttribute("users", dao.getAll());
-        String currentMessage = (String) request.getAttribute("SessionMessage");
-        if (currentMessage == null) {
-            request.setAttribute("SessionMessage", "");
-        } else
-            request.setAttribute("SessionMessage", currentMessage);
+        if (authentication.authenticated(servletContext)) {
 
-        String url = "/accounts.jsp";
+            request.setAttribute("users", dao.getAll());
+            String currentMessage = (String) request.getAttribute("SessionMessage");
+            if (currentMessage == null) {
+                request.setAttribute("SessionMessage", "");
+            } else {
+                request.setAttribute("SessionMessage", currentMessage);
+            }
 
-        RequestDispatcher dispatcher = servletContext.getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+            url = "/accounts.jsp";
+
+            RequestDispatcher dispatcher = servletContext.getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+        } else {
+            servletContext.setAttribute("message", "user not authenticated");
+            url = "index.jsp";
+        }
     }
-
 }

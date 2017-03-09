@@ -8,33 +8,37 @@
     <p>   </p>
 
     <div>
-        <h3>Manage Playlist ${PlayList.name}</h3>
+        <h3>Manage Playlist ${playlist.name}</h3>
         <form action="ProcessPlayListRequest" method="POST">
             <table>
+                <input type="hidden" name="playlistID" value="${playlist.id}">
                 <thead><tr><th>Select</th><th>Name</th><th>Performer</th><th>Duration</th></tr></thead>
                 <tbody>
-                    <c:forEach var="song" items="${songs}">
+                    <c:forEach var="song" items="${listSongs}">
                         <tr>
-                            <td><input type="radio" name="userID" value=${song.id} /></td>
+                            <td><input type="radio" name="songID" value=${song.id} /></td>
                             <td>${song.name}</td>
                             <td>${song.performer}</td>
                             <td>${song.duration}</td>
                         </tr>
                     </c:forEach>
+
                     <tr>
-                        <td><input type="radio" name="userID" value="0" /></td>
-                        <td>New Song</td>
+                        <td><input type="radio" name="songID" value="0" /></td>
+                        <td><select name="song">
+                            <c:forEach var="ditty" items="${allSongs}">
+                                <option value="${ditty.id}">${ditty.name}</option>
+                            </c:forEach>
+                        </select></td>
                         <td></td>
                         <td></td>
                     </tr>
                 </tbody>
             </table><br/><br/>
-            <input type="submit" name="Update" value="Update" />
-            <input type="submit" name="Delete" value="Delete" />
-            <input type="submit" name="MoveUp" value="MoveUp" />
-            <input type="submit" name="MoveDown" value="MoveDown" />
-            <input type="submit" name="Play" value="Play" />
-            <input type="submit" name="About" value="About" />
+            <input type="submit" name="submit" value="Add" />
+            <input type="submit" name="submit" value="Delete" />
+            <input type="submit" name="submit" value="Play" />
+            <input type="submit" name="submit" value="About" />
         </form>
     </div>
 

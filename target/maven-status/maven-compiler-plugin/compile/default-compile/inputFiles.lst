@@ -4,6 +4,7 @@ C:\Users\peter\EnterpriseJava\repertoire\src\main\java\butlers\ViewPlaylist.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\butlers\UploadSong.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\butlers\ShowUsers.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\engines\SongManager.java
+C:\Users\peter\EnterpriseJava\repertoire\src\main\java\engines\Authentication.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\entity\Credential.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\butlers\ExternalAction.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\engines\AssociationManager.java
@@ -24,6 +25,7 @@ C:\Users\peter\EnterpriseJava\repertoire\src\main\java\entity\TableObject.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\persistence\DAO.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\persistence\SongDAO.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\persistence\UserDAO.java
+C:\Users\peter\EnterpriseJava\repertoire\src\main\java\butlers\ProcessPlayListRequest.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\persistence\AssociationDAO.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\butlers\UpdateAccounts.java
 C:\Users\peter\EnterpriseJava\repertoire\src\main\java\persistence\MessageDAO.java

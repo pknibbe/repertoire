@@ -20,8 +20,9 @@
         <h3>Request sign-in help</h3>
         <form action="ExternalAction" method="POST">
             Request an account:  <input type="radio" name="options" value="account" /><br />
-            request reminder of user name: <input type="radio" name="options" value="username" /><br />
-            request password reset: <input type="radio" name="options" value="password" /><br />
+            Request reminder of user name: <input type="radio" name="options" value="username" /><br />
+            Request password reset: <input type="radio" name="options" value="password" /><br />
+            Message text: <input type="text" name="message"/><br />
             <input type="submit" name="Request" value="Enter" />
         </form>
         </div>

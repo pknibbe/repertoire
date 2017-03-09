@@ -2,7 +2,8 @@
 
 | Date | Task | Hours  | Notes|
 |------|------|--------|------|
-| 3/8  | Individual Project |   | Uploading music files |
+| 3/9  | Individual Project |   | Debug management of empty playlists |
+| 3/8  | Individual Project | 7.5  | Uploading music files and creating playlists |
 | 3/7  | Team Project       | 1.5 | Utility for computing coordinates and distances |
 | 3/7  | Individual Project | 2 | Building in security without tomcat stuff |
 | 3/6  | Individual Project | 3 | Adding screens and processing for uploading songs |
