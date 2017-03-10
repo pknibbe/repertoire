@@ -51,6 +51,8 @@ public class UserDAO {
         int id = (Integer) session.save(user);
         transaction.commit();
         session.close();
+        user.setUser_role_id(id);
+        id = modify(user);
         return id;
     }
 
@@ -68,6 +70,7 @@ public class UserDAO {
         sessionUser.setName(updatedUser.getName());
         sessionUser.setUser_pass(updatedUser.getUser_pass());
         sessionUser.setRole_name(updatedUser.getRole_name());
+        sessionUser.setUser_role_id(updatedUser.getUser_role_id());
         logger.info("Updating user " + sessionUser.getUser_name());
         logger.info(sessionUser.toString());
         User resultantUser = (User) session.merge(sessionUser);

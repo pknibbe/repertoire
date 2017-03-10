@@ -29,6 +29,7 @@ public class User {
   private String name;
   private String user_pass;
   private String role_name;
+  private int user_role_id;
 
   public User() {
   }

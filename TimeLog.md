@@ -2,6 +2,8 @@
 
 | Date | Task | Hours  | Notes|
 |------|------|--------|------|
+| 3/10 | Individual Project |   | Database changes |
+| 3/9  | Team Project       | 3 | Scrum and work on data flow objects |
 | 3/9  | Individual Project | 2 | Debug management of songs |
 | 3/9  | Individual Project | 1 | Debug management of empty playlists |
 | 3/8  | Individual Project | 7.5  | Uploading music files and creating playlists |

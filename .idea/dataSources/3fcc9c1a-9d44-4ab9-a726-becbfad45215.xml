@@ -192,23 +192,27 @@
       <Position>4</Position>
       <DataType>char(25)|0</DataType>
     </column>
-    <index id="56" parent="17" name="username">
+    <column id="56" parent="17" name="user_role_id">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="57" parent="17" name="username">
       <ColNames>user_name</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="57" parent="17" name="user_name">
+    <index id="58" parent="17" name="user_name">
       <ColNames>user_name</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="58" parent="17" name="PRIMARY">
+    <key id="59" parent="17" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="59" parent="17" name="user_name">
+    <key id="60" parent="17" name="user_name">
       <ColNames>user_name</ColNames>
       <UnderlyingIndexName>user_name</UnderlyingIndexName>
     </key>
-    <key id="60" parent="17" name="username">
+    <key id="61" parent="17" name="username">
       <ColNames>user_name</ColNames>
       <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>
