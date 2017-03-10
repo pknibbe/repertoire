@@ -19,7 +19,7 @@ public class SongManager {
 
     public int addSong (Song song, int userID) {
         int songID = songDAO.add(song);
-        Association association = new Association("users", userID, songID, "songs");
+        Association association = new Association("users", userID, songID, "songs", "accessor");
         associationDAO.add(association);
         return songID;
     }

@@ -57,7 +57,7 @@ public class ViewPlaylist extends HttpServlet {
                 PlaylistDAO playlistDAO = new PlaylistDAO();
                 listID = playlistDAO.add(playlist);
                 Association association = new Association("users",
-                        (Integer) servletContext.getAttribute("user_id"), listID, "playlists");
+                        (Integer) servletContext.getAttribute("user_id"), listID, "playlists", "accessor");
                 AssociationDAO associationDAO = new AssociationDAO();
                 associationDAO.add(association);
 

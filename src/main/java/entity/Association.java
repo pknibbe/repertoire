@@ -28,14 +28,16 @@ public class Association {
     private int leftTableKey;
     private int rightTableKey;
     private String rightTableName;
+    private String relationship;
 
     public Association() {
     }
 
-    public Association(String leftTableName, int leftKey, int rightKey, String rightTableName) {
+    public Association(String leftTableName, int leftKey, int rightKey, String rightTableName, String relationship) {
         this.leftTableName = leftTableName;
         this.leftTableKey = leftKey;
         this.rightTableKey = rightKey;
         this.rightTableName = rightTableName;
+        this.relationship = relationship;
     }
 }

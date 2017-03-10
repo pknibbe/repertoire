@@ -71,6 +71,7 @@ public class AssociationDAO {
             sessionAssociation.setLeftTableName(updatedAssociation.getLeftTableName());
             sessionAssociation.setRightTableKey(updatedAssociation.getRightTableKey());
             sessionAssociation.setRightTableName(updatedAssociation.getRightTableName());
+            sessionAssociation.setRelationship(updatedAssociation.getRelationship());
             logger.info("Updating association " + sessionAssociation.getId());
             logger.info(sessionAssociation.toString());
             Association resultantAssociation = (Association) session.merge(sessionAssociation);

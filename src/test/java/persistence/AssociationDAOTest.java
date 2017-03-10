@@ -75,7 +75,7 @@ public class AssociationDAOTest {
         }
 
         private void justAdd() {
-            association = new entity.Association("users", 1, 12, "messages");
+            association = new entity.Association("users", 1, 12, "messages", "author");
             logger.info("New association is " + association.toString());
             dao.add(association);
         }
