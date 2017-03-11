@@ -2,10 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="/head.jsp" /> <!-- opens body and container -->
-<body>
-    <div id="container">
-        <c:import url="/titlebar.jsp" /> <!-- opens body and container -->
-        <h2>${message}</h2>
+
+
         <h3>Login</h3>
         <form action="ExternalAction" method="GET">
             user name:  <input type="text" name="user_name"  /><br />
@@ -27,8 +25,5 @@
         </form>
         </div>
 
-        <c:import url="/footer.jsp" /> <!-- just a copywrite statement -->
+        <c:import url="/footer.jsp" />
 
-    </div>   <!-- end container -->
-</body>
-</html>

@@ -2,7 +2,6 @@ body {
 padding: 50px 100px;
 margin: 0;
 font-family: Tahoma, Geneva, sans-serif;
-background-image: url(images/body_bg.png);
 }
 
 #container {
@@ -12,28 +11,19 @@ padding: 10px;
 
 #header {
 height: 150px;
-background-image: url(images/header_bg.png);
+background-image: url(images/logo.png);
+    color: #00FFFF
 }
-#logo {
-font-size: 30px;
-background: url(images/header.png) no-repeat;
-height: 100px;
-padding: 50px 0 0 30px;
-}
-#logo a {
-color: #FFFFFF;
-text-decoration: none;
-}
+
 #slogan {
 float: right;
 font-size: 18px;
-color: #FFFFFF;
+color: #FF00FF;
 padding: 60px 30px 0 0;
 }
 
 #menu {
 height: 40px;
-background-image: url(images/menu_bg.png);
 margin-top: 5px;
 }
 #menu ul {
@@ -49,7 +39,7 @@ background: url(images/menu_border.png) right no-repeat;
 float: left;
 height: 20px;
 padding: 10px 30px;
-color: #FFFFFF;
+color: #000000;
 font-size: 15px;
 font-weight: bold;
 text-decoration: none;
@@ -63,7 +53,6 @@ background: url(images/menu_border.png);
 float: left;
 width: 100%;
 margin: 5px 0;
-background: url(images/main_bg.png) right repeat-y;
 color: #1F1507;
 font-size: 11px;
 }
@@ -76,35 +65,7 @@ color: #000000;
 #main br {
 line-height: 8px;
 }
-#sidebar {
-width: 160px;
-float: right;
-padding: 0 30px 30px 30px;
-margin-top: 10px;
-}
-#sidebar h3 {
-font-size: 17px;
-font-weight: normal;
-margin: 20px 0 5px 0;
-}
-#sidebar ul {
-margin: 0;
-padding: 0;
-border-top: 1px solid #FEFAF3;
-}
-#sidebar li {
-list-style: none;
-border-bottom: 1px solid #FEFAF3;
-}
-#sidebar li a {
-color: #1F1507;
-text-decoration: none;
-padding: 3px;
-display: block;
-}
-#sidebar li a:hover {
-background-color: #FEFAF3;
-}
+
 #text {
 line-height: 14px;
 margin-right: 225px;
