@@ -46,8 +46,8 @@ import persistence.UserDAO;
 
         } else {
             servletContext.setAttribute("message", "Not authorized to view user information.");
-            dispatcher = servletContext.getRequestDispatcher("/internalHome.jsp");
-            logger.info("Dispatching request forward to /internalHome.jsp");
+            dispatcher = servletContext.getRequestDispatcher("ShowPlayLists");
+            logger.info("Dispatching request forward to ShowPlayLists");
 
         }
         logger.info("Using dispatcher " + dispatcher.toString());

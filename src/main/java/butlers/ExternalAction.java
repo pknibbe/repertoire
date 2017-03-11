@@ -49,7 +49,7 @@ import java.io.IOException;
         servletContext.setAttribute("message", "Welcome " + manager.getName(user));
         servletContext.setAttribute("name", name);
 
-        String url = "/internalHome.jsp";
+        String url = "/ShowPlayLists";
 
         dispatcher = servletContext.getRequestDispatcher(url);
         dispatcher.forward(request, response);

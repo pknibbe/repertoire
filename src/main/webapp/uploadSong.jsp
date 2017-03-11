@@ -2,12 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="/head.jsp" /> <!-- opens body and container -->
-<body>
-<div id="container">
-    <c:import url="/titlebar.jsp" /> <!-- opens body and container -->
-    <p>   </p>
 
-    <div id="songs">
         <h3>Available Songs</h3>
         <table>
             <thead><tr><th>name</th><th>performer</th><th>duration</th></tr></thead>
@@ -21,7 +16,7 @@
                 </c:forEach>
             </tbody>
         </table>
-    </div>
+
     <div>
         <h3>Upload Song</h3>
         <form method="POST" action="UploadSong" enctype="multipart/form-data">
@@ -37,12 +32,5 @@
         </form>
     </div>
 
-    <div id="main">
-        <c:import url="/mainpanel.jsp" /> <!-- links to other places -->
-    </div>   <!-- end main -->
 
-    <c:import url="/footer.jsp" /> <!-- just a copywrite statement -->
-
-</div>   <!-- end container -->
-</body>
-</html>
+    <c:import url="/footer.jsp" />

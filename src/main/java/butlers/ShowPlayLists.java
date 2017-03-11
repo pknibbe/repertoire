@@ -42,7 +42,6 @@ public class ShowPlayLists extends HttpServlet {
         request.setAttribute("playlists", dao.getAll());
         url = "/playlists.jsp";
 
-
         } else {
             servletContext.setAttribute("message", "user not authenticated");
             url = "index.jsp";

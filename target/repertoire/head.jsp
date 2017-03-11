@@ -22,7 +22,7 @@ You can also purchase a PSD-file for this template.
 
         <img src="images/logo.png" width = 250px>
         <h1>All the Music You Can Play</h1>
-        
+
     </div>
     <h2>${message}</h2>
 
@@ -33,7 +33,6 @@ You can also purchase a PSD-file for this template.
         <ul>
             <li><a href="ShowPlayLists">Playlists</a></li>
             <li><a href="ShowMessageLists">Messages</a></li>
-            <li><a href="internalHome.jsp">Home</a></li>
             <li><a href="ShowSongs">Songs</a></li>
             <c:if test="${role eq boss}" >
                 <li><a href="ShowUsers">Users</a></li>
