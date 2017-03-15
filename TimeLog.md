@@ -2,7 +2,9 @@
 
 | Date | Task | Hours  | Notes|
 |------|------|--------|------|
-| 3/14 | Individual Project | 1 | Rework playlists to use directory structure |
+
+| 3/15 | Individual Project | 4.5 | Rework and Unit test AssociationManager Start doing same with PlaylistManager |
+| 3/14 | Individual Project | 1 | Start to rework playlists to use directory structure |
 | 3/10 | Individual Project | 7 | Database and page style changes |
 | 3/9  | Team Project       | 3 | Scrum and work on data flow objects |
 | 3/9  | Individual Project | 2 | Debug management of songs |

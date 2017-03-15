@@ -71,11 +71,11 @@ public class ManagePlaylist extends HttpServlet {
                     url = "sharePlaylist.jsp";
                 } else { // make changes to the playlist via another web page
 
-                    FullPlayList fullPlayList = PlayListmanager.compilePlayList(listID);
+/*                    FullPlayList fullPlayList = PlayListmanager.compilePlayList(listID);
 
                     servletContext.setAttribute("playlist", fullPlayList.getPlaylist());
                     servletContext.setAttribute("listSongs", fullPlayList.getSongs());
-                    servletContext.setAttribute("allSongs", songDAO.getAll());
+                    servletContext.setAttribute("allSongs", songDAO.getAll()); */
                     url = "manageAPlayList.jsp";
                 }
             } else { // need to create a new playlist and associate it with the session user
