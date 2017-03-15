@@ -14,12 +14,12 @@ import org.apache.log4j.Logger;
 import static org.junit.Assert.*;
 
 /**
- * Test the methods of the RoleAndUserManager class
+ * Test the methods of the UserManager class
  * Created by peter on 2/16/2017.
  */
-public class RoleAndUserManagerTest {
+public class UserManagerTest {
 
-    private RoleAndUserManager target;
+    private UserManager target;
     private List<User> userList;
     private List<Role> roleList;
     private final UserDAO userDAO = new UserDAO();
@@ -30,7 +30,7 @@ public class RoleAndUserManagerTest {
 
     @Before
     public void setup() throws Exception {
-        target = new RoleAndUserManager();
+        target = new UserManager();
         userList = userDAO.getAll();
         roleList = roleDAO.getAll();
         logger.info("In @Before, userList has " + userList.size() + "entries");

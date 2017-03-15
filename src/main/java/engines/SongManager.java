@@ -24,7 +24,7 @@ public class SongManager {
         return songID;
     }
 
-    public void removeSong (int songID, int userID) {
+/*    public void removeSong (int songID, int userID) {
         songDAO.remove(songID);
         AssociationManager manager = new AssociationManager();
         Association association = manager.getAssociation("users", userID, songID, "songs");
@@ -34,4 +34,5 @@ public class SongManager {
     public int updateSong (Song song) {
         return songDAO.modify(song);
     }
+*/
 }

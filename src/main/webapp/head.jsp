@@ -21,7 +21,9 @@ You can also purchase a PSD-file for this template.
     <div id="header">
 
         <img src="images/logo.png" width = 250px>
-        <h1>All the Music You Can Play</h1>
+        <h1>noun: All the Music You Can Play</h1>
+        <p>  </p>
+        <h2>Welcome, ${name}. If you are not ${name}, please logout and log back in as yourself.</h2>
 
     </div>
     <h2>${message}</h2>
@@ -31,12 +33,12 @@ You can also purchase a PSD-file for this template.
         <c:set var="boss" value="administrator"></c:set>
 
         <ul>
-            <li><a href="ShowPlayLists">Playlists</a></li>
-            <li><a href="ShowMessageLists">Messages</a></li>
-            <li><a href="ShowSongs">Songs</a></li>
+            <li><a href="ShowPlayLists">Music Center</a></li>
+            <li><a href="ShowMessageLists">Message Center</a></li>
             <c:if test="${role eq boss}" >
-                <li><a href="ShowUsers">Users</a></li>
+                <li><a href="ShowUsers">Administration Center</a></li>
             </c:if>
+            <li><a href="Logout">LogOut</a></li>
         </ul>
     </div>
     <!--end header -->

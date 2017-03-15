@@ -2,7 +2,7 @@ package butlers;
 
 import java.nio.file.*;
 
-import engines.Authentication;
+import engines.AuthenticationManager;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletContext;
@@ -33,10 +33,10 @@ public class UploadSong extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         ServletContext servletContext = getServletContext();
-        Authentication authentication = new Authentication();
+        AuthenticationManager authenticationManager = new AuthenticationManager();
         String url;
 
-        if (authentication.authenticated(servletContext)) {
+        if (authenticationManager.authenticated(servletContext)) {
             servletContext.setAttribute("message", "");
 
             // Create path components to save the file

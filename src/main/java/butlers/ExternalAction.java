@@ -1,6 +1,6 @@
 package butlers;
 
-import engines.RoleAndUserManager;
+import engines.UserManager;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -30,7 +30,7 @@ import java.io.IOException;
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RoleAndUserManager manager = new RoleAndUserManager();
+        UserManager manager = new UserManager();
         ServletContext servletContext = getServletContext();
         RequestDispatcher dispatcher;
         int user = manager.VerifyCredentials(request.getParameter("user_name"), request.getParameter("user_pass"));

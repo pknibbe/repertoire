@@ -4,22 +4,28 @@
 <c:import url="/head.jsp" /> <!-- opens body and container -->
 
         <h3>Select a Playlist</h3>
-        <form action="ViewPlaylist" method="Post">
+        <form action="ManagePlaylist" method="Post">
             <table>
-               <c:forEach var="playbill" items="${playlists}">
-                   <tr>
-                        <td><input type="radio" name="listID" value=${playbill.id} /></td>
-                        <td>${playbill.name}</td>
-                   </tr>
-                </c:forEach>
-                <tr>
-                    <td><input type="radio" name="listID" value=0 /></td>
-                    <td>NewPlaylist: <input type="text" name="name"></td>
-                </tr>
+                <thead><tr><th>Select</th><th>Name</th><th>Action</th></tr></thead>
+                <tbody>
+                   <c:forEach var="playbill" items="${playlists}">
+                       <tr>
+                            <td><input type="radio" name="listID" value=${playbill.id} /></td>
+                            <td>${playbill.name}</td>
+                           <td><select name="Action">
+                               <option value="AddSong">AddSong</option>
+                               <option value="Share">Share</option>
+                               <option value="Delete">Delete</option>
+                           </select></td>                       </tr>
+                    </c:forEach>
+                    <tr>
+                        <td><input type="radio" name="listID" value=0 /></td>
+                        <td>NewPlaylist: <input type="text" name="name"></td>
+                    </tr>
+                </tbody>
             </table>
             <p>   </p>
             <input type="submit" name="Enter" value="Enter" />
-            <input type="submit" name="Delete" value="Delete" />
         </form>
 
     <c:import url="/footer.jsp" />

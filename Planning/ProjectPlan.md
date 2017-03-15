@@ -43,7 +43,7 @@
 
 ### Week 6
 - [ ] Time log entries
-- [ ] Build user security and authentication into site
+- [ ] Build user security and authenticationManager into site
 - [ ] Test all account management front-to-back
 
 ### Week 7

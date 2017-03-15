@@ -2,6 +2,7 @@
 
 | Date | Task | Hours  | Notes|
 |------|------|--------|------|
+| 3/14 | Individual Project | 1 | Rework playlists to use directory structure |
 | 3/10 | Individual Project | 7 | Database and page style changes |
 | 3/9  | Team Project       | 3 | Scrum and work on data flow objects |
 | 3/9  | Individual Project | 2 | Debug management of songs |

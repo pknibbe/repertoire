@@ -1,6 +1,6 @@
 package butlers;
 
-import engines.RoleAndUserManager;
+import engines.UserManager;
 import org.apache.log4j.Logger;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -25,7 +25,7 @@ import java.util.Enumeration;
 )
 public class UpdateAccounts extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final RoleAndUserManager roleAndUserManager = new RoleAndUserManager();
+    private final UserManager userManager = new UserManager();
     /**
      *  Handles HTTP POST requests.
      *
@@ -53,7 +53,7 @@ public class UpdateAccounts extends HttpServlet {
                 String parameterName = parameterNames.nextElement();
                 logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                 if (parameterName.equalsIgnoreCase("Delete")) {
-                    roleAndUserManager.removeUserWithRole(identifier);
+                    userManager.removeUserWithRole(identifier);
                     logger.info("removed user " + identifier);
                 } else if (parameterName.equalsIgnoreCase("Update")) {
                         String name = request.getParameter("Name");
@@ -63,12 +63,12 @@ public class UpdateAccounts extends HttpServlet {
                         if (identifier > 0) {
                             logger.info("Updating existing user ID " + identifier);
                             HttpSession session = request.getSession();
-                            session.setAttribute("UserInfo", roleAndUserManager.getUser(identifier));
+                            session.setAttribute("UserInfo", userManager.getUser(identifier));
                             String url = "updateUser.jsp";
                             response.sendRedirect(url);
                             return;
                         } else {
-                            int added = roleAndUserManager.addUserWithRole(userName, name, password, role);
+                            int added = userManager.addUserWithRole(userName, name, password, role);
                             logger.info("Creating a new user returned " + added);
                         }
                     }

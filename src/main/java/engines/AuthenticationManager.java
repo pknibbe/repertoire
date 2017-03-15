@@ -6,7 +6,7 @@ import javax.servlet.ServletContext;
  * Simple check that servlet context has gone through login
  * Created by peter on 3/8/2017.
  */
-public class Authentication {
+public class AuthenticationManager {
 
     public boolean authenticated(ServletContext servletContext) {
         boolean aok = java.lang.Boolean.FALSE;
