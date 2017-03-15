@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Enumeration;
 
 import engines.PlaylistManager;
 
@@ -18,8 +19,8 @@ import engines.PlaylistManager;
  */
 
 @WebServlet(
-        name = "UpdateAccounts",
-        urlPatterns = { "/UpdateAccounts" }
+        name = "DeletePlaylist",
+        urlPatterns = { "/DeletePlaylist" }
 )
 public class DeletePlaylist extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
@@ -37,8 +38,19 @@ public class DeletePlaylist extends HttpServlet {
             throws ServletException, IOException {
         ServletContext servletContext = getServletContext();
 
-        manager.remove((Integer) servletContext.getAttribute("listID"));
-
+        Enumeration<String> parameterNames = request.getParameterNames();
+        while (parameterNames.hasMoreElements()) {
+            String parameterName = parameterNames.nextElement();
+            logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
+            if (parameterName.equalsIgnoreCase("Delete")) {
+                manager.remove((Integer) servletContext.getAttribute("listID"));
+                servletContext.setAttribute("message", "List Deleted");
+                logger.info("removed playlist " + servletContext.getAttribute("listID"));
+            } else if (parameterName.equalsIgnoreCase("Cancel")) {
+                logger.info("Did not remove playlist " + servletContext.getAttribute("listID"));
+                servletContext.setAttribute("message", "List Not Deleted");
+            }
+        }
         String url = "/ShowPlayLists";
 
         logger.info("sending redirect to " + url);

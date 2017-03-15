@@ -11,8 +11,8 @@ padding: 10px;
 
 #header {
 height: 150px;
-background-image: url(images/logo.png);
-    color: #00FFFF
+background-color: #FFFFFF;
+    color: Green;
 }
 
 #slogan {

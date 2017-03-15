@@ -11,7 +11,7 @@
                    <c:forEach var="playbill" items="${playlists}">
                        <tr>
                             <td><input type="radio" name="listID" value=${playbill.id} /></td>
-                            <td>${playbill.name}</td>
+                            <td><input type="text" name="name" value=${playbill.name}></td>
                            <td><select name="Action">
                                <option value="AddSong">AddSong</option>
                                <option value="Share">Share</option>
@@ -20,7 +20,8 @@
                     </c:forEach>
                     <tr>
                         <td><input type="radio" name="listID" value=0 /></td>
-                        <td>NewPlaylist: <input type="text" name="name"></td>
+                        <td>name: <input type="text" name="name"></td>
+                        <td>Create New</td>
                     </tr>
                 </tbody>
             </table>

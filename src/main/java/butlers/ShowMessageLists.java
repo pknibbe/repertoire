@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.*;
 
-import engines.AuthenticationManager;
+import engines.UserManager;
 import persistence.MessageDAO;
 /**
  * Provides access to messages
@@ -35,10 +35,10 @@ public class ShowMessageLists extends HttpServlet {
         MessageDAO dao = new MessageDAO();
 
         ServletContext servletContext = getServletContext();
-        AuthenticationManager authenticationManager = new AuthenticationManager();
+        UserManager userManager = new UserManager();
         String url;
 
-        if (authenticationManager.authenticated(servletContext)) {
+        if (userManager.authenticated(servletContext)) {
 
             request.setAttribute("users", dao.getAll());
             String currentMessage = (String) request.getAttribute("SessionMessage");

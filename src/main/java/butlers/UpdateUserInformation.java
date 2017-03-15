@@ -1,6 +1,5 @@
 package butlers;
 
-import engines.AuthenticationManager;
 import engines.UserManager;
 //import org.apache.log4j.Logger;
 
@@ -35,10 +34,10 @@ public class UpdateUserInformation extends HttpServlet {
         public void doPost(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
             ServletContext servletContext = getServletContext();
-            AuthenticationManager authenticationManager = new AuthenticationManager();
+            UserManager userManager = new UserManager();
             String url;
 
-            if (authenticationManager.authenticated(servletContext)) {
+            if (userManager.authenticated(servletContext)) {
                 userManager.updateUserWithRole(
                         Integer.valueOf(request.getParameter("id")),
                         request.getParameter("UserName"),

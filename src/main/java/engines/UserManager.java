@@ -7,6 +7,9 @@ import entity.User;
 import org.apache.log4j.Logger;
 import persistence.RoleDAO;
 import persistence.UserDAO;
+
+import javax.servlet.ServletContext;
+
 /**
  * Manage users and roles
  * Created by peter on 2/8/2017.
@@ -185,4 +188,15 @@ public class UserManager {
 
         return (definedRoles.contains(rolename));
     }
+
+
+    public boolean authenticated(ServletContext servletContext) {
+        boolean aok = java.lang.Boolean.FALSE;
+        Integer userID = (Integer) servletContext.getAttribute("user_id");
+        if (userID != null) {
+            if (userID > 0) aok = java.lang.Boolean.TRUE;
+        }
+        return aok;
+    }
+
 }

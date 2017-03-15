@@ -14,8 +14,8 @@ import java.io.IOException;
  * Created by peter on 2/8/2017.
  */
 @WebServlet(
-        name = "ExternalAction",
-        urlPatterns = { "/ExternalAction" }
+        name = "LogOut",
+        urlPatterns = { "/LogOut" }
 )public class LogOut extends HttpServlet {
 
     /**

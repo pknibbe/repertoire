@@ -17,14 +17,11 @@ You can also purchase a PSD-file for this template.
 
 <body>
 <div id="container">
+    <c:set var="user_id" value="${user_id}"></c:set>
     <!-- header -->
     <div id="header">
 
         <img src="images/logo.png" width = 250px>
-        <h1>noun: All the Music You Can Play</h1>
-        <p>  </p>
-        <h2>Welcome, ${name}. If you are not ${name}, please logout and log back in as yourself.</h2>
-
     </div>
     <h2>${message}</h2>
 
@@ -38,10 +35,16 @@ You can also purchase a PSD-file for this template.
             <c:if test="${role eq boss}" >
                 <li><a href="ShowUsers">Administration Center</a></li>
             </c:if>
-            <li><a href="Logout">LogOut</a></li>
+            <li><a href="LogOut">LogOut</a></li>
         </ul>
     </div>
     <!--end header -->
     <!-- main -->
     <div id="main">
+        <c:if test="user_id gt 0">
+        <h1>noun: All the Music You Can Play</h1>
+        <p>  </p>
+        <h2>Welcome, ${name}. If you are not ${name}, please logout and log back in as yourself.</h2>
+        </c:if>
+
         <div id="a">
