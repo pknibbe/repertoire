@@ -46,7 +46,7 @@ import java.io.IOException;
 
         servletContext.setAttribute("user_id", user);
         servletContext.setAttribute("user_role", role);
-        servletContext.setAttribute("message", "Welcome " + manager.getName(user));
+        servletContext.setAttribute("message", " ");
         servletContext.setAttribute("name", name);
 
         String url = "/ShowPlayLists";

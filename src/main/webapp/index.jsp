@@ -12,18 +12,19 @@
         </form>
 
         <br /><br />
+        <c:if test="user_id gt 0">
+            <div id="request">
 
-        <div id="request">
-
-        <h3>Request sign-in help</h3>
-        <form action="ExternalAction" method="POST">
-            Request an account:  <input type="radio" name="options" value="account" /><br />
-            Request reminder of user name: <input type="radio" name="options" value="username" /><br />
-            Request password reset: <input type="radio" name="options" value="password" /><br />
-            Message text: <input type="text" name="message"/><br />
-            <input type="submit" name="Request" value="Enter" />
-        </form>
-        </div>
+            <h3>Request sign-in help</h3>
+            <form action="ExternalAction" method="POST">
+                Request an account:  <input type="radio" name="options" value="account" /><br />
+                Request reminder of user name: <input type="radio" name="options" value="username" /><br />
+                Request password reset: <input type="radio" name="options" value="password" /><br />
+                Message text: <input type="text" name="message"/><br />
+                <input type="submit" name="Request" value="Enter" />
+            </form>
+            </div>
+        </c:if>
 
         <c:import url="/footer.jsp" />
 

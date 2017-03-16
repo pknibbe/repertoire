@@ -39,7 +39,6 @@ import persistence.UserDAO;
         if (role.equalsIgnoreCase((String) servletContext.getAttribute("user_role"))) {
 
             request.setAttribute("users", userdao.getAll());
-            servletContext.setAttribute("message", "");
 
             dispatcher = servletContext.getRequestDispatcher("/accounts.jsp");
             logger.info("Dispatching request forward to /accounts.jsp");

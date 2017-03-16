@@ -21,9 +21,9 @@ You can also purchase a PSD-file for this template.
     <!-- header -->
     <div id="header">
 
-        <img src="images/logo.png" width = 250px>
+        <img src="images/logo.png" width = 500px>
     </div>
-    <h2>${message}</h2>
+    <h1>${message}</h1>
 
     <div id="menu">
         <c:set var="role" value="${user_role}"></c:set>
@@ -41,9 +41,9 @@ You can also purchase a PSD-file for this template.
     <!--end header -->
     <!-- main -->
     <div id="main">
-        <c:if test="user_id gt 0">
         <h1>noun: All the Music You Can Play</h1>
         <p>  </p>
+        <c:if test="user_id gt 0">
         <h2>Welcome, ${name}. If you are not ${name}, please logout and log back in as yourself.</h2>
         </c:if>
 

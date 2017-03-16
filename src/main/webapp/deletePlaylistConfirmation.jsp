@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="/head.jsp" /> <!-- opens body and container -->
 
-            <h3>Manage Accounts</h3>
+            <h3>   </h3>
             <form action="DeletePlaylist" method="POST">
                 <p>  </p>
                 <p>  </p>

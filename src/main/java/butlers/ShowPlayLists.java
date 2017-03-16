@@ -42,7 +42,6 @@ public class ShowPlayLists extends HttpServlet {
         String url;
 
         if (userManager.authenticated(servletContext)) {
-            servletContext.setAttribute("message", "");
             ArrayList<Integer> listIDs = playlistManager.getIDs((Integer) servletContext.getAttribute("user_id"));
             ArrayList<Playlist> playlists = new ArrayList<>();
             for (int index : listIDs) {

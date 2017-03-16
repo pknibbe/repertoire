@@ -6,26 +6,26 @@
         <h3>Select a Playlist</h3>
         <form action="ManagePlaylist" method="Post">
             <table>
-                <thead><tr><th>Select</th><th>Name</th><th>Action</th></tr></thead>
+                <thead><tr><th>Select</th><th>Name</th></tr></thead>
                 <tbody>
                    <c:forEach var="playbill" items="${playlists}">
                        <tr>
                             <td><input type="radio" name="listID" value=${playbill.id} /></td>
                             <td><input type="text" name="name" value=${playbill.name}></td>
-                           <td><select name="Action">
-                               <option value="AddSong">AddSong</option>
-                               <option value="Share">Share</option>
-                               <option value="Delete">Delete</option>
-                           </select></td>                       </tr>
+                       </tr>
                     </c:forEach>
                     <tr>
                         <td><input type="radio" name="listID" value=0 /></td>
                         <td>name: <input type="text" name="name"></td>
-                        <td>Create New</td>
                     </tr>
                 </tbody>
             </table>
             <p>   </p>
+            <select name="Action">
+            <option value="AddSong">AddSong</option>
+            <option value="Share">Share</option>
+            <option value="Delete">Delete</option>
+        </select>
             <input type="submit" name="Enter" value="Enter" />
         </form>
 

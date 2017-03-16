@@ -6,6 +6,7 @@ font-family: Tahoma, Geneva, sans-serif;
 
 #container {
 background-color: #FFFFFF;
+    color: Green;
 padding: 10px;
 }
 
@@ -25,6 +26,7 @@ padding: 60px 30px 0 0;
 #menu {
 height: 40px;
 margin-top: 5px;
+    color: Green;
 }
 #menu ul {
 margin: 0;
@@ -39,7 +41,7 @@ background: url(images/menu_border.png) right no-repeat;
 float: left;
 height: 20px;
 padding: 10px 30px;
-color: #000000;
+background-color: Green;
 font-size: 15px;
 font-weight: bold;
 text-decoration: none;
@@ -53,7 +55,7 @@ background: url(images/menu_border.png);
 float: left;
 width: 100%;
 margin: 5px 0;
-color: #1F1507;
+color: Green;
 font-size: 11px;
 }
 #main a {
@@ -79,6 +81,7 @@ margin: 20px 0 10px 0;
 #text h2 {
 font-size: 19px;
 font-weight: normal;
+    color: Green;
 margin: 20px 0 10px 0;
 }
 #text ol, #text ul {
@@ -91,7 +94,7 @@ margin-left: 40px;
 
 #footer {
 height: 40px;
-color: #FFFFFF;
+color: Green;
 font-size: 11px;
 background-image: url(images/footer_bg.png);
 clear: both;
