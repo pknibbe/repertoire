@@ -5,14 +5,14 @@ font-family: Tahoma, Geneva, sans-serif;
 }
 
 #container {
-background-color: #FFFFFF;
+background-color: #FF8888;
     color: Green;
 padding: 10px;
 }
 
 #header {
 height: 150px;
-background-color: #FFFFFF;
+background-color: #FF8888;
     color: Green;
 }
 
@@ -96,14 +96,14 @@ margin-left: 40px;
 height: 40px;
 color: Green;
 font-size: 11px;
-background-image: url(images/footer_bg.png);
+background-color: #FF8888;
 clear: both;
 }
 #footer a {
-color: #FFFFFF;
+color: #000000;
 }
 #footer a:hover {
-color: #F4E7D1;
+color: Green;
 }
 #footer_left {
 float: left;

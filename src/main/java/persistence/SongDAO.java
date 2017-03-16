@@ -61,11 +61,10 @@ public class SongDAO {
         logger.info("Updating Song " + updatedSong.toString());
         logger.info(updatedSong.toString());
         Song sessionSong = (Song) session.get(Song.class, updatedSong.getId());
-        sessionSong.setName(updatedSong.getName());
-        sessionSong.setPerformer(updatedSong.getPerformer());
         sessionSong.setLocation(updatedSong.getLocation());
-        sessionSong.setDuration(updatedSong.getDuration());
-        logger.info("Updating Song " + sessionSong.getName());
+        sessionSong.setDescription(updatedSong.getDescription());
+        sessionSong.setPlaylist_id(updatedSong.getPlaylist_id());
+        logger.info("Updating Song " + sessionSong.getLocation());
         logger.info(sessionSong.toString());
         Song resultantSong = (Song) session.merge(sessionSong);
         logger.info("Updated Song " + resultantSong.toString());

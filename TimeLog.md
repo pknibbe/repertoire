@@ -2,7 +2,8 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
-| 3/16 | Individual Project |    | Resume debugging screens and process flow for playlists |
+| 3/16 | Individual Project | 3 | Rework songs table |
+| 3/16 | Individual Project |  1  | Resume debugging screens and process flow for playlists |
 | 3/15 | Individual Project | 1.5 | Debug screens and process flow for playlists |
 | 3/15 | Individual Project | 6 | Rework and Unit test AssociationManager and PlaylistManager |
 | 3/14 | Individual Project | 1 | Start to rework playlists to use directory structure |

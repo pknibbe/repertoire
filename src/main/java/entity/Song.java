@@ -22,18 +22,16 @@ public class Song {
   @GenericGenerator(name="increment", strategy="increment")
   private int id;
   private String location;
-  private String name;
-  private String performer;
-  private String duration;
+  private String description;
+  private int playlist_id;
 
   public Song() {
   }
 
-  public Song(String location, String name, String performer, String duration) {
+  public Song(String location, String description, int playlist_id) {
     this.location = location;
-    this.name = name;
-    this.performer = performer;
-    this.duration = duration;
+    this.description = description;
+    this.playlist_id = playlist_id;
   }
 
 }

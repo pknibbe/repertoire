@@ -12,24 +12,26 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 /**
+ * Tests the SongDAO methods
  * Created by peter on 2/13/2017.
  */
 public class SongDAOTest {
     
-    SongDAO dao;
-    entity.Song song;
-    int numberOfSongs;
-    List<Song> songList;
-    final Logger logger = Logger.getLogger(this.getClass());
+    private SongDAO dao;
+    private entity.Song song;
+    private int numberOfSongs;
+    private List<Song> songList;
+    private final Logger logger = Logger.getLogger(this.getClass());
 
     @Before
     public void setup() throws Exception {
         dao = new SongDAO();
         songList = dao.getAll();
         logger.info("In @Before, songList has " + songList.size() + "entries");
-        justAdd(); // make sure table is not empty for purpose of test
+        song = new Song("ZXGK It's Magic", "Great tune", 3);
+        dao.add(song);
         songList = dao.getAll();
-        logger.info("After justAdd, songList has " + songList.size() + "entries");
+        logger.info("After setup, songList has " + songList.size() + "entries");
         numberOfSongs = songList.size();
     }
 
@@ -38,8 +40,8 @@ public class SongDAOTest {
         boolean found = false;
 
         for (entity.Song song : songList) {
-            String thisName = song.getName();
-            if (thisName.equalsIgnoreCase("Johanna")) found = true;
+            String thisName = song.getLocation();
+            if (thisName.equalsIgnoreCase("ZXGK It's Magic")) found = true;
         }
         assertTrue("The expected name was not found: ", found);
     }
@@ -49,38 +51,30 @@ public class SongDAOTest {
         song = songList.get(songList.size() - 1); // retrieve most recent addition to table
         int id = song.getId(); // get the id of the most recent addition
         song = dao.get(id); // get the song by id
-        assertEquals("Names don't match", "Johanna", song.getName());
+        assertEquals("Names don't match", "ZXGK It's Magic", song.getLocation());
     }
 
     @Test
     public void testAdd() throws Exception {
-        justAdd();
+        song = new Song("ZXGK of Earl", "Great tune",  3);
+        dao.add(song);
         songList = dao.getAll();
         assertEquals("Add did not work: ", numberOfSongs + 1, songList.size());
     }
 
     @Test
-    public void testModifySongName() throws Exception {
+    public void testModifySong() throws Exception {
         song = songList.get(songList.size() - 1); // retrieve most recent addition to table
         int id = song.getId();
-        song.setName("Rosie");
-        song.setLocation("Rose");
-        song.setPerformer("Beth");
-        song.setDuration("4:23");
+        song.setLocation("ZXGK Submarine");
+        song.setDescription("Corny, but fun");
         logger.info(song.toString());
         logger.info("Updated song ID = " + dao.modify(song));
         song = dao.get(id);
-        assertEquals("Songname not modified", "Rosie", song.getName());
-        assertEquals("Location not modified", "Rose", song.getLocation());
-        assertEquals("Performer not modified", "Beth", song.getPerformer());
-        assertEquals("Duration not modified", "4:23", song.getDuration());
+        assertEquals("Location not modified", "ZXGK Submarine", song.getLocation());
+        assertEquals("Description not modified", "Corny, but fun", song.getDescription());
         songList = dao.getAll();
-        assertEquals("Modify added an entry!", numberOfSongs, songList.size());
-    }
-
-    private void justAdd() {
-        song = new entity.Song("Johanna", "Johanna", "Johanna", "5:03");
-        dao.add(song);
+        assertEquals("Modify changed the number of entries!", numberOfSongs, songList.size());
     }
 
     @Test
@@ -97,10 +91,12 @@ public class SongDAOTest {
         songList = dao.getAll();
 
         for (entity.Song song : songList) {
-            String thisName = song.getName();
-            if (thisName.equalsIgnoreCase("Johanna")) {
+            String thisName = song.getLocation();
+            if (thisName.equalsIgnoreCase("ZXGK Submarine")) {
                 dao.remove(song.getId());
-            } else             if (thisName.equalsIgnoreCase("Rosie")) {
+            } else             if (thisName.equalsIgnoreCase("ZXGK of Earl")) {
+                dao.remove(song.getId());
+            } else             if (thisName.equalsIgnoreCase("ZXGK It's Magic")) {
                 dao.remove(song.getId());
             }
         }

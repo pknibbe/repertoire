@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="hibernate.cfg.xml/Hibernate">
+<dataSource name="repertoire@localhost">
   <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
     <root id="1"/>
     <schema id="2" parent="1" name="repertoire">
@@ -180,20 +180,20 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="53" parent="17" name="name">
-      <Position>3</Position>
-      <DataType>char(25)|0</DataType>
-    </column>
-    <column id="54" parent="17" name="user_name">
+    <column id="53" parent="17" name="user_name">
       <Position>2</Position>
       <DataType>char(25)|0</DataType>
     </column>
-    <column id="55" parent="17" name="role_name">
-      <Position>5</Position>
+    <column id="54" parent="17" name="name">
+      <Position>3</Position>
       <DataType>char(25)|0</DataType>
     </column>
-    <column id="56" parent="17" name="user_pass">
+    <column id="55" parent="17" name="user_pass">
       <Position>4</Position>
+      <DataType>char(25)|0</DataType>
+    </column>
+    <column id="56" parent="17" name="role_name">
+      <Position>5</Position>
       <DataType>char(25)|0</DataType>
     </column>
     <column id="57" parent="17" name="user_role_id">

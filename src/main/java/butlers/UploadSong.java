@@ -47,7 +47,7 @@ public class UploadSong extends HttpServlet {
             boolean success = writeFile(path, filePart, fileName, writer);
             logger.info("writeFile returned " + success);
             if (success) {
-                Song song = new Song(path, fileName, request.getParameter("performer"), request.getParameter("duration"));
+                Song song = new Song(path, request.getParameter("description"), (Integer) servletContext.getAttribute("list_ID"));
                 SongDAO songDAO = new SongDAO();
                 songDAO.add(song);
             }
