@@ -14,7 +14,7 @@
                             <td>${person.id}</td>
                             <td>${person.name}</td>
                             <td>${person.user_name}</td>
-                            <td>***************</td>
+                            <td>${person.user_pass}</td>
                             <td>${person.role_name}</td>
                         </tr>
                     </c:forEach>

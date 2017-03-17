@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Enumeration;
 
 /**
  * Handle request from playlists jsp
@@ -24,15 +25,15 @@ import java.util.ArrayList;
  * Created by peter on 3/6/2017.
  */
 @WebServlet(
-        name = "ManagePlaylist",
-        urlPatterns = { "/ManagePlaylist" }
+        name = "ManagePlaylists",
+        urlPatterns = { "/ManagePlaylists" }
 )
-public class ManagePlaylist extends HttpServlet {
+public class ManagePlaylists extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     private final PlaylistManager playListmanager = new PlaylistManager();
 
     /**
-     * Handles HTTP GET requests.
+     * Handles HTTP POST requests.
      *
      * @param request  the HttpServletRequest object
      * @param response the HttpServletResponse object
@@ -51,46 +52,45 @@ public class ManagePlaylist extends HttpServlet {
 
         if (userManager.authenticated(servletContext)) {
 
-            logger.info("In ManagePlaylist.doPost");
+            logger.info("In ManagePlaylists.doPost");
             listID = Integer.valueOf(request.getParameter("listID"));
             if (listID == 0) { // request to create a new list
-                int associationID = playListmanager.add(request.getParameter("name"), (int) servletContext.getAttribute("user_id"));
-                listID = playListmanager.getID(request.getParameter("name"), (int) servletContext.getAttribute("user_id"));
+                String name = request.getParameter("name");
+                int associationID = playListmanager.add(name, (int) servletContext.getAttribute("user_id"));
+                listID = playListmanager.getID(associationID);
 
                 servletContext.setAttribute("playlist", playlistDAO.get(listID));
                 servletContext.setAttribute("message", "New List Created");
 
                 url = "manageAPlayList.jsp";
-            }
-            if (listID > 0) { // must be delete, modify, or share request
-                String action = request.getParameter("Action");
+            } else { // must be delete, modify, or share request
+                Enumeration<String> parameterNames = request.getParameterNames();
 
-                if (action.equalsIgnoreCase("Delete")) { // remove the playlist via confirmation dialogue
-                    url = "deletePlaylistConfirmation.jsp";
-                } else if (action.equalsIgnoreCase("Share")) { // share the playlist with another user
-                    ArrayList<Integer> otherUserIDs = userManager.getOtherUserIDs((Integer) servletContext.getAttribute("user_id"));
-                    ArrayList<String> otherUserNames = new ArrayList<>();
-                    for (Integer userID : otherUserIDs) {
-                        otherUserNames.add(userDAO.get(userID).getName());
+                while (parameterNames.hasMoreElements()) {
+                    String parameterName = parameterNames.nextElement();
+                    logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
+                    if (parameterName.equalsIgnoreCase("Delete")) {
+                        url = "deletePlaylistConfirmation.jsp";
+                    } else if (parameterName.equalsIgnoreCase("Share")) {
+                        ArrayList<Integer> otherUserIDs = userManager.getOtherUserIDs((Integer) servletContext.getAttribute("user_id"));
+                        ArrayList<String> otherUserNames = new ArrayList<>();
+                        for (Integer userID : otherUserIDs) {
+                            otherUserNames.add(userDAO.get(userID).getName());
+                        }
+                        servletContext.setAttribute("otherUserNames", otherUserNames);
+                        url = "/sharePlaylist.jsp";
+                    } else if (parameterName.equalsIgnoreCase("Manage")) {
+                        url = "ShowAPlaylist";
                     }
-                    servletContext.setAttribute("otherUserNames", otherUserNames);
-                    url = "sharePlaylist.jsp";
-                } else { // make changes to the playlist via another web page
-
-/*                    FullPlayList fullPlayList = PlayListmanager.compilePlayList(listID);
-
-                    servletContext.setAttribute("playlist", fullPlayList.getPlaylist());
-                    servletContext.setAttribute("listSongs", fullPlayList.getSongs());
-                    servletContext.setAttribute("allSongs", songDAO.getAll()); */
-                    url = "manageAPlayList.jsp";
                 }
             }
-        } else {
+        } else { // user not authenticated
             servletContext.setAttribute("message", "user not authenticated");
             url = "index.jsp";
         }
         servletContext.setAttribute("listID", listID);
         servletContext.setAttribute("listName", playlistDAO.get(listID).getName());
+        logger.info("Sending redirect to " + url);
         response.sendRedirect(url);
     }
 }

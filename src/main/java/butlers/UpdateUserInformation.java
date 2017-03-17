@@ -24,7 +24,7 @@ public class UpdateUserInformation extends HttpServlet {
         //private final Logger logger = Logger.getLogger(this.getClass());
         private final UserManager userManager = new UserManager();
         /**
-         *  Handles HTTP GET requests.
+         *  Handles HTTP POST requests.
          *
          *@param  request                   the HttpServletRequest object
          *@param  response                   the HttpServletResponse object

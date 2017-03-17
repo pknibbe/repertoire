@@ -57,6 +57,17 @@ public class PlaylistManager {
     }
 
     /**
+     * Gets the playlist ID from the association table
+     * @param associationID The key to the entry in the association table
+     * @return
+     */
+    public int getID(int associationID) {
+        association = aDAO.get(associationID);
+        return association.getRightTableKey();
+    }
+
+
+    /**
      * Returns the system IDs of all playlists associated with the user
      * @param user_id The system ID of the user
      * @return The list of IDs of the associated playlists

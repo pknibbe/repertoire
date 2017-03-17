@@ -4,7 +4,7 @@
 <c:import url="/head.jsp" /> <!-- opens body and container -->
 
         <h3>Select a Playlist</h3>
-        <form action="ManagePlaylist" method="Post">
+        <form action="ManagePlaylists" method="Post">
             <table>
                 <thead><tr><th>Select</th><th>Name</th></tr></thead>
                 <tbody>
@@ -21,12 +21,16 @@
                 </tbody>
             </table>
             <p>   </p>
-            <select name="Action">
-            <option value="AddSong">AddSong</option>
-            <option value="Share">Share</option>
-            <option value="Delete">Delete</option>
-        </select>
-            <input type="submit" name="Enter" value="Enter" />
+
+            <input type="submit" name="Manage" value="Manage" />
+            <input type="submit" name="Share" value="Share" />
+            <input type="submit" name="Delete" value="Delete" />
+            <br />
+            <input type="submit" name="Play" value="Play" />
+            <input type="submit" name="Pause" value="Pause" />
+            <input type="submit" name="Stop" value="Stop" />
+            <input type="submit" name="Skip" value="Skip" />
+            <input type="submit" name="Previous" value="Previous" />
         </form>
 
     <c:import url="/footer.jsp" />

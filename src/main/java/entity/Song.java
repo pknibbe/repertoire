@@ -28,6 +28,12 @@ public class Song {
   public Song() {
   }
 
+  public Song(String location, int playlist_id) {
+    this.location = location;
+    this.description = null;
+    this.playlist_id = playlist_id;
+  }
+
   public Song(String location, String description, int playlist_id) {
     this.location = location;
     this.description = description;

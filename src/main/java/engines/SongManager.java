@@ -1,5 +1,7 @@
 package engines;
 
+import java.util.ArrayList;
+import java.util.List;
 import persistence.SongDAO;
 import entity.Song;
 import entity.Association;
@@ -10,18 +12,17 @@ import engines.AssociationManager;
  * Created by peter on 3/6/2017.
  */
 public class SongManager {
-    final SongDAO songDAO = new SongDAO();
-    final AssociationDAO associationDAO = new AssociationDAO();
+    private final SongDAO songDAO = new SongDAO();
 
-    public Song getSong (int songID){
-        return songDAO.get(songID);
-    }
-
-    public int addSong (Song song, int userID) {
-        int songID = songDAO.add(song);
-        Association association = new Association("users", userID, songID, "songs", "accessor");
-        associationDAO.add(association);
-        return songID;
+    public ArrayList<Song> getSongs(int list_ID) {
+        ArrayList<Song> songList = new ArrayList<>();
+        List<Song> songs = songDAO.getAll();
+        for (Song song : songs) {
+            if (list_ID == song.getPlaylist_id()) {
+                songList.add(song);
+            }
+        }
+        return songList;
     }
 
 /*    public void removeSong (int songID, int userID) {
