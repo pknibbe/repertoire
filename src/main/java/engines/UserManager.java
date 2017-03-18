@@ -9,6 +9,7 @@ import persistence.RoleDAO;
 import persistence.UserDAO;
 
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
 
 /**
  * Manage users and roles
@@ -189,12 +190,20 @@ public class UserManager {
         return (definedRoles.contains(rolename));
     }
 
-
-    public boolean authenticated(ServletContext servletContext) {
+/* removing method in favor of one that takes the user ID
+    public boolean authenticated(HttpSession session) {
         boolean aok = java.lang.Boolean.FALSE;
-        Integer userID = (Integer) servletContext.getAttribute("user_id");
+        Integer userID = (Integer) session.getAttribute("user_id");
         if (userID != null) {
             if (userID > 0) aok = java.lang.Boolean.TRUE;
+        }
+        return aok;
+    } */
+
+    public boolean authenticated(Integer user_id) {
+        boolean aok = false;
+        if (user_id != null) {
+            if (user_id > 0) aok = true;
         }
         return aok;
     }

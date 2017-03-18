@@ -2,6 +2,9 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 3/17 | Individual Project | 4  | Debug songs management |
+| 3/16 | Individual Project | 3 | Rework songs management |
+| 3/16 | Team Project | 1 | Scrum |
 | 3/16 | Individual Project | 3 | Rework songs table |
 | 3/16 | Individual Project |  1  | Resume debugging screens and process flow for playlists |
 | 3/15 | Individual Project | 1.5 | Debug screens and process flow for playlists |

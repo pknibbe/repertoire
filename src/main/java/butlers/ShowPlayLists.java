@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.*;
 import java.util.ArrayList;
@@ -37,22 +38,23 @@ public class ShowPlayLists extends HttpServlet {
         PlaylistDAO dao = new PlaylistDAO();
         PlaylistManager playlistManager = new PlaylistManager();
 
+        HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
         UserManager userManager = new UserManager();
         String url;
 
-        if (userManager.authenticated(servletContext)) {
-            ArrayList<Integer> listIDs = playlistManager.getIDs((Integer) servletContext.getAttribute("user_id"));
+        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+            ArrayList<Integer> listIDs = playlistManager.getIDs((Integer) session.getAttribute("user_id"));
             ArrayList<Playlist> playlists = new ArrayList<>();
             for (int index : listIDs) {
                 playlists.add(dao.get(index));
             }
-            servletContext.setAttribute("playlists", playlists);
+            session.setAttribute("playlists", playlists);
             url = "/playlists.jsp";
 
         } else {
-            servletContext.setAttribute("message", "user not authenticated");
-            url = "index.jsp";
+            session.setAttribute("message", "user not authenticated");
+            url = "/index.jsp";
         }
         RequestDispatcher dispatcher = servletContext.getRequestDispatcher(url);
         dispatcher.forward(request, response);

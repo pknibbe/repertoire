@@ -6,8 +6,10 @@
 
         <h3>Login</h3>
         <form action="ExternalAction" method="GET">
-            user name:  <input type="text" name="user_name"  /><br />
-            password: <input type="text" name="user_pass" /><br />
+            <table>
+                <tr><td>user name:</td><td>  <input type="text" name="user_name"  /> </td></tr>
+                <tr><td>password:</td><td> <input type="text" name="user_pass" /></td></tr>
+            </table>
             <input type="submit" value="Submit" name="Enter" />
         </form>
 

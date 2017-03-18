@@ -3,12 +3,12 @@ package butlers;
 import engines.UserManager;
 //import org.apache.log4j.Logger;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
@@ -21,8 +21,10 @@ import java.io.IOException;
 )
 public class UpdateUserInformation extends HttpServlet {
 
-        //private final Logger logger = Logger.getLogger(this.getClass());
-        private final UserManager userManager = new UserManager();
+    //private final Logger logger = Logger.getLogger(this.getClass());
+    private final UserManager userManager = new UserManager();
+    String url;
+
         /**
          *  Handles HTTP POST requests.
          *
@@ -33,11 +35,9 @@ public class UpdateUserInformation extends HttpServlet {
          */
         public void doPost(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
-            ServletContext servletContext = getServletContext();
-            UserManager userManager = new UserManager();
-            String url;
+            HttpSession session = request.getSession();
 
-            if (userManager.authenticated(servletContext)) {
+            if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
                 userManager.updateUserWithRole(
                         Integer.valueOf(request.getParameter("id")),
                         request.getParameter("UserName"),
@@ -48,8 +48,8 @@ public class UpdateUserInformation extends HttpServlet {
                 url = "ShowUsers";
 
             } else {
-                servletContext.setAttribute("message", "user not authenticated");
-                url = "index.jsp";
+                session.setAttribute("message", "user not authenticated");
+                url = "/index.jsp";
             }
             response.sendRedirect(url);
         }

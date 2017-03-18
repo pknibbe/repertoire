@@ -1,5 +1,6 @@
 package butlers;
 
+import engines.UserManager;
 import persistence.SongDAO;
 import org.apache.log4j.Logger;
 
@@ -9,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Enumeration;
 
@@ -25,7 +27,8 @@ import java.util.Enumeration;
 public class DeleteSong extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     private final SongDAO songDAO = new SongDAO();
-
+    private final UserManager userManager = new UserManager();
+    String url;
     /**
      *  Handles HTTP POST requests.
      *
@@ -36,24 +39,29 @@ public class DeleteSong extends HttpServlet {
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        ServletContext servletContext = getServletContext();
+        HttpSession session = request.getSession();
 
-        Enumeration<String> parameterNames = request.getParameterNames();
-        while (parameterNames.hasMoreElements()) {
-            String parameterName = parameterNames.nextElement();
-            logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
-            if (parameterName.equalsIgnoreCase("Delete")) {
-                songDAO.remove((Integer) servletContext.getAttribute("songID"));
-                servletContext.setAttribute("message", "Song Deleted");
-                logger.info("removed song " + servletContext.getAttribute("songID"));
-            } else if (parameterName.equalsIgnoreCase("Cancel")) {
-                logger.info("Did not remove song " + servletContext.getAttribute("songID"));
-                servletContext.setAttribute("message", "Song Not Deleted");
+        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+            Enumeration<String> parameterNames = request.getParameterNames();
+            while (parameterNames.hasMoreElements()) {
+                String parameterName = parameterNames.nextElement();
+                logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
+                if (parameterName.equalsIgnoreCase("Delete")) {
+                    songDAO.remove((Integer) session.getAttribute("songID"));
+                    session.setAttribute("message", "Song Deleted");
+                    logger.info("removed song " + session.getAttribute("songID"));
+                } else if (parameterName.equalsIgnoreCase("Cancel")) {
+                    logger.info("Did not remove song " + session.getAttribute("songID"));
+                    session.setAttribute("message", "Song Not Deleted");
+                }
             }
-        }
-        String url = "/ShowAPlaylist";
+            url = "/ShowAPlaylist";
 
-        logger.info("sending redirect to " + url);
-        response.sendRedirect(url);
+            logger.info("sending redirect to " + url);
+            response.sendRedirect(url);
+        } else { // bounce
+            session.setAttribute("message", "user not authenticated");
+            url = "/index.jsp";
+        }
     }
 }

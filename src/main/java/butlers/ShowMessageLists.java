@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.*;
 
@@ -33,12 +34,13 @@ public class ShowMessageLists extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         MessageDAO dao = new MessageDAO();
+        HttpSession session = request.getSession();
 
         ServletContext servletContext = getServletContext();
         UserManager userManager = new UserManager();
         String url;
 
-        if (userManager.authenticated(servletContext)) {
+        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
 
             request.setAttribute("users", dao.getAll());
             String currentMessage = (String) request.getAttribute("SessionMessage");
@@ -53,8 +55,8 @@ public class ShowMessageLists extends HttpServlet {
             RequestDispatcher dispatcher = servletContext.getRequestDispatcher(url);
             dispatcher.forward(request, response);
         } else {
-            servletContext.setAttribute("message", "user not authenticated");
-            url = "index.jsp";
+            session.setAttribute("message", "user not authenticated");
+            url = "/index.jsp";
         }
     }
 }

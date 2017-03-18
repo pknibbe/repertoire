@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
@@ -39,21 +40,22 @@ public class ShowAPlaylist extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
         String url;
 
         logger.info("In doGet");
-        if (userManager.authenticated(servletContext)) { // proceed
-            playlist = playlistDAO.get((Integer) servletContext.getAttribute("listID"));
-            servletContext.setAttribute("message", "Playlist " + servletContext.getAttribute("listName"));
-            servletContext.setAttribute("songs", songManager.getSongs((Integer) servletContext.getAttribute("listID")));
+        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+            playlist = playlistDAO.get((Integer) session.getAttribute("listID"));
+            session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
+            session.setAttribute("songs", songManager.getSongs((Integer) session.getAttribute("listID")));
 
             logger.info("Loaded songs");
             url = "/manageAPlaylist.jsp";
 
         } else { // bounce
-            servletContext.setAttribute("message", "user not authenticated");
-            url = "index.jsp";
+            session.setAttribute("message", "user not authenticated");
+            url = "/index.jsp";
         }
         RequestDispatcher dispatcher = servletContext.getRequestDispatcher(url);
         logger.info("Redirecting to " + url);
