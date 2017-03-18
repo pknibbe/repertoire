@@ -33,33 +33,24 @@ public class UserManagerTest {
         target = new UserManager();
         userList = userDAO.getAll();
         roleList = roleDAO.getAll();
-        logger.info("In @Before, userList has " + userList.size() + "entries");
-        logger.info("In @Before, roleList has " + roleList.size() + "entries");
         justAdd(); // make sure tables are not empty for purpose of test
         userList = userDAO.getAll();
         roleList = roleDAO.getAll();
-        logger.info("After justAdd, userList has " + userList.size() + "entries");
-        logger.info("After justAdd, roleList has " + roleList.size() + "entries");
         numberOfUsers = userList.size();
         numberOfRoles = roleList.size();
     }
 
     @Test
     public void testAdd() throws Exception {
-        logger.info("*** Start of testAdd ***");
         target.addUserWithRole("Thomas","Dylan", "DoNotGoGently", "registered-user");
         roleList = roleDAO.getAll();
-        logger.info("role list has " + roleList.size() + " entries after addition");
         assertEquals("Add did not work on role table: ", numberOfRoles + 1, roleList.size());
         userList = userDAO.getAll();
-        logger.info("User list has " + userList.size() + " entries after addition");
         assertEquals("Add did not work on user table: ", numberOfUsers + 1, userList.size());
-        logger.info("*** End of testAdd ***");
     }
 
     @Test
     public void testRemove() throws Exception {
-        logger.info("*** Start of testRemove ***");
         User user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId();
         target.removeUserWithRole(id);
@@ -67,16 +58,13 @@ public class UserManagerTest {
         userList = userDAO.getAll();
         assertEquals("Remove did not work on role table: ", numberOfRoles - 1, roleList.size());
         assertEquals("Remove did not work on user table: ", numberOfUsers - 1, userList.size());
-        logger.info("*** End of testRemove ***");
     }
 
     @Test
     public void testUpdate() throws Exception {
-        logger.info("*** Start of testUpdate ***");
         User user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId();
         target.updateUserWithRole(user.getId(), "Simon", "Paul", "Rock5844", "registered-user");
-        logger.info("Updated role ID = " + user.getId());
         Role role = roleDAO.get(id);
         roleList = roleDAO.getAll();
         assertEquals("role table username not correct", "Simon", role.getUser_name());
@@ -89,7 +77,6 @@ public class UserManagerTest {
         assertEquals("user table password not correct", "Rock5844", user.getUser_pass());
         assertEquals("user table rolename not correct", "registered-user", user.getRole_name());
         assertEquals("user table size changed", numberOfRoles, roleList.size());
-        logger.info("*** End of testUpdate ***");
     }
 
     private void justAdd() {
@@ -104,7 +91,6 @@ public class UserManagerTest {
 
         for (entity.User user : userList) {
             String thisName = user.getUser_name();
-            logger.info("After test, userList includes " + user.getUser_name());
             if (thisName.equalsIgnoreCase("Dylan")) {
                 target.removeUserWithRole(user.getId());
             } else if (thisName.equalsIgnoreCase("Simon")) {

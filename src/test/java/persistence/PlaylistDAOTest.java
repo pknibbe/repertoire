@@ -12,15 +12,16 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 /**
+ * Database accessor test
  * Created by peter on 2/13/2017.
  */
 public class PlaylistDAOTest {
 
-    PlaylistDAO dao;
-    entity.Playlist playlist;
-    int numberOfPlaylists;
-    List<Playlist> playlistList;
-    final Logger logger = Logger.getLogger(this.getClass());
+    private PlaylistDAO dao;
+    private entity.Playlist playlist;
+    private int numberOfPlaylists;
+    private List<Playlist> playlistList;
+    private final Logger logger = Logger.getLogger(this.getClass());
 
     @Before
     public void setup() throws Exception {
@@ -64,9 +65,7 @@ public class PlaylistDAOTest {
         playlist = playlistList.get(playlistList.size() - 1); // retrieve most recent addition to table
         int id = playlist.getId();
         playlist.setName("Bubbles");
-        logger.info(playlist.toString());
-        logger.info("Updated Playlist ID = " + dao.modify(playlist));
-        //dao.modify(Playlist);
+        dao.modify(playlist);
         playlist = dao.get(id);
         assertEquals("Playlistname not modified", "Bubbles", playlist.getName());
         playlistList = dao.getAll();
@@ -74,7 +73,7 @@ public class PlaylistDAOTest {
     }
 
     private void justAdd() {
-        playlist = new entity.Playlist("Sinester");
+        playlist = new entity.Playlist("Sinester", 2);
         dao.add(playlist);
     }
 

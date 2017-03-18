@@ -2,7 +2,6 @@ package butlers;
 
 import engines.UserManager;
 import org.apache.log4j.Logger;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Enumeration;
 
-import engines.PlaylistManager;
+import persistence.PlaylistDAO;
 
 
 /**
@@ -26,8 +25,8 @@ import engines.PlaylistManager;
 )
 public class DeletePlaylist extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final PlaylistManager manager = new PlaylistManager();
     private final UserManager userManager = new UserManager();
+    private final PlaylistDAO playlistDAO = new PlaylistDAO();
     String url;
     /**
      *  Handles HTTP POST requests.
@@ -47,7 +46,7 @@ public class DeletePlaylist extends HttpServlet {
                 String parameterName = parameterNames.nextElement();
                 logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                 if (parameterName.equalsIgnoreCase("Delete")) {
-                    manager.remove((Integer) session.getAttribute("listID"));
+                    playlistDAO.remove((Integer) session.getAttribute("listID"));
                     session.setAttribute("message", "List Deleted");
                     logger.info("removed playlist " + session.getAttribute("listID"));
                 } else if (parameterName.equalsIgnoreCase("Cancel")) {

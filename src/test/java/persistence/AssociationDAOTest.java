@@ -26,10 +26,8 @@ public class AssociationDAOTest {
         public void setup() throws Exception {
             dao = new AssociationDAO();
             associationList = dao.getAll();
-            logger.info("In @Before, associationList has " + associationList.size() + "entries");
             justAdd(); // make sure table is not empty for purpose of test
             associationList = dao.getAll();
-            logger.info("After justAdd, associationList has " + associationList.size() + "entries");
             numberOfAssociations = associationList.size();
         }
 
@@ -56,7 +54,6 @@ public class AssociationDAOTest {
         public void testAdd() throws Exception {
             justAdd();
             associationList = dao.getAll();
-            logger.info("association list has " + associationList.size() + " entries");
             assertEquals("Add did not work: ", numberOfAssociations + 1, associationList.size());
         }
 
@@ -65,9 +62,7 @@ public class AssociationDAOTest {
             association = associationList.get(associationList.size() - 1); // retrieve most recent addition to table
             int id = association.getId();
             association.setRightTableName("credentials");
-            logger.info(association.toString());
-            logger.info("Updated association ID = " + dao.modify(association));
-            //dao.modify(association);
+            dao.modify(association);
             association = dao.get(id);
             assertEquals("association table name not modified", "credentials", association.getRightTableName());
             associationList = dao.getAll();
@@ -76,7 +71,6 @@ public class AssociationDAOTest {
 
         private void justAdd() {
             association = new entity.Association("users", 1, 12, "messages", "author");
-            logger.info("New association is " + association.toString());
             dao.add(association);
         }
 

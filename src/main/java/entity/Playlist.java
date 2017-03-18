@@ -6,9 +6,15 @@ import javax.persistence.*;
 import lombok.ToString;
 import lombok.Setter;
 import lombok.Getter;
+@Setter
+@Getter
+@ToString
+
 /**
+ * A list of songs to be played together
  * Created by peter on 2/1/2017.
  */
+
 @Entity
 @Table(name = "playlists")
 public class Playlist {
@@ -18,27 +24,14 @@ public class Playlist {
   @GenericGenerator(name="increment", strategy="increment")
   private int id;
   private String name;
+  private int owner_id;
 
   public Playlist() {
   }
 
-  public Playlist(String name) {
+  public Playlist(String name, int owner) {
     this.name = name;
+    this.owner_id = owner;
   }
 
-  public int getId() {
-    return id;
-  }
-
-  public void setId(int id) {
-    this.id = id;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String song) {
-    this.name = song;
-  }
 }

@@ -49,8 +49,6 @@ public class AssociationDAO {
         public int add(Association association) throws HibernateException {
             Session session = SessionFactoryProvider.getSessionFactory().openSession();
             Transaction transaction = session.beginTransaction();
-            logger.info("Saving association " + association.getId());
-            logger.info(association.toString());
             int id = (Integer) session.save(association);
             transaction.commit();
             session.close();
@@ -64,18 +62,13 @@ public class AssociationDAO {
         public int modify(Association updatedAssociation) throws HibernateException {
             session = SessionFactoryProvider.getSessionFactory().openSession();
             transaction = session.beginTransaction();
-            logger.info("Updating association " + updatedAssociation.getId());
-            logger.info(updatedAssociation.toString());
             Association sessionAssociation = (Association) session.get(Association.class, updatedAssociation.getId());
             sessionAssociation.setLeftTableKey(updatedAssociation.getLeftTableKey());
             sessionAssociation.setLeftTableName(updatedAssociation.getLeftTableName());
             sessionAssociation.setRightTableKey(updatedAssociation.getRightTableKey());
             sessionAssociation.setRightTableName(updatedAssociation.getRightTableName());
             sessionAssociation.setRelationship(updatedAssociation.getRelationship());
-            logger.info("Updating association " + sessionAssociation.getId());
-            logger.info(sessionAssociation.toString());
             Association resultantAssociation = (Association) session.merge(sessionAssociation);
-            logger.info("Updated association " + resultantAssociation.toString());
             transaction.commit();
             session.close();
             return resultantAssociation.getId();

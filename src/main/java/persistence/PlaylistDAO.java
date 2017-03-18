@@ -9,6 +9,7 @@ import org.hibernate.Transaction;
 import java.util.List;
 
 /**
+ * Database table accessor class
  * Created by peter on 2/13/2017.
  */
 public class PlaylistDAO {
@@ -38,13 +39,12 @@ public class PlaylistDAO {
     }
 
     /** save a new Playlist
-     * @param Playlist
+     * @param Playlist The list of songs
      * @return id the id of the inserted record
      */
     public int add(Playlist Playlist) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        logger.info("Saving Playlist " + Playlist.toString());
         int id = (Integer) session.save(Playlist);
         transaction.commit();
         session.close();
@@ -58,14 +58,9 @@ public class PlaylistDAO {
     public int modify(Playlist updatedPlaylist) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        logger.info("Updating Playlist " + updatedPlaylist.toString());
-        logger.info(updatedPlaylist.toString());
         Playlist sessionPlaylist = (Playlist) session.get(Playlist.class, updatedPlaylist.getId());
         sessionPlaylist.setName(updatedPlaylist.getName());
-        logger.info("Updating Playlist " + sessionPlaylist.getName());
-        logger.info(sessionPlaylist.toString());
         Playlist resultantPlaylist = (Playlist) session.merge(sessionPlaylist);
-        logger.info("Updated Playlist " + resultantPlaylist.toString());
         transaction.commit();
         session.close();
         return resultantPlaylist.getId();
@@ -77,11 +72,9 @@ public class PlaylistDAO {
      * @param id ID of Playlist to be removed
      */
     public void remove(int id) throws HibernateException {
-        logger.info("In dao.remove with id = " + id);
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Playlist Playlist = (Playlist) session.get(Playlist.class, id);
-        logger.info("In dao. remove with Playlist " + Playlist.toString());
         session.delete(Playlist);
         transaction.commit();
         session.close();

@@ -46,8 +46,6 @@ public class UserDAO {
     public int add(User user) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        logger.info("Saving user " + user.getUser_name());
-        logger.info(user.toString());
         int id = (Integer) session.save(user);
         transaction.commit();
         session.close();
@@ -63,18 +61,13 @@ public class UserDAO {
     public int modify(User updatedUser) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        logger.info("Updating user " + updatedUser.getUser_name());
-        logger.info(updatedUser.toString());
         User sessionUser = (User) session.get(User.class, updatedUser.getId());
         sessionUser.setUser_name(updatedUser.getUser_name());
         sessionUser.setName(updatedUser.getName());
         sessionUser.setUser_pass(updatedUser.getUser_pass());
         sessionUser.setRole_name(updatedUser.getRole_name());
         sessionUser.setUser_role_id(updatedUser.getUser_role_id());
-        logger.info("Updating user " + sessionUser.getUser_name());
-        logger.info(sessionUser.toString());
         User resultantUser = (User) session.merge(sessionUser);
-        logger.info("Updated user " + resultantUser.toString());
         transaction.commit();
         session.close();
         return resultantUser.getId();
@@ -86,11 +79,9 @@ public class UserDAO {
      * @param id ID of user to be removed
      */
     public void remove(int id) throws HibernateException {
-        logger.info("In dao.remove with id = " + id);
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         User user = (User) session.get(User.class, id);
-        logger.info("In dao. remove with user " + user.toString());
         session.delete(user);
         transaction.commit();
         session.close();

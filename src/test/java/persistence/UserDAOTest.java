@@ -24,10 +24,8 @@ public class UserDAOTest {
     public void setup() throws Exception {
         dao = new UserDAO();
         userList = dao.getAll();
-        logger.info("In @Before, userList has " + userList.size() + "entries");
         justAdd(); // make sure table is not empty for purpose of test
         userList = dao.getAll();
-        logger.info("After justAdd, userList has " + userList.size() + "entries");
         numberOfUsers = userList.size();
         }
 
@@ -63,9 +61,7 @@ public class UserDAOTest {
         user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId();
         user.setUser_name("Johanna");
-        logger.info(user.toString());
-        logger.info("Updated user ID = " + dao.modify(user));
-        //dao.modify(user);
+        dao.modify(user);
         user = dao.get(id);
         assertEquals("Username not modified", "Johanna", user.getUser_name());
         userList = dao.getAll();
@@ -77,9 +73,7 @@ public class UserDAOTest {
         user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId();
         user.setName("Johanna");
-        logger.info(user.toString());
-        logger.info("Updated user ID = " + dao.modify(user));
-        //dao.modify(user);
+        dao.modify(user);
         user = dao.get(id);
         assertEquals("Name not modified", "Johanna", user.getName());
         userList = dao.getAll();
@@ -91,9 +85,7 @@ public class UserDAOTest {
         user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId();
         user.setUser_pass("Johanna");
-        logger.info(user.toString());
-        logger.info("Updated user ID = " + dao.modify(user));
-        //dao.modify(user);
+        dao.modify(user);
         user = dao.get(id);
         assertEquals("Password not modified", "Johanna", user.getUser_pass());
         userList = dao.getAll();
@@ -105,9 +97,7 @@ public class UserDAOTest {
         user = userList.get(userList.size() - 1); // retrieve most recent addition to table
         int id = user.getId();
         user.setRole_name("Nonsense");
-        logger.info(user.toString());
-        logger.info("Updated user ID = " + dao.modify(user));
-        //dao.modify(user);
+        dao.modify(user);
         user = dao.get(id);
         assertEquals("Role not modified", "Nonsense", user.getRole_name());
         userList = dao.getAll();

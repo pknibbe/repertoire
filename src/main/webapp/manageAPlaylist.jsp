@@ -4,8 +4,7 @@
 <c:import url="/head.jsp" /> <!-- opens body and container -->
 
             <h3>  </h3>
-            <form action="/ManageAPlaylist" method="POST" enctype="multipart/form-data">
-                Type Something<input type="text" name="text"/>
+            <form action="ManageAPlaylist" method="POST" enctype="multipart/form-data">
                 <table>
                     <thead><tr><th>Select</th><th>Song</th></tr></thead>
                     <tbody>

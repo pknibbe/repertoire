@@ -29,33 +29,33 @@
 - [X] Create persistence for user crud
 
 ### Week 4
-- [ ] Connect account management (application flow B, F, G, and H) front-to-back
-- [ ] Time log entries
+- [X] Connect account management (application flow B, F, G, and H) front-to-back
+- [X] Time log entries
 - [X] Add Maven for building
 - [X] Add 3 more DAO and DAOTest classes (this will complete 4 out of 6 needed)
 
 ### Week 5
 
-- [ ] Time log entries
-- [ ] Create persistence for remaining classes
-- [ ] Test all persistence classes
-- [ ] Deploy application to AWS
+- [X] Time log entries
+- [X] Create persistence for remaining classes
+- [X] Test all persistence classes
+- [X] Deploy application to AWS
 
 ### Week 6
-- [ ] Time log entries
-- [ ] Build user security and authenticationManager into site
-- [ ] Test all account management front-to-back
+- [X] Time log entries
+- [X] Build user security and authenticationManager into site
+- [X] Test all account management front-to-back
 
 ### Week 7
-- [ ] Time log entries
-- [ ] Add playlist management
-- [ ] Determine how to upload songs
+- [X] Time log entries
+- [X] Add playlist management
+- [X] Determine how to upload songs
 - [ ] Determine how to access remote sites without losing session
 
 ### Week 8
-- [ ] Time log entries
+- [X] Time log entries
 - [ ] Work on player
-- [ ] Code review
+- [X] Code review
 
 ### Week 9
 - [ ] Time log entries

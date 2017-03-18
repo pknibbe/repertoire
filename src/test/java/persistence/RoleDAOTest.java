@@ -27,10 +27,8 @@ public class RoleDAOTest {
         public void setup() throws Exception {
             dao = new RoleDAO();
             roleList = dao.getAll();
-            logger.info("In @Before, roleList has " + roleList.size() + "entries");
             justAdd(); // make sure table is not empty for purpose of test
             roleList = dao.getAll();
-            logger.info("After justAdd, roleList has " + roleList.size() + "entries");
             numberOfRoles = roleList.size();
         }
 
@@ -56,9 +54,7 @@ public class RoleDAOTest {
         @Test
         public void testAdd() throws Exception {
             role = new entity.Role("Barak", "Sage");
-            logger.info("New role is " + role.toString());
             dao.add(role);            roleList = dao.getAll();
-            logger.info("role list has " + roleList.size() + " entries");
             assertEquals("Add did not work: ", numberOfRoles + 1, roleList.size());
         }
 
@@ -67,9 +63,7 @@ public class RoleDAOTest {
             role = roleList.get(roleList.size() - 1); // retrieve most recent addition to table
             int id = role.getId();
             role.setUser_name("Trump");
-            logger.info(role.toString());
-            logger.info("Updated role ID = " + dao.modify(role));
-            //dao.modify(role);
+            dao.modify(role);
             role = dao.get(id);
             assertEquals("role table name not modified", "Trump", role.getUser_name());
             roleList = dao.getAll();
@@ -78,7 +72,6 @@ public class RoleDAOTest {
 
         private void justAdd() {
             role = new entity.Role("Donald", "Commander");
-            logger.info("New role is " + role.toString());
             dao.add(role);
         }
 

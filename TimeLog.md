@@ -2,6 +2,7 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 3/18 | Individual Project | 6 | Rework playlists table and use session attributes |
 | 3/17 | Individual Project | 4  | Debug songs management |
 | 3/16 | Individual Project | 3 | Rework songs management |
 | 3/16 | Team Project | 1 | Scrum |

@@ -2,11 +2,9 @@ package butlers;
 
 import engines.UserManager;
 import org.apache.log4j.Logger;
-import engines.PlaylistManager;
 import entity.*;
 import persistence.*;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,8 +29,9 @@ import java.util.Enumeration;
 )
 public class ManagePlaylists extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final PlaylistManager playListmanager = new PlaylistManager();
-
+    private final UserManager userManager = new UserManager();
+    private final UserDAO userDAO = new UserDAO();
+    private final PlaylistDAO playlistDAO = new PlaylistDAO();
     /**
      * Handles HTTP POST requests.
      *
@@ -44,12 +43,8 @@ public class ManagePlaylists extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
-        ServletContext servletContext = getServletContext();
-        UserManager userManager = new UserManager();
         String url = "";
-        SongDAO songDAO = new SongDAO();
-        UserDAO userDAO = new UserDAO();
-        PlaylistDAO playlistDAO = new PlaylistDAO();
+
         int listID = 0;
 
         if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
@@ -58,8 +53,8 @@ public class ManagePlaylists extends HttpServlet {
             listID = Integer.valueOf(request.getParameter("listID"));
             if (listID == 0) { // request to create a new list
                 String name = request.getParameter("name");
-                int associationID = playListmanager.add(name, (int) session.getAttribute("user_id"));
-                listID = playListmanager.getID(associationID);
+                Playlist playlist = new Playlist(name, (Integer) session.getAttribute("user_id"));
+                listID = playlistDAO.add(playlist);
 
                 session.setAttribute("playlist", playlistDAO.get(listID));
                 session.setAttribute("message", "New List Created");

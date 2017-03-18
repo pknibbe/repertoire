@@ -68,8 +68,7 @@ public class SongDAOTest {
         int id = song.getId();
         song.setLocation("ZXGK Submarine");
         song.setDescription("Corny, but fun");
-        logger.info(song.toString());
-        logger.info("Updated song ID = " + dao.modify(song));
+        dao.modify(song);
         song = dao.get(id);
         assertEquals("Location not modified", "ZXGK Submarine", song.getLocation());
         assertEquals("Description not modified", "Corny, but fun", song.getDescription());

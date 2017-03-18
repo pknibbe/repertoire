@@ -49,8 +49,6 @@ public class RoleDAO {
         public int add(Role role) throws HibernateException {
             Session session = SessionFactoryProvider.getSessionFactory().openSession();
             Transaction transaction = session.beginTransaction();
-            logger.info("Saving role " + role.getId());
-            logger.info(role.toString());
             int id = (Integer) session.save(role);
             transaction.commit();
             session.close();
@@ -64,15 +62,10 @@ public class RoleDAO {
         public int modify(Role updatedRole) throws HibernateException {
             session = SessionFactoryProvider.getSessionFactory().openSession();
             transaction = session.beginTransaction();
-            logger.info("Updating role " + updatedRole.getId());
-            logger.info(updatedRole.toString());
             Role sessionRole = (Role) session.get(Role.class, updatedRole.getId());
             sessionRole.setUser_name(updatedRole.getUser_name());
             sessionRole.setRole_name(updatedRole.getRole_name());
-            logger.info("Updating role " + sessionRole.getId());
-            logger.info(sessionRole.toString());
             Role resultantRole = (Role) session.merge(sessionRole);
-            logger.info("Updated role " + resultantRole.toString());
             transaction.commit();
             session.close();
             return resultantRole.getId();
@@ -84,11 +77,9 @@ public class RoleDAO {
          * @param id ID of role to be removed
          */
         public void remove(int id) throws HibernateException {
-            logger.info("In dao.remove with id = " + id);
             session = SessionFactoryProvider.getSessionFactory().openSession();
             transaction = session.beginTransaction();
             Role role = (Role) session.get(Role.class, id);
-            logger.info("In dao. remove with role " + role.toString());
             session.delete(role);
             transaction.commit();
             session.close();
