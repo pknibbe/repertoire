@@ -4,25 +4,27 @@
 <c:import url="/head.jsp" /> <!-- opens body and container -->
 
             <h3>  </h3>
-            <form action="ManageAPlaylist" method="POST" enctype="multipart/form-data">
-                <table>
-                    <thead><tr><th>Select</th><th>Song</th></tr></thead>
-                    <tbody>
-                    <c:forEach var="song" items="${songs}">
-                        <tr>
-                            <td><input type="radio" name="songID" value=${song.id} /></td>
-                            <td>${song.location}</td>
-                        </tr>
-                    </c:forEach>
-                    <tr>
-                        <td><input type="radio" name="songID" value="0" /></td>
-                        <td>New Song<input type="file" name="file" id="file" /></td>
-                    </tr>
-                    </tbody>
-                </table><br/><br/>
-                <input type="submit" name="Upload" value="Upload" />
-                <input type="submit" name="Delete" value="Delete" />
-            </form>
+<form action="DeleteOneSongFromAPlaylist" method="POST">
+    <table>
+        <thead><tr><th>Select</th><th>Song</th></tr></thead>
+        <tbody>
+            <c:forEach var="song" items="${songs}">
+                <tr>
+                    <td><input type="radio" name="songID" value=${song.id} /></td>
+                    <td>${song.location}</td>
+                </tr>
+            </c:forEach>
+        </tbody>
+    </table><br/><br/>
+    <input type="submit" name="Delete" value="Delete" />
+</form>
+
+<p> </p>
+<form action="Upload" method="POST" enctype="multipart/form-data">
+
+    New Song<input type="file" name="file" id="file" />
+    <input type="submit" name="Upload" value="Upload" />
+</form>
 
 <c:import url="/footer.jsp" />
 

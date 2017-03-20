@@ -2,6 +2,7 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 3/20 | Individual Project | 2.5 | Rework manageAPlaylist screen to have two separate forms |
 | 3/18 | Individual Project | 6 | Rework playlists table and use session attributes |
 | 3/17 | Individual Project | 4  | Debug songs management |
 | 3/16 | Individual Project | 3 | Rework songs management |

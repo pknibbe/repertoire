@@ -1,10 +1,10 @@
 package butlers;
-import java.nio.file.*;
 
+import engines.UserManager;
 import org.apache.log4j.Logger;
+import persistence.SongDAO;
+import entity.Song;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -14,11 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import java.io.*;
-import engines.UserManager;
-import entity.Song;
-import persistence.SongDAO;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Enumeration;
 
 /**
@@ -28,22 +25,16 @@ import java.util.Enumeration;
  * Created by peter on 3/17/2017.
  */
 @WebServlet(
-        name = "ManageAPlaylist",
-        urlPatterns = { "/ManageAPlaylist" }
+        name = "Upload",
+        urlPatterns = { "/Upload" }
 )
 @MultipartConfig
-public class ManageAPlaylist extends HttpServlet {
+public class Upload extends HttpServlet {
 
-    // class instance variables
+    private final UserManager userManager = new UserManager();
+    HttpSession session;
     private final Logger logger = Logger.getLogger(this.getClass());
     private final SongDAO songDAO = new SongDAO();
-    private final UserManager userManager = new UserManager();
-    private HttpSession session;
-    private String url;
-    private Song song;
-    private int songID;
-    private final ServletContext servletContext = getServletContext();
-    private RequestDispatcher dispatcher;
 
 
     /**
@@ -57,46 +48,47 @@ public class ManageAPlaylist extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         session = request.getSession();
 
-        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        logger.info("This doPost is called");
+        logger.info("The user ID is " + session.getAttribute("user_id"));
 
-            songID = Integer.valueOf(request.getParameter("songID"));
-            if (songID == 0) { // request to upload a new song
-                final Part filePart = request.getPart("file");
-                final PrintWriter writer = response.getWriter();
+        Enumeration<String> parameterNames = request.getParameterNames();
 
-                logger.info("In upload section");
-                // Create path components to save the file
-                String path = "../Data/";
-                final String fileName = getFileName(filePart);
-                path += fileName;
-                boolean success = writeFile(path, filePart, fileName, writer);
-                if (success) { // Add new song to database
-                    int listID = (Integer) (session.getAttribute("listID"));
-                    song = new Song(path, listID );
-                    songDAO.add(song);
-                    logger.info("Added song record to the database");
-                    session.setAttribute("message", "Song Added");
-                } else {
-                    session.setAttribute("message", "Unable to add song");
-                    logger.info("Song addition failed");
-                }
+        logger.info("Collected the parameter names");
 
-                url = "/manageAPlayList.jsp";
-            } else { // must be delete
-                logger.info("In delete section");
-                session.setAttribute("songToDelete", songDAO.get(songID).getLocation());
-                session.setAttribute("songID", songID);
-                url = "/deleteSongConfirmation.jsp";
-            }
-        } else { // user not authenticated
-            session.setAttribute("message", "user not authenticated");
-            url = "/index.jsp";
+        while (parameterNames.hasMoreElements()) {
+            String pName = parameterNames.nextElement();
+            logger.info("Parameter name is " + pName);
+            logger.info("Parameter value is " + request.getParameter(pName));
         }
 
-        dispatcher = servletContext.getRequestDispatcher(url);
-        dispatcher.forward(request, response);
-/*        logger.info("Sending redirect to " + url);
-        response.sendRedirect(url); */
+        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+            Part filePart = request.getPart("file");
+
+            // Create path components to save the file
+            String path = "../Data/";
+            final String fileName = getFileName(filePart);
+            logger.info("Parameter fileName value is " + fileName);
+            path += fileName;
+            boolean success = writeFile(path, filePart, fileName);
+            if (success) { // Add new song to database
+                int listID = (Integer) (session.getAttribute("listID"));
+                Song song = new Song(path, listID );
+                songDAO.add(song);
+                logger.info("Added song record to the database");
+                session.setAttribute("message", "Song Added");
+                logger.info("Set message attribute");
+            } else {
+                session.setAttribute("message", "Unable to add song");
+                logger.info("Song addition failed");
+            }
+            logger.info("About to forward to ShowAPlaylist");
+            response.sendRedirect("ShowAPlaylist");
+
+        } else { // user not authenticated
+            session.setAttribute("message", "user not authenticated");
+            response.sendRedirect("/index.jsp");
+        }
+
     }
 
     private String getFileName(final Part part) {
@@ -105,13 +97,13 @@ public class ManageAPlaylist extends HttpServlet {
         for (String content : part.getHeader("content-disposition").split(";")) {
             if (content.trim().startsWith("filename")) {
                 return content.substring(
-                content.indexOf('=') + 1).trim().replace("\"", "");
+                        content.indexOf('=') + 1).trim().replace("\"", "");
             }
         }
         return null;
     }
 
-    private boolean writeFile(String path, Part filePart, String fileName, PrintWriter writer) throws IOException {
+    private boolean writeFile(String path, Part filePart, String fileName) throws IOException {
         OutputStream out = null;
         InputStream filecontent = null;
         boolean success = true;
@@ -139,7 +131,7 @@ public class ManageAPlaylist extends HttpServlet {
             success = false;
         } finally {
             if (out != null) {
-            out.close();
+                out.close();
             }
             logger.info("closed out");
             if (filecontent != null) {
@@ -147,11 +139,8 @@ public class ManageAPlaylist extends HttpServlet {
             }
             logger.info("closed filecontent");
 
-            if (writer != null) {
-                writer.close();
-            }
-            logger.info("closed writer");
         }
         return success;
     }
+
 }
