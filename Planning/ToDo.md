@@ -1,7 +1,7 @@
 # Major ToDos (March 18th)
 
 [ ] Access song information via RESTFul service
-[ ] Play songs
+[X] Play songs
 [ ] Properties
 [ ] AWS testing
 [ ] Messaging
