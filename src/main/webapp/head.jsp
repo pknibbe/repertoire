@@ -16,7 +16,6 @@ You can also purchase a PSD-file for this template.
 </head>
 
 <body>
-<div id="container">
     <c:set var="user_id" value="${user_id}"></c:set>
     <!-- header -->
     <div id="header">
@@ -31,7 +30,7 @@ You can also purchase a PSD-file for this template.
 
         <ul>
             <li><a href="ShowPlayLists">Music Center</a></li>
-            <li><a href="ShowMessageLists">Message Center</a></li>
+            <li><a href="ShowMessages">Message Center</a></li>
             <c:if test="${role eq boss}" >
                 <li><a href="ShowUsers">Administration Center</a></li>
             </c:if>
@@ -40,11 +39,11 @@ You can also purchase a PSD-file for this template.
     </div>
     <!--end header -->
     <!-- main -->
-    <div id="main">
+    <div >
         <h1>${message}</h1>
         <p>  </p>
         <c:if test="user_id gt 0">
         <h2>Welcome, ${name}. If you are not ${name}, please logout and log back in as yourself.</h2>
         </c:if>
+    </div>
 
-        <div id="a">

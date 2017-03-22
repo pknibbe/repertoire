@@ -24,11 +24,11 @@ public class Message {
     @GenericGenerator(name="increment", strategy="increment")
     protected int id;
 
-    private String subject;
-    private int sender;
-    private int receiver;
-    private int readFlag;
-    private String content;
+    protected String subject;
+    protected int sender;
+    protected int receiver;
+    protected int readFlag;
+    protected String content;
 
     public Message(String subject, int sender, int receiver, int read, String content) {
         this.subject = subject;

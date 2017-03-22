@@ -2,8 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="/head.jsp" /> <!-- opens body and container -->
+<div id="container">
 
-            <h3>Manage Accounts</h3>
+    <div id="a">
+        <h3>Manage Accounts</h3>
             <form action="UpdateAccounts" method="POST">
                 <table>
                     <thead><tr><th>Select</th><th>ID</th><th>Name</th><th>Username</th><th>Password</th><th>Role</th></tr></thead>
@@ -34,7 +36,8 @@
                 <input type="submit" name="Update" value="Update" />
                 <input type="submit" name="Delete" value="Delete" />
             </form>
-
+    </div>
+</div>
 <c:import url="/footer.jsp" />
 
 

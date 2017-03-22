@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="/head.jsp" /> <!-- opens body and container -->
+<div id="container">
+    <div id="a">
 
         <h3>Select a Playlist</h3>
         <form action="ManagePlaylists" method="Post">
@@ -32,7 +34,8 @@
             <input type="submit" name="Skip" value="Skip" />
             <input type="submit" name="Previous" value="Previous" />
         </form>
-
+    </div>
+</div>
     <c:import url="/footer.jsp" />
 
 

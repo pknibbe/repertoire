@@ -3,7 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="/head.jsp" /> <!-- opens body and container -->
 
+<div id="container">
 
+    <div id="a">
         <h3>Login</h3>
         <form action="ExternalAction" method="GET">
             <table>
@@ -14,19 +16,19 @@
         </form>
 
         <br /><br />
-        <c:if test="user_id gt 0">
             <div id="request">
 
             <h3>Request sign-in help</h3>
-            <form action="ExternalAction" method="POST">
+            <form action="MessageAdmin" method="POST">
                 Request an account:  <input type="radio" name="options" value="account" /><br />
                 Request reminder of user name: <input type="radio" name="options" value="username" /><br />
                 Request password reset: <input type="radio" name="options" value="password" /><br />
-                Message text: <input type="text" name="message"/><br />
+                Your name: <input type="text" name="name" />
                 <input type="submit" name="Request" value="Enter" />
             </form>
             </div>
-        </c:if>
+    </div>
+</div>
 
-        <c:import url="/footer.jsp" />
+<c:import url="/footer.jsp" />
 

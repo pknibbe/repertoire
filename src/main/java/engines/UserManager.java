@@ -190,15 +190,16 @@ public class UserManager {
         return (definedRoles.contains(rolename));
     }
 
-/* removing method in favor of one that takes the user ID
-    public boolean authenticated(HttpSession session) {
-        boolean aok = java.lang.Boolean.FALSE;
-        Integer userID = (Integer) session.getAttribute("user_id");
-        if (userID != null) {
-            if (userID > 0) aok = java.lang.Boolean.TRUE;
+    public int getIdByName(String name) {
+        List<User> users = userDAO.getAll();
+        for (User user : users) {
+            Integer userID = user.getId();
+            if (userID != null) {
+                return userID;
+            }
         }
-        return aok;
-    } */
+        return 0;
+    }
 
     public boolean authenticated(Integer user_id) {
         boolean aok = false;
@@ -206,6 +207,15 @@ public class UserManager {
             if (user_id > 0) aok = true;
         }
         return aok;
+    }
+
+    public int getAdminId() {
+        String role = "administrator";
+        List<User> users = userDAO.getAll();
+        for (User user : users) {
+            if (role.equalsIgnoreCase(user.getRole_name())) return user.getId();
+        }
+        return 0;
     }
 
 }

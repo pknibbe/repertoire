@@ -1,41 +1,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:import url="/head.jsp" /> <!-- opens body and container -->
+<div id="container">
+    <div id="a">
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Repertoire</title>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
-</head>
+            <h3>  </h3>
+            <table>
+                <thead><tr><th>Sender</th><th>Subject</th><th>Read?</th><th>Content</th></tr></thead>
+                <tbody>
+                    <c:forEach var="message" items="${messages}">
+                        <tr>
+                            <td>${message.sender}</td>
+                            <td>${message.subject}</td>
+                            <td>${message.read}</td>
+                            <td>${message.content}</td>
+                        </tr>
+                    </c:forEach>
+                </tbody>
+            </table><br/><br/>
 
-<body>
-<h3>${SessionMessage}</h3><br/><br/>
-
-<div>
-    <h4>My Messages</h4>
-    <form action="/Read" method="GET">
-        Message1:
-        <input type="radio" name="read" value="list1" /><br />
-        Message2:
-        <input type="radio" name="read" value="listb" /><br />
-        Message3:
-        <input type="radio" name="read" value="list3" /><br />
-        <input type="submit" name="Read" value="Read" />
-    </form>
+        <h3>Send a Message </h3>
+        <form action="SendMessage" method="POST">
+            <table>
+                <tr><td>To: </td><td><input type="text" name="to" /></td> </tr>
+                <tr><td>Subject: </td><td><input type="text" name="subject" /></td> </tr>
+                <tr><td>Content: </td><td><input type="text" name="content" /></td> </tr>
+            </table>
+            <input type="submit" name="Send" value="Send" />
+        </form>
+    </div>
 </div>
+<c:import url="/footer.jsp" />
 
-<div>
-    <h4>New Message</h4>
 
-    <form action="/Post" method="POST">
-        Recipient:
-        <select name="recipient" id="recipient">
-            <option value="Peter">Peter</option>
-            <option value="Marie">Marie</option>
-            <option value="Rose">Rose</option>
-        </select>
-        <input type="text" value="Hello" name=content" /><br/>
-        <input type="submit" value="Submit" name="Enter" />
-    </form>
-</div>
-
-</body>

@@ -6,7 +6,7 @@ import java.util.List;
 import entity.Playlist;
 import persistence.PlaylistDAO;
 /**
- * Manage changes to playlists including effects on associations
+ * Manage changes to playlists
  * Created by peter on 3/6/2017.
  */
 public class PlaylistManager {
