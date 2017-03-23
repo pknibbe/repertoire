@@ -5,6 +5,7 @@ import java.util.List;
 import entity.Role;
 import entity.User;
 import org.apache.log4j.Logger;
+import org.hibernate.HibernateException;
 import persistence.RoleDAO;
 import persistence.UserDAO;
 
@@ -27,7 +28,7 @@ public class UserManager {
      * @param name The name of the person
      * @param pw The password part of the login credential
      * @param rolename The assigned role of the user
-     * @return The unique user id for this user
+     * @return The unique user id for this user or zero if unable to complete
      */
     public int addUserWithRole(String userName, String name, String pw, String rolename) {
         if (userName == null) return 0;
@@ -37,16 +38,24 @@ public class UserManager {
 
         logger.info("Creating a new user");
         User user = new entity.User(userName, name, pw, rolename);
+        if (user == null) return 0;
         int added;
         if (checkUsername(userName)) { // userName is alright to use
             if (checkRoleName(rolename)) {
                 if (checkPassword(pw)) {
                     Role role = new entity.Role(userName, rolename);
-                    added = roleDAO.add(role);
-                    logger.info(role.toString());
-                    logger.info(user.toString());
-                    logger.info("Added user ID = " + userDAO.add(user));
-                    return added;
+                    if (role == null) return 0;
+                    try {
+                        added = roleDAO.add(role);
+                        logger.info(role.toString());
+                        logger.info(user.toString());
+                        logger.info("Added user ID = " + userDAO.add(user));
+                        return added;
+                    }
+                    catch (HibernateException hbe) {
+                        logger.error("Unable to add user and role to database. Hibernate exception " + hbe);
+                        return 0;
+                    }
                 } else logger.warn("Can't add user with unacceptable password " + pw);
             } else logger.warn("Can't add user with unacceptable rolename " + rolename);
         } else logger.warn("Can't add user with unacceptable username " + userName);
@@ -195,7 +204,9 @@ public class UserManager {
         for (User user : users) {
             Integer userID = user.getId();
             if (userID != null) {
-                return userID;
+                if (name.equalsIgnoreCase(user.getName())) {
+                    return userID;
+                }
             }
         }
         return 0;

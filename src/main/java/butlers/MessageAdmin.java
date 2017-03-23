@@ -3,7 +3,7 @@ package butlers;
 import engines.UserManager;
 import entity.Message;
 import persistence.MessageDAO;
-
+import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,12 +18,12 @@ import org.apache.log4j.Logger;
  * Created by peter on 2/27/2017.
  */
 @WebServlet(
-        name = "UpdateUserInformation",
-        urlPatterns = { "/UpdateUserInformation" }
+        name = "MessageAdmin",
+        urlPatterns = { "/MessageAdmin" }
 )
 public class MessageAdmin extends HttpServlet {
 
-    //private final Logger logger = Logger.getLogger(this.getClass());
+    private final Logger logger = Logger.getLogger(this.getClass());
     private final MessageDAO messageDAO = new MessageDAO();
     private final UserManager userManager = new UserManager();
         /**
@@ -37,7 +37,16 @@ public class MessageAdmin extends HttpServlet {
         public void doPost(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
 
-            String requestType = request.getParameter("option");
+            Enumeration<String> parameterNames = request.getParameterNames();
+
+
+            while (parameterNames.hasMoreElements()) {
+                String pName = parameterNames.nextElement();
+                logger.info("Parameter name is " + pName);
+                logger.info("Parameter value is " + request.getParameter(pName));
+            }
+
+            String requestType = request.getParameter("options");
             String requester = request.getParameter("name");
             Message message = new Message("Request for login assistance",
                     0,

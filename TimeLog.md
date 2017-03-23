@@ -2,6 +2,7 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 3/22 | Individual Project | 3 | Basic messaging flow |
 | 3/21 | Custom Tags | 2 | Readings and assignment |
 | 3/21 | Individual Project | 2 | Build MP3 player for project |
 | 3/20 | Individual Project | 2.5 | Rework manageAPlaylist screen to have two separate forms |

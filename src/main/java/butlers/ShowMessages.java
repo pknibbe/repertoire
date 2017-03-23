@@ -56,13 +56,18 @@ public class ShowMessages extends HttpServlet {
                plainMessage = dao.get(index);
                int senderID = plainMessage.getSender();
                User user = userDAO.get(senderID);
-               String senderName = user.getName();
+               String senderName;
+               if (user != null) {
+                   senderName = user.getName();
+               } else {
+                   senderName = "Unknown";
+               }
                PresentableMessage presentableMessage =
                         new PresentableMessage(plainMessage, senderName);
                messages.add(presentableMessage);
             }
-            session.setAttribute("Messages", messages);
-            url = "/Messages.jsp";
+            session.setAttribute("messages", messages);
+            url = "/messages.jsp";
 
         } else {
             session.setAttribute("message", "user not authenticated");

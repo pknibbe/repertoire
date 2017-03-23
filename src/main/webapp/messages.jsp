@@ -13,7 +13,7 @@
                         <tr>
                             <td>${message.sender}</td>
                             <td>${message.subject}</td>
-                            <td>${message.read}</td>
+                            <td>${message.readFlag}</td>
                             <td>${message.content}</td>
                         </tr>
                     </c:forEach>

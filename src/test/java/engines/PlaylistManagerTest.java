@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 import entity.Playlist;
 import persistence.PlaylistDAO;
 /**
- * Test the methods of the UserManager class
+ * Test the methods of the PlaylistManager class
  * Created by peter on 2/16/2017.
  */
 public class PlaylistManagerTest {

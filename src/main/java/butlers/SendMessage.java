@@ -48,7 +48,7 @@ public class SendMessage extends HttpServlet {
                 Message message = new Message(request.getParameter("subject"), user_id, recipientId, 0,
                         request.getParameter("content"));
                 messageDAO.add(message);
-
+                url = "ShowMessages";
             } else {
                 session.setAttribute("message", "user not authenticated");
                 url = "/index.jsp";
