@@ -27,6 +27,14 @@
             New Song<input type="file" name="file" id="file" />
             <input type="submit" name="Upload" value="Upload" />
         </form>
+
+        <p>  </p>
+        <form action="ControlPlayer" method="POST">
+            <input type="submit" name="Play" value="Play" />
+            <input type="submit" name="Stop" value="Stop" />
+            <input type="submit" name="Skip" value="Skip" />
+            <input type="submit" name="Previous" value="Previous" />
+        </form>
     </div>
 </div>
 <c:import url="/footer.jsp" />

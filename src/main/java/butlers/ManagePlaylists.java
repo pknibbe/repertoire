@@ -60,7 +60,7 @@ public class ManagePlaylists extends HttpServlet {
                 session.setAttribute("message", "New List Created");
 
                 url = "manageAPlayList.jsp";
-            } else { // must be delete, modify, or share request
+            } else {
                 Enumeration<String> parameterNames = request.getParameterNames();
 
                 while (parameterNames.hasMoreElements()) {

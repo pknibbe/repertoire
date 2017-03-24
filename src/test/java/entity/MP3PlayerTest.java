@@ -1,6 +1,5 @@
-package engines;
+package entity;
 
-import engines.MP3Player;
 import org.junit.Test;/**
  * Tests the MP3 player from javazoom
  * Created by peter on 3/21/2017.

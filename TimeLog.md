@@ -2,6 +2,8 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 3/24 | Week 10 preparation | 1 | Cave of programming videos |
+| 3/23 | Week 10 exercise | 4 | This includes watching the video |
 | 3/22 | Individual Project | 3 | Basic messaging flow |
 | 3/21 | Custom Tags | 2 | Readings and assignment |
 | 3/21 | Individual Project | 2 | Build MP3 player for project |

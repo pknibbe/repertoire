@@ -1,4 +1,4 @@
-package engines;
+package entity;
 
 import javax.sound.sampled.*;
 import java.io.*;
