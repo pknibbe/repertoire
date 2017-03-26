@@ -2,6 +2,10 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 3/25 | Individual Project | 5 | Reworking threading of player so user can start and stop it |
+| 3/24 | Team Project | 1 | Scrum and rework of user input and related classes |
+| 3/24 | Individual Project | 1 | Working on error processing |
+| 3/24 | Individual Project | 2 | Multi-threading application so player is independent |
 | 3/24 | Week 10 preparation | 1 | Cave of programming videos |
 | 3/23 | Week 10 exercise | 4 | This includes watching the video |
 | 3/22 | Individual Project | 3 | Basic messaging flow |

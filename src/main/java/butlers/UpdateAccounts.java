@@ -1,5 +1,6 @@
 package butlers;
 
+import entity.User;
 import engines.UserManager;
 import org.apache.log4j.Logger;
 import javax.servlet.ServletException;
@@ -55,8 +56,14 @@ public class UpdateAccounts extends HttpServlet {
                     String parameterName = parameterNames.nextElement();
                     logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                     if (parameterName.equalsIgnoreCase("Delete")) {
-                        userManager.removeUserWithRole(identifier);
-                        logger.info("removed user " + identifier);
+                        if (0 == userManager.removeUserWithRole(identifier)) {
+                            session.setAttribute("message", "Unable to remove user due to system error");
+                            logger.error("Unable to remove user due to system error");
+                        } else {
+                            session.setAttribute("message", "removed user");
+                            logger.info("removed user " + identifier);
+                        }
+                        url = "ShowUsers";
                     } else if (parameterName.equalsIgnoreCase("Update")) {
                         String name = request.getParameter("Name");
                         String password = request.getParameter("Password");
@@ -64,20 +71,26 @@ public class UpdateAccounts extends HttpServlet {
                         role = request.getParameter("Role");
                         if (identifier > 0) {
                             logger.info("Updating existing user ID " + identifier);
-                            session.setAttribute("UserInfo", userManager.getUser(identifier));
-                            String url = "updateUser.jsp";
-                            response.sendRedirect(url);
-                            return;
+                            User user = userManager.getUser(identifier);
+                            if (user == null) {
+                                session.setAttribute("message", "Unable to update user due to system error");
+                                url = "/index.jsp";
+                            } else {
+                                session.setAttribute("UserInfo", userManager.getUser(identifier));
+                                url = "ShowUsers";
+                            }
                         } else {
                             int added = userManager.addUserWithRole(userName, name, password, role);
                             logger.info("Creating a new user returned " + added);
+                            url = "ShowUsers";
                         }
                     }
                 }
-
             }
-            url = "ShowUsers";
-
+            else {
+                session.setAttribute("message", "Not authorized to manage user accounts");
+                url = "ShowPlaylists";
+            }
         } else { // bounce
             session.setAttribute("message", "user not authenticated");
             url = "/index.jsp";

@@ -20,14 +20,6 @@ public class SongManager {
     private int currentSongIndex;
     private String songRoot;
 
-    public int getCurrentSongIndex() {
-        return currentSongIndex;
-    }
-
-    public void setCurrentSongIndex(int currentSongIndex) {
-        this.currentSongIndex = currentSongIndex;
-    }
-
     public String getSongRoot() {
         return songRoot;
     }
@@ -44,6 +36,10 @@ public class SongManager {
         this.currentSong = currentSong;
     }
 
+    /**
+     * Retrieves the location of the current song
+     * @return The song location
+     */
     public String getPathToCurrentSong() {
         if (currentSong == null) {
             logger.error("Current song is null and cannot be located");
@@ -55,12 +51,33 @@ public class SongManager {
     }
 
 
+    /**
+     * Retrieves the songs in a playlist
+     * @param list_ID The system identifier of the playlist
+     * @return The songs
+     */
     public ArrayList<Song> getSongs(int list_ID) {
         ArrayList<Song> songList = new ArrayList<>();
         List<Song> songs = songDAO.getAll();
         for (Song song : songs) {
             if (list_ID == song.getPlaylist_id()) {
                 songList.add(song);
+            }
+        }
+        return songList;
+    }
+
+    /**
+     * Retrieves the system identifiers of the songs in a playlist
+     * @param list_ID The system identifier of the playlist
+     * @return The song identifiers
+     */
+    public ArrayList<Integer> getSongIds(int list_ID) {
+        ArrayList<Integer> songList = new ArrayList<>();
+        List<Song> songs = songDAO.getAll();
+        for (Song song : songs) {
+            if (list_ID == song.getPlaylist_id()) {
+                songList.add(song.getId());
             }
         }
         return songList;

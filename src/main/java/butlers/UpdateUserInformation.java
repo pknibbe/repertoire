@@ -38,12 +38,15 @@ public class UpdateUserInformation extends HttpServlet {
             HttpSession session = request.getSession();
 
             if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+                if (0 ==
                 userManager.updateUserWithRole(
                         Integer.valueOf(request.getParameter("id")),
                         request.getParameter("UserName"),
                         request.getParameter("Name"),
                         request.getParameter("NewPassword"),
-                        request.getParameter("Role"));
+                        request.getParameter("Role"))) {
+                    session.setAttribute("message", "user not updated due to system error");
+                }
 
                 url = "ShowUsers";
 

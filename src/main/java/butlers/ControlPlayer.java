@@ -1,7 +1,6 @@
 package butlers;
 
-import engines.*;
-import entity.Song;
+import entity.Player;
 import org.apache.log4j.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Enumeration;
 
 /**
@@ -22,8 +20,7 @@ import java.util.Enumeration;
         urlPatterns = { "/ControlPlayer" })
 public class ControlPlayer extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final SongManager songManager = new SongManager();
-    private PlayerManager playerManager;
+    private Player player;
 
     /**
      *  Handles HTTP Post requests.
@@ -37,9 +34,7 @@ public class ControlPlayer extends HttpServlet {
             throws ServletException, IOException {
 
         HttpSession session = request.getSession();
-
         logger.info("In doPost");
-        ArrayList<Song> songs = (ArrayList<Song>) session.getAttribute("songs");
 
         Enumeration<String> parameterNames = request.getParameterNames();
 
@@ -47,32 +42,24 @@ public class ControlPlayer extends HttpServlet {
             String parameterName = parameterNames.nextElement();
             logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
             if (parameterName.equalsIgnoreCase("Play")) {
-                startPlayer(songs);
+                int list_id = (Integer) session.getAttribute("listID");
+                player = new Player(list_id);
+                session.setAttribute("message", "Starting playback");
+                player.start();
             }
             if (parameterName.equalsIgnoreCase("Stop")) {
-                stopPlayer();
+                session.setAttribute("message", "Stopping playback");
+                player.stop();
             }
             if (parameterName.equalsIgnoreCase("Skip")) {
-                stopPlayer();
-                int currentSong = songManager.getCurrentSongIndex() + 1;
-                if (currentSong < songs.size()) songManager.setCurrentSongIndex(currentSong);
-                startPlayer(songs);
+                session.setAttribute("message", "Skipping playback");
+                player.skip();
             }
             if (parameterName.equalsIgnoreCase("Previous")) {
-                stopPlayer();
-                int currentSong = songManager.getCurrentSongIndex() - 1;
-                if (currentSong > -1) songManager.setCurrentSongIndex(currentSong);
-                startPlayer(songs);
+                session.setAttribute("message", "Skipping playback back one track");
+                player.previous();
             }
         }
-    }
-
-    private void startPlayer(ArrayList<Song> songs) {
-        playerManager = new PlayerManager(); // Make sure this is a new playerManager so the thread pool is available
-        playerManager.start(songs); // create a thread and a loop that calls the player
-    }
-
-    private void stopPlayer() {
-        playerManager.stop(); // kill the thread
+        response.sendRedirect("/manageAPlaylist.jsp");
     }
 }
