@@ -6,47 +6,29 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import persistence.SongDAO;
 import entity.Song;
-import entity.Association;
-import persistence.AssociationDAO;
-import engines.AssociationManager;
 /**
- * Performs very simple file management
+ * Performs very simple entity management on songs
  * Created by peter on 3/6/2017.
  */
 public class SongManager {
     private final SongDAO songDAO = new SongDAO();
     private final Logger logger = Logger.getLogger(this.getClass());
-    private Song currentSong;
-    private int currentSongIndex;
-    private String songRoot;
 
-    public String getSongRoot() {
-        return songRoot;
-    }
-
-    public void setSongRoot(String songRoot) {
-        this.songRoot = songRoot;
-    }
-
-    public Song getCurrentSong() {
-        return currentSong;
-    }
-
-    public void setCurrentSong(Song currentSong) {
-        this.currentSong = currentSong;
+    public SongManager() {
     }
 
     /**
      * Retrieves the location of the current song
      * @return The song location
      */
-    public String getPathToCurrentSong() {
+    public String getPathToSong(int songID) {
+        Song currentSong = songDAO.get(songID);
         if (currentSong == null) {
             logger.error("Current song is null and cannot be located");
             return null;
         }
         else {
-            return getSongRoot() + currentSong.getLocation();
+            return currentSong.getLocation();
         }
     }
 
@@ -82,16 +64,4 @@ public class SongManager {
         }
         return songList;
     }
-
-/*    public void removeSong (int songID, int userID) {
-        songDAO.remove(songID);
-        AssociationManager manager = new AssociationManager();
-        Association association = manager.getAssociation("users", userID, songID, "songs");
-        associationDAO.remove(association.getId());
-    }
-
-    public int updateSong (Song song) {
-        return songDAO.modify(song);
-    }
-*/
 }

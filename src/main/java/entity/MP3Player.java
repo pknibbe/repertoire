@@ -1,5 +1,7 @@
 package entity;
 
+import org.apache.log4j.Logger;
+
 import javax.sound.sampled.*;
 import java.io.*;
 /**
@@ -7,11 +9,13 @@ import java.io.*;
  * Created by peter on 3/21/2017.
  */
 public class MP3Player {
+    final Logger logger = Logger.getLogger(this.getClass());
 
     public void play(String filename) {
         try {
             File file = new File(filename);
             AudioInputStream in = AudioSystem.getAudioInputStream(file);
+            logger.info("AudioInputStream created from " + filename);
             AudioInputStream din;
             AudioFormat baseFormat = in.getFormat();
             AudioFormat decodedFormat = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED,
@@ -26,6 +30,7 @@ public class MP3Player {
             rawplay(decodedFormat, din);
             in.close();
         } catch (Exception e) {
+            logger.error("Exception in play method " + e);
             //Handle exception.
         }
     }

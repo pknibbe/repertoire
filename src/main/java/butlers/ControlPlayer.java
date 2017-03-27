@@ -44,11 +44,18 @@ public class ControlPlayer extends HttpServlet {
             if (parameterName.equalsIgnoreCase("Play")) {
                 int list_id = (Integer) session.getAttribute("listID");
                 player = new Player(list_id);
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 session.setAttribute("message", "Starting playback");
+                session.setAttribute("playerState", "playing");
                 player.start();
             }
             if (parameterName.equalsIgnoreCase("Stop")) {
                 session.setAttribute("message", "Stopping playback");
+                session.setAttribute("playerState", "stopped");
                 player.stop();
             }
             if (parameterName.equalsIgnoreCase("Skip")) {
