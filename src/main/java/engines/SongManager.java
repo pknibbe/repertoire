@@ -2,6 +2,7 @@ package engines;
 
 import java.util.ArrayList;
 import java.util.List;
+import engines.PropertyManager;
 
 import org.apache.log4j.Logger;
 import persistence.SongDAO;
@@ -13,8 +14,19 @@ import entity.Song;
 public class SongManager {
     private final SongDAO songDAO = new SongDAO();
     private final Logger logger = Logger.getLogger(this.getClass());
+    private final PropertyManager propertyManager = new PropertyManager("/repertoire.properties");
+    private String repository;
 
     public SongManager() {
+        repository = propertyManager.getProperty("musicDir");
+    }
+
+    public String getRepository() {
+        return repository;
+    }
+
+    public void setRepository(String repository) {
+        this.repository = repository;
     }
 
     /**

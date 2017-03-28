@@ -60,11 +60,15 @@ public class Player {
             e.printStackTrace();
         }
         logger.info("In skip after STOP");
+        increment();
+
+    }
+
+    public void increment() {
         if (currentSongIndex < (songIds.size() - 1)) { //Possible to skip forward
             currentSongIndex++;
             action = "START";
-        }
-        else {
+        } else {
             stop();
         }
     }
@@ -90,10 +94,7 @@ public class Player {
 
     public String getCurrentSongLocation() {
         String relativePath = songManager.getPathToSong(songIds.get(currentSongIndex));
-        String permanentSource = "C:/Users/peter/tomee";
-        return permanentSource + relativePath.substring(2);
-        //return "C:/Users/peter/tomee" + relativePath.substring(2);
-        //return "C:/Users/peter/tomee/Data/MoreThanAFeeling.mp3";
+        return songManager.getRepository() + relativePath.substring(2);
     }
 
     public String getAction() {

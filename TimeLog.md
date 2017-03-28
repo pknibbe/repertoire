@@ -2,6 +2,8 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 3/27 | Individual Project | 2 | Using the properties file |
+| 3/26 | Individual Project | 6 | Reworking and debugging player until it passes the unit test |
 | 3/25 | Individual Project | 5 | Reworking threading of player so user can start and stop it |
 | 3/24 | Team Project | 1 | Scrum and rework of user input and related classes |
 | 3/24 | Individual Project | 1 | Working on error processing |

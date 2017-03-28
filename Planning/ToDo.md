@@ -2,11 +2,11 @@
 
 [ ] Access song information via RESTFul service
 [X] Play songs
-[ ] Play a playlist
-[ ] Properties
+[X] Play a playlist
+[X] Properties
 [ ] AWS testing
-[ ] Messaging
+[X] Messaging
 [ ] Sharing
 [ ] JQuery
-[ ] Robust against database access errors
+[X] Robust against database access errors
 [X] put playlist owner id in playlists table, not associations table

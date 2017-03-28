@@ -21,6 +21,7 @@ public class RunnablePlayer implements Runnable{
         logger.info("In RunnablePlayer about to play " + player.getCurrentSongLocation());
         //mp3Player.play(player.getCurrentSongLocation());
         audioFilePlayer.play(player.getCurrentSongLocation());
+        player.increment();
     }
 
 }
