@@ -1,10 +1,7 @@
 package butlers;
 
-import engines.UserManager;
+import engines.*;
 import org.apache.log4j.Logger;
-import persistence.SongDAO;
-import entity.Song;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -34,7 +31,8 @@ public class Upload extends HttpServlet {
     private final UserManager userManager = new UserManager();
     HttpSession session;
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final SongDAO songDAO = new SongDAO();
+    private final SongManager songManager = new SongManager();
+    private final PlaylistManager playlistManager = new PlaylistManager();
 
 
     /**
@@ -69,12 +67,23 @@ public class Upload extends HttpServlet {
             final String fileName = getFileName(filePart);
             logger.info("Parameter fileName value is " + fileName);
             path += fileName;
+            int listID = (Integer) (session.getAttribute("listID"));
+            //multiple cases
+            // Case 1: Song is already in database under this listID.
+            if (playlistManager.alreadyThere(path, listID)) { //Don't need to do anything
+                session.setAttribute("message", "Song already there");
+                response.sendRedirect("ShowAPlaylist");
+            }
+            // Case 2: Song is already in database under a different listID
+            if (songManager.exists(path)) { // still need to add it to playlist
+                songManager.add(path, listID );
+                session.setAttribute("message", "Song Added");
+                response.sendRedirect("ShowAPlaylist");
+            }
+            // Case 3: Song is totally new to database. This is reflected below
             boolean success = writeFile(path, filePart, fileName);
             if (success) { // Add new song to database
-                int listID = (Integer) (session.getAttribute("listID"));
-                Song song = new Song(path, listID );
-                songDAO.add(song);
-                logger.info("Added song record to the database");
+                songManager.add(path, listID );
                 session.setAttribute("message", "Song Added");
                 logger.info("Set message attribute");
             } else {

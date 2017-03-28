@@ -2,8 +2,6 @@ package engines;
 
 import java.util.ArrayList;
 import java.util.List;
-import engines.PropertyManager;
-
 import org.apache.log4j.Logger;
 import persistence.SongDAO;
 import entity.Song;
@@ -14,11 +12,11 @@ import entity.Song;
 public class SongManager {
     private final SongDAO songDAO = new SongDAO();
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final PropertyManager propertyManager = new PropertyManager("/repertoire.properties");
     private String repository;
 
     public SongManager() {
-        repository = propertyManager.getProperty("musicDir");
+        PropertyManager propertyManager = new PropertyManager("/repertoire.properties");
+        setRepository(propertyManager.getProperty("musicDir"));
     }
 
     public String getRepository() {
@@ -76,4 +74,49 @@ public class SongManager {
         }
         return songList;
     }
+
+    /**
+     * Adds the song to the playlist if it is not already there, also adding it to the songs table if necessary
+     * @param location Where the song should be
+     * @param playlist_id The system ID of the playlist
+     * @return The system ID of the song
+     */
+    public int add(String location, int playlist_id) {
+        List<Song> songs = songDAO.getAll();
+        for (Song song : songs) {
+            if (location.equalsIgnoreCase(song.getLocation()) &&
+                    playlist_id == song.getPlaylist_id()) return song.getId();
+        }
+        Song song = new Song(location, playlist_id );
+        return songDAO.add(song);
+    }
+
+    /**
+     * Returns whether or not the specified song is in the database
+     * @param location The file sought
+     * @return whether or not the specified song is in the database
+     */
+    public boolean exists(String location) {
+        boolean found = false;
+        List<Song> songs = songDAO.getAll();
+        for (Song song : songs) {
+            if (song.getLocation().equalsIgnoreCase(location)) found = true;
+        }
+        return found;
+    }
+
+    /**
+     * Returns the system ID of the song at a specified file
+     * @param location The specification of the file
+     * @return zero or the system ID
+     */
+    public ArrayList<Integer> getIDs(String location) {
+        List<Song> songs = songDAO.getAll();
+        ArrayList<Integer> ids = new ArrayList<>();
+        for (Song song : songs) {
+            if (song.getLocation().equalsIgnoreCase(location)) ids.add(song.getId());
+        }
+        return ids;
+    }
+
 }

@@ -21,9 +21,9 @@ public class PlaylistDAO {
      */
     public List<Playlist> getAll() throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        List<Playlist> Playlists = session.createCriteria(Playlist.class).list();
+        List<Playlist> playlists = session.createCriteria(Playlist.class).list();
         session.close();
-        return Playlists;
+        return playlists;
     }
 
     /** Get a single Playlist for the given id
@@ -33,9 +33,9 @@ public class PlaylistDAO {
      */
     public Playlist get(int id) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Playlist Playlist = (Playlist) session.get(Playlist.class, id);
+        Playlist playlist = (Playlist) session.get(Playlist.class, id);
         session.close();
-        return Playlist;
+        return playlist;
     }
 
     /** save a new Playlist

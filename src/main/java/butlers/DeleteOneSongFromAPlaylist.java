@@ -1,6 +1,8 @@
 package butlers;
 
 import java.util.*;
+
+import engines.SharedManager;
 import org.apache.log4j.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,6 +27,7 @@ public class DeleteOneSongFromAPlaylist extends HttpServlet {
     private final SongDAO songDAO = new SongDAO();
     private final UserManager userManager = new UserManager();
     private final Logger logger = Logger.getLogger(this.getClass());
+    private final SharedManager sharedManager = new SharedManager();
 
 
     /**
@@ -37,6 +40,7 @@ public class DeleteOneSongFromAPlaylist extends HttpServlet {
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
+        int list_id = (Integer) session.getAttribute("listID");
 
         logger.info("This doPost is called");
         logger.info("The user ID is " + session.getAttribute("user_id"));
@@ -57,6 +61,10 @@ public class DeleteOneSongFromAPlaylist extends HttpServlet {
             logger.info("In delete section");
             session.setAttribute("songToDelete", songDAO.get(songID).getLocation());
             session.setAttribute("songID", songID);
+            if (sharedManager.isShared(list_id)) {
+                session.setAttribute("message", "Can't delete song from shared playlist");
+                response.sendRedirect("/manageAPlaylist.jsp");
+            }
             response.sendRedirect("/deleteSongConfirmation.jsp");
         } else { // user not authenticated
             session.setAttribute("message", "user not authenticated");

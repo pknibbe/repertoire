@@ -2,6 +2,7 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 3/28 | Individual Project | 5 | Playlist sharing |
 | 3/27 | Individual Project | 2 | Using the properties file |
 | 3/26 | Individual Project | 6 | Reworking and debugging player until it passes the unit test |
 | 3/25 | Individual Project | 5 | Reworking threading of player so user can start and stop it |

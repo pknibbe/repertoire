@@ -41,7 +41,7 @@ background: url(images/menu_border.png) right no-repeat;
 float: left;
 height: 20px;
 padding: 10px 30px;
-background-color: Green;
+background-color: White;
 font-size: 15px;
 font-weight: bold;
 text-decoration: none;
@@ -55,7 +55,7 @@ background: url(images/menu_border.png);
 float: left;
 width: 100%;
 margin: 5px 0;
-color: Green;
+color: #FFF4D1;
 font-size: 11px;
 }
 #main a {

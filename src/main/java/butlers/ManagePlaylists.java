@@ -1,6 +1,6 @@
 package butlers;
 
-import engines.UserManager;
+import engines.*;
 import org.apache.log4j.Logger;
 import entity.*;
 import persistence.*;
@@ -32,6 +32,8 @@ public class ManagePlaylists extends HttpServlet {
     private final UserManager userManager = new UserManager();
     private final UserDAO userDAO = new UserDAO();
     private final PlaylistDAO playlistDAO = new PlaylistDAO();
+    private final PlaylistManager playlistManager = new PlaylistManager();
+    private final SharedManager sharedManager = new SharedManager();
     /**
      * Handles HTTP POST requests.
      *
@@ -53,12 +55,8 @@ public class ManagePlaylists extends HttpServlet {
             listID = Integer.valueOf(request.getParameter("listID"));
             if (listID == 0) { // request to create a new list
                 String name = request.getParameter("name");
-                Playlist playlist = new Playlist(name, (Integer) session.getAttribute("user_id"));
-                listID = playlistDAO.add(playlist);
-
-                session.setAttribute("playlist", playlistDAO.get(listID));
-                session.setAttribute("message", "New List Created");
-
+                session.setAttribute("playlist", playlistManager.add((Integer) session.getAttribute("user_id"), name));
+                session.setAttribute("message", "");
                 url = "manageAPlayList.jsp";
             } else {
                 Enumeration<String> parameterNames = request.getParameterNames();
@@ -67,14 +65,20 @@ public class ManagePlaylists extends HttpServlet {
                     String parameterName = parameterNames.nextElement();
                     logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                     if (parameterName.equalsIgnoreCase("Delete")) {
-                        url = "deletePlaylistConfirmation.jsp";
+                        //TODO test for sharing of playlist - don't allow deletion if shared
+                        if (sharedManager.isShared(listID)) {
+                            session.setAttribute("message", "Can't delete shared playlist.");
+                            url = "/manageAPlaylist.jsp";
+                        } else {
+                            url = "/deletePlaylistConfirmation.jsp";
+                        }
                     } else if (parameterName.equalsIgnoreCase("Share")) {
                         ArrayList<Integer> otherUserIDs = userManager.getOtherUserIDs((Integer) session.getAttribute("user_id"));
-                        ArrayList<String> otherUserNames = new ArrayList<>();
+                        ArrayList<User> otherUsers = new ArrayList<>();
                         for (Integer userID : otherUserIDs) {
-                            otherUserNames.add(userDAO.get(userID).getName());
+                            otherUsers.add(userDAO.get(userID));
                         }
-                        session.setAttribute("otherUserNames", otherUserNames);
+                        session.setAttribute("otherUsers", otherUsers);
                         url = "/sharePlaylist.jsp";
                     } else if (parameterName.equalsIgnoreCase("Manage")) {
                         url = "ShowAPlaylist";
