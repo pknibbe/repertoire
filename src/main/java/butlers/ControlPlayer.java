@@ -51,19 +51,23 @@ public class ControlPlayer extends HttpServlet {
                 }
                 session.setAttribute("message", "Starting playback");
                 session.setAttribute("playerState", "playing");
+                session.setAttribute("player", player);
                 player.start();
             }
             if (parameterName.equalsIgnoreCase("Stop")) {
                 session.setAttribute("message", "Stopping playback");
                 session.setAttribute("playerState", "stopped");
+                player = (Player) session.getAttribute("player");
                 player.stop();
             }
             if (parameterName.equalsIgnoreCase("Skip")) {
                 session.setAttribute("message", "Skipping playback");
+                player = (Player) session.getAttribute("player");
                 player.skip();
             }
             if (parameterName.equalsIgnoreCase("Previous")) {
                 session.setAttribute("message", "Skipping playback back one track");
+                player = (Player) session.getAttribute("player");
                 player.previous();
             }
         }

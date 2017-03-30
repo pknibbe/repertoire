@@ -23,7 +23,15 @@
         <h3>Send a Message </h3>
         <form action="SendMessage" method="POST">
             <table>
-                <tr><td>To: </td><td><input type="text" name="to" /></td> </tr>
+                <tr> <td>To:</td>
+                    <td>
+                        <select name="to">
+                            <c:forEach var="userName" items="${names}">
+                                <option value="${userName}">${userName}</option>
+                            </c:forEach>
+                        </select>
+                    </td>
+                </tr>
                 <tr><td>Subject: </td><td><input type="text" name="subject" /></td> </tr>
                 <tr><td>Content: </td><td><input type="text" name="content" /></td> </tr>
             </table>

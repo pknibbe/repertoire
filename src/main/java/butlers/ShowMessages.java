@@ -67,6 +67,7 @@ public class ShowMessages extends HttpServlet {
                messages.add(presentableMessage);
             }
             session.setAttribute("messages", messages);
+            session.setAttribute("names", userManager.getOtherUserNames(user_id));
             url = "/messages.jsp";
 
         } else {

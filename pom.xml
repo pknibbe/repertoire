@@ -93,8 +93,17 @@
             <artifactId>tritonus-share</artifactId>
             <version>0.3.7-2</version>
         </dependency>
-
-
+        <!-- https://mvnrepository.com/artifact/org.webjars/jquery -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>2.1.4</version>
+        </dependency>
+<!-- Want to use this to get rid of compiler warning, but intellij is not understanding it
+        <properties>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        </properties>
+-->
     </dependencies>
 
     <build>

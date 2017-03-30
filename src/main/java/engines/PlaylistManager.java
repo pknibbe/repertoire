@@ -7,6 +7,7 @@ import entity.Playlist;
 import persistence.PlaylistDAO;
 import persistence.SongDAO;
 
+
 /**
  * Manage changes to playlists
  * Created by peter on 3/6/2017.
@@ -18,6 +19,7 @@ public class PlaylistManager {
     private List<Playlist> PlaylistList;
     final private SongManager songManager = new SongManager();
     final private SongDAO songDAO = new SongDAO();
+    final private SharedManager sharedManager = new SharedManager();
 
     /**
      * Gets the system ID of a playlist from the user ID and the playlist name
@@ -46,10 +48,14 @@ public class PlaylistManager {
     public ArrayList<Integer> getIDs(int user_id) {
         PlaylistList = pDAO.getAll();
         ArrayList<Integer> playlistIDs = new ArrayList<>();
-        for (Playlist playlist : PlaylistList) {
+        for (Playlist playlist : PlaylistList) { // playlists owned by the user
             if (user_id == playlist.getOwner_id()) {
                 playlistIDs.add(playlist.getId());
             }
+        }
+        ArrayList<Integer> sharedIDs = sharedManager.getAll(user_id);
+        for (Integer index : sharedIDs) { // playlists shared with the user
+            playlistIDs.add(index);
         }
         return playlistIDs;
     }

@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import entity.Shared;
 import org.apache.log4j.Logger;
 import org.junit.Before;
+import org.junit.After;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -61,7 +62,7 @@ public class SharedDAOTest {
         assertEquals("Add did not work: ", numberOfPlaylists -3, originalNumberOfPlaylists);
     }
 
-    @Test
+    @After
     public void testRemove() throws Exception {
         for (Integer index : sharingIDs) { // Loop over the entries created in the Before section
             dao.remove(index);

@@ -55,14 +55,16 @@ public class SharePlaylist extends HttpServlet {
                     logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                     if (request.getParameter("Share") != null) {
                         logger.info("In share section");
-                        for (Integer index : otherUserIDs) {
-                            if (index.equals(Integer.valueOf(request.getParameter(parameterName)))) {
-                                sharedManager.share(playlist_id, index);
-                            }
+                        if (request.getParameter(parameterName).equalsIgnoreCase("on")) { // this is id
+                            Integer index = Integer.valueOf(parameterName);
+                            sharedManager.share(playlist_id, index);
                         }
                     } else if  (request.getParameter("UnShare") != null) {
                         logger.info("In un-share section");
-                        sharedManager.remove(Integer.valueOf(request.getParameter(parameterName)), playlist_id);
+                        if (request.getParameter(parameterName).equalsIgnoreCase("on")) { // this is id
+                            Integer index = Integer.valueOf(parameterName);
+                            sharedManager.remove(index, playlist_id);
+                        }
                     }
                 }
                 url = "/sharePlaylist.jsp";

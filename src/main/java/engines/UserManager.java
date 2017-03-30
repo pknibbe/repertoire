@@ -70,16 +70,39 @@ public class UserManager {
 
         try {
             for (User user : userDAO.getAll()) {
-            Integer userID = user.getId();
-            if (identifier != userID) {
-                otherUserIDs.add(userID);
-            }
-        }                    }
+                Integer userID = user.getId();
+                if (identifier != userID) {
+                    otherUserIDs.add(userID);
+                }
+            }                    }
         catch (HibernateException hbe) {
             logger.error("Unable to get user Ids from database. Hibernate exception " + hbe);
             return null;
         }
         return otherUserIDs;
+    }
+
+
+    /**
+     * Fetches the Names of the users other than the current user
+     * @param identifier The system ID of the current user
+     * @return The Names of the other users
+     */
+    public ArrayList<String> getOtherUserNames(int identifier) {
+        ArrayList<String> otherUsers = new ArrayList<>();
+
+        try {
+            for (User user : userDAO.getAll()) {
+                Integer userID = user.getId();
+                if (identifier != userID) {
+                    otherUsers.add(user.getName());
+                }
+            }                    }
+        catch (HibernateException hbe) {
+            logger.error("Unable to get user Ids from database. Hibernate exception " + hbe);
+            return null;
+        }
+        return otherUsers;
     }
 
     /**

@@ -49,7 +49,7 @@ public class PlayManager implements Runnable {
      * Launches a thread to play the current song in the player object
      */
     private void start() {
-        logger.info("In start method");
+        //logger.info("In start method");
         if (thread == null) {
             logger.info("creating a new runnable thread");
             thread = new Thread(runnablePlayer);

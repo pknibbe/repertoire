@@ -27,6 +27,8 @@
             <input type="submit" name="Manage" value="Manage" />
             <input type="submit" name="Share" value="Share" />
             <input type="submit" name="Delete" value="Delete" />
+            <input type="submit" name="Play" value="Play" />
+            <input type="submit" name="Stop" value="Stop" />
 
         </form>
     </div>

@@ -11,9 +11,10 @@ padding: 10px;
 }
 
 #header {
-height: 100px;
+height: 250px;
 background-color: #FFFFFF;
     color: Green;
+    font-color: Green;
 }
 
 #slogan {

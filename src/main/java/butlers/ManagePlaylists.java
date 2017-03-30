@@ -34,6 +34,7 @@ public class ManagePlaylists extends HttpServlet {
     private final PlaylistDAO playlistDAO = new PlaylistDAO();
     private final PlaylistManager playlistManager = new PlaylistManager();
     private final SharedManager sharedManager = new SharedManager();
+    private Player player;
     /**
      * Handles HTTP POST requests.
      *
@@ -65,7 +66,6 @@ public class ManagePlaylists extends HttpServlet {
                     String parameterName = parameterNames.nextElement();
                     logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                     if (parameterName.equalsIgnoreCase("Delete")) {
-                        //TODO test for sharing of playlist - don't allow deletion if shared
                         if (sharedManager.isShared(listID)) {
                             session.setAttribute("message", "Can't delete shared playlist.");
                             url = "/manageAPlaylist.jsp";
@@ -81,6 +81,24 @@ public class ManagePlaylists extends HttpServlet {
                         session.setAttribute("otherUsers", otherUsers);
                         url = "/sharePlaylist.jsp";
                     } else if (parameterName.equalsIgnoreCase("Manage")) {
+                        url = "ShowAPlaylist";
+                    } else if (parameterName.equalsIgnoreCase("Play")) {
+                        player = new Player(listID);
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        session.setAttribute("message", "Starting playback");
+                        session.setAttribute("playerState", "playing");
+                        session.setAttribute("player", player);
+                        player.start();
+                        url = "ShowAPlaylist";
+                    } else if (parameterName.equalsIgnoreCase("Stop")) {
+                        session.setAttribute("message", "Stopping playback");
+                        session.setAttribute("playerState", "stopped");
+                        player = (Player) session.getAttribute("player");
+                        player.stop();
                         url = "ShowAPlaylist";
                     }
                 }

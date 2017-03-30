@@ -4,6 +4,7 @@ import entity.Shared;
 import persistence.SharedDAO;
 
 import java.util.List;
+import java.util.ArrayList;
 
 //import org.apache.log4j.Logger;
 
@@ -71,5 +72,19 @@ public class SharedManager {
     public void remove(int userID, int playlist_id) {
         int id =  find(playlist_id, userID);
         dao.remove(id);
+    }
+
+    /**
+     * Retrieves the system IDS of playlists shared with the user
+     * @param user_id The system ID of the user
+     * @return The playlist IDs
+     */
+    public ArrayList<Integer> getAll(int user_id) {
+        ArrayList<Integer> list_IDs = new ArrayList<>();
+        List<Shared> shared = dao.getAll();
+        for (Shared playlist : shared) {
+            if (playlist.getShared_with() == user_id) list_IDs.add(playlist.getId());
+        }
+        return list_IDs;
     }
 }

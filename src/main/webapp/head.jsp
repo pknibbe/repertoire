@@ -21,9 +21,14 @@ You can also purchase a PSD-file for this template.
     <div id="header">
 
         <img src="images/logo.png" width = 500px>
-    </div>
-        <h1>noun: All the Music You Can Play</h1>
 
+        <h1>noun: All the Music You Can Play</h1>
+        <h1>${message}</h1>
+        <p>  </p>
+        <c:if test="user_id gt 0">
+            <h2>Welcome, ${name}. If you are not ${name}, please logout and log back in as yourself.</h2>
+        </c:if>
+    </div>
     <div id="menu">
         <c:set var="role" value="${user_role}"></c:set>
         <c:set var="boss" value="administrator"></c:set>
@@ -39,11 +44,4 @@ You can also purchase a PSD-file for this template.
     </div>
     <!--end header -->
     <!-- main -->
-    <div >
-        <h1>${message}</h1>
-        <p>  </p>
-        <c:if test="user_id gt 0">
-        <h2>Welcome, ${name}. If you are not ${name}, please logout and log back in as yourself.</h2>
-        </c:if>
-    </div>
 

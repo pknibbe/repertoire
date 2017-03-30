@@ -14,8 +14,8 @@ import java.util.ArrayList;
 
 import engines.UserManager;
 import engines.PlaylistManager;
-import entity.Playlist;
-import persistence.PlaylistDAO;
+import entity.*;
+import persistence.*;
 /**
  * Provides access to Music Play Lists
  * Created by peter on 3/4/2017.
@@ -35,8 +35,6 @@ public class ShowPlayLists extends HttpServlet {
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        PlaylistDAO dao = new PlaylistDAO();
-        PlaylistManager playlistManager = new PlaylistManager();
 
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
@@ -44,12 +42,24 @@ public class ShowPlayLists extends HttpServlet {
         String url;
 
         if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+            ArrayList<PresentablePlaylist> presentables = new ArrayList<>();
+            Playlist playlist;
+            PlaylistDAO playlistDAO = new PlaylistDAO();
+            UserDAO userDAO = new UserDAO();
+
+            int listOwnerID;
+
+            PlaylistManager playlistManager = new PlaylistManager();
             ArrayList<Integer> listIDs = playlistManager.getIDs((Integer) session.getAttribute("user_id"));
-            ArrayList<Playlist> playlists = new ArrayList<>();
             for (int index : listIDs) {
-                playlists.add(dao.get(index));
+                playlist = playlistDAO.get(index);
+                listOwnerID = playlist.getOwner_id();
+                presentables.add(new PresentablePlaylist(index,
+                                                         playlist.getName(),
+                                                         listOwnerID,
+                                                         userDAO.get(listOwnerID).getName()));
             }
-            session.setAttribute("playlists", playlists);
+            session.setAttribute("playlists", presentables);
             url = "/playlists.jsp";
 
         } else {

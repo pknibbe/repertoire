@@ -23,12 +23,12 @@
           <element id="library" level="project" name="Maven: javax:javaee-web-api:7.0" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.39" />
           <element id="library" level="project" name="Maven: org.webjars:bootstrap:3.2.0" />
-          <element id="library" level="project" name="Maven: org.webjars:jquery:1.11.1" />
           <element id="library" level="project" name="Maven: com.googlecode.soundlibs:jlayer:1.0.1-1" />
           <element id="library" level="project" name="Maven: com.googlecode.soundlibs:mp3spi:1.9.5-1" />
           <element id="library" level="project" name="Maven: com.googlecode.soundlibs:vorbisspi:1.0.3-1" />
           <element id="library" level="project" name="Maven: com.googlecode.soundlibs:jorbis:0.0.17-2" />
           <element id="library" level="project" name="Maven: com.googlecode.soundlibs:tritonus-share:0.3.7-2" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery:2.1.4" />
         </element>
       </element>
       <element id="directory" name="META-INF">
