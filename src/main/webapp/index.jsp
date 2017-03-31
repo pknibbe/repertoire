@@ -5,18 +5,18 @@
 
 <div id="container">
 
-    <div id="a">
-        <h3>Login</h3>
-        <form action="ExternalAction" method="GET">
-            <table>
-                <tr><td>user name:</td><td>  <input type="text" name="user_name"  /> </td></tr>
-                <tr><td>password:</td><td> <input type="text" name="user_pass" /></td></tr>
-            </table>
-            <input type="submit" value="Submit" name="Enter" />
-        </form>
+        <div id="left">
+            <h3>Login</h3>
+            <form action="ExternalAction" method="GET">
+                <table>
+                    <tr><td>user name:</td><td>  <input type="text" name="user_name"  /> </td></tr>
+                    <tr><td>password:</td><td> <input type="text" name="user_pass" /></td></tr>
+                </table>
+                <input type="submit" value="Submit" name="Enter" />
+            </form>
+        </div>
 
-        <br /><br />
-            <div id="request">
+        <div id="request">
 
             <h3>Request sign-in help</h3>
             <form action="MessageAdmin" method="POST">
@@ -26,8 +26,7 @@
                 Your name: <input type="text" name="name" />
                 <input type="submit" name="Request" value="Enter" />
             </form>
-            </div>
-    </div>
+        </div>
 </div>
 
 <c:import url="/footer.jsp" />
