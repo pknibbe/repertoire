@@ -4,30 +4,32 @@ margin: 0;
 font-family: Tahoma, Geneva, sans-serif;
 }
 
+td, th {
+    border: 1px solid #2c5b32;
+    padding: 0.5rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
 #container {
 background-color: #FFFFFF;
-    color: Green;
+    color: #308830;
 padding: 10px;
 }
 
 #header {
-height: 250px;
+height: 200px;
 background-color: #FFFFFF;
-    color: Green;
-    font-color: Green;
-}
-
-#slogan {
-float: right;
-font-size: 18px;
-color: #FF0000;
-padding: 60px 30px 0 0;
+    color: #308830;
+    font-color: #308830;
 }
 
 #menu {
 height: 40px;
 margin-top: 5px;
-    color: White;
+    color: #308830;
 }
 #menu ul {
 margin: 0;
@@ -42,13 +44,15 @@ background: url(images/menu_border.png) right no-repeat;
 float: left;
 height: 20px;
 padding: 10px 30px;
-background-color: White;
+    color: #308830;
+    background-color: White;
 font-size: 15px;
 font-weight: bold;
 text-decoration: none;
 font-family: Arial, Helvetica, sans-serif;
 }
 #menu a:hover {
+    color: Black;
 background: url(images/menu_border.png);
 }
 
@@ -60,7 +64,7 @@ color: #FFF4D1;
 font-size: 11px;
 }
 #main a {
-color: #493310;
+color: #000000;
 }
 #main a:hover {
 color: #000000;
@@ -82,7 +86,7 @@ margin: 20px 0 10px 0;
 #text h2 {
 font-size: 19px;
 font-weight: normal;
-    color: Green;
+    color: #308830;
 margin: 20px 0 10px 0;
 }
 #text ol, #text ul {
@@ -95,16 +99,16 @@ margin-left: 40px;
 
 #footer {
 height: 40px;
-color: Green;
+color: #308830;
 font-size: 11px;
-background-color: #FFF4D1;
+background-color: #FFFFFF;
 clear: both;
 }
 #footer a {
 color: #000000;
 }
 #footer a:hover {
-color: Green;
+color: #4040A0;
 }
 #footer_left {
 float: left;
@@ -116,7 +120,7 @@ padding: 13px 30px 0 0;
 }
 
 td, th, footer, header, menu, main {
-    border: 1px solid #080;
+    border: 1px solid #308830;
     padding: 0.5rem;
 }
 

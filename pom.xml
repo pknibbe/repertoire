@@ -100,9 +100,9 @@
             <version>2.1.4</version>
         </dependency>
 <!-- Want to use this to get rid of compiler warning, but intellij is not understanding it
-        <properties>
-            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        </properties>
+                    <properties>
+                        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+                    </properties>
 -->
     </dependencies>
 
@@ -115,6 +115,7 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+
                 </configuration>
             </plugin>
         </plugins>
