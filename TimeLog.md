@@ -2,6 +2,7 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 4/01 | Individual Project | 2 | Made music repository location a function of environment variable HOME |
 | 3/31 | Team Project  | 2 | Scrum and further hardening against input errors |
 | 3/31 | Individual Project | 6 | AWS testing and removing warnings from analysis |
 | 3/30 | Individual Project | 1 | Debugging playlist sharing |

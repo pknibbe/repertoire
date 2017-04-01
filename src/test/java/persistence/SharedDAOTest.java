@@ -31,7 +31,7 @@ public class SharedDAOTest {
         dao = new SharedDAO();
         playlistList = dao.getAll();
         originalNumberOfPlaylists = playlistList.size();
-        logger.info("In @Before, PlaylistList has " + playlistList.size() + "entries");
+        logger.debug("In @Before, PlaylistList has " + playlistList.size() + "entries");
         playlist = new Shared(1, 2); // make sure table is not empty for purpose of test
         sharingIDs.add(dao.add(playlist));
         playlist = new Shared(3, 4); // make sure table is not empty for purpose of test
@@ -39,7 +39,7 @@ public class SharedDAOTest {
         playlist = new Shared(2, 3); // make sure table is not empty for purpose of test
         sharingIDs.add(dao.add(playlist));
         playlistList = dao.getAll();
-        logger.info("After justAdd, PlaylistList has " + playlistList.size() + "entries");
+        logger.debug("After justAdd, PlaylistList has " + playlistList.size() + "entries");
         numberOfPlaylists = playlistList.size();
     }
 

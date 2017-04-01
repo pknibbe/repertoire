@@ -54,14 +54,14 @@ public class UpdateAccounts extends HttpServlet {
 
                 while (parameterNames.hasMoreElements()) {
                     String parameterName = parameterNames.nextElement();
-                    logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
+                    logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                     if (parameterName.equalsIgnoreCase("Delete")) {
                         if (0 == userManager.removeUserWithRole(identifier)) {
                             session.setAttribute("message", "Unable to remove user due to system error");
                             logger.error("Unable to remove user due to system error");
                         } else {
                             session.setAttribute("message", "removed user");
-                            logger.info("removed user " + identifier);
+                            logger.debug("removed user " + identifier);
                         }
                         url = "ShowUsers";
                     } else if (parameterName.equalsIgnoreCase("Update")) {
@@ -70,7 +70,7 @@ public class UpdateAccounts extends HttpServlet {
                         String userName = request.getParameter("Username");
                         role = request.getParameter("Role");
                         if (identifier > 0) {
-                            logger.info("Updating existing user ID " + identifier);
+                            logger.debug("Updating existing user ID " + identifier);
                             User user = userManager.getUser(identifier);
                             if (user == null) {
                                 session.setAttribute("message", "Unable to update user due to system error");
@@ -81,7 +81,7 @@ public class UpdateAccounts extends HttpServlet {
                             }
                         } else {
                             int added = userManager.addUserWithRole(userName, name, password, role);
-                            logger.info("Creating a new user returned " + added);
+                            logger.debug("Creating a new user returned " + added);
                             url = "ShowUsers";
                         }
                     }
@@ -95,7 +95,7 @@ public class UpdateAccounts extends HttpServlet {
             session.setAttribute("message", "user not authenticated");
             url = "/index.jsp";
         }
-        logger.info("sending redirect to " + url);
+        logger.debug("sending redirect to " + url);
         response.sendRedirect(url);
     }
 }

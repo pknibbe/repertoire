@@ -27,10 +27,10 @@ public class PlaylistDAOTest {
     public void setup() throws Exception {
         dao = new PlaylistDAO();
         playlistList = dao.getAll();
-        logger.info("In @Before, PlaylistList has " + playlistList.size() + "entries");
+        logger.debug("In @Before, PlaylistList has " + playlistList.size() + "entries");
         justAdd(); // make sure table is not empty for purpose of test
         playlistList = dao.getAll();
-        logger.info("After justAdd, PlaylistList has " + playlistList.size() + "entries");
+        logger.debug("After justAdd, PlaylistList has " + playlistList.size() + "entries");
         numberOfPlaylists = playlistList.size();
     }
 

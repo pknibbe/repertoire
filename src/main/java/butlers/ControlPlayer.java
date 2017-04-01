@@ -33,14 +33,14 @@ public class ControlPlayer extends HttpServlet {
             throws ServletException, IOException {
 
         HttpSession session = request.getSession();
-        logger.info("In doPost");
+        logger.debug("In doPost");
         Player player;
 
         Enumeration<String> parameterNames = request.getParameterNames();
 
         while (parameterNames.hasMoreElements()) {
             String parameterName = parameterNames.nextElement();
-            logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
+            logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
             if (parameterName.equalsIgnoreCase("Play")) {
                 int list_id = (Integer) session.getAttribute("listID");
                 player = new Player(list_id);

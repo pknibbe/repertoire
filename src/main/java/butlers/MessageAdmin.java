@@ -41,8 +41,8 @@ import org.apache.log4j.Logger;
 
             while (parameterNames.hasMoreElements()) {
                 String pName = parameterNames.nextElement();
-                logger.info("Parameter name is " + pName);
-                logger.info("Parameter value is " + request.getParameter(pName));
+                logger.debug("Parameter name is " + pName);
+                logger.debug("Parameter value is " + request.getParameter(pName));
             }
 
             String requestType = request.getParameter("options");

@@ -17,7 +17,10 @@ public class SongManager {
 
     public SongManager() {
         PropertyManager propertyManager = new PropertyManager();
-        setRepository(propertyManager.getProperty("musicDir"));
+        String home = System.getenv(propertyManager.getProperty("home"));
+        String repo = propertyManager.getProperty("musicDir");
+        setRepository(home + repo);
+        logger.debug("Set repository to " + getRepository());
     }
 
     public String getRepository() {

@@ -17,12 +17,12 @@ public class PlayManager implements Runnable {
 
     public PlayManager(Player player) {
         this.player = player;
-        logger.info("In constructor");
+        logger.debug("In constructor");
         runnablePlayer = new RunnablePlayer(player);
     }
 
     public void run() {
-        logger.info("In run");
+        logger.debug("In run");
         while(true) {
             try {
                 Thread.sleep(500); // give Player time to set the action
@@ -38,34 +38,34 @@ public class PlayManager implements Runnable {
                 stop();
 
             } else {
-                logger.info("Received message to terminate");
+                logger.debug("Received message to terminate");
                 stop();
                 break;
             }
         }
-        logger.info("Outside the run loop. About to exit");
+        logger.debug("Outside the run loop. About to exit");
     }
 
     /**
      * Launches a thread to play the current song in the player object
      */
     private void start() {
-        //logger.info("In start method");
+        //logger.debug("In start method");
         if (thread == null) {
-            logger.info("creating a new runnable thread");
+            logger.debug("creating a new runnable thread");
             thread = new Thread(runnablePlayer);
         } else if (thread.isAlive()) return;
         thread = new Thread(runnablePlayer);
-        logger.info("Calling start method on the thread " + thread);
+        logger.debug("Calling start method on the thread " + thread);
         thread.start();
-        logger.info("Launched runnable player");
+        logger.debug("Launched runnable player");
     }
 
     private void stop() {
         //thread.stop();
         if (thread == null) return;
         if (thread.isAlive()) {
-            logger.info("Stopping runnable player");
+            logger.debug("Stopping runnable player");
             thread.interrupt();
             thread.stop();
         }

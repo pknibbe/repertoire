@@ -37,8 +37,8 @@ import java.io.IOException;
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
         RequestDispatcher dispatcher;
-        logger.info("user_name is " + request.getParameter("user_name"));
-        logger.info("user_pass is " + request.getParameter("user_pass"));
+        logger.debug("user_name is " + request.getParameter("user_name"));
+        logger.debug("user_pass is " + request.getParameter("user_pass"));
         int user_id = manager.VerifyCredentials(request.getParameter("user_name"), request.getParameter("user_pass"));
         if (user_id == 0) {
             session.setAttribute("message", "User Credentials not verified");

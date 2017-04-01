@@ -42,23 +42,23 @@ public class DeleteOneSongFromAPlaylist extends HttpServlet {
         HttpSession session = request.getSession();
         int list_id = (Integer) session.getAttribute("listID");
 
-        logger.info("This doPost is called");
-        logger.info("The user ID is " + session.getAttribute("user_id"));
+        logger.debug("This doPost is called");
+        logger.debug("The user ID is " + session.getAttribute("user_id"));
 
         Enumeration<String> parameterNames = request.getParameterNames();
 
-        logger.info("Collected the parameter names");
+        logger.debug("Collected the parameter names");
 
         while (parameterNames.hasMoreElements()) {
             String pName = parameterNames.nextElement();
-            logger.info("Parameter name is " + pName);
-            logger.info("Parameter value is " + request.getParameter(pName));
+            logger.debug("Parameter name is " + pName);
+            logger.debug("Parameter value is " + request.getParameter(pName));
         }
 
         if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
             int songID = Integer.valueOf(request.getParameter("songID"));
 
-            logger.info("In delete section");
+            logger.debug("In delete section");
             session.setAttribute("songToDelete", songDAO.get(songID).getLocation());
             session.setAttribute("songID", songID);
             if (sharedManager.isShared(list_id)) {

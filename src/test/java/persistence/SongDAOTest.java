@@ -27,11 +27,11 @@ public class SongDAOTest {
     public void setup() throws Exception {
         dao = new SongDAO();
         songList = dao.getAll();
-        logger.info("In @Before, songList has " + songList.size() + "entries");
+        logger.debug("In @Before, songList has " + songList.size() + "entries");
         song = new Song("ZXGK It's Magic", "Great tune", 3);
         dao.add(song);
         songList = dao.getAll();
-        logger.info("After setup, songList has " + songList.size() + "entries");
+        logger.debug("After setup, songList has " + songList.size() + "entries");
         numberOfSongs = songList.size();
     }
 

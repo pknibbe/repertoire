@@ -15,18 +15,18 @@ public class PlayerTest {
     public void run() throws InterruptedException {
 /*        Player player = new Player(3);
         player.start();
-        logger.info("Called player.start");
+        logger.debug("Called player.start");
         Thread.sleep(2000);
         player.skip();
-        logger.info("Called player.skip");
+        logger.debug("Called player.skip");
         Thread.sleep(2000);
         player.skip();
-        logger.info("Called player.skip");
+        logger.debug("Called player.skip");
         Thread.sleep(2000);
         player.previous();
-        logger.info("Called player.previous");
+        logger.debug("Called player.previous");
         Thread.sleep(2000);
         player.stop();
-        logger.info("Called player.stop"); */
+        logger.debug("Called player.stop"); */
     }
 }

@@ -26,7 +26,7 @@ public class Player {
     public Player(int playlistId) {
         songManager = new SongManager();
         songIds = songManager.getSongIds(playlistId);
-        logger.info("In constructor");
+        logger.debug("In constructor");
         currentSongIndex = 0;
         Thread pmThread = new Thread(new PlayManager(this));
         pmThread.start();
@@ -38,7 +38,7 @@ public class Player {
      */
     public void start() {
         action = "START";
-        logger.info("In start");
+        logger.debug("In start");
     }
 
     /**
@@ -46,7 +46,7 @@ public class Player {
      */
     public void stop() {
         action = "TERMINATE";
-        logger.info("In stop");
+        logger.debug("In stop");
     }
 
     /**
@@ -54,13 +54,13 @@ public class Player {
      */
     public void skip() {
         action = "STOP";
-        logger.info("In skip");
+        logger.debug("In skip");
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        logger.info("In skip after STOP");
+        logger.debug("In skip after STOP");
         increment();
 
     }
@@ -79,13 +79,13 @@ public class Player {
      */
     public void previous() {
         action = "STOP";
-        logger.info("In previous");
+        logger.debug("In previous");
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        logger.info("In previous after first signal");
+        logger.debug("In previous after first signal");
         if (currentSongIndex < (songIds.size() - 1)) { //Possible to skip forward
             currentSongIndex++;
             action = "START";

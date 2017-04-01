@@ -1,15 +1,14 @@
 package butlers;
 
-import engines.*;
+import engines.PlaylistManager;
+import engines.SongManager;
+import engines.UserManager;
 import org.apache.log4j.Logger;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.http.Part;
+import javax.servlet.http.*;
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -22,16 +21,16 @@ import java.util.Enumeration;
  * Created by peter on 3/17/2017.
  */
 @WebServlet(
-        name = "Upload",
-        urlPatterns = { "/Upload" }
+        name = "MultiFileUpload",
+        urlPatterns = { "/MultiFileUpload" }
 )
 @MultipartConfig
-public class Upload extends HttpServlet {
+public class MultiFileUpload extends HttpServlet {
 
-    private final UserManager userManager = new UserManager();
+    //private final UserManager userManager = new UserManager();
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final SongManager songManager = new SongManager();
-    private final PlaylistManager playlistManager = new PlaylistManager();
+    //private final SongManager songManager = new SongManager();
+    //private final PlaylistManager playlistManager = new PlaylistManager();
 
 
     /**
@@ -43,10 +42,10 @@ public class Upload extends HttpServlet {
      * @throws IOException      if there is an IO failure
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
+//        HttpSession session = request.getSession();
 
         logger.info("This doPost is called");
-        logger.info("The user ID is " + session.getAttribute("user_id"));
+//        logger.info("The user ID is " + session.getAttribute("user_id"));
 
         Enumeration<String> parameterNames = request.getParameterNames();
 
@@ -58,11 +57,13 @@ public class Upload extends HttpServlet {
             logger.info("Parameter value is " + request.getParameter(pName));
         }
 
-        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+
+
+/*        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) { */
             Part filePart = request.getPart("file");
             logger.info("filePart is " + filePart);
 
-            // Create path components to save the file
+  /*          // Create path components to save the file
             //String path = "../Data/";
             final String fileName = getFileName(filePart);
             logger.info("Parameter fileName value is " + fileName);
@@ -97,10 +98,10 @@ public class Upload extends HttpServlet {
         } else { // user not authenticated
             session.setAttribute("message", "user not authenticated");
             response.sendRedirect("/index.jsp");
-        }
-
+        } */
+        response.sendRedirect("/multiFile.jsp");
     }
-
+/*
     private String getFileName(final Part part) {
         final String partHeader = part.getHeader("content-disposition");
         logger.info( "Part Header = " + partHeader);
@@ -152,5 +153,5 @@ public class Upload extends HttpServlet {
         }
         return success;
     }
-
+*/
 }

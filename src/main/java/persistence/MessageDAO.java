@@ -43,8 +43,8 @@ public class MessageDAO {
     public int add(Message message) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        logger.info("Saving message " + message.getSubject());
-        logger.info(message.toString());
+        logger.debug("Saving message " + message.getSubject());
+        logger.debug(message.toString());
         int id = (Integer) session.save(message);
         transaction.commit();
         session.close();
@@ -58,18 +58,18 @@ public class MessageDAO {
     public int modify(Message updatedMessage) throws HibernateException {
         session = SessionFactoryProvider.getSessionFactory().openSession();
         transaction = session.beginTransaction();
-        logger.info("Updating message " + updatedMessage.getSubject());
-        logger.info(updatedMessage.toString());
+        logger.debug("Updating message " + updatedMessage.getSubject());
+        logger.debug(updatedMessage.toString());
         Message sessionMessage = (Message) session.get(Message.class, updatedMessage.getId());
         sessionMessage.setSubject(updatedMessage.getSubject());
         sessionMessage.setSender(updatedMessage.getSender());
         sessionMessage.setReceiver(updatedMessage.getReceiver());
         sessionMessage.setReadFlag(updatedMessage.getReadFlag());
         sessionMessage.setContent(updatedMessage.getContent());
-        logger.info("Updating message " + sessionMessage.getSubject());
-        logger.info(sessionMessage.toString());
+        logger.debug("Updating message " + sessionMessage.getSubject());
+        logger.debug(sessionMessage.toString());
         Message resultantMessage = (Message) session.merge(sessionMessage);
-        logger.info("Updated message " + resultantMessage.toString());
+        logger.debug("Updated message " + resultantMessage.toString());
         transaction.commit();
         session.close();
         return resultantMessage.getId();
@@ -81,11 +81,11 @@ public class MessageDAO {
      * @param id ID of message to be removed
      */
     public void remove(int id) throws HibernateException {
-        logger.info("In dao.remove with id = " + id);
+        logger.debug("In dao.remove with id = " + id);
         session = SessionFactoryProvider.getSessionFactory().openSession();
         transaction = session.beginTransaction();
         Message message = (Message) session.get(Message.class, id);
-        logger.info("In dao. remove with message " + message.toString());
+        logger.debug("In dao. remove with message " + message.toString());
         session.delete(message);
         transaction.commit();
         session.close();

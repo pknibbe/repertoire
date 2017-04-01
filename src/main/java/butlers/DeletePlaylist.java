@@ -45,7 +45,7 @@ public class DeletePlaylist extends HttpServlet {
             Enumeration<String> parameterNames = request.getParameterNames();
             while (parameterNames.hasMoreElements()) {
                 String parameterName = parameterNames.nextElement();
-                logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
+                logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                 if (parameterName.equalsIgnoreCase("Delete")) {
                     playlistDAO.remove((Integer) session.getAttribute("listID"));
                     session.setAttribute("message", "List Deleted");
@@ -57,7 +57,7 @@ public class DeletePlaylist extends HttpServlet {
             }
             url = "/ShowPlayLists";
 
-            logger.info("sending redirect to " + url);
+            logger.debug("sending redirect to " + url);
             response.sendRedirect(url);
         } else { // bounce
             session.setAttribute("message", "user not authenticated");

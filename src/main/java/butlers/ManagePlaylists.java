@@ -52,7 +52,7 @@ public class ManagePlaylists extends HttpServlet {
 
         if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
 
-            logger.info("In ManagePlaylists.doPost");
+            logger.debug("In ManagePlaylists.doPost");
             listID = Integer.valueOf(request.getParameter("listID"));
             if (listID == 0) { // request to create a new list
                 String name = request.getParameter("newName");
@@ -68,7 +68,7 @@ public class ManagePlaylists extends HttpServlet {
 
                 while (parameterNames.hasMoreElements()) {
                     String parameterName = parameterNames.nextElement();
-                    logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
+                    logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                     if (parameterName.equalsIgnoreCase("Delete")) {
                         if (sharedManager.isShared(listID)) {
                             session.setAttribute("message", "Can't delete shared playlist.");
@@ -110,7 +110,7 @@ public class ManagePlaylists extends HttpServlet {
             session.setAttribute("message", "user not authenticated");
             url = "/index.jsp";
         }
-        logger.info("Sending redirect to " + url);
+        logger.debug("Sending redirect to " + url);
         response.sendRedirect(url);
     }
 }

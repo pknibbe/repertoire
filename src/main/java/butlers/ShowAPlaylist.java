@@ -44,14 +44,14 @@ public class ShowAPlaylist extends HttpServlet {
         String url;
         Playlist playlist;
 
-        logger.info("In doGet");
+        logger.debug("In doGet");
         if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
             playlist = playlistDAO.get((Integer) session.getAttribute("listID"));
             session.setAttribute("listName", playlist.getName());
             session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
             session.setAttribute("songs", songManager.getSongs((Integer) session.getAttribute("listID")));
 
-            logger.info("Loaded songs");
+            logger.debug("Loaded songs");
             url = "/manageAPlaylist.jsp";
 
         } else { // bounce
@@ -59,7 +59,7 @@ public class ShowAPlaylist extends HttpServlet {
             url = "/index.jsp";
         }
         RequestDispatcher dispatcher = servletContext.getRequestDispatcher(url);
-        logger.info("Redirecting to " + url);
+        logger.debug("Redirecting to " + url);
         dispatcher.forward(request, response);
     }
 }

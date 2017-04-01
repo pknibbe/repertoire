@@ -50,15 +50,15 @@ public class SharePlaylist extends HttpServlet {
 
                     while (parameterNames.hasMoreElements()) {
                         String parameterName = parameterNames.nextElement();
-                        logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
+                        logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                         if (request.getParameter("Share") != null) {
-                            logger.info("In share section");
+                            logger.debug("In share section");
                             if (request.getParameter(parameterName).equalsIgnoreCase("on")) { // this is id
                                 Integer index = Integer.valueOf(parameterName);
                                 sharedManager.share(playlist_id, index);
                             }
                         } else if (request.getParameter("UnShare") != null) {
-                            logger.info("In un-share section");
+                            logger.debug("In un-share section");
                             if (request.getParameter(parameterName).equalsIgnoreCase("on")) { // this is id
                                 Integer index = Integer.valueOf(parameterName);
                                 sharedManager.remove(index, playlist_id);

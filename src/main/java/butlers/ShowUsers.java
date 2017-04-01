@@ -47,21 +47,21 @@ public class ShowUsers extends HttpServlet {
                 request.setAttribute("users", userdao.getAll());
 
                 dispatcher = servletContext.getRequestDispatcher("/accounts.jsp");
-                logger.info("Dispatching request forward to /accounts.jsp");
+                logger.debug("Dispatching request forward to /accounts.jsp");
 
             } else {
                 session.setAttribute("message", "Not authorized to view user information.");
                 dispatcher = servletContext.getRequestDispatcher("ShowPlayLists");
-                logger.info("Dispatching request forward to ShowPlayLists");
+                logger.debug("Dispatching request forward to ShowPlayLists");
 
             }
 
         } else {
             dispatcher = servletContext.getRequestDispatcher("/index.jsp");
             session.setAttribute("message", "Not authorized.");
-            logger.info("Dispatching request forward to index.jsp");
+            logger.debug("Dispatching request forward to index.jsp");
         }
-        logger.info("Using dispatcher " + dispatcher.toString());
+        logger.debug("Using dispatcher " + dispatcher.toString());
         dispatcher.forward(request, response);    }
 }
 

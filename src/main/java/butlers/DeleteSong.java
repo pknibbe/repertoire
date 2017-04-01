@@ -44,7 +44,7 @@ public class DeleteSong extends HttpServlet {
             Enumeration<String> parameterNames = request.getParameterNames();
             while (parameterNames.hasMoreElements()) {
                 String parameterName = parameterNames.nextElement();
-                logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
+                logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                 if (parameterName.equalsIgnoreCase("Delete")) {
                     songDAO.remove((Integer) session.getAttribute("songID"));
                     session.setAttribute("message", "Song Deleted");
@@ -56,7 +56,7 @@ public class DeleteSong extends HttpServlet {
             }
             url = "/ShowAPlaylist";
 
-            logger.info("sending redirect to " + url);
+            logger.debug("sending redirect to " + url);
             response.sendRedirect(url);
         } else { // bounce
             session.setAttribute("message", "user not authenticated");

@@ -29,7 +29,7 @@ public class UserManager {
         if (pw == null) return 0;
         if (rolename == null) return 0;
 
-        logger.info("Creating a new user");
+        logger.debug("Creating a new user");
         User user = new entity.User(userName, name, pw, rolename);
         int added;
         if (checkUsername(userName)) { // userName is alright to use
@@ -38,9 +38,9 @@ public class UserManager {
                     Role role = new entity.Role(userName, rolename);
                     try {
                         added = roleDAO.add(role);
-                        logger.info(role.toString());
-                        logger.info(user.toString());
-                        logger.info("Added user ID = " + userDAO.add(user));
+                        logger.debug(role.toString());
+                        logger.debug(user.toString());
+                        logger.debug("Added user ID = " + userDAO.add(user));
                         return added;
                     }
                     catch (HibernateException hbe) {
@@ -100,7 +100,7 @@ public class UserManager {
         try {
             User user = userDAO.get(identifier);
 
-            logger.info("About to remove user " + identifier);
+            logger.debug("About to remove user " + identifier);
             roleDAO.remove(user.getUser_role_id());
             userDAO.remove(identifier);
             return identifier;
@@ -136,7 +136,7 @@ public class UserManager {
                     user.setUser_pass(password);
                     if (checkRoleName(rolename)) {
                         user.setRole_name(rolename);
-                        logger.info(user.toString());
+                        logger.debug(user.toString());
                         role.setRole_name(rolename);
                         role.setUser_name(userName);
                         userDAO.modify(user);
