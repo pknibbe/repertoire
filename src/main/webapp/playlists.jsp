@@ -18,7 +18,7 @@
                     </c:forEach>
                     <tr>
                         <td><input type="radio" name="listID" value=0 /></td>
-                        <td>name: <input type="text" name="name"></td>
+                        <td>name: <input type="text" name="newName"></td>
                     </tr>
                 </tbody>
             </table>

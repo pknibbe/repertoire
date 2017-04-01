@@ -64,8 +64,7 @@ public class DeleteOneSongFromAPlaylist extends HttpServlet {
             if (sharedManager.isShared(list_id)) {
                 session.setAttribute("message", "Can't delete song from shared playlist");
                 response.sendRedirect("/manageAPlaylist.jsp");
-            }
-            response.sendRedirect("/deleteSongConfirmation.jsp");
+            } else response.sendRedirect("/deleteSongConfirmation.jsp");
         } else { // user not authenticated
             session.setAttribute("message", "user not authenticated");
             response.sendRedirect("/index.jsp");

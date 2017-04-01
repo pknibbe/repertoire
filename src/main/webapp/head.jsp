@@ -16,16 +16,15 @@ You can also purchase a PSD-file for this template.
 </head>
 
 <body>
-    <c:set var="user_id" value="${user_id}"></c:set>
+    <c:set var="userID" value="${user_id}"></c:set>
     <!-- header -->
     <div id="header">
-
-        <img src="images/logo.png" width = 500px>
+        <img src="images/logo.png" width = 800>
 
         <h1>noun: All the Music You Can Play</h1>
-        <h1>${message}</h1>
+        <h2>${message}</h2>
         <p>  </p>
-        <c:if test="user_id gt 0">
+        <c:if test="userID gt 0">
             <h2>Welcome, ${name}. If you are not ${name}, please logout and log back in as yourself.</h2>
         </c:if>
     </div>

@@ -1,20 +1,14 @@
 package persistence;
 
 import entity.User;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import java.util.List;
 
-
-
-/**
- * Connect entity and database table
- * Created by peter on 2/1/2017.
- */
 public class UserDAO {
-    private final Logger logger = Logger.getLogger(this.getClass());
+    //private final Logger logger = Logger.getLogger(this.getClass());
 
     /** Return a list of all users
      *

@@ -20,7 +20,6 @@ import java.util.Enumeration;
         urlPatterns = { "/ControlPlayer" })
 public class ControlPlayer extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
-    private Player player;
 
     /**
      *  Handles HTTP Post requests.
@@ -35,6 +34,7 @@ public class ControlPlayer extends HttpServlet {
 
         HttpSession session = request.getSession();
         logger.info("In doPost");
+        Player player;
 
         Enumeration<String> parameterNames = request.getParameterNames();
 

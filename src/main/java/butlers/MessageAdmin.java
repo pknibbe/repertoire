@@ -20,8 +20,7 @@ import org.apache.log4j.Logger;
 @WebServlet(
         name = "MessageAdmin",
         urlPatterns = { "/MessageAdmin" }
-)
-public class MessageAdmin extends HttpServlet {
+) public class MessageAdmin extends HttpServlet {
 
     private final Logger logger = Logger.getLogger(this.getClass());
     private final MessageDAO messageDAO = new MessageDAO();

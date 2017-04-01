@@ -29,7 +29,6 @@ import java.util.Enumeration;
 public class Upload extends HttpServlet {
 
     private final UserManager userManager = new UserManager();
-    HttpSession session;
     private final Logger logger = Logger.getLogger(this.getClass());
     private final SongManager songManager = new SongManager();
     private final PlaylistManager playlistManager = new PlaylistManager();
@@ -44,7 +43,7 @@ public class Upload extends HttpServlet {
      * @throws IOException      if there is an IO failure
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        session = request.getSession();
+        HttpSession session = request.getSession();
 
         logger.info("This doPost is called");
         logger.info("The user ID is " + session.getAttribute("user_id"));
@@ -63,10 +62,11 @@ public class Upload extends HttpServlet {
             Part filePart = request.getPart("file");
 
             // Create path components to save the file
-            String path = "../Data/";
+            //String path = "../Data/";
             final String fileName = getFileName(filePart);
             logger.info("Parameter fileName value is " + fileName);
-            path += fileName;
+            String path = songManager.getRepository() + fileName;
+            logger.info("Session attribute listID is " + session.getAttribute("listID"));
             int listID = (Integer) (session.getAttribute("listID"));
             //multiple cases
             // Case 1: Song is already in database under this listID.

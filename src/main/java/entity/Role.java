@@ -13,9 +13,6 @@ import javax.persistence.Table;
 @Getter
 @ToString
 
-/**
- * Created by peter on 2/15/2017.
- */
 @Entity
 @Table(name = "user_roles")
 public class Role {

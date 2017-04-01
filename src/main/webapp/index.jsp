@@ -20,10 +20,12 @@
 
             <h3>Request sign-in help</h3>
             <form action="MessageAdmin" method="POST">
-                Request an account:  <input type="radio" name="options" value="account" /><br />
-                Request reminder of user name: <input type="radio" name="options" value="username" /><br />
-                Request password reset: <input type="radio" name="options" value="password" /><br />
                 Your name: <input type="text" name="name" />
+                <select name="options">
+                    <option value="account">new account</option>
+                    <option value="username">username reminder</option>
+                    <option value="password">password reset</option>
+                </select>
                 <input type="submit" name="Request" value="Enter" />
             </form>
         </div>

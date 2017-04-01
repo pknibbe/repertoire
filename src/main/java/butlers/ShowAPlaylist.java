@@ -27,7 +27,6 @@ public class ShowAPlaylist extends HttpServlet {
     private final PlaylistDAO playlistDAO = new PlaylistDAO();
     private final SongManager songManager = new SongManager();
     private final UserManager userManager = new UserManager();
-    private Playlist playlist;
 
     /**
      *  Handles HTTP GET requests.
@@ -43,10 +42,12 @@ public class ShowAPlaylist extends HttpServlet {
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
         String url;
+        Playlist playlist;
 
         logger.info("In doGet");
         if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
             playlist = playlistDAO.get((Integer) session.getAttribute("listID"));
+            session.setAttribute("listName", playlist.getName());
             session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
             session.setAttribute("songs", songManager.getSongs((Integer) session.getAttribute("listID")));
 

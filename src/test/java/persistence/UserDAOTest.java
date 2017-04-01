@@ -5,20 +5,17 @@ import java.util.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by peter on 2/3/2017.
- */
 public class UserDAOTest {
 
-    UserDAO dao;
-    entity.User user;
-    int numberOfUsers;
-    List<entity.User> userList;
-    final Logger logger = Logger.getLogger(this.getClass());
+    private UserDAO dao;
+    private entity.User user;
+    private int numberOfUsers;
+    private List<entity.User> userList;
+    //final Logger logger = Logger.getLogger(this.getClass());
 
     @Before
     public void setup() throws Exception {

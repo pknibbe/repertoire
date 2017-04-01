@@ -9,13 +9,14 @@ import entity.Song;
  * Performs very simple entity management on songs
  * Created by peter on 3/6/2017.
  */
+@SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
 public class SongManager {
     private final SongDAO songDAO = new SongDAO();
     private final Logger logger = Logger.getLogger(this.getClass());
     private String repository;
 
     public SongManager() {
-        PropertyManager propertyManager = new PropertyManager("/repertoire.properties");
+        PropertyManager propertyManager = new PropertyManager();
         setRepository(propertyManager.getProperty("musicDir"));
     }
 
@@ -23,7 +24,7 @@ public class SongManager {
         return repository;
     }
 
-    public void setRepository(String repository) {
+    private void setRepository(String repository) {
         this.repository = repository;
     }
 
@@ -79,16 +80,15 @@ public class SongManager {
      * Adds the song to the playlist if it is not already there, also adding it to the songs table if necessary
      * @param location Where the song should be
      * @param playlist_id The system ID of the playlist
-     * @return The system ID of the song
      */
-    public int add(String location, int playlist_id) {
+    public void add(String location, int playlist_id) {
         List<Song> songs = songDAO.getAll();
         for (Song song : songs) {
             if (location.equalsIgnoreCase(song.getLocation()) &&
-                    playlist_id == song.getPlaylist_id()) return song.getId();
+                    playlist_id == song.getPlaylist_id()) return;
         }
-        Song song = new Song(location, playlist_id );
-        return songDAO.add(song);
+        Song song = new Song(location.substring(getRepository().length()), playlist_id );
+        songDAO.add(song);
     }
 
     /**

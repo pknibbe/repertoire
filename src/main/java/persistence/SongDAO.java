@@ -1,18 +1,15 @@
 package persistence;
 
 import entity.Song;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import java.util.List;
 
-/**
- * Created by peter on 2/13/2017.
- */
 public class SongDAO {
 
-    private final Logger logger = Logger.getLogger(this.getClass());
+    //private final Logger logger = Logger.getLogger(this.getClass());
 
     /** Return a list of all songs
      *
@@ -38,33 +35,30 @@ public class SongDAO {
     }
 
     /** save a new Song
-     * @param Song
+     * @param Song The song to insert
      * @return id the id of the inserted record
      */
-    public int add(Song Song) throws HibernateException {
+    public void add(Song Song) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         int id = (Integer) session.save(Song);
         transaction.commit();
         session.close();
-        return id;
     }
 
     /** modify a Song record
      * @param updatedSong the version of the Song with the new information
-     * @return id the id of the updated record
      */
-    public int modify(Song updatedSong) throws HibernateException {
+    public void modify(Song updatedSong) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Song sessionSong = (Song) session.get(Song.class, updatedSong.getId());
         sessionSong.setLocation(updatedSong.getLocation());
         sessionSong.setDescription(updatedSong.getDescription());
         sessionSong.setPlaylist_id(updatedSong.getPlaylist_id());
-        Song resultantSong = (Song) session.merge(sessionSong);
+        session.merge(sessionSong);
         transaction.commit();
         session.close();
-        return resultantSong.getId();
     }
 
     /**

@@ -10,7 +10,7 @@ import org.hibernate.service.ServiceRegistry;
  * @author paulawaite
  * @version 1.0 10/21/15.
  */
-public class SessionFactoryProvider {
+class SessionFactoryProvider {
 
     private static SessionFactory sessionFactory;
 

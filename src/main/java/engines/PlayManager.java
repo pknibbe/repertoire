@@ -8,11 +8,12 @@ import org.apache.log4j.Logger;
  * Starts and stops the player on a particular song
  * Created by peter on 3/23/2017.
  */
+@SuppressWarnings({"deprecation", "CanBeFinal"})
 public class PlayManager implements Runnable {
-     final Logger logger = Logger.getLogger(this.getClass());
-     Player player;
-     Thread thread;
-     RunnablePlayer runnablePlayer;
+    final private Logger logger = Logger.getLogger(this.getClass());
+    private Player player;
+    private Thread thread;
+    private RunnablePlayer runnablePlayer;
 
     public PlayManager(Player player) {
         this.player = player;

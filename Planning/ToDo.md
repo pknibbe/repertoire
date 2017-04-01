@@ -8,17 +8,17 @@
 
 [X] Properties
 
-[ ] AWS testing
+[X] AWS testing
 
 [X] Messaging
 
-[ ] Sharing
+[X] Sharing
     [X] Entity
     [X] DAO
     [X] Manager
     [X] UnitTesting
     [X] Butlers
-    [ ] Screens
+    [X] Screens
     
 [ ] JQuery
 

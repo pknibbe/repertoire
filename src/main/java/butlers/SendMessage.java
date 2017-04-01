@@ -21,15 +21,13 @@ import java.io.IOException;
 @WebServlet(
         name = "SendMessage",
         urlPatterns = { "/SendMessage" }
-)
-public class SendMessage extends HttpServlet {
+) public class SendMessage extends HttpServlet {
 
     //private final Logger logger = Logger.getLogger(this.getClass());
     private final UserManager userManager = new UserManager();
     private final MessageDAO messageDAO = new MessageDAO();
-    String url;
 
-        /**
+    /**
          *  Handles HTTP POST requests.
          *
          *@param  request                   the HttpServletRequest object
@@ -42,6 +40,7 @@ public class SendMessage extends HttpServlet {
             HttpSession session = request.getSession();
 
             int user_id = (Integer) session.getAttribute("user_id");
+            String url;
             if (userManager.authenticated(user_id)) {
                 String recipientName = request.getParameter("to");
                 int recipientId = userManager.getIdByName(recipientName);

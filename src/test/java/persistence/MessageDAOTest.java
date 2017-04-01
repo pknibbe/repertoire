@@ -11,17 +11,14 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by peter on 2/14/2017.
- */
 public class MessageDAOTest {
 
 
-        MessageDAO dao;
-        entity.Message message;
-        int numberOfMessages;
-        List<Message> messageList;
-        final Logger logger = Logger.getLogger(this.getClass());
+    private MessageDAO dao;
+    private entity.Message message;
+    private int numberOfMessages;
+    private  List<Message> messageList;
+    private final Logger logger = Logger.getLogger(this.getClass());
 
         @Before
         public void setup() throws Exception {

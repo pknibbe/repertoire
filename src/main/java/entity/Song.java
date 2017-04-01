@@ -1,6 +1,4 @@
 package entity;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import lombok.ToString;
@@ -10,9 +8,6 @@ import lombok.Getter;
 @Getter
 @ToString
 
-/**
- * Created by peter on 2/1/2017.
- */
 @Entity
 @Table(name = "songs")
 public class Song {

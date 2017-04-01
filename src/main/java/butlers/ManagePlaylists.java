@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Enumeration;
 
 /**
@@ -30,11 +29,11 @@ import java.util.Enumeration;
 public class ManagePlaylists extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     private final UserManager userManager = new UserManager();
-    private final UserDAO userDAO = new UserDAO();
     private final PlaylistDAO playlistDAO = new PlaylistDAO();
     private final PlaylistManager playlistManager = new PlaylistManager();
     private final SharedManager sharedManager = new SharedManager();
-    private Player player;
+    private final SongManager songManager = new SongManager();
+
     /**
      * Handles HTTP POST requests.
      *
@@ -47,18 +46,23 @@ public class ManagePlaylists extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         String url = "";
+        Player player;
 
-        int listID = 0;
+        int listID;
 
         if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
 
             logger.info("In ManagePlaylists.doPost");
             listID = Integer.valueOf(request.getParameter("listID"));
             if (listID == 0) { // request to create a new list
-                String name = request.getParameter("name");
-                session.setAttribute("playlist", playlistManager.add((Integer) session.getAttribute("user_id"), name));
-                session.setAttribute("message", "");
-                url = "manageAPlayList.jsp";
+                String name = request.getParameter("newName");
+                listID = playlistManager.add((Integer) session.getAttribute("user_id"), name);
+                Playlist playlist = playlistDAO.get(listID);
+                session.setAttribute("listName", playlist.getName());
+                session.setAttribute("listID", listID);
+                session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
+                session.setAttribute("songs", songManager.getSongs((Integer) session.getAttribute("listID")));
+                url = "manageAPlaylist.jsp";
             } else {
                 Enumeration<String> parameterNames = request.getParameterNames();
 
@@ -73,12 +77,9 @@ public class ManagePlaylists extends HttpServlet {
                             url = "/deletePlaylistConfirmation.jsp";
                         }
                     } else if (parameterName.equalsIgnoreCase("Share")) {
-                        ArrayList<Integer> otherUserIDs = userManager.getOtherUserIDs((Integer) session.getAttribute("user_id"));
-                        ArrayList<User> otherUsers = new ArrayList<>();
-                        for (Integer userID : otherUserIDs) {
-                            otherUsers.add(userDAO.get(userID));
-                        }
-                        session.setAttribute("otherUsers", otherUsers);
+                        session.setAttribute("listName", playlistDAO.get(listID).getName());
+                        session.setAttribute("otherUsers", sharedManager.notSharing(listID));
+                        session.setAttribute("sharingUsers", sharedManager.sharing(listID));
                         url = "/sharePlaylist.jsp";
                     } else if (parameterName.equalsIgnoreCase("Manage")) {
                         url = "ShowAPlaylist";
@@ -102,13 +103,13 @@ public class ManagePlaylists extends HttpServlet {
                         url = "ShowAPlaylist";
                     }
                 }
+                session.setAttribute("listID", listID);
+                session.setAttribute("listName", playlistDAO.get(listID).getName());
             }
         } else { // user not authenticated
             session.setAttribute("message", "user not authenticated");
             url = "/index.jsp";
         }
-        session.setAttribute("listID", listID);
-        session.setAttribute("listName", playlistDAO.get(listID).getName());
         logger.info("Sending redirect to " + url);
         response.sendRedirect(url);
     }

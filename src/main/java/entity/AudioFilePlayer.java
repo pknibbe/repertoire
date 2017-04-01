@@ -17,13 +17,7 @@ import static javax.sound.sampled.AudioFormat.Encoding.PCM_SIGNED;
 /**
  * Copied from https://odoepner.wordpress.com/2013/07/19/play-mp3-or-ogg-using-javax-sound-sampled-mp3spi-vorbisspi/
  */
-public class AudioFilePlayer {
-
-    public void player() {
-        final AudioFilePlayer player = new AudioFilePlayer ();
-        player.play("C:/Users/peter/tomee/Data/MoreThanAFeeling.mp3");
-        //player.play("something.ogg");
-    }
+class AudioFilePlayer {
 
     public void play(String filePath) {
         final File file = new File(filePath);

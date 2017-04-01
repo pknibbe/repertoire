@@ -2,6 +2,8 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 3/31 | Team Project  | 2 | Scrum and further hardening against input errors |
+| 3/31 | Individual Project | 6 | AWS testing and removing warnings from analysis |
 | 3/30 | Individual Project | 1 | Debugging playlist sharing |
 | 3/30 | Team project | .5 | Debugging |
 | 3/28 | Individual Project | 5 | Playlist sharing |

@@ -7,16 +7,11 @@ import org.hibernate.Transaction;
 import entity.Message;
 import java.util.List;
 
-/**
- * Created by peter on 2/14/2017.
- */
 public class MessageDAO {
 
     private final Logger logger = Logger.getLogger(this.getClass());
-    Session session;
-    Transaction transaction;
-    Message message;
-    List<Message> messages;
+    private Session session;
+    private Transaction transaction;
 
     /** Return a list of all messages
      *
@@ -24,7 +19,7 @@ public class MessageDAO {
      */
     public List<Message> getAll() throws HibernateException {
         session = SessionFactoryProvider.getSessionFactory().openSession();
-        messages = session.createCriteria(Message.class).list();
+        List<Message> messages = session.createCriteria(Message.class).list();
         session.close();
         return messages;
     }
@@ -36,13 +31,13 @@ public class MessageDAO {
      */
     public Message get(int id) throws HibernateException {
         session = SessionFactoryProvider.getSessionFactory().openSession();
-        message = (Message) session.get(Message.class, id);
+        Message message = (Message) session.get(Message.class, id);
         session.close();
         return message;
     }
 
     /** save a new message
-     * @param message
+     * @param message The message to be stored
      * @return id the id of the inserted record
      */
     public int add(Message message) throws HibernateException {

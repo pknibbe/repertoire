@@ -13,10 +13,6 @@ import lombok.Getter;
 @Getter
 @ToString
 
-
-/**
- * Created by peter on 2/1/2017.
- */
 @Entity
 @Table(name = "users")
 public class User {

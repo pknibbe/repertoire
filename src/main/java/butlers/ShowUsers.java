@@ -21,7 +21,8 @@ import engines.UserManager;
 @WebServlet(
         name = "ShowUsers",
         urlPatterns = { "/ShowUsers" }
-)public class ShowUsers extends HttpServlet {
+)
+public class ShowUsers extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     private final UserManager userManager = new UserManager();
 

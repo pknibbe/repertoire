@@ -19,29 +19,19 @@ table {
     float: left;
     padding: 5px 30px 5px 5px;
 }
+#right {
+    float: right;
+    padding: 5px 30px 5px 5px;
+}
 
 #request {
     padding: 5px 30px 5px 30px;
 }
 
-#container {
-background-color: #FFFFFF;
-    color: #308830;
-padding: 10px;
-}
-
-.container::after {
-    content: "";
-    clear: both;
-    display: table;
-    border: 3px solid Magenta;
-    padding: 0.5rem;}
-
 #header {
-height: 200px;
+height: 350px;
 background-color: #FFFFFF;
     color: #308830;
-    font-color: #308830;
 }
 
 #menu {
@@ -73,47 +63,6 @@ font-family: Arial, Helvetica, sans-serif;
 #menu a:hover {
     color: Black;
 background: url(images/menu_border.png);
-}
-
-#main {
-float: left;
-width: 100%;
-margin: 5px 0;
-color: #FFF4D1;
-font-size: 11px;
-}
-#main a {
-color: #000000;
-}
-#main a:hover {
-color: #000000;
-}
-#main br {
-line-height: 8px;
-}
-
-#text {
-line-height: 14px;
-margin-right: 225px;
-padding: 10px 30px 30px 30px;
-}
-#text h1 {
-font-size: 22px;
-font-weight: normal;
-margin: 20px 0 10px 0;
-}
-#text h2 {
-font-size: 19px;
-font-weight: normal;
-    color: #308830;
-margin: 20px 0 10px 0;
-}
-#text ol, #text ul {
-padding: 0;
-margin: 8px 0;
-}
-#text li {
-margin-left: 40px;
 }
 
 #footer {

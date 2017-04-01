@@ -28,7 +28,7 @@ public class PlaylistManager {
      * @param name    The name of the playlist being sought
      * @return The system ID of the sought playlist or zero if it is not found
      */
-    public int getID(int user_id, String name) {
+     private int getID(int user_id, String name) {
         PlaylistList = pDAO.getAll();
         for (Playlist playlist : PlaylistList) {
             if (user_id != playlist.getOwner_id()) {
@@ -54,9 +54,8 @@ public class PlaylistManager {
             }
         }
         ArrayList<Integer> sharedIDs = sharedManager.getAll(user_id);
-        for (Integer index : sharedIDs) { // playlists shared with the user
-            playlistIDs.add(index);
-        }
+        // playlists shared with the user
+        playlistIDs.addAll(sharedIDs);
         return playlistIDs;
     }
 
@@ -68,7 +67,7 @@ public class PlaylistManager {
      * @param new_name    The desired new name of the playlist
      * @return The playlist ID or zero if the request did not succeed
      */
-    public int rename(int user_id, int playlist_id, String new_name) {
+     int rename(int user_id, int playlist_id, String new_name) {
 
         Playlist playlist = pDAO.get(playlist_id);
         if (user_id == playlist.getOwner_id()) {

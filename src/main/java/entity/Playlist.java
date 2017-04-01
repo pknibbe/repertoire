@@ -1,6 +1,4 @@
 package entity;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import lombok.ToString;
@@ -9,11 +7,6 @@ import lombok.Getter;
 @Setter
 @Getter
 @ToString
-
-/**
- * A list of songs to be played together
- * Created by peter on 2/1/2017.
- */
 
 @Entity
 @Table(name = "playlists")

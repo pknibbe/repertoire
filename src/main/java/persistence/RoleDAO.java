@@ -1,31 +1,26 @@
 package persistence;
 
 import entity.Role;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.util.List;
 
-/**
- * Created by peter on 2/15/2017.
- */
 public class RoleDAO {
     
-    private final Logger logger = Logger.getLogger(this.getClass());
-    Session session;
-    Transaction transaction;
-    Role role;
-    List<Role> roles;
+    //private final Logger logger = Logger.getLogger(this.getClass());
+    private Session session;
+    private Transaction transaction;
 
-        /** Return a list of all roles
+    /** Return a list of all roles
          *
          * @return All roles
          */
         public List<Role> getAll() throws HibernateException {
             session = SessionFactoryProvider.getSessionFactory().openSession();
-            roles = session.createCriteria(Role.class).list();
+            List<Role> roles = session.createCriteria(Role.class).list();
             session.close();
             return roles;
         }
@@ -37,13 +32,13 @@ public class RoleDAO {
          */
         public Role get(int id) throws HibernateException {
             session = SessionFactoryProvider.getSessionFactory().openSession();
-            role = (Role) session.get(Role.class, id);
+            Role role = (Role) session.get(Role.class, id);
             session.close();
             return role;
         }
 
         /** save a new role
-         * @param role
+         * @param role The role to save
          * @return id the id of the inserted record
          */
         public int add(Role role) throws HibernateException {

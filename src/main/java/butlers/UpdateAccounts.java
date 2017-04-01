@@ -26,7 +26,7 @@ import java.util.Enumeration;
 public class UpdateAccounts extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     private final UserManager userManager = new UserManager();
-    String url;
+    private String url;
 
     /**
      *  Handles HTTP POST requests.

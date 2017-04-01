@@ -20,7 +20,7 @@ import java.io.IOException;
 @WebServlet(
         name = "ExternalAction",
         urlPatterns = { "/ExternalAction" }
-)public class ExternalAction extends HttpServlet {
+) public class ExternalAction extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
 
     /**

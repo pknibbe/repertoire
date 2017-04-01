@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Enumeration;
-import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 
@@ -27,9 +26,8 @@ public class SharePlaylist extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     private final UserManager userManager = new UserManager();
     private final SharedManager sharedManager = new SharedManager();
-    String url;
 
-        /**
+    /**
          *  Handles HTTP POST requests.
          *
          *@param  request                   the HttpServletRequest object
@@ -43,31 +41,32 @@ public class SharePlaylist extends HttpServlet {
 
             int user_id = (Integer) session.getAttribute("user_id");
             int playlist_id = (Integer) session.getAttribute("listID");
+            String url;
             if (userManager.authenticated(user_id)) {
                 if (request.getParameter("Cancel") != null) {
-                    //do nothing
-                }
-                Enumeration<String> parameterNames = request.getParameterNames();
-                ArrayList<Integer> otherUserIDs = userManager.getOtherUserIDs(user_id);
+                    url = "ShowAPlaylist";
+                } else {
+                    Enumeration<String> parameterNames = request.getParameterNames();
 
-                while (parameterNames.hasMoreElements()) {
-                    String parameterName = parameterNames.nextElement();
-                    logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
-                    if (request.getParameter("Share") != null) {
-                        logger.info("In share section");
-                        if (request.getParameter(parameterName).equalsIgnoreCase("on")) { // this is id
-                            Integer index = Integer.valueOf(parameterName);
-                            sharedManager.share(playlist_id, index);
-                        }
-                    } else if  (request.getParameter("UnShare") != null) {
-                        logger.info("In un-share section");
-                        if (request.getParameter(parameterName).equalsIgnoreCase("on")) { // this is id
-                            Integer index = Integer.valueOf(parameterName);
-                            sharedManager.remove(index, playlist_id);
+                    while (parameterNames.hasMoreElements()) {
+                        String parameterName = parameterNames.nextElement();
+                        logger.info("Parameter " + parameterName + " is " + request.getParameter(parameterName));
+                        if (request.getParameter("Share") != null) {
+                            logger.info("In share section");
+                            if (request.getParameter(parameterName).equalsIgnoreCase("on")) { // this is id
+                                Integer index = Integer.valueOf(parameterName);
+                                sharedManager.share(playlist_id, index);
+                            }
+                        } else if (request.getParameter("UnShare") != null) {
+                            logger.info("In un-share section");
+                            if (request.getParameter(parameterName).equalsIgnoreCase("on")) { // this is id
+                                Integer index = Integer.valueOf(parameterName);
+                                sharedManager.remove(index, playlist_id);
+                            }
                         }
                     }
+                    url = "/sharePlaylist.jsp";
                 }
-                url = "/sharePlaylist.jsp";
             } else {
                 session.setAttribute("message", "user not authenticated");
                 url = "/index.jsp";

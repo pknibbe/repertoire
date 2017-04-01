@@ -4,7 +4,6 @@ import engines.UserManager;
 import persistence.SongDAO;
 import org.apache.log4j.Logger;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,7 +27,6 @@ public class DeleteSong extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     private final SongDAO songDAO = new SongDAO();
     private final UserManager userManager = new UserManager();
-    String url;
     /**
      *  Handles HTTP POST requests.
      *
@@ -40,6 +38,7 @@ public class DeleteSong extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
+        String url;
 
         if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
             Enumeration<String> parameterNames = request.getParameterNames();
@@ -62,6 +61,7 @@ public class DeleteSong extends HttpServlet {
         } else { // bounce
             session.setAttribute("message", "user not authenticated");
             url = "/index.jsp";
+            response.sendRedirect(url);
         }
     }
 }

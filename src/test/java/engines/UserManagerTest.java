@@ -9,7 +9,7 @@ import persistence.UserDAO;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 import static org.junit.Assert.*;
 
@@ -24,7 +24,7 @@ public class UserManagerTest {
     private List<Role> roleList;
     private final UserDAO userDAO = new UserDAO();
     private final RoleDAO roleDAO = new RoleDAO();
-    private final Logger logger = Logger.getLogger(this.getClass());
+    //private final Logger logger = Logger.getLogger(this.getClass());
     private int numberOfUsers;
     private int numberOfRoles;
 

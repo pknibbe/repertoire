@@ -1,19 +1,15 @@
 package persistence;
 
 import entity.Playlist;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.util.List;
 
-/**
- * Database table accessor class
- * Created by peter on 2/13/2017.
- */
 public class PlaylistDAO {
-    private final Logger logger = Logger.getLogger(this.getClass());
+    //private final Logger logger = Logger.getLogger(this.getClass());
 
     /** Return a list of all Playlists
      *

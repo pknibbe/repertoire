@@ -1,7 +1,7 @@
 package persistence;
 
 import entity.Role;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,17 +11,14 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by peter on 2/15/2017.
- */
 public class RoleDAOTest {
 
 
-    RoleDAO dao;
-        entity.Role role;
-        int numberOfRoles;
-        List<Role> roleList;
-        final Logger logger = Logger.getLogger(this.getClass());
+    private RoleDAO dao;
+    private entity.Role role;
+    private int numberOfRoles;
+    private List<Role> roleList;
+    //final Logger logger = Logger.getLogger(this.getClass());
 
         @Before
         public void setup() throws Exception {

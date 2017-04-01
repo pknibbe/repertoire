@@ -1,7 +1,9 @@
 package engines;
 
+import entity.User;
 import entity.Shared;
 import persistence.SharedDAO;
+import persistence.UserDAO;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -15,6 +17,7 @@ import java.util.ArrayList;
 public class SharedManager {
 
     final private SharedDAO dao = new SharedDAO();
+    final private UserDAO userDAO = new UserDAO();
     //final private Logger logger = Logger.getLogger(this.getClass());
 
     /**
@@ -36,7 +39,7 @@ public class SharedManager {
      * @param user_id The system ID of the user with whom the playlist is shared
      * @return zero or the system ID of the sharing record
      */
-    public int find(int playlist_id, int user_id) {
+    private int find(int playlist_id, int user_id) {
         int id = 0;
         List<Shared> all = dao.getAll();
         for (Shared shared : all) {
@@ -64,6 +67,7 @@ public class SharedManager {
         return isIt;
     }
 
+
     /**
      * Removes sharing of the specified playlist with the specified user
      * @param userID The system ID of the user
@@ -86,5 +90,41 @@ public class SharedManager {
             if (playlist.getShared_with() == user_id) list_IDs.add(playlist.getId());
         }
         return list_IDs;
+    }
+
+    /**
+     * Returns the list of all non-owners sharing a playlist
+     * @param playlist_id The system ID of the playlist
+     * @return the list of user IDs
+     */
+    public ArrayList<Integer> sharing(int playlist_id) {
+        ArrayList<Integer> userIDs = new ArrayList<>();
+        List<Shared> all = dao.getAll();
+        for (Shared list : all) {
+            if (list.getPlaylist_id() == playlist_id) {
+                userIDs.add(list.getShared_with());
+            }
+        }
+        return userIDs;
+    }
+
+    /**
+     * Returns the list of all non-owners NOT sharing a playlist
+     * @param playlist_id The system ID of the playlist
+     * @return the list of user IDs
+     */
+    public ArrayList<Integer> notSharing(int playlist_id) {
+        ArrayList<Integer> userIDs = new ArrayList<>();
+        List<User> users = userDAO.getAll();
+        List<Shared> all = dao.getAll();
+        for (User user : users) {
+            userIDs.add(user.getId());
+        }
+        for (Shared list : all) {
+            if (list.getPlaylist_id() == playlist_id) {
+                userIDs.remove(list.getShared_with());
+            }
+        }
+        return userIDs;
     }
 }

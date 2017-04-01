@@ -19,13 +19,12 @@ import java.io.IOException;
         name = "UpdateUserInformation",
         urlPatterns = { "/UpdateUserInformation" }
 )
-public class UpdateUserInformation extends HttpServlet {
+class UpdateUserInformation extends HttpServlet {
 
     //private final Logger logger = Logger.getLogger(this.getClass());
     private final UserManager userManager = new UserManager();
-    String url;
 
-        /**
+    /**
          *  Handles HTTP POST requests.
          *
          *@param  request                   the HttpServletRequest object
@@ -37,6 +36,7 @@ public class UpdateUserInformation extends HttpServlet {
                 throws ServletException, IOException {
             HttpSession session = request.getSession();
 
+            String url;
             if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
                 if (0 ==
                 userManager.updateUserWithRole(

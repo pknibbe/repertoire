@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
  * Information about a playlist that is being played
  * Created by peter on 3/25/2017.
  */
+@SuppressWarnings("CanBeFinal")
 public class Player {
 
     private final Logger logger = Logger.getLogger(this.getClass());
@@ -94,7 +95,7 @@ public class Player {
 
     public String getCurrentSongLocation() {
         String relativePath = songManager.getPathToSong(songIds.get(currentSongIndex));
-        return songManager.getRepository() + relativePath.substring(2);
+        return songManager.getRepository() + relativePath;
     }
 
     public String getAction() {

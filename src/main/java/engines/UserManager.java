@@ -9,13 +9,6 @@ import org.hibernate.HibernateException;
 import persistence.RoleDAO;
 import persistence.UserDAO;
 
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpSession;
-
-/**
- * Manage users and roles
- * Created by peter on 2/8/2017.
- */
 public class UserManager {
 
     final private UserDAO userDAO = new UserDAO();
@@ -59,29 +52,6 @@ public class UserManager {
         } else logger.warn("Can't add user with unacceptable username " + userName);
         return 0;
     }
-
-    /**
-     * Fetches the IDs of the users other than the current user
-     * @param identifier The system ID of the current user
-     * @return The IDs of the other users
-     */
-    public ArrayList<Integer> getOtherUserIDs(int identifier) {
-        ArrayList<Integer> otherUserIDs = new ArrayList<>();
-
-        try {
-            for (User user : userDAO.getAll()) {
-                Integer userID = user.getId();
-                if (identifier != userID) {
-                    otherUserIDs.add(userID);
-                }
-            }                    }
-        catch (HibernateException hbe) {
-            logger.error("Unable to get user Ids from database. Hibernate exception " + hbe);
-            return null;
-        }
-        return otherUserIDs;
-    }
-
 
     /**
      * Fetches the Names of the users other than the current user

@@ -23,6 +23,7 @@ public class MessageManagerTest {
     private final MessageDAO dao = new MessageDAO();
 //    private final Logger logger = Logger.getLogger(this.getClass());
     private List<Message> originalMessageList;
+    @SuppressWarnings("CanBeFinal")
     private ArrayList<Integer> bogusList = new ArrayList<>();
     private Message message;
 

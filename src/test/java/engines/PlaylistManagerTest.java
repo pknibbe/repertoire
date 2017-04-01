@@ -13,6 +13,7 @@ import persistence.PlaylistDAO;
  * Test the methods of the PlaylistManager class
  * Created by peter on 2/16/2017.
  */
+@SuppressWarnings("CanBeFinal")
 public class PlaylistManagerTest {
 
     private final PlaylistManager playlistManager = new PlaylistManager();

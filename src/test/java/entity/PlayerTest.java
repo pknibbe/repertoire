@@ -1,14 +1,15 @@
 package entity;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.junit.Test;
 
 /**
  * Tests the player
  * Created by peter on 3/26/2017.
  */
+@SuppressWarnings("EmptyMethod")
 public class PlayerTest {
-    private final Logger logger = Logger.getLogger(this.getClass());
+    //private final Logger logger = Logger.getLogger(this.getClass());
 
     @Test
     public void run() throws InterruptedException {

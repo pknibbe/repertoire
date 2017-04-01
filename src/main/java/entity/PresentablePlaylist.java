@@ -9,12 +9,6 @@ import lombok.ToString;
 @Getter
 @ToString
 
-/**
- * A list of songs to be played together
- * Created by peter on 2/1/2017.
- */
-
-
 public class PresentablePlaylist {
 
   private int id;

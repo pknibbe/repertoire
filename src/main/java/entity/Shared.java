@@ -14,11 +14,6 @@ import javax.persistence.Table;
 @Getter
 @ToString
 
-/**
- * A list of shared playlists and the users that share them
- * Created by peter on 3/28/2017.
- */
-
 @Entity
 @Table(name = "shared")
 public class Shared {

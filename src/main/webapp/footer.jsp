@@ -14,6 +14,6 @@
 
 </div>
 <!-- end footer -->
-</div>
+
 </body>
 </html>

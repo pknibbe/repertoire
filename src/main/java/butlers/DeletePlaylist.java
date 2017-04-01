@@ -27,7 +27,7 @@ public class DeletePlaylist extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     private final UserManager userManager = new UserManager();
     private final PlaylistDAO playlistDAO = new PlaylistDAO();
-    String url;
+
     /**
      *  Handles HTTP POST requests.
      *
@@ -39,6 +39,7 @@ public class DeletePlaylist extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
+        String url;
 
         if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
             Enumeration<String> parameterNames = request.getParameterNames();
@@ -61,6 +62,7 @@ public class DeletePlaylist extends HttpServlet {
         } else { // bounce
             session.setAttribute("message", "user not authenticated");
             url = "/index.jsp";
+            response.sendRedirect(url);
         }
     }
 }

@@ -5,16 +5,11 @@ import java.util.*;
  * Manages configuration information via properties
  * Created by peter on 3/27/2017.
  */
-public class PropertyManager extends Properties {
-    /**
-     * constructor with input parameter to identify configuration file
-     *
-     * @param filePath name of configuration file containing the keys and values
-     */
-    public PropertyManager(String filePath) {
+ class PropertyManager extends Properties {
+
+     PropertyManager() {
         try {
-            InputStream propertiesStream =this.getClass().getResourceAsStream(
-                    filePath);
+            InputStream propertiesStream =this.getClass().getResourceAsStream("/repertoire.properties");
             this.load(propertiesStream);
         }
         catch(IOException ioe) {
@@ -33,14 +28,14 @@ public class PropertyManager extends Properties {
     public String toString() {
         Set<String> keys = this.stringPropertyNames();
 
-        String contents = "Properties File Contents:" + System.lineSeparator();
-        contents += "   Key            Value" + System.lineSeparator();
-        contents += "-------------------------------------" + System.lineSeparator();
+        StringBuilder contents = new StringBuilder("Properties File Contents:" + System.lineSeparator());
+        contents.append("   Key            Value").append(System.lineSeparator());
+        contents.append("-------------------------------------").append(System.lineSeparator());
 
         for (String key : keys) {
             String value = this.getProperty(key);
-            contents += key + "   " + value + System.lineSeparator();
+            contents.append(key).append("   ").append(value).append(System.lineSeparator());
         }
-        return contents;
+        return contents.toString();
     }
 }

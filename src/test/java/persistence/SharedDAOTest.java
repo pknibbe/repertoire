@@ -15,6 +15,7 @@ import java.util.List;
  * Database accessor test
  * Created by peter on 3/28/2017.
  */
+@SuppressWarnings("CanBeFinal")
 public class SharedDAOTest {
 
     private SharedDAO dao;
