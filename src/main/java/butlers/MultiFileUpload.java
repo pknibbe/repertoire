@@ -57,8 +57,7 @@ public class MultiFileUpload extends HttpServlet {
                 String path1 = part.getSubmittedFileName();
                 logger.info("Request Part submitted file name is " + path1);
                 if (path1 != null) {
-                    String path = songManager.getRepository() + part.getSubmittedFileName();
-                    processRequest(part, path, listID);
+                    processRequest(part, part.getSubmittedFileName(), listID);
                 }
             }
         } else { // user not authenticated
@@ -69,6 +68,7 @@ public class MultiFileUpload extends HttpServlet {
     }
 
     private void processRequest(Part part, String filePath, int playListId) throws IOException{
+        String repo = songManager.getRepository();
 
         //multiple cases
         // Case 1: Song is already in database under this listID.
@@ -81,7 +81,7 @@ public class MultiFileUpload extends HttpServlet {
             messageContent = "Song added";
         }
         // Case 3: Song is totally new to database. This is reflected below
-        boolean success = writeFile(filePath, part, filePath);
+        boolean success = writeFile(repo + filePath, part, filePath);
         if (success) { // Add new song to database
             songManager.add(filePath, playListId );
             messageContent = "Song added";

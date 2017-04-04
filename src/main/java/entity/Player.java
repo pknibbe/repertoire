@@ -94,7 +94,7 @@ public class Player {
     }
 
     public String getCurrentSongLocation() {
-        String relativePath = songManager.getPathToSong(songIds.get(currentSongIndex));
+        String relativePath = songManager.getLocation(songIds.get(currentSongIndex));
         return songManager.getRepository() + relativePath;
     }
 

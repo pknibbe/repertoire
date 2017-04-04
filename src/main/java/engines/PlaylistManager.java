@@ -5,7 +5,6 @@ import java.util.List;
 //import org.apache.log4j.Logger;
 import entity.Playlist;
 import persistence.PlaylistDAO;
-import persistence.SongDAO;
 
 
 /**
@@ -17,8 +16,6 @@ public class PlaylistManager {
     final private PlaylistDAO pDAO = new PlaylistDAO();
     //final private Logger logger = Logger.getLogger(this.getClass());
     private List<Playlist> PlaylistList;
-    final private SongManager songManager = new SongManager();
-    final private SongDAO songDAO = new SongDAO();
     final private SharedManager sharedManager = new SharedManager();
 
     /**
@@ -95,12 +92,13 @@ public class PlaylistManager {
      */
     public boolean alreadyThere(String location, int playlist_id) {
         boolean found = false;
-        ArrayList<Integer> song_ids = songManager.getIDs(location);
+        ArrayList<Integer> song_ids = SongManager.getIDs(location);
         for (Integer index : song_ids) {
-            if (songDAO.get(index).getPlaylist_id() == playlist_id) found = true;
+            if (SongManager.getPlaylistID(index) == playlist_id) {
+                found = true;
+            }
         }
         return found;
     }
-
 
 }

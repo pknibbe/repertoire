@@ -33,7 +33,7 @@ You can also purchase a PSD-file for this template.
         <c:set var="boss" value="administrator"></c:set>
 
         <ul>
-            <li><a href="ShowPlayLists">Music Center</a></li>
+            <li><a href="ShowPlaylists">Music Center</a></li>
             <li><a href="ShowMessages">Message Center</a></li>
             <c:if test="${role eq boss}" >
                 <li><a href="ShowUsers">Administration Center</a></li>

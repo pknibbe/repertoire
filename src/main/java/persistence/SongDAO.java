@@ -34,16 +34,20 @@ public class SongDAO {
         return Song;
     }
 
-    /** save a new Song
-     * @param Song The song to insert
-     * @return id the id of the inserted record
-     *///TODO should this be void or should it return the id of the song?
-    public void add(Song Song) throws HibernateException {
+
+    /**
+     * Saves a song to the database with a playlist association
+     * @param Song The song record to add
+     * @return The system ID of the song
+     * @throws HibernateException Database access issue
+     */
+    public int add(Song Song) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         int id = (Integer) session.save(Song);
         transaction.commit();
         session.close();
+        return id;
     }
 
     /** modify a Song record

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import engines.UserManager;
-import persistence.SongDAO;
+import engines.SongManager;
 import java.io.IOException;
 
 /**
@@ -24,7 +24,6 @@ import java.io.IOException;
 )
 public class DeleteOneSongFromAPlaylist extends HttpServlet {
 
-    private final SongDAO songDAO = new SongDAO();
     private final Logger logger = Logger.getLogger(this.getClass());
     private final SharedManager sharedManager = new SharedManager();
 
@@ -58,7 +57,7 @@ public class DeleteOneSongFromAPlaylist extends HttpServlet {
             int songID = Integer.valueOf(request.getParameter("songID"));
 
             logger.debug("In delete section");
-            session.setAttribute("songToDelete", songDAO.get(songID).getLocation());
+            session.setAttribute("songToDelete", SongManager.getLocation(songID));
             session.setAttribute("songID", songID);
             if (sharedManager.isShared(list_id)) {
                 session.setAttribute("message", "Can't delete song from shared playlist");

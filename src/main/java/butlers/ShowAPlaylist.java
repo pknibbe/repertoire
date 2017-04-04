@@ -48,7 +48,7 @@ public class ShowAPlaylist extends HttpServlet {
             playlist = playlistDAO.get((Integer) session.getAttribute("listID"));
             session.setAttribute("listName", playlist.getName());
             session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
-            session.setAttribute("songs", songManager.getSongs((Integer) session.getAttribute("listID")));
+            session.setAttribute("songs", songManager.getAll((Integer) session.getAttribute("listID")));
 
             logger.debug("Loaded songs");
             url = "/manageAPlaylist.jsp";

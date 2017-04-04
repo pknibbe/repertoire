@@ -1,7 +1,7 @@
 package butlers;
 
 import engines.UserManager;
-import persistence.SongDAO;
+import engines.SongManager;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -25,7 +25,7 @@ import java.util.Enumeration;
 )
 public class DeleteSong extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final SongDAO songDAO = new SongDAO();
+
     /**
      *  Handles HTTP POST requests.
      *
@@ -45,7 +45,7 @@ public class DeleteSong extends HttpServlet {
                 String parameterName = parameterNames.nextElement();
                 logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                 if (parameterName.equalsIgnoreCase("Delete")) {
-                    songDAO.remove((Integer) session.getAttribute("songID"));
+                    SongManager.remove((Integer) session.getAttribute("songID"));
                     session.setAttribute("message", "Song Deleted");
                     logger.debug("removed song " + session.getAttribute("songID"));
                 } else if (parameterName.equalsIgnoreCase("Cancel")) {

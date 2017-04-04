@@ -11,31 +11,37 @@ import entity.Song;
  */
 @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
 public class SongManager {
-    private final SongDAO songDAO = new SongDAO();
-    private final Logger logger = Logger.getLogger(this.getClass());
-    private String repository;
+    private static final SongDAO songDAO = new SongDAO();
+    final static private LoggerManager loggerManager = new LoggerManager();
+    private final static PropertyManager propertyManager = new PropertyManager();
+    private static final String repository = System.getenv(propertyManager.getProperty("home")) +
+                                             propertyManager.getProperty("musicDir");
 
-    public SongManager() {
-        PropertyManager propertyManager = new PropertyManager();
-        String home = System.getenv(propertyManager.getProperty("home"));
-        String repo = propertyManager.getProperty("musicDir");
-        setRepository(home + repo);
-        logger.debug("Set repository to " + getRepository());
+    /**
+     * Adds the song to the playlist if it is not already there, also adding it to the songs table if necessary
+     * @param location Where the song should be
+     * @param playlist_id The system ID of the playlist
+     */
+    public static int add(String location, int playlist_id) {
+        List<Song> songs = songDAO.getAll();
+        for (Song song : songs) {
+            if (location.equalsIgnoreCase(song.getLocation()) &&
+                    playlist_id == song.getPlaylist_id()) return song.getId();
+        }
+        Song song = new Song(location, playlist_id );
+        return songDAO.add(song);
     }
 
-    public String getRepository() {
+    public static String getRepository() {
         return repository;
-    }
-
-    private void setRepository(String repository) {
-        this.repository = repository;
     }
 
     /**
      * Retrieves the location of the current song
      * @return The song location
      */
-    public String getPathToSong(int songID) {
+    public static String getLocation(int songID) {
+        Logger logger = loggerManager.get();
         Song currentSong = songDAO.get(songID);
         if (currentSong == null) {
             logger.error("Current song is null and cannot be located");
@@ -46,13 +52,12 @@ public class SongManager {
         }
     }
 
-
     /**
      * Retrieves the songs in a playlist
      * @param list_ID The system identifier of the playlist
      * @return The songs
      */
-    public ArrayList<Song> getSongs(int list_ID) {
+    public static ArrayList<Song> getAll(int list_ID) {
         ArrayList<Song> songList = new ArrayList<>();
         List<Song> songs = songDAO.getAll();
         for (Song song : songs) {
@@ -68,7 +73,7 @@ public class SongManager {
      * @param list_ID The system identifier of the playlist
      * @return The song identifiers
      */
-    public ArrayList<Integer> getSongIds(int list_ID) {
+    public static ArrayList<Integer> getSongIds(int list_ID) {
         ArrayList<Integer> songList = new ArrayList<>();
         List<Song> songs = songDAO.getAll();
         for (Song song : songs) {
@@ -80,26 +85,11 @@ public class SongManager {
     }
 
     /**
-     * Adds the song to the playlist if it is not already there, also adding it to the songs table if necessary
-     * @param location Where the song should be
-     * @param playlist_id The system ID of the playlist
-     */
-    public void add(String location, int playlist_id) {
-        List<Song> songs = songDAO.getAll();
-        for (Song song : songs) {
-            if (location.equalsIgnoreCase(song.getLocation()) &&
-                    playlist_id == song.getPlaylist_id()) return;
-        }
-        Song song = new Song(location.substring(getRepository().length()), playlist_id );
-        songDAO.add(song);
-    }
-
-    /**
      * Returns whether or not the specified song is in the database
      * @param location The file sought
      * @return whether or not the specified song is in the database
      */
-    public boolean exists(String location) {
+    public static boolean exists(String location) {
         boolean found = false;
         List<Song> songs = songDAO.getAll();
         for (Song song : songs) {
@@ -109,17 +99,37 @@ public class SongManager {
     }
 
     /**
-     * Returns the system ID of the song at a specified file
+     * Returns the system IDs of the song at a specified file
      * @param location The specification of the file
-     * @return zero or the system ID
+     * @return null or the system IDs
      */
-    public ArrayList<Integer> getIDs(String location) {
+     static ArrayList<Integer> getIDs(String location) {
         List<Song> songs = songDAO.getAll();
         ArrayList<Integer> ids = new ArrayList<>();
         for (Song song : songs) {
             if (song.getLocation().equalsIgnoreCase(location)) ids.add(song.getId());
         }
         return ids;
+    }
+
+    /**
+     * Retrieves the playlist id from a song record
+     * @param songID The record ID
+     * @return the ID of the associated playlist
+     */
+     static int getPlaylistID(int songID) {
+         Song song = songDAO.get(songID);
+         if (song == null) {
+             return 0;
+         } else return song.getPlaylist_id();
+    }
+
+    /**
+     * Removes the specified song record
+     * @param id The system ID of the song
+     */
+    public static void remove(int id) {
+         songDAO.remove(id);
     }
 
 }
