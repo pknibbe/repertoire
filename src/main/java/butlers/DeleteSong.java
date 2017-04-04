@@ -48,9 +48,9 @@ public class DeleteSong extends HttpServlet {
                 if (parameterName.equalsIgnoreCase("Delete")) {
                     songDAO.remove((Integer) session.getAttribute("songID"));
                     session.setAttribute("message", "Song Deleted");
-                    logger.info("removed song " + session.getAttribute("songID"));
+                    logger.debug("removed song " + session.getAttribute("songID"));
                 } else if (parameterName.equalsIgnoreCase("Cancel")) {
-                    logger.info("Did not remove song " + session.getAttribute("songID"));
+                    logger.debug("Did not remove song " + session.getAttribute("songID"));
                     session.setAttribute("message", "Song Not Deleted");
                 }
             }

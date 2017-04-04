@@ -39,11 +39,13 @@
 
     <div id="right">
         <h3> Upload a song to the playlist ${listName}</h3>
-        <form action="Upload" method="POST" enctype="multipart/form-data">
+        <form action="MultiFileUpload" method="POST" enctype="multipart/form-data">
+<!--        <form action="Upload" method="POST" enctype="multipart/form-data"> -->
             <table>
                 <tr>
-                    <td>New Song: </td>
-                    <td><input type="file" name="file" id="file" /></td>
+                    <td>New Song(s): </td>
+                    <td><input type="file" name="file" id="file" multiple></td>
+     <!--               <td><input type="file" name="file" id="file" /></td> -->
                 </tr>
             </table>
             <input type="submit" name="Upload" value="Upload" />

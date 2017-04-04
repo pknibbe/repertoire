@@ -5,7 +5,7 @@
 <div id="container">
 
     <form action="MultiFileUpload" method="POST" enctype="multipart/form-data">
-        New Song: <input type="file" name="file" id="file" multiple>
+        New Song(s): <input type="file" name="file" id="file" multiple>
         <input type="submit" name="Upload" value="Upload" />
     </form>
 </div>

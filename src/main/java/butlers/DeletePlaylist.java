@@ -49,9 +49,9 @@ public class DeletePlaylist extends HttpServlet {
                 if (parameterName.equalsIgnoreCase("Delete")) {
                     playlistDAO.remove((Integer) session.getAttribute("listID"));
                     session.setAttribute("message", "List Deleted");
-                    logger.info("removed playlist " + session.getAttribute("listID"));
+                    logger.debug("removed playlist " + session.getAttribute("listID"));
                 } else if (parameterName.equalsIgnoreCase("Cancel")) {
-                    logger.info("Did not remove playlist " + session.getAttribute("listID"));
+                    logger.debug("Did not remove playlist " + session.getAttribute("listID"));
                     session.setAttribute("message", "List Not Deleted");
                 }
             }
