@@ -24,7 +24,6 @@ import java.io.IOException;
 ) public class SendMessage extends HttpServlet {
 
     //private final Logger logger = Logger.getLogger(this.getClass());
-    private final UserManager userManager = new UserManager();
     private final MessageDAO messageDAO = new MessageDAO();
 
     /**
@@ -41,9 +40,9 @@ import java.io.IOException;
 
             int user_id = (Integer) session.getAttribute("user_id");
             String url;
-            if (userManager.authenticated(user_id)) {
+            if (UserManager.authenticated(user_id)) {
                 String recipientName = request.getParameter("to");
-                int recipientId = userManager.getIdByName(recipientName);
+                int recipientId = UserManager.getIdByName(recipientName);
                 Message message = new Message(request.getParameter("subject"), user_id, recipientId, 0,
                         request.getParameter("content"));
                 messageDAO.add(message);

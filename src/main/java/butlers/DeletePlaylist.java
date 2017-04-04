@@ -25,7 +25,6 @@ import persistence.PlaylistDAO;
 )
 public class DeletePlaylist extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final UserManager userManager = new UserManager();
     private final PlaylistDAO playlistDAO = new PlaylistDAO();
 
     /**
@@ -41,7 +40,7 @@ public class DeletePlaylist extends HttpServlet {
         HttpSession session = request.getSession();
         String url;
 
-        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
             Enumeration<String> parameterNames = request.getParameterNames();
             while (parameterNames.hasMoreElements()) {
                 String parameterName = parameterNames.nextElement();
@@ -55,7 +54,7 @@ public class DeletePlaylist extends HttpServlet {
                     session.setAttribute("message", "List Not Deleted");
                 }
             }
-            url = "/ShowPlayLists";
+            url = "/ShowPlaylists";
 
             logger.debug("sending redirect to " + url);
             response.sendRedirect(url);

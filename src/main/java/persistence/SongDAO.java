@@ -37,7 +37,7 @@ public class SongDAO {
     /** save a new Song
      * @param Song The song to insert
      * @return id the id of the inserted record
-     */
+     *///TODO should this be void or should it return the id of the song?
     public void add(Song Song) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();

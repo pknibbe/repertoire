@@ -2,6 +2,8 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 4/04 | Individual Project | 4 | Make UserManager static method set and access point |
+| 4/03 | Individual Project | 5 | Enabled multi-song upload and searched for independent research topic |
 | 4/01 | Individual Project | 2 | Made music repository location a function of environment variable HOME |
 | 3/31 | Team Project  | 2 | Scrum and further hardening against input errors |
 | 3/31 | Individual Project | 6 | AWS testing and removing warnings from analysis |

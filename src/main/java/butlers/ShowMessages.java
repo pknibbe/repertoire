@@ -3,10 +3,8 @@ package butlers;
 import engines.MessageManager;
 import engines.UserManager;
 import entity.Message;
-import entity.User;
 import entity.PresentableMessage;
 import persistence.MessageDAO;
-import persistence.UserDAO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -39,35 +37,27 @@ public class ShowMessages extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         MessageDAO dao = new MessageDAO();
-        UserDAO userDAO = new UserDAO();
         Message plainMessage;
         MessageManager MessageManager = new MessageManager();
 
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
-        UserManager userManager = new UserManager();
         String url;
         int user_id = (Integer) session.getAttribute("user_id");
 
-        if (userManager.authenticated(user_id)) {
+        if (UserManager.authenticated(user_id)) {
             ArrayList<Integer> listIDs = MessageManager.getIDs(user_id);
             ArrayList<PresentableMessage> messages = new ArrayList<>();
             for (int index : listIDs) {
                plainMessage = dao.get(index);
                int senderID = plainMessage.getSender();
-               User user = userDAO.get(senderID);
-               String senderName;
-               if (user != null) {
-                   senderName = user.getName();
-               } else {
-                   senderName = "Unknown";
-               }
+
                PresentableMessage presentableMessage =
-                        new PresentableMessage(plainMessage, senderName);
+                        new PresentableMessage(plainMessage, UserManager.getName(senderID));
                messages.add(presentableMessage);
             }
             session.setAttribute("messages", messages);
-            session.setAttribute("names", userManager.getOtherUserNames(user_id));
+            session.setAttribute("names", UserManager.getOtherUserNames(user_id));
             url = "/messages.jsp";
 
         } else {

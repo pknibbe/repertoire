@@ -26,7 +26,6 @@ import java.util.*;
 @MultipartConfig
 public class MultiFileUpload extends HttpServlet {
 
-    private final UserManager userManager = new UserManager();
     private final Logger logger = Logger.getLogger(this.getClass());
     private final SongManager songManager = new SongManager();
     private final PlaylistManager playlistManager = new PlaylistManager();
@@ -49,7 +48,7 @@ public class MultiFileUpload extends HttpServlet {
         logger.debug("The user ID is " + session.getAttribute("user_id"));
         logger.debug("Request URI is " + request.getRequestURI());
 
-        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
             url = "ShowAPlaylist";
             logger.info("Session attribute listID is " + session.getAttribute("listID"));
             int listID = (Integer) (session.getAttribute("listID"));

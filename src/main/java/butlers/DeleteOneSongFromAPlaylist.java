@@ -25,7 +25,6 @@ import java.io.IOException;
 public class DeleteOneSongFromAPlaylist extends HttpServlet {
 
     private final SongDAO songDAO = new SongDAO();
-    private final UserManager userManager = new UserManager();
     private final Logger logger = Logger.getLogger(this.getClass());
     private final SharedManager sharedManager = new SharedManager();
 
@@ -55,7 +54,7 @@ public class DeleteOneSongFromAPlaylist extends HttpServlet {
             logger.debug("Parameter value is " + request.getParameter(pName));
         }
 
-        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
             int songID = Integer.valueOf(request.getParameter("songID"));
 
             logger.debug("In delete section");

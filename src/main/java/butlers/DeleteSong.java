@@ -26,7 +26,6 @@ import java.util.Enumeration;
 public class DeleteSong extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     private final SongDAO songDAO = new SongDAO();
-    private final UserManager userManager = new UserManager();
     /**
      *  Handles HTTP POST requests.
      *
@@ -40,7 +39,7 @@ public class DeleteSong extends HttpServlet {
         HttpSession session = request.getSession();
         String url;
 
-        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
             Enumeration<String> parameterNames = request.getParameterNames();
             while (parameterNames.hasMoreElements()) {
                 String parameterName = parameterNames.nextElement();

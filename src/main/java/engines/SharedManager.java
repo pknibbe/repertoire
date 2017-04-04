@@ -1,9 +1,7 @@
 package engines;
 
-import entity.User;
 import entity.Shared;
 import persistence.SharedDAO;
-import persistence.UserDAO;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -17,7 +15,6 @@ import java.util.ArrayList;
 public class SharedManager {
 
     final private SharedDAO dao = new SharedDAO();
-    final private UserDAO userDAO = new UserDAO();
     //final private Logger logger = Logger.getLogger(this.getClass());
 
     /**
@@ -99,8 +96,7 @@ public class SharedManager {
      */
     public ArrayList<Integer> sharing(int playlist_id) {
         ArrayList<Integer> userIDs = new ArrayList<>();
-        List<Shared> all = dao.getAll();
-        for (Shared list : all) {
+        for (Shared list : dao.getAll()) {
             if (list.getPlaylist_id() == playlist_id) {
                 userIDs.add(list.getShared_with());
             }
@@ -114,15 +110,13 @@ public class SharedManager {
      * @return the list of user IDs
      */
     public ArrayList<Integer> notSharing(int playlist_id) {
-        ArrayList<Integer> userIDs = new ArrayList<>();
-        List<User> users = userDAO.getAll();
-        List<Shared> all = dao.getAll();
-        for (User user : users) {
-            userIDs.add(user.getId());
-        }
-        for (Shared list : all) {
+        ArrayList<Integer> userIDs = UserManager.getUserIds();
+
+        for (Shared list : dao.getAll()) {
             if (list.getPlaylist_id() == playlist_id) {
-                userIDs.remove(list.getShared_with());
+                if (userIDs != null) {
+                    userIDs.remove(list.getShared_with());
+                }
             }
         }
         return userIDs;

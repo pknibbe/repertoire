@@ -1,17 +1,21 @@
 package entity;
+import lombok.ToString;
+import lombok.Setter;
+import lombok.Getter;
+@Setter
+@Getter
+@ToString
 
-/**
- * An extension of the base Message class to aid in presentation to the user
- * Created by peter on 3/22/2017.
- */
 public class PresentableMessage extends Message {
-
+    private String senderName;
+    //TODO deal with senderName parameter
     public PresentableMessage(Message message, String senderName) {
         this.subject = message.getSubject();
         this.sender = message.getSender();
         this.receiver = message.getReceiver();
         this.readFlag = message.getReadFlag();
         this.content = message.getContent();
+        this.senderName = senderName;
     }
 
 }

@@ -24,7 +24,6 @@ import engines.UserManager;
 )
 public class ShowUsers extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final UserManager userManager = new UserManager();
 
     /**
      *  Handles HTTP GET requests.
@@ -36,23 +35,23 @@ public class ShowUsers extends HttpServlet {
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        UserDAO userdao = new UserDAO();
+
         RequestDispatcher dispatcher;
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
         String role = "administrator";
-        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
             if (role.equalsIgnoreCase((String) session.getAttribute("user_role"))) {
 
-                request.setAttribute("users", userdao.getAll());
+                request.setAttribute("users", UserManager.getAllUsers());
 
                 dispatcher = servletContext.getRequestDispatcher("/accounts.jsp");
                 logger.debug("Dispatching request forward to /accounts.jsp");
 
             } else {
                 session.setAttribute("message", "Not authorized to view user information.");
-                dispatcher = servletContext.getRequestDispatcher("ShowPlayLists");
-                logger.debug("Dispatching request forward to ShowPlayLists");
+                dispatcher = servletContext.getRequestDispatcher("ShowPlaylists");
+                logger.debug("Dispatching request forward to ShowPlaylists");
 
             }
 

@@ -28,7 +28,6 @@ import java.util.Enumeration;
 )
 public class ManagePlaylists extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final UserManager userManager = new UserManager();
     private final PlaylistDAO playlistDAO = new PlaylistDAO();
     private final PlaylistManager playlistManager = new PlaylistManager();
     private final SharedManager sharedManager = new SharedManager();
@@ -50,7 +49,7 @@ public class ManagePlaylists extends HttpServlet {
 
         int listID;
 
-        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
 
             logger.debug("In ManagePlaylists.doPost");
             listID = Integer.valueOf(request.getParameter("listID"));

@@ -26,7 +26,6 @@ public class ShowAPlaylist extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     private final PlaylistDAO playlistDAO = new PlaylistDAO();
     private final SongManager songManager = new SongManager();
-    private final UserManager userManager = new UserManager();
 
     /**
      *  Handles HTTP GET requests.
@@ -45,7 +44,7 @@ public class ShowAPlaylist extends HttpServlet {
         Playlist playlist;
 
         logger.debug("In doGet");
-        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
             playlist = playlistDAO.get((Integer) session.getAttribute("listID"));
             session.setAttribute("listName", playlist.getName());
             session.setAttribute("message", "Playlist " + session.getAttribute("listName"));

@@ -33,13 +33,12 @@ import java.io.IOException;
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        UserManager manager = new UserManager();
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
         RequestDispatcher dispatcher;
         logger.debug("user_name is " + request.getParameter("user_name"));
         logger.debug("user_pass is " + request.getParameter("user_pass"));
-        int user_id = manager.VerifyCredentials(request.getParameter("user_name"), request.getParameter("user_pass"));
+        int user_id = UserManager.verifyCredentials(request.getParameter("user_name"), request.getParameter("user_pass"));
         if (user_id == 0) {
             session.setAttribute("message", "User Credentials not verified");
 
@@ -47,15 +46,15 @@ import java.io.IOException;
             dispatcher.forward(request, response);
         }
 
-        String role = manager.DetermineRole(user_id);
-        String name = manager.getName(user_id);
+        String role = UserManager.determineRole(user_id);
+        String name = UserManager.getName(user_id);
 
         session.setAttribute("user_id", user_id);
         session.setAttribute("user_role", role);
         session.setAttribute("message", "Welcome, " + name);
         session.setAttribute("name", name);
 
-        String url = "/ShowPlayLists";
+        String url = "/ShowPlaylists";
 
         dispatcher = servletContext.getRequestDispatcher(url);
         dispatcher.forward(request, response);

@@ -15,15 +15,15 @@ import java.util.ArrayList;
 import engines.UserManager;
 import engines.PlaylistManager;
 import entity.*;
-import persistence.*;
+import persistence.PlaylistDAO;
 /**
  * Provides access to Music Play Lists
  * Created by peter on 3/4/2017.
  */
 @WebServlet(
-        name = "ShowPlayLists",
-        urlPatterns = { "/ShowPlayLists" })
-public class ShowPlayLists extends HttpServlet {
+        name = "ShowPlaylists",
+        urlPatterns = { "/ShowPlaylists" })
+public class ShowPlaylists extends HttpServlet {
 
     /**
      *  Handles HTTP GET requests.
@@ -38,14 +38,12 @@ public class ShowPlayLists extends HttpServlet {
 
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
-        UserManager userManager = new UserManager();
         String url;
 
-        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
             ArrayList<PresentablePlaylist> presentables = new ArrayList<>();
             Playlist playlist;
             PlaylistDAO playlistDAO = new PlaylistDAO();
-            UserDAO userDAO = new UserDAO();
 
             int listOwnerID;
 
@@ -57,7 +55,7 @@ public class ShowPlayLists extends HttpServlet {
                 presentables.add(new PresentablePlaylist(index,
                                                          playlist.getName(),
                                                          listOwnerID,
-                                                         userDAO.get(listOwnerID).getName()));
+                                                         UserManager.getName(listOwnerID)));
             }
             session.setAttribute("playlists", presentables);
             url = "/playlists.jsp";

@@ -24,7 +24,6 @@ import org.apache.log4j.Logger;
 public class SharePlaylist extends HttpServlet {
 
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final UserManager userManager = new UserManager();
     private final SharedManager sharedManager = new SharedManager();
 
     /**
@@ -42,7 +41,7 @@ public class SharePlaylist extends HttpServlet {
             int user_id = (Integer) session.getAttribute("user_id");
             int playlist_id = (Integer) session.getAttribute("listID");
             String url;
-            if (userManager.authenticated(user_id)) {
+            if (UserManager.authenticated(user_id)) {
                 if (request.getParameter("Cancel") != null) {
                     url = "ShowAPlaylist";
                 } else {

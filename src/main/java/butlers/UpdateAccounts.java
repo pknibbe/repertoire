@@ -25,7 +25,6 @@ import java.util.Enumeration;
 )
 public class UpdateAccounts extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final UserManager userManager = new UserManager();
     private String url;
 
     /**
@@ -40,7 +39,7 @@ public class UpdateAccounts extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         String role = "administrator";
-        if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
             if (role.equalsIgnoreCase((String) session.getAttribute("user_role"))) {
                 String userID = request.getParameter("userID");
                 int identifier;
@@ -56,7 +55,7 @@ public class UpdateAccounts extends HttpServlet {
                     String parameterName = parameterNames.nextElement();
                     logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                     if (parameterName.equalsIgnoreCase("Delete")) {
-                        if (0 == userManager.removeUserWithRole(identifier)) {
+                        if (0 == UserManager.removeUserWithRole(identifier)) {
                             session.setAttribute("message", "Unable to remove user due to system error");
                             logger.error("Unable to remove user due to system error");
                         } else {
@@ -71,16 +70,16 @@ public class UpdateAccounts extends HttpServlet {
                         role = request.getParameter("Role");
                         if (identifier > 0) {
                             logger.debug("Updating existing user ID " + identifier);
-                            User user = userManager.getUser(identifier);
+                            User user = UserManager.getUser(identifier);
                             if (user == null) {
                                 session.setAttribute("message", "Unable to update user due to system error");
                                 url = "/index.jsp";
                             } else {
-                                session.setAttribute("UserInfo", userManager.getUser(identifier));
+                                session.setAttribute("UserInfo", UserManager.getUser(identifier));
                                 url = "ShowUsers";
                             }
                         } else {
-                            int added = userManager.addUserWithRole(userName, name, password, role);
+                            int added = UserManager.addUserWithRole(userName, name, password, role);
                             logger.debug("Creating a new user returned " + added);
                             url = "ShowUsers";
                         }

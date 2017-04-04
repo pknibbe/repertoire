@@ -24,7 +24,6 @@ import org.apache.log4j.Logger;
 
     private final Logger logger = Logger.getLogger(this.getClass());
     private final MessageDAO messageDAO = new MessageDAO();
-    private final UserManager userManager = new UserManager();
         /**
          *  Handles HTTP POST requests.
          *
@@ -49,7 +48,7 @@ import org.apache.log4j.Logger;
             String requester = request.getParameter("name");
             Message message = new Message("Request for login assistance",
                     0,
-                    userManager.getAdminId(), 0,
+                    UserManager.getAdminId(), 0,
                     requester + " needs help with: " + requestType);
             messageDAO.add(message);
 

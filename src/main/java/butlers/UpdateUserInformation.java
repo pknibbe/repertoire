@@ -22,7 +22,6 @@ import java.io.IOException;
 class UpdateUserInformation extends HttpServlet {
 
     //private final Logger logger = Logger.getLogger(this.getClass());
-    private final UserManager userManager = new UserManager();
 
     /**
          *  Handles HTTP POST requests.
@@ -37,9 +36,9 @@ class UpdateUserInformation extends HttpServlet {
             HttpSession session = request.getSession();
 
             String url;
-            if (userManager.authenticated((Integer) session.getAttribute("user_id"))) {
+            if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
                 if (0 ==
-                userManager.updateUserWithRole(
+                UserManager.updateUserWithRole(
                         Integer.valueOf(request.getParameter("id")),
                         request.getParameter("UserName"),
                         request.getParameter("Name"),
