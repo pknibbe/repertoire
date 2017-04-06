@@ -2,6 +2,7 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 4/05 | Individual Project | 4 | Make SharedManager and PlaylistManager static |
 | 4/04 | Individual Project | 2.5 | Make SongManager static method set and access point |
 | 4/04 | Individual Project | 4 | Make UserManager static method set and access point |
 | 4/03 | Individual Project | 5 | Enabled multi-song upload and searched for independent research topic |

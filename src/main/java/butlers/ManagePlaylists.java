@@ -1,9 +1,7 @@
 package butlers;
 
 import engines.*;
-import org.apache.log4j.Logger;
 import entity.*;
-import persistence.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,11 +25,6 @@ import java.util.Enumeration;
         urlPatterns = { "/ManagePlaylists" }
 )
 public class ManagePlaylists extends HttpServlet {
-    private final Logger logger = Logger.getLogger(this.getClass());
-    private final PlaylistDAO playlistDAO = new PlaylistDAO();
-    private final PlaylistManager playlistManager = new PlaylistManager();
-    private final SharedManager sharedManager = new SharedManager();
-    private final SongManager songManager = new SongManager();
 
     /**
      * Handles HTTP POST requests.
@@ -51,34 +44,32 @@ public class ManagePlaylists extends HttpServlet {
 
         if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
 
-            logger.debug("In ManagePlaylists.doPost");
             listID = Integer.valueOf(request.getParameter("listID"));
             if (listID == 0) { // request to create a new list
                 String name = request.getParameter("newName");
-                listID = playlistManager.add((Integer) session.getAttribute("user_id"), name);
-                Playlist playlist = playlistDAO.get(listID);
+                listID = PlaylistManager.add((Integer) session.getAttribute("user_id"), name);
+                Playlist playlist = PlaylistManager.get(listID);
                 session.setAttribute("listName", playlist.getName());
                 session.setAttribute("listID", listID);
                 session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
-                session.setAttribute("songs", songManager.getAll((Integer) session.getAttribute("listID")));
+                session.setAttribute("songs", SongManager.getAll((Integer) session.getAttribute("listID")));
                 url = "manageAPlaylist.jsp";
             } else {
                 Enumeration<String> parameterNames = request.getParameterNames();
 
                 while (parameterNames.hasMoreElements()) {
                     String parameterName = parameterNames.nextElement();
-                    logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                     if (parameterName.equalsIgnoreCase("Delete")) {
-                        if (sharedManager.isShared(listID)) {
+                        if (SharedManager.isShared(listID)) {
                             session.setAttribute("message", "Can't delete shared playlist.");
                             url = "/manageAPlaylist.jsp";
                         } else {
                             url = "/deletePlaylistConfirmation.jsp";
                         }
                     } else if (parameterName.equalsIgnoreCase("Share")) {
-                        session.setAttribute("listName", playlistDAO.get(listID).getName());
-                        session.setAttribute("otherUsers", sharedManager.notSharing(listID));
-                        session.setAttribute("sharingUsers", sharedManager.sharing(listID));
+                        session.setAttribute("listName", PlaylistManager.get(listID).getName());
+                        session.setAttribute("otherUsers", SharedManager.notSharing(listID));
+                        session.setAttribute("sharingUsers", SharedManager.sharing(listID));
                         url = "/sharePlaylist.jsp";
                     } else if (parameterName.equalsIgnoreCase("Manage")) {
                         url = "ShowAPlaylist";
@@ -103,13 +94,12 @@ public class ManagePlaylists extends HttpServlet {
                     }
                 }
                 session.setAttribute("listID", listID);
-                session.setAttribute("listName", playlistDAO.get(listID).getName());
+                session.setAttribute("listName", PlaylistManager.get(listID).getName());
             }
         } else { // user not authenticated
             session.setAttribute("message", "user not authenticated");
             url = "/index.jsp";
         }
-        logger.debug("Sending redirect to " + url);
         response.sendRedirect(url);
     }
 }

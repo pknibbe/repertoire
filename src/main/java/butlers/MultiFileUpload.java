@@ -27,8 +27,6 @@ import java.util.*;
 public class MultiFileUpload extends HttpServlet {
 
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final SongManager songManager = new SongManager();
-    private final PlaylistManager playlistManager = new PlaylistManager();
     private String messageContent;
 
 
@@ -68,22 +66,22 @@ public class MultiFileUpload extends HttpServlet {
     }
 
     private void processRequest(Part part, String filePath, int playListId) throws IOException{
-        String repo = songManager.getRepository();
+        String repo = SongManager.getRepository();
 
         //multiple cases
         // Case 1: Song is already in database under this listID.
-        if (playlistManager.alreadyThere(filePath, playListId)) { //Don't need to do anything
+        if (PlaylistManager.alreadyThere(filePath, playListId)) { //Don't need to do anything
             messageContent = "Song already there";
         }
         // Case 2: Song is already in database under a different listID
-        if (songManager.exists(filePath)) { // still need to add it to playlist
-            songManager.add(filePath, playListId );
+        if (SongManager.exists(filePath)) { // still need to add it to playlist
+            SongManager.add(filePath, playListId );
             messageContent = "Song added";
         }
         // Case 3: Song is totally new to database. This is reflected below
         boolean success = writeFile(repo + filePath, part, filePath);
         if (success) { // Add new song to database
-            songManager.add(filePath, playListId );
+            SongManager.add(filePath, playListId );
             messageContent = "Song added";
         } else {
             messageContent = "Unable to add song";

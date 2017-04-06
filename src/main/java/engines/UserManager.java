@@ -13,7 +13,6 @@ public class UserManager {
 
     final static private UserDAO userDAO = new UserDAO();
     final static private RoleDAO roleDAO = new RoleDAO();
-    final static private LoggerManager loggerManager = new LoggerManager();
     final static private PropertyManager propertyManager = new PropertyManager();
     final static private int fieldLength = Integer.valueOf(propertyManager.getProperty("dbNameLength"));
 
@@ -32,8 +31,6 @@ public class UserManager {
         if (pw == null) return 0;
         if (rolename == null) return 0;
 
-        Logger logger = loggerManager.get();
-        logger.debug("Creating a new user");
         User user = new entity.User(userName, name, pw, rolename);
         int added;
         if (checkUsername(userName)) { // userName is alright to use
@@ -43,18 +40,15 @@ public class UserManager {
                         Role role = new entity.Role(userName, rolename);
                         try {
                             added = roleDAO.add(role);
-                            logger.debug(role.toString());
-                            logger.debug(user.toString());
-                            logger.debug("Added user ID = " + userDAO.add(user));
+
                             return added;
                         } catch (HibernateException hbe) {
-                            logger.error("Unable to add user and role to database. Hibernate exception " + hbe);
                             return 0;
                         }
-                    } else logger.warn("Can't add user with unacceptable password " + pw);
-                } else logger.warn("Can't add user with unacceptable rolename " + rolename);
-            } else logger.warn("Can't add user with unacceptable name " + name);
-        } else logger.warn("Can't add user with unacceptable username " + userName);
+                    }
+                }
+            }
+        }
         return 0;
     }
 
@@ -84,14 +78,12 @@ public class UserManager {
     static ArrayList<Integer> getUserIds() {
         ArrayList<Integer> users = new ArrayList<>();
 
-        Logger logger = loggerManager.get();
         try {
             for (User user : userDAO.getAll()) {
                 Integer userID = user.getId();
                 users.add(userID);
             }
         } catch (HibernateException hbe) {
-            logger.error("Unable to get user Ids from database. Hibernate exception " + hbe);
             return null;
         }
         return users;
@@ -105,11 +97,9 @@ public class UserManager {
      */
     public static User getUser(int identifier) {
 
-        Logger logger = loggerManager.get();
         try {
             return userDAO.get(identifier);
         } catch (HibernateException hbe) {
-            logger.error("Unable to get user record from database. Hibernate exception " + hbe);
             return null;
         }
     }
@@ -123,7 +113,6 @@ public class UserManager {
     public static ArrayList<String> getOtherUserNames(int identifier) {
         ArrayList<String> otherUsers = new ArrayList<>();
 
-        Logger logger = loggerManager.get();
         try {
             for (User user : userDAO.getAll()) {
                 Integer userID = user.getId();
@@ -132,7 +121,6 @@ public class UserManager {
                 }
             }
         } catch (HibernateException hbe) {
-            logger.error("Unable to get user Ids from database. Hibernate exception " + hbe);
             return null;
         }
         return otherUsers;
@@ -145,7 +133,6 @@ public class UserManager {
      * @return The system ID of a user with that name or zero if it fails
      */
     public static int getIdByName(String name) {
-        Logger logger = loggerManager.get();
         try {
             List<User> users = userDAO.getAll();
             for (User user : users) {
@@ -155,7 +142,6 @@ public class UserManager {
                 }
             }
         } catch (HibernateException hbe) {
-            logger.error("Unable to retrieve user ID from database. Hibernate exception " + hbe);
         }
         return 0;
     }
@@ -167,14 +153,12 @@ public class UserManager {
      */
     public static int getAdminId() {
         String role = "administrator";
-        Logger logger = loggerManager.get();
         try {
             List<User> users = userDAO.getAll();
             for (User user : users) {
                 if (role.equalsIgnoreCase(user.getRole_name())) return user.getId();
             }
         } catch (HibernateException hbe) {
-            logger.error("Unable to retrieve admin user ID from database. Hibernate exception " + hbe);
         }
 
         return 0;
@@ -187,7 +171,6 @@ public class UserManager {
      * @return The personal name
      */
     public static String getName(int userId) {
-        Logger logger = loggerManager.get();
         try {
             User user = userDAO.get(userId);
             if (user == null) {
@@ -195,7 +178,6 @@ public class UserManager {
             }
             return user.getName();
         } catch (HibernateException hbe) {
-            logger.error("Unable to retrieve user name from database. Hibernate exception " + hbe);
             return null;
         }
     }
@@ -207,12 +189,10 @@ public class UserManager {
      * @return The assigned role value
      */
     public static String determineRole(int userId) {
-        Logger logger = loggerManager.get();
         try {
             User user = userDAO.get(userId);
             return user.getRole_name();
         } catch (HibernateException hbe) {
-            logger.error("Unable to retrieve user role from database. Hibernate exception " + hbe);
             return null;
         }
     }
@@ -228,12 +208,10 @@ public class UserManager {
      * @return The unique identifier of the updated user record
      */
     public static int updateUserWithRole(int identifier, String userName, String name, String password, String rolename) {
-        Logger logger = loggerManager.get();
         try {
             User user = userDAO.get(identifier);
 
             if (user == null) {
-                logger.error("In updateUserWithRole and user is null");
                 return 0;
             }
             Role role = roleDAO.get(user.getUser_role_id());
@@ -244,16 +222,14 @@ public class UserManager {
                     user.setUser_pass(password);
                     if (checkRoleName(rolename)) {
                         user.setRole_name(rolename);
-                        logger.debug(user.toString());
                         role.setRole_name(rolename);
                         role.setUser_name(userName);
                         userDAO.modify(user);
                         return roleDAO.modify(role);
-                    } else logger.warn("Can't update user because Role name is not acceptable " + rolename);
-                } else logger.warn("Can't update user because password is not acceptable " + password);
-            } else logger.warn("Can't update user because username or name is not acceptable " + userName + " " + name);
+                    }
+                }
+            }
         } catch (HibernateException hbe) {
-            logger.error("Unable to update user record in database. Hibernate exception " + hbe);
         }
         return 0;
     }
@@ -266,7 +242,6 @@ public class UserManager {
      * @return The unique identifier or, if the credentials are not valid, 0
      */
     public static int verifyCredentials(String user_name, String user_pass) {
-        Logger logger = loggerManager.get();
         int user_id = 0;
         try {
             List<User> users = userDAO.getAll();
@@ -277,7 +252,6 @@ public class UserManager {
                 }
             }
         } catch (HibernateException hbe) {
-            logger.error("Unable to verify user record in database. Hibernate exception " + hbe);
         }
 
         return user_id;
@@ -290,16 +264,13 @@ public class UserManager {
      */
     public static int removeUserWithRole(int identifier) {
         if (identifier < 1) return 0; // can't remove a non-existent entry
-        Logger logger = loggerManager.get();
         try {
             User user = userDAO.get(identifier);
 
-            logger.debug("About to remove user " + identifier);
             roleDAO.remove(user.getUser_role_id());
             userDAO.remove(identifier);
             return identifier;
         } catch (HibernateException hbe) {
-            logger.error("Unable to remove user record from database. Hibernate exception " + hbe);
         }
         return 0;
     }

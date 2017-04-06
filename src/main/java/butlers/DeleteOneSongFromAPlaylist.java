@@ -23,10 +23,7 @@ import java.io.IOException;
         urlPatterns = { "/DeleteOneSongFromAPlaylist" }
 )
 public class DeleteOneSongFromAPlaylist extends HttpServlet {
-
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final SharedManager sharedManager = new SharedManager();
-
 
     /**
      * Handles HTTP POST requests.
@@ -59,7 +56,7 @@ public class DeleteOneSongFromAPlaylist extends HttpServlet {
             logger.debug("In delete section");
             session.setAttribute("songToDelete", SongManager.getLocation(songID));
             session.setAttribute("songID", songID);
-            if (sharedManager.isShared(list_id)) {
+            if (SharedManager.isShared(list_id)) {
                 session.setAttribute("message", "Can't delete song from shared playlist");
                 response.sendRedirect("/manageAPlaylist.jsp");
             } else response.sendRedirect("/deleteSongConfirmation.jsp");

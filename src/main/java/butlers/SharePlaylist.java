@@ -22,9 +22,7 @@ import org.apache.log4j.Logger;
         urlPatterns = { "/SharePlaylist" }
 )
 public class SharePlaylist extends HttpServlet {
-
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final SharedManager sharedManager = new SharedManager();
 
     /**
          *  Handles HTTP POST requests.
@@ -54,13 +52,13 @@ public class SharePlaylist extends HttpServlet {
                             logger.debug("In share section");
                             if (request.getParameter(parameterName).equalsIgnoreCase("on")) { // this is id
                                 Integer index = Integer.valueOf(parameterName);
-                                sharedManager.share(playlist_id, index);
+                                SharedManager.share(playlist_id, index);
                             }
                         } else if (request.getParameter("UnShare") != null) {
                             logger.debug("In un-share section");
                             if (request.getParameter(parameterName).equalsIgnoreCase("on")) { // this is id
                                 Integer index = Integer.valueOf(parameterName);
-                                sharedManager.remove(index, playlist_id);
+                                SharedManager.remove(index, playlist_id);
                             }
                         }
                     }

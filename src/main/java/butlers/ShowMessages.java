@@ -4,7 +4,6 @@ import engines.MessageManager;
 import engines.UserManager;
 import entity.Message;
 import entity.PresentableMessage;
-import persistence.MessageDAO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -36,9 +35,7 @@ public class ShowMessages extends HttpServlet {
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        MessageDAO dao = new MessageDAO();
         Message plainMessage;
-        MessageManager MessageManager = new MessageManager();
 
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
@@ -49,7 +46,7 @@ public class ShowMessages extends HttpServlet {
             ArrayList<Integer> listIDs = MessageManager.getIDs(user_id);
             ArrayList<PresentableMessage> messages = new ArrayList<>();
             for (int index : listIDs) {
-               plainMessage = dao.get(index);
+               plainMessage = MessageManager.get(index);
                int senderID = plainMessage.getSender();
 
                PresentableMessage presentableMessage =

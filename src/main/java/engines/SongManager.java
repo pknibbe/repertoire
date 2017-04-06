@@ -2,7 +2,6 @@ package engines;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.log4j.Logger;
 import persistence.SongDAO;
 import entity.Song;
 /**
@@ -12,7 +11,6 @@ import entity.Song;
 @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
 public class SongManager {
     private static final SongDAO songDAO = new SongDAO();
-    final static private LoggerManager loggerManager = new LoggerManager();
     private final static PropertyManager propertyManager = new PropertyManager();
     private static final String repository = System.getenv(propertyManager.getProperty("home")) +
                                              propertyManager.getProperty("musicDir");
@@ -41,10 +39,8 @@ public class SongManager {
      * @return The song location
      */
     public static String getLocation(int songID) {
-        Logger logger = loggerManager.get();
         Song currentSong = songDAO.get(songID);
         if (currentSong == null) {
-            logger.error("Current song is null and cannot be located");
             return null;
         }
         else {

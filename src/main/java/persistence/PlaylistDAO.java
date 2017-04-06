@@ -66,13 +66,15 @@ public class PlaylistDAO {
      * Removes a Playlist
      *
      * @param id ID of Playlist to be removed
+     * @return id the id of the removed record
      */
-    public void remove(int id) throws HibernateException {
+    public int remove(int id) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Playlist Playlist = (Playlist) session.get(Playlist.class, id);
         session.delete(Playlist);
         transaction.commit();
         session.close();
+        return id;
     }
 }

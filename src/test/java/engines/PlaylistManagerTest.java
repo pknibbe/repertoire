@@ -1,81 +1,68 @@
 package engines;
 
-//import org.apache.log4j.Logger;
+import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import java.util.ArrayList;
-import java.util.List;
-import static org.junit.Assert.assertEquals;
+import java.util.*;
 import entity.Playlist;
-import persistence.PlaylistDAO;
+import static org.junit.Assert.*;
+
 /**
- * Test the methods of the PlaylistManager class
- * Created by peter on 2/16/2017.
+ * Created by peter on 4/5/2017.
  */
-@SuppressWarnings("CanBeFinal")
 public class PlaylistManagerTest {
+    private ArrayList<Integer> testIds = new ArrayList<>();
+    private int originalNumberOfPlaylists;
+    private final Logger logger = Logger.getLogger(this.getClass());
+    private int song_id;
 
-    private final PlaylistManager playlistManager = new PlaylistManager();
-    private final PlaylistDAO dao = new PlaylistDAO();
-//    private final Logger logger = Logger.getLogger(this.getClass());
-    private List<Playlist> originalPlaylistList;
-    private ArrayList<Integer> bogusList = new ArrayList<>();
-    private Playlist playlist;
-
-    /**
-     * Creates some bogus playlist table entries to manipulate during testing
-     * @throws Exception general exception
-     */
     @Before
-    public void setup() throws Exception {
+    public void setUp() throws Exception {
+        originalNumberOfPlaylists = PlaylistManager.getIDs(89).size();
+        testIds.add(PlaylistManager.add(89, "Winnie the Pooh"));
+        testIds.add(PlaylistManager.add(89, "Christopher Robbin Milne"));
+        testIds.add(PlaylistManager.add(90, "Tigger"));
+        testIds.add(PlaylistManager.add(91, "Piglet"));
+        song_id = SongManager.add("Way down Yonder", 112);
 
-        originalPlaylistList = dao.getAll();
-        playlist = new Playlist("Boogie", 27);
-        bogusList.add(dao.add(playlist));
-        playlist = new Playlist("Andrews Sisters", 27);
-        bogusList.add(dao.add(playlist));
-        playlist = new Playlist("Woogie", 987);
-        bogusList.add(dao.add(playlist));
-        playlist = new Playlist("Bugle Boy", 75);
-        bogusList.add(dao.add(playlist));
-    }
-
-    @Test
-    public void TestGetIDs() throws Exception {
-
-        ArrayList<Integer> listIDs = playlistManager.getIDs(987);
-        assertEquals("Wrong number of matching playlists", 1, listIDs.size());
-        for (int index : listIDs) {
-            playlist = dao.get(index);
-            assertEquals("Names don't match", "Woogie", playlist.getName());
-        }
-    }
-
-    @Test
-    public void TestRename() throws Exception {
-
-        int index = bogusList.get(0);
-        assertEquals("This should have returned zero: ", 0,
-                playlistManager.rename(25, index, "Honky Tonk"));
-
-        index = bogusList.get(1);
-        assertEquals("This should have matched non-zero : ", index,
-                playlistManager.rename(27, index, "Honky Cat"));
-
-        index = bogusList.get(2);
-        assertEquals("This also should have matched non-zero : ", index,
-                playlistManager.rename(987, index, "Tonka Truck"));
     }
 
     @After
-    public void cleanup() throws Exception {
+    public void tearDown() throws Exception {
+        for (Integer index : testIds) PlaylistManager.remove(index);
+        assertEquals("Test changed the table! ", originalNumberOfPlaylists, PlaylistManager.getIDs(89).size());
+        SongManager.remove(song_id);
+    }
 
-        for (int index : bogusList) { // loop over new playlists
-            dao.remove(index);
-        }
-        List<Playlist> finalPlaylistList = dao.getAll();
+    @Test
+    public void get() throws Exception {
+        Playlist playlist = PlaylistManager.get(testIds.get(0)); // Winnie the Pooh
+        assertEquals(89, playlist.getOwner_id());
+        assertEquals("Winnie the Pooh", playlist.getName());
+    }
 
-        assertEquals("Didn't return playlists table to original state: ", finalPlaylistList.size(), originalPlaylistList.size());
+    @Test
+    public void getID() throws Exception {
+        assertEquals(testIds.get(0), (Integer) PlaylistManager.getID(89, "Winnie the Pooh"));
+    }
+
+    @Test
+    public void getIDs() throws Exception {
+        ArrayList<Integer> ids = PlaylistManager.getIDs(90);
+        Playlist playlist = PlaylistManager.get(ids.get(0));
+        assertEquals("Tigger", playlist.getName());
+    }
+
+    @Test
+    public void alreadyThere() throws Exception {
+        assertTrue(PlaylistManager.alreadyThere("Way down Yonder", 112));
+        assertFalse(PlaylistManager.alreadyThere("Way down Yonder", 113));
+    }
+
+    @Test
+    public void rename() throws Exception {
+        PlaylistManager.rename(90, testIds.get(2), "Owl");
+        assertEquals(testIds.get(2), (Integer) PlaylistManager.getID(90, "Owl"));
     }
 }

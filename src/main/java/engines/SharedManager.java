@@ -6,28 +6,25 @@ import persistence.SharedDAO;
 import java.util.List;
 import java.util.ArrayList;
 
-//import org.apache.log4j.Logger;
-
 /**
  * Manage access to Shared records
  * Created by peter on 3/22/2017.
  */
 public class SharedManager {
-
-    final private SharedDAO dao = new SharedDAO();
-    //final private Logger logger = Logger.getLogger(this.getClass());
+    final static private SharedDAO dao = new SharedDAO();
 
     /**
      * Adds the playlist sharing record to the database
      * @param playlist_id The system ID of the playlist
      * @param user_id The user to be granted access
+     * @return zero or the system ID of the sharing record
      *
      * Checks to see if playlist is already shared with the user to avoid adding a duplicate record
      */
-    public void share(int playlist_id, int user_id) {
-        if (find(playlist_id, user_id) > 0) return; // record is already in the database
+    public static int share(int playlist_id, int user_id) {
+        if (find(playlist_id, user_id) > 0) return find(playlist_id, user_id); // record is already in the database
         Shared shared = new Shared(playlist_id, user_id);
-        dao.add(shared);
+        return dao.add(shared);
     }
 
     /**
@@ -36,7 +33,7 @@ public class SharedManager {
      * @param user_id The system ID of the user with whom the playlist is shared
      * @return zero or the system ID of the sharing record
      */
-    private int find(int playlist_id, int user_id) {
+    private static int find(int playlist_id, int user_id) {
         int id = 0;
         List<Shared> all = dao.getAll();
         for (Shared shared : all) {
@@ -53,7 +50,7 @@ public class SharedManager {
      * @param playlist_id The system ID of the playlist
      * @return True if it is currently being shared. Otherwise, false
      */
-    public boolean isShared(int playlist_id) {
+    public static boolean isShared(int playlist_id) {
         boolean isIt = false;
         List<Shared> all = dao.getAll();
         for (Shared shared : all) {
@@ -64,23 +61,21 @@ public class SharedManager {
         return isIt;
     }
 
-
     /**
-     * Removes sharing of the specified playlist with the specified user
-     * @param userID The system ID of the user
-     * @param playlist_id The system ID of the playlist
+     * Retrieves the sharing records
+     * @return The sharing records
      */
-    public void remove(int userID, int playlist_id) {
-        int id =  find(playlist_id, userID);
-        dao.remove(id);
+    public static List<Shared> getAll() {
+        return dao.getAll();
     }
+
 
     /**
      * Retrieves the system IDS of playlists shared with the user
      * @param user_id The system ID of the user
      * @return The playlist IDs
      */
-    public ArrayList<Integer> getAll(int user_id) {
+    public static ArrayList<Integer> getAll(int user_id) {
         ArrayList<Integer> list_IDs = new ArrayList<>();
         List<Shared> shared = dao.getAll();
         for (Shared playlist : shared) {
@@ -94,7 +89,7 @@ public class SharedManager {
      * @param playlist_id The system ID of the playlist
      * @return the list of user IDs
      */
-    public ArrayList<Integer> sharing(int playlist_id) {
+    public static ArrayList<Integer> sharing(int playlist_id) {
         ArrayList<Integer> userIDs = new ArrayList<>();
         for (Shared list : dao.getAll()) {
             if (list.getPlaylist_id() == playlist_id) {
@@ -109,16 +104,35 @@ public class SharedManager {
      * @param playlist_id The system ID of the playlist
      * @return the list of user IDs
      */
-    public ArrayList<Integer> notSharing(int playlist_id) {
+    public static ArrayList<Integer> notSharing(int playlist_id) {
         ArrayList<Integer> userIDs = UserManager.getUserIds();
 
-        for (Shared list : dao.getAll()) {
-            if (list.getPlaylist_id() == playlist_id) {
+        for (Shared record : dao.getAll()) {
+            if (record.getPlaylist_id() == playlist_id) {
                 if (userIDs != null) {
-                    userIDs.remove(list.getShared_with());
+                    int shared_with = record.getShared_with();
+                    userIDs.remove((Integer) record.getShared_with());
                 }
             }
         }
         return userIDs;
+    }
+
+    /**
+     * Removes sharing of the specified playlist with the specified user
+     * @param userID The system ID of the user
+     * @param playlist_id The system ID of the playlist
+     */
+    public static void remove(int userID, int playlist_id) {
+        int id =  find(playlist_id, userID);
+        dao.remove(id);
+    }
+
+    /**
+     * Removes the specified sharing record
+     * @param shared_id The system ID of the record
+     */
+    public static void remove(int shared_id) {
+        dao.remove(shared_id);
     }
 }

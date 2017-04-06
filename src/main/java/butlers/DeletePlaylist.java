@@ -1,6 +1,7 @@
 package butlers;
 
 import engines.UserManager;
+import engines.PlaylistManager;
 import org.apache.log4j.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,9 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Enumeration;
-
-import persistence.PlaylistDAO;
-
 
 /**
  * Remove a playlist from the database
@@ -25,7 +23,6 @@ import persistence.PlaylistDAO;
 )
 public class DeletePlaylist extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
-    private final PlaylistDAO playlistDAO = new PlaylistDAO();
 
     /**
      *  Handles HTTP POST requests.
@@ -46,8 +43,12 @@ public class DeletePlaylist extends HttpServlet {
                 String parameterName = parameterNames.nextElement();
                 logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                 if (parameterName.equalsIgnoreCase("Delete")) {
-                    playlistDAO.remove((Integer) session.getAttribute("listID"));
-                    session.setAttribute("message", "List Deleted");
+                    int result = PlaylistManager.remove((Integer) session.getAttribute("listID"));
+                    if (result == (Integer) session.getAttribute("listID")) {
+                        session.setAttribute("message", "List Deleted");
+                    } else {
+                        session.setAttribute("message", "List Not Deleted - Is it shared with anyone?");
+                    }
                     logger.debug("removed playlist " + session.getAttribute("listID"));
                 } else if (parameterName.equalsIgnoreCase("Cancel")) {
                     logger.debug("Did not remove playlist " + session.getAttribute("listID"));
