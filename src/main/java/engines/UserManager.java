@@ -39,8 +39,8 @@ public class UserManager {
                     if (checkPassword(pw)) {
                         Role role = new entity.Role(userName, rolename);
                         try {
-                            added = roleDAO.add(role);
-
+                            roleDAO.add(role);
+                            added = userDAO.add(user);
                             return added;
                         } catch (HibernateException hbe) {
                             return 0;

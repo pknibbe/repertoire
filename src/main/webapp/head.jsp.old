@@ -14,7 +14,8 @@ You can also purchase a PSD-file for this template.
     <title>Repertoire</title>
 
     <!--   pure css section --------->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/base-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--[if lte IE 8]>
@@ -27,3 +28,33 @@ You can also purchase a PSD-file for this template.
 
     <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
+
+<body>
+    <c:set var="userID" value="${user_id}"></c:set>
+    <!-- header -->
+    <div id="header">
+        <img src="images/logo.png" width = 800>
+
+        <h1>noun: All the Music You Can Play</h1>
+        <h2>${message}</h2>
+        <p>  </p>
+        <c:if test="userID gt 0">
+            <h2>Welcome, ${name}. If you are not ${name}, please logout and log back in as yourself.</h2>
+        </c:if>
+    </div>
+    <div id="menu">
+        <c:set var="role" value="${user_role}"></c:set>
+        <c:set var="boss" value="administrator"></c:set>
+
+        <ul>
+            <li><a href="ShowPlaylists">Music Center</a></li>
+            <li><a href="ShowMessages">Message Center</a></li>
+            <c:if test="${role eq boss}" >
+                <li><a href="ShowUsers">Administration Center</a></li>
+            </c:if>
+            <li><a href="LogOut">LogOut</a></li>
+        </ul>
+    </div>
+    <!--end header -->
+    <!-- main -->
+

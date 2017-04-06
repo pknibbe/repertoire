@@ -9,10 +9,12 @@ td, th {
     padding: 0.5rem;
 }
 
-
-
 table {
     border-collapse: collapse;
+}
+
+#a {
+    color: #308830;
 }
 
 #left {
@@ -52,7 +54,7 @@ background: url(images/menu_border.png) right no-repeat;
 #menu a {
 float: left;
 height: 20px;
-padding: 10px 30px;
+padding: 10px;
     color: #308830;
     background-color: White;
 font-size: 15px;

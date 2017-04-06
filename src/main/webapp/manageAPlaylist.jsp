@@ -1,7 +1,11 @@
+<%--@elvariable id="songs" type="javax.servlet.http.HttpSession"--%>
+<%--@elvariable id="listName" type="javax.servlet.http.HttpSession"--%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:import url="/head.jsp" /> <!-- opens body and container -->
+<c:import url="/head.jsp" />
+<body>
+<c:import url="/bodyTop.jsp" />
 <div id="container">
         <c:set var="songCount" value="0"></c:set>
         <c:forEach var="song" items="${songs}">
@@ -55,3 +59,6 @@
 <c:import url="/footer.jsp" />
 
 
+
+</body>
+</html>
