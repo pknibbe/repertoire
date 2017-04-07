@@ -14,7 +14,7 @@ import java.io.IOException;
 import org.apache.log4j.Logger;
 
 /**
- * Update a user in the database table
+ * Send a message to the administrator asking for login assistance
  * Created by peter on 2/27/2017.
  */
 @WebServlet(

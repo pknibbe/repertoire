@@ -34,7 +34,7 @@
 
                     <div class="pure-control-group">
                         <label for="yourname">Your name</label>
-                        <input id="yourname" type="text" placeholder="UserName">
+                        <input id="yourname" type="text" name="name" placeholder="Your Name">
                     </div>
                     <div class="pure-control-group">
                         <label for="options">Your name</label>

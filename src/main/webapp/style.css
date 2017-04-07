@@ -21,6 +21,12 @@ table {
     color: #308830;
 }
 
+#legend {
+    color: #308830;
+    float: none;
+    padding: 5px 30px 5px 30px;
+}
+
 #left {
     float: left;
     padding: 5px 30px 5px 5px;
