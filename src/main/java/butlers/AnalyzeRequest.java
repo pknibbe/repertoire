@@ -7,21 +7,19 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.Enumeration;
+import java.util.Collection;
 
 /**
- * Get the internal home page
+ * Examine a request
  * Created by peter on 2/8/2017.
  */
 @WebServlet(
-        name = "ExternalAction",
-        urlPatterns = { "/ExternalAction" }
-) public class ExternalAction extends HttpServlet {
+        name = "AnalyzeRequest",
+        urlPatterns = { "/AnalyzeRequest" }
+) public class AnalyzeRequest extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
 
     /**
@@ -40,28 +38,25 @@ import java.util.Enumeration;
         Enumeration<String> parameterNames = request.getParameterNames();
         while (parameterNames.hasMoreElements()) {
             String parameterName = parameterNames.nextElement();
+            logger.info("Parameter " + parameterName + " found with value " + request.getParameter(parameterName));
         }
-        logger.debug("user_name is " + request.getParameter("userName"));
-        logger.debug("user_pass is " + request.getParameter("password"));
-        int user_id = UserManager.verifyCredentials(request.getParameter("userName"), request.getParameter("password"));
-        if (user_id == 0) {
-            session.setAttribute("message", "User Credentials not verified");
-
-            dispatcher = servletContext.getRequestDispatcher("/index.jsp");
-            dispatcher.forward(request, response);
+        Enumeration<String> attributeNames = request.getAttributeNames();
+        while (attributeNames.hasMoreElements()) {
+            String attributeName = attributeNames.nextElement();
+            logger.info("Attribute " + attributeName + " found");
         }
+        String contextPath = request.getContextPath();
+        Cookie[] cookies = request.getCookies();
+        int numberOfCookies = cookies.length;
+        logger.info("Found " + numberOfCookies + " cookies.");
 
-        String role = UserManager.determineRole(user_id);
-        String name = UserManager.getName(user_id);
+        String query = request.getQueryString();
+        String uri = request.getRequestURI();
 
-        session.setAttribute("user_id", user_id);
-        session.setAttribute("user_role", role);
-        session.setAttribute("message", "Welcome, " + name);
-        session.setAttribute("name", name);
 
-        String url = "/ShowPlaylists";
 
-        dispatcher = servletContext.getRequestDispatcher(url);
+
+        dispatcher = servletContext.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
     }
 }

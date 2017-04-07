@@ -19,7 +19,7 @@ You can also purchase a PSD-file for this template.
         <h1>noun: All the Music You Can Play</h1>
         <h2>${message}</h2>
         <c:if test="${userID > 0}">
-            <h2>If you are not ${name}, please logout and log back in as yourself.</h2>
+            <h4>If you are not ${name}, please logout and log back in as yourself.</h4>
         </c:if>
     </div>
     <div id="menu">
@@ -27,12 +27,12 @@ You can also purchase a PSD-file for this template.
         <c:set var="boss" value="administrator"></c:set>
 
         <div class=pure-g">
-            <div class="pure-u-1-4"><a href="ShowPlaylists">Music</a></div>
-            <div class="pure-u-1-4"><a href="ShowMessages">Messages</a></div>
+            <div class="pure-u-1-5"><a href="ShowPlaylists">Music</a></div>
+            <div class="pure-u-1-5"><a href="ShowMessages">Messages</a></div>
             <c:if test="${role eq boss}" >
-                <div class="pure-u-1-4"><a href="ShowUsers">Administration</a></div>
+                <div class="pure-u-1-5"><a href="ShowUsers">Administration</a></div>
             </c:if>
-            <div class="pure-u-1-4"><a href="LogOut">LogOut</a></div>
+            <div class="pure-u-1-5"><a href="LogOut">LogOut</a></div>
         </div>
     </div>
     <!--end header -->

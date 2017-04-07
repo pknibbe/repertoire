@@ -8,27 +8,46 @@
 <div id="container">
 
         <div id="left">
-            <h3>Login</h3>
-            <form action="ExternalAction" method="GET">
-                <table>
-                    <tr><td>user name:</td><td>  <input type="text" name="user_name"  /> </td></tr>
-                    <tr><td>password:</td><td> <input type="text" name="user_pass" /></td></tr>
-                </table>
-                <input type="submit" value="Submit" name="Enter" />
+            <form class="pure-form pure-form-aligned" action="ExternalAction" method="GET">
+                <fieldset>
+                    <legend>Login</legend>
+                    <div class="pure-control-group">
+                        <label for="userName">Username</label>
+                        <input id="userName" type="text" name="userName" placeholder="UserName">
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" name="password" placeholder="Password">
+                    </div>
+                    <div class="pure-controls">
+                        <input type="submit" name="submit" value="submit">
+                    </div>
+                </fieldset>
             </form>
         </div>
 
         <div id="request">
 
-            <h3>Request sign-in help</h3>
-            <form action="MessageAdmin" method="POST">
-                Your name: <input type="text" name="name" />
-                <select name="options">
-                    <option value="account">new account</option>
-                    <option value="username">username reminder</option>
-                    <option value="password">password reset</option>
-                </select>
-                <input type="submit" name="Request" value="Enter" />
+            <form class="pure-form pure-form-aligned" action="MessageAdmin" method="POST">
+                <fieldset>
+                    <legend>Request sign-in assistance</legend>
+
+                    <div class="pure-control-group">
+                        <label for="yourname">Your name</label>
+                        <input id="yourname" type="text" placeholder="UserName">
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="options">Your name</label>
+                        <select id="options" name="options">
+                            <option value="account">new account</option>
+                            <option value="username">username reminder</option>
+                            <option value="password">password reset</option>
+                        </select>
+                    </div>
+                    <div class="pure-controls">
+                        <input type="submit" name="submit" value="submit"></input>
+                    </div>
+                </fieldset>
             </form>
         </div>
 </div>

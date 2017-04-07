@@ -9,6 +9,10 @@ td, th {
     padding: 0.5rem;
 }
 
+h4 {
+    font-size: 15px;
+}
+
 table {
     border-collapse: collapse;
 }
@@ -65,6 +69,10 @@ font-family: Arial, Helvetica, sans-serif;
 #menu a:hover {
     color: Black;
 background: url(images/menu_border.png);
+}
+
+#playlistSongs {
+    font-size: 15px;
 }
 
 #footer {
