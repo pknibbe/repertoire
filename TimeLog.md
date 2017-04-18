@@ -2,6 +2,9 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 4/15 | Java Message Beans | 6 | Watched lecture, looked at readings, did exercise |
+| 4/11 | Team Project       | 2 | Last minute debugging, etc. |
+| 4/07-10 | Individual Project | 15 | A bunch more pure css and trying different page layouts |
 | 4/06 | Individual Project | 3 | Start pure css and debug UserManager |
 | 4/05 | Individual Project | 4 | Make SharedManager and PlaylistManager static |
 | 4/04 | Individual Project | 2.5 | Make SongManager static method set and access point |

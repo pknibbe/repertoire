@@ -52,11 +52,9 @@ import java.util.Collection;
 
         String query = request.getQueryString();
         String uri = request.getRequestURI();
+        logger.info("Query is " + query + " and url is " + uri);
 
-
-
-
-        dispatcher = servletContext.getRequestDispatcher("/index.jsp");
+        dispatcher = servletContext.getRequestDispatcher("/ShowPlaylists");
         dispatcher.forward(request, response);
     }
 }

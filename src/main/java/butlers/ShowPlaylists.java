@@ -41,24 +41,30 @@ public class ShowPlaylists extends HttpServlet {
         String url;
 
         if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
+            int user_id = (Integer) session.getAttribute("user_id");
             ArrayList<PresentablePlaylist> presentables = new ArrayList<>();
             Playlist playlist;
             PlaylistDAO playlistDAO = new PlaylistDAO();
 
             int listOwnerID;
+            String owner_name;
 
-            PlaylistManager playlistManager = new PlaylistManager();
-            ArrayList<Integer> listIDs = playlistManager.getIDs((Integer) session.getAttribute("user_id"));
+            ArrayList<Integer> listIDs = PlaylistManager.getIDs((Integer) session.getAttribute("user_id"));
             for (int index : listIDs) {
                 playlist = playlistDAO.get(index);
                 listOwnerID = playlist.getOwner_id();
+                if (listOwnerID == user_id) {
+                    owner_name = "Me";
+                } else {
+                    owner_name = UserManager.getName(listOwnerID);
+                }
                 presentables.add(new PresentablePlaylist(index,
                                                          playlist.getName(),
                                                          listOwnerID,
-                                                         UserManager.getName(listOwnerID)));
+                                                         owner_name));
             }
             session.setAttribute("playlists", presentables);
-            url = "/playlists.jsp";
+            url = "/trunk.jsp";
 
         } else {
             session.setAttribute("message", "user not authenticated");

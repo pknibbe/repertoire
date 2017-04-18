@@ -9,44 +9,53 @@
 <body>
     <c:import url="/bodyTop.jsp" />
 
-    <c:set var="songCount" value="0"></c:set>
-    <c:forEach var="song" items="${songs}">
-        <c:set var="songCount" value="1"></c:set>
-    </c:forEach>
-
     <div id="container">
-        <div id="a">
-            <div class=pure-g">
-                <div class="pure-u-1-3">
-                    <h3>Your Playlists</h3>
-                    <form action="ManagePlaylists" method="Post">
-                        <table>
-                            <thead><tr><th>Select</th><th>Name</th></tr></thead>
-                            <tbody>
-                               <c:forEach var="playbill" items="${playlists}">
-                                   <tr>
-                                        <td><input type="radio" name="listID" value=${playbill.id} /></td>
-                                        <td><input type="text" name="name" value=${playbill.name}></td>
-                                   </tr>
-                                </c:forEach>
-                                <tr>
-                                    <td><input type="radio" name="listID" value=0 /></td>
-                                    <td>name: <input type="text" name="newName"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p>   </p>
 
-                        <input type="submit" name="Manage" value="Manage" />
-                        <input type="submit" name="Share" value="Share" />
-                        <input type="submit" name="Delete" value="Delete" />
-                        <input type="submit" name="Play" value="Play" />
-                        <input type="submit" name="Stop" value="Stop" />
+        <form class="pure-form pure-form-stacked" action="AnalyzeRequest" method="Get">
+            <fieldset>
+                <legend>My Playlists</legend>
 
-                    </form>
+                <div class=pure-g">
+
+                    <div class="pure-u-1 pure-u-md-1-5">List Name</div>
+                    <div class="pure-u-1 pure-u-md-1-5">List Owner</div>
+                    <div class="pure-u-1 pure-u-md-1-5"></div>
+                    <div class="pure-u-1 pure-u-md-1-5"></div>
+
+
+                    <c:forEach var="playbill" items="${playlists}">
+                        <div class="pure-u-1 pure-u-md-1-5">${playbill.name}</div>
+                        <div class="pure-u-1 pure-u-md-1-5">${playbill.owner_name}</div>
+
+                        <c:if test="${playbill.playing == 0}">
+                            <div class="pure-u-1 pure-u-md-1-5">
+                                <input class="pure-input-1" type="submit" name="toggle${playbill.id}" value="Play" />
+                            </div>
+                        </c:if>
+                        <c:if test="${playbill.playing == 1}">
+                            <div class="pure-u-1 pure-u-md-1-5">
+                                <input class="pure-input-1" type="submit" name="toggle${playbill.id}" value="Stop" />
+                            </div>
+                        </c:if>
+
+                        <div class="pure-u-1 pure-u-md-1-5">
+                            <input class="pure-input-1" type="submit" name="manage${playbill.id}" value="manage" />
+                        </div>
+                    </c:forEach>
+
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <input class="pure-input-1" id="listname" type="text" name="listname" placeholder="NewList">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4">Me</div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <input class="pure-input-1" type="submit" name="create" value="create" />
+                    </div>
+
                 </div>
+            </fieldset>
+        </form>
 
-                <c:if test="${songCount > 0}">
+  <!--              <c:if test="${songCount > 0}">
 
                     <div class="pure-u-1-3" id="playlistSongs">
                         <h3>Playlist ${listName}  </h3>
@@ -85,7 +94,7 @@
                     </div>
                 </c:if>
             </div> <!-- class pure-g -->
-        </div>
+
     </div>
 
     <c:import url="/footer.jsp" />

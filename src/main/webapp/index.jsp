@@ -5,52 +5,48 @@
 <c:import url="/head.jsp" />
 <body>
 <c:import url="/bodyTop.jsp" />
-<div id="container">
 
-        <div id="left">
-            <form class="pure-form pure-form-aligned" action="ExternalAction" method="GET">
-                <fieldset>
-                    <legend>Login</legend>
+        <!--h4>log in</h4-->
+
+        <form class="pure-form pure-form-aligned" action="ExternalAction" method="GET">
+            <fieldset>
+                <legend>. . . . . . . . . . . . . . . . . . log in</legend>
                     <div class="pure-control-group">
                         <label for="userName">Username</label>
-                        <input id="userName" type="text" name="userName" placeholder="UserName">
+                        <input id="userName" type="text" name="userName">
                     </div>
                     <div class="pure-control-group">
                         <label for="password">Password</label>
-                        <input id="password" type="password" name="password" placeholder="Password">
+                        <input id="password" type="password" name="password">
                     </div>
                     <div class="pure-controls">
                         <input type="submit" name="submit" value="submit">
                     </div>
-                </fieldset>
-            </form>
-        </div>
+            </fieldset>
+        </form>
 
-        <div id="request">
+    <p></p><p></p>
 
-            <form class="pure-form pure-form-aligned" action="MessageAdmin" method="POST">
-                <fieldset>
-                    <legend>Request sign-in assistance</legend>
-
+        <form class="pure-form pure-form-aligned" action="MessageAdmin" method="POST">
+            <fieldset>
+                <legend>. . . . . . . . . . . . . . . . . . . . . . . . .      request log in assistance</legend>
                     <div class="pure-control-group">
-                        <label for="yourname">Your name</label>
-                        <input id="yourname" type="text" name="name" placeholder="Your Name">
+                        <label for="yourname">Your Name</label>
+                        <input id="yourname" type="text" placeholder="Your Name">
                     </div>
                     <div class="pure-control-group">
-                        <label for="options">Your name</label>
-                        <select id="options" name="options">
+                        <label for="options">Type of Assistance</label>
+                        <select id="options">
                             <option value="account">new account</option>
                             <option value="username">username reminder</option>
                             <option value="password">password reset</option>
                         </select>
                     </div>
                     <div class="pure-controls">
-                        <input type="submit" name="submit" value="submit"></input>
+                        <input type="submit" name="submit" value="submit">
                     </div>
-                </fieldset>
-            </form>
-        </div>
-</div>
+            </fieldset>
+        </form>
 
 <c:import url="/footer.jsp" />
 
