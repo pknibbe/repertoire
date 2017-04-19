@@ -29,6 +29,12 @@ public class PlaylistManager {
         return id;
     }
 
+    public static void play(int listID) {
+
+    }
+
+    public static void stop() {}
+
     /**
      * Retrieves the specified playlist record from the database
      * @param playlist_id The system ID of the playlist record

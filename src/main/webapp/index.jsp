@@ -7,10 +7,15 @@
 <c:import url="/bodyTop.jsp" />
 
         <!--h4>log in</h4-->
-
+        <p></p>
         <form class="pure-form pure-form-aligned" action="ExternalAction" method="GET">
             <fieldset>
-                <legend>. . . . . . . . . . . . . . . . . . log in</legend>
+                <div class="pure-g">
+                    <div class="pure-u-1-8"></div>
+                    <div class="pure-u-1-2">
+                        <h3>log in</h3>
+                    </div>
+                </div>
                     <div class="pure-control-group">
                         <label for="userName">Username</label>
                         <input id="userName" type="text" name="userName">
@@ -29,7 +34,12 @@
 
         <form class="pure-form pure-form-aligned" action="MessageAdmin" method="POST">
             <fieldset>
-                <legend>. . . . . . . . . . . . . . . . . . . . . . . . .      request log in assistance</legend>
+                <div class="pure-g">
+                    <div class="pure-u-1-8"></div>
+                    <div class="pure-u-1-2">
+                        <h3>request log in assistance</h3>
+                    </div>
+                </div>
                     <div class="pure-control-group">
                         <label for="yourname">Your Name</label>
                         <input id="yourname" type="text" placeholder="Your Name">

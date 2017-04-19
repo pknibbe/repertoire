@@ -64,7 +64,7 @@ public class ShowPlaylists extends HttpServlet {
                                                          owner_name));
             }
             session.setAttribute("playlists", presentables);
-            url = "/trunk.jsp";
+            url = "/showPlaylists.jsp";
 
         } else {
             session.setAttribute("message", "user not authenticated");
