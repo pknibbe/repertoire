@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import engines.UserManager;
 import engines.PlaylistManager;
 import entity.*;
+import org.apache.log4j.Logger;
 import persistence.PlaylistDAO;
 /**
  * Provides access to Music Play Lists
@@ -24,6 +25,7 @@ import persistence.PlaylistDAO;
         name = "ShowPlaylists",
         urlPatterns = { "/ShowPlaylists" })
 public class ShowPlaylists extends HttpServlet {
+    private final Logger logger = Logger.getLogger(this.getClass());
 
     /**
      *  Handles HTTP GET requests.
@@ -58,10 +60,17 @@ public class ShowPlaylists extends HttpServlet {
                 } else {
                     owner_name = UserManager.getName(listOwnerID);
                 }
-                presentables.add(new PresentablePlaylist(index,
-                                                         playlist.getName(),
-                                                         listOwnerID,
-                                                         owner_name));
+                PresentablePlaylist presentablePlaylist = new PresentablePlaylist(index,
+                        playlist.getName(),
+                        listOwnerID,
+                        owner_name);
+                logger.info("The playlist ID attribute is " + session.getAttribute("listID"));
+                logger.info(presentablePlaylist.toString());
+                if (index == (Integer) session.getAttribute("listID")) {
+                    presentablePlaylist.setPlayerState((String) session.getAttribute("playerState"));
+                }
+                presentables.add(presentablePlaylist);
+                logger.info(presentablePlaylist.toString());
             }
             session.setAttribute("playlists", presentables);
             url = "/showPlaylists.jsp";

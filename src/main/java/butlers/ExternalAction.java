@@ -58,6 +58,7 @@ import java.util.Enumeration;
         session.setAttribute("user_role", role);
         session.setAttribute("message", "Welcome, " + name);
         session.setAttribute("name", name);
+        session.setAttribute("listID", 0);
 
         String url = "/ShowPlaylists";
 

@@ -25,30 +25,34 @@
 
 
                     <c:forEach var="playbill" items="${playlists}">
+                        <p>Playlist state is ${playbill.playerState}</p>
                         <div class="pure-u-1 pure-u-md-1-5">${playbill.name}</div>
                         <div class="pure-u-1 pure-u-md-1-5">${playbill.owner_name}</div>
 
                         <c:if test="${playbill.playerState != 'playing'}">
-                            <div class="pure-u-1 pure-u-md-1-5">
+                            <div class="pure-u-1 pure-u-md-1-12">
                                 <input class="pure-input-1" type="submit" name="toggle${playbill.id}" value="Play" />
                             </div>
                         </c:if>
                         <c:if test="${playbill.playerState == 'playing'}">
-                            <div class="pure-u-1 pure-u-md-1-5">
+                            <div class="pure-u-1 pure-u-md-1-12">
                                 <input class="pure-input-1" type="submit" name="toggle${playbill.id}" value="Stop" />
                             </div>
                         </c:if>
 
-                        <div class="pure-u-1 pure-u-md-1-5">
+                        <div class="pure-u-1 pure-u-md-1-8">
                             <input class="pure-input-1" type="submit" name="manage${playbill.id}" value="manage" />
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-4">
                         </div>
                     </c:forEach>
 
-                    <div class="pure-u-1 pure-u-md-1-4">
+                    <p></p>
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        Name of new list:
                         <input class="pure-input-1" id="listname" type="text" name="listname" placeholder="NewList">
                     </div>
-                    <div class="pure-u-1 pure-u-md-1-4">Me</div>
-                    <div class="pure-u-1 pure-u-md-1-4">
+                    <div class="pure-u-1 pure-u-md-1-8"><p></p>
                         <input class="pure-input-1" type="submit" name="create" value="create" />
                     </div>
                 </div>
