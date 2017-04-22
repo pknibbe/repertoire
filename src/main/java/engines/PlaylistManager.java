@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import entity.Playlist;
 import persistence.PlaylistDAO;
+import persistence.UserDAO;
 
 
 /**
@@ -13,6 +14,7 @@ import persistence.PlaylistDAO;
 public class PlaylistManager {
 
     final static private PlaylistDAO pDAO = new PlaylistDAO();
+    final static private UserDAO uDAO = new UserDAO();
 
     /**
      * Creates a new playlist record in the database
@@ -23,7 +25,7 @@ public class PlaylistManager {
     public static int add(int user_id, String name) {
         int id = getID(user_id, name);
         if (id == 0) {
-            Playlist playlist = new Playlist(name, user_id);
+            Playlist playlist = new Playlist(name, uDAO.get(user_id));
             id = pDAO.add(playlist);
         }
         return id;
@@ -55,7 +57,7 @@ public class PlaylistManager {
     static int getID(int user_id, String name) {
         List<Playlist> playlists = pDAO.getAll();
         for (Playlist playlist : playlists) {
-            if (user_id != playlist.getOwner_id()) {
+            if (user_id != playlist.getOwner().getId()) {
                 continue;
             }
             if (name.equalsIgnoreCase(playlist.getName())) return playlist.getId();
@@ -73,7 +75,7 @@ public class PlaylistManager {
         List<Playlist> playlists = pDAO.getAll();
         ArrayList<Integer> playlistIDs = new ArrayList<>();
         for (Playlist playlist : playlists) { // playlists owned by the user
-            if (user_id == playlist.getOwner_id()) {
+            if (user_id == playlist.getOwner().getId()) {
                 playlistIDs.add(playlist.getId());
             }
         }
@@ -113,7 +115,7 @@ public class PlaylistManager {
     static int rename(int user_id, int playlist_id, String new_name) {
 
         Playlist playlist = pDAO.get(playlist_id);
-        if (user_id == playlist.getOwner_id()) {
+        if (user_id == playlist.getOwner().getId()) {
             playlist.setName(new_name);
             return pDAO.modify(playlist);
         }

@@ -51,7 +51,7 @@ public class PlaylistAction extends HttpServlet {
             while (parameterNames.hasMoreElements()) {
                 String parameterName = parameterNames.nextElement();
                 String parameterValue = request.getParameter(parameterName);
-                logger.info("Parameter " + parameterName + " found with value " + request.getParameter(parameterName));
+                logger.debug("Parameter " + parameterName + " found with value " + request.getParameter(parameterName));
 
                 if (parameterName.equalsIgnoreCase("create")) {
                     listID = PlaylistManager.add( user_id, request.getParameter("listname"));
@@ -59,7 +59,6 @@ public class PlaylistAction extends HttpServlet {
                     session.setAttribute("listID", listID);
                     session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
                     session.setAttribute("songs", SongManager.getAll((Integer) session.getAttribute("listID")));
-                    session.setAttribute("playerState", "stopped");
                     url = "manageAPlaylist.jsp";
                 } else if (parameterValue.equalsIgnoreCase("Play")) {
                     listID = Integer.valueOf(parameterName.substring(6));
@@ -70,13 +69,13 @@ public class PlaylistAction extends HttpServlet {
                         e.printStackTrace();
                     }
                     session.setAttribute("message", "Starting playback");
-                    session.setAttribute("playerState", "playing");
+                    session.setAttribute("isPlaying", true);
                     session.setAttribute("player", player);
                     player.start();
                     url = "showPlaylists.jsp";
                 } else if (parameterValue.equalsIgnoreCase("Stop")) {
                     PlaylistManager.stop();
-                    session.setAttribute("playerState", "stopped");
+                    session.setAttribute("isPlaying", false);
                     session.setAttribute("message", "Stopping playback");
                     player = (Player) session.getAttribute("player");
                     player.stop();

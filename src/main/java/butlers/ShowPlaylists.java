@@ -10,12 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.*;
-import java.util.ArrayList;
+import org.hibernate.HibernateException;
 
 import engines.UserManager;
-import engines.PlaylistManager;
-import entity.*;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import persistence.PlaylistDAO;
 /**
  * Provides access to Music Play Lists
@@ -25,10 +23,11 @@ import persistence.PlaylistDAO;
         name = "ShowPlaylists",
         urlPatterns = { "/ShowPlaylists" })
 public class ShowPlaylists extends HttpServlet {
-    private final Logger logger = Logger.getLogger(this.getClass());
+    //private final Logger logger = Logger.getLogger(this.getClass());
+    private final PlaylistDAO playlistDAO = new PlaylistDAO();
 
     /**
-     *  Handles HTTP GET requests.
+     *  Handles HTTP GET requests for the playlists.
      *
      *@param  request                   the HttpServletRequest object
      *@param  response                   the HttpServletResponse object
@@ -36,43 +35,14 @@ public class ShowPlaylists extends HttpServlet {
      *@exception IOException       if there is an IO failure
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException,  HibernateException{
 
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
         String url;
 
         if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
-            int user_id = (Integer) session.getAttribute("user_id");
-            ArrayList<PresentablePlaylist> presentables = new ArrayList<>();
-            Playlist playlist;
-            PlaylistDAO playlistDAO = new PlaylistDAO();
-
-            int listOwnerID;
-            String owner_name;
-
-            ArrayList<Integer> listIDs = PlaylistManager.getIDs((Integer) session.getAttribute("user_id"));
-            for (int index : listIDs) {
-                playlist = playlistDAO.get(index);
-                listOwnerID = playlist.getOwner_id();
-                if (listOwnerID == user_id) {
-                    owner_name = "Me";
-                } else {
-                    owner_name = UserManager.getName(listOwnerID);
-                }
-                PresentablePlaylist presentablePlaylist = new PresentablePlaylist(index,
-                        playlist.getName(),
-                        listOwnerID,
-                        owner_name);
-                logger.info("The playlist ID attribute is " + session.getAttribute("listID"));
-                logger.info(presentablePlaylist.toString());
-                if (index == (Integer) session.getAttribute("listID")) {
-                    presentablePlaylist.setPlayerState((String) session.getAttribute("playerState"));
-                }
-                presentables.add(presentablePlaylist);
-                logger.info(presentablePlaylist.toString());
-            }
-            session.setAttribute("playlists", presentables);
+            session.setAttribute("playlists", playlistDAO.getAll());
             url = "/showPlaylists.jsp";
 
         } else {

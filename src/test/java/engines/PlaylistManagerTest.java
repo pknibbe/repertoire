@@ -38,7 +38,7 @@ public class PlaylistManagerTest {
     @Test
     public void get() throws Exception {
         Playlist playlist = PlaylistManager.get(testIds.get(0)); // Winnie the Pooh
-        assertEquals(89, playlist.getOwner_id());
+        assertEquals(89, playlist.getOwner().getId());
         assertEquals("Winnie the Pooh", playlist.getName());
     }
 

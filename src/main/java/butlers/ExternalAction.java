@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.Enumeration;
 
 /**
  * Get the internal home page
@@ -37,10 +36,7 @@ import java.util.Enumeration;
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
         RequestDispatcher dispatcher;
-        Enumeration<String> parameterNames = request.getParameterNames();
-        while (parameterNames.hasMoreElements()) {
-            String parameterName = parameterNames.nextElement();
-        }
+
         logger.debug("user_name is " + request.getParameter("userName"));
         logger.debug("user_pass is " + request.getParameter("password"));
         int user_id = UserManager.verifyCredentials(request.getParameter("userName"), request.getParameter("password"));
@@ -59,6 +55,7 @@ import java.util.Enumeration;
         session.setAttribute("message", "Welcome, " + name);
         session.setAttribute("name", name);
         session.setAttribute("listID", 0);
+        session.setAttribute("isPlaying", false);
 
         String url = "/ShowPlaylists";
 

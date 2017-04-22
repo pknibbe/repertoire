@@ -18,6 +18,8 @@ public class Player {
     private ArrayList<Integer> songIds;
     private String action;
     private SongManager songManager;
+    private boolean isPlaying;
+    private Playlist playlist;
 
     /**
      * Populates the instance variables

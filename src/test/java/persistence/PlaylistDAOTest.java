@@ -18,6 +18,7 @@ import static org.junit.Assert.assertTrue;
 public class PlaylistDAOTest {
 
     private PlaylistDAO dao;
+    private final UserDAO userDAO = new UserDAO();
     private entity.Playlist playlist;
     private int numberOfPlaylists;
     private List<Playlist> playlistList;
@@ -73,7 +74,7 @@ public class PlaylistDAOTest {
     }
 
     private void justAdd() {
-        playlist = new entity.Playlist("Sinester", 2);
+        playlist = new entity.Playlist("Sinester", userDAO.get(2));
         dao.add(playlist);
     }
 

@@ -16,15 +16,20 @@ public class Playlist {
   @GeneratedValue(generator="increment")
   @GenericGenerator(name="increment", strategy="increment")
   private int id;
+
   private String name;
-  private int owner_id;
+  //private int owner_id;
+  @ManyToOne(cascade = CascadeType.ALL)
+  private User owner;
+
 
   public Playlist() {
   }
 
-  public Playlist(String name, int owner) {
-    this.name = name;
-    this.owner_id = owner;
+  public Playlist(String name, User owner) {
+      super();
+      this.name = name;
+      this.owner = owner;
   }
 
 }
