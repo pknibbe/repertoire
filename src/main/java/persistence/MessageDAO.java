@@ -5,6 +5,8 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import entity.Message;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class MessageDAO {
@@ -36,6 +38,21 @@ public class MessageDAO {
         return message;
     }
 
+    /**
+     * Returns the system IDs of all Messages associated with the user
+     * @param user_id The system ID of the user
+     * @return The list of IDs of the associated Messages
+     */
+    public ArrayList<Integer> getIDs(int user_id) {
+        List<Message> MessageList = getAll();
+        ArrayList<Integer> MessageIDs = new ArrayList<>();
+        for (Message Message : MessageList) {
+            if (user_id == Message.getReceiver().getId()) {
+                MessageIDs.add(Message.getId());
+            }
+        }
+        return MessageIDs;
+    }
     /** save a new message
      * @param message The message to be stored
      * @return id the id of the inserted record

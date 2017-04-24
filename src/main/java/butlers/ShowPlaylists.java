@@ -11,8 +11,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.*;
 import org.hibernate.HibernateException;
+import persistence.UserDAO;
 
-import engines.UserManager;
 //import org.apache.log4j.Logger;
 import persistence.PlaylistDAO;
 /**
@@ -25,6 +25,7 @@ import persistence.PlaylistDAO;
 public class ShowPlaylists extends HttpServlet {
     //private final Logger logger = Logger.getLogger(this.getClass());
     private final PlaylistDAO playlistDAO = new PlaylistDAO();
+    private final UserDAO userDAO = new UserDAO();
 
     /**
      *  Handles HTTP GET requests for the playlists.
@@ -41,7 +42,7 @@ public class ShowPlaylists extends HttpServlet {
         ServletContext servletContext = getServletContext();
         String url;
 
-        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
             session.setAttribute("playlists", playlistDAO.getAll());
             url = "/showPlaylists.jsp";
 

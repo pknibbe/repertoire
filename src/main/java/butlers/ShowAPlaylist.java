@@ -1,8 +1,11 @@
 package butlers;
 
-import engines.*;
 import entity.Playlist;
 import org.apache.log4j.Logger;
+import persistence.PlaylistDAO;
+import persistence.UserDAO;
+import persistence.SongDAO;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -22,6 +25,9 @@ import java.io.IOException;
         urlPatterns = { "/ShowAPlaylist" })
 public class ShowAPlaylist extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
+    private final PlaylistDAO playlistDAO = new PlaylistDAO();
+    private final UserDAO userDAO = new UserDAO();
+    private final SongDAO songDAO = new SongDAO();
 
     /**
      *  Handles HTTP GET requests.
@@ -40,11 +46,11 @@ public class ShowAPlaylist extends HttpServlet {
         Playlist playlist;
 
         logger.debug("In doGet");
-        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
-            playlist = PlaylistManager.get((Integer) session.getAttribute("listID"));
+        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
+            playlist = playlistDAO.get((Integer) session.getAttribute("listID"));
             session.setAttribute("listName", playlist.getName());
             session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
-            session.setAttribute("songs", SongManager.getAll((Integer) session.getAttribute("listID")));
+            session.setAttribute("songs", songDAO.getAll((Integer) session.getAttribute("listID")));
 
             logger.debug("Loaded songs");
             url = "/manageAPlaylist.jsp";

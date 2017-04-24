@@ -1,7 +1,5 @@
 package butlers;
 
-import engines.UserManager;
-import engines.SharedManager;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Enumeration;
+import persistence.UserDAO;
+import persistence.SharedDAO;
 
 import org.apache.log4j.Logger;
 
@@ -23,6 +23,8 @@ import org.apache.log4j.Logger;
 )
 public class SharePlaylist extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
+    private final UserDAO userDAO = new UserDAO();
+    private final SharedDAO sharedDAO = new SharedDAO();
 
     /**
          *  Handles HTTP POST requests.
@@ -39,7 +41,7 @@ public class SharePlaylist extends HttpServlet {
             int user_id = (Integer) session.getAttribute("user_id");
             int playlist_id = (Integer) session.getAttribute("listID");
             String url;
-            if (UserManager.authenticated(user_id)) {
+            if (userDAO.authenticated(user_id)) {
                 if (request.getParameter("Cancel") != null) {
                     url = "ShowAPlaylist";
                 } else {
@@ -52,13 +54,13 @@ public class SharePlaylist extends HttpServlet {
                             logger.debug("In share section");
                             if (request.getParameter(parameterName).equalsIgnoreCase("on")) { // this is id
                                 Integer index = Integer.valueOf(parameterName);
-                                SharedManager.share(playlist_id, index);
+                                sharedDAO.share(playlist_id, index);
                             }
                         } else if (request.getParameter("UnShare") != null) {
                             logger.debug("In un-share section");
                             if (request.getParameter(parameterName).equalsIgnoreCase("on")) { // this is id
                                 Integer index = Integer.valueOf(parameterName);
-                                SharedManager.remove(index, playlist_id);
+                                sharedDAO.remove(index, playlist_id);
                             }
                         }
                     }

@@ -49,7 +49,7 @@ public class PlaylistDAOTest {
     @Test
     public void testGet() throws Exception {
         playlist = playlistList.get(playlistList.size() - 1); // retrieve most recent addition to table
-        int id = playlist.getId(); // get the id of the most recent addition
+        int id = playlist.getPlaylist_id(); // get the id of the most recent addition
         playlist = dao.get(id); // get the Playlist by id
         assertEquals("Names don't match", "Sinester", playlist.getName());
     }
@@ -64,7 +64,7 @@ public class PlaylistDAOTest {
     @Test
     public void testModifyPlaylistName() throws Exception {
         playlist = playlistList.get(playlistList.size() - 1); // retrieve most recent addition to table
-        int id = playlist.getId();
+        int id = playlist.getPlaylist_id();
         playlist.setName("Bubbles");
         dao.modify(playlist);
         playlist = dao.get(id);
@@ -81,7 +81,7 @@ public class PlaylistDAOTest {
     @Test
     public void testRemove() throws Exception {
         playlist = playlistList.get(playlistList.size() - 1); // retrieve most recent addition to table
-        int id = playlist.getId();
+        int id = playlist.getPlaylist_id();
         dao.remove(id);
         playlistList = dao.getAll();
         assertEquals("remove did not work: ", numberOfPlaylists - 1, playlistList.size());
@@ -95,9 +95,9 @@ public class PlaylistDAOTest {
         for (entity.Playlist playlist : playlistList) {
             String thisName = playlist.getName();
             if (thisName.equalsIgnoreCase("Sinester")) {
-                dao.remove(playlist.getId());
+                dao.remove(playlist.getPlaylist_id());
             } else if (thisName.equalsIgnoreCase("Bubbles")) {
-                dao.remove(playlist.getId());
+                dao.remove(playlist.getPlaylist_id());
             }
         }
     }

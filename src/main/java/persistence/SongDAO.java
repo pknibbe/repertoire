@@ -1,14 +1,20 @@
 package persistence;
 
+import entity.PropertyManager;
 import entity.Song;
 //import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.Query;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class SongDAO {
-
+    private final static PropertyManager propertyManager = new PropertyManager();
+    private static final String repository = System.getenv(propertyManager.getProperty("home")) +
+            propertyManager.getProperty("musicDir");
     //private final Logger logger = Logger.getLogger(this.getClass());
 
     /** Return a list of all songs
@@ -18,6 +24,18 @@ public class SongDAO {
     public List<Song> getAll() throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         List<Song> songs = session.createCriteria(Song.class).list();
+        session.close();
+        return songs;
+    }
+
+    /** Return a list of all songs in a playlist
+     * @param playlist_id The system ID of the playlist
+     * @return All songs in a playlist
+     */
+    public List<Song> getAllThese(int playlist_id) throws HibernateException {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Query query = session.createQuery("From songs S WHERE s.playlist_id = playlist_id");
+        List<Song> songs = query.list();
         session.close();
         return songs;
     }
@@ -59,10 +77,41 @@ public class SongDAO {
         Song sessionSong = (Song) session.get(Song.class, updatedSong.getId());
         sessionSong.setLocation(updatedSong.getLocation());
         sessionSong.setDescription(updatedSong.getDescription());
-        sessionSong.setPlaylist_id(updatedSong.getPlaylist_id());
+        sessionSong.setPlaylist(updatedSong.getPlaylist());
         session.merge(sessionSong);
         transaction.commit();
         session.close();
+    }
+
+
+    /**
+     * Returns whether or not a particular song is already associated with a particular playlist
+     *
+     * @param location    The place where the song should be
+     * @param playlist_id The system ID of the playlist
+     * @return whether or not it is there
+     */
+    public boolean alreadyThere(String location, int playlist_id) {
+        boolean found = false;
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Query query = session.createQuery("SELECT S.id FROM songs S WHERE s.playlist_id = playlist_id and s.location = location");
+        if (query.list() != null) { found = true; }
+        return found;
+    }
+
+
+    /**
+     * Returns whether or not a particular song is already uploaded
+     *
+     * @param location    The place where the song should be
+     * @return whether or not it is there
+     */
+    public boolean exists(String location) {
+        boolean found = false;
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Query query = session.createQuery("SELECT S.id FROM songs S WHERE s.location = location");
+        if (query.list() != null) { found = true; }
+        return found;
     }
 
     /**
@@ -78,4 +127,56 @@ public class SongDAO {
         transaction.commit();
         session.close();
     }
+
+
+    public String getRepository() {
+        return repository;
+    }
+
+    /**
+     * Retrieves the location of the current song
+     * @return The song location
+     */
+    public String getLocation(int songID) {
+        Song currentSong = get(songID);
+        if (currentSong == null) {
+            return null;
+        }
+        else {
+            return currentSong.getLocation();
+        }
+    }
+
+    /**
+     * Retrieves the songs in a playlist
+     * @param list_ID The system identifier of the playlist
+     * @return The songs
+     */
+    public ArrayList<Song> getAll(int list_ID) {
+        ArrayList<Song> songList = new ArrayList<>();
+        List<Song> songs = getAll();
+        for (Song song : songs) {
+            if (list_ID == song.getPlaylist().getPlaylist_id()) {
+                songList.add(song);
+            }
+        }
+        return songList;
+    }
+
+    /**
+     * Retrieves the system identifiers of the songs in a playlist
+     * @param list_ID The system identifier of the playlist
+     * @return The song identifiers
+     */
+    public ArrayList<Integer> getSongIds(int list_ID) {
+        ArrayList<Integer> songList = new ArrayList<>();
+        List<Song> songs = getAll();
+        for (Song song : songs) {
+            if (list_ID == song.getPlaylist().getPlaylist_id()) {
+                songList.add(song.getId());
+            }
+        }
+        return songList;
+    }
+
 }

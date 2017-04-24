@@ -1,8 +1,10 @@
 package butlers;
 
-import engines.*;
 import entity.*;
-
+import persistence.PlaylistDAO;
+import persistence.UserDAO;
+import persistence.SongDAO;
+import persistence.SharedDAO;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,7 +27,10 @@ import java.util.Enumeration;
         urlPatterns = { "/ManagePlaylists" }
 )
 public class ManagePlaylists extends HttpServlet {
-
+    private final PlaylistDAO playlistDAO = new PlaylistDAO();
+    private final UserDAO userDAO = new UserDAO();
+    private final SongDAO songDAO = new SongDAO();
+    private final SharedDAO sharedDAO = new SharedDAO();
     /**
      * Handles HTTP POST requests.
      *
@@ -41,18 +46,19 @@ public class ManagePlaylists extends HttpServlet {
         Player player;
 
         int listID;
+        int user_id = (Integer) session.getAttribute("user_id");
 
-        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (userDAO.authenticated(user_id)) {
 
             listID = Integer.valueOf(request.getParameter("listID"));
             if (listID == 0) { // request to create a new list
                 String name = request.getParameter("newName");
-                listID = PlaylistManager.add((Integer) session.getAttribute("user_id"), name);
-                Playlist playlist = PlaylistManager.get(listID);
+                listID = playlistDAO.add( new Playlist(name, userDAO.get(user_id)));
+                Playlist playlist = playlistDAO.get(listID);
                 session.setAttribute("listName", playlist.getName());
                 session.setAttribute("listID", listID);
                 session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
-                session.setAttribute("songs", SongManager.getAll((Integer) session.getAttribute("listID")));
+                session.setAttribute("songs", songDAO.getAllThese((Integer) session.getAttribute("listID")));
                 url = "manageAPlaylist.jsp";
             } else {
                 Enumeration<String> parameterNames = request.getParameterNames();
@@ -60,16 +66,16 @@ public class ManagePlaylists extends HttpServlet {
                 while (parameterNames.hasMoreElements()) {
                     String parameterName = parameterNames.nextElement();
                     if (parameterName.equalsIgnoreCase("Delete")) {
-                        if (SharedManager.isShared(listID)) {
+                        if (sharedDAO.isShared(listID)) {
                             session.setAttribute("message", "Can't delete shared playlist.");
                             url = "/manageAPlaylist.jsp";
                         } else {
                             url = "/deletePlaylistConfirmation.jsp";
                         }
                     } else if (parameterName.equalsIgnoreCase("Share")) {
-                        session.setAttribute("listName", PlaylistManager.get(listID).getName());
-                        session.setAttribute("otherUsers", SharedManager.notSharing(listID));
-                        session.setAttribute("sharingUsers", SharedManager.sharing(listID));
+                        session.setAttribute("listName", playlistDAO.get(listID).getName());
+                        session.setAttribute("otherUsers", sharedDAO.notSharing(listID));
+                        session.setAttribute("sharingUsers", sharedDAO.sharing(listID));
                         url = "/sharePlaylist.jsp";
                     } else if (parameterName.equalsIgnoreCase("Manage")) {
                         url = "ShowAPlaylist";
@@ -94,7 +100,7 @@ public class ManagePlaylists extends HttpServlet {
                     }
                 }
                 session.setAttribute("listID", listID);
-                session.setAttribute("listName", PlaylistManager.get(listID).getName());
+                session.setAttribute("listName", playlistDAO.get(listID).getName());
             }
         } else { // user not authenticated
             session.setAttribute("message", "user not authenticated");

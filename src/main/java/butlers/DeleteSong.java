@@ -1,9 +1,8 @@
 package butlers;
 
-import engines.UserManager;
-import engines.SongManager;
 import org.apache.log4j.Logger;
-
+import persistence.UserDAO;
+import persistence.SongDAO;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Enumeration;
-
 
 /**
  * Remove a playlist from the database
@@ -25,6 +23,8 @@ import java.util.Enumeration;
 )
 public class DeleteSong extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
+    private final UserDAO userDAO = new UserDAO();
+    private final SongDAO songDAO = new SongDAO();
 
     /**
      *  Handles HTTP POST requests.
@@ -39,13 +39,13 @@ public class DeleteSong extends HttpServlet {
         HttpSession session = request.getSession();
         String url;
 
-        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
             Enumeration<String> parameterNames = request.getParameterNames();
             while (parameterNames.hasMoreElements()) {
                 String parameterName = parameterNames.nextElement();
                 logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                 if (parameterName.equalsIgnoreCase("Delete")) {
-                    SongManager.remove((Integer) session.getAttribute("songID"));
+                    songDAO.remove((Integer) session.getAttribute("songID"));
                     session.setAttribute("message", "Song Deleted");
                     logger.debug("removed song " + session.getAttribute("songID"));
                 } else if (parameterName.equalsIgnoreCase("Cancel")) {

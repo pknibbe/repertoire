@@ -2,8 +2,8 @@ package entity;
 
 import java.util.ArrayList;
 import java.lang.Thread;
-import engines.PlayManager;
-import engines.SongManager;
+
+import persistence.SongDAO;
 import org.apache.log4j.Logger;
 
 /**
@@ -17,7 +17,7 @@ public class Player {
     private int currentSongIndex;
     private ArrayList<Integer> songIds;
     private String action;
-    private SongManager songManager;
+    private SongDAO songDAO;
     private boolean isPlaying;
     private Playlist playlist;
 
@@ -26,8 +26,8 @@ public class Player {
      * @param playlistId The system ID of the playlist
      */
     public Player(int playlistId) {
-        songManager = new SongManager();
-        songIds = songManager.getSongIds(playlistId);
+        songDAO = new SongDAO();
+        songIds = songDAO.getSongIds(playlistId);
         logger.debug("In constructor");
         currentSongIndex = 0;
         Thread pmThread = new Thread(new PlayManager(this));
@@ -96,8 +96,8 @@ public class Player {
     }
 
     public String getCurrentSongLocation() {
-        String relativePath = songManager.getLocation(songIds.get(currentSongIndex));
-        return songManager.getRepository() + relativePath;
+        String relativePath = songDAO.getLocation(songIds.get(currentSongIndex));
+        return songDAO.getRepository() + relativePath;
     }
 
     public String getAction() {

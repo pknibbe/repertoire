@@ -1,7 +1,7 @@
 package butlers;
 
 import entity.User;
-import engines.UserManager;
+import persistence.UserDAO;
 import org.apache.log4j.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,6 +25,7 @@ import java.util.Enumeration;
 )
 public class UpdateAccounts extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
+    private final UserDAO userDAO = new UserDAO();
     private String url;
 
     /**
@@ -39,7 +40,7 @@ public class UpdateAccounts extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         String role = "administrator";
-        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
             if (role.equalsIgnoreCase((String) session.getAttribute("user_role"))) {
                 String userID = request.getParameter("userID");
                 int identifier;
@@ -55,13 +56,11 @@ public class UpdateAccounts extends HttpServlet {
                     String parameterName = parameterNames.nextElement();
                     logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                     if (parameterName.equalsIgnoreCase("Delete")) {
-                        if (0 == UserManager.removeUserWithRole(identifier)) {
-                            session.setAttribute("message", "Unable to remove user due to system error");
-                            logger.error("Unable to remove user due to system error");
-                        } else {
-                            session.setAttribute("message", "removed user");
-                            logger.debug("removed user " + identifier);
-                        }
+                        userDAO.remove(identifier);
+
+                        session.setAttribute("message", "removed user");
+
+                        logger.debug("removed user " + identifier);
                         url = "ShowUsers";
                     } else if (parameterName.equalsIgnoreCase("Update")) {
                         String name = request.getParameter("Name");
@@ -70,16 +69,16 @@ public class UpdateAccounts extends HttpServlet {
                         role = request.getParameter("Role");
                         if (identifier > 0) {
                             logger.debug("Updating existing user ID " + identifier);
-                            User user = UserManager.getUser(identifier);
+                            User user = userDAO.get(identifier);
                             if (user == null) {
                                 session.setAttribute("message", "Unable to update user due to system error");
                                 url = "/index.jsp";
                             } else {
-                                session.setAttribute("UserInfo", UserManager.getUser(identifier));
+                                session.setAttribute("UserInfo", userDAO.get(identifier));
                                 url = "ShowUsers";
                             }
                         } else {
-                            int added = UserManager.addUserWithRole(userName, name, password, role);
+                            int added = userDAO.add(new User(userName, name, password, role));
                             logger.debug("Creating a new user returned " + added);
                             url = "ShowUsers";
                         }

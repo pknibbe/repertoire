@@ -15,13 +15,12 @@ public class Playlist {
   @Id
   @GeneratedValue(generator="increment")
   @GenericGenerator(name="increment", strategy="increment")
-  private int id;
+  private int playlist_id;
 
   private String name;
-  //private int owner_id;
-  @ManyToOne(cascade = CascadeType.ALL)
+  @ManyToOne(optional = false)
+  @JoinColumn(name="owner_id")
   private User owner;
-
 
   public Playlist() {
   }

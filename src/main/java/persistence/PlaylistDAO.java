@@ -54,12 +54,12 @@ public class PlaylistDAO {
     public int modify(Playlist updatedPlaylist) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        Playlist sessionPlaylist = (Playlist) session.get(Playlist.class, updatedPlaylist.getId());
+        Playlist sessionPlaylist = (Playlist) session.get(Playlist.class, updatedPlaylist.getPlaylist_id());
         sessionPlaylist.setName(updatedPlaylist.getName());
         Playlist resultantPlaylist = (Playlist) session.merge(sessionPlaylist);
         transaction.commit();
         session.close();
-        return resultantPlaylist.getId();
+        return resultantPlaylist.getPlaylist_id();
     }
 
     /**

@@ -1,7 +1,7 @@
 package butlers;
 
-import engines.UserManager;
 import org.apache.log4j.Logger;
+import persistence.UserDAO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -22,6 +22,7 @@ import java.io.IOException;
         urlPatterns = { "/ExternalAction" }
 ) public class ExternalAction extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
+    private final UserDAO userDAO = new UserDAO();
 
     /**
      *  Handles HTTP GET requests.
@@ -39,7 +40,7 @@ import java.io.IOException;
 
         logger.debug("user_name is " + request.getParameter("userName"));
         logger.debug("user_pass is " + request.getParameter("password"));
-        int user_id = UserManager.verifyCredentials(request.getParameter("userName"), request.getParameter("password"));
+        int user_id = userDAO.verifyCredentials(request.getParameter("userName"), request.getParameter("password"));
         if (user_id == 0) {
             session.setAttribute("message", "User Credentials not verified");
 
@@ -47,8 +48,8 @@ import java.io.IOException;
             dispatcher.forward(request, response);
         }
 
-        String role = UserManager.determineRole(user_id);
-        String name = UserManager.getName(user_id);
+        String role = userDAO.determineRole(user_id);
+        String name = userDAO.getName(user_id);
 
         session.setAttribute("user_id", user_id);
         session.setAttribute("user_role", role);

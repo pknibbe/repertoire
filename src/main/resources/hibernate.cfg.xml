@@ -18,11 +18,10 @@
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
         <!-- Echo all executed SQL to stdout -->
-        <property name="show_sql">true</property>
+        <property name="show_sql">false</property>
 
         <!-- List the annotated entity class/es -->
         <mapping class="entity.Shared"/>
-        <mapping class="entity.Role"/>
         <mapping class="entity.Playlist"/>
         <mapping class="entity.Song"/>
         <mapping class="entity.User"/>

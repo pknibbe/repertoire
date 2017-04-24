@@ -1,6 +1,5 @@
 package butlers;
 
-import engines.UserManager;
 //import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -10,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import persistence.UserDAO;
 
 /**
  * Update a user in the database table
@@ -20,6 +20,7 @@ import java.io.IOException;
         urlPatterns = { "/UpdateUserInformation" }
 )
 class UpdateUserInformation extends HttpServlet {
+    private final UserDAO userDAO = new UserDAO();
 
     //private final Logger logger = Logger.getLogger(this.getClass());
 
@@ -36,9 +37,9 @@ class UpdateUserInformation extends HttpServlet {
             HttpSession session = request.getSession();
 
             String url;
-            if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
+            if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
                 if (0 ==
-                UserManager.updateUserWithRole(
+                        userDAO.updateUserWithRole(
                         Integer.valueOf(request.getParameter("id")),
                         request.getParameter("UserName"),
                         request.getParameter("Name"),

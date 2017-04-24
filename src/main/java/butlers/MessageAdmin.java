@@ -1,8 +1,8 @@
 package butlers;
 
-import engines.UserManager;
 import entity.Message;
-import engines.MessageManager;
+import entity.User;
+import persistence.MessageDAO;
 import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import persistence.UserDAO;
 
 import org.apache.log4j.Logger;
 
@@ -22,6 +23,8 @@ import org.apache.log4j.Logger;
         urlPatterns = { "/MessageAdmin" }
 ) public class MessageAdmin extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
+    private final UserDAO userDAO = new UserDAO();
+    private final MessageDAO messageDAO = new MessageDAO();
 
         /**
          *  Handles HTTP POST requests.
@@ -46,10 +49,10 @@ import org.apache.log4j.Logger;
             String requestType = request.getParameter("options");
             String requester = request.getParameter("name");
             Message message = new Message("Request for login assistance",
-                    0,
-                    UserManager.getAdminId(), 0,
+                    new User(requester),
+                    userDAO.get(userDAO.getAdminId()), 0,
                     requester + " needs help with: " + requestType);
-            MessageManager.add(message);
+            messageDAO.add(message);
 
             response.sendRedirect("/index.jsp");
         }

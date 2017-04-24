@@ -2,10 +2,8 @@ package entity;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 import lombok.ToString;
 import lombok.Setter;
 import lombok.Getter;
@@ -25,9 +23,11 @@ public class User {
   private String name;
   private String user_pass;
   private String role_name;
-  private int user_role_id;
 
-  public User() {
+  public User(String name) {
+    this.id = 0;
+    this.user_name = "unknown";
+    this.name = name;
   }
 
   public User(String username, String name, String user_pass, String role) {

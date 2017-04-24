@@ -9,26 +9,27 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 @Setter
 @Getter
 @ToString
 
 @Entity
-@Table(name = "user_roles")
+@Table(name = "users")
 public class Role {
 
-    @Id
-    @GeneratedValue(generator = "increment")
-    @GenericGenerator(name = "increment", strategy = "increment")
-    private int id;
-    private String user_name;
-    private String role_name;
+  @Id
+  @GeneratedValue(generator="increment")
+  @GenericGenerator(name="increment", strategy="increment")
+  private int id;
+  private String user_name;
+  private String role_name;
 
-    public Role() {
-    }
+  public Role() {
+  }
 
-    public Role(String username, String rolename) {
-        this.user_name = username;
-        this.role_name = rolename;
-    }
+  public Role(String username, String role) {
+    this.user_name = username;
+    this.role_name = role;
+  }
 }

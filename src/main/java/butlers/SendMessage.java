@@ -1,8 +1,8 @@
 package butlers;
 
-import engines.UserManager;
 import entity.Message;
-import engines.MessageManager;
+import persistence.MessageDAO;
+import persistence.UserDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,6 +23,8 @@ import java.io.IOException;
         urlPatterns = { "/SendMessage" }
 ) public class SendMessage extends HttpServlet {
     //private final Logger logger = Logger.getLogger(this.getClass());
+    private final UserDAO userDAO = new UserDAO();
+    private final MessageDAO messageDAO = new MessageDAO();
 
     /**
          *  Handles HTTP POST requests.
@@ -38,11 +40,11 @@ import java.io.IOException;
 
             int user_id = (Integer) session.getAttribute("user_id");
             String url;
-            if (UserManager.authenticated(user_id)) {
-                int recipientId = UserManager.getIdByName(request.getParameter("to"));
-                Message message = new Message(request.getParameter("subject"), user_id, recipientId, 0,
+            if (userDAO.authenticated(user_id)) {
+                int recipientId = userDAO.getIdByName(request.getParameter("to"));
+                Message message = new Message(request.getParameter("subject"), userDAO.get(user_id), userDAO.get(recipientId), 0,
                         request.getParameter("content"));
-                MessageManager.add(message);
+                messageDAO.add(message);
                 url = "ShowMessages";
             } else {
                 session.setAttribute("message", "user not authenticated");

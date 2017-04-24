@@ -1,9 +1,9 @@
 package butlers;
 
-import engines.MessageManager;
-import engines.UserManager;
+import persistence.MessageDAO;
 import entity.Message;
 import entity.PresentableMessage;
+import persistence.UserDAO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -24,6 +24,8 @@ import java.util.ArrayList;
         name = "ShowMessages",
         urlPatterns = { "/ShowMessages" })
 public class ShowMessages extends HttpServlet {
+    private final UserDAO userDAO = new UserDAO();
+    private final MessageDAO messageDAO = new MessageDAO();
 
     /**
      *  Handles HTTP GET requests.
@@ -42,19 +44,19 @@ public class ShowMessages extends HttpServlet {
         String url;
         int user_id = (Integer) session.getAttribute("user_id");
 
-        if (UserManager.authenticated(user_id)) {
-            ArrayList<Integer> listIDs = MessageManager.getIDs(user_id);
+        if (userDAO.authenticated(user_id)) {
+            ArrayList<Integer> listIDs = messageDAO.getIDs(user_id);
             ArrayList<PresentableMessage> messages = new ArrayList<>();
             for (int index : listIDs) {
-               plainMessage = MessageManager.get(index);
-               int senderID = plainMessage.getSender();
+               plainMessage = messageDAO.get(index);
+               int senderID = plainMessage.getSender().getId();
 
                PresentableMessage presentableMessage =
-                        new PresentableMessage(plainMessage, UserManager.getName(senderID));
+                        new PresentableMessage(plainMessage, userDAO.getName(senderID));
                messages.add(presentableMessage);
             }
             session.setAttribute("messages", messages);
-            session.setAttribute("names", UserManager.getOtherUserNames(user_id));
+            session.setAttribute("names", userDAO.getOtherUserNames(user_id));
             url = "/messages.jsp";
 
         } else {

@@ -18,21 +18,23 @@ public class Song {
   private int id;
   private String location;
   private String description;
-  private int playlist_id;
+  @ManyToOne(optional = false)
+  @JoinColumn(name="playlist_id")
+  private Playlist playlist;
 
   public Song() {
   }
 
-  public Song(String location, int playlist_id) {
+  public Song(String location, Playlist playlist) {
     this.location = location;
     this.description = null;
-    this.playlist_id = playlist_id;
+    this.playlist = playlist;
   }
 
-  public Song(String location, String description, int playlist_id) {
+  public Song(String location, String description, Playlist playlist) {
     this.location = location;
     this.description = description;
-    this.playlist_id = playlist_id;
+    this.playlist = playlist;
   }
 
 }

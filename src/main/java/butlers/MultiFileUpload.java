@@ -1,8 +1,7 @@
 package butlers;
 
-import engines.PlaylistManager;
-import engines.SongManager;
-import engines.UserManager;
+import entity.Song;
+import persistence.SongDAO;
 import org.apache.log4j.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -12,6 +11,8 @@ import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
+import persistence.UserDAO;
+import persistence.PlaylistDAO;
 
 /**
  * Handle request from manageAPlaylist jsp
@@ -25,6 +26,9 @@ import java.util.*;
 )
 @MultipartConfig
 public class MultiFileUpload extends HttpServlet {
+    private final UserDAO userDAO = new UserDAO();
+    private final SongDAO songDAO = new SongDAO();
+    private final PlaylistDAO playlistDAO = new PlaylistDAO();
 
     private final Logger logger = Logger.getLogger(this.getClass());
     private String messageContent;
@@ -46,7 +50,7 @@ public class MultiFileUpload extends HttpServlet {
         logger.debug("The user ID is " + session.getAttribute("user_id"));
         logger.debug("Request URI is " + request.getRequestURI());
 
-        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
             url = "ShowAPlaylist";
             logger.info("Session attribute listID is " + session.getAttribute("listID"));
             int listID = (Integer) (session.getAttribute("listID"));
@@ -66,22 +70,22 @@ public class MultiFileUpload extends HttpServlet {
     }
 
     private void processRequest(Part part, String filePath, int playListId) throws IOException{
-        String repo = SongManager.getRepository();
+        String repo = songDAO.getRepository();
 
         //multiple cases
         // Case 1: Song is already in database under this listID.
-        if (PlaylistManager.alreadyThere(filePath, playListId)) { //Don't need to do anything
+        if (songDAO.alreadyThere(filePath, playListId)) { //Don't need to do anything
             messageContent = "Song already there";
         }
         // Case 2: Song is already in database under a different listID
-        if (SongManager.exists(filePath)) { // still need to add it to playlist
-            SongManager.add(filePath, playListId );
+        if (songDAO.exists(filePath)) { // still need to add it to playlist
+            songDAO.add(new Song(filePath, playlistDAO.get(playListId)));
             messageContent = "Song added";
         }
         // Case 3: Song is totally new to database. This is reflected below
         boolean success = writeFile(repo + filePath, part, filePath);
         if (success) { // Add new song to database
-            SongManager.add(filePath, playListId );
+            songDAO.add(new Song(filePath, playlistDAO.get(playListId) ));
             messageContent = "Song added";
         } else {
             messageContent = "Unable to add song";

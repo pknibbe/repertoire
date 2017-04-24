@@ -1,6 +1,5 @@
 package butlers;
 
-import engines.UserManager;
 import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;

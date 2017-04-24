@@ -1,13 +1,13 @@
-package engines;
+package entity;
 import java.io.*;
 import java.util.*;
 /**
  * Manages configuration information via properties
  * Created by peter on 3/27/2017.
  */
- class PropertyManager extends Properties {
+ public class PropertyManager extends Properties {
 
-     PropertyManager() {
+     public PropertyManager() {
         try {
             InputStream propertiesStream =this.getClass().getResourceAsStream("/repertoire.properties");
             this.load(propertiesStream);

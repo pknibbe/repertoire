@@ -5,10 +5,7 @@ import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Setter
 @Getter
@@ -22,15 +19,21 @@ public class Shared {
   @GeneratedValue(generator="increment")
   @GenericGenerator(name="increment", strategy="increment")
   private int id;
-  private int playlist_id;
-  private int shared_with;
+
+  @OneToOne
+  @JoinColumn(name="playlist_id")
+  private Playlist playlist;
+
+  @OneToOne
+  @JoinColumn(name="shared_with")
+  private User recipient;
 
   public Shared() {
   }
 
-  public Shared(int playlist_id, int shared_with) {
-    this.playlist_id = playlist_id;
-    this.shared_with = shared_with;
+  public Shared(Playlist playlist, User recipient) {
+    this.playlist = playlist;
+    this.recipient = recipient;
   }
 
 }

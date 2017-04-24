@@ -1,4 +1,4 @@
-package engines;
+package entity;
 
 import entity.RunnablePlayer;
 import entity.Player;

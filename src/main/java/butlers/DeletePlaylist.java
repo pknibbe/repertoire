@@ -1,8 +1,9 @@
 package butlers;
 
-import engines.UserManager;
-import engines.PlaylistManager;
 import org.apache.log4j.Logger;
+import persistence.PlaylistDAO;
+import persistence.UserDAO;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,6 +24,8 @@ import java.util.Enumeration;
 )
 public class DeletePlaylist extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
+    private final PlaylistDAO playlistDAO = new PlaylistDAO();
+    private final UserDAO userDAO = new UserDAO();
 
     /**
      *  Handles HTTP POST requests.
@@ -37,13 +40,13 @@ public class DeletePlaylist extends HttpServlet {
         HttpSession session = request.getSession();
         String url;
 
-        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
             Enumeration<String> parameterNames = request.getParameterNames();
             while (parameterNames.hasMoreElements()) {
                 String parameterName = parameterNames.nextElement();
                 logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                 if (parameterName.equalsIgnoreCase("Delete")) {
-                    int result = PlaylistManager.remove((Integer) session.getAttribute("listID"));
+                    int result = playlistDAO.remove((Integer) session.getAttribute("listID"));
                     if (result == (Integer) session.getAttribute("listID")) {
                         session.setAttribute("message", "List Deleted");
                     } else {

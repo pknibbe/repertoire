@@ -1,10 +1,10 @@
 package butlers;
 
-import engines.PlaylistManager;
-import engines.SongManager;
-import engines.UserManager;
+import persistence.SongDAO;
 import entity.Player;
 import entity.Playlist;
+import persistence.PlaylistDAO;
+import persistence.UserDAO;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -29,6 +29,9 @@ import java.util.Enumeration;
 )
 public class PlaylistAction extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
+    private final PlaylistDAO playlistDAO = new PlaylistDAO();
+    private final UserDAO userDAO = new UserDAO();
+    private final SongDAO songDAO = new SongDAO();
 
     /**
      * Handles HTTP POST requests.
@@ -45,7 +48,7 @@ public class PlaylistAction extends HttpServlet {
         String url = "ShowPlaylists";
         int listID;
 
-        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
             int user_id = (Integer) session.getAttribute("user_id");
             Enumeration<String> parameterNames = request.getParameterNames();
             while (parameterNames.hasMoreElements()) {
@@ -54,11 +57,11 @@ public class PlaylistAction extends HttpServlet {
                 logger.debug("Parameter " + parameterName + " found with value " + request.getParameter(parameterName));
 
                 if (parameterName.equalsIgnoreCase("create")) {
-                    listID = PlaylistManager.add( user_id, request.getParameter("listname"));
+                    listID = playlistDAO.add( new Playlist(request.getParameter("listname"), userDAO.get(user_id)));
                     session.setAttribute("listName", request.getParameter("listname"));
                     session.setAttribute("listID", listID);
                     session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
-                    session.setAttribute("songs", SongManager.getAll((Integer) session.getAttribute("listID")));
+                    session.setAttribute("songs", songDAO.getAll((Integer) session.getAttribute("listID")));
                     url = "manageAPlaylist.jsp";
                 } else if (parameterValue.equalsIgnoreCase("Play")) {
                     listID = Integer.valueOf(parameterName.substring(6));
@@ -74,7 +77,7 @@ public class PlaylistAction extends HttpServlet {
                     player.start();
                     url = "showPlaylists.jsp";
                 } else if (parameterValue.equalsIgnoreCase("Stop")) {
-                    PlaylistManager.stop();
+                    //PlaylistManager.stop();
                     session.setAttribute("isPlaying", false);
                     session.setAttribute("message", "Stopping playback");
                     player = (Player) session.getAttribute("player");
@@ -82,11 +85,11 @@ public class PlaylistAction extends HttpServlet {
                     url = "showPlaylists.jsp";
                 } else if (parameterValue.equalsIgnoreCase("manage")) {
                     listID = Integer.valueOf(parameterName.substring(6));
-                    Playlist playlist = PlaylistManager.get(listID);
+                    Playlist playlist = playlistDAO.get(listID);
                     session.setAttribute("listName", playlist.getName());
                     session.setAttribute("listID", listID);
                     session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
-                    session.setAttribute("songs", SongManager.getAll((Integer) session.getAttribute("listID")));
+                    session.setAttribute("songs", songDAO.getAll((Integer) session.getAttribute("listID")));
                     url = "ShowAPlaylist";
                 }
             }

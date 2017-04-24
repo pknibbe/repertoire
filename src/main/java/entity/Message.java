@@ -20,12 +20,19 @@ public class Message {
     protected int id;
 
     protected String subject;
-    protected int sender;
-    protected int receiver;
+
+    @OneToOne
+    @JoinColumn(name="sender")
+    protected User sender;
+
+    @OneToOne
+    @JoinColumn(name="receiver")
+    protected User receiver;
+
     protected int readFlag;
     protected String content;
 
-    public Message(String subject, int sender, int receiver, int read, String content) {
+    public Message(String subject, User sender, User receiver, int read, String content) {
         this.subject = subject;
         this.sender = sender;
         this.receiver = receiver;

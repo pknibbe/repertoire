@@ -1,8 +1,10 @@
 package butlers;
 
 import java.util.*;
+import persistence.UserDAO;
+import persistence.SongDAO;
 
-import engines.SharedManager;
+import persistence.SharedDAO;
 import org.apache.log4j.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,8 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import engines.UserManager;
-import engines.SongManager;
 import java.io.IOException;
 
 /**
@@ -24,6 +24,9 @@ import java.io.IOException;
 )
 public class DeleteOneSongFromAPlaylist extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
+    private final UserDAO userDAO = new UserDAO();
+    private final SongDAO songDAO = new SongDAO();
+    private final SharedDAO sharedDAO = new SharedDAO();
 
     /**
      * Handles HTTP POST requests.
@@ -50,13 +53,13 @@ public class DeleteOneSongFromAPlaylist extends HttpServlet {
             logger.debug("Parameter value is " + request.getParameter(pName));
         }
 
-        if (UserManager.authenticated((Integer) session.getAttribute("user_id"))) {
+        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
             int songID = Integer.valueOf(request.getParameter("songID"));
 
             logger.debug("In delete section");
-            session.setAttribute("songToDelete", SongManager.getLocation(songID));
+            session.setAttribute("songToDelete", songDAO.getLocation(songID));
             session.setAttribute("songID", songID);
-            if (SharedManager.isShared(list_id)) {
+            if (sharedDAO.isShared(list_id)) {
                 session.setAttribute("message", "Can't delete song from shared playlist");
                 response.sendRedirect("/manageAPlaylist.jsp");
             } else response.sendRedirect("/deleteSongConfirmation.jsp");
