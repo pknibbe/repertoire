@@ -2,7 +2,6 @@ package persistence;
 
 import entity.PropertyManager;
 import entity.User;
-//import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -10,59 +9,12 @@ import org.hibernate.Transaction;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDAO {
+//import org.apache.log4j.Logger;
+
+public class UserEntryDAO extends EntryDAO {
     //private final Logger logger = Logger.getLogger(this.getClass());
     final static private PropertyManager propertyManager = new PropertyManager();
     final static private int fieldLength = Integer.valueOf(propertyManager.getProperty("dbNameLength"));
-    /** Return a list of all users
-     *
-     * @return All users
-     */
-    public List<User> getAll() throws HibernateException {
-        Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        List<User> users = session.createCriteria(User.class).list();
-        session.close();
-        return users;
-    }
-
-    /** Get a single user for the given id
-     *
-     * @param id user's id
-     * @return User
-     */
-    public User get(int id) throws HibernateException {
-        Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        User user = (User) session.get(User.class, id);
-        session.close();
-        return user;
-    }
-
-    /** save a new user
-     * @param user the record to add to the users table
-     * @return id the id of the inserted record
-     */
-    public int add(User user) throws HibernateException {
-        Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
-        int id = (Integer) session.save(user);
-        transaction.commit();
-        session.close();
-        return id;
-    }
-
-    /** modify a user record
-     * @param updatedUser the version of the user with the new information
-     * @return id the id of the updated record
-     */
-    public int modify(User updatedUser) {
-        Session session = getSession();
-        Transaction transaction = session.beginTransaction();
-        session.update(updatedUser);
-        transaction.commit();
-        session.close();
-        return updatedUser.getId();
-    }
-
 
     /**
      * Determines whether a session has an authenticated user
@@ -86,9 +38,9 @@ public class UserDAO {
      * @param user_pass The other part of the credential set
      * @return The unique identifier or, if the credentials are not valid, 0
      */
-    public int verifyCredentials(String user_name, String user_pass) throws HibernateException {
+ /*   public int verifyCredentials(String user_name, String user_pass) throws HibernateException {
         int user_id = 0;
-            List<User> users = getAll();
+            List<User> users = (List<User>) getAll();
             for (User user : users) {
                 if (user_name.equalsIgnoreCase(user.getUser_name()) &&
                         (user_pass.equalsIgnoreCase(user.getUser_pass()))) {
@@ -103,9 +55,9 @@ public class UserDAO {
     /**
      * Fetches the system IDs of the users
      *
-     * @return The IDs of the users
+     * @return The IDs of the other users
      */
-    public ArrayList<Integer> getUserIds() throws HibernateException {
+ /*   public ArrayList<Integer> getUserIds() throws HibernateException {
         ArrayList<Integer> users = new ArrayList<>();
 
             for (User user : getAll()) {
@@ -122,7 +74,7 @@ public class UserDAO {
      * @param identifier The system ID of the current user
      * @return The Names of the other users
      */
-    public ArrayList<String> getOtherUserNames(int identifier) {
+ /*   public ArrayList<String> getOtherUserNames(int identifier) {
         ArrayList<String> otherUsers = new ArrayList<>();
 
         try {
@@ -144,7 +96,7 @@ public class UserDAO {
      * @param name The name of the user
      * @return The system ID of a user with that name or zero if it fails
      */
-    public int getIdByName(String name) throws HibernateException {
+/*    public int getIdByName(String name) throws HibernateException {
             List<User> users = getAll();
             for (User user : users) {
                 Integer userID = user.getId();
@@ -161,7 +113,7 @@ public class UserDAO {
      *
      * @return The system ID of the administrator user
      */
-    public  int getAdminId() throws HibernateException {
+ /*   public  int getAdminId() throws HibernateException {
         String role = "administrator";
 
             List<User> users = getAll();
@@ -177,7 +129,7 @@ public class UserDAO {
      * @param userId The unique identifier
      * @return The personal name
      */
-    public String getName(int userId) throws HibernateException {
+ /*   public String getName(int userId) throws HibernateException {
             User user = get(userId);
             if (user == null) {
                 return null;
@@ -191,10 +143,46 @@ public class UserDAO {
      * @param userId The unique identifier
      * @return The assigned role value
      */
-    public String determineRole(int userId) throws HibernateException {
+ /*   public String determineRole(int userId) throws HibernateException {
             User user = get(userId);
             return user.getRole_name();
     }
+
+    /**
+     * Updates a user's information in both the users and user_roles tables
+     *
+     * @param identifier The unique identifier
+     * @param userName   The username part of the login credential
+     * @param name       The name of the person
+     * @param password   The password part of the login credential
+     * @param rolename   The assigned role of the user
+     * @return The unique identifier of the updated user record
+     */
+ /*   public int modify(int identifier, String userName, String name, String password, String rolename) throws HibernateException {
+            User user = get(identifier);
+
+            if (user == null) {
+                return 0;
+            }
+            if ((checkUsername(userName)) &&(checkUsername(name))) { // userName is alright to use
+                user.setUser_name(userName);
+                user.setName(name);
+                if (checkPassword(password)) {
+                    user.setUser_pass(password);
+                    if (checkRoleName(rolename)) {
+                        user.setRole_name(rolename);
+                        modify(user);
+                    }
+                }
+            }
+
+        return 0;
+    }
+
+
+
+
+
 
     /**
      * Performs simple checks for an acceptable username
@@ -202,7 +190,7 @@ public class UserDAO {
      * @param username the proposed username
      * @return whether the username is acceptable
      */
-    static boolean checkUsername(String username) {
+ /*   private static boolean checkUsername(String username) {
         return ((2 < username.length() && (fieldLength >= username.length()))); // Require at least 3 characters in username
     }
 
@@ -212,7 +200,7 @@ public class UserDAO {
      * @param password the proposed password
      * @return whether the password is acceptable
      */
-    static boolean checkPassword(String password) {
+/*    private static boolean checkPassword(String password) {
         return ((7 < password.length()) && (fieldLength >= password.length())); // Require at least 8 characters in password
     }
 
@@ -222,7 +210,7 @@ public class UserDAO {
      * @param rolename The role name to be tested
      * @return Whether or not the role name is valid
      */
-    static boolean checkRoleName(String rolename) {
+ /*   private static boolean checkRoleName(String rolename) {
         ArrayList<String> definedRoles = new ArrayList<>();
         definedRoles.add("administrator");
         definedRoles.add("registered-user");
@@ -235,7 +223,7 @@ public class UserDAO {
      *
      * @param id ID of user to be removed
      */
-    public void remove(int id) throws HibernateException {
+ /*   public void remove(int id) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         User user = (User) session.get(User.class, id);
@@ -248,4 +236,5 @@ public class UserDAO {
     Session getSession() {
         return SessionFactoryProvider.getSessionFactory().openSession();
     }
+    */
 }

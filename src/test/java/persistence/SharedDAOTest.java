@@ -1,15 +1,10 @@
 package persistence;
 
 import static org.junit.Assert.*;
-import entity.Shared;
-import org.apache.log4j.Logger;
+import entity.*;
 import org.junit.Before;
 import org.junit.After;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
-
 
 /**
  * Database accessor test
@@ -18,58 +13,72 @@ import java.util.List;
 @SuppressWarnings("CanBeFinal")
 public class SharedDAOTest {
 
-    private SharedDAO dao;
-    private Shared playlist;
-    private int numberOfPlaylists;
-    private int originalNumberOfPlaylists;
-    private List<Shared> playlistList;
-    private final Logger logger = Logger.getLogger(this.getClass());
-    private ArrayList<Integer> sharingIDs = new ArrayList<>();
+    final private SharedDAO dao = new SharedDAO();
+    final private PlaylistDAO playlistDAO = new PlaylistDAO();
+    final private UserDAO userDAO = new UserDAO();
+    private User user = userDAO.getAll().get(0);
+    private Playlist playlist;
+    private int newSharedID;
+    private int newPlaylistID;
+    private int originalNumberOfShareds;
+    private int numberOfShareds;
 
     @Before
     public void setup() throws Exception {
-        dao = new SharedDAO();
-        playlistList = dao.getAll();
-        originalNumberOfPlaylists = playlistList.size();
-        logger.debug("In @Before, PlaylistList has " + playlistList.size() + "entries");
-        playlist = new Shared(1, 2); // make sure table is not empty for purpose of test
-        sharingIDs.add(dao.add(playlist));
-        playlist = new Shared(3, 4); // make sure table is not empty for purpose of test
-        sharingIDs.add(dao.add(playlist));
-        playlist = new Shared(2, 3); // make sure table is not empty for purpose of test
-        sharingIDs.add(dao.add(playlist));
-        playlistList = dao.getAll();
-        logger.debug("After justAdd, PlaylistList has " + playlistList.size() + "entries");
-        numberOfPlaylists = playlistList.size();
+        originalNumberOfShareds = dao.getAll().size();
+        playlist = new Playlist("Sinester", user);
+        newPlaylistID = playlistDAO.add(playlist);
+
+        Shared shared = new Shared(playlist, user);
+        newSharedID = dao.add(shared);
+        numberOfShareds = dao.getAll().size();
+        assertEquals("Added one, but found ", 1, numberOfShareds - originalNumberOfShareds);
     }
 
     @Test
     public void testGetAll() throws Exception {
-        for (Integer index : sharingIDs) { // Loop over the entries created in the Before section
-            playlist = dao.get(index);
-            assertTrue("The expected relationship was not found: ",
-                    (playlist.getPlaylist_id() == (playlist.getShared_with() - 1)));
+        boolean found = false;
+
+        for (Shared pain : dao.getAll()) {
+            User thisUser = pain.getRecipient();
+            Playlist thisPlaylist = pain.getPlaylist();
+            if ((thisUser.getId() == user.getId()) && (thisPlaylist.getPlaylist_id() == playlist.getPlaylist_id())) {
+                found = true;
+            }
         }
+        assertTrue("The expected record was not found: ", found);
     }
 
     @Test
     public void testGet() throws Exception {
-        playlist = dao.get(sharingIDs.get(0)); // retrieve the first addition to table
-        assertEquals("user_id wrong: ", playlist.getShared_with(), 2);
+        Shared thisShared = dao.get(newSharedID);
+        assertEquals("Wrong user ", user.getId(), thisShared.getRecipient().getId());
+        assertEquals("Wrong playlist ", playlist.getPlaylist_id(), thisShared.getPlaylist().getPlaylist_id());
     }
 
     @Test
-    public void testAdd() throws Exception {
-        assertEquals("Add did not work: ", numberOfPlaylists -3, originalNumberOfPlaylists);
-    }
+    public void testShare() {}
+
+    @Test
+    public void testFind() {}
+
+    @Test
+    public void testGetAllByID() {}
+
+    @Test
+    public void testSharing() {}
+
+    @Test
+    public void testNotSharing() {}
+
+    @Test
+    public void testIsShared() {}
 
     @After
-    public void testRemove() throws Exception {
-        for (Integer index : sharingIDs) { // Loop over the entries created in the Before section
-            dao.remove(index);
-        }
-        playlistList = dao.getAll();
-        assertEquals("remove did not work: ", originalNumberOfPlaylists, playlistList.size());
+    public void cleanup() throws Exception {
+        dao.remove(newSharedID);
+        playlistDAO.remove(newPlaylistID);
+        numberOfShareds = dao.getAll().size();
+        assertEquals("Added and removed one, but found ", 0, numberOfShareds - originalNumberOfShareds);
     }
-
 }

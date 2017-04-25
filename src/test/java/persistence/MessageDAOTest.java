@@ -19,7 +19,7 @@ public class MessageDAOTest {
     private int numberOfMessages;
     private  List<Message> messageList;
     private final Logger logger = Logger.getLogger(this.getClass());
-
+/*
         @Before
         public void setup() throws Exception {
             dao = new MessageDAO();
@@ -100,5 +100,5 @@ public class MessageDAOTest {
                     dao.remove(message.getId());
                 }
             }
-        }
+        } */
     }

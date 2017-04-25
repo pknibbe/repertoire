@@ -13,7 +13,7 @@ import lombok.Getter;
 
 @Entity
 @Table(name = "users")
-public class User {
+public class User extends Entry {
 
   @Id
   @GeneratedValue(generator="increment")
@@ -23,6 +23,8 @@ public class User {
   private String name;
   private String user_pass;
   private String role_name;
+
+  public User() {}
 
   public User(String name) {
     this.id = 0;

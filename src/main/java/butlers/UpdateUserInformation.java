@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import persistence.UserDAO;
+import entity.User;
 
 /**
  * Update a user in the database table
@@ -33,20 +34,21 @@ class UpdateUserInformation extends HttpServlet {
          *@exception IOException       if there is an IO failure
          */
         public void doPost(HttpServletRequest request, HttpServletResponse response)
-                throws ServletException, IOException {
+                throws ServletException, IOException, NullPointerException{
             HttpSession session = request.getSession();
 
             String url;
+
             if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
-                if (0 ==
-                        userDAO.updateUserWithRole(
-                        Integer.valueOf(request.getParameter("id")),
-                        request.getParameter("UserName"),
-                        request.getParameter("Name"),
-                        request.getParameter("NewPassword"),
-                        request.getParameter("Role"))) {
-                    session.setAttribute("message", "user not updated due to system error");
-                }
+
+                    User user = userDAO.get(Integer.valueOf(request.getParameter("id")));
+                    user.setRole_name(request.getParameter("Role"));
+                    user.setUser_pass(request.getParameter("NewPassword"));
+                    user.setName(request.getParameter("Name"));
+                    user.setUser_name(request.getParameter("UserName"));
+                    if (0 == userDAO.modify(user)) {
+                        session.setAttribute("message", "user not updated due to system error");
+                    }
 
                 url = "ShowUsers";
 

@@ -1,15 +1,13 @@
 package persistence;
 
 import entity.Song;
-import org.apache.log4j.Logger;
+import entity.Playlist;
+import entity.User;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.List;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 /**
  * Tests the SongDAO methods
@@ -17,29 +15,34 @@ import static org.junit.Assert.assertTrue;
  */
 public class SongDAOTest {
     
-    private SongDAO dao;
-    private entity.Song song;
+    final private SongDAO dao = new SongDAO();
+    final private PlaylistDAO playlistDAO = new PlaylistDAO();
+    final private UserDAO userDAO = new UserDAO();
+    private User user = userDAO.getAll().get(0);
+    private int newPlaylistID;
+    private Song song;
+    private int newSongID;
     private int numberOfSongs;
-    private List<Song> songList;
-    private final Logger logger = Logger.getLogger(this.getClass());
+    private int originalNumberOfSongs;
+
 
     @Before
     public void setup() throws Exception {
-        dao = new SongDAO();
-        songList = dao.getAll();
-        logger.debug("In @Before, songList has " + songList.size() + "entries");
-        song = new Song("ZXGK It's Magic", "Great tune", 3);
-        dao.add(song);
-        songList = dao.getAll();
-        logger.debug("After setup, songList has " + songList.size() + "entries");
-        numberOfSongs = songList.size();
+        originalNumberOfSongs = dao.getAll().size();
+        Playlist playlist = new Playlist("Sinester", user);
+        newPlaylistID = playlistDAO.add(playlist);
+
+        song = new Song("ZXGK It's Magic", "Great tune", playlist);
+        newSongID = dao.add(song);
+        numberOfSongs = dao.getAll().size();
+        assertEquals("Added one, but found ", 1, numberOfSongs - originalNumberOfSongs);
     }
 
     @Test
     public void testGetAll() throws Exception {
         boolean found = false;
 
-        for (entity.Song song : songList) {
+        for (Song song : dao.getAll()) {
             String thisName = song.getLocation();
             if (thisName.equalsIgnoreCase("ZXGK It's Magic")) found = true;
         }
@@ -47,57 +50,46 @@ public class SongDAOTest {
     }
 
     @Test
-    public void testGet() throws Exception {
-        song = songList.get(songList.size() - 1); // retrieve most recent addition to table
-        int id = song.getId(); // get the id of the most recent addition
-        song = dao.get(id); // get the song by id
-        assertEquals("Names don't match", "ZXGK It's Magic", song.getLocation());
-    }
+    public void testGetAllThese() throws Exception {}
 
     @Test
-    public void testAdd() throws Exception {
-        song = new Song("ZXGK of Earl", "Great tune",  3);
-        dao.add(song);
-        songList = dao.getAll();
-        assertEquals("Add did not work: ", numberOfSongs + 1, songList.size());
+    public void testAlreadyThere() throws Exception {}
+
+    @Test
+    public void testExists() throws Exception {}
+
+    @Test
+    public void testGetRepository() throws Exception {}
+
+    @Test
+    public void testGetLocation() throws Exception {}
+
+    @Test
+    public void testGetAllByID() throws Exception {}
+
+    @Test
+    public void testGetSongIDs() throws Exception {}
+
+    @Test
+    public void testGet() throws Exception {
+        assertEquals("Names don't match", "ZXGK It's Magic", dao.get(newSongID).getLocation());
     }
 
     @Test
     public void testModifySong() throws Exception {
-        song = songList.get(songList.size() - 1); // retrieve most recent addition to table
-        int id = song.getId();
         song.setLocation("ZXGK Submarine");
         song.setDescription("Corny, but fun");
         dao.modify(song);
-        song = dao.get(id);
+        song = dao.get(newSongID);
         assertEquals("Location not modified", "ZXGK Submarine", song.getLocation());
         assertEquals("Description not modified", "Corny, but fun", song.getDescription());
-        songList = dao.getAll();
-        assertEquals("Modify changed the number of entries!", numberOfSongs, songList.size());
-    }
-
-    @Test
-    public void testRemove() throws Exception {
-        song = songList.get(songList.size() - 1); // retrieve most recent addition to table
-        int id = song.getId();
-        dao.remove(id);
-        songList = dao.getAll();
-        assertEquals("remove did not work: ", numberOfSongs - 1, songList.size());
     }
 
     @After
     public void cleanup() throws Exception {
-        songList = dao.getAll();
-
-        for (entity.Song song : songList) {
-            String thisName = song.getLocation();
-            if (thisName.equalsIgnoreCase("ZXGK Submarine")) {
-                dao.remove(song.getId());
-            } else             if (thisName.equalsIgnoreCase("ZXGK of Earl")) {
-                dao.remove(song.getId());
-            } else             if (thisName.equalsIgnoreCase("ZXGK It's Magic")) {
-                dao.remove(song.getId());
-            }
-        }
+        dao.remove(newSongID);
+        playlistDAO.remove(newPlaylistID);
+        numberOfSongs = dao.getAll().size();
+        assertEquals("Added and removed one, but found ", 0, numberOfSongs - originalNumberOfSongs);
     }
 }
