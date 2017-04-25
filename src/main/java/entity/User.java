@@ -7,6 +7,8 @@ import javax.persistence.*;
 import lombok.ToString;
 import lombok.Setter;
 import lombok.Getter;
+import resistance.Entry;
+
 @Setter
 @Getter
 @ToString

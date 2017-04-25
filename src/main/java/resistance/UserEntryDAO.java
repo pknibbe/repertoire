@@ -1,13 +1,6 @@
-package persistence;
+package resistance;
 
 import entity.PropertyManager;
-import entity.User;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-
-import java.util.ArrayList;
-import java.util.List;
 
 //import org.apache.log4j.Logger;
 

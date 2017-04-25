@@ -1,7 +1,8 @@
-package persistence;
+package resistance;
 
 import java.io.Serializable;
 import org.hibernate.Session;
+import persistence.SessionFactoryProvider;
 
 /**
  * Created by peter on 4/24/2017.

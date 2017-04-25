@@ -1,6 +1,5 @@
-package persistence;
+package resistance;
 
-import entity.Entry;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -15,7 +14,7 @@ public class EntryDAO {
      * @return All entries
      */
     public List<Entry> getAll() throws HibernateException {
-        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Session session = persistence.SessionFactoryProvider.getSessionFactory().openSession();
         List<Entry> users = session.createCriteria(Entry.class).list();
         session.close();
         return users;
@@ -27,7 +26,7 @@ public class EntryDAO {
      * @return User the entry
      */
     public Entry get(int id) throws HibernateException {
-        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Session session = persistence.SessionFactoryProvider.getSessionFactory().openSession();
         Entry user = (Entry) session.get(Entry.class, id);
         session.close();
         return user;
@@ -38,7 +37,7 @@ public class EntryDAO {
      * @return id the id of the inserted record
      */
     public int add(Entry entry) throws HibernateException {
-        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Session session = persistence.SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         int id = (Integer) session.save(entry);
         transaction.commit();
@@ -114,7 +113,7 @@ public class EntryDAO {
      * @param id ID of entry to be removed
      */
     public void remove(int id) throws HibernateException {
-        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Session session = persistence.SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         Entry user = (Entry) session.get(Entry.class, id);
         session.delete(user);
@@ -124,6 +123,6 @@ public class EntryDAO {
 
 
     Session getSession() {
-        return SessionFactoryProvider.getSessionFactory().openSession();
+        return persistence.SessionFactoryProvider.getSessionFactory().openSession();
     }
 }
