@@ -75,21 +75,11 @@ public class MessageDAO {
     public int modify(Message updatedMessage) throws HibernateException {
         session = SessionFactoryProvider.getSessionFactory().openSession();
         transaction = session.beginTransaction();
-        logger.debug("Updating message " + updatedMessage.getSubject());
-        logger.debug(updatedMessage.toString());
-        Message sessionMessage = (Message) session.get(Message.class, updatedMessage.getId());
-        sessionMessage.setSubject(updatedMessage.getSubject());
-        sessionMessage.setSender(updatedMessage.getSender());
-        sessionMessage.setReceiver(updatedMessage.getReceiver());
-        sessionMessage.setReadFlag(updatedMessage.getReadFlag());
-        sessionMessage.setContent(updatedMessage.getContent());
-        logger.debug("Updating message " + sessionMessage.getSubject());
-        logger.debug(sessionMessage.toString());
-        Message resultantMessage = (Message) session.merge(sessionMessage);
-        logger.debug("Updated message " + resultantMessage.toString());
+        session.update(updatedMessage);
+        logger.debug("Updated message " + updatedMessage.toString());
         transaction.commit();
         session.close();
-        return resultantMessage.getId();
+        return updatedMessage.getId();
     }
 
     /**
