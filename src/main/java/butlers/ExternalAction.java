@@ -48,11 +48,10 @@ import java.io.IOException;
             dispatcher.forward(request, response);
         }
 
-        String role = userDAO.determineRole(user_id);
         String name = userDAO.getName(user_id);
 
         session.setAttribute("user_id", user_id);
-        session.setAttribute("user_role", role);
+        session.setAttribute("user_role", userDAO.determineRole(user_id));
         session.setAttribute("message", "Welcome, " + name);
         session.setAttribute("name", name);
         session.setAttribute("listID", 0);

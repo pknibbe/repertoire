@@ -7,7 +7,6 @@ import javax.persistence.*;
 import lombok.ToString;
 import lombok.Setter;
 import lombok.Getter;
-import resistance.Entry;
 
 @Setter
 @Getter
@@ -15,7 +14,7 @@ import resistance.Entry;
 
 @Entity
 @Table(name = "users")
-public class User extends Entry {
+public class User {
 
   @Id
   @GeneratedValue(generator="increment")

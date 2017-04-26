@@ -27,21 +27,21 @@
                     <c:forEach var="playbill" items="${playlists}">
                         <p>Playlist isPlaying is ${isPlaying}</p>
                         <div class="pure-u-1 pure-u-md-1-5">${playbill.name}</div>
-                        <div class="pure-u-1 pure-u-md-1-5">${playbill.owner_name}</div>
+                        <div class="pure-u-1 pure-u-md-1-5">${playbill.owner.name}</div>
 
                         <c:if test="${isPlaying == false}">
                             <div class="pure-u-1 pure-u-md-1-12">
-                                <input class="pure-input-1" type="submit" name="toggle${playbill.id}" value="Play" />
+                                <input class="pure-input-1" type="submit" name="toggle${playbill.playlist_id}" value="Play" />
                             </div>
                         </c:if>
                         <c:if test="${isPlaying == true}">
                             <div class="pure-u-1 pure-u-md-1-12">
-                                <input class="pure-input-1" type="submit" name="toggle${playbill.id}" value="Stop" />
+                                <input class="pure-input-1" type="submit" name="toggle${playbill.playlist_id}" value="Stop" />
                             </div>
                         </c:if>
 
                         <div class="pure-u-1 pure-u-md-1-8">
-                            <input class="pure-input-1" type="submit" name="manage${playbill.id}" value="manage" />
+                            <input class="pure-input-1" type="submit" name="manage${playbill.playlist_id}" value="manage" />
                         </div>
                         <div class="pure-u-1 pure-u-md-1-4">
                         </div>

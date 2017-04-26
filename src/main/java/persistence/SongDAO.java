@@ -34,7 +34,7 @@ public class SongDAO {
      */
     public List<Song> getAllThese(int playlist_id) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Query query = session.createQuery("From songs S WHERE s.playlist_id = playlist_id");
+        Query query = session.createQuery("From Song S WHERE S.playlist.playlist_id = playlist_id");
         List<Song> songs = query.list();
         session.close();
         return songs;
@@ -94,7 +94,7 @@ public class SongDAO {
     public boolean alreadyThere(String location, int playlist_id) {
         boolean found = false;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Query query = session.createQuery("SELECT S.id FROM songs S WHERE s.playlist_id = playlist_id and s.location = location");
+        Query query = session.createQuery("SELECT S.id FROM Song S WHERE S.playlist.playlist_id = playlist_id and S.location = location");
         if (query.list() != null) { found = true; }
         return found;
     }
@@ -109,7 +109,7 @@ public class SongDAO {
     public boolean exists(String location) {
         boolean found = false;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Query query = session.createQuery("SELECT S.id FROM songs S WHERE s.location = location");
+        Query query = session.createQuery("SELECT S.id FROM Song S WHERE S.location = location");
         if (query.list() != null) { found = true; }
         return found;
     }
