@@ -14,47 +14,51 @@
 
         <!--p>song count is ${songCount} from songs = ${songs}</p-->
 
-    <div id="left">
-        <h3>Playlist ${listName}  </h3>
-        <c:if test="${songCount > 0}">
-            <form action="DeleteOneSongFromAPlaylist" method="POST">
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+            <h3>Playlist ${listName}  </h3>
+            <c:if test="${songCount > 0}">
+                <form action="DeleteOneSongFromAPlaylist" method="POST">
+                    <table>
+                        <thead><tr><th>Select</th><th>Song</th></tr></thead>
+                        <tbody>
+                            <c:forEach var="song" items="${songs}">
+                                <tr>
+                                    <td><input type="radio" name="songID" value=${song.id} /></td>
+                                    <td>${song.location}</td>
+                                </tr>
+                            </c:forEach>
+                        </tbody>
+                    </table>
+                    <p></p>>
+                    <input type="submit" name="Delete" value="Delete" />
+                </form>
+
+                <form action="ControlPlayer" method="POST">
+                    <input type="submit" name="Play" value="Play" />
+                    <input type="submit" name="Stop" value="Stop" />
+                    <input type="submit" name="Skip" value="Skip" />
+                    <input type="submit" name="Previous" value="Previous" />
+                </form>
+            </c:if>
+            <c:if test="${songCount < 1}">
+                <p>is empty</p>
+            </c:if>
+        </div>
+
+        <div class="pure-u-1-2">
+            <h3> Upload a song to the playlist ${listName}</h3>
+            <form action="MultiFileUpload" method="POST" enctype="multipart/form-data">
                 <table>
-                    <thead><tr><th>Select</th><th>Song</th></tr></thead>
-                    <tbody>
-                        <c:forEach var="song" items="${songs}">
-                            <tr>
-                                <td><input type="radio" name="songID" value=${song.id} /></td>
-                                <td>${song.location}</td>
-                            </tr>
-                        </c:forEach>
-                    </tbody>
-                </table><br/><br/>
-                <input type="submit" name="Delete" value="Delete" />
+                    <tr>
+                        <td>New Song(s): </td>
+                        <td><input type="file" name="file" id="file" multiple></td>
+                    </tr>
+                </table>
+                <input type="submit" name="Upload" value="Upload" />
             </form>
-
-            <form action="ControlPlayer" method="POST">
-                <input type="submit" name="Play" value="Play" />
-                <input type="submit" name="Stop" value="Stop" />
-                <input type="submit" name="Skip" value="Skip" />
-                <input type="submit" name="Previous" value="Previous" />
-            </form>
-        </c:if>
-    </div>
-
-    <div id="right">
-        <h3> Upload a song to the playlist ${listName}</h3>
-        <form action="MultiFileUpload" method="POST" enctype="multipart/form-data">
-<!--        <form action="Upload" method="POST" enctype="multipart/form-data"> -->
-            <table>
-                <tr>
-                    <td>New Song(s): </td>
-                    <td><input type="file" name="file" id="file" multiple></td>
-     <!--               <td><input type="file" name="file" id="file" /></td> -->
-                </tr>
-            </table>
-            <input type="submit" name="Upload" value="Upload" />
-        </form>
-    </div>
+        </div>
+    </div> <!-- pure-g -->
 </div>
 <c:import url="/footer.jsp" />
 

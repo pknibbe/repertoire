@@ -25,7 +25,7 @@
                             <tbody>
                                <c:forEach var="playbill" items="${playlists}">
                                    <tr>
-                                        <td><input type="radio" name="listID" value=${playbill.id} /></td>
+                                        <td><input type="radio" name="listID" value=${playbill.playlist_id} /></td>
                                         <td><input type="text" name="name" value=${playbill.name}></td>
                                    </tr>
                                 </c:forEach>
