@@ -41,9 +41,10 @@ public class ShowPlaylists extends HttpServlet {
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
         String url;
+        int user_id = (Integer) session.getAttribute("user_id");
 
-        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
-            session.setAttribute("playlists", playlistDAO.getAll());
+        if (userDAO.authenticated(user_id)) {
+            session.setAttribute("playlists", playlistDAO.getAll(user_id));
             url = "/showPlaylists.jsp";
 
         } else {

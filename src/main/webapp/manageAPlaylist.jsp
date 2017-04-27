@@ -15,7 +15,7 @@
         <!--p>song count is ${songCount} from songs = ${songs}</p-->
 
     <div class="pure-g">
-        <div class="pure-u-1-3">
+        <div class="pure-u-1-2">
             <h3>Playlist ${listName}  </h3>
             <c:if test="${songCount > 0}">
                 <form action="DeleteOneSongFromAPlaylist" method="POST">

@@ -2,15 +2,13 @@ package persistence;
 
 import entity.Playlist;
 //import org.apache.log4j.Logger;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import org.hibernate.*;
 
 import java.util.List;
 
 public class PlaylistDAO {
     //private final Logger logger = Logger.getLogger(this.getClass());
-/*
+
     /** Return a list of all Playlists
      *
      * @return All Playlists
@@ -18,6 +16,20 @@ public class PlaylistDAO {
     public List<Playlist> getAll() throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         List<Playlist> playlists = session.createCriteria(Playlist.class).list();
+        session.close();
+        return playlists;
+    }
+
+    /** Return a list of all Playlists owned by a user
+     *
+     * @param user_id the system ID of the owner
+     * @return All Playlists
+     */
+    @SuppressWarnings("JpaQlInspection")
+    public List<Playlist> getAll(int user_id) throws HibernateException {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Query query = session.createQuery("FROM Playlist P WHERE P.owner.id = user_id");
+        List<Playlist> playlists = query.list();
         session.close();
         return playlists;
     }

@@ -36,6 +36,8 @@ import java.io.IOException;
         session.setAttribute("user_role", "");
         session.setAttribute("message", "Logged Out");
         session.setAttribute("name", "");
+        session.setAttribute("listID", "");
+        session.setAttribute("playlists", "");
         RequestDispatcher dispatcher;
 
         dispatcher = servletContext.getRequestDispatcher("/index.jsp");

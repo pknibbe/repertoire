@@ -15,7 +15,7 @@
                 <tbody>
                     <c:forEach var="message" items="${messages}">
                         <tr>
-                            <td>${message.sender}</td>
+                            <td>${message.sender.name}</td>
                             <td>${message.subject}</td>
                             <td>${message.readFlag}</td>
                             <td>${message.content}</td>

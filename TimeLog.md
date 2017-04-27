@@ -2,6 +2,11 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 4/26 | Individual Project | 1 | Get more pages working in playlist creation, management, and playing workflow |
+| 4/26 | Individual Project | 1 | Review Glenn's project |
+| 4/24 | Individual Project | 4 | Stitched DAO back together and got CRUD testing working |
+| 4/22 | Individual Project | 6 | Continued ripping up DAO and rebuilding it |
+| 4/17 | Individual Project | 2 | Started ripping up DAO and trying to figure out generic DAO |
 | 4/15 | Java Message Beans | 6 | Watched lecture, looked at readings, did exercise |
 | 4/11 | Team Project       | 2 | Last minute debugging, etc. |
 | 4/07-10 | Individual Project | 15 | A bunch more pure css and trying different page layouts |
