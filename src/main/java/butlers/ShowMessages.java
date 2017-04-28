@@ -52,7 +52,7 @@ public class ShowMessages extends HttpServlet {
                int senderID = plainMessage.getSender().getId();
 
                PresentableMessage presentableMessage =
-                        new PresentableMessage(plainMessage, userDAO.getName(senderID));
+                        new PresentableMessage(plainMessage, userDAO.read(senderID).getName());
                messages.add(presentableMessage);
             }
             session.setAttribute("messages", messages);

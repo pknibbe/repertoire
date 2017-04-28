@@ -1,4 +1,4 @@
-package edu.matc.JLA.persistence;
+package persistence;
 
 import org.hibernate.Session;
 import java.io.Serializable;

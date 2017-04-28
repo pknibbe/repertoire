@@ -79,7 +79,7 @@ public class SharedDAO {
         if (find(playlist_id, user_id) > 0) {
             return find(playlist_id, user_id); // record is already in the database
         }
-        Shared shared = new Shared(playlistDAO.get(playlist_id), userDAO.get(user_id));
+        Shared shared = new Shared(playlistDAO.get(playlist_id), userDAO.read(user_id));
         return add(shared);
     }
 
@@ -153,9 +153,9 @@ public class SharedDAO {
      * Returns the list of all non-owners NOT sharing a playlist
      * @param playlist_id The system ID of the playlist
      * @return the list of user IDs
-     */
+     *
     public ArrayList<Integer> notSharing(int playlist_id) throws HibernateException {
-        ArrayList<Integer> userIDs = userDAO.getUserIds();
+        ArrayList<User> users = userDAO.getAll();
 
         for (Shared record : getAll()) {
             if (record.getPlaylist().getPlaylist_id() == playlist_id) {
@@ -165,7 +165,7 @@ public class SharedDAO {
             }
         }
         return userIDs;
-    }
+    } */
 
     /**
      * Removes sharing of the specified playlist with the specified user
@@ -174,9 +174,9 @@ public class SharedDAO {
      */
     public void remove(int userID, int playlist_id) throws HibernateException {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        User recipient = userDAO.get(userID);
+        User recipient = userDAO.read(userID);
         Playlist playlist = playlistDAO.get(playlist_id);
-        Query query = session.createQuery("DELETE FROM shared WHERE recipient = :recipient and playlist = :playlist");
+        Query query = session.createQuery("DELETE FROM Shared WHERE recipient = :recipient and playlist = :playlist");
         query.setParameter("recipient", recipient);
         query.setParameter("playlist", playlist);
         logger.info("Number of rows affected = " + query.executeUpdate());

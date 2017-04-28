@@ -2,6 +2,7 @@ package butlers;
 
 import org.apache.log4j.Logger;
 import persistence.UserDAO;
+import entity.User;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -40,20 +41,21 @@ import java.io.IOException;
 
         logger.debug("user_name is " + request.getParameter("userName"));
         logger.debug("user_pass is " + request.getParameter("password"));
-        int user_id = userDAO.verifyCredentials(request.getParameter("userName"), request.getParameter("password"));
-        if (user_id == 0) {
+        String password = request.getParameter("password");
+        String userName = request.getParameter("userName");
+        int user_id = userDAO.getIdByUsername(userName);
+
+        if (!userDAO.verifyCredentials(user_id, userName, password)) {
             session.setAttribute("message", "User Credentials not verified");
 
             dispatcher = servletContext.getRequestDispatcher("/index.jsp");
             dispatcher.forward(request, response);
         }
 
-        String name = userDAO.getName(user_id);
+        User user = userDAO.read(user_id);
 
-        session.setAttribute("user_id", user_id);
-        session.setAttribute("user_role", userDAO.determineRole(user_id));
-        session.setAttribute("message", "Welcome, " + name);
-        session.setAttribute("name", name);
+        session.setAttribute("user", user);
+        session.setAttribute("message", "Welcome, " + user.getName());
         session.setAttribute("listID", 0);
         session.setAttribute("isPlaying", false);
 

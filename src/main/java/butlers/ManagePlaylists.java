@@ -53,7 +53,7 @@ public class ManagePlaylists extends HttpServlet {
             listID = Integer.valueOf(request.getParameter("listID"));
             if (listID == 0) { // request to create a new list
                 String name = request.getParameter("newName");
-                listID = playlistDAO.add( new Playlist(name, userDAO.get(user_id)));
+                listID = playlistDAO.add( new Playlist(name, userDAO.read(user_id)));
                 Playlist playlist = playlistDAO.get(listID);
                 session.setAttribute("listName", playlist.getName());
                 session.setAttribute("listID", listID);
@@ -74,7 +74,7 @@ public class ManagePlaylists extends HttpServlet {
                         }
                     } else if (parameterName.equalsIgnoreCase("Share")) {
                         session.setAttribute("listName", playlistDAO.get(listID).getName());
-                        session.setAttribute("otherUsers", sharedDAO.notSharing(listID));
+                        //session.setAttribute("otherUsers", sharedDAO.notSharing(listID));
                         session.setAttribute("sharingUsers", sharedDAO.sharing(listID));
                         url = "/sharePlaylist.jsp";
                     } else if (parameterName.equalsIgnoreCase("Manage")) {

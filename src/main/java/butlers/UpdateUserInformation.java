@@ -41,14 +41,12 @@ class UpdateUserInformation extends HttpServlet {
 
             if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
 
-                    User user = userDAO.get(Integer.valueOf(request.getParameter("id")));
+                    User user = userDAO.read(Integer.valueOf(request.getParameter("id")));
                     user.setRole_name(request.getParameter("Role"));
                     user.setUser_pass(request.getParameter("NewPassword"));
                     user.setName(request.getParameter("Name"));
                     user.setUser_name(request.getParameter("UserName"));
-                    if (0 == userDAO.modify(user)) {
-                        session.setAttribute("message", "user not updated due to system error");
-                    }
+                    userDAO.update(user);
 
                 url = "ShowUsers";
 

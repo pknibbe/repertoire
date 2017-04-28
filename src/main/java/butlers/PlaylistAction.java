@@ -57,7 +57,7 @@ public class PlaylistAction extends HttpServlet {
                 logger.debug("Parameter " + parameterName + " found with value " + request.getParameter(parameterName));
 
                 if (parameterName.equalsIgnoreCase("create")) {
-                    listID = playlistDAO.add( new Playlist(request.getParameter("listname"), userDAO.get(user_id)));
+                    listID = playlistDAO.add( new Playlist(request.getParameter("listname"), userDAO.read(user_id)));
                     session.setAttribute("listName", request.getParameter("listname"));
                     session.setAttribute("listID", listID);
                     session.setAttribute("message", "Playlist " + session.getAttribute("listName"));

@@ -1,20 +1,30 @@
-package edu.matc.JLA.persistence;
+package persistence;
 
 import org.hibernate.Session;
 
 import java.io.Serializable;
 
-public class GenericDao <T, PK extends Serializable>
+/**
+ * Manages database table contents via Hibernate
+ * @param <T> The object type corresponding to a database table
+ * @param <PK> The primary key for a database table entry
+ */
+public class GenericDAO<T, PK extends Serializable>
         implements GenericDaoable<T, PK> {
 
     private Class<T> type;
 
-    public GenericDao() {}
+    public GenericDAO() {}
 
-    public GenericDao(Class<T> type) {
+    public GenericDAO(Class<T> type) {
         this.type = type;
     }
 
+    /**
+     * Adds an entry to a table
+     * @param o the object corresponding to the new entry
+     * @return the primary key to for the new entry
+     */
     public PK create(T o) {
         Session session = getSession();
         session.beginTransaction();
@@ -24,6 +34,11 @@ public class GenericDao <T, PK extends Serializable>
         return id;
     }
 
+    /**
+     * Retrieves a table entry
+     * @param id the primary key for the entry
+     * @return the table entry
+     */
     public T read(PK id) {
         Session session = getSession();
         session.beginTransaction();
@@ -33,6 +48,10 @@ public class GenericDao <T, PK extends Serializable>
         return o;
     }
 
+    /**
+     * Updates a table entry
+     * @param o the updated object to place in the table
+     */
     public void update(T o) {
         Session session = getSession();
         session.beginTransaction();
@@ -41,6 +60,10 @@ public class GenericDao <T, PK extends Serializable>
         session.close();
     }
 
+    /**
+     * Deletes a table entry
+     * @param o the entry to delete
+     */
     public void delete(T o) {
         Session session = getSession();
         session.beginTransaction();

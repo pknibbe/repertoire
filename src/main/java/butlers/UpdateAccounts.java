@@ -56,7 +56,7 @@ public class UpdateAccounts extends HttpServlet {
                     String parameterName = parameterNames.nextElement();
                     logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                     if (parameterName.equalsIgnoreCase("Delete")) {
-                        userDAO.remove(identifier);
+                        userDAO.delete(userDAO.read(identifier));
 
                         session.setAttribute("message", "removed user");
 
@@ -69,16 +69,16 @@ public class UpdateAccounts extends HttpServlet {
                         role = request.getParameter("Role");
                         if (identifier > 0) {
                             logger.debug("Updating existing user ID " + identifier);
-                            User user = userDAO.get(identifier);
+                            User user = userDAO.read(identifier);
                             if (user == null) {
                                 session.setAttribute("message", "Unable to update user due to system error");
                                 url = "/index.jsp";
                             } else {
-                                session.setAttribute("UserInfo", userDAO.get(identifier));
+                                session.setAttribute("UserInfo", userDAO.read(identifier));
                                 url = "ShowUsers";
                             }
                         } else {
-                            int added = userDAO.add(new User(userName, name, password, role));
+                            int added = userDAO.create(new User(userName, name, password, role));
                             logger.debug("Creating a new user returned " + added);
                             url = "ShowUsers";
                         }

@@ -42,7 +42,7 @@ import java.io.IOException;
             String url;
             if (userDAO.authenticated(user_id)) {
                 int recipientId = userDAO.getIdByName(request.getParameter("to"));
-                Message message = new Message(request.getParameter("subject"), userDAO.get(user_id), userDAO.get(recipientId), 0,
+                Message message = new Message(request.getParameter("subject"), userDAO.read(user_id), userDAO.read(recipientId), 0,
                         request.getParameter("content"));
                 messageDAO.add(message);
                 url = "ShowMessages";

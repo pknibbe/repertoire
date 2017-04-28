@@ -50,7 +50,7 @@ import org.apache.log4j.Logger;
             String requester = request.getParameter("name");
             Message message = new Message("Request for login assistance",
                     new User(requester),
-                    userDAO.get(userDAO.getAdminId()), 0,
+                    userDAO.read(userDAO.getAdminId()), 0,
                     requester + " needs help with: " + requestType);
             messageDAO.add(message);
 
