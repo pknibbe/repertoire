@@ -44,7 +44,7 @@ import java.io.IOException;
                 int recipientId = userDAO.getIdByName(request.getParameter("to"));
                 Message message = new Message(request.getParameter("subject"), userDAO.read(user_id), userDAO.read(recipientId), 0,
                         request.getParameter("content"));
-                messageDAO.add(message);
+                messageDAO.create(message);
                 url = "ShowMessages";
             } else {
                 session.setAttribute("message", "user not authenticated");

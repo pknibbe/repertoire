@@ -28,7 +28,7 @@ public class PlaylistDAOTest {
     public void setup() throws Exception {
         originalNumberOfPlaylists = dao.getAll().size();
         playlist = new Playlist("Sinester", user);
-        newPlaylistID = dao.add(playlist);
+        newPlaylistID = dao.create(playlist);
         numberOfPlaylists = dao.getAll().size();
         assertEquals("Added one, but found ", 1, numberOfPlaylists - originalNumberOfPlaylists);
     }
@@ -46,21 +46,20 @@ public class PlaylistDAOTest {
 
     @Test
     public void testGet() throws Exception {
-        assertEquals("Names don't match", "Sinester", dao.get(newPlaylistID).getName());
+        assertEquals("Names don't match", "Sinester", dao.read(newPlaylistID).getName());
     }
 
     @Test
     public void testModifyPlaylistName() throws Exception {
         playlist.setName("Bubbles");
-        dao.modify(playlist);
-        playlist = dao.get(newPlaylistID);
+        dao.update(playlist);
+        playlist = dao.read(newPlaylistID);
         assertEquals("Playlistname not modified", "Bubbles", playlist.getName());
     }
 
-
     @After
     public void cleanup() throws Exception {
-        dao.remove(newPlaylistID);
+        dao.delete(playlist);
         numberOfPlaylists = dao.getAll().size();
         assertEquals("Added and removed one, but found ", 0, numberOfPlaylists - originalNumberOfPlaylists);
 

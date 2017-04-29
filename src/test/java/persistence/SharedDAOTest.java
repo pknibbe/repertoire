@@ -22,15 +22,16 @@ public class SharedDAOTest {
     private int newPlaylistID;
     private int originalNumberOfShareds;
     private int numberOfShareds;
+    Shared shared;
 
     @Before
     public void setup() throws Exception {
         originalNumberOfShareds = dao.getAll().size();
         playlist = new Playlist("Sinester", user);
-        newPlaylistID = playlistDAO.add(playlist);
+        newPlaylistID = playlistDAO.create(playlist);
 
-        Shared shared = new Shared(playlist, user);
-        newSharedID = dao.add(shared);
+        newSharedID = dao.share(newPlaylistID, user.getId());
+        shared = dao.read(newSharedID);
         numberOfShareds = dao.getAll().size();
         assertEquals("Added one, but found ", 1, numberOfShareds - originalNumberOfShareds);
     }
@@ -51,16 +52,15 @@ public class SharedDAOTest {
 
     @Test
     public void testGet() throws Exception {
-        Shared thisShared = dao.get(newSharedID);
+        Shared thisShared = dao.read(newSharedID);
         assertEquals("Wrong user ", user.getId(), thisShared.getRecipient().getId());
         assertEquals("Wrong playlist ", playlist.getPlaylist_id(), thisShared.getPlaylist().getPlaylist_id());
     }
 
     @Test
-    public void testShare() {}
-
-    @Test
-    public void testFind() {}
+    public void testFind() {
+        assertEquals(newSharedID, dao.find(newPlaylistID, user.getId()));
+    }
 
     @Test
     public void testGetAllByID() {}
@@ -72,12 +72,15 @@ public class SharedDAOTest {
     public void testNotSharing() {}
 
     @Test
-    public void testIsShared() {}
+    public void testIsShared() {
+        assertTrue(dao.isShared(newPlaylistID));
+        assertFalse(dao.isShared(-12));
+    }
 
     @After
     public void cleanup() throws Exception {
-        dao.remove(newSharedID);
-        playlistDAO.remove(newPlaylistID);
+        dao.remove(user.getId(), newPlaylistID);
+        playlistDAO.delete(playlist);
         numberOfShareds = dao.getAll().size();
         assertEquals("Added and removed one, but found ", 0, numberOfShareds - originalNumberOfShareds);
     }

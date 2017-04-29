@@ -78,8 +78,9 @@ public class UserDAO extends GenericDAO<User, Integer> {
         Session session = getSession();
         Query query = session.createQuery("SELECT U.name FROM User U WHERE U.id <> :identifier");
         query.setParameter("identifier", identifier);
+        List<String> names = query.list();
         session.close();
-        return query.list();
+        return names;
     }
 
     /**
@@ -104,7 +105,7 @@ public class UserDAO extends GenericDAO<User, Integer> {
     /**
      * Retrieves the system ID of a user with a given username
      *
-     * @param name The name of the user
+     * @param userName The name of the user
      * @return The system ID of a user with that name or zero if it fails
      */
     public int getIdByUsername(String userName) throws HibernateException {

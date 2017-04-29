@@ -1,6 +1,7 @@
 package butlers;
 
 import org.apache.log4j.Logger;
+import entity.Playlist;
 import persistence.PlaylistDAO;
 import persistence.UserDAO;
 
@@ -46,8 +47,11 @@ public class DeletePlaylist extends HttpServlet {
                 String parameterName = parameterNames.nextElement();
                 logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                 if (parameterName.equalsIgnoreCase("Delete")) {
-                    int result = playlistDAO.remove((Integer) session.getAttribute("listID"));
-                    if (result == (Integer) session.getAttribute("listID")) {
+                    int playlist_id = (Integer) session.getAttribute("listID");
+                    Playlist playlist = playlistDAO.read(playlist_id);
+                    playlistDAO.delete(playlist);
+
+                    if (playlistDAO.read(playlist_id) == null) {
                         session.setAttribute("message", "List Deleted");
                     } else {
                         session.setAttribute("message", "List Not Deleted - Is it shared with anyone?");

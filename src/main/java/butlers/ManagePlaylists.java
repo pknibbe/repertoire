@@ -53,8 +53,8 @@ public class ManagePlaylists extends HttpServlet {
             listID = Integer.valueOf(request.getParameter("listID"));
             if (listID == 0) { // request to create a new list
                 String name = request.getParameter("newName");
-                listID = playlistDAO.add( new Playlist(name, userDAO.read(user_id)));
-                Playlist playlist = playlistDAO.get(listID);
+                listID = playlistDAO.create( new Playlist(name, userDAO.read(user_id)));
+                Playlist playlist = playlistDAO.read(listID);
                 session.setAttribute("listName", playlist.getName());
                 session.setAttribute("listID", listID);
                 session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
@@ -73,7 +73,7 @@ public class ManagePlaylists extends HttpServlet {
                             url = "/deletePlaylistConfirmation.jsp";
                         }
                     } else if (parameterName.equalsIgnoreCase("Share")) {
-                        session.setAttribute("listName", playlistDAO.get(listID).getName());
+                        session.setAttribute("listName", playlistDAO.read(listID).getName());
                         //session.setAttribute("otherUsers", sharedDAO.notSharing(listID));
                         session.setAttribute("sharingUsers", sharedDAO.sharing(listID));
                         url = "/sharePlaylist.jsp";
@@ -100,7 +100,7 @@ public class ManagePlaylists extends HttpServlet {
                     }
                 }
                 session.setAttribute("listID", listID);
-                session.setAttribute("listName", playlistDAO.get(listID).getName());
+                session.setAttribute("listName", playlistDAO.read(listID).getName());
             }
         } else { // user not authenticated
             session.setAttribute("message", "user not authenticated");

@@ -47,10 +47,10 @@ public class ShowAPlaylist extends HttpServlet {
 
         logger.debug("In doGet");
         if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
-            playlist = playlistDAO.get((Integer) session.getAttribute("listID"));
+            playlist = playlistDAO.read((Integer) session.getAttribute("listID"));
             session.setAttribute("listName", playlist.getName());
             session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
-            session.setAttribute("songs", songDAO.getAll((Integer) session.getAttribute("listID")));
+            session.setAttribute("songs", songDAO.getAllThese((Integer) session.getAttribute("listID")));
 
             logger.debug("Loaded songs");
             url = "/manageAPlaylist.jsp";

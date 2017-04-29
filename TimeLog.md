@@ -2,6 +2,8 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 4/28 | Individual Project | 4 | Generic DAO for the remaining tables |
+| 4/27 | Individual Project | 4 | Generic DAO for some tables |
 | 4/26 | Individual Project | 1 | Get more pages working in playlist creation, management, and playing workflow |
 | 4/26 | Individual Project | 1 | Review Glenn's project |
 | 4/24 | Individual Project | 4 | Stitched DAO back together and got CRUD testing working |

@@ -57,11 +57,11 @@ public class PlaylistAction extends HttpServlet {
                 logger.debug("Parameter " + parameterName + " found with value " + request.getParameter(parameterName));
 
                 if (parameterName.equalsIgnoreCase("create")) {
-                    listID = playlistDAO.add( new Playlist(request.getParameter("listname"), userDAO.read(user_id)));
+                    listID = playlistDAO.create( new Playlist(request.getParameter("listname"), userDAO.read(user_id)));
                     session.setAttribute("listName", request.getParameter("listname"));
                     session.setAttribute("listID", listID);
                     session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
-                    session.setAttribute("songs", songDAO.getAll((Integer) session.getAttribute("listID")));
+                    session.setAttribute("songs", songDAO.getAllThese((Integer) session.getAttribute("listID")));
                     url = "manageAPlaylist.jsp";
                 } else if (parameterValue.equalsIgnoreCase("Play")) {
                     listID = Integer.valueOf(parameterName.substring(6));
@@ -85,11 +85,11 @@ public class PlaylistAction extends HttpServlet {
                     url = "showPlaylists.jsp";
                 } else if (parameterValue.equalsIgnoreCase("manage")) {
                     listID = Integer.valueOf(parameterName.substring(6));
-                    Playlist playlist = playlistDAO.get(listID);
+                    Playlist playlist = playlistDAO.read(listID);
                     session.setAttribute("listName", playlist.getName());
                     session.setAttribute("listID", listID);
                     session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
-                    session.setAttribute("songs", songDAO.getAll((Integer) session.getAttribute("listID")));
+                    session.setAttribute("songs", songDAO.getAllThese((Integer) session.getAttribute("listID")));
                     url = "ShowAPlaylist";
                 }
             }

@@ -79,13 +79,13 @@ public class MultiFileUpload extends HttpServlet {
         }
         // Case 2: Song is already in database under a different listID
         if (songDAO.exists(filePath)) { // still need to add it to playlist
-            songDAO.add(new Song(filePath, playlistDAO.get(playListId)));
+            songDAO.create(new Song(filePath, playlistDAO.read(playListId)));
             messageContent = "Song added";
         }
         // Case 3: Song is totally new to database. This is reflected below
         boolean success = writeFile(repo + filePath, part, filePath);
         if (success) { // Add new song to database
-            songDAO.add(new Song(filePath, playlistDAO.get(playListId) ));
+            songDAO.create(new Song(filePath, playlistDAO.read(playListId) ));
             messageContent = "Song added";
         } else {
             messageContent = "Unable to add song";

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Provides access to Messages to the session user
@@ -45,16 +45,8 @@ public class ShowMessages extends HttpServlet {
         int user_id = (Integer) session.getAttribute("user_id");
 
         if (userDAO.authenticated(user_id)) {
-            ArrayList<Integer> listIDs = messageDAO.getIDs(user_id);
-            ArrayList<PresentableMessage> messages = new ArrayList<>();
-            for (int index : listIDs) {
-               plainMessage = messageDAO.get(index);
-               int senderID = plainMessage.getSender().getId();
+            List<Message> messages = messageDAO.getAll(user_id);
 
-               PresentableMessage presentableMessage =
-                        new PresentableMessage(plainMessage, userDAO.read(senderID).getName());
-               messages.add(presentableMessage);
-            }
             session.setAttribute("messages", messages);
             session.setAttribute("names", userDAO.getOtherUserNames(user_id));
             url = "/messages.jsp";

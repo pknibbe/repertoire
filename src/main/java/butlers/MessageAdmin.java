@@ -52,7 +52,7 @@ import org.apache.log4j.Logger;
                     new User(requester),
                     userDAO.read(userDAO.getAdminId()), 0,
                     requester + " needs help with: " + requestType);
-            messageDAO.add(message);
+            messageDAO.create(message);
 
             response.sendRedirect("/index.jsp");
         }

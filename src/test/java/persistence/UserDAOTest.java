@@ -36,6 +36,17 @@ public class UserDAOTest {
         assertTrue("The expected name was not found: ", found);
     }
 
+
+    @Test
+    public void testOthers() throws Exception {
+        boolean found = false;
+
+        for (String name : dao.getOtherUserNames(dao.getAdminId())) {
+            if (name.equalsIgnoreCase("Donald")) found = true;
+        }
+        assertTrue("The expected name was not found: ", found);
+    }
+
     @Test
     public void testGet() throws Exception {
         user = dao.read(newUserID);

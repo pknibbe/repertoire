@@ -1,6 +1,6 @@
 package entity;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.lang.Thread;
 
 import persistence.SongDAO;
@@ -15,7 +15,7 @@ public class Player {
 
     private final Logger logger = Logger.getLogger(this.getClass());
     private int currentSongIndex;
-    private ArrayList<Integer> songIds;
+    private List<Integer> songIds;
     private String action;
     private SongDAO songDAO;
     private boolean isPlaying;
