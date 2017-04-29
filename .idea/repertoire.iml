@@ -38,6 +38,7 @@
       <excludeFolder url="file://$MODULE_DIR$/JavaSrc" />
       <excludeFolder url="file://$MODULE_DIR$/SampleProject" />
       <excludeFolder url="file://$MODULE_DIR$/Web" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/resistance" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
