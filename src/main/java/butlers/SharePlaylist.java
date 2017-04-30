@@ -7,11 +7,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.Enumeration;
-import persistence.UserDAO;
+
 import persistence.SharedDAO;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * Update a user in the database table
@@ -22,8 +21,7 @@ import org.apache.log4j.Logger;
         urlPatterns = { "/SharePlaylist" }
 )
 public class SharePlaylist extends HttpServlet {
-    private final Logger logger = Logger.getLogger(this.getClass());
-    private final UserDAO userDAO = new UserDAO();
+    //private final Logger logger = Logger.getLogger(this.getClass());
     private final SharedDAO sharedDAO = new SharedDAO();
 
     /**
@@ -39,33 +37,16 @@ public class SharePlaylist extends HttpServlet {
             HttpSession session = request.getSession();
 
             int playlist_id = (Integer) session.getAttribute("listID");
-            String url;
+            int user_id = Integer.valueOf(request.getParameter("userID"));
 
-                if (request.getParameter("Cancel") != null) {
-                    url = "ShowAPlaylist";
-                } else {
-                    Enumeration<String> parameterNames = request.getParameterNames();
+            if (request.getParameter("Share") != null) {
+                sharedDAO.share(playlist_id, user_id);
+            } else if (request.getParameter("UnShare") != null) {
+                sharedDAO.delete(sharedDAO.read(sharedDAO.find(playlist_id, user_id)));
+            }
 
-                    while (parameterNames.hasMoreElements()) {
-                        String parameterName = parameterNames.nextElement();
-                        logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
-                        if (request.getParameter("Share") != null) {
-                            logger.debug("In share section");
-                            if (request.getParameter(parameterName).equalsIgnoreCase("on")) { // this is id
-                                Integer index = Integer.valueOf(parameterName);
-                                sharedDAO.share(playlist_id, index);
-                            }
-                        } else if (request.getParameter("UnShare") != null) {
-                            logger.debug("In un-share section");
-                            if (request.getParameter(parameterName).equalsIgnoreCase("on")) { // this is id
-                                Integer index = Integer.valueOf(parameterName);
-                                sharedDAO.remove(index, playlist_id);
-                            }
-                        }
-                    }
-                    url = "/sharePlaylist.jsp";
-                }
-
-            response.sendRedirect(url);
+            session.setAttribute("potentialSharees", sharedDAO.notSharing(playlist_id, user_id));
+            session.setAttribute("currentSharees", sharedDAO.sharing(playlist_id));
+            Navigator.redirect(response, "/manageAPlaylist");
         }
     }

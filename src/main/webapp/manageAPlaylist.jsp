@@ -57,6 +57,32 @@
                 </table>
                 <input type="submit" name="Upload" value="Upload" />
             </form>
+            <h3>. </h3>
+
+
+            <form action="SharePlaylist" method="POST">
+                <table>
+                    <c:forEach var="user" items="${potentialSharees}">
+                        <tr>
+                            <td><input type="radio" name="userID" value=${user.id} /></td>
+                            <td>${user.name}</td>
+                        </tr>
+                    </c:forEach>
+                </table>
+
+                <input type="submit" name="Share" value="Share" />
+
+                <table>
+                    <c:forEach var="user" items="${currentSharees}">
+                        <tr>
+                            <td><input type="radio" name="userID" value=${user.id} /></td>
+                            <td>${user.name}</td>
+                        </tr>
+                    </c:forEach>
+                </table>
+                <input type="submit" name="UnShare" value="Unshare" />
+
+            </form>
         </div>
     </div> <!-- pure-g -->
 </div>

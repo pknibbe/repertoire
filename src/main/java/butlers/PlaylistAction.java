@@ -6,6 +6,7 @@ import entity.Playlist;
 import entity.User;
 import persistence.PlaylistDAO;
 import persistence.UserDAO;
+import persistence.SharedDAO;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -33,6 +34,7 @@ public class PlaylistAction extends HttpServlet {
     private final PlaylistDAO playlistDAO = new PlaylistDAO();
     private final UserDAO userDAO = new UserDAO();
     private final SongDAO songDAO = new SongDAO();
+    private final SharedDAO sharedDAO = new SharedDAO();
 
     /**
      * Handles HTTP POST requests.
@@ -96,6 +98,8 @@ public class PlaylistAction extends HttpServlet {
         session.setAttribute("message", "Playlist " + playlistDAO.read(listID).getName());
         session.setAttribute("songs", songDAO.getAllThese(listID));
         session.setAttribute("myPlaylists", playlistDAO.getAllMine(user_id));
+        session.setAttribute("potentialSharees", sharedDAO.notSharing(listID, user_id));
+        session.setAttribute("currentSharees", sharedDAO.sharing(listID));
         return "manageAPlaylist.jsp";
     }
 
@@ -143,6 +147,7 @@ public class PlaylistAction extends HttpServlet {
         session.setAttribute("songs", songDAO.getAllThese(listID));
         return "manageAPlaylist.jsp";
     }
+
 
     private String bad() {
         return "index.jsp";

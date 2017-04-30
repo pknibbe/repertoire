@@ -60,13 +60,20 @@ public class UserDAO extends GenericDAO<User, Integer> {
      * @param identifier The system ID of the current user
      * @return The Names of the other users
      */
-    public List<String> getOtherUserNames(int identifier) {
+    public List<String> getOtherUserNames(int identifier) throws HibernateException {
         Session session = getSession();
         Query query = session.createQuery("SELECT U.name FROM User U WHERE U.id <> :identifier");
         query.setParameter("identifier", identifier);
         List<String> names = query.list();
         session.close();
         return names;
+    }
+
+     List<User> getOtherUsers(List<User> outcasts, int pariah) throws HibernateException {
+        List<User> others = getAll();
+        others.remove(read(pariah));
+        others.remove(outcasts);
+        return others;
     }
 
     /**

@@ -49,7 +49,7 @@ public class MultiFileUpload extends HttpServlet {
         logger.debug("This doPost is called");
         logger.debug("Request URI is " + request.getRequestURI());
 
-        url = "ShowAPlaylist";
+        url = "/manageAPlaylist.jsp";
         int listID = (Integer) (session.getAttribute("listID"));
         logger.debug("Session attribute listID is " + listID);
             Collection<Part> parts = request.getParts();
@@ -61,6 +61,7 @@ public class MultiFileUpload extends HttpServlet {
                 }
             }
 
+        session.setAttribute("songs", songDAO.getAllThese(listID));
         session.setAttribute("message", messageContent);
         response.sendRedirect(url);
     }
@@ -87,7 +88,6 @@ public class MultiFileUpload extends HttpServlet {
             messageContent = "Unable to add song";
             logger.info("Song addition failed");
         }
-        logger.info("About to forward to ShowAPlaylist");
     }
 /*
     private String getFileName(final Part part) {

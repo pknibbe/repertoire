@@ -52,7 +52,8 @@ public class DeleteSong extends HttpServlet {
                     session.setAttribute("message", "Song Not Deleted");
                 }
             }
-            url = "/ShowAPlaylist";
+        session.setAttribute("songs", songDAO.getAllThese((Integer) session.getAttribute("listID")));
+            url = "/manageAPlaylist.jsp";
 
             logger.debug("sending redirect to " + url);
             response.sendRedirect(url);

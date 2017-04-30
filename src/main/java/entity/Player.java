@@ -65,7 +65,7 @@ public class Player {
 
     }
 
-    public void increment() {
+     void increment() {
         if (currentSongIndex < (songIds.size() - 1)) { //Possible to skip forward
             currentSongIndex++;
             action = "START";
@@ -85,15 +85,20 @@ public class Player {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        logger.debug("In previous after first signal");
-        if (currentSongIndex < (songIds.size() - 1)) { //Possible to skip forward
-            currentSongIndex++;
-            action = "START";
-        }
-        action = "START";
+        logger.debug("In previous after STOP");
+        decrement();
     }
 
-    public String getCurrentSongLocation() {
+    void decrement() {
+        if (currentSongIndex > 0) { //Possible to skip backward
+            currentSongIndex--;
+            action = "START";
+        } else {
+            stop();
+        }
+    }
+
+    String getCurrentSongLocation() {
         String relativePath = songDAO.getLocation(songIds.get(currentSongIndex));
         return songDAO.getRepository() + relativePath;
     }
