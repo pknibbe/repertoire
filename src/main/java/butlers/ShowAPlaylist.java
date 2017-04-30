@@ -46,19 +46,18 @@ public class ShowAPlaylist extends HttpServlet {
         Playlist playlist;
 
         logger.debug("In doGet");
-        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
-            playlist = playlistDAO.read((Integer) session.getAttribute("listID"));
+
+        int listID = (Integer) session.getAttribute("listID");
+
+        playlist = playlistDAO.read(listID);
             session.setAttribute("listName", playlist.getName());
-            session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
-            session.setAttribute("songs", songDAO.getAllThese((Integer) session.getAttribute("listID")));
+            session.setAttribute("message", "Playlist " + playlistDAO.read(listID).getName());
+            session.setAttribute("songs", songDAO.getAllThese(listID));
 
             logger.debug("Loaded songs");
             url = "/manageAPlaylist.jsp";
 
-        } else { // bounce
-            session.setAttribute("message", "user not authenticated");
-            url = "/index.jsp";
-        }
+
         RequestDispatcher dispatcher = servletContext.getRequestDispatcher(url);
         logger.debug("Redirecting to " + url);
         dispatcher.forward(request, response);

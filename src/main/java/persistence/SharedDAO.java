@@ -113,4 +113,13 @@ public class SharedDAO extends GenericDAO<Shared, Integer> {
         delete(read(find(playlist_id, userID)));
     }
 
+    public List<Playlist> getReceivedPlaylists(int userID) throws HibernateException {
+        Session session = getSession();
+        Query query = session.createQuery("SELECT S.playlist FROM Shared S WHERE S.recipient.id = :userID");
+        query.setParameter("userID", userID);
+        List<Playlist> sharings = session.createCriteria(Shared.class).list();
+        session.close();
+        return sharings;
+    }
+
 }

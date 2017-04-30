@@ -41,13 +41,12 @@ public class DeletePlaylist extends HttpServlet {
         HttpSession session = request.getSession();
         String url;
 
-        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
             Enumeration<String> parameterNames = request.getParameterNames();
+            int playlist_id = (Integer) session.getAttribute("listID");
             while (parameterNames.hasMoreElements()) {
                 String parameterName = parameterNames.nextElement();
                 logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
                 if (parameterName.equalsIgnoreCase("Delete")) {
-                    int playlist_id = (Integer) session.getAttribute("listID");
                     Playlist playlist = playlistDAO.read(playlist_id);
                     playlistDAO.delete(playlist);
 
@@ -56,9 +55,9 @@ public class DeletePlaylist extends HttpServlet {
                     } else {
                         session.setAttribute("message", "List Not Deleted - Is it shared with anyone?");
                     }
-                    logger.debug("removed playlist " + session.getAttribute("listID"));
+                    logger.debug("removed playlist " + playlist_id);
                 } else if (parameterName.equalsIgnoreCase("Cancel")) {
-                    logger.debug("Did not remove playlist " + session.getAttribute("listID"));
+                    logger.debug("Did not remove playlist " + playlist_id);
                     session.setAttribute("message", "List Not Deleted");
                 }
             }
@@ -66,10 +65,5 @@ public class DeletePlaylist extends HttpServlet {
 
             logger.debug("sending redirect to " + url);
             response.sendRedirect(url);
-        } else { // bounce
-            session.setAttribute("message", "user not authenticated");
-            url = "/index.jsp";
-            response.sendRedirect(url);
-        }
     }
 }

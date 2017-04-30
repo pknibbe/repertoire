@@ -2,6 +2,8 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 4/29 | Individual Project | 5 | Get user interface and player functionality working nicely |
+| 4/29 | Individual Project | 1 | Update Readme.md file and work off actions from instructor code reviews |
 | 4/28 | Individual Project | 4 | Generic DAO for the remaining tables |
 | 4/27 | Individual Project | 4 | Generic DAO for some tables |
 | 4/26 | Individual Project | 1 | Get more pages working in playlist creation, management, and playing workflow |

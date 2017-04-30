@@ -16,6 +16,8 @@
                 <p></p><p></p>
                 <legend>My Playlists</legend>
 
+                <p>________________________________________</p>
+
                 <div class=pure-g">
 
                     <div class="pure-u-1 pure-u-md-1-5">List Name</div>
@@ -24,8 +26,34 @@
                     <div class="pure-u-1 pure-u-md-1-5"></div>
 
 
-                    <c:forEach var="playbill" items="${playlists}">
-                        <p>Playlist isPlaying is ${isPlaying}</p>
+                    <c:forEach var="playbill" items="${myPlaylists}">
+                        <div class="pure-u-1 pure-u-md-1-5">${playbill.name}</div>
+                        <div class="pure-u-1 pure-u-md-1-5">Me</div>
+
+                        <div class="pure-u-1 pure-u-md-1-8">
+                            <input class="pure-input-1" type="submit" name="delete${playbill.playlist_id}" value="delete" />
+                        </div>
+
+                        <div class="pure-u-1 pure-u-md-1-8">
+                            <input class="pure-input-1" type="submit" name="manage${playbill.playlist_id}" value="manage" />
+                        </div>
+
+                        <c:if test="${isPlaying == false}">
+                            <div class="pure-u-1 pure-u-md-1-12">
+                                <input class="pure-input-1" type="submit" name="toggle${playbill.playlist_id}" value="Play" />
+                            </div>
+                        </c:if>
+                        <c:if test="${isPlaying == true}">
+                            <div class="pure-u-1 pure-u-md-1-12">
+                                <p></p>
+                            </div>
+                        </c:if>
+                        <div class="pure-u-1 pure-u-md-1-6">
+                        </div>
+                    </c:forEach>
+
+
+                    <c:forEach var="playbill" items="${receivedPlaylists}">
                         <div class="pure-u-1 pure-u-md-1-5">${playbill.name}</div>
                         <div class="pure-u-1 pure-u-md-1-5">${playbill.owner.name}</div>
 
@@ -36,24 +64,32 @@
                         </c:if>
                         <c:if test="${isPlaying == true}">
                             <div class="pure-u-1 pure-u-md-1-12">
-                                <input class="pure-input-1" type="submit" name="toggle${playbill.playlist_id}" value="Stop" />
+                                <p></p>
                             </div>
                         </c:if>
+                        <div class="pure-u-1 pure-u-md-1-2">
+                            <p></p>
+                        </div>
 
-                        <div class="pure-u-1 pure-u-md-1-8">
-                            <input class="pure-input-1" type="submit" name="manage${playbill.playlist_id}" value="manage" />
-                        </div>
-                        <div class="pure-u-1 pure-u-md-1-4">
-                        </div>
                     </c:forEach>
-
                     <p></p>
+                    <h2>Create a new List</h2>
                     <div class="pure-u-1 pure-u-md-1-2">
                         Name of new list:
                         <input class="pure-input-1" id="listname" type="text" name="listname" placeholder="NewList">
                     </div>
                     <div class="pure-u-1 pure-u-md-1-8"><p></p>
                         <input class="pure-input-1" type="submit" name="create" value="create" />
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <p></p>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-8"><p></p>
+                        <c:if test="${isPlaying == true}">
+                            <div class="pure-u-1 pure-u-md-1-12">
+                                <input class="pure-input-1" type="submit" name="toggle${playbill.playlist_id}" value="Stop" />
+                            </div>
+                        </c:if>
                     </div>
                 </div>
             </fieldset>

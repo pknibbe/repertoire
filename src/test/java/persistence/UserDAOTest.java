@@ -96,13 +96,6 @@ public class UserDAOTest {
     }
 
     @Test
-    public void testAuthenticated() throws Exception {
-        assertTrue(dao.authenticated(newUserID));
-        assertFalse(dao.authenticated(null));
-        assertFalse(dao.authenticated(-1));
-    }
-
-    @Test
     public void testVerifyCredentials() throws Exception {
         /*        int user_id = userDAO.getIdByUsername(userName);
 

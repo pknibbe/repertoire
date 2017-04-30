@@ -38,10 +38,9 @@ public class SharePlaylist extends HttpServlet {
                 throws ServletException, IOException {
             HttpSession session = request.getSession();
 
-            int user_id = (Integer) session.getAttribute("user_id");
             int playlist_id = (Integer) session.getAttribute("listID");
             String url;
-            if (userDAO.authenticated(user_id)) {
+
                 if (request.getParameter("Cancel") != null) {
                     url = "ShowAPlaylist";
                 } else {
@@ -66,10 +65,7 @@ public class SharePlaylist extends HttpServlet {
                     }
                     url = "/sharePlaylist.jsp";
                 }
-            } else {
-                session.setAttribute("message", "user not authenticated");
-                url = "/index.jsp";
-            }
+
             response.sendRedirect(url);
         }
     }

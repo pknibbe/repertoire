@@ -39,7 +39,6 @@ public class DeleteSong extends HttpServlet {
         HttpSession session = request.getSession();
         String url;
 
-        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
             Enumeration<String> parameterNames = request.getParameterNames();
             while (parameterNames.hasMoreElements()) {
                 String parameterName = parameterNames.nextElement();
@@ -57,10 +56,6 @@ public class DeleteSong extends HttpServlet {
 
             logger.debug("sending redirect to " + url);
             response.sendRedirect(url);
-        } else { // bounce
-            session.setAttribute("message", "user not authenticated");
-            url = "/index.jsp";
-            response.sendRedirect(url);
-        }
+
     }
 }

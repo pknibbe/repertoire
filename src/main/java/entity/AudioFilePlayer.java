@@ -1,6 +1,5 @@
 package entity;
 
-
 import java.io.File;
 import java.io.IOException;
 
@@ -15,10 +14,15 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import static javax.sound.sampled.AudioSystem.getAudioInputStream;
 import static javax.sound.sampled.AudioFormat.Encoding.PCM_SIGNED;
 /**
+ * Plays a music file at a specified file path
  * Copied from https://odoepner.wordpress.com/2013/07/19/play-mp3-or-ogg-using-javax-sound-sampled-mp3spi-vorbisspi/
  */
 class AudioFilePlayer {
 
+    /**
+     * Plays a music file
+     * @param filePath The location of the music file
+     */
     public void play(String filePath) {
         final File file = new File(filePath);
 

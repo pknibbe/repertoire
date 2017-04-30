@@ -38,6 +38,7 @@ import java.io.IOException;
         session.setAttribute("name", "");
         session.setAttribute("listID", "");
         session.setAttribute("playlists", "");
+        session.setAttribute("securityMessage", "");
         RequestDispatcher dispatcher;
 
         dispatcher = servletContext.getRequestDispatcher("/index.jsp");

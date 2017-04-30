@@ -14,22 +14,20 @@ import org.apache.log4j.Logger;
 public class Player {
 
     private final Logger logger = Logger.getLogger(this.getClass());
-    private int currentSongIndex;
+    private final SongDAO songDAO = new SongDAO();
     private List<Integer> songIds;
+    private int currentSongIndex;
     private String action;
-    private SongDAO songDAO;
-    private boolean isPlaying;
-    private Playlist playlist;
 
     /**
-     * Populates the instance variables
+     * Constructor populates the instance variables
      * @param playlistId The system ID of the playlist
      */
     public Player(int playlistId) {
-        songDAO = new SongDAO();
-        songIds = songDAO.getSongIds(playlistId);
         logger.debug("In constructor");
+        songIds = songDAO.getSongIds(playlistId);
         currentSongIndex = 0;
+        start();
         Thread pmThread = new Thread(new PlayManager(this));
         pmThread.start();
     }

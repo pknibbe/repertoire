@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import entity.User;
 
 //import org.apache.log4j.Logger;
 
@@ -38,18 +39,16 @@ import java.io.IOException;
                 throws ServletException, IOException {
             HttpSession session = request.getSession();
 
-            int user_id = (Integer) session.getAttribute("user_id");
+            int user_id = ((User) session.getAttribute("user")).getId();
             String url;
-            if (userDAO.authenticated(user_id)) {
+
                 int recipientId = userDAO.getIdByName(request.getParameter("to"));
                 Message message = new Message(request.getParameter("subject"), userDAO.read(user_id), userDAO.read(recipientId), 0,
                         request.getParameter("content"));
                 messageDAO.create(message);
                 url = "ShowMessages";
-            } else {
-                session.setAttribute("message", "user not authenticated");
-                url = "/index.jsp";
-            }
+
+
             response.sendRedirect(url);
         }
     }

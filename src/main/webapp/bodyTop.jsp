@@ -10,31 +10,30 @@ You can also purchase a PSD-file for this template.
 <html xmlns="http://www.w3.org/1999/xhtml">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<!-- header -->
+<div id="header">
+    <img src="images/logo.png" width = 1000 alt = "Repertoire">
 
-    <c:set var="userID" value="${user_id}"></c:set>
-    <!-- header -->
-    <div id="header">
-        <img src="images/logo.png" width = 800>
+    <h1>noun: All the Music You Can Play</h1>
 
-        <h1>noun: All the Music You Can Play</h1>
-        <h2>${message}</h2>
-        <c:if test="${userID > 0}">
-            <h4>If you are not ${name}, please logout and log back in as yourself.</h4>
-        </c:if>
-    </div>
-    <div id="menu">
-        <c:set var="role" value="${user_role}"></c:set>
-        <c:set var="boss" value="administrator"></c:set>
-
-        <div class=pure-g">
-            <div class="pure-u-1-5"><a href="ShowPlaylists">Music</a></div>
+    <c:if test="${user.id > 0}">
+        <div class="pure-g" id="menu">
+            <div class="pure-u-1-5"><a href="showPlaylists.jsp">Music</a></div>
             <div class="pure-u-1-5"><a href="ShowMessages">Messages</a></div>
-            <c:if test="${role eq boss}" >
-                <div class="pure-u-1-5"><a href="ShowUsers">Administration</a></div>
-            </c:if>
+            <div class="pure-u-1-5"><a href="ShowUsers">User Information</a></div>
             <div class="pure-u-1-5"><a href="LogOut">LogOut</a></div>
         </div>
-    </div>
+    </c:if>
+
+    <!--div class="pure-g">
+        <div class="pure-u-1-1"><h2>${message}</h2></div>
+        <div class="pure-u-1-1"><h4>${securityMessage}</h4></div>
+        <div class="pure-u-1-1"><p>. </p></div>
+        <div class="pure-u-1-1"><p>. </p></div>
+        <div class="pure-u-1-1"><p>. </p></div>
+    </div-->
+</div>
+
     <!--end header -->
     <!-- main -->
 

@@ -1,10 +1,10 @@
 # repertoire
 Enterprise Java project: music manager
 
-Wanting a single, convenient place on the cloud to access all of the music to which I have rights
-by way of purchase, service permissions, or because it is publicly available on the web. This site will
-not give me a hard time about permissions or credit cards. It will allow me to upload music or music links
-and share my music with family members to whom I will give accounts.
+This project is intended to provide a single, convenient place on the cloud
+to access all of the music to which I have the rights. This site will
+not give me a hard time about permissions or credit cards. It will allow me 
+to upload music and share my music with family members to whom I give accounts.
 
 
 ### Project Technologies/Techniques 
@@ -12,32 +12,31 @@ and share my music with family members to whom I will give accounts.
 * Security/Authentication
   * Admin role: create/read/update/delete (crud) of all data
   * User role: create/play/edit own information and playlists
-  * All: May create a list of publicly available music for unknown visitors
-* util.Database (MySQL and Hibernate)
-  * Store users and roles
-  * Store playlist information
-  * May store login credentials for other services
+  * Guest role: Access to listen to playlists I (administrator) mark for guest users
+* Database (MySQL and Hibernate) Tables for:
+  * users
+  * songs (links to locations)
+  * song lists
+  * messages 
+  * song list sharing
 * Web Services or APIs
-  * MyTunes
-  * Amazon Prime
-  * May include capability to send gmail from repertoire account
-* Bootstrap?
+  * MP3 player
 * Logging
-  * Configurable logging using Log4J. In production, only errors will normally be logged, but logging 
-     at a debug level can be turned on to facilitate trouble-shooting. 
+  * Configurable logging using Log4J. In production, only errors will 
+  normally be logged, but logging at a debug level can be turned on to 
+  facilitate trouble-shooting. 
 * Site and database hosted on AWS
-* Jenkins for Continuous Integration
 * Unit Testing
-  * JUnit tests to achieve 80% code coverage
+  * JUnit tests to achieve 80% code coverage of persistence classes
 * Independent Research Topic
-  * Automating access to places like Amazon Prime music streaming?
+  * Pure CSS for web pages
 
-### Design - these are still copies from sample
+### Design
 
-* [Screen Design](DesignDocuments/Screens.md)
-* [Application Flow](DesignDocuments/applicationFlow.md)
-* [util.Database Design](DesignDocuments/databaseDiagram.png)
+* [Screen Design](https://github.com/pknibbe/repertoire/tree/master/Images)
+* [Application Flow](https://github.com/pknibbe/repertoire/tree/master/DesignDocuments/applicationFlow.md)
+* [util.Database Design](https://github.com/pknibbe/repertoire/tree/master/Images/Database.png)
 
-### [Project Plan](Planning/ProjectPlan.md)
+### [Project Plan](https://github.com/pknibbe/repertoire/tree/master/Planning/ProjectPlan.md)
 
-### [Time Log](TimeLog.md)
+### [Time Log](https://github.com/pknibbe/repertoire/tree/master/TimeLog.md)

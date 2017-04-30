@@ -40,4 +40,11 @@ public class User {
     this.role_name = role;
   }
 
+  public User(int id) {
+    this.id = id;
+    this.name = "Guest";
+    this.role_name = "Guest";
+    this.user_name = "Guest";
+    this.user_pass = "Guest";
+  }
 }

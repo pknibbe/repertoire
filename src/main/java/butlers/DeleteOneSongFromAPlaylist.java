@@ -41,7 +41,6 @@ public class DeleteOneSongFromAPlaylist extends HttpServlet {
         int list_id = (Integer) session.getAttribute("listID");
 
         logger.debug("This doPost is called");
-        logger.debug("The user ID is " + session.getAttribute("user_id"));
 
         Enumeration<String> parameterNames = request.getParameterNames();
 
@@ -53,7 +52,6 @@ public class DeleteOneSongFromAPlaylist extends HttpServlet {
             logger.debug("Parameter value is " + request.getParameter(pName));
         }
 
-        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
             int songID = Integer.valueOf(request.getParameter("songID"));
 
             logger.debug("In delete section");
@@ -63,9 +61,5 @@ public class DeleteOneSongFromAPlaylist extends HttpServlet {
                 session.setAttribute("message", "Can't delete song from shared playlist");
                 response.sendRedirect("/manageAPlaylist.jsp");
             } else response.sendRedirect("/deleteSongConfirmation.jsp");
-        } else { // user not authenticated
-            session.setAttribute("message", "user not authenticated");
-            response.sendRedirect("/index.jsp");
-        }
     }
 }

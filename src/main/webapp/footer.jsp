@@ -3,13 +3,13 @@
 <!-- footer -->
 <div id="footer">
 
+    <h2>${message}</h2>
+    <h4>${securityMessage}</h4>
+
     <div id="footer_left">&copy; Copyright 2017 Peter Knibbe</div>
 
     <div id="footer_right">
-        <!-- Please do not change or delete these links. Read the license! Thanks. :-) -->
-        Design by <a href="http://www.designity.org/">Free Web Design Community</a>,
-        Courtesy <a href="http://www.openwebdesign.org" target="_blank">OWD</a>, Thanks to
-        <a href="http://www.ecommercewebsites.com.au/" target="_blank">Web Design</a>
+        <a href="https://github.com/pknibbe/repertoire/blob/master/README.md" target="_blank">Project Readme File</a>
     </div>
 
 </div>

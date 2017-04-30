@@ -47,13 +47,11 @@ public class MultiFileUpload extends HttpServlet {
         String url = "/index.jsp";
 
         logger.debug("This doPost is called");
-        logger.debug("The user ID is " + session.getAttribute("user_id"));
         logger.debug("Request URI is " + request.getRequestURI());
 
-        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
-            url = "ShowAPlaylist";
-            logger.info("Session attribute listID is " + session.getAttribute("listID"));
-            int listID = (Integer) (session.getAttribute("listID"));
+        url = "ShowAPlaylist";
+        int listID = (Integer) (session.getAttribute("listID"));
+        logger.debug("Session attribute listID is " + listID);
             Collection<Part> parts = request.getParts();
             for (Part part : parts) {
                 String path1 = part.getSubmittedFileName();
@@ -62,9 +60,7 @@ public class MultiFileUpload extends HttpServlet {
                     processRequest(part, part.getSubmittedFileName(), listID);
                 }
             }
-        } else { // user not authenticated
-            messageContent = "user not authenticated";
-        }
+
         session.setAttribute("message", messageContent);
         response.sendRedirect(url);
     }

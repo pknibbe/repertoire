@@ -2,9 +2,10 @@ package butlers;
 
 import org.apache.log4j.Logger;
 import persistence.UserDAO;
+import persistence.PlaylistDAO;
+import persistence.SharedDAO;
 import entity.User;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,8 +16,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * Get the internal home page
- * Created by peter on 2/8/2017.
+ * Set up session attributes and set the internal home page
+ * Created by peter on 4/29/2017.
  */
 @WebServlet(
         name = "ExternalAction",
@@ -24,6 +25,8 @@ import java.io.IOException;
 ) public class ExternalAction extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     private final UserDAO userDAO = new UserDAO();
+    private final PlaylistDAO playlistDAO = new PlaylistDAO();
+    private final SharedDAO sharedDAO = new SharedDAO();
 
     /**
      *  Handles HTTP GET requests.
@@ -37,31 +40,30 @@ import java.io.IOException;
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
-        RequestDispatcher dispatcher;
 
         logger.debug("user_name is " + request.getParameter("userName"));
         logger.debug("user_pass is " + request.getParameter("password"));
-        String password = request.getParameter("password");
         String userName = request.getParameter("userName");
         int user_id = userDAO.getIdByUsername(userName);
 
-        if (!userDAO.verifyCredentials(user_id, userName, password)) {
-            session.setAttribute("message", "User Credentials not verified");
+        if (!userDAO.verifyCredentials(user_id, userName, request.getParameter("password"))) {
+            session.setAttribute("user", UserDAO.getGuest());
+            session.setAttribute("message", "User Credentials not verified. Logged in as Guest");
+            session.setAttribute("securityMessage","To access controlled features" +
+                                                          ", please log out and log back in as yourself." );
+        } else {
+            User user = userDAO.read(user_id);
 
-            dispatcher = servletContext.getRequestDispatcher("/index.jsp");
-            dispatcher.forward(request, response);
+            session.setAttribute("user", user);
+            session.setAttribute("message", "Welcome, " + user.getName() + ".");
+            session.setAttribute("securityMessage", " If you are not " + user.getName() +
+                                                           ", please log out and log back in as yourself.");
         }
-
-        User user = userDAO.read(user_id);
-
-        session.setAttribute("user", user);
-        session.setAttribute("message", "Welcome, " + user.getName());
         session.setAttribute("listID", 0);
         session.setAttribute("isPlaying", false);
+        session.setAttribute("myPlaylists", playlistDAO.getAllMine(user_id));
+        session.setAttribute("receivedPlaylists", sharedDAO.getReceivedPlaylists(user_id));
 
-        String url = "/ShowPlaylists";
-
-        dispatcher = servletContext.getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+        Navigator.forward(request, response, servletContext, "/showPlaylists.jsp");
     }
 }

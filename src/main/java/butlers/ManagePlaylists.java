@@ -46,19 +46,18 @@ public class ManagePlaylists extends HttpServlet {
         Player player;
 
         int listID;
-        int user_id = (Integer) session.getAttribute("user_id");
+        User user = (User) session.getAttribute("user");
 
-        if (userDAO.authenticated(user_id)) {
 
             listID = Integer.valueOf(request.getParameter("listID"));
             if (listID == 0) { // request to create a new list
                 String name = request.getParameter("newName");
-                listID = playlistDAO.create( new Playlist(name, userDAO.read(user_id)));
+                listID = playlistDAO.create( new Playlist(name, user));
                 Playlist playlist = playlistDAO.read(listID);
                 session.setAttribute("listName", playlist.getName());
                 session.setAttribute("listID", listID);
-                session.setAttribute("message", "Playlist " + session.getAttribute("listName"));
-                session.setAttribute("songs", songDAO.getAllThese((Integer) session.getAttribute("listID")));
+                session.setAttribute("message", "Playlist " + playlistDAO.read(listID).getName());
+                session.setAttribute("songs", "");
                 url = "manageAPlaylist.jsp";
             } else {
                 Enumeration<String> parameterNames = request.getParameterNames();
@@ -102,10 +101,7 @@ public class ManagePlaylists extends HttpServlet {
                 session.setAttribute("listID", listID);
                 session.setAttribute("listName", playlistDAO.read(listID).getName());
             }
-        } else { // user not authenticated
-            session.setAttribute("message", "user not authenticated");
-            url = "/index.jsp";
-        }
+
         response.sendRedirect(url);
     }
 }

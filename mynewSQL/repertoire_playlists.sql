@@ -1,2 +1,0 @@
-CREATE TABLE repertoire.playlists (id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  name CHAR(25) NOT NULL);

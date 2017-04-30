@@ -34,20 +34,6 @@ public class UserDAO extends GenericDAO<User, Integer> {
     }
 
     /**
-     * Determines whether a session has an authenticated user
-     *
-     * @param user_id The id to be authenticated
-     * @return whether the user could be authenticated
-     */
-    public boolean authenticated(Integer user_id) {
-        boolean aok = false;
-        if (user_id != null) {
-            if (user_id > 0) aok = true;
-        }
-        return aok;
-    }
-
-    /**
      * Determines whether a set of credentials is valid
      *
      * @param user_id The user id first part of the credential set
@@ -136,6 +122,10 @@ public class UserDAO extends GenericDAO<User, Integer> {
         return 0;
     }
 
+    public static User getGuest() {
+        return new User(0);
+    }
+
     /**
      * Performs simple checks for an acceptable username
      *
@@ -143,7 +133,9 @@ public class UserDAO extends GenericDAO<User, Integer> {
      * @return whether the username is acceptable
      */
     static boolean checkUsername(String username) {
-        return ((2 < username.length() && (fieldLength >= username.length()))); // Require at least 3 characters in username
+        return ((2 < username.length()) &&
+                (fieldLength >= username.length()) &&
+                (!username.equalsIgnoreCase("Guest"))); // Require at least 3 characters in username
     }
 
     /**

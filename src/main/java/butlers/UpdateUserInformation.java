@@ -39,7 +39,6 @@ class UpdateUserInformation extends HttpServlet {
 
             String url;
 
-            if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
 
                     User user = userDAO.read(Integer.valueOf(request.getParameter("id")));
                     user.setRole_name(request.getParameter("Role"));
@@ -50,10 +49,6 @@ class UpdateUserInformation extends HttpServlet {
 
                 url = "ShowUsers";
 
-            } else {
-                session.setAttribute("message", "user not authenticated");
-                url = "/index.jsp";
-            }
             response.sendRedirect(url);
         }
     }

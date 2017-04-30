@@ -28,13 +28,25 @@ public class PlaylistDAO extends GenericDAO<Playlist, Integer> {
      * @return All Playlists
      */
     @SuppressWarnings("JpaQlInspection")
-    public List<Playlist> getAll(int user_id) throws HibernateException {
+    public List<Playlist> getAllMine(int user_id) throws HibernateException {
         Session session = getSession();
         Query query = session.createQuery("FROM Playlist P WHERE P.owner.id = :user_id");
-        List<Playlist> playlists = query.list();
         query.setParameter("user_id", user_id);
+        List<Playlist> playlists = query.list();
         session.close();
         return playlists;
+    }
+
+    /**
+     * Removes a playlist after making safety checks for ownership and sharing status
+     * @param listID The system ID of the playlist
+     * @param user_id The user trying to delete the playlist
+     */
+    public void remove(int listID, int user_id) {
+        Playlist playlist = read(listID);
+        if (playlist.getOwner().getId() != user_id) return; // Non-owner can't delete a playlist
+        if (new SharedDAO().isShared(listID)) return;
+        delete(playlist);
     }
 
 }

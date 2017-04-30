@@ -40,8 +40,8 @@ public class UpdateAccounts extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         String role = "administrator";
-        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
-            if (role.equalsIgnoreCase((String) session.getAttribute("user_role"))) {
+
+            if (role.equalsIgnoreCase(((User) session.getAttribute("user")).getRole_name())) {
                 String userID = request.getParameter("userID");
                 int identifier;
                 if (userID != null) { // protect against empty input
@@ -89,10 +89,7 @@ public class UpdateAccounts extends HttpServlet {
                 session.setAttribute("message", "Not authorized to manage user accounts");
                 url = "ShowPlaylists";
             }
-        } else { // bounce
-            session.setAttribute("message", "user not authenticated");
-            url = "/index.jsp";
-        }
+
         logger.debug("sending redirect to " + url);
         response.sendRedirect(url);
     }

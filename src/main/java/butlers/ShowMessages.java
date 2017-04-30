@@ -2,7 +2,7 @@ package butlers;
 
 import persistence.MessageDAO;
 import entity.Message;
-import entity.PresentableMessage;
+import entity.User;
 import persistence.UserDAO;
 
 import javax.servlet.RequestDispatcher;
@@ -42,19 +42,14 @@ public class ShowMessages extends HttpServlet {
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
         String url;
-        int user_id = (Integer) session.getAttribute("user_id");
+        User user = (User) session.getAttribute("user");
 
-        if (userDAO.authenticated(user_id)) {
-            List<Message> messages = messageDAO.getAll(user_id);
+            List<Message> messages = messageDAO.getAll(user.getId());
 
             session.setAttribute("messages", messages);
-            session.setAttribute("names", userDAO.getOtherUserNames(user_id));
+            session.setAttribute("names", userDAO.getOtherUserNames(user.getId()));
             url = "/messages.jsp";
 
-        } else {
-            session.setAttribute("message", "user not authenticated");
-            url = "/index.jsp";
-        }
         RequestDispatcher dispatcher = servletContext.getRequestDispatcher(url);
         dispatcher.forward(request, response);
     }

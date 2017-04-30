@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.*;
 import persistence.UserDAO;
+import entity.User;
 
 /**
  * Get the full list of users to populate the user management page
@@ -40,8 +41,8 @@ public class ShowUsers extends HttpServlet {
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
         String role = "administrator";
-        if (userDAO.authenticated((Integer) session.getAttribute("user_id"))) {
-            if (role.equalsIgnoreCase((String) session.getAttribute("user_role"))) {
+
+            if (role.equalsIgnoreCase(((User) session.getAttribute("user")).getRole_name())) {
 
                 request.setAttribute("users", userDAO.getAll());
 
@@ -55,11 +56,6 @@ public class ShowUsers extends HttpServlet {
 
             }
 
-        } else {
-            dispatcher = servletContext.getRequestDispatcher("/index.jsp");
-            session.setAttribute("message", "Not authorized.");
-            logger.debug("Dispatching request forward to index.jsp");
-        }
         logger.debug("Using dispatcher " + dispatcher.toString());
         dispatcher.forward(request, response);    }
 }
