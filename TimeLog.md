@@ -2,6 +2,7 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 4/30 | Individual Project | 1 | Rebuild with modified protections allowing guest user access |
 | 4/29 | Individual Project | 2 | Work on other playlist management screens and functionality |
 | 4/29 | Individual Project | 5 | Get user interface and player functionality working nicely |
 | 4/29 | Individual Project | 1 | Update Readme.md file and work off actions from instructor code reviews |

@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+import entity.User;
 import persistence.SharedDAO;
 
 //import org.apache.log4j.Logger;
@@ -36,17 +37,20 @@ public class SharePlaylist extends HttpServlet {
                 throws ServletException, IOException {
             HttpSession session = request.getSession();
 
-            int playlist_id = (Integer) session.getAttribute("listID");
-            int user_id = Integer.valueOf(request.getParameter("userID"));
+            if (((User) session.getAttribute("user")).getId() < 1) {
+                Navigator.redirect(response, "LogOut");
+            } else {
+                int userID = (Integer) session.getAttribute("userID");
+                int playlist_id = (Integer) session.getAttribute("listID");
+                if (request.getParameter("Share") != null) {
+                    sharedDAO.share(playlist_id, userID);
+                } else if (request.getParameter("UnShare") != null) {
+                    sharedDAO.delete(sharedDAO.read(sharedDAO.find(playlist_id, userID)));
+                }
 
-            if (request.getParameter("Share") != null) {
-                sharedDAO.share(playlist_id, user_id);
-            } else if (request.getParameter("UnShare") != null) {
-                sharedDAO.delete(sharedDAO.read(sharedDAO.find(playlist_id, user_id)));
+                session.setAttribute("potentialSharees", sharedDAO.notSharing(playlist_id, userID));
+                session.setAttribute("currentSharees", sharedDAO.sharing(playlist_id));
+                Navigator.redirect(response, "/manageAPlaylist");
             }
-
-            session.setAttribute("potentialSharees", sharedDAO.notSharing(playlist_id, user_id));
-            session.setAttribute("currentSharees", sharedDAO.sharing(playlist_id));
-            Navigator.redirect(response, "/manageAPlaylist");
         }
     }

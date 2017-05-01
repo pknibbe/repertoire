@@ -70,8 +70,8 @@
                         <div class="pure-u-1 pure-u-md-1-2">
                             <p></p>
                         </div>
-
                     </c:forEach>
+
                     <p></p>
                     <h2>Create a new List</h2>
                     <div class="pure-u-1 pure-u-md-1-2">
@@ -91,7 +91,7 @@
                             </div>
                         </c:if>
                     </div>
-                </div>
+                </div>  <!-- class pure-g -->
             </fieldset>
         </form>
     </div>

@@ -1,5 +1,6 @@
 package butlers;
 
+import entity.User;
 import org.apache.log4j.Logger;
 import persistence.UserDAO;
 import persistence.SongDAO;
@@ -39,6 +40,10 @@ public class DeleteSong extends HttpServlet {
         HttpSession session = request.getSession();
         String url;
 
+        if (((User) session.getAttribute("user")).getId() < 1) { // Guest users may not create, delete, or manage playlists
+            Navigator.redirect(response, "LogOut");
+        } else {
+
             Enumeration<String> parameterNames = request.getParameterNames();
             while (parameterNames.hasMoreElements()) {
                 String parameterName = parameterNames.nextElement();
@@ -52,11 +57,8 @@ public class DeleteSong extends HttpServlet {
                     session.setAttribute("message", "Song Not Deleted");
                 }
             }
-        session.setAttribute("songs", songDAO.getAllThese((Integer) session.getAttribute("listID")));
-            url = "/manageAPlaylist.jsp";
-
-            logger.debug("sending redirect to " + url);
-            response.sendRedirect(url);
-
+            session.setAttribute("songs", songDAO.getAllThese((Integer) session.getAttribute("listID")));
+            response.sendRedirect("/manageAPlaylist.jsp");
+        }
     }
 }

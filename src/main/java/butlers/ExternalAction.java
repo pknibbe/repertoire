@@ -5,7 +5,7 @@ import persistence.UserDAO;
 import persistence.PlaylistDAO;
 import persistence.SharedDAO;
 import entity.User;
-
+import entity.Playlist;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Set up session attributes and set the internal home page

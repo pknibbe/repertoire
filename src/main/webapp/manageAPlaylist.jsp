@@ -3,6 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:import url="/head.jsp" />
 <body>
 <c:import url="/bodyTop.jsp" />
@@ -59,30 +60,34 @@
             </form>
             <h3>. </h3>
 
+            <c:if test="${fn:length(potentialSharees) gt 0}">
+                <form action="SharePlaylist" method="POST">
+                    <table>
+                        <c:forEach var="user" items="${potentialSharees}">
+                            <tr>
+                                <td><input type="radio" name="userID" value=${user.id} /></td>
+                                <td>${user.name}</td>
+                            </tr>
+                        </c:forEach>
+                    </table>
 
-            <form action="SharePlaylist" method="POST">
-                <table>
-                    <c:forEach var="user" items="${potentialSharees}">
-                        <tr>
-                            <td><input type="radio" name="userID" value=${user.id} /></td>
-                            <td>${user.name}</td>
-                        </tr>
-                    </c:forEach>
-                </table>
+                    <input type="submit" name="Share" value="Share" />
+                </form>
+            </c:if>
 
-                <input type="submit" name="Share" value="Share" />
-
-                <table>
-                    <c:forEach var="user" items="${currentSharees}">
-                        <tr>
-                            <td><input type="radio" name="userID" value=${user.id} /></td>
-                            <td>${user.name}</td>
-                        </tr>
-                    </c:forEach>
-                </table>
-                <input type="submit" name="UnShare" value="Unshare" />
-
-            </form>
+            <c:if test="${fn:length(currentSharees) gt 0}">
+                <form action="SharePlaylist" method="POST">
+                    <table>
+                        <c:forEach var="user" items="${currentSharees}">
+                            <tr>
+                                <td><input type="radio" name="userID" value=${user.id} /></td>
+                                <td>${user.name}</td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                    <input type="submit" name="UnShare" value="Unshare" />
+                </form>
+            </c:if>
         </div>
     </div> <!-- pure-g -->
 </div>

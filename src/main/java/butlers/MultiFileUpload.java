@@ -1,6 +1,7 @@
 package butlers;
 
 import entity.Song;
+import entity.User;
 import persistence.SongDAO;
 import org.apache.log4j.Logger;
 import javax.servlet.ServletException;
@@ -11,7 +12,6 @@ import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
-import persistence.UserDAO;
 import persistence.PlaylistDAO;
 
 /**
@@ -26,7 +26,6 @@ import persistence.PlaylistDAO;
 )
 @MultipartConfig
 public class MultiFileUpload extends HttpServlet {
-    private final UserDAO userDAO = new UserDAO();
     private final SongDAO songDAO = new SongDAO();
     private final PlaylistDAO playlistDAO = new PlaylistDAO();
 
@@ -44,14 +43,13 @@ public class MultiFileUpload extends HttpServlet {
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        String url = "/index.jsp";
 
-        logger.debug("This doPost is called");
-        logger.debug("Request URI is " + request.getRequestURI());
+        if (((User) session.getAttribute("user")).getId() < 1) { // Guest users may not create, delete, or edit playlists
+            response.sendRedirect("LogOut");
+        } else {
+            int listID = (Integer) (session.getAttribute("listID"));
 
-        url = "/manageAPlaylist.jsp";
-        int listID = (Integer) (session.getAttribute("listID"));
-        logger.debug("Session attribute listID is " + listID);
+            logger.debug("Session attribute listID is " + listID);
             Collection<Part> parts = request.getParts();
             for (Part part : parts) {
                 String path1 = part.getSubmittedFileName();
@@ -61,9 +59,10 @@ public class MultiFileUpload extends HttpServlet {
                 }
             }
 
-        session.setAttribute("songs", songDAO.getAllThese(listID));
-        session.setAttribute("message", messageContent);
-        response.sendRedirect(url);
+            session.setAttribute("songs", songDAO.getAllThese(listID));
+            session.setAttribute("message", messageContent);
+            response.sendRedirect("manageAPlaylist.jsp");
+        }
     }
 
     private void processRequest(Part part, String filePath, int playListId) throws IOException{

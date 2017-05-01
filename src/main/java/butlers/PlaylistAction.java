@@ -51,36 +51,37 @@ public class PlaylistAction extends HttpServlet {
         boolean redirected = false;
 
         int user_id = ((User) session.getAttribute("user")).getId();
-        if (user_id < 1) {
-            Navigator.redirect(response, bad());
-            redirected = true;
-        } else {
-            Enumeration<String> parameterNames = request.getParameterNames();
-            while (parameterNames.hasMoreElements()) {
-                String parameterName = parameterNames.nextElement();
-                String parameterValue = request.getParameter(parameterName);
-                logger.debug("Parameter " + parameterName + " found with value " + request.getParameter(parameterName));
 
-                if (parameterName.equalsIgnoreCase("create")) {
+        Enumeration<String> parameterNames = request.getParameterNames();
+        while (parameterNames.hasMoreElements()) {
+            String parameterName = parameterNames.nextElement();
+            String parameterValue = request.getParameter(parameterName);
+            logger.debug("Parameter " + parameterName + " found with value " + request.getParameter(parameterName));
+
+            // Guest users may play their playlists
+            if (parameterValue.equalsIgnoreCase("Play")) {
+                Navigator.redirect(response, play(Integer.valueOf(parameterName.substring(6)), session));
+                redirected = true;
+            } else if (parameterValue.equalsIgnoreCase("Stop")) {
+                Navigator.redirect(response, stop(session));
+                redirected = true;
+            } else if (user_id < 1) { // Guest users may not create, delete, or manage playlists
+                Navigator.redirect(response, "LogOut");
+                redirected = true;
+            } else if (parameterName.equalsIgnoreCase("create")) {
                     Navigator.redirect(response, create(request, session, user_id));
                     redirected = true;
-                } else if (parameterValue.equalsIgnoreCase("Play")) {
-                    Navigator.redirect(response, play(Integer.valueOf(parameterName.substring(6)), session));
-                    redirected = true;
-                } else if (parameterValue.equalsIgnoreCase("Stop")) {
-                    Navigator.redirect(response, stop(session));
-                    redirected = true;
-                } else if (parameterValue.equalsIgnoreCase("manage")) {
+            } else if (parameterValue.equalsIgnoreCase("manage")) {
                     Navigator.redirect(response, manage(session, Integer.valueOf(parameterName.substring(6))));
                     redirected = true;
-                } else if (parameterValue.equalsIgnoreCase("delete")) {
+            } else if (parameterValue.equalsIgnoreCase("delete")) {
                     Navigator.redirect(response, delete(session, Integer.valueOf(parameterName.substring(6)), user_id));
                     redirected = true;
-                }
             }
-        }
+        } // loop through request parameters
+
         if (!redirected) {
-            Navigator.redirect(response, "/showPlaylists");
+            Navigator.redirect(response, "showPlaylists.jsp");
         }
     }
 
@@ -148,8 +149,4 @@ public class PlaylistAction extends HttpServlet {
         return "manageAPlaylist.jsp";
     }
 
-
-    private String bad() {
-        return "index.jsp";
-    }
 }

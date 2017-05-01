@@ -1,9 +1,9 @@
 package butlers;
 
+import entity.User;
 import org.apache.log4j.Logger;
 import entity.Playlist;
 import persistence.PlaylistDAO;
-import persistence.UserDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,7 +26,6 @@ import java.util.Enumeration;
 public class DeletePlaylist extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     private final PlaylistDAO playlistDAO = new PlaylistDAO();
-    private final UserDAO userDAO = new UserDAO();
 
     /**
      *  Handles HTTP POST requests.
@@ -41,6 +40,9 @@ public class DeletePlaylist extends HttpServlet {
         HttpSession session = request.getSession();
         String url;
 
+        if (((User) session.getAttribute("user")).getId() < 1) { // Guest users may not create, delete, or edit playlists
+            response.sendRedirect("LogOut");
+        } else {
             Enumeration<String> parameterNames = request.getParameterNames();
             int playlist_id = (Integer) session.getAttribute("listID");
             while (parameterNames.hasMoreElements()) {
@@ -65,5 +67,6 @@ public class DeletePlaylist extends HttpServlet {
 
             logger.debug("sending redirect to " + url);
             response.sendRedirect(url);
+        }
     }
 }

@@ -6,10 +6,7 @@ import entity.Playlist;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.hibernate.Query;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class SharedDAO extends GenericDAO<Shared, Integer> {
@@ -18,7 +15,6 @@ public class SharedDAO extends GenericDAO<Shared, Integer> {
    final static private PlaylistDAO playlistDAO = new PlaylistDAO();
 
     public SharedDAO() { super(Shared.class); }
-
 
     /** Return a list of all Shared records
      *
@@ -67,6 +63,7 @@ public class SharedDAO extends GenericDAO<Shared, Integer> {
                 id = ids.get(0);
             }
         }
+        session.close();
         return id;
     }
 
@@ -86,9 +83,24 @@ public class SharedDAO extends GenericDAO<Shared, Integer> {
                 isIt = true;
             }
         }
+        session.close();
         return isIt;
     }
 
+    /**
+     * Returns playlists shared with a particular recipient
+     * @param userID The ID of the recipient
+     * @return The shared playlists
+     * @throws HibernateException
+     */
+    public List<Playlist> getReceivedPlaylists(int userID) throws HibernateException {
+        Session session = getSession();
+        Query query = session.createQuery("SELECT S.playlist FROM Shared S WHERE S.recipient.id = :userID");
+        query.setParameter("userID", userID);
+        List<Playlist> sharings = query.list();
+        session.close();
+        return sharings;
+    }
     /**
      * Returns the list of all non-owners sharing a playlist
      * @param playlist_id The system ID of the playlist
@@ -99,15 +111,8 @@ public class SharedDAO extends GenericDAO<Shared, Integer> {
         Query query = session.createQuery("SELECT S.recipient FROM Shared S WHERE S.playlist.playlist_id = :playlist_id");
         query.setParameter("playlist_id", playlist_id);
         List<User> users = query.list();
+        session.close();
         return users;
-
-        /*
-        ArrayList<Integer> userIDs = new ArrayList<>();
-        for (Shared list : getAll()) {
-            if (list.getPlaylist().getPlaylist_id() == playlist_id) {
-                userIDs.add(list.getRecipient().getId());
-            }
-        } */
     }
 
     /**
@@ -127,14 +132,4 @@ public class SharedDAO extends GenericDAO<Shared, Integer> {
     public void remove(int userID, int playlist_id) throws HibernateException {
         delete(read(find(playlist_id, userID)));
     }
-
-    public List<Playlist> getReceivedPlaylists(int userID) throws HibernateException {
-        Session session = getSession();
-        Query query = session.createQuery("SELECT S.playlist FROM Shared S WHERE S.recipient.id = :userID");
-        query.setParameter("userID", userID);
-        List<Playlist> sharings = session.createCriteria(Shared.class).list();
-        session.close();
-        return sharings;
-    }
-
 }

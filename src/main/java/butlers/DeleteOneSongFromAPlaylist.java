@@ -1,6 +1,8 @@
 package butlers;
 
 import java.util.*;
+
+import entity.User;
 import persistence.UserDAO;
 import persistence.SongDAO;
 
@@ -38,28 +40,20 @@ public class DeleteOneSongFromAPlaylist extends HttpServlet {
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        int list_id = (Integer) session.getAttribute("listID");
 
-        logger.debug("This doPost is called");
-
-        Enumeration<String> parameterNames = request.getParameterNames();
-
-        logger.debug("Collected the parameter names");
-
-        while (parameterNames.hasMoreElements()) {
-            String pName = parameterNames.nextElement();
-            logger.debug("Parameter name is " + pName);
-            logger.debug("Parameter value is " + request.getParameter(pName));
-        }
-
+        int user_id = ((User) session.getAttribute("user")).getId();
+        if (user_id < 1) { // Guest users may not delete songs
+            Navigator.redirect(response, "LogOut");
+        } else {
+            int list_id = (Integer) session.getAttribute("listID");
             int songID = Integer.valueOf(request.getParameter("songID"));
 
-            logger.debug("In delete section");
             session.setAttribute("songToDelete", songDAO.getLocation(songID));
             session.setAttribute("songID", songID);
             if (sharedDAO.isShared(list_id)) {
                 session.setAttribute("message", "Can't delete song from shared playlist");
                 response.sendRedirect("/manageAPlaylist.jsp");
             } else response.sendRedirect("/deleteSongConfirmation.jsp");
+        }
     }
 }
