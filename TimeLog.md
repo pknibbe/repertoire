@@ -2,6 +2,7 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 5/01 | Individual Project | 2.5 | Extend UserDAOTest to cover all UserDAO methods |
 | 4/30 | Individual Project | 1 | Rebuild with modified protections allowing guest user access |
 | 4/29 | Individual Project | 2 | Work on other playlist management screens and functionality |
 | 4/29 | Individual Project | 5 | Get user interface and player functionality working nicely |

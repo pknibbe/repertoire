@@ -112,6 +112,11 @@ public class SharedDAO extends GenericDAO<Shared, Integer> {
         query.setParameter("playlist_id", playlist_id);
         List<User> users = query.list();
         session.close();
+        logger.info("Recipients returned from SharedDAO.sharing(playlist_id:");
+        for (User thisUser : users) {
+            logger.info(thisUser.toString());
+        }
+
         return users;
     }
 
@@ -121,8 +126,28 @@ public class SharedDAO extends GenericDAO<Shared, Integer> {
      * @return the list of user IDs
      */
     public List<User> notSharing(int playlist_id, int user_id) throws HibernateException {
-        return new UserDAO().getOtherUsers(sharing(playlist_id), user_id);
+        logger.info("called SharedDAO.notSharing with playlist and user IDs: " + playlist_id + " and " + user_id);
+        List<User> not = new UserDAO().getOtherUsers(sharing(playlist_id), user_id);
+        if (!isGuestSharing(playlist_id)) {
+            User guest = new User(0);
+            not.add(guest);
+        }
+        return not;
     }
+
+    public boolean isGuestSharing(int playlist_id) {
+        boolean isHe = false;
+        Session session = getSession();
+        Query query = session.createQuery("SELECT S.recipient FROM Shared S WHERE S.playlist.playlist_id = :playlist_id");
+        query.setParameter("playlist_id", playlist_id);
+        List<User> sharings = query.list();
+        for (User user : sharings) {
+            if (user.getId() == 0) {
+                isHe = true;
+            }
+        }
+        session.close();
+        return isHe; }
 
     /**
      * Removes sharing of the specified playlist with the specified user

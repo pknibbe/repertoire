@@ -146,7 +146,9 @@ public class PlaylistAction extends HttpServlet {
         session.setAttribute("listID", listID);
         session.setAttribute("message", "Playlist " + playlist.getName());
         session.setAttribute("songs", songDAO.getAllThese(listID));
-        return "manageAPlaylist.jsp";
+        session.setAttribute("potentialSharees", sharedDAO.notSharing(listID, playlist.getOwner().getId()));
+        session.setAttribute("currentSharees", sharedDAO.sharing(listID));        return "manageAPlaylist.jsp";
     }
 
 }
+

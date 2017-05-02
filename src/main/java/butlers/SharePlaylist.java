@@ -40,7 +40,7 @@ public class SharePlaylist extends HttpServlet {
             if (((User) session.getAttribute("user")).getId() < 1) {
                 Navigator.redirect(response, "LogOut");
             } else {
-                int userID = (Integer) session.getAttribute("userID");
+                int userID = ((User) session.getAttribute("user")).getId();
                 int playlist_id = (Integer) session.getAttribute("listID");
                 if (request.getParameter("Share") != null) {
                     sharedDAO.share(playlist_id, userID);

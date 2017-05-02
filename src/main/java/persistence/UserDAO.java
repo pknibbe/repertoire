@@ -2,18 +2,20 @@ package persistence;
 
 import entity.PropertyManager;
 import entity.User;
-//import org.apache.log4j.Logger;
+import org.apache.log4j.Logger;
 import org.hibernate.*;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ConcurrentModificationException;
 
 /**
  * Manages the persistent user table contents
  * @author P Knibbe
  */
 public class UserDAO extends GenericDAO<User, Integer> {
-    //private final Logger logger = Logger.getLogger(this.getClass());
+    private final Logger logger = Logger.getLogger(this.getClass());
     final static private PropertyManager propertyManager = new PropertyManager();
     final static private int fieldLength = Integer.valueOf(propertyManager.getProperty("dbNameLength"));
 
@@ -69,10 +71,26 @@ public class UserDAO extends GenericDAO<User, Integer> {
         return names;
     }
 
-     List<User> getOtherUsers(List<User> outcasts, int pariah) throws HibernateException {
-        List<User> others = getAll();
-        others.remove(read(pariah));
-        others.remove(outcasts);
+     List<User> getOtherUsers(List<User> outcasts, int pariah) throws HibernateException, ConcurrentModificationException{
+         List<User> others = getAll();
+         logger.info("List length is " + others.size());
+         ArrayList<Integer> outcastIds = new ArrayList<>();
+         for (User thisUser : outcasts) outcastIds.add(thisUser.getId());
+         outcastIds.add(pariah);
+
+         logger.info("UserDAO.getOtherUsers found users: ");
+         Iterator<User> step = others.iterator();
+         while (step.hasNext()) {
+             User thisUser = step.next();
+            logger.info(thisUser.toString());
+            Integer thisId = thisUser.getId();
+            if (outcastIds.contains(thisId)) step.remove();
+         }
+         logger.info("Pariah is " + read(pariah).toString());
+
+         logger.info("List length is " + others.size());
+         logger.info("UserDAO.getOtherUsers found users: ");
+         for (User thisUser : others) logger.info(thisUser.toString());
         return others;
     }
 
@@ -129,6 +147,10 @@ public class UserDAO extends GenericDAO<User, Integer> {
         return 0;
     }
 
+    /**
+     * Returns the guest user
+     * @return The guest user
+     */
     public static User getGuest() {
         return new User(0);
     }

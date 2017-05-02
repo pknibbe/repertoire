@@ -1,5 +1,8 @@
 package persistence;
 
+import java.util.List;
+import java.util.ArrayList;
+//import org.apache.log4j.Logger;
 import entity.User;
 import org.junit.After;
 import org.junit.Before;
@@ -15,6 +18,7 @@ public class UserDAOTest {
     private int originalNumberOfUsers;
     private int newUserID;
     //final private Logger logger = Logger.getLogger(this.getClass());
+    private ArrayList<User> bunch = new ArrayList<>();
 
     @Before
     public void setup() throws Exception {
@@ -107,6 +111,47 @@ public class UserDAOTest {
     }
 
     @Test
+    public void testGetOtherUsers() {
+        boolean includesHappy = false;
+        boolean includesSleepy = false;
+        //First, create a bunch more users
+        User testUser = new User("GrumpyDwarf", "Grumpy", "GrumpyDwarf", "registered-user");
+        bunch.add(testUser);
+        dao.create(testUser);
+        testUser = new User("DopeyDwarf", "Dopey", "DopeyDwarf", "registered-user");
+        bunch.add(testUser);
+        dao.create(testUser);
+        testUser = new User("SleepyDwarf", "Sleepy", "SleepyDwarf", "registered-user");
+        bunch.add(testUser);
+        dao.create(testUser);
+        testUser = new User("SneezyDwarf", "Sneezy", "SneezyDwarf", "registered-user");
+        bunch.add(testUser);
+        dao.create(testUser);
+        testUser = new User("HappyDwarf", "Happy", "HappyDwarf", "registered-user");
+        bunch.add(testUser);
+        dao.create(testUser);
+
+        //Second, create a subset
+        ArrayList<User> subBunch = new ArrayList<>();
+        subBunch.add(bunch.get(0));
+        subBunch.add(bunch.get(1));
+        subBunch.add(bunch.get(2));
+
+        int pariah = bunch.get(3).getId();  //Is Sneezy!
+
+        List<User> others = dao.getOtherUsers(subBunch, pariah);
+        for (User miner : others) {
+            if (miner.getId() == bunch.get(2).getId()) {
+                includesSleepy = true;
+            } else if (miner.getId() == bunch.get(4).getId()) {
+                includesHappy = true;
+            }
+        }
+        assertTrue(includesHappy);
+        assertFalse(includesSleepy);
+    }
+
+    @Test
     public void testGetIdByName() throws Exception {
         assertEquals((long) newUserID, (long) dao.getIdByName("Donald"));
     }
@@ -115,6 +160,16 @@ public class UserDAOTest {
     @Test
     public void testGetIdByUsername() throws Exception {
         assertEquals((long) newUserID, (long) dao.getIdByUsername("hugeOne111"));
+    }
+
+    @Test
+    public void testGetAdminId() {
+        assertTrue(dao.read(dao.getAdminId()).getRole_name().equalsIgnoreCase("administrator"));
+    }
+
+    @Test
+    public void testGetGuest() {
+        assertTrue(0 == UserDAO.getGuest().getId());
     }
 
     @Test
@@ -132,7 +187,8 @@ public class UserDAOTest {
     @After
     public void cleanup() throws Exception {
         dao.delete(user);
+        for (User testUser : bunch) dao.delete(testUser);
         numberOfUsers = dao.getAll().size();
-        assertEquals("Added and removed one, but found ", 0, numberOfUsers - originalNumberOfUsers);
+        assertEquals(0,numberOfUsers - originalNumberOfUsers);
     }
 }

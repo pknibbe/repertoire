@@ -60,6 +60,7 @@
             </form>
             <h3>. </h3>
 
+            <p>There are ${fn:length(potentialSharees)} people currently not sharing this playlist.</p>
             <c:if test="${fn:length(potentialSharees) gt 0}">
                 <form action="SharePlaylist" method="POST">
                     <table>
@@ -74,7 +75,7 @@
                     <input type="submit" name="Share" value="Share" />
                 </form>
             </c:if>
-
+            <p>There are ${fn:length(currentSharees)} people currently sharing this playlist.</p>
             <c:if test="${fn:length(currentSharees) gt 0}">
                 <form action="SharePlaylist" method="POST">
                     <table>
