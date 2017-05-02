@@ -73,24 +73,24 @@ public class UserDAO extends GenericDAO<User, Integer> {
 
      List<User> getOtherUsers(List<User> outcasts, int pariah) throws HibernateException, ConcurrentModificationException{
          List<User> others = getAll();
-         logger.info("List length is " + others.size());
+         logger.debug("List length is " + others.size());
          ArrayList<Integer> outcastIds = new ArrayList<>();
          for (User thisUser : outcasts) outcastIds.add(thisUser.getId());
          outcastIds.add(pariah);
 
-         logger.info("UserDAO.getOtherUsers found users: ");
+         logger.debug("UserDAO.getOtherUsers found users: ");
          Iterator<User> step = others.iterator();
          while (step.hasNext()) {
              User thisUser = step.next();
-            logger.info(thisUser.toString());
+            logger.debug(thisUser.toString());
             Integer thisId = thisUser.getId();
             if (outcastIds.contains(thisId)) step.remove();
          }
-         logger.info("Pariah is " + read(pariah).toString());
+         logger.debug("Pariah is " + read(pariah).toString());
 
-         logger.info("List length is " + others.size());
-         logger.info("UserDAO.getOtherUsers found users: ");
-         for (User thisUser : others) logger.info(thisUser.toString());
+         logger.debug("List length is " + others.size());
+         logger.debug("UserDAO.getOtherUsers found users: ");
+         for (User thisUser : others) logger.debug(thisUser.toString());
         return others;
     }
 
@@ -126,7 +126,7 @@ public class UserDAO extends GenericDAO<User, Integer> {
         int id = 0;
         if (query.list() != null) {
             List<Integer> ids = query.list();
-            id = ids.get(0);
+            if ((ids != null) && (ids.size() > 0))id = ids.get(0);
         }
         session.close();
         return id;

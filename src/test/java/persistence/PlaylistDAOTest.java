@@ -44,6 +44,23 @@ public class PlaylistDAOTest {
         assertTrue("The expected name was not found: ", found);
     }
 
+
+
+
+    @Test
+    public void testGetAllMine() throws Exception {
+        boolean found = false;
+        Playlist tempList = new Playlist("Cookoo", user);
+        dao.create(tempList);
+
+        for (entity.Playlist playlist : dao.getAllMine(user.getId())) {
+            String thisName = playlist.getName();
+            if (thisName.equalsIgnoreCase("Cookoo")) found = true;
+        }
+        assertTrue("The expected name was not found: ", found);
+        dao.delete(tempList);
+    }
+
     @Test
     public void testGet() throws Exception {
         assertEquals("Names don't match", "Sinester", dao.read(newPlaylistID).getName());
@@ -59,7 +76,7 @@ public class PlaylistDAOTest {
 
     @After
     public void cleanup() throws Exception {
-        dao.delete(playlist);
+        dao.remove(playlist.getPlaylist_id(), playlist.getOwner().getId());
         numberOfPlaylists = dao.getAll().size();
         assertEquals("Added and removed one, but found ", 0, numberOfPlaylists - originalNumberOfPlaylists);
 

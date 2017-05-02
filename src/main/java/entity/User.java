@@ -41,10 +41,10 @@ public class User {
   }
 
   public User(int id) {
-    this.id = id;
-    this.name = "Guest";
-    this.role_name = "Guest";
-    this.user_name = "Guest";
-    this.user_pass = "Guest";
+    if (id == -500) {this.id = id; }
+    this.name = "GuestGuest";
+    this.role_name = "GuestGuest";
+    this.user_name = "GuestGuest";
+    this.user_pass = "GuestGuest";
   }
 }

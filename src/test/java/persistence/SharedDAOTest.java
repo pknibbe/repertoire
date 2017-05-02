@@ -5,6 +5,7 @@ import entity.*;
 import org.junit.Before;
 import org.junit.After;
 import org.junit.Test;
+import java.util.List;
 
 /**
  * Database accessor test
@@ -27,7 +28,7 @@ public class SharedDAOTest {
     @Before
     public void setup() throws Exception {
         originalNumberOfShareds = dao.getAll().size();
-        playlist = new Playlist("Sinester", user);
+        playlist = new Playlist("Sinester", userDAO.getAll().get(1));
         newPlaylistID = playlistDAO.create(playlist);
 
         newSharedID = dao.share(newPlaylistID, user.getId());
@@ -63,13 +64,54 @@ public class SharedDAOTest {
     }
 
     @Test
-    public void testGetAllByID() {}
+    public void testGetReceivedPlaylists() {
+
+        List<Playlist> thisList = dao.getReceivedPlaylists(user.getId());
+        boolean foundFirst = false;
+        boolean foundSecond = false;
+        for (Playlist pList : thisList) {
+            if (pList.getPlaylist_id() == newPlaylistID) {
+                foundFirst = true;
+            } else if (pList.getPlaylist_id() == -5) {
+                foundSecond = true;
+            }
+        }
+        assertTrue(foundFirst);
+        assertFalse(foundSecond);
+    }
 
     @Test
-    public void testSharing() {}
+    public void testSharing() {
+        boolean found = false;
+        for (User thisUser : dao.sharing(newPlaylistID)) {
+            if (thisUser.getId() == user.getId()) {
+                found = true;
+            }
+        }
+        assertTrue(found);
+    }
 
     @Test
-    public void testNotSharing() {}
+    public void testNotSharing() {
+        boolean found = false;
+        User not = new User("notnotnot", "notnotnot", "notnotnot", "administrator");
+        userDAO.create(not);
+        for (User thisUser : dao.notSharing(newPlaylistID)) {
+            if (thisUser.getId() == not.getId()) found = true;
+        }
+        assertTrue(found);
+        userDAO.delete(not);
+    }
+
+    @Test
+    public void testIsGuestSharing() {
+        assertFalse(dao.isGuestSharing(-5));
+        User guest = userDAO.read(userDAO.getIdByName("GuestGuest"));
+        Shared testShare = new Shared(playlistDAO.read(newPlaylistID), guest);
+        dao.create(testShare);
+        assertTrue(dao.isGuestSharing(newPlaylistID));
+        dao.delete(testShare);
+    }
 
     @Test
     public void testIsShared() {

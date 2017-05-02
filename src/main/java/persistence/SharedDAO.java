@@ -112,9 +112,9 @@ public class SharedDAO extends GenericDAO<Shared, Integer> {
         query.setParameter("playlist_id", playlist_id);
         List<User> users = query.list();
         session.close();
-        logger.info("Recipients returned from SharedDAO.sharing(playlist_id:");
+        logger.debug("Recipients returned from SharedDAO.sharing(playlist_id:");
         for (User thisUser : users) {
-            logger.info(thisUser.toString());
+            logger.debug(thisUser.toString());
         }
 
         return users;
@@ -125,24 +125,24 @@ public class SharedDAO extends GenericDAO<Shared, Integer> {
      * @param playlist_id The system ID of the playlist
      * @return the list of user IDs
      */
-    public List<User> notSharing(int playlist_id, int user_id) throws HibernateException {
-        logger.info("called SharedDAO.notSharing with playlist and user IDs: " + playlist_id + " and " + user_id);
+    public List<User> notSharing(int playlist_id) throws HibernateException {
+        int user_id = playlistDAO.read(playlist_id).getOwner().getId();
+        logger.debug("called SharedDAO.notSharing with playlist and user IDs: " + playlist_id + " and " + user_id);
         List<User> not = new UserDAO().getOtherUsers(sharing(playlist_id), user_id);
-        if (!isGuestSharing(playlist_id)) {
-            User guest = new User(0);
-            not.add(guest);
-        }
         return not;
     }
 
     public boolean isGuestSharing(int playlist_id) {
         boolean isHe = false;
+        logger.debug("Playlist id is " + playlist_id);
         Session session = getSession();
         Query query = session.createQuery("SELECT S.recipient FROM Shared S WHERE S.playlist.playlist_id = :playlist_id");
         query.setParameter("playlist_id", playlist_id);
         List<User> sharings = query.list();
         for (User user : sharings) {
-            if (user.getId() == 0) {
+            logger.debug("User is " + user.toString());
+            String userName = user.getName();
+            if (userName.equalsIgnoreCase("GuestGuest")) {
                 isHe = true;
             }
         }

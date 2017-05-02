@@ -48,9 +48,9 @@ public class SharePlaylist extends HttpServlet {
                     sharedDAO.delete(sharedDAO.read(sharedDAO.find(playlist_id, userID)));
                 }
 
-                session.setAttribute("potentialSharees", sharedDAO.notSharing(playlist_id, userID));
+                session.setAttribute("potentialSharees", sharedDAO.notSharing(playlist_id));
                 session.setAttribute("currentSharees", sharedDAO.sharing(playlist_id));
-                Navigator.redirect(response, "/manageAPlaylist");
+                Navigator.redirect(response, "/manageAPlaylist.jsp");
             }
         }
     }
