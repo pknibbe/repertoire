@@ -5,7 +5,6 @@ import persistence.UserDAO;
 import persistence.PlaylistDAO;
 import persistence.SharedDAO;
 import entity.User;
-import entity.Playlist;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
 
 /**
  * Set up session attributes and set the internal home page
@@ -45,26 +43,33 @@ import java.util.List;
         logger.debug("user_name is " + request.getParameter("userName"));
         logger.debug("user_pass is " + request.getParameter("password"));
         String userName = request.getParameter("userName");
-        int user_id = userDAO.getIdByUsername(userName);
+        try {
+            int user_id = userDAO.getIdByUsername(userName);
 
-        if (!userDAO.verifyCredentials(user_id, userName, request.getParameter("password"))) {
-            session.setAttribute("user", UserDAO.getGuest());
-            session.setAttribute("message", "User Credentials not verified. Logged in as Guest");
-            session.setAttribute("securityMessage","To access controlled features" +
-                                                          ", please log out and log back in as yourself." );
-        } else {
-            User user = userDAO.read(user_id);
+            if (!userDAO.verifyCredentials(user_id, userName, request.getParameter("password"))) {
+                session.setAttribute("message", "User Credentials not verified. Logged in as Guest");
+                session.setAttribute("securityMessage", "To access controlled features" +
+                        ", please log out and log back in as yourself.");
+                Navigator.forward(request, response, servletContext, "/Logout");
 
-            session.setAttribute("user", user);
-            session.setAttribute("message", "Welcome, " + user.getName() + ".");
-            session.setAttribute("securityMessage", " If you are not " + user.getName() +
-                                                           ", please log out and log back in as yourself.");
+            } else {
+                User user = userDAO.read(user_id);
+
+                session.setAttribute("user", user);
+                session.setAttribute("message", "Welcome, " + user.getName() + ".");
+                session.setAttribute("securityMessage", " If you are not " + user.getName() +
+                        ", please log out and log back in as yourself.");
+            }
+            session.setAttribute("listID", 0);
+            session.setAttribute("isPlaying", false);
+            session.setAttribute("myPlaylists", playlistDAO.getAllMine(user_id));
+            session.setAttribute("receivedPlaylists", sharedDAO.getReceivedPlaylists(user_id));
+
+            Navigator.forward(request, response, servletContext, "/showPlaylists.jsp");
+        } catch (Exception e) {
+            logger.error("Serious error caught. Logging the user out.", e);
+            session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
+            Navigator.forward(request, response, servletContext, "/Logout");
         }
-        session.setAttribute("listID", 0);
-        session.setAttribute("isPlaying", false);
-        session.setAttribute("myPlaylists", playlistDAO.getAllMine(user_id));
-        session.setAttribute("receivedPlaylists", sharedDAO.getReceivedPlaylists(user_id));
-
-        Navigator.forward(request, response, servletContext, "/showPlaylists.jsp");
     }
 }

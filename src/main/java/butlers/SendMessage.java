@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import entity.User;
 
-//import org.apache.log4j.Logger;
+import org.apache.log4j.Logger;
 
 /**
  * Update a user in the database table
@@ -23,7 +23,7 @@ import entity.User;
         name = "SendMessage",
         urlPatterns = { "/SendMessage" }
 ) public class SendMessage extends HttpServlet {
-    //private final Logger logger = Logger.getLogger(this.getClass());
+    private final Logger logger = Logger.getLogger(this.getClass());
     private final UserDAO userDAO = new UserDAO();
     private final MessageDAO messageDAO = new MessageDAO();
 
@@ -42,13 +42,24 @@ import entity.User;
             int user_id = ((User) session.getAttribute("user")).getId();
             String url;
 
-                int recipientId = userDAO.getIdByName(request.getParameter("to"));
-                Message message = new Message(request.getParameter("subject"), userDAO.read(user_id), userDAO.read(recipientId), 0,
-                        request.getParameter("content"));
-                messageDAO.create(message);
-                url = "ShowMessages";
+            if (user_id > 0) {
+                try {
+
+                    int recipientId = userDAO.getIdByName(request.getParameter("to"));
+                    Message message = new Message(request.getParameter("subject"), userDAO.read(user_id), userDAO.read(recipientId), 0,
+                            request.getParameter("content"));
+                    messageDAO.create(message);
+                    url = "ShowMessages";
 
 
-            response.sendRedirect(url);
+                    response.sendRedirect(url);
+                } catch (Exception e) {
+                    logger.error("Serious error caught. Logging the user out.", e);
+                    session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
+                    response.sendRedirect("/Logout");
+                }
+            } else {
+                response.sendRedirect("/Logout");
+            }
         }
     }

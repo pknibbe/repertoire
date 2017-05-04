@@ -1,6 +1,5 @@
 package butlers;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,9 +38,8 @@ import java.io.IOException;
         session.setAttribute("listID", "");
         session.setAttribute("playlists", "");
         session.setAttribute("securityMessage", "");
-        RequestDispatcher dispatcher;
 
-        dispatcher = servletContext.getRequestDispatcher("/index.jsp");
-        dispatcher.forward(request, response);
+        Navigator.forward(request, response, servletContext, "/Logout");
+
     }
 }

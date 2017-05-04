@@ -48,12 +48,18 @@ public class DeleteOneSongFromAPlaylist extends HttpServlet {
             int list_id = (Integer) session.getAttribute("listID");
             int songID = Integer.valueOf(request.getParameter("songID"));
 
+            try {
             session.setAttribute("songToDelete", songDAO.getLocation(songID));
             session.setAttribute("songID", songID);
             if (sharedDAO.isShared(list_id)) {
                 session.setAttribute("message", "Can't delete song from shared playlist");
                 response.sendRedirect("/manageAPlaylist.jsp");
             } else response.sendRedirect("/deleteSongConfirmation.jsp");
+            } catch (Exception e) {
+                logger.error("Serious error caught. Logging the user out.", e);
+                session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
+                response.sendRedirect("/Logout");
+            }
         }
     }
 }

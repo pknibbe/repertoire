@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import persistence.UserDAO;
 
@@ -37,6 +38,7 @@ import org.apache.log4j.Logger;
         public void doPost(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
 
+            HttpSession session = request.getSession();
             Enumeration<String> parameterNames = request.getParameterNames();
 
 
@@ -46,14 +48,20 @@ import org.apache.log4j.Logger;
                 logger.debug("Parameter value is " + request.getParameter(pName));
             }
 
-            String requestType = request.getParameter("options");
-            String requester = request.getParameter("name");
-            Message message = new Message("Request for login assistance",
-                    new User(requester),
-                    userDAO.read(userDAO.getAdminId()), 0,
-                    requester + " needs help with: " + requestType);
-            messageDAO.create(message);
+            try {
+                String requestType = request.getParameter("options");
+                String requester = request.getParameter("name");
+                Message message = new Message("Request for login assistance",
+                        new User(requester),
+                        userDAO.read(userDAO.getAdminId()), 0,
+                        requester + " needs help with: " + requestType);
+                messageDAO.create(message);
 
-            response.sendRedirect("/index.jsp");
+                response.sendRedirect("/index.jsp");
+            } catch (Exception e) {
+                logger.error("Serious error caught. Logging the user out.", e);
+                session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
+                response.sendRedirect("/Logout");
+            }
         }
 }

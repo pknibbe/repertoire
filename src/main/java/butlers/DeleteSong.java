@@ -38,13 +38,13 @@ public class DeleteSong extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
-        String url;
 
         if (((User) session.getAttribute("user")).getId() < 1) { // Guest users may not create, delete, or manage playlists
             Navigator.redirect(response, "LogOut");
         } else {
 
             Enumeration<String> parameterNames = request.getParameterNames();
+            try {
             while (parameterNames.hasMoreElements()) {
                 String parameterName = parameterNames.nextElement();
                 logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
@@ -59,6 +59,11 @@ public class DeleteSong extends HttpServlet {
             }
             session.setAttribute("songs", songDAO.getAllThese((Integer) session.getAttribute("listID")));
             response.sendRedirect("/manageAPlaylist.jsp");
+            } catch (Exception e) {
+                logger.error("Serious error caught. Logging the user out.", e);
+                session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
+                response.sendRedirect("/Logout");
+            }
         }
     }
 }

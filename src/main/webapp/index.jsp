@@ -13,7 +13,6 @@
                 <div class="pure-g">
                     <div class="pure-u-1-8"></div>
                     <div class="pure-u-1-2">
-                        <h3>log in - You may use "Guest" as username and password.</h3>
                     </div>
                 </div>
                     <div class="pure-control-group">

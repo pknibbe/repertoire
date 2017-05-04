@@ -59,9 +59,15 @@ public class MultiFileUpload extends HttpServlet {
                 }
             }
 
-            session.setAttribute("songs", songDAO.getAllThese(listID));
-            session.setAttribute("message", messageContent);
-            response.sendRedirect("manageAPlaylist.jsp");
+            try {
+                session.setAttribute("songs", songDAO.getAllThese(listID));
+                session.setAttribute("message", messageContent);
+                response.sendRedirect("manageAPlaylist.jsp");
+            } catch (Exception e) {
+                logger.error("Serious error caught. Logging the user out.", e);
+                session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
+                response.sendRedirect("/Logout");
+            }
         }
     }
 

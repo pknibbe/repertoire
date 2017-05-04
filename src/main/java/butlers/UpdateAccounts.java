@@ -52,37 +52,43 @@ public class UpdateAccounts extends HttpServlet {
 
                 Enumeration<String> parameterNames = request.getParameterNames();
 
-                while (parameterNames.hasMoreElements()) {
-                    String parameterName = parameterNames.nextElement();
-                    logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
-                    if (parameterName.equalsIgnoreCase("Delete")) {
-                        userDAO.delete(userDAO.read(identifier));
+                try {
+                    while (parameterNames.hasMoreElements()) {
+                        String parameterName = parameterNames.nextElement();
+                        logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
+                        if (parameterName.equalsIgnoreCase("Delete")) {
+                            userDAO.delete(userDAO.read(identifier));
 
-                        session.setAttribute("message", "removed user");
+                            session.setAttribute("message", "removed user");
 
-                        logger.debug("removed user " + identifier);
-                        url = "ShowUsers";
-                    } else if (parameterName.equalsIgnoreCase("Update")) {
-                        String name = request.getParameter("Name");
-                        String password = request.getParameter("Password");
-                        String userName = request.getParameter("Username");
-                        role = request.getParameter("Role");
-                        if (identifier > 0) {
-                            logger.debug("Updating existing user ID " + identifier);
-                            User user = userDAO.read(identifier);
-                            if (user == null) {
-                                session.setAttribute("message", "Unable to update user due to system error");
-                                url = "/index.jsp";
+                            logger.debug("removed user " + identifier);
+                            url = "ShowUsers";
+                        } else if (parameterName.equalsIgnoreCase("Update")) {
+                            String name = request.getParameter("Name");
+                            String password = request.getParameter("Password");
+                            String userName = request.getParameter("Username");
+                            role = request.getParameter("Role");
+                            if (identifier > 0) {
+                                logger.debug("Updating existing user ID " + identifier);
+                                User user = userDAO.read(identifier);
+                                if (user == null) {
+                                    session.setAttribute("message", "Unable to update user due to system error");
+                                    url = "/index.jsp";
+                                } else {
+                                    session.setAttribute("UserInfo", userDAO.read(identifier));
+                                    url = "ShowUsers";
+                                }
                             } else {
-                                session.setAttribute("UserInfo", userDAO.read(identifier));
+                                int added = userDAO.create(new User(userName, name, password, role));
+                                logger.debug("Creating a new user returned " + added);
                                 url = "ShowUsers";
                             }
-                        } else {
-                            int added = userDAO.create(new User(userName, name, password, role));
-                            logger.debug("Creating a new user returned " + added);
-                            url = "ShowUsers";
                         }
                     }
+                }catch (Exception e) {
+                    logger.error("Serious error caught. Logging the user out.", e);
+                    session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
+                    response.sendRedirect("/Logout");
                 }
             }
             else {

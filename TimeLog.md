@@ -2,6 +2,7 @@
 
 | Date |    Task                | Hours  | Notes|
 |------|------------------------|--------|------|
+| 5/03 | Individual Project | 1 | Error Page |
 | 5/01 | Individual Project | 2 | Get sharing to not crash again as well as guest log in |
 | 5/01 | Individual Project | 2.5 | Extend UserDAOTest to cover all UserDAO methods |
 | 4/30 | Individual Project | 1 | Rebuild with modified protections allowing guest user access |

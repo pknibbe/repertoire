@@ -45,6 +45,7 @@ public class DeletePlaylist extends HttpServlet {
         } else {
             Enumeration<String> parameterNames = request.getParameterNames();
             int playlist_id = (Integer) session.getAttribute("listID");
+            try {
             while (parameterNames.hasMoreElements()) {
                 String parameterName = parameterNames.nextElement();
                 logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
@@ -67,6 +68,11 @@ public class DeletePlaylist extends HttpServlet {
 
             logger.debug("sending redirect to " + url);
             response.sendRedirect(url);
+            } catch (Exception e) {
+                logger.error("Serious error caught. Logging the user out.", e);
+                session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
+                response.sendRedirect("/Logout");
+            }
         }
     }
 }

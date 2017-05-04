@@ -1,11 +1,10 @@
 package butlers;
 
+import org.apache.log4j.Logger;
 import persistence.MessageDAO;
 import entity.Message;
 import entity.User;
 import persistence.UserDAO;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,6 +25,7 @@ import java.util.List;
 public class ShowMessages extends HttpServlet {
     private final UserDAO userDAO = new UserDAO();
     private final MessageDAO messageDAO = new MessageDAO();
+    private final Logger logger = Logger.getLogger(this.getClass());
 
     /**
      *  Handles HTTP GET requests.
@@ -37,20 +37,22 @@ public class ShowMessages extends HttpServlet {
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Message plainMessage;
 
         HttpSession session = request.getSession();
         ServletContext servletContext = getServletContext();
-        String url;
-        User user = (User) session.getAttribute("user");
 
+        User user = (User) session.getAttribute("user");
+        try {
             List<Message> messages = messageDAO.getAll(user.getId());
 
             session.setAttribute("messages", messages);
             session.setAttribute("names", userDAO.getOtherUserNames(user.getId()));
-            url = "/messages.jsp";
+            Navigator.forward(request, response, servletContext, "/messages.jsp");
 
-        RequestDispatcher dispatcher = servletContext.getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+        } catch (Exception e) {
+            logger.error("Serious error caught. Logging the user out.", e);
+            session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
+            Navigator.forward(request, response, servletContext, "/Logout");
+        }
     }
 }

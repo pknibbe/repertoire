@@ -11,7 +11,7 @@ import java.io.IOException;
 import entity.User;
 import persistence.SharedDAO;
 
-//import org.apache.log4j.Logger;
+import org.apache.log4j.Logger;
 
 /**
  * Update a user in the database table
@@ -22,7 +22,7 @@ import persistence.SharedDAO;
         urlPatterns = { "/SharePlaylist" }
 )
 public class SharePlaylist extends HttpServlet {
-    //private final Logger logger = Logger.getLogger(this.getClass());
+    private final Logger logger = Logger.getLogger(this.getClass());
     private final SharedDAO sharedDAO = new SharedDAO();
 
     /**
@@ -39,7 +39,7 @@ public class SharePlaylist extends HttpServlet {
 
             if (((User) session.getAttribute("user")).getId() < 1) {
                 Navigator.redirect(response, "LogOut");
-            } else {
+            } else { try {
                 int userID = ((User) session.getAttribute("user")).getId();
                 int playlist_id = (Integer) session.getAttribute("listID");
                 if (request.getParameter("Share") != null) {
@@ -51,6 +51,11 @@ public class SharePlaylist extends HttpServlet {
                 session.setAttribute("potentialSharees", sharedDAO.notSharing(playlist_id));
                 session.setAttribute("currentSharees", sharedDAO.sharing(playlist_id));
                 Navigator.redirect(response, "/manageAPlaylist.jsp");
+                }catch (Exception e) {
+                    logger.error("Serious error caught. Logging the user out.", e);
+                    session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
+                    response.sendRedirect("/Logout");
+                }
             }
         }
     }

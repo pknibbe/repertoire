@@ -41,6 +41,7 @@ public class ControlPlayer extends HttpServlet {
         while (parameterNames.hasMoreElements()) {
             String parameterName = parameterNames.nextElement();
             logger.debug("Parameter " + parameterName + " is " + request.getParameter(parameterName));
+            try {
             if (parameterName.equalsIgnoreCase("Play")) {
                 int list_id = (Integer) session.getAttribute("listID");
                 player = new Player(list_id);
@@ -69,6 +70,11 @@ public class ControlPlayer extends HttpServlet {
                 session.setAttribute("message", "Skipping playback back one track");
                 player = (Player) session.getAttribute("player");
                 player.previous();
+            }
+            } catch (Exception e) {
+                logger.error("Serious error caught. Logging the user out.", e);
+                session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
+                response.sendRedirect("/Logout");
             }
         }
         response.sendRedirect("/manageAPlaylist.jsp");

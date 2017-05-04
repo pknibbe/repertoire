@@ -1,6 +1,6 @@
 package butlers;
 
-//import org.apache.log4j.Logger;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,7 +23,7 @@ import entity.User;
 class UpdateUserInformation extends HttpServlet {
     private final UserDAO userDAO = new UserDAO();
 
-    //private final Logger logger = Logger.getLogger(this.getClass());
+    private final Logger logger = Logger.getLogger(this.getClass());
 
     /**
          *  Handles HTTP POST requests.
@@ -39,16 +39,21 @@ class UpdateUserInformation extends HttpServlet {
 
             String url;
 
-
-                    User user = userDAO.read(Integer.valueOf(request.getParameter("id")));
-                    user.setRole_name(request.getParameter("Role"));
-                    user.setUser_pass(request.getParameter("NewPassword"));
-                    user.setName(request.getParameter("Name"));
-                    user.setUser_name(request.getParameter("UserName"));
-                    userDAO.update(user);
+            try {
+                User user = userDAO.read(Integer.valueOf(request.getParameter("id")));
+                user.setRole_name(request.getParameter("Role"));
+                user.setUser_pass(request.getParameter("NewPassword"));
+                user.setName(request.getParameter("Name"));
+                user.setUser_name(request.getParameter("UserName"));
+                userDAO.update(user);
 
                 url = "ShowUsers";
 
-            response.sendRedirect(url);
+                response.sendRedirect(url);
+            }catch (Exception e) {
+                logger.error("Serious error caught. Logging the user out.", e);
+                session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
+                response.sendRedirect("/Logout");
+            }
         }
     }

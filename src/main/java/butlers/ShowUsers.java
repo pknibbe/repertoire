@@ -42,6 +42,7 @@ public class ShowUsers extends HttpServlet {
         ServletContext servletContext = getServletContext();
         String role = "administrator";
 
+        try {
             if (role.equalsIgnoreCase(((User) session.getAttribute("user")).getRole_name())) {
 
                 request.setAttribute("users", userDAO.getAll());
@@ -57,7 +58,13 @@ public class ShowUsers extends HttpServlet {
             }
 
         logger.debug("Using dispatcher " + dispatcher.toString());
-        dispatcher.forward(request, response);    }
+        dispatcher.forward(request, response);
+        } catch (Exception e) {
+            logger.error("Serious error caught. Logging the user out.", e);
+            session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
+            Navigator.forward(request, response, servletContext, "/Logout");
+        }
+    }
 }
 
 
