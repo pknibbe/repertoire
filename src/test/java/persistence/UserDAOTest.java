@@ -167,10 +167,6 @@ public class UserDAOTest {
         assertTrue(dao.read(dao.getAdminId()).getRole_name().equalsIgnoreCase("administrator"));
     }
 
-    @Test
-    public void testGetGuest() {
-        assertTrue(0 == UserDAO.getGuest().getId());
-    }
 
     @Test
     public void testInputs() throws Exception {

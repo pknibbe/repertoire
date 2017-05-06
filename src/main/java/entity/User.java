@@ -39,12 +39,4 @@ public class User {
     this.user_pass = user_pass;
     this.role_name = role;
   }
-
-  public User(int id) {
-    if (id == -500) {this.id = id; }
-    this.name = "GuestGuest";
-    this.role_name = "GuestGuest";
-    this.user_name = "GuestGuest";
-    this.user_pass = "GuestGuest";
-  }
 }

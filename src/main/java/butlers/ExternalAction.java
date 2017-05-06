@@ -47,9 +47,7 @@ import java.io.IOException;
             int user_id = userDAO.getIdByUsername(userName);
 
             if (!userDAO.verifyCredentials(user_id, userName, request.getParameter("password"))) {
-                session.setAttribute("message", "User Credentials not verified. Logged in as Guest");
-                session.setAttribute("securityMessage", "To access controlled features" +
-                        ", please log out and log back in as yourself.");
+                session.setAttribute("message", "User Credentials not verified.");
                 Navigator.forward(request, response, servletContext, "/Logout");
 
             } else {

@@ -147,13 +147,6 @@ public class UserDAO extends GenericDAO<User, Integer> {
         return 0;
     }
 
-    /**
-     * Returns the guest user
-     * @return The guest user
-     */
-    public static User getGuest() {
-        return new User(0);
-    }
 
     /**
      * Performs simple checks for an acceptable username

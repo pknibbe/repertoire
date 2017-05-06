@@ -12,7 +12,6 @@ to upload music and share my music with family members to whom I give accounts.
 * Security/Authentication
   * Admin role: create/read/update/delete (crud) of all data
   * User role: create/play/edit own information and playlists
-  * Guest role: Access to listen to playlists I (administrator) mark for guest users
 * Database (MySQL and Hibernate) Tables for:
   * users
   * songs (links to locations)

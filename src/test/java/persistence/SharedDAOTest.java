@@ -104,16 +104,6 @@ public class SharedDAOTest {
     }
 
     @Test
-    public void testIsGuestSharing() {
-        assertFalse(dao.isGuestSharing(-5));
-        User guest = userDAO.read(userDAO.getIdByName("GuestGuest"));
-        Shared testShare = new Shared(playlistDAO.read(newPlaylistID), guest);
-        dao.create(testShare);
-        assertTrue(dao.isGuestSharing(newPlaylistID));
-        dao.delete(testShare);
-    }
-
-    @Test
     public void testIsShared() {
         assertTrue(dao.isShared(newPlaylistID));
         assertFalse(dao.isShared(-12));

@@ -132,23 +132,6 @@ public class SharedDAO extends GenericDAO<Shared, Integer> {
         return not;
     }
 
-    public boolean isGuestSharing(int playlist_id) {
-        boolean isHe = false;
-        logger.debug("Playlist id is " + playlist_id);
-        Session session = getSession();
-        Query query = session.createQuery("SELECT S.recipient FROM Shared S WHERE S.playlist.playlist_id = :playlist_id");
-        query.setParameter("playlist_id", playlist_id);
-        List<User> sharings = query.list();
-        for (User user : sharings) {
-            logger.debug("User is " + user.toString());
-            String userName = user.getName();
-            if (userName.equalsIgnoreCase("GuestGuest")) {
-                isHe = true;
-            }
-        }
-        session.close();
-        return isHe; }
-
     /**
      * Removes sharing of the specified playlist with the specified user
      * @param userID The system ID of the user

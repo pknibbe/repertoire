@@ -1,5 +1,5 @@
 body {
-padding: 50px 100px;
+padding: 30px 30px;
 margin: 0;
 font-family: Tahoma, Geneva, sans-serif;
 }
@@ -41,7 +41,6 @@ table {
 }
 
 #header {
-height: 350px;
 background-color: #FFFFFF;
     color: #308830;
 }
