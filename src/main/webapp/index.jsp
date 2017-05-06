@@ -7,7 +7,6 @@
 <c:import url="/bodyTop.jsp" />
 
         <!--h4>log in</h4-->
-        <p></p>
         <form class="pure-form pure-form-aligned" action="ExternalAction" method="GET">
             <fieldset>
                 <div class="pure-g">

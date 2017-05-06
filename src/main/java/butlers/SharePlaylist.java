@@ -43,9 +43,11 @@ public class SharePlaylist extends HttpServlet {
                 int userID = ((User) session.getAttribute("user")).getId();
                 int playlist_id = (Integer) session.getAttribute("listID");
                 if (request.getParameter("Share") != null) {
-                    sharedDAO.share(playlist_id, userID);
+                    int recipient = Integer.valueOf(request.getParameter("userID"));
+                    sharedDAO.share(playlist_id, recipient);
                 } else if (request.getParameter("UnShare") != null) {
-                    sharedDAO.delete(sharedDAO.read(sharedDAO.find(playlist_id, userID)));
+                    int recipient = Integer.valueOf(request.getParameter("userID"));
+                    sharedDAO.delete(sharedDAO.read(sharedDAO.find(playlist_id, recipient)));
                 }
 
                 session.setAttribute("potentialSharees", sharedDAO.notSharing(playlist_id));
@@ -53,8 +55,7 @@ public class SharePlaylist extends HttpServlet {
                 Navigator.redirect(response, "/manageAPlaylist.jsp");
                 }catch (Exception e) {
                     logger.error("Serious error caught. Logging the user out.", e);
-                    session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
-                    response.sendRedirect("/Logout");
+                response.sendRedirect("error.jsp");
                 }
             }
         }

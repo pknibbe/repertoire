@@ -74,7 +74,7 @@ public class ControlPlayer extends HttpServlet {
             } catch (Exception e) {
                 logger.error("Serious error caught. Logging the user out.", e);
                 session.setAttribute("message", "Repertoire has encountered a serious error. Please contact the administrator for assistance.");
-                response.sendRedirect("/Logout");
+                response.sendRedirect("error.jsp");
             }
         }
         response.sendRedirect("/manageAPlaylist.jsp");

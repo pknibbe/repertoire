@@ -86,7 +86,7 @@
                     </div>
                     <div class="pure-u-1 pure-u-md-1-8"><p></p>
                         <c:if test="${isPlaying == true}">
-                            <div class="pure-u-1 pure-u-md-1-12">
+                            <div class="pure-u-1 pure-u-md-1-4">
                                 <input class="pure-input-1" type="submit" name="toggle${playbill.playlist_id}" value="Stop" />
                             </div>
                         </c:if>
