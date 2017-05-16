@@ -18,11 +18,27 @@ public class UserDAO extends GenericDAO<User, Integer> {
     private final Logger logger = Logger.getLogger(this.getClass());
     final static private PropertyManager propertyManager = new PropertyManager();
     final static private int fieldLength = Integer.valueOf(propertyManager.getProperty("dbNameLength"));
+    final static PlaylistDAO playlistDAO = new PlaylistDAO();
 
     public UserDAO() {
         super(User.class);
     }
 
+    /**
+     * Removes a removable user from the table
+     * @param userID The id of the user to be removed
+     * @return whether or not the removal worked
+     * @throws HibernateException Error accessing the database
+     */
+    public boolean remove(int userID) throws HibernateException
+    {
+        if (userID == getAdminId()) return false; // don't delete the admin user
+
+        if (playlistDAO.getAllMine(userID) != null) return false; // don't delete the owner of a playlist
+
+        delete(read(userID));
+        return true;
+    }
 
     /** Return a list of all users
      *

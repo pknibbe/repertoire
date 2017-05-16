@@ -19,11 +19,8 @@ public class SongDAOTest {
     final private SongDAO dao = new SongDAO();
     final private PlaylistDAO playlistDAO = new PlaylistDAO();
     final private UserDAO userDAO = new UserDAO();
-    private User user = userDAO.getAll().get(0);
-    private int newPlaylistID;
+    private User user = userDAO.read(userDAO.getAdminId());
     private Song song;
-    private int newSongID;
-    private int numberOfSongs;
     private int originalNumberOfSongs;
     private Playlist playlist;
 
@@ -31,18 +28,17 @@ public class SongDAOTest {
     public void setup() throws Exception {
         originalNumberOfSongs = dao.getAll().size();
         playlist = new Playlist("Sinester", user);
-        newPlaylistID = playlistDAO.create(playlist);
+        playlist.setPlaylist_id(playlistDAO.create(playlist));
 
         song = new Song("ZXGK It's Magic", "Great tune", playlist);
-        newSongID = dao.create(song);
-        numberOfSongs = dao.getAll().size();
-        assertEquals("Added one, but found ", 1, numberOfSongs - originalNumberOfSongs);
+        song.setId(dao.create(song));
     }
 
     @Test
     public void testGetAll() throws Exception {
         boolean found = false;
 
+        assertEquals("Added one, but found ", 1, dao.getAll().size() - originalNumberOfSongs);
         for (Song song : dao.getAll()) {
             String thisName = song.getLocation();
             if (thisName.equalsIgnoreCase("ZXGK It's Magic")) found = true;
@@ -52,7 +48,7 @@ public class SongDAOTest {
 
     @Test
     public void testGetAllThese() throws Exception {
-        List<Song> songs = dao.getAllThese(newPlaylistID);
+        List<Song> songs = dao.getAllThese(playlist.getPlaylist_id());
         boolean found = false;
         for (Song thisSong : songs) {
             if (thisSong.getLocation().equalsIgnoreCase(song.getLocation())) {
@@ -64,8 +60,8 @@ public class SongDAOTest {
 
     @Test
     public void testAlreadyThere() throws Exception {
-        assertTrue(dao.alreadyThere(song.getLocation(), newPlaylistID));
-        assertFalse(dao.alreadyThere("YellowBrickRoad", newPlaylistID));
+        assertTrue(dao.alreadyThere(song.getLocation(), playlist.getPlaylist_id()));
+        assertFalse(dao.alreadyThere("YellowBrickRoad", playlist.getPlaylist_id()));
     }
 
     @Test
@@ -77,15 +73,15 @@ public class SongDAOTest {
 
     @Test
     public void testGetLocation() throws Exception {
-        assertTrue(dao.getLocation(newSongID).equalsIgnoreCase("ZXGK It's Magic"));
+        assertTrue(dao.getLocation(song.getId()).equalsIgnoreCase("ZXGK It's Magic"));
     }
 
     @Test
     public void testGetSongIDs() throws Exception {
         boolean found = false;
-        List<Integer> songIds = dao.getSongIds(newPlaylistID);
+        List<Integer> songIds = dao.getSongIds(playlist.getPlaylist_id());
         for (int index : songIds) {
-            if (index == newSongID) {
+            if (index == song.getId()) {
                 found = true;
             }
         }
@@ -94,7 +90,7 @@ public class SongDAOTest {
 
     @Test
     public void testGet() throws Exception {
-        assertEquals("Names don't match", "ZXGK It's Magic", dao.read(newSongID).getLocation());
+        assertEquals("Names don't match", "ZXGK It's Magic", dao.read(song.getId()).getLocation());
     }
 
     @Test
@@ -102,16 +98,23 @@ public class SongDAOTest {
         song.setLocation("ZXGK Submarine");
         song.setDescription("Corny, but fun");
         dao.update(song);
-        song = dao.read(newSongID);
+        song = dao.read(song.getId());
         assertEquals("Location not modified", "ZXGK Submarine", song.getLocation());
         assertEquals("Description not modified", "Corny, but fun", song.getDescription());
     }
 
+    @Test
+    public void testCD() throws Exception {
+        int sID = song.getId();
+        Song newSong = dao.read(sID);
+        dao.delete(newSong);
+        song.setId(dao.create(song));
+    }
+
     @After
     public void cleanup() throws Exception {
-        dao.delete(dao.read(newSongID));
+        dao.delete(dao.read(song.getId()));
         playlistDAO.delete(playlist);
-        numberOfSongs = dao.getAll().size();
-        assertEquals("Added and removed one, but found ", 0, numberOfSongs - originalNumberOfSongs);
+        assertEquals("Added and removed one, but found ", 0, dao.getAll().size() - originalNumberOfSongs);
     }
 }

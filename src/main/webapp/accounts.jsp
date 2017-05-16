@@ -12,7 +12,7 @@
         <h3>Manage Accounts</h3>
             <form action="UpdateAccounts" method="POST">
                 <table>
-                    <thead><tr><th>Select</th><th>ID</th><th>Name</th><th>Username</th><th>Password</th><th>Role</th></tr></thead>
+                    <thead><tr><th>Select</th><th>ID</th><th>Name</th><th>Username</th><th>Password</th><th>Group</th></tr></thead>
                     <tbody>
                     <c:forEach var="person" items="${users}">
                         <tr>
@@ -21,7 +21,7 @@
                             <td>${person.name}</td>
                             <td>${person.user_name}</td>
                             <td>${person.user_pass}</td>
-                            <td>${person.role_name}</td>
+                            <td>${person.group.name}</td>
                         </tr>
                     </c:forEach>
                     <tr>
@@ -30,10 +30,7 @@
                         <td><input type="text" name="Name" value="" /></td>
                         <td><input type="text" name="Username" value="" /></td>
                         <td><input type="text" name="Password" value="" /></td>
-                        <td><select name="Role">
-                            <option value="administrator">administrator</option>
-                            <option value="registered-user">registered-user</option>
-                        </select></td>
+                        <td><input type="text" name="Group" value="" /></td>
                     </tr>
                     </tbody>
                 </table><br/><br/>
@@ -41,6 +38,29 @@
                 <input type="submit" name="Delete" value="Delete" />
             </form>
     </div>
+
+    <h3>Manage Groups</h3>
+    <form action="UpdateGroups" method="POST">
+        <table>
+            <thead><tr><th>Select</th><th>ID</th><th>Name</th></tr></thead>
+            <tbody>
+            <c:forEach var="clan" items="${groups}">
+                <tr>
+                    <td><input type="radio" name="groupID" value=${clan.id} /></td>
+                    <td>${clan.id}</td>
+                    <td>${clan.name}</td>
+                </tr>
+            </c:forEach>
+            <tr>
+                <td><input type="radio" name="groupID" value="0" /></td>
+                <td>New User Group</td>
+                <td><input type="text" name="Name" value="" /></td>
+            </tr>
+            </tbody>
+        </table><br/><br/>
+        <input type="submit" name="Update" value="Update" />
+        <input type="submit" name="Delete" value="Delete" />
+    </form>
 </div>
 <c:import url="/footer.jsp" />
 

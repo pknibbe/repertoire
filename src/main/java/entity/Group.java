@@ -1,4 +1,4 @@
-package resistance;
+package entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,21 +15,20 @@ import javax.persistence.Table;
 @ToString
 
 @Entity
-@Table(name = "users")
-public class Role {
+@Table(name = "groups")
+public class Group {
 
   @Id
   @GeneratedValue(generator="increment")
   @GenericGenerator(name="increment", strategy="increment")
   private int id;
-  private String user_name;
-  private String role_name;
+  private String name;
 
-  public Role() {
+  public Group() {}
+
+  public Group(String name) {
+    this.id = 0;
+    this.name = name;
   }
 
-  public Role(String username, String role) {
-    this.user_name = username;
-    this.role_name = role;
-  }
 }

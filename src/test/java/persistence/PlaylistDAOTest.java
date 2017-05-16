@@ -1,7 +1,6 @@
 package persistence;
 
 import entity.Playlist;
-import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,25 +16,21 @@ public class PlaylistDAOTest {
 
     final private PlaylistDAO dao = new PlaylistDAO();
     final private UserDAO userDAO = new UserDAO();
-    private User user = userDAO.getAll().get(0);
+    private User user = userDAO.read(userDAO.getAdminId());
     private Playlist playlist;
-    private int numberOfPlaylists;
-    private int originalNumberOfPlaylists;
-    private int newPlaylistID;
-    private final Logger logger = Logger.getLogger(this.getClass());
+    private int originalCount;
 
     @Before
     public void setup() throws Exception {
-        originalNumberOfPlaylists = dao.getAll().size();
+        originalCount = dao.getAll().size();
         playlist = new Playlist("Sinester", user);
-        newPlaylistID = dao.create(playlist);
-        numberOfPlaylists = dao.getAll().size();
-        assertEquals("Added one, but found ", 1, numberOfPlaylists - originalNumberOfPlaylists);
-    }
+        playlist.setPlaylist_id(dao.create(playlist));
+   }
 
     @Test
     public void testGetAll() throws Exception {
         boolean found = false;
+        assertEquals("Added one, but found ", 1, dao.getAll().size() - originalCount);
 
         for (entity.Playlist playlist : dao.getAll()) {
             String thisName = playlist.getName();
@@ -43,9 +38,6 @@ public class PlaylistDAOTest {
         }
         assertTrue("The expected name was not found: ", found);
     }
-
-
-
 
     @Test
     public void testGetAllMine() throws Exception {
@@ -63,22 +55,23 @@ public class PlaylistDAOTest {
 
     @Test
     public void testGet() throws Exception {
-        assertEquals("Names don't match", "Sinester", dao.read(newPlaylistID).getName());
+        assertEquals("Names don't match", "Sinester", dao.read(playlist.getPlaylist_id()).getName());
     }
 
     @Test
     public void testModifyPlaylistName() throws Exception {
         playlist.setName("Bubbles");
         dao.update(playlist);
-        playlist = dao.read(newPlaylistID);
+        playlist = dao.read(playlist.getPlaylist_id());
         assertEquals("Playlistname not modified", "Bubbles", playlist.getName());
+        dao.remove(playlist.getPlaylist_id(), playlist.getOwner().getId());
+        playlist.setPlaylist_id(dao.create(playlist));
     }
 
     @After
     public void cleanup() throws Exception {
         dao.remove(playlist.getPlaylist_id(), playlist.getOwner().getId());
-        numberOfPlaylists = dao.getAll().size();
-        assertEquals("Added and removed one, but found ", 0, numberOfPlaylists - originalNumberOfPlaylists);
+        assertEquals("Added and removed one, but found ", 0, dao.getAll().size() - originalCount);
 
     }
 }

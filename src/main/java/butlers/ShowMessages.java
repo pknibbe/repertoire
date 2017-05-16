@@ -43,7 +43,7 @@ public class ShowMessages extends HttpServlet {
 
         User user = (User) session.getAttribute("user");
         try {
-            List<Message> messages = messageDAO.getAll(user.getId());
+            List<Message> messages = messageDAO.getAllToMe(user.getId());
 
             session.setAttribute("messages", messages);
             session.setAttribute("names", userDAO.getOtherUserNames(user.getId()));

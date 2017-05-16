@@ -25,6 +25,10 @@ public class User {
   private String user_pass;
   private String role_name;
 
+  @ManyToOne(optional = false)
+  @JoinColumn(name="group_id")
+  private Group group;
+
   public User() {}
 
   public User(String name) {
@@ -33,10 +37,11 @@ public class User {
     this.name = name;
   }
 
-  public User(String username, String name, String user_pass, String role) {
+  public User(String username, String name, String user_pass, String role, Group group) {
     this.user_name = username;
     this.name = name;
     this.user_pass = user_pass;
     this.role_name = role;
+    this.group = group;
   }
 }

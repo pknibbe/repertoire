@@ -2,7 +2,6 @@ package persistence;
 
 import java.util.List;
 import java.util.ArrayList;
-//import org.apache.log4j.Logger;
 import entity.User;
 import org.junit.After;
 import org.junit.Before;
@@ -13,26 +12,22 @@ import static org.junit.Assert.*;
 public class UserDAOTest {
 
     final private UserDAO dao = new UserDAO();
+    final private GroupDAO groupDAO = new GroupDAO();
     private User user;
-    private int numberOfUsers;
     private int originalNumberOfUsers;
-    private int newUserID;
-    //final private Logger logger = Logger.getLogger(this.getClass());
-    private ArrayList<User> bunch = new ArrayList<>();
 
     @Before
     public void setup() throws Exception {
         originalNumberOfUsers = dao.getAll().size();
-        user = new User("hugeOne111", "Donald", "TrumpWhiteHouse", "registered-user"); // make sure table is not empty for purpose of test
-        newUserID = dao.create(user);
-        numberOfUsers = dao.getAll().size();
-        assertEquals("Added one, but found ", 1, numberOfUsers - originalNumberOfUsers);
+        user = new User("hugeOne111", "Donald", "TrumpWhiteHouse", "registered-user", groupDAO.read(2)); // make sure table is not empty for purpose of test
+        user.setId(dao.create(user));
         }
 
     @Test
     public void testGetAll() throws Exception {
         boolean found = false;
 
+        assertEquals("Added one, but found ", 1, dao.getAll().size() - originalNumberOfUsers);
         for (entity.User user : dao.getAll()) {
             String thisName = user.getName();
             if (thisName.equalsIgnoreCase("Donald")) found = true;
@@ -52,8 +47,8 @@ public class UserDAOTest {
     }
 
     @Test
-    public void testGet() throws Exception {
-        user = dao.read(newUserID);
+    public void testRead() throws Exception {
+        user = dao.read(user.getId());
         assertEquals("UserNames don't match", "hugeOne111", user.getUser_name());
         assertEquals("Names don't match", "Donald", user.getName());
         assertEquals("Passwords don't match", "TrumpWhiteHouse", user.getUser_pass());
@@ -62,40 +57,40 @@ public class UserDAOTest {
 
     @Test
     public void testModifyUserName() throws Exception {
-        user = dao.read(newUserID); // retrieve most recent addition to table
+        user = dao.read(user.getId()); // retrieve most recent addition to table
         user.setUser_name("Johanna");
         dao.update(user);
         //dao.modify(user);
-        user = dao.read(newUserID); // retrieve most recent addition to table
+        user = dao.read(user.getId()); // retrieve most recent addition to table
         assertEquals("Username not modified as expected ", "Johanna", user.getUser_name());
     }
 
     @Test
     public void testModifyName() throws Exception {
-        user = dao.read(newUserID); // retrieve most recent addition to table
+        user = dao.read(user.getId()); // retrieve most recent addition to table
         user.setName("Johanna");
         dao.update(user);
         //dao.modify(user);
-        user = dao.read(newUserID); // retrieve most recent addition to table
+        user = dao.read(user.getId()); // retrieve most recent addition to table
         assertEquals("Username not modified as expected ", "Johanna", user.getName());
     }
 
     @Test
     public void testModifyPw() throws Exception {
-        user = dao.read(newUserID); // retrieve most recent addition to table
+        user = dao.read(user.getId()); // retrieve most recent addition to table
         user.setUser_pass("Johanna");
         dao.update(user);
         //dao.modify(user);
-        user = dao.read(newUserID); // retrieve most recent addition to table
+        user = dao.read(user.getId()); // retrieve most recent addition to table
         assertEquals("Password not modified as expected ", "Johanna", user.getUser_pass());
     }
 
     @Test
     public void testModifyRole() throws Exception {
-        user = dao.read(newUserID); // retrieve most recent addition to table
+        user = dao.read(user.getId()); // retrieve most recent addition to table
         user.setRole_name("Johanna");
         dao.update(user);
-        user = dao.read(newUserID); // retrieve most recent addition to table
+        user = dao.read(user.getId()); // retrieve most recent addition to table
         assertEquals("Role not modified as expected ", "Johanna", user.getRole_name());
     }
 
@@ -104,10 +99,10 @@ public class UserDAOTest {
         /*        int user_id = userDAO.getIdByUsername(userName);
 
         if (!userDAO.verifyCredentials(user_id, userName, password))*/
-        user = dao.read(newUserID); // retrieve most recent addition to table
-        assertTrue(dao.verifyCredentials(newUserID, user.getUser_name(), user.getUser_pass()));
+        user = dao.read(user.getId()); // retrieve most recent addition to table
+        assertTrue(dao.verifyCredentials(user.getId(), user.getUser_name(), user.getUser_pass()));
         assertFalse(dao.verifyCredentials(0, user.getName(), user.getUser_pass()));
-        assertFalse(dao.verifyCredentials(newUserID, user.getUser_name(), user.getRole_name()));
+        assertFalse(dao.verifyCredentials(user.getId(), user.getUser_name(), user.getRole_name()));
     }
 
     @Test
@@ -115,19 +110,21 @@ public class UserDAOTest {
         boolean includesHappy = false;
         boolean includesSleepy = false;
         //First, create a bunch more users
-        User testUser = new User("GrumpyDwarf", "Grumpy", "GrumpyDwarf", "registered-user");
+        ArrayList<User> bunch = new ArrayList<>();
+
+        User testUser = new User("GrumpyDwarf", "Grumpy", "GrumpyDwarf", "registered-user", groupDAO.read(2));
         bunch.add(testUser);
         dao.create(testUser);
-        testUser = new User("DopeyDwarf", "Dopey", "DopeyDwarf", "registered-user");
+        testUser = new User("DopeyDwarf", "Dopey", "DopeyDwarf", "registered-user", groupDAO.read(2));
         bunch.add(testUser);
         dao.create(testUser);
-        testUser = new User("SleepyDwarf", "Sleepy", "SleepyDwarf", "registered-user");
+        testUser = new User("SleepyDwarf", "Sleepy", "SleepyDwarf", "registered-user", groupDAO.read(2));
         bunch.add(testUser);
         dao.create(testUser);
-        testUser = new User("SneezyDwarf", "Sneezy", "SneezyDwarf", "registered-user");
+        testUser = new User("SneezyDwarf", "Sneezy", "SneezyDwarf", "registered-user", groupDAO.read(2));
         bunch.add(testUser);
         dao.create(testUser);
-        testUser = new User("HappyDwarf", "Happy", "HappyDwarf", "registered-user");
+        testUser = new User("HappyDwarf", "Happy", "HappyDwarf", "registered-user", groupDAO.read(2));
         bunch.add(testUser);
         dao.create(testUser);
 
@@ -149,17 +146,20 @@ public class UserDAOTest {
         }
         assertTrue(includesHappy);
         assertFalse(includesSleepy);
+
+        for (User testUser2 : bunch) dao.delete(testUser2);
+
     }
 
     @Test
     public void testGetIdByName() throws Exception {
-        assertEquals((long) newUserID, (long) dao.getIdByName("Donald"));
+        assertEquals((long) user.getId(), (long) dao.getIdByName("Donald"));
     }
 
 
     @Test
     public void testGetIdByUsername() throws Exception {
-        assertEquals((long) newUserID, (long) dao.getIdByUsername("hugeOne111"));
+        assertEquals((long) user.getId(), (long) dao.getIdByUsername("hugeOne111"));
     }
 
     @Test
@@ -183,8 +183,6 @@ public class UserDAOTest {
     @After
     public void cleanup() throws Exception {
         dao.delete(user);
-        for (User testUser : bunch) dao.delete(testUser);
-        numberOfUsers = dao.getAll().size();
-        assertEquals(0,numberOfUsers - originalNumberOfUsers);
+        assertEquals(0,dao.getAll().size() - originalNumberOfUsers);
     }
 }

@@ -16,7 +16,6 @@
                 <p></p><p></p>
                 <legend>My Playlists</legend>
 
-                <p>________________________________________</p>
 
                 <div class=pure-g">
 
@@ -24,6 +23,7 @@
                     <div class="pure-u-1 pure-u-md-1-5">List Owner</div>
                     <div class="pure-u-1 pure-u-md-1-5"></div>
                     <div class="pure-u-1 pure-u-md-1-5"></div>
+                    <p>________________________________________</p>
 
 
                     <c:forEach var="playbill" items="${myPlaylists}">

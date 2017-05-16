@@ -26,6 +26,7 @@
         <mapping class="entity.Song"/>
         <mapping class="entity.User"/>
         <mapping class="entity.Message"/>
+        <mapping class="entity.Group"/>
 
     </session-factory>
 

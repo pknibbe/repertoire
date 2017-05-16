@@ -121,7 +121,7 @@ public class SharedDAO extends GenericDAO<Shared, Integer> {
     }
 
     /**
-     * Returns the list of all non-owners sharing a playlist
+     * Returns the list of all non-owners not sharing a playlist
      * @param playlist_id The system ID of the playlist
      * @return the list of user IDs
      */

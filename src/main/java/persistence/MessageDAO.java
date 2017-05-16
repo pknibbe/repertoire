@@ -34,7 +34,7 @@ public class MessageDAO  extends GenericDAO<Message, Integer> {
      * @param recipient_id The system ID of the recipient
      * @return The list of the associated Messages
      */
-    public List<Message> getAll(int recipient_id) {
+    public List<Message> getAllToMe(int recipient_id) {
         Session session = getSession();
         Query query = session.createQuery("FROM Message M WHERE M.receiver.id = :recipient_id");
         query.setParameter("recipient_id", recipient_id);
